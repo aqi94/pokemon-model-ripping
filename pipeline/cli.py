@@ -22,6 +22,8 @@ from .catalog.swsh import SwshCatalog
 from .catalog.go import DEFAULT_DATA_DIR as GO_DATA_DIR
 from .catalog.go import GoCatalog
 from .catalog.la import LaCatalog
+from .catalog.lgpe import DEFAULT_TRAINER_DIR as LGPE_TRAINER_DIR
+from .catalog.lgpe import LgpeCatalog
 from .catalog.sv import SvCatalog
 from .catalog.za import DEFAULT_DATA_DIR, ModelRef, ZaCatalog
 from .common.gltf_writer import write_glb
@@ -41,6 +43,8 @@ def _catalog(args) -> ZaCatalog | SvCatalog | GoCatalog | BdspCatalog:
         return SwshCatalog(args.data or DEFAULT_DATA_DIR)
     if args.game == "bdsp":
         return BdspCatalog(args.data or BDSP_DATA_DIR)
+    if args.game == "lgpe":
+        return LgpeCatalog(args.data or DEFAULT_DATA_DIR, trainer_dir=args.trainer_data or LGPE_TRAINER_DIR)
     sys.exit(f"game '{args.game}' has no importer yet")
 
 
@@ -141,7 +145,7 @@ def build_index(out_root: str) -> dict:
                     "thumbnail": f"{game}/{mid}/thumb.webp" if os.path.isfile(os.path.join(gdir, mid, "thumb.webp")) else None,
                 }
             )
-    names = {"za": "Pokémon Legends: Z-A", "sv": "Pokémon Scarlet & Violet", "go": "Pokémon GO", "bdsp": "Pokémon Brilliant Diamond & Shining Pearl", "swsh": "Pokémon Sword & Shield", "la": "Pokémon Legends: Arceus"}
+    names = {"za": "Pokémon Legends: Z-A", "sv": "Pokémon Scarlet & Violet", "go": "Pokémon GO", "bdsp": "Pokémon Brilliant Diamond & Shining Pearl", "swsh": "Pokémon Sword & Shield", "la": "Pokémon Legends: Arceus", "lgpe": "Pokémon: Let's Go, Pikachu! & Eevee!"}
     games = {g: names.get(g, g) for g in names if any(m["game"] == g for m in models)}
     index = {"indexVersion": 1, "games": games, "models": models}
     with open(os.path.join(out_root, "index.json"), "w", encoding="utf-8") as f:
@@ -206,6 +210,7 @@ def main(argv=None) -> None:
     ap.add_argument("--game", default="za")
     ap.add_argument("--data", default=None, help="folder with the ripped zips (za/sv) / the 3D Assets folder (go)")
     ap.add_argument("--out", default="out")
+    ap.add_argument("--trainer-data", default=None, help="lgpe: folder with the extracted LGPE-Trainers.7z")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("list")

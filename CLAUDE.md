@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A pipeline that converts ripped Pokémon game models into one common format (rigged glTF with every animation as a named clip, plus a `manifest.json`), the Blender-community formats derived from it (FBX for Unreal, OBJ+MTL, PNG textures, laid out like the `Adaman/` sample from models.spriters-resource.com), and a modelviewer.lol-style web viewer that reads the common format. Every game gets its own importer under `pipeline/importers/`; nothing downstream of an importer may know which game an asset came from.
 
-Current scope: Pokémon Legends: Z-A (`ZA-*` zips). Later: LA, SwSh, LGPE (`.gfbmdl/.gfbanm`) as `pipeline/importers/gfbmdl/` against the same `common.model` IR.
+Current scope: Pokémon Legends: Z-A (`ZA-*` zips). Since added (see sections below): SV, GO, BDSP, LA, SwSh, LGPE.
 
 ## Commands
 
@@ -160,3 +160,52 @@ Unity 2019.4.27f1 AssetBundles (UnityFS, unencrypted) read with UnityPy; `pipeli
 - Clips are generic (Transform bindings by CRC32 of the bone path relative to the root, root name excluded; attribute 1 pos / 2 quat / 3 scale, typeID 114 = MonoBehaviour float curves, ignored). `m_MuscleClip.m_Clip.data`: streamed (time f32, count, count x [curve idx, 4 coeff f32, value = last]) then dense then constant curves; slots are assigned to bindings in order. The first streamed frame is stamped -FLT_MAX (initial value): clamp to 0. Keys are taken at their values and linearly interpolated (cubic slopes ignored).
 - Materials: `_MainTex`=`_col`, `_BumpTex`=`_nor`, `_MaskTex`=`_msk`, `_ComplexTex`=`_uti` (unread). `_col` is near-greyscale; colour = albedo x tint from the mask (`bake_tint`): zones R=`_PrimaryColor`, G=`_SecondaryColor`, B=`_SkinColor` (black = untinted); body/face materials use `_SkinColor` on the R/B regions (their `_PrimaryColor` is a cool shadow tint, applying it turned faces blue); the hair shader (`_LIGHTING_HAIR`) uses `_PrimaryColor` on the whole texture. Verified visually on Cynthia (tr0001: black coat, gold fur, blonde), the cowgirl and the player (pc0001). Raw albedo goes to `raw_base_color`. `_ALPHABLEND_ON` + real alpha -> BLEND.
 - Player models are modular: `pc0001_00` is the base, `pc0001_10..22` are further part bundles (not yet composed into an Appearance group). `fc0001_00` carries hair1/2, shoes, bicycle, surf mount ... as separate meshes; inactive GameObjects / disabled SMRs import with `Mesh.visible = False`.
+
+## Pokémon Legends: Arceus (`--game la`)
+
+Same Trinity formats as Z-A/SV (`.trmdl/.trmsh/.trmbf/.trskl/.trmtr/.trmmt/.tranm/.tracm`, BNTX textures; not gfbmdl), so `LaCatalog` (`pipeline/catalog/la.py`) is a `ZaCatalog` subclass and importer, glTF writer and viewer are shared. Zips `LA-Poke.zip` + `LA-PokeAnim.zip`; `LA-Trainers.7z` / `LA-Misc.7z` extracted once with py7zr into `~/Documents/pokemon_raw_data/la/{trainers,misc}` (env `POKEMODELS_LA_DATA`; missing = no trainers/items).
+
+```bash
+./.venv/Scripts/python.exe -m pipeline --game la list --kind pokemon          # 356 models
+./.venv/Scripts/python.exe -m pipeline --game la convert --all --kind pokemon  # ~20 min idle, ~1.8 GB (ask first)
+./.venv/Scripts/python.exe -m pipeline --game la convert --id pm0025_00_00 --id tr0003_00 --id item_201
+```
+
+- Layout: `bin/pokemon/pm####/pm####_FF_VV/mdl/pm####_FF_VV.trmdl` (+ meshes, skeleton, materials, bntx beside it); clips in `LA-PokeAnim` at `bin/pokemon/pm####/<id>/anm/<id>_<5-digit idx>_<name>.tranm` (+ `.tracm`). `anm/<id>.tranm` without an index is a template, dropped. `bin/chara/data/pm/...` (5 legacy duplicate trees) is ignored.
+- Forms are `FF_VV`: `01_00` usually female; `_41` Hisuian (`HISUIAN_DEX`); `71_xx` Noble/Lord variants (own `.trmdl`/`.trmtr`, reuse base meshes and textures, no shiny); `pm0201_11..38` Unown letters. New species `pm1001..1007` = dex 899..905. Some Gen 6/7 species use internal ids (`LA_INTERNAL_TO_DEX`, `dex_of()`; identified by rendering); `extras.dex` is the real dex number.
+- Shiny = `_rare.trmtr` in the `.trmmt`. Shaders `Standard/Eye/Unlit/Transparent/Fabric/NonDirectional` (SV style, PBR, `AOMap`; roughness/metallic unread). ~50-100 clips per Pokémon at 60 fps.
+- Trainers: `trainers/chara/data/tr/trNNNN_NN_<name>/` (33 standalone, ~220 joints, `.trmdl` named after the folder so the catalog passes `extras.stem`), no animation data (0 clips). Items: `misc/chara/data/item/item_NNN/` (154 static props, kind `object`, named "Item NNN"; `.trcol` unread). Modular trainers (`cc`, `pc/p1|p2`) are not imported (player parts have no base skeleton in the rip).
+- Known: `pm0493_11_00` has duplicate clip tracks (`ANIMATION_DUPLICATE_TARGETS`, source data); forms without a name table are labelled "form NN"/"variant NN"; trainer face skin slightly grey.
+
+## Sword & Shield (`--game swsh`)
+
+Game Freak Switch format: `.gfbmdl` model, `.gfbanm` clips, `.bntx` (Pokémon) or `.dds` (trainers/objects), FlatBuffers read with `importers/za/fb.py`. Schemas from pkNX `GFBModel.fbs` and pkZukan/PokeDocs `SWSH/Flatbuffers/Animation`, verified on real files. Code: `pipeline/importers/swsh/{gfbmdl,gfbanm,dds,importer}.py`, `pipeline/catalog/swsh.py`.
+
+```bash
+PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe -m pipeline --game swsh list --kind pokemon|trainer|object
+./.venv/Scripts/python.exe -m pipeline --game swsh convert --id pm0025_00 --id tr0001_00 --id ob0204_00
+./.venv/Scripts/python.exe -m pipeline --game swsh convert --all --kind pokemon --resume   # 708 models, ~20 min, ~1.1 GB (ask first)
+```
+
+Sources: Pokémon = `SwSh-PokeGen1, 2-3, 4-5, 6-7, 8.zip` (`bin/pokemon/pmDDDD_FF/mdl/`: `<id>.gfbmdl`, `<id>_rare.gfbmdl`, `*.bntx`; `*.bnsh_*` unused) + `SwSh-PokeAnim.zip` (`.../anm/<id>_<name>.gfbanm`). Trainers/objects = 7z archives extracted once into `~/Documents/pokemon_raw_data/swsh/<archive>/` (`SwshCatalog(raw_dir=...)`, env `POKEMODELS_SWSH_DATA`): `chara/data/tr[/mdl]/trNNNN_VV_name/`, `tr_m` (DLC1 masters), `ob` (taxi, bicycle, 50+ balls). Ids `pm0025_00`, `trNNNN_VV`, `obNNNN_VV`.
+
+- Units cm, Y up, faces +Z (no handedness flip): x0.01. Model root: 1 bbox, 2 texture names, 6 materials, 7 meshes {BoneId, ShapeId}, 8 shapes {polygons[{MaterialId, u16 indices}], attributes[{Type, Format, Count}], vertex bytes}, 9 bones. Attribute types 0 pos, 1 nrm, 2 tan, 3-6 uv0-3, 7-10 colours, 11 joints, 12 weights; formats 0 f32, 1 f16, 2 i8, 3 u8, 4 i16, 5 u16, 6 i32, 7 u32, 8 fixed (u8/255, weights); interleaved in attribute order.
+- Bones: 0 name, 1 type, 2 parent, 4 visible, 5 scale, 6 euler XYZ (q = qZ*qY*qX), 7 translation, 10 IsRigged. Skin palette = rigged bones in file order. No inverse binds in the file: inverse of the bind-pose world matrices (verified).
+- Materials (`PokeDefaultShader`, trainers `CharaDefaultShader`/`CharaEyeShader`): 11 textures {SamplerName, TextureIndex, sampler{RepeatU f1, RepeatV f2; 0 wrap, 1 clamp, 2 mirror}}, 13 floats, 14 colours, 6 blend (0 none, 1 alpha, 2 add, 5 premultiplied), 7 cull, 18 alpha test. `Col0Tex` is the already-coloured lit albedo; `ConstantColor0` white everywhere (no tint). UV rules as Z-A (V flip, drop each material's integer V tile, `ColorUVScale*`/`ColorUVTranslate*`/`ColorBase*`, mirror-U baked to full width by `MaterialBuilder`).
+- Shiny = `_rare.gfbmdl` (same geometry, `*_col_rare.bntx`), `Variant("rare")`. Animation: same union layout as `.tranm` (reuses `trinity.unpack_quaternions`), cm translations, 30 or 60 fps; clip name = file suffix (`ba10_waitA01`, `fi20_walk01`, `kw32_happyA01`); default `ba10_waitA01`. Bare `<id>.gfbanm` (rest pose) skipped; clips that only drive material UVs (eye01/mouth01) dropped.
+- Gaps: normal maps, AO, emission, `LyCol0Tex` layer blending, light-table/rim/spec params unused (plain albedo PBR); eye/mouth UV animation not imported; meshes with no `Col0Tex` (fire/smoke shaders, e.g. Charizard flame; 24 models) import hidden; form codes unlabelled; trainers static (0 clips), face smudge at mouth (`face_parts`); `_m` trainer variants, player parts `pc/p1|p2`, `battle/waza`, `app/pokecamp` not catalogued.
+
+## Pokémon Let's Go Pikachu/Eevee (`--game lgpe`)
+
+Pre-Trinity Switch format: `.gfbmdl`, `.gfbanm`, `.bntx` (Pokémon) / `.dds` (trainers). `pipeline/importers/lgpe/{gfbmdl,importer}.py`, `pipeline/catalog/lgpe.py`. Sources: `LGPE-Poke.zip` + `LGPE-PokeAnim.zip` (`bin/` root); `LGPE-Trainers.7z` extracted once into `~/Documents/pokemon_raw_data/lgpe/trainers` (`--trainer-data` or env `POKEMODELS_LGPE_TRAINERS`; `chara/data/tr/tr####_VV_<name>/`).
+
+```bash
+PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe -m pipeline --game lgpe list --kind pokemon   # 211 (209 pm + partners bd0001/2); trainer = 99; object = 12 accessories
+./.venv/Scripts/python.exe -m pipeline --game lgpe convert --id pm0025_00 --id bd0001_00 --id tr0001_00   # --all = 322 models, ~5.5 min, ~860 MB (ask first)
+```
+
+- Models `bin/pokemon/pm####_FF/mdl/pm####_FF.gfbmdl` (+`_rare` shiny); clips `bin/pokemon/<id>/anm/<id>_<clip>.gfbanm`. FF: 00 base, 01 female, 51/52 Mega X/Y, 61 Alolan; pm0000 egg, pm0891/0892 Meltan/Melmetal. Partners `bin/chara/data/bd/bd000N_00_<name>/{mdl,anm}` (`*_col` helpers skipped; 8 overlapping `hair` meshes -> "hair" part group, hidden by default). Accessories `chara/data/pd/pd####` -> kind object. Clip prefixes: ba battle, fi field, kw cuddle, gg shoulder/touch, ev event; 5416 clips, 30 or 60 fps.
+- gfbmdl (via `za/fb.py`): root 0 version, 1 bounds, 2 texture names, 3 shader names, 6 materials, 8 meshes, 9 bones. Mesh: 0 polygons {0 material, 1 u16 tris}, 1 attributes {usage, type, count}, 2 interleaved vertices. Usage 0 pos, 1 nrm, 2 tan, 3/4 uv0/1, 7/8 colour, 11 bone idx, 12 weight; type 0 f32, 1 f16, 3 u8, 8 u8 normalised. cm (x0.01), CCW, +Z, no flip. Bones: 0 name, 2 parent, 5 scale, 6 euler XYZ (q = qZ*qY*qX), 7 translation; no stored inverse bind; joint indices address the bone list directly. No normal maps (`NormalMapTex` is `dummy_col`).
+- Materials: 0 name, 1 shader, 11 textures, 12 switches, 13 floats, 14 colours. `Col0Tex` lit albedo, `ColSdw0Tex` shadow tint (`extras.shadow_color`), `LyCol0Tex` iris layer. `ColorUVScaleU/V` (mostly 2,1) = half of a mirrored layout: baked to full width, UV scale/translate halved, `ColorUVTranslateU`=1 selects the unmirrored half (EyeR), integer V tile dropped, V flipped. Eyes/mouth are expression atlases (default = the tile the UVs address); eye iris layer composited under Col0's alpha holes. Trainers: `CharaDefaultShader`/`CharaEyeShader`, `L0ColTex` = `_col_99`. `PokeFire*/PokeSmoke*/PokeMegaGangar` approximated as tinted alpha-mask BLEND; alpha holes -> MASK 0.5.
+- `.gfbanm` = Trinity `.tranm` layout (`trinity.parse_tranm` + `za.importer._convert_clip`), cm translations. Eye/mouth UV-scroll clips skipped (`extras.materialOnlyClips`). Parts hidden by bone scale: constant non-unit scales of the default clip's frame 0 become the joints' rest scale. Default clip `ba10_waitA*` else `fi*_wait`, first in list. `Yuka` floor slab (mega Gengar) dropped.
+- Gaps: `.gfbanmcfg`, emission/spec/rim maps, `BodyAVco` vertex colours, `Env` sphere maps, trainer colourways `_col_00..18`; trainers static (0 clips); Blender thumbnails ignore `Mesh.visible` (partner hairstyles overlap); Pikachu ~0.51 m (no per-species scale); a few trainer names are raw file names.
