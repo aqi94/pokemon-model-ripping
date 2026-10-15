@@ -35,7 +35,7 @@ ENTRIES = {
     "Sailor": "tr1046_00", "School Kid (F)": "tr0031_00", "School Kid (M)": "tr0030_00", "Scientist": "tr1041_00", "Skier (F)": "tr1056_00",
     "Skier (M)": "tr1055_00", "Swimmer (F)": "tr0054_00", "Swimmer (M)": "tr0053_00", "Team Galactic Grunt (F)": "tr1089_00",
     "Team Galactic Grunt (M)": "tr1073_00", "Tower Tycoon (Palmer)": "tr1097_00", "Tuber (F)": "tr1045_00", "Tuber (M)": "tr1044_00",
-    "Twins": ["tr1008_00", "tr1008_01"], "Veteran": "tr1027_00", "Waiter": "tr1081_00", "Waitress": "tr1026_00", "Worker": "tr0040_00",
+    "Twins": ["tr1008_01", "tr1008_00"], "Veteran": "tr1027_00", "Waiter": "tr1081_00", "Waitress": "tr1026_00", "Worker": "tr0040_00",
     "Young Couple": ["tr1023_00", "tr1023_01"], "Youngster": "tr0028_00",
     # named characters (internal numbering matched to the Bulbapedia VS images)
     "Roark (Gym 1)": "tr1062_00", "Gardenia (Gym 2)": "tr1074_00", "Maylene (Gym 3)": "tr1076_00", "Crasher Wake (Gym 4)": "tr1075_00",
@@ -49,11 +49,18 @@ ENTRIES = {
 }
 # Poké Ball in hand, matched against the VS images: attach bone per model (R = RItem1, L = LItem1)
 BALL = {**{m: "RItem1" for m in "tr1024_00 tr1053_00 tr1054_00 tr1033_00 tr1028_00 tr1041_00 tr0054_00 tr1073_00".split()},
-        **{m: "LItem1" for m in "tr1025_00 tr1004_00 tr0018_00 tr1013_00 tr1012_00 tr1085_00 tr0029_00 tr1040_00 tr1032_00 tr1089_00 tr1027_00".split()}}
+        **{m: "LItem1" for m in "tr1025_00 tr1037_00 tr1004_00 tr0018_00 tr1013_00 tr1012_00 tr1085_00 tr0029_00 tr1040_00 tr1032_00 tr1089_00 tr1027_00".split()}}
+# Double-battle pairs are two models in one scene: rendered with the same fixed camera (shared scale + ground line) and overlaid with a
+# horizontal shift of +-PAIR_DX metres each (left model first), the last model in front (Young Couple: the woman). The couple's dance poses are offset around the origin with the woman on the left, so they are shifted past each other.
+PAIR_DX = {"Twins": 0.4, "Young Couple": 0.45, "Double Team": 0.36, "Interviewers": 0.4, "Ranchers": 0.45}
+PAIR_FRONT = {"Young Couple": 1}
+PAIR_WINDOW_M = 2.4
 FX = {"tr0039_00": ("police", None, 1), "tr1049_00": ("psychic", "RItem1", 2.6), "tr1050_00": ("psychic", "RItem1", 2.6)}
 
 
 def render(ids, extra, size):
+    if not ids:
+        return
     cmd = ["node", os.path.join(ROOT, "tools", "render_bdsp_vs.mjs"), "--out", RAW, "--size", str(size), "--frames", "0", *extra, *[f"bdsp/{i}" for i in ids]]
     subprocess.run(cmd, check=True, cwd=ROOT)
 
@@ -67,33 +74,55 @@ def fit(im, size, margin=0.04):
     return o
 
 
+def compose_pair(label, ms, size_px):
+    ppm = size_px / PAIR_WINDOW_M
+    n = len(ms)
+    canvas = Image.new("RGBA", (size_px * 2, size_px), (0, 0, 0, 0))
+    order = list(range(n))
+    front = PAIR_FRONT.get(label, n - 1)
+    order.remove(front)
+    order.append(front)
+    for k in order:
+        im = Image.open(os.path.join(RAW, "pairs", f"bdsp_{ms[k]}_f0.png")).convert("RGBA")
+        dx = (k - (n - 1) / 2) * 2 * PAIR_DX[label] * ppm
+        canvas.alpha_composite(im, (round(size_px / 2 + dx), 0))
+    return canvas
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--size", type=int, default=512)
     ap.add_argument("--render-size", type=int, default=1024)
+    ap.add_argument("--only", nargs="*", help="re-render only these model ids (e.g. tr1041_00), keep the other raw renders")
     ap.add_argument("--skip-render", action="store_true", help="reuse out/bdsp_vs_raw (just re-fit / re-compose)")
     a = ap.parse_args()
     os.makedirs(OUT, exist_ok=True)
     ids = sorted({i for v in ENTRIES.values() for i in (v if isinstance(v, list) else [v])})
+    if a.only:
+        ids = [i for i in ids if i in a.only]
     plain = [i for i in ids if i not in BALL and i not in FX]
+    pair_ids = sorted({m for v in ENTRIES.values() if isinstance(v, list) for m in v})
+    if a.only:
+        pair_ids = [m for m in pair_ids if m in a.only]
     if not a.skip_render:
         render(plain, [], a.render_size)
         for bone in ("RItem1", "LItem1"):
             render([i for i in ids if BALL.get(i) == bone], ["--ball", bone], a.render_size)
         for i, (fx, bone, scale) in FX.items():
+            if i not in ids:
+                continue
             render([i], ["--fx", fx] + (["--ball", bone, "--ballscale", str(scale)] if bone else []), a.render_size)
+        pair_dir = os.path.join(RAW, "pairs")
+        for m in pair_ids:
+            extra = ["--fixed", str(PAIR_WINDOW_M)] + (["--ball", BALL[m]] if m in BALL else [])
+            subprocess.run(["node", os.path.join(ROOT, "tools", "render_bdsp_vs.mjs"), "--out", pair_dir, "--size", str(a.render_size), "--frames", "0", *extra, f"bdsp/{m}"], check=True, cwd=ROOT)
     index = {}
     for label, v in ENTRIES.items():
         ms = v if isinstance(v, list) else [v]
-        ims = [Image.open(os.path.join(RAW, f"bdsp_{m}_f0.png")).convert("RGBA") for m in ms]
-        ims = [im.crop(im.getbbox()) for im in ims]
-        h = max(im.height for im in ims)
-        ims = [im.resize((round(im.width * h / im.height), h), Image.LANCZOS) for im in ims]
-        c = Image.new("RGBA", (sum(im.width for im in ims), h), (0, 0, 0, 0))
-        x = 0
-        for im in ims:
-            c.paste(im, (x, 0), im)
-            x += im.width
+        if isinstance(v, list):
+            c = compose_pair(label, ms, a.render_size)
+        else:
+            c = Image.open(os.path.join(RAW, f"bdsp_{ms[0]}_f0.png")).convert("RGBA")
         name = label.replace(" ", "_").replace("/", "-") + ".png"
         fit(c, a.size).save(os.path.join(OUT, name))
         index[label] = {"file": name, "models": ms}

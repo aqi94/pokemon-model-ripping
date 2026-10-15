@@ -26,6 +26,9 @@ const ballScale = Number(opt('ballscale', '1'));
 const fov = Number(opt('fov', '14'));
 const pitch = Number(opt('pitch', '8'));
 const yaw = Number(opt('yaw', '0'));
+// --fixed H: ignore the model's own bounds; frame a fixed H-metre-tall window centred 0.95 m above the origin, so several models rendered
+// this way share one scale and ground line (used to compose double-battle pairs).
+const fixedH = Number(opt('fixed', '0'));
 // --gaze x,y: aim both eyeball bones at the camera (0,0) or at a point offset from it (x right, y up, as a fraction of the camera distance).
 const gaze = opt('gaze', '').split(',').filter(Boolean).map(Number);
 // --fx: the game's light effects are particle systems that are not in the rip; approximate them with additive glow sprites.
@@ -65,7 +68,8 @@ for (const id of ids) {
       a.scrubToFrame(Math.round(f * fc));
       vs.setCameraPreset(camera);
       if (cam.fov > 0) {
-        const fi = vs.fitInfo(); const old = vs.camera.fov; const rad = Math.PI / 180;
+        const fi0 = vs.fitInfo(); const old = vs.camera.fov; const rad = Math.PI / 180;
+        const fi = cam.fixedH > 0 ? { center: vs.controls.target.clone().set(0, 0.95, 0), dist: (cam.fixedH / 2) / Math.tan(old * rad / 2), radius: fi0.radius } : fi0;
         vs.camera.fov = cam.fov;
         const d = fi.dist * Math.tan(old * rad / 2) / Math.tan(cam.fov * rad / 2);
         const dir = { x: Math.sin(cam.yaw * rad) * Math.cos(cam.pitch * rad), y: Math.sin(cam.pitch * rad), z: Math.cos(cam.yaw * rad) * Math.cos(cam.pitch * rad) };
@@ -133,7 +137,7 @@ for (const id of ids) {
       }
       await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
       return vs.pngDataUrl();
-    }, { f, camera: opt('camera', 'front'), fx, threeUrl, cam: { fov, pitch, yaw }, gz: gaze });
+    }, { f, camera: opt('camera', 'front'), fx, threeUrl, cam: { fov, pitch, yaw, fixedH }, gz: gaze });
     fs.writeFileSync(path.join(out, `${id.replace(/\//g, '_')}_f${f}${tag}.png`), Buffer.from(url.split(',')[1], 'base64'));
   }
   console.log(id, used);

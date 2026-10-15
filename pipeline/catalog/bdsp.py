@@ -83,14 +83,19 @@ class BdspCatalog:
                 import UnityPy
 
                 cabs = {}
-                for sub, *_ in TRAINER_DIRS + [(OBJECT_DIR[0],)]:
-                    d = os.path.join(self.root, *sub.split("/"))
+                # trainers/objects, plus the Pokémon bundles (extracted BDSP-Poke.7z under poke/): trainer props such as Poké Fan F's
+                # Bonsly dolls use Pokémon materials whose textures live there.
+                dirs = [(os.path.join(self.root, *sub.split("/")), f"trainers/Characters/{sub}") for sub, *_ in TRAINER_DIRS + [(OBJECT_DIR[0],)]]
+                dirs += [(os.path.join(self.data_dir, "poke", sub), f"poke/{sub}") for sub in ("battle", "field", "common", "statue")]
+                for d, rel in dirs:
+                    if not os.path.isdir(d):
+                        continue
                     for f in sorted(os.listdir(d)):
                         if os.path.isfile(os.path.join(d, f)):
                             bf = next(iter(UnityPy.load(os.path.join(d, f)).files.values()))
                             for k in bf.files:
                                 if k.lower().startswith("cab-") and not k.lower().endswith(".ress"):
-                                    cabs[k.lower()] = f"trainers/Characters/{sub}/{f}"
+                                    cabs[k.lower()] = f"{rel}/{f}"
                 with open(path, "w", encoding="utf-8") as fh:
                     json.dump(cabs, fh, indent=0)
             with open(path, encoding="utf-8") as fh:

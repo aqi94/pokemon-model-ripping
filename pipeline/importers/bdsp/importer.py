@@ -24,7 +24,8 @@ REST_TOL = 1e-4
 CURVE_TOL = 1e-3
 # AnimationUtility binding attributes for typeID 4 (Transform)
 ATTR_POS, ATTR_ROT, ATTR_SCALE = 1, 2, 3
-TEX_SLOTS = {"_MainTex": "col", "_BumpTex": "nor", "_MaskTex": "msk", "_ComplexTex": "uti"}
+TEX_SLOTS = {"_MainTex": "col", "_BumpTex": "nor", "_MaskTex": "msk", "_ComplexTex": "uti",
+             "_Col0Tex": "col", "_NormalMapTex": "nor"}  # the last two: the Pokémon shader of props such as Poké Fan F's Bonsly dolls
 
 
 def _load(path: str, deps: list[str] | None = None) -> list:
@@ -205,6 +206,36 @@ def _material(m, cache, textures) -> Material:
     if mat.base_color and "_ALPHABLEND_ON" in kw and textures[mat.base_color].rgba[..., 3].min() < 250:
         mat.alpha_mode = "BLEND"
     return mat
+
+
+
+def _soften_lenses(meshes: list[Mesh], materials: dict[str, Material], textures: dict[str, TextureImage]) -> None:
+    """Separate lens meshes (`*glassSkin`, `*gogglelensSkin`) whose lens area has a high albedo alpha (Scientist, Collector: ~0.9) are
+    clear glass in game, not milky white; give them a copy of the material with 25% of that opacity. Lenses whose alpha is already ~0
+    (School Kid) are left alone."""
+    import dataclasses
+
+    for mesh in meshes:
+        if not re.search(r"(?i)(glass|lens)Skin$", mesh.name):
+            continue
+        for prim in mesh.primitives:
+            mat = materials.get(prim.material)
+            if mat is None or not mat.base_color or not prim.uvs or mat.base_color not in textures:
+                continue
+            tex = textures[mat.base_color].rgba
+            hh, ww = tex.shape[:2]
+            uv = np.asarray(prim.uvs[0], np.float64) % 1.0
+            xs, ys = np.clip((uv[:, 0] * ww).astype(int), 0, ww - 1), np.clip((uv[:, 1] * hh).astype(int), 0, hh - 1)
+            if tex[ys, xs, 3].mean() / 255.0 <= 0.6:
+                continue
+            key = f"{mat.base_color}_lens"
+            if key not in textures:
+                t = tex.copy()
+                t[..., 3] = (t[..., 3].astype(np.float32) * 0.25).astype(np.uint8)
+                textures[key] = TextureImage(key=key, rgba=t, srgb=True)
+            new = dataclasses.replace(mat, name=f"{mat.name}_lens", base_color=key, alpha_mode="BLEND", extras=dict(mat.extras))
+            materials[new.name] = new
+            prim.material = new.name
 
 
 def _mesh_primitives(smr, get_material, palette_of: dict[int, int]) -> list[Primitive]:
@@ -419,6 +450,8 @@ def import_bundle(path: str, model_id: str, display_name: str, kind: str = "trai
         if prims:
             go = smr.m_GameObject.read()
             meshes.append(Mesh(name=go.m_Name, primitives=prims, visible=bool(go.m_IsActive) and bool(smr.m_Enabled)))
+
+    _soften_lenses(meshes, materials, textures)
 
     clips = _clips(objs, h, index, skeleton) if with_anim else []
     default = next((c.name for c in clips if re.search(r"wait|idle", c.name)), clips[0].name if clips else None)
