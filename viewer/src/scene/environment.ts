@@ -46,6 +46,10 @@ const p = (id: string, label: string, e: Partial<Environment>): LightingPreset =
 // (samples/detective_handclap01_*, tools/match_lighting.mjs).
 export const LIGHTING_PRESETS: LightingPreset[] = [
   p('studio', 'Studio (VS)', {}),
+  // Fitted with tools/fit_lighting_refs.mjs to 15 BDSP trainers vs their Bulbapedia VS images (mean |dRGB| 41.7 -> 21.6, 5 held-out
+  // trainers 49.8 -> 23.7): mostly exposure (the game is much brighter than Studio) plus a flatter, lower key. Linear output.
+  p('bdspVs', 'BDSP VS render', { ambient: 1.84, azimuth: -32, elevation: 16, keyTemp: 6125, back: 0.1, skyTemp: 5900, shadow: 0.39, detail: 0.4,
+    exposure: 1.8, contrast: 0.9 }),
   p('day', 'Day, street', { ambient: 2.2, key: 1.4, azimuth: -35, elevation: 55, keyTemp: 5800, skyTemp: 8000, ground: '#b5a890',
     back: 0.4, backTemp: 8000, rim: 0.5, toneMapping: 'agx', exposure: 1.6, contrast: 1.3 }),
   p('overcast', 'Overcast', { ambient: 3.0, key: 0.3, elevation: 60, keyTemp: 7000, skyTemp: 7000, ground: '#a8a8a4',

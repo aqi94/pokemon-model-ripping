@@ -191,7 +191,7 @@ def _material(m, cache, textures) -> Material:
         # A tiny solid-green mask is the shader's "whole texture is _PrimaryColor" placeholder (every hair; Cynthia's black fur,
         # whose _SecondaryColor is gold but shows black in game), so it colours like hair instead of selecting the G zone.
         solid_g = max(mask.shape[:2]) <= 16 and mask[..., 1].min() >= 250 and mask[..., 0].max() <= 5 and mask[..., 2].max() <= 5
-        mode = "hair" if "_LIGHTING_HAIR" in kw or solid_g else "skin" if re.search(r"(?i)^(body|face)", m.m_Name) else "zones"
+        mode = "hair" if "_LIGHTING_HAIR" in kw or solid_g else "zones"  # body/face too: R skin, G primary (the eyebrows), B secondary
         key = f"{mat.base_color}_tint"
         if key not in textures:
             base = textures[mat.base_color]
