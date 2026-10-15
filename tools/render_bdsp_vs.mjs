@@ -21,6 +21,13 @@ const base = opt('url', 'http://localhost:5173');
 const ball = opt('ball', '');
 const tag = opt('tag', '');
 const ballScale = Number(opt('ballscale', '1'));
+// Camera: the VS images sit between the viewer's wide perspective and a flat orthographic view (feet seen slightly from above):
+// the viewer camera is perspective-only, so a long lens is used: --fov 14 --pitch 8 by default (--fov 3 ~ orthographic, --fov 0 = viewer preset).
+const fov = Number(opt('fov', '14'));
+const pitch = Number(opt('pitch', '8'));
+const yaw = Number(opt('yaw', '0'));
+// --gaze x,y: aim both eyeball bones at the camera (0,0) or at a point offset from it (x right, y up, as a fraction of the camera distance).
+const gaze = opt('gaze', '').split(',').filter(Boolean).map(Number);
 // --fx: the game's light effects are particle systems that are not in the rip; approximate them with additive glow sprites.
 //   police: lens glow on the `Light` bone + baton glow on RItem1.  psychic: ring of beads through LHand -> RItem1 (the orb above the head) -> RHand.
 const fx = opt('fx', '');
@@ -51,12 +58,43 @@ for (const id of ids) {
   const used = await page.evaluate((clip) => { const a = window.__viewer.anim; const c = [clip, 'advent_b', 'wait_b'].find((n) => a.has(n)) ?? null; if (c) a.play(c); return c; }, clip);
   const threeUrl = await page.evaluate(() => performance.getEntriesByType('resource').map((r) => r.name).find((n) => /deps\/three\.js/.test(n)));
   for (const f of frames) {
-    const url = await page.evaluate(async ({ f, camera, fx, threeUrl }) => {
+    const url = await page.evaluate(async ({ f, camera, fx, threeUrl, cam, gz }) => {
       const vs = window.__viewer, a = vs.anim;
       a.setPaused(true);
       const fc = Math.max(1, (a.state().frameCount || 1) - 1);
       a.scrubToFrame(Math.round(f * fc));
       vs.setCameraPreset(camera);
+      if (cam.fov > 0) {
+        const fi = vs.fitInfo(); const old = vs.camera.fov; const rad = Math.PI / 180;
+        vs.camera.fov = cam.fov;
+        const d = fi.dist * Math.tan(old * rad / 2) / Math.tan(cam.fov * rad / 2);
+        const dir = { x: Math.sin(cam.yaw * rad) * Math.cos(cam.pitch * rad), y: Math.sin(cam.pitch * rad), z: Math.cos(cam.yaw * rad) * Math.cos(cam.pitch * rad) };
+        vs.camera.position.set(fi.center.x + dir.x * d, fi.center.y + dir.y * d, fi.center.z + dir.z * d);
+        vs.controls.maxDistance = fi.radius * 1000; vs.controls.target.copy(fi.center); vs.camera.near = fi.radius / 100; vs.camera.far = fi.radius * 200; vs.camera.updateProjectionMatrix(); vs.camera.lookAt(fi.center); vs.controls.update();
+      }
+      if (gz.length === 2) {
+        const T = await import(threeUrl);
+        vs.root.updateMatrixWorld(true);
+        const skinned = []; vs.gltf.scene.traverse((o) => { if (o.isSkinnedMesh) skinned.push(o); });
+        for (const n of ['LEyeball', 'REyeball']) {
+          const b = vs.findBone(n); if (!b) continue;
+          // the eyeball's own forward axis = the character's forward (+Z) seen from its bind orientation
+          let fLocal = null;
+          for (const m of skinned) { const i = m.skeleton.bones.indexOf(b); if (i >= 0) { const q = new T.Quaternion().setFromRotationMatrix(m.skeleton.boneInverses[i].clone().invert()); fLocal = new T.Vector3(0, 0, 1).applyQuaternion(q.invert()); break; } }
+          if (!fLocal) continue;
+          const eye = b.getWorldPosition(new T.Vector3());
+          const toCam = vs.camera.position.clone().sub(eye).normalize();
+          const right = new T.Vector3().crossVectors(new T.Vector3(0, 1, 0), toCam).normalize().negate();
+          const up = new T.Vector3().crossVectors(toCam, right).normalize();
+          const target = vs.camera.position.clone().add(right.multiplyScalar(gz[0] * vs.camera.position.distanceTo(eye))).add(up.multiplyScalar(gz[1] * vs.camera.position.distanceTo(eye)));
+          const want = target.sub(eye).normalize();
+          const wq = b.getWorldQuaternion(new T.Quaternion());
+          const cur = fLocal.clone().applyQuaternion(wq);
+          const nq = new T.Quaternion().setFromUnitVectors(cur, want).multiply(wq);
+          b.quaternion.copy(b.parent.getWorldQuaternion(new T.Quaternion()).invert().multiply(nq));
+          b.updateMatrixWorld(true);
+        }
+      }
       if (fx) {
         const T = await import(threeUrl);
         const scene = vs.root.parent ?? vs.root;
@@ -95,7 +133,7 @@ for (const id of ids) {
       }
       await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
       return vs.pngDataUrl();
-    }, { f, camera: opt('camera', 'front'), fx, threeUrl });
+    }, { f, camera: opt('camera', 'front'), fx, threeUrl, cam: { fov, pitch, yaw }, gz: gaze });
     fs.writeFileSync(path.join(out, `${id.replace(/\//g, '_')}_f${f}${tag}.png`), Buffer.from(url.split(',')[1], 'base64'));
   }
   console.log(id, used);

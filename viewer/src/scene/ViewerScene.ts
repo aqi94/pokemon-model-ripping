@@ -8,6 +8,7 @@ import { loadGlb } from './loader';
 import { exportCanvasPng } from './exporter';
 import { DEFAULT_ENV, kelvinToRGB, type Environment, type ToneMap } from './environment';
 import { applyGameShading, removeGameShading, syncUnlit } from './gameShading';
+import { isReflective, makeReflectionEnv } from './reflection';
 import { bakePalette, type PaletteData } from './palette';
 
 export type ShadingMode = 'game' | 'pbr';
@@ -38,6 +39,7 @@ export class ViewerScene {
   private visKey = '';
   private nodeCache = new Map<string, THREE.Object3D>();
 
+  private reflEnv?: THREE.Texture;
   private held?: { obj: THREE.Object3D; prop: PropInfo; url: string; parser?: GLTF['parser'] };
   private env: Environment = { ...DEFAULT_ENV };
   private texCache = new WeakMap<THREE.Material, Record<string, THREE.Texture | null | 'pending'>>();
@@ -498,7 +500,8 @@ export class ViewerScene {
             spec: this.getTex(sm, parser, 'specularMaskTexture', false),
             rim: this.getTex(sm, parser, 'rimMaskTexture', false),
           };
-          applyGameShading(sm, this.env, tex);
+          if (isReflective(sm)) this.reflEnv ??= makeReflectionEnv(this.renderer);
+          applyGameShading(sm, this.env, tex, isReflective(sm) ? this.reflEnv ?? null : null);
         } else removeGameShading(sm);
       }
     });

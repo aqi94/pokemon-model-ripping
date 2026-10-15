@@ -11,6 +11,7 @@ triangle winding reverses, 4x4 matrices become S M S with S = diag(-1,1,1,1). UV
 
 from __future__ import annotations
 
+import hashlib
 import re
 import zlib
 
@@ -192,7 +193,10 @@ def _material(m, cache, textures) -> Material:
         # whose _SecondaryColor is gold but shows black in game), so it colours like hair instead of selecting the G zone.
         solid_g = max(mask.shape[:2]) <= 16 and mask[..., 1].min() >= 250 and mask[..., 0].max() <= 5 and mask[..., 2].max() <= 5
         mode = "hair" if "_LIGHTING_HAIR" in kw or solid_g else "zones"  # body/face too: R skin, G primary (the eyebrows), B secondary
-        key = f"{mat.base_color}_tint"
+        # Materials can share albedo + mask but differ in colours (Scientist's coat vs glasses, Twins' hair vs ribbon, Roughneck's
+        # jeans vs metal): the baked texture is keyed by the colours and mode too, or the first material baked wins for all.
+        tag = hashlib.md5(repr((mode, msk, [round(c, 3) for n in ("_PrimaryColor", "_SecondaryColor", "_SkinColor") for c in cols[n][:3]])).encode()).hexdigest()[:8]
+        key = f"{mat.base_color}_tint_{tag}"
         if key not in textures:
             base = textures[mat.base_color]
             textures[key] = TextureImage(key=key, rgba=bake_tint(base.rgba, textures[msk].rgba, cols["_PrimaryColor"], cols["_SecondaryColor"], cols["_SkinColor"], mode), srgb=True)
