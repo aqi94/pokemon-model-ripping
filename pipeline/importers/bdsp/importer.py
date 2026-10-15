@@ -186,8 +186,27 @@ def _material(m, cache, textures) -> Material:
         "masks": {s: k for s, k in keys.items() if s in ("msk", "uti") and k},
         "colors": {n: [round(float(c.r), 4), round(float(c.g), 4), round(float(c.b), 4), round(float(c.a), 4)] for n, c in props.m_Colors},
     }
+    if "_ENVMAP_ON" in kw:
+        # Glossy materials (glasses, inner tubes, metal): the game adds a broad specular highlight (_SpecularIntensity 2, cosine power 10)
+        # on top of the environment reflection; the viewer's Game shader reads these params (default specular is nearly off).
+        # Dark albedos (glasses frames: ~0.27) keep a weak sheen, otherwise the boost turns them silver.
+        lum = float(textures[mat.base_color].rgba[..., :3].mean()) / 255.0 if mat.base_color in textures else 0.5
+        dark = lum < 0.32
+        mat.extras["shading"] = {"specularIntensity": 0.6 if dark else 3.0, "specularContrast": 1.5}
+        mat.extras["reflect"] = {"envIntensity": 0.4 if dark else 1.5}
     cols = mat.extras["unity"]["colors"]
     msk = keys.get("msk")
+    fl = {k: float(v) for k, v in props.m_Floats}
+    bu, bv = fl.get("_ColorBaseU", 0.0), fl.get("_ColorBaseV", 0.0)
+    if "_Col0Tex" in tex and mat.base_color and (bu or bv):
+        # Pokémon-shader face parts (Poké Fan F's Bonsly dolls): the eye/mouth atlas is a 4x4 grid of expressions and `_ColorBaseU/V` picks the
+        # tile, i.e. the shader samples atlas(uv + base). Bake that shift into the texture (roll, wrapping) so the mesh UVs stay plain.
+        key = f"{mat.base_color}_base_{bu:g}_{bv:g}"
+        if key not in textures:
+            t = textures[mat.base_color].rgba
+            hh, ww = t.shape[:2]
+            textures[key] = TextureImage(key=key, rgba=np.roll(np.roll(t, -int(round(bu * ww)), axis=1), int(round(bv * hh)), axis=0), srgb=True)
+        mat.base_color = key
     if mat.base_color and msk and all(k in cols for k in ("_PrimaryColor", "_SecondaryColor", "_SkinColor")):
         mask = textures[msk].rgba
         # A tiny solid-green mask is the shader's "whole texture is _PrimaryColor" placeholder (every hair; Cynthia's black fur,
@@ -209,7 +228,19 @@ def _material(m, cache, textures) -> Material:
 
 
 
-def _soften_lenses(meshes: list[Mesh], materials: dict[str, Material], textures: dict[str, TextureImage]) -> None:
+def _overrides(model_id: str) -> dict:
+    """Per-character import overrides: overrides/<model id>.json next to this file (see overrides/README.md)."""
+    import json
+    import os
+
+    p = os.path.join(os.path.dirname(__file__), "overrides", f"{model_id}.json")
+    if not os.path.isfile(p):
+        return {}
+    with open(p, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _soften_lenses(meshes: list[Mesh], materials: dict[str, Material], textures: dict[str, TextureImage], opacity: float = 0.25, tint: float = 1.0) -> None:
     """Separate lens meshes (`*glassSkin`, `*gogglelensSkin`) whose lens area has a high albedo alpha (Scientist, Collector: ~0.9) are
     clear glass in game, not milky white; give them a copy of the material with 25% of that opacity. Lenses whose alpha is already ~0
     (School Kid) are left alone."""
@@ -228,10 +259,11 @@ def _soften_lenses(meshes: list[Mesh], materials: dict[str, Material], textures:
             xs, ys = np.clip((uv[:, 0] * ww).astype(int), 0, ww - 1), np.clip((uv[:, 1] * hh).astype(int), 0, hh - 1)
             if tex[ys, xs, 3].mean() / 255.0 <= 0.6:
                 continue
-            key = f"{mat.base_color}_lens"
+            key = f"{mat.base_color}_lens_{opacity:g}_{tint:g}"
             if key not in textures:
                 t = tex.copy()
-                t[..., 3] = (t[..., 3].astype(np.float32) * 0.25).astype(np.uint8)
+                t[..., :3] = (t[..., :3].astype(np.float32) * tint).astype(np.uint8)
+                t[..., 3] = (t[..., 3].astype(np.float32) * opacity).astype(np.uint8)
                 textures[key] = TextureImage(key=key, rgba=t, srgb=True)
             new = dataclasses.replace(mat, name=f"{mat.name}_lens", base_color=key, alpha_mode="BLEND", extras=dict(mat.extras))
             materials[new.name] = new
@@ -520,7 +552,7 @@ def import_bundle(path: str, model_id: str, display_name: str, kind: str = "trai
             go = smr.m_GameObject.read()
             meshes.append(Mesh(name=go.m_Name, primitives=prims, visible=bool(go.m_IsActive) and bool(smr.m_Enabled)))
 
-    _soften_lenses(meshes, materials, textures)
+    _soften_lenses(meshes, materials, textures, float(_overrides(model_id).get("lens_opacity", 0.25)), float(_overrides(model_id).get("lens_tint", 1.0)))
 
     smr_by_id = {o.path_id: o.read() for o in objs if o.type.name == "SkinnedMeshRenderer"}
     clips = _clips(objs, h, index, skeleton, _uv_targets(objs, smr_by_id, get_material)) if with_anim else []

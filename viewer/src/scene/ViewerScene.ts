@@ -553,7 +553,7 @@ export class ViewerScene {
             rim: this.getTex(sm, parser, 'rimMaskTexture', false),
           };
           if (isReflective(sm)) this.reflEnv ??= makeReflectionEnv(this.renderer);
-          applyGameShading(sm, this.env, tex, isReflective(sm) ? this.reflEnv ?? null : null);
+          applyGameShading(sm, this.env, tex, isReflective(sm) ? this.reflEnv ?? null : null, (sm.userData as { reflect?: { envIntensity?: number } }).reflect?.envIntensity ?? 1.5);
         } else removeGameShading(sm);
       }
     });

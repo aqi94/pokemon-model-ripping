@@ -131,7 +131,7 @@ export function syncUnlit(mat: THREE.MeshStandardMaterial) {
   mat.color.setRGB(0, 0, 0);
 }
 
-export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail: number; shadow: number; rim: number; saturation: number; contrast?: number; gi?: number }, tex: GameTextures = { shadow: null, spec: null, rim: null }, reflect: THREE.Texture | null = null) {
+export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail: number; shadow: number; rim: number; saturation: number; contrast?: number; gi?: number }, tex: GameTextures = { shadow: null, spec: null, rim: null }, reflect: THREE.Texture | null = null, reflectIntensity = 1.5) {
   const detail = env.detail;
   if (!mat.userData.__pbr) {
     mat.userData.__pbr = {
@@ -144,7 +144,7 @@ export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail:
   const pbr = mat.userData.__pbr as Pbr;
   const p = params(mat);
   mat.roughness = 1; mat.metalness = 0; mat.envMapIntensity = 0;
-  if (reflect) { mat.envMap = reflect; mat.envMapIntensity = 1.5; mat.roughness = 0.2; mat.metalness = 0.1; } // _ENVMAP_ON materials (glasses, tubes, metal)
+  if (reflect) { mat.envMap = reflect; mat.envMapIntensity = reflectIntensity; mat.roughness = 0.2; mat.metalness = 0.1; } // _ENVMAP_ON materials (glasses, tubes, metal)
   else if (mat.envMap && mat.userData.__reflEnv) mat.envMap = null;
   mat.userData.__reflEnv = !!reflect;
   const ns = detail * p.normalHeight;

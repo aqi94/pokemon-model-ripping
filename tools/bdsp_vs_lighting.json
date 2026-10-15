@@ -1,0 +1,1164 @@
+{
+ "tr1024_00": {
+  "label": "Ace Trainer (M)",
+  "base": 13.82,
+  "loss": 12.1,
+  "env": {
+   "azimuth": -32.8,
+   "elevation": 9.52,
+   "keyTemp": 5677,
+   "skyTemp": 5612,
+   "warmth": 0.019,
+   "shadow": 0.48,
+   "exposure": 2.1,
+   "contrast": 1,
+   "saturation": 0.9
+  }
+ },
+ "tr1053_00": {
+  "label": "Ace Trainer (M, 2)",
+  "base": 16.68,
+  "loss": 14.89,
+  "env": {
+   "ambient": 2.14,
+   "azimuth": -24.8,
+   "keyTemp": 5453,
+   "skyTemp": 4620,
+   "shadow": 0.204,
+   "contrast": 0.8,
+   "saturation": 1.04
+  }
+ },
+ "tr1025_00": {
+  "label": "Ace Trainer (F)",
+  "base": 15.59,
+  "loss": 12.11,
+  "env": {
+   "azimuth": -24,
+   "elevation": 16.72,
+   "keyTemp": 5873,
+   "shadow": 0.1,
+   "exposure": 2.1,
+   "contrast": 1
+  }
+ },
+ "tr1054_00": {
+  "label": "Ace Trainer (F, 2)",
+  "base": 13.26,
+  "loss": 11.51,
+  "env": {
+   "ambient": 2.34,
+   "azimuth": -52,
+   "keyTemp": 6825,
+   "skyTemp": 5292,
+   "warmth": -0.08,
+   "exposure": 1.5,
+   "contrast": 0.936,
+   "saturation": 0.964
+  }
+ },
+ "tr1007_00": {
+  "label": "Aroma Lady",
+  "base": 17.91,
+  "loss": 16.82,
+  "env": {
+   "ambient": 2.34,
+   "azimuth": -32.8,
+   "elevation": 9.52,
+   "keyTemp": 5425,
+   "saturation": 1.1
+  }
+ },
+ "tr0044_00": {
+  "label": "Artist",
+  "base": 35.95,
+  "loss": 18.05,
+  "env": {
+   "ambient": 1.34,
+   "key": 1.04,
+   "azimuth": -44.8,
+   "keyTemp": 7497,
+   "skyTemp": 7468,
+   "warmth": -0.109,
+   "shadow": 0.54,
+   "exposure": 1.428,
+   "contrast": 0.96,
+   "saturation": 0.85
+  }
+ },
+ "tr1010_00": {
+  "label": "Battle Girl",
+  "base": 17.59,
+  "loss": 16.16,
+  "env": {
+   "azimuth": 0,
+   "elevation": 16.72,
+   "keyTemp": 5677,
+   "warmth": 0.019,
+   "shadow": 0.204,
+   "saturation": 1.06
+  }
+ },
+ "tr0051_00": {
+  "label": "Beauty",
+  "base": 16.47,
+  "loss": 16.08,
+  "env": {
+   "azimuth": -39.2,
+   "elevation": 0,
+   "warmth": 0.032,
+   "shadow": 0.336,
+   "contrast": 0.864,
+   "saturation": 1.06
+  }
+ },
+ "tr1030_00": {
+  "label": "Bird Keeper",
+  "base": 21.62,
+  "loss": 17.51,
+  "env": {
+   "ambient": 2.14,
+   "azimuth": -44,
+   "elevation": 6.48,
+   "keyTemp": 5425,
+   "skyTemp": 6700,
+   "warmth": 0.048,
+   "shadow": 0.594,
+   "exposure": 1.5,
+   "contrast": 0.964,
+   "saturation": 1.036
+  }
+ },
+ "tr0050_00": {
+  "label": "Black Belt",
+  "base": 26.97,
+  "loss": 23.48,
+  "env": {
+   "key": 1.44,
+   "azimuth": -36.8,
+   "keyTemp": 7497,
+   "skyTemp": 7468,
+   "warmth": -0.109,
+   "shadow": 0.246,
+   "contrast": 0.836,
+   "saturation": 0.96
+  }
+ },
+ "tr1006_00": {
+  "label": "Bug Catcher",
+  "base": 23.46,
+  "loss": 22.35,
+  "env": {
+   "ambient": 2.16,
+   "azimuth": -12,
+   "elevation": 0,
+   "keyTemp": 6573,
+   "skyTemp": 5388,
+   "warmth": -0.109,
+   "shadow": 0.336,
+   "exposure": 1.908,
+   "contrast": 0.84
+  }
+ },
+ "tr0062_00": {
+  "label": "Cameraman",
+  "base": 16.88,
+  "loss": 12.46,
+  "env": {
+   "azimuth": -27.2,
+   "elevation": 6.48,
+   "keyTemp": 5173,
+   "skyTemp": 5132,
+   "shadow": 0.24,
+   "exposure": 2.208,
+   "contrast": 0.864,
+   "saturation": 0.96
+  }
+ },
+ "tr1004_00": {
+  "label": "Camper",
+  "base": 21.46,
+  "loss": 20.11,
+  "env": {
+   "ambient": 1.34,
+   "azimuth": -31.2,
+   "elevation": 29.68,
+   "shadow": 0.294,
+   "exposure": 1.98,
+   "contrast": 0.8,
+   "saturation": 1.076
+  }
+ },
+ "tr1058_00": {
+  "label": "Clown",
+  "base": 22.8,
+  "loss": 17.4,
+  "env": {
+   "azimuth": -51.2,
+   "elevation": 17.28,
+   "keyTemp": 5005,
+   "skyTemp": 5132,
+   "shadow": 0.186,
+   "exposure": 2.208,
+   "contrast": 0.94
+  }
+ },
+ "tr1037_00": {
+  "label": "Collector",
+  "base": 16.84,
+  "loss": 15.5,
+  "env": {
+   "azimuth": -44.8,
+   "elevation": 10.8,
+   "keyTemp": 5425,
+   "skyTemp": 5580,
+   "warmth": -0.048,
+   "shadow": 0.33,
+   "saturation": 1.1
+  }
+ },
+ "tr0018_00": {
+  "label": "Cowgirl",
+  "base": 15.96,
+  "loss": 13.95,
+  "env": {
+   "ambient": 2.34,
+   "key": 1.44,
+   "elevation": 22.48,
+   "keyTemp": 5425,
+   "skyTemp": 5132,
+   "shadow": 0.54,
+   "exposure": 1.5,
+   "contrast": 0.96,
+   "saturation": 0.85
+  }
+ },
+ "tr1013_00": {
+  "label": "Cyclist (F)",
+  "base": 34.71,
+  "loss": 31.84,
+  "env": {
+   "ambient": 2.52,
+   "key": 1.44,
+   "azimuth": -40,
+   "keyTemp": 5705,
+   "skyTemp": 5612,
+   "shadow": 0.3,
+   "exposure": 1.392,
+   "contrast": 0.8,
+   "saturation": 1.04
+  }
+ },
+ "tr1012_00": {
+  "label": "Cyclist (M)",
+  "base": 29.26,
+  "loss": 26.21,
+  "env": {
+   "ambient": 2.52,
+   "key": 1.344,
+   "azimuth": 0,
+   "elevation": 11.68,
+   "keyTemp": 6377,
+   "skyTemp": 5612,
+   "warmth": -0.032,
+   "shadow": 0.48,
+   "exposure": 1.392,
+   "contrast": 0.8,
+   "saturation": 1.024
+  }
+ },
+ "tr1029_00": {
+  "label": "Dragon Tamer",
+  "base": 18.45,
+  "loss": 15.87,
+  "env": {
+   "key": 1.344,
+   "azimuth": -20,
+   "elevation": 26.8,
+   "skyTemp": 6220,
+   "warmth": -0.029,
+   "shadow": 0.54,
+   "exposure": 1.5,
+   "contrast": 0.96,
+   "saturation": 0.964
+  }
+ },
+ "tr0048_00": {
+  "label": "Fisher",
+  "base": 33.92,
+  "loss": 30.47,
+  "env": {
+   "elevation": 10.8,
+   "keyTemp": 5005,
+   "skyTemp": 4812,
+   "warmth": 0.029,
+   "shadow": 0.294,
+   "exposure": 2.388,
+   "contrast": 0.864,
+   "saturation": 1.1
+  }
+ },
+ "tr0046_00": {
+  "label": "Gentleman",
+  "base": 18.34,
+  "loss": 15.11,
+  "env": {
+   "ambient": 1.66,
+   "azimuth": -4.8,
+   "elevation": 10.8,
+   "skyTemp": 4620,
+   "shadow": 0.24,
+   "exposure": 1.608,
+   "contrast": 0.84,
+   "saturation": 1.06
+  }
+ },
+ "tr1052_00": {
+  "label": "Guitarist",
+  "base": 19.53,
+  "loss": 18.19,
+  "env": {
+   "ambient": 2.02,
+   "keyTemp": 4753,
+   "skyTemp": 5612,
+   "shadow": 0.204,
+   "exposure": 2.1
+  }
+ },
+ "tr0049_00": {
+  "label": "Hiker",
+  "base": 18.69,
+  "loss": 17.07,
+  "env": {
+   "azimuth": -52,
+   "keyTemp": 6097,
+   "skyTemp": 5100,
+   "warmth": 0.048,
+   "exposure": 2.1,
+   "contrast": 0.864,
+   "saturation": 1.06
+  }
+ },
+ "tr1085_00": {
+  "label": "Idol",
+  "base": 21.2,
+  "loss": 15.53,
+  "env": {
+   "ambient": 2.34,
+   "key": 1.344,
+   "azimuth": -27.2,
+   "elevation": 9.52,
+   "keyTemp": 5173,
+   "warmth": -0.051,
+   "exposure": 2.1,
+   "contrast": 0.84
+  }
+ },
+ "tr1019_00": {
+  "label": "Jogger",
+  "base": 16.08,
+  "loss": 13.89,
+  "env": {
+   "azimuth": -24.8,
+   "elevation": 0,
+   "shadow": 0.444,
+   "exposure": 1.5
+  }
+ },
+ "tr1033_00": {
+  "label": "Lady",
+  "base": 25.83,
+  "loss": 15.7,
+  "env": {
+   "ambient": 2.34,
+   "key": 1.6,
+   "azimuth": -20,
+   "elevation": 5.2,
+   "keyTemp": 5677,
+   "skyTemp": 5612,
+   "shadow": 0.534,
+   "exposure": 2.1,
+   "contrast": 0.936,
+   "saturation": 0.924
+  }
+ },
+ "tr0029_00": {
+  "label": "Lass",
+  "base": 14.13,
+  "loss": 11.99,
+  "env": {
+   "azimuth": -24,
+   "elevation": 4.32,
+   "keyTemp": 5425,
+   "skyTemp": 4620,
+   "shadow": 0.384,
+   "exposure": 1.68,
+   "contrast": 0.876,
+   "saturation": 1.064
+  }
+ },
+ "tr0047_00": {
+  "label": "Madame",
+  "base": 13.61,
+  "loss": 11.34,
+  "env": {
+   "azimuth": -12,
+   "elevation": 10.8,
+   "warmth": 0.019,
+   "shadow": 0.384,
+   "exposure": 1.5,
+   "contrast": 0.96
+  }
+ },
+ "tr1028_00": {
+  "label": "Ninja Boy",
+  "base": 20.02,
+  "loss": 18.43,
+  "env": {
+   "azimuth": -44.8,
+   "keyTemp": 4753,
+   "skyTemp": 4500,
+   "shadow": 0.294,
+   "exposure": 2.088,
+   "contrast": 0.864
+  }
+ },
+ "tr1051_00": {
+  "label": "PI",
+  "base": 23.92,
+  "loss": 13.41,
+  "env": {
+   "ambient": 1.34,
+   "key": 0.8,
+   "azimuth": -56.8,
+   "keyTemp": 7497,
+   "skyTemp": 7468,
+   "warmth": -0.051,
+   "shadow": 0.354,
+   "exposure": 1.428,
+   "contrast": 0.8,
+   "saturation": 0.85
+  }
+ },
+ "tr1080_00": {
+  "label": "Parasol Lady",
+  "base": 17.81,
+  "loss": 16.24,
+  "env": {
+   "ambient": 1.66,
+   "azimuth": -12.8,
+   "keyTemp": 6405,
+   "skyTemp": 6380,
+   "warmth": 0.003,
+   "shadow": 0.63,
+   "exposure": 1.908,
+   "contrast": 0.8,
+   "saturation": 1.06
+  }
+ },
+ "tr1005_00": {
+  "label": "Picnicker",
+  "base": 20.22,
+  "loss": 18.83,
+  "env": {
+   "ambient": 1.34,
+   "azimuth": -70,
+   "elevation": 5.2,
+   "keyTemp": 5957,
+   "skyTemp": 5612,
+   "warmth": -0.019,
+   "shadow": 0.384,
+   "exposure": 2.088,
+   "contrast": 0.84,
+   "saturation": 1.096
+  }
+ },
+ "tr0039_00": {
+  "label": "Police Officer",
+  "base": 25.57,
+  "loss": 24.33,
+  "env": {
+   "azimuth": -44,
+   "elevation": 0,
+   "keyTemp": 6405,
+   "skyTemp": 6988,
+   "shadow": 0.3,
+   "exposure": 1.5,
+   "contrast": 0.924
+  }
+ },
+ "tr1050_00": {
+  "label": "Psychic (F)",
+  "base": 49.5,
+  "loss": 46.85,
+  "env": {
+   "azimuth": -12,
+   "exposure": 2.1,
+   "contrast": 0.8,
+   "saturation": 1.1
+  }
+ },
+ "tr1049_00": {
+  "label": "Psychic (M)",
+  "base": 46.83,
+  "loss": 43.09,
+  "env": {
+   "ambient": 2.52,
+   "elevation": 10.8,
+   "keyTemp": 5425,
+   "skyTemp": 6988,
+   "warmth": 0.048,
+   "exposure": 1.992,
+   "contrast": 0.8,
+   "saturation": 1.1
+  }
+ },
+ "tr1071_00": {
+  "label": "Rancher",
+  "base": 30.48,
+  "loss": 22.37,
+  "env": {
+   "ambient": 2.04,
+   "key": 1.6,
+   "azimuth": 0,
+   "elevation": 5.2,
+   "keyTemp": 6825,
+   "skyTemp": 6668,
+   "warmth": -0.061,
+   "shadow": 0.444,
+   "exposure": 2.208,
+   "contrast": 0.84,
+   "saturation": 1.06
+  }
+ },
+ "tr0061_00": {
+  "label": "Reporter",
+  "base": 15.4,
+  "loss": 10.79,
+  "env": {
+   "azimuth": -27.2,
+   "keyTemp": 5873,
+   "skyTemp": 5100,
+   "shadow": 0.3,
+   "exposure": 2.1
+  }
+ },
+ "tr1032_00": {
+  "label": "Rich Boy",
+  "base": 18.57,
+  "loss": 12.81,
+  "env": {
+   "elevation": 0,
+   "keyTemp": 6545,
+   "skyTemp": 5708,
+   "exposure": 2.1
+  }
+ },
+ "tr1057_00": {
+  "label": "Roughneck",
+  "base": 22.35,
+  "loss": 13.42,
+  "env": {
+   "ambient": 2.34,
+   "key": 1.84,
+   "azimuth": -56.8,
+   "elevation": 6.48,
+   "keyTemp": 6993,
+   "skyTemp": 5100,
+   "warmth": -0.048,
+   "exposure": 2.1,
+   "contrast": 0.8
+  }
+ },
+ "tr1048_00": {
+  "label": "Ruin Maniac",
+  "base": 19.53,
+  "loss": 17.25,
+  "env": {
+   "ambient": 1.66,
+   "azimuth": -59.2,
+   "elevation": 4.32,
+   "skyTemp": 5100,
+   "exposure": 1.608,
+   "saturation": 0.976
+  }
+ },
+ "tr1046_00": {
+  "label": "Sailor",
+  "base": 16.49,
+  "loss": 13.5,
+  "env": {
+   "azimuth": -56.8,
+   "elevation": 20.32,
+   "keyTemp": 7245,
+   "skyTemp": 6700,
+   "warmth": -0.032,
+   "exposure": 2.1,
+   "saturation": 1.06
+  }
+ },
+ "tr0031_00": {
+  "label": "School Kid (F)",
+  "base": 18.24,
+  "loss": 13.98,
+  "env": {
+   "azimuth": -31.2,
+   "keyTemp": 5873,
+   "skyTemp": 5420,
+   "shadow": 0.15,
+   "exposure": 2.1,
+   "contrast": 0.864,
+   "saturation": 1.06
+  }
+ },
+ "tr0030_00": {
+  "label": "School Kid (M)",
+  "base": 19.14,
+  "loss": 13.9,
+  "env": {
+   "ambient": 2.34,
+   "azimuth": -19.2,
+   "elevation": 9.52,
+   "keyTemp": 6097,
+   "skyTemp": 4500,
+   "shadow": 0.294,
+   "exposure": 2.1,
+   "contrast": 0.836,
+   "saturation": 0.964
+  }
+ },
+ "tr1041_00": {
+  "label": "Scientist",
+  "base": 27.11,
+  "loss": 13.76,
+  "env": {
+   "ambient": 2.34,
+   "key": 1.6,
+   "azimuth": -44.8,
+   "elevation": 10.8,
+   "keyTemp": 6993,
+   "skyTemp": 5612,
+   "warmth": 0.003,
+   "exposure": 2.1,
+   "saturation": 0.976
+  }
+ },
+ "tr1056_00": {
+  "label": "Skier (F)",
+  "base": 36.64,
+  "loss": 31.26,
+  "env": {
+   "ambient": 1.54,
+   "azimuth": -40,
+   "elevation": 10.8,
+   "keyTemp": 6405,
+   "skyTemp": 6412,
+   "warmth": -0.003,
+   "exposure": 1.68,
+   "contrast": 0.8,
+   "saturation": 0.904
+  }
+ },
+ "tr1055_00": {
+  "label": "Skier (M)",
+  "base": 27.42,
+  "loss": 23.15,
+  "env": {
+   "ambient": 1.34,
+   "azimuth": -59.2,
+   "elevation": 9.52,
+   "keyTemp": 7077,
+   "skyTemp": 5932,
+   "warmth": 0.029,
+   "shadow": 0.294,
+   "exposure": 1.608,
+   "contrast": 0.8
+  }
+ },
+ "tr0054_00": {
+  "label": "Swimmer (F)",
+  "base": 14.83,
+  "loss": 12.47,
+  "env": {
+   "azimuth": -52,
+   "keyTemp": 7245,
+   "skyTemp": 5388,
+   "warmth": -0.08,
+   "exposure": 2.1,
+   "saturation": 0.9
+  }
+ },
+ "tr0053_00": {
+  "label": "Swimmer (M)",
+  "base": 15.87,
+  "loss": 12.98,
+  "env": {
+   "azimuth": -52,
+   "elevation": 9.52,
+   "keyTemp": 6993,
+   "skyTemp": 6700,
+   "warmth": -0.032,
+   "shadow": 0.444,
+   "exposure": 2.28,
+   "contrast": 0.8,
+   "saturation": 0.94
+  }
+ },
+ "tr1089_00": {
+  "label": "Team Galactic Grunt (F)",
+  "base": 29.36,
+  "loss": 23.27,
+  "env": {
+   "ambient": 2.34,
+   "azimuth": -7.2,
+   "elevation": 11.68,
+   "skyTemp": 5420,
+   "warmth": -0.029,
+   "shadow": 0.15,
+   "exposure": 2.1,
+   "contrast": 0.864
+  }
+ },
+ "tr1073_00": {
+  "label": "Team Galactic Grunt (M)",
+  "base": 26.07,
+  "loss": 17.01,
+  "env": {
+   "ambient": 2.46,
+   "key": 1.6,
+   "azimuth": -52,
+   "keyTemp": 6993,
+   "skyTemp": 6188,
+   "warmth": -0.029,
+   "shadow": 0.336,
+   "exposure": 1.92,
+   "contrast": 1.096,
+   "saturation": 0.94
+  }
+ },
+ "tr1097_00": {
+  "label": "Tower Tycoon (Palmer)",
+  "base": 17.74,
+  "loss": 13.08,
+  "env": {
+   "azimuth": -56.8,
+   "elevation": 6.48,
+   "keyTemp": 7245,
+   "skyTemp": 6220,
+   "warmth": -0.032,
+   "exposure": 2.28,
+   "contrast": 0.8
+  }
+ },
+ "tr1045_00": {
+  "label": "Tuber (F)",
+  "base": 18.33,
+  "loss": 15.13,
+  "env": {
+   "key": 1.44,
+   "azimuth": -24.8,
+   "elevation": 20.32,
+   "keyTemp": 6825,
+   "skyTemp": 6220,
+   "warmth": -0.048,
+   "shadow": 0.534,
+   "exposure": 1.5,
+   "contrast": 0.8
+  }
+ },
+ "tr1044_00": {
+  "label": "Tuber (M)",
+  "base": 18.56,
+  "loss": 16.19,
+  "env": {
+   "ambient": 1.34,
+   "azimuth": -31.2,
+   "elevation": 10.8,
+   "keyTemp": 7497,
+   "skyTemp": 6988,
+   "warmth": -0.032,
+   "shadow": 0.204,
+   "exposure": 1.908,
+   "saturation": 1.036
+  }
+ },
+ "tr1027_00": {
+  "label": "Veteran",
+  "base": 14.56,
+  "loss": 11.3,
+  "env": {
+   "azimuth": -64,
+   "elevation": 9.52,
+   "keyTemp": 6097,
+   "skyTemp": 5388,
+   "warmth": -0.048,
+   "shadow": 0.48,
+   "exposure": 2.1,
+   "contrast": 1
+  }
+ },
+ "tr1081_00": {
+  "label": "Waiter",
+  "base": 23.19,
+  "loss": 17.13,
+  "env": {
+   "azimuth": 7.2,
+   "elevation": 0,
+   "keyTemp": 6573,
+   "skyTemp": 5612,
+   "warmth": -0.029,
+   "shadow": 0.33,
+   "exposure": 2.1,
+   "contrast": 0.8,
+   "saturation": 0.964
+  }
+ },
+ "tr1026_00": {
+  "label": "Waitress",
+  "base": 15.83,
+  "loss": 15.45,
+  "env": {
+   "keyTemp": 6825,
+   "skyTemp": 5868,
+   "warmth": 0.019,
+   "shadow": 0.48
+  }
+ },
+ "tr0040_00": {
+  "label": "Worker",
+  "base": 21.79,
+  "loss": 19.17,
+  "env": {
+   "elevation": 22.48,
+   "keyTemp": 5845,
+   "shadow": 0.336,
+   "exposure": 1.5,
+   "contrast": 0.864,
+   "saturation": 1.136
+  }
+ },
+ "tr0028_00": {
+  "label": "Youngster",
+  "base": 14.41,
+  "loss": 12.93,
+  "env": {
+   "ambient": 1.66,
+   "azimuth": -24,
+   "elevation": 10.8,
+   "skyTemp": 5612,
+   "exposure": 1.608,
+   "saturation": 1.1
+  }
+ },
+ "tr1062_00": {
+  "label": "Roark (Gym 1)",
+  "base": 17.96,
+  "loss": 14.87,
+  "env": {
+   "ambient": 2.32,
+   "azimuth": -19.2,
+   "keyTemp": 7245,
+   "skyTemp": 5100,
+   "warmth": -0.061,
+   "exposure": 1.992,
+   "contrast": 0.8,
+   "saturation": 0.96
+  }
+ },
+ "tr1074_00": {
+  "label": "Gardenia (Gym 2)",
+  "base": 17.17,
+  "loss": 11.99,
+  "env": {
+   "azimuth": -24,
+   "skyTemp": 6220,
+   "shadow": 0.294,
+   "exposure": 2.1,
+   "contrast": 0.8
+  }
+ },
+ "tr1076_00": {
+  "label": "Maylene (Gym 3)",
+  "base": 16.46,
+  "loss": 14.18,
+  "env": {
+   "azimuth": -24,
+   "elevation": 4.32,
+   "keyTemp": 6825,
+   "warmth": -0.029,
+   "shadow": 0.294,
+   "exposure": 1.98,
+   "contrast": 0.8
+  }
+ },
+ "tr1075_00": {
+  "label": "Crasher Wake (Gym 4)",
+  "base": 14.28,
+  "loss": 10.71,
+  "env": {
+   "azimuth": -44,
+   "elevation": 0,
+   "keyTemp": 6405,
+   "skyTemp": 4500,
+   "warmth": -0.061,
+   "shadow": 0.3,
+   "exposure": 2.28,
+   "contrast": 0.8
+  }
+ },
+ "tr1077_00": {
+  "label": "Fantina (Gym 5)",
+  "base": 24.92,
+  "loss": 11.71,
+  "env": {
+   "ambient": 2.64,
+   "key": 1.6,
+   "azimuth": -56.8,
+   "elevation": 26.8,
+   "keyTemp": 6993,
+   "skyTemp": 6188,
+   "warmth": -0.032,
+   "exposure": 2.1,
+   "contrast": 0.8,
+   "saturation": 0.904
+  }
+ },
+ "tr1064_00": {
+  "label": "Byron (Gym 6)",
+  "base": 59.33,
+  "loss": 54.38,
+  "env": {
+   "key": 1.584,
+   "azimuth": -70,
+   "elevation": 5.2,
+   "warmth": -0.029,
+   "shadow": 0.684,
+   "exposure": 1.98,
+   "contrast": 0.8,
+   "saturation": 0.976
+  }
+ },
+ "tr1078_00": {
+  "label": "Candice (Gym 7)",
+  "base": 14.51,
+  "loss": 11.98,
+  "env": {
+   "azimuth": -44,
+   "elevation": 0,
+   "keyTemp": 6377,
+   "skyTemp": 5420,
+   "warmth": -0.048,
+   "shadow": 0.294,
+   "exposure": 1.98,
+   "contrast": 0.8,
+   "saturation": 0.924
+  }
+ },
+ "tr1079_00": {
+  "label": "Volkner (Gym 8)",
+  "base": 25.32,
+  "loss": 17.49,
+  "env": {
+   "ambient": 2.04,
+   "key": 1.6,
+   "azimuth": -32.8,
+   "elevation": 29.68,
+   "keyTemp": 6825,
+   "skyTemp": 6380,
+   "exposure": 2.1,
+   "contrast": 0.8
+  }
+ },
+ "tr1065_00": {
+  "label": "Aaron (Elite Four)",
+  "base": 18.17,
+  "loss": 11.72,
+  "env": {
+   "ambient": 2.34,
+   "azimuth": -47.2,
+   "keyTemp": 6573,
+   "skyTemp": 5612,
+   "warmth": 0.029,
+   "exposure": 2.1,
+   "contrast": 0.84
+  }
+ },
+ "tr1066_00": {
+  "label": "Bertha (Elite Four)",
+  "base": 13.08,
+  "loss": 10.68,
+  "env": {
+   "azimuth": -52,
+   "elevation": 9.52,
+   "keyTemp": 5845,
+   "skyTemp": 5420,
+   "shadow": 0.336,
+   "exposure": 2.1
+  }
+ },
+ "tr1067_00": {
+  "label": "Flint (Elite Four)",
+  "base": 18.47,
+  "loss": 13.21,
+  "env": {
+   "ambient": 2.34,
+   "azimuth": -44.8,
+   "elevation": 5.2,
+   "keyTemp": 4753,
+   "skyTemp": 5100,
+   "warmth": 0.003,
+   "exposure": 2.28,
+   "contrast": 0.94,
+   "saturation": 1.024
+  }
+ },
+ "tr1068_00": {
+  "label": "Lucian (Elite Four)",
+  "base": 18.74,
+  "loss": 13.95,
+  "env": {
+   "ambient": 2.34,
+   "azimuth": -40,
+   "elevation": 0,
+   "keyTemp": 7245,
+   "warmth": -0.029,
+   "exposure": 2.1,
+   "saturation": 1.064
+  }
+ },
+ "tr0001_00": {
+  "label": "Cynthia (Champion)",
+  "base": 22.57,
+  "loss": 14.7,
+  "env": {
+   "ambient": 1.64,
+   "azimuth": -36.8,
+   "elevation": 5.2,
+   "keyTemp": 5425,
+   "skyTemp": 5420,
+   "exposure": 1.788,
+   "contrast": 1.096
+  }
+ },
+ "tr1086_00": {
+  "label": "Cyrus (Galactic boss)",
+  "base": 15.41,
+  "loss": 13.96,
+  "env": {
+   "ambient": 1.54,
+   "azimuth": -7.2,
+   "elevation": 11.68,
+   "keyTemp": 6825,
+   "shadow": 0.246,
+   "contrast": 1
+  }
+ },
+ "tr1021_00": {
+  "label": "Pok� Fan (F)",
+  "base": 26.18,
+  "loss": 21.51,
+  "env": {
+   "elevation": 9.52,
+   "keyTemp": 6825,
+   "skyTemp": 6700,
+   "warmth": 0.048,
+   "shadow": 0.24,
+   "exposure": 2.28,
+   "contrast": 0.8,
+   "saturation": 0.9
+  }
+ },
+ "tr1020_00": {
+  "label": "Pok� Fan (M)",
+  "base": 33.21,
+  "loss": 27.55,
+  "env": {
+   "ambient": 2.34,
+   "key": 1.344,
+   "azimuth": -64,
+   "elevation": 9.52,
+   "keyTemp": 6825,
+   "skyTemp": 6700,
+   "shadow": 0.444,
+   "exposure": 2.1,
+   "contrast": 0.8,
+   "saturation": 0.96
+  }
+ },
+ "tr0027_00": {
+  "label": "Pok� Kid",
+  "base": 18.52,
+  "loss": 16,
+  "env": {
+   "key": 1.344,
+   "azimuth": 0,
+   "keyTemp": 5873,
+   "skyTemp": 5932,
+   "warmth": 0.077,
+   "shadow": 0.534,
+   "exposure": 1.5,
+   "saturation": 0.936
+  }
+ },
+ "tr0043_00": {
+  "label": "Pok�mon Breeder (F)",
+  "base": 28.4,
+  "loss": 24.59,
+  "env": {
+   "azimuth": -19.2,
+   "elevation": 9.52,
+   "keyTemp": 6097,
+   "skyTemp": 5612,
+   "shadow": 0.534,
+   "contrast": 0.8,
+   "saturation": 1.06
+  }
+ },
+ "tr0042_00": {
+  "label": "Pok�mon Breeder (M)",
+  "base": 30.69,
+  "loss": 26.7,
+  "env": {
+   "azimuth": -16.8,
+   "elevation": 9.52,
+   "keyTemp": 6377,
+   "skyTemp": 5420,
+   "shadow": 0.534,
+   "exposure": 1.68,
+   "contrast": 0.8,
+   "saturation": 1.076
+  }
+ },
+ "tr1040_00": {
+  "label": "Pok�mon Ranger (F)",
+  "base": 17.26,
+  "loss": 15.63,
+  "env": {
+   "ambient": 2.02,
+   "elevation": 0,
+   "keyTemp": 5453,
+   "skyTemp": 5612,
+   "warmth": 0.029,
+   "shadow": 0.24,
+   "exposure": 1.5,
+   "contrast": 0.84,
+   "saturation": 1.024
+  }
+ },
+ "tr1039_00": {
+  "label": "Pok�mon Ranger (M)",
+  "base": 15.88,
+  "loss": 10.41,
+  "env": {
+   "ambient": 1.34,
+   "azimuth": -40,
+   "keyTemp": 5705,
+   "skyTemp": 5612,
+   "warmth": -0.029,
+   "shadow": 0.294,
+   "exposure": 1.608,
+   "contrast": 0.96,
+   "saturation": 0.94
+  }
+ }
+}

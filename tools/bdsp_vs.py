@@ -48,21 +48,50 @@ ENTRIES = {
     "Tag05 / tr2011": "tr2011_00", "Jasmine / tr2018": "tr2018_00", "Mother02 / tr2036": "tr2036_00",
 }
 # Poké Ball in hand, matched against the VS images: attach bone per model (R = RItem1, L = LItem1)
-BALL = {**{m: "RItem1" for m in "tr1024_00 tr1053_00 tr1054_00 tr1033_00 tr1028_00 tr1041_00 tr0054_00 tr1073_00".split()},
-        **{m: "LItem1" for m in "tr1025_00 tr1037_00 tr1004_00 tr0018_00 tr1013_00 tr1012_00 tr1085_00 tr0029_00 tr1040_00 tr1032_00 tr1089_00 tr1027_00".split()}}
+BALL = {**{m: "RItem1" for m in "tr1024_00 tr1053_00 tr1054_00 tr1033_00 tr1041_00 tr0054_00 tr1073_00 tr0028_00".split()},
+        **{m: "LItem1" for m in "tr1025_00 tr1028_00 tr1037_00 tr1004_00 tr0018_00 tr1013_00 tr1012_00 tr1085_00 tr0029_00 tr1040_00 tr1032_00 tr1089_00 tr1027_00".split()}}
 # Double-battle pairs are two models in one scene: rendered with the same fixed camera (shared scale + ground line) and overlaid with a
 # horizontal shift of +-PAIR_DX metres each (left model first), the last model in front (Young Couple: the woman). The couple's dance poses are offset around the origin with the woman on the left, so they are shifted past each other.
 PAIR_DX = {"Twins": 0.4, "Young Couple": 0.45, "Double Team": 0.36, "Interviewers": 0.4, "Ranchers": 0.45}
 PAIR_FRONT = {"Young Couple": 1}
 PAIR_WINDOW_M = 2.4
-FX = {"tr0039_00": ("police", None, 1), "tr1049_00": ("psychic", "RItem1", 2.6), "tr1050_00": ("psychic", "RItem1", 2.6)}
+FX = {"tr0039_00": ("police", None, 1), "tr1049_00": ("psychic", "RItem1", 1.5), "tr1050_00": ("psychic", "RItem1", 1.5)}
 
 
-def render(ids, extra, size):
+def _char_overrides():
+    """tools/bdsp_vs_chars/<id>.json (see its README): per-character ball / fx / env overrides."""
+    out = {}
+    d = os.path.join(ROOT, "tools", "bdsp_vs_chars")
+    for f in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+        if f.endswith(".json"):
+            with open(os.path.join(d, f), encoding="utf-8") as fh:
+                out[f[:-5]] = json.load(fh)
+    return out
+
+
+def _lighting():
+    """Per-model lighting overrides fitted to each Bulbapedia image (tools/fit_lighting_each.mjs): id -> {param: value}."""
+    p = os.path.join(ROOT, "tools", "bdsp_vs_lighting.json")
+    if not os.path.isfile(p):
+        return {}
+    with open(p, encoding="utf-8") as f:
+        out = {k: dict(v["env"]) for k, v in json.load(f).items() if v.get("env")}
+    for k, v in _char_overrides().items():
+        if v.get("env"):
+            out[k] = {**out.get(k, {}), **v["env"]}
+    return out
+
+
+def render(ids, extra, size, lighting=True):
     if not ids:
         return
-    cmd = ["node", os.path.join(ROOT, "tools", "render_bdsp_vs.mjs"), "--out", RAW, "--size", str(size), "--frames", "0", *extra, *[f"bdsp/{i}" for i in ids]]
-    subprocess.run(cmd, check=True, cwd=ROOT)
+    light = _lighting() if lighting else {}
+    groups: dict[str, list[str]] = {}
+    for i in ids:  # one node run per distinct lighting override (the default group batches the rest)
+        groups.setdefault(json.dumps(light.get(i, {}), sort_keys=True), []).append(i)
+    for env, group in groups.items():
+        cmd = ["node", os.path.join(ROOT, "tools", "render_bdsp_vs.mjs"), "--out", RAW, "--size", str(size), "--frames", "0", *extra, *(["--env", env] if env != "{}" else []), *[f"bdsp/{i}" for i in group]]
+        subprocess.run(cmd, check=True, cwd=ROOT)
 
 
 def fit(im, size, margin=0.04):
@@ -97,6 +126,20 @@ def main():
     ap.add_argument("--skip-render", action="store_true", help="reuse out/bdsp_vs_raw (just re-fit / re-compose)")
     a = ap.parse_args()
     os.makedirs(OUT, exist_ok=True)
+    ball_scale = {}
+    for mid, o in _char_overrides().items():  # per-character files win over the tables above
+        if "ball" in o:
+            if o["ball"]:
+                BALL[mid] = o["ball"]
+            else:
+                BALL.pop(mid, None)
+        if o.get("ballscale", 1) != 1:
+            ball_scale[mid] = o["ballscale"]
+        if "fx" in o:
+            if o["fx"]:
+                FX[mid] = (o["fx"], o.get("ball"), o.get("ballscale", 1))
+            else:
+                FX.pop(mid, None)
     ids = sorted({i for v in ENTRIES.values() for i in (v if isinstance(v, list) else [v])})
     if a.only:
         ids = [i for i in ids if i in a.only]
@@ -107,7 +150,11 @@ def main():
     if not a.skip_render:
         render(plain, [], a.render_size)
         for bone in ("RItem1", "LItem1"):
-            render([i for i in ids if BALL.get(i) == bone], ["--ball", bone], a.render_size)
+            held = [i for i in ids if BALL.get(i) == bone and i not in FX]
+            render([i for i in held if i not in ball_scale], ["--ball", bone], a.render_size)
+            for i in held:
+                if i in ball_scale:
+                    render([i], ["--ball", bone, "--ballscale", str(ball_scale[i])], a.render_size)
         for i, (fx, bone, scale) in FX.items():
             if i not in ids:
                 continue
