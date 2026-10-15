@@ -146,7 +146,7 @@ def _resize_channel(ch: np.ndarray, w: int, h: int) -> np.ndarray:
 def bake_tint(albedo: np.ndarray, mask: np.ndarray, primary, secondary, skin, mode: str = "zones") -> np.ndarray:
     """The game's character shader colours a (near-greyscale) albedo by mask region, multiplied in the albedo's own space.
 
-    zones: R = _PrimaryColor, G = _SecondaryColor, B = _SkinColor, each a lerp from the previous result; untouched where
+    zones: R = _SkinColor, G = _PrimaryColor, B = _SecondaryColor, each a lerp from the previous result; untouched where
            the mask is black (clothes, shoes, accessories).
     skin:  body/face: the R and B regions carry the pink albedo and take _SkinColor (their _PrimaryColor is a cool shadow
            tint; applying it turned Lucas's face blue).
@@ -160,7 +160,7 @@ def bake_tint(albedo: np.ndarray, mask: np.ndarray, primary, secondary, skin, mo
         tint = (1.0 - m) + np.asarray(skin[:3], np.float32) * m
     else:
         tint = np.ones((h, w, 3), np.float32)
-        for c, col in enumerate((primary, secondary, skin)):
+        for c, col in enumerate((skin, primary, secondary)):
             m = _resize_channel(mask[..., c], w, h)[..., None]
             tint = tint * (1.0 - m) + np.asarray(col[:3], np.float32) * m
     out = albedo.copy()
@@ -187,7 +187,11 @@ def _material(m, cache, textures) -> Material:
     cols = mat.extras["unity"]["colors"]
     msk = keys.get("msk")
     if mat.base_color and msk and all(k in cols for k in ("_PrimaryColor", "_SecondaryColor", "_SkinColor")):
-        mode = "hair" if "_LIGHTING_HAIR" in kw else "skin" if re.search(r"(?i)^(body|face)", m.m_Name) else "zones"
+        mask = textures[msk].rgba
+        # A tiny solid-green mask is the shader's "whole texture is _PrimaryColor" placeholder (every hair; Cynthia's black fur,
+        # whose _SecondaryColor is gold but shows black in game), so it colours like hair instead of selecting the G zone.
+        solid_g = max(mask.shape[:2]) <= 16 and mask[..., 1].min() >= 250 and mask[..., 0].max() <= 5 and mask[..., 2].max() <= 5
+        mode = "hair" if "_LIGHTING_HAIR" in kw or solid_g else "skin" if re.search(r"(?i)^(body|face)", m.m_Name) else "zones"
         key = f"{mat.base_color}_tint"
         if key not in textures:
             base = textures[mat.base_color]

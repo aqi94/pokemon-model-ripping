@@ -21,7 +21,7 @@ def test_bake_tint_modes():
     mask[1, :, 1] = 255  # G region
     P, S, K = (0.5, 0.5, 0.5), (1.0, 0.0, 0.0), (0.0, 1.0, 0.0)
     z = B.bake_tint(albedo, mask, P, S, K, "zones")
-    assert tuple(z[0, 0, :3]) == (100, 100, 100) and tuple(z[1, 0, :3]) == (200, 0, 0)
+    assert tuple(z[0, 0, :3]) == (0, 200, 0) and tuple(z[1, 0, :3]) == (100, 100, 100)  # R = skin, G = primary
     assert tuple(B.bake_tint(albedo, mask, P, S, K, "hair")[1, 1, :3]) == (100, 100, 100)
     sk = B.bake_tint(albedo, mask, P, S, K, "skin")
     assert tuple(sk[0, 0, :3]) == (0, 200, 0) and tuple(sk[1, 0, :3]) == (200, 200, 200)
