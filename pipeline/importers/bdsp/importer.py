@@ -219,10 +219,16 @@ def _mesh_primitives(smr, get_material, palette_of: dict[int, int]) -> list[Prim
     uv = np.asarray(mh.m_UV0, np.float32) if mh.m_UV0 is not None else None
     bi = np.asarray(mh.m_BoneIndices, np.int64) if mh.m_BoneIndices is not None else None
     bw = np.asarray(mh.m_BoneWeights, np.float32) if mh.m_BoneWeights is not None else None
+    if bi is not None and bw is None:  # one bone per vertex: Unity stores indices without weights
+        bw = np.ones(bi.shape, np.float32)
     if bi is not None and bw is not None and bi.shape[1] < 4:  # 1/2 bones-per-vertex meshes
         pad = 4 - bi.shape[1]
         bi = np.pad(bi, ((0, 0), (0, pad)))
         bw = np.pad(bw[:, : bi.shape[1] - pad], ((0, 0), (0, pad)))
+    if bi is None and len(smr.m_Bones) > 0:
+        # Rigid single-bone parts (goggle lens, glasses): a bind pose but no per-vertex weights; they follow bone 0 entirely.
+        bi = np.zeros((len(pos), 4), np.int64)
+        bw = np.tile(np.array([1, 0, 0, 0], np.float32), (len(pos), 1))
     mirror = np.array([-1.0, 1.0, 1.0], np.float32)
     pos = pos * mirror
     if nrm is not None:
