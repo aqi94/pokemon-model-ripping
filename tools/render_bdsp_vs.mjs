@@ -30,6 +30,7 @@ const yaw = Number(opt('yaw', '0'));
 // this way share one scale and ground line (used to compose double-battle pairs).
 const fixedH = Number(opt('fixed', '0'));
 // --gaze x,y: aim both eyeball bones at the camera (0,0) or at a point offset from it (x right, y up, as a fraction of the camera distance).
+const uvsign = opt('uvsign', '').split(',').filter(Boolean).map(Number); // eye-gaze offset signs x,y (default: the viewer's)
 const gaze = opt('gaze', '').split(',').filter(Boolean).map(Number);
 // --fx: the game's light effects are particle systems that are not in the rip; approximate them with additive glow sprites.
 //   police: lens glow on the `Light` bone + baton glow on RItem1.  psychic: ring of beads through LHand -> RItem1 (the orb above the head) -> RHand.
@@ -58,6 +59,7 @@ for (const id of ids) {
   }, { S, preset: opt('preset', 'bdspVs') });
   if (ball) await page.evaluate(async (bone) => { const vs = window.__viewer; vs.setHeldOnlyInClips(false); await vs.setHeldItem('/models/bdsp/ob0204_00/model.glb', { bone, side: '', clips: [] }); }, ball);
   if (ball && ballScale !== 1) await page.evaluate((k) => window.__viewer.held.obj.scale.setScalar(k), ballScale);
+  if (uvsign.length === 2) await page.evaluate(([x, y]) => { window.__viewer.uvSign = { x, y }; }, uvsign);
   const used = await page.evaluate((clip) => { const a = window.__viewer.anim; const c = [clip, 'advent_b', 'wait_b'].find((n) => a.has(n)) ?? null; if (c) a.play(c); return c; }, clip);
   const threeUrl = await page.evaluate(() => performance.getEntriesByType('resource').map((r) => r.name).find((n) => /deps\/three\.js/.test(n)));
   for (const f of frames) {
@@ -67,6 +69,7 @@ for (const id of ids) {
       const fc = Math.max(1, (a.state().frameCount || 1) - 1);
       a.scrubToFrame(Math.round(f * fc));
       vs.setCameraPreset(camera);
+      // clip planes hug the model below: a long lens sits far away and a wide near/far range z-fights the thin face meshes
       if (cam.fov > 0) {
         const fi0 = vs.fitInfo(); const old = vs.camera.fov; const rad = Math.PI / 180;
         const fi = cam.fixedH > 0 ? { center: vs.controls.target.clone().set(0, 0.95, 0), dist: (cam.fixedH / 2) / Math.tan(old * rad / 2), radius: fi0.radius } : fi0;
@@ -74,7 +77,7 @@ for (const id of ids) {
         const d = fi.dist * Math.tan(old * rad / 2) / Math.tan(cam.fov * rad / 2);
         const dir = { x: Math.sin(cam.yaw * rad) * Math.cos(cam.pitch * rad), y: Math.sin(cam.pitch * rad), z: Math.cos(cam.yaw * rad) * Math.cos(cam.pitch * rad) };
         vs.camera.position.set(fi.center.x + dir.x * d, fi.center.y + dir.y * d, fi.center.z + dir.z * d);
-        vs.controls.maxDistance = fi.radius * 1000; vs.controls.target.copy(fi.center); vs.camera.near = fi.radius / 100; vs.camera.far = fi.radius * 200; vs.camera.updateProjectionMatrix(); vs.camera.lookAt(fi.center); vs.controls.update();
+        vs.controls.maxDistance = fi.radius * 1000; vs.controls.target.copy(fi.center); vs.camera.near = Math.max(d - fi.radius * 1.6, fi.radius / 100); vs.camera.far = d + fi.radius * 1.6; vs.camera.updateProjectionMatrix(); vs.camera.lookAt(fi.center); vs.controls.update();
       }
       if (gz.length === 2) {
         const T = await import(threeUrl);

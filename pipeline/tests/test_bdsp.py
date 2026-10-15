@@ -40,3 +40,29 @@ def test_streamed_clip_keys_and_negative_first_frame():
 
 def test_path_hash_matches_unity_crc32():
     assert zlib.crc32(b"Waist") == zlib.crc32("Origin/Waist".split("/", 1)[1].encode())
+
+
+def test_uv_offset_tracks_and_manifest():
+    # UVConnection: Property00 -> material "Leye", Property01 -> "Reye"; clips animate PropertyNN.offsetUV.x/.y (typeID 114, attribute = crc32)
+    h = lambda n, a: zlib.crc32(f"Property0{n}.offsetUV.{a}".encode())  # noqa: E731
+    assert B.UV_PROPS[h(0, "x")] == (0, "x") and B.UV_PROPS[h(1, "y")] == (1, "y")
+    bindings = [NS(typeID=114, attribute=h(0, "x")), NS(typeID=114, attribute=h(0, "y")), NS(typeID=114, attribute=h(1, "x")), NS(typeID=114, attribute=h(1, "y"))]
+    clip = NS(m_ClipBindingConstant=NS(genericBindings=bindings))
+    curves = {0: (np.zeros(1, np.float32), np.array([-0.02], np.float32)), 1: (np.zeros(1, np.float32), np.array([0.01], np.float32)),
+              2: (np.zeros(1, np.float32), np.array([-0.05], np.float32)), 3: (np.zeros(1, np.float32), np.array([0.0], np.float32))}
+    orig = B._clip_curves
+    B._clip_curves = lambda c: curves
+    try:
+        out = B._uv_offset_tracks(clip, {0: "Leye", 1: "Reye"})
+        assert B._uv_offset_tracks(clip, {}) == {}
+    finally:
+        B._clip_curves = orig
+    assert out["Leye"][1].tolist() == [[np.float32(-0.02), np.float32(0.01)]] and out["Reye"][1][0, 0] == np.float32(-0.05)
+
+    from pipeline.common.manifest import build_manifest
+    from pipeline.common.model import Clip, Model, Skeleton
+
+    m = Model(id="x", game="bdsp", display_name="x", kind="trainer", skeleton=Skeleton(joints=[], palette=[]), meshes=[], materials={}, textures={},
+              clips=[Clip(name="advent02_b", tracks=[], uv_offset=out)])
+    c = build_manifest(m)["clips"][0]
+    assert c["uvOffset"]["Reye"] == {"times": [0.0], "values": [[-0.05, 0.0]]}

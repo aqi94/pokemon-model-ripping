@@ -20,8 +20,10 @@ export interface VariantOption { variant: number; name: string; label: string; d
 export interface VariantGroup { name: string; label: string; options: VariantOption[] }
 export interface ClipInfo {
   name: string; index: number; duration: number; frameRate: number; frameCount: number;
-  loop: boolean; category: string; default: boolean; visibility?: VisibilityTracks;
+  loop: boolean; category: string; default: boolean; visibility?: VisibilityTracks; uvOffset?: UvOffsetTracks;
 }
+/** Per-material texture offset animation (BDSP eye gaze): material name -> keys in seconds, offsets in UV units (x right, y up). */
+export type UvOffsetTracks = Record<string, { times: number[]; values: [number, number][] }>;
 export type VisibilityTracks = Record<string, [number, number][]>;
 export interface PartInfo { node: string; label: string; lod: number; visible: boolean; group?: string; option?: string; accessory?: boolean }
 export interface PaletteEntry { label: string; materials: string[]; divide: number; indices: number[]; layers: number[]; zones: string[] }

@@ -98,6 +98,9 @@ class Primitive:
     colors: np.ndarray | None = None  # (V, 4) float32 0..1
     joints: np.ndarray | None = None  # (V, 4) uint16, indices into Skeleton.palette
     weights: np.ndarray | None = None  # (V, 4) float32
+    # Morph targets (absolute position deltas, (V, 3) float32 each); used by baked vertex
+    # animation (crowd NPCs). Clips drive them through `Clip.morph`.
+    morph_targets: list[np.ndarray] = field(default_factory=list)
 
 
 @dataclass
@@ -131,6 +134,12 @@ class Clip:
     # Per-mesh visibility keys: mesh name -> list of (frame, visible). Meshes
     # absent from the dict keep their rest visibility during this clip.
     visibility: dict[str, list[tuple[int, bool]]] = field(default_factory=dict)
+    # Per-mesh morph-target weight animation: mesh name -> (times (K,), weights (K, N)) where N
+    # is the number of morph targets of that mesh's first primitive.
+    morph: dict[str, tuple[np.ndarray, np.ndarray]] = field(default_factory=dict)
+    # Per-material texture-offset animation (eye gaze on BDSP trainers): material name -> (times (K,) seconds, offsets (K, 2) in UV units,
+    # Unity convention: x right, y up). The viewer applies it to the material's base-colour map.
+    uv_offset: dict[str, tuple[np.ndarray, np.ndarray]] = field(default_factory=dict)
 
     @property
     def duration(self) -> float:

@@ -37,6 +37,10 @@ export class ViewerScene {
   onPartsState?: (visible: Record<string, boolean>, driven: string[]) => void;
   private userOverride = new Map<string, boolean>();
   private visKey = '';
+  private uvMats = new Map<string, THREE.MeshStandardMaterial[]>();
+  private uvDriven = new Set<string>();
+  /** Sign of the eye-gaze texture offset on x / y (the shader is not in the rip: set empirically; three.js moves the image opposite to the offset, so the pupil follows the game offset with x negated and y as-is). */
+  uvSign = { x: -1, y: 1 };
   private nodeCache = new Map<string, THREE.Object3D>();
 
   private reflEnv?: THREE.Texture;
@@ -157,7 +161,9 @@ export class ViewerScene {
     if (start && this.anim.has(start)) this.anim.play(start);
 
     this.applyWireframe();
+    this.uvMats.clear(); this.uvDriven.clear();
     this.updateVisibility();
+    this.applyUvOffsets();
     this.recenter();
     if (this.pendingPreset) { const p = this.pendingPreset; this.pendingPreset = undefined; this.setCameraPreset(p); }
   }
@@ -175,6 +181,52 @@ export class ViewerScene {
   setPartVisible(node: string, v: boolean) {
     this.userOverride.set(node, v);
     this.updateVisibility();
+  }
+
+  /**
+   * Material texture-offset animation of the playing clip (BDSP eye gaze: the pupils sit in an atlas and the game slides it). Each driven
+   * material gets its own clone of its map (the eyes share one texture), sampled linearly at the clip time; materials the clip does not
+   * drive go back to offset 0.
+   */
+  private applyUvOffsets() {
+    const man = this.manifest;
+    if (!man || !this.gltf) return;
+    const cur = this.anim?.current;
+    const tracks = (cur ? man.clips.find((c) => c.name === cur) : undefined)?.uvOffset;
+    const time = this.anim ? this.anim.state().time : 0;
+    const names = new Set<string>([...this.uvDriven, ...Object.keys(tracks ?? {})]);
+    for (const name of names) {
+      let mats = this.uvMats.get(name);
+      if (!mats) {
+        mats = [];
+        this.gltf.scene.traverse((o) => {
+          const m = o as THREE.Mesh;
+          if (!m.isMesh) return;
+          for (const mat of ([] as THREE.Material[]).concat(m.material)) if (mat.name === name && (mat as THREE.MeshStandardMaterial).isMeshStandardMaterial && !mats!.includes(mat as THREE.MeshStandardMaterial)) mats!.push(mat as THREE.MeshStandardMaterial);
+        });
+        this.uvMats.set(name, mats);
+      }
+      const tr = tracks?.[name];
+      let x = 0, y = 0;
+      if (tr && tr.times.length) {
+        const t = tr.times, v = tr.values;
+        let i = 0;
+        while (i + 1 < t.length && t[i + 1] <= time) i++;
+        if (i + 1 < t.length && t[i + 1] > t[i]) {
+          const k = Math.min(1, Math.max(0, (time - t[i]) / (t[i + 1] - t[i])));
+          x = v[i][0] + (v[i + 1][0] - v[i][0]) * k; y = v[i][1] + (v[i + 1][1] - v[i][1]) * k;
+        } else { x = v[i][0]; y = v[i][1]; }
+        this.uvDriven.add(name);
+      }
+      for (const mat of mats) {
+        const map = mat.map;
+        if (!map) continue;
+        let own = map;
+        if (!map.userData.__uvOwned) { own = map.clone(); own.userData.__uvOwned = true; own.needsUpdate = true; mat.map = own; }
+        const ox = x * this.uvSign.x, oy = y * this.uvSign.y;
+        if (own.offset.x !== ox || own.offset.y !== oy) own.offset.set(ox, oy);
+      }
+    }
   }
 
   /** Rest visibility (manifest) -> user override -> explicit per-clip key at the current frame. LOD>0 stays hidden. */
@@ -672,6 +724,7 @@ export class ViewerScene {
     const dt = Math.min(this.clock.getDelta(), 0.1);
     this.anim?.update(dt);
     this.updateVisibility();
+    this.applyUvOffsets();
     this.applyHeldVisibility();
     this.controls.update();
     this.renderer.render(this.scene, this.camera);

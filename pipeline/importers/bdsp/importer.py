@@ -384,7 +384,75 @@ def _clip_tracks(clip, h: Hierarchy, index: dict[int, int], skeleton: Skeleton) 
     return tracks
 
 
-def _clips(objs, h: Hierarchy, index: dict[int, int], skeleton: Skeleton) -> list[Clip]:
+# Eye gaze: each trainer bundle has a `UVConnection` MonoBehaviour whose Property00/01 point at the Leye/Reye materials (by material index into
+# a SkinnedMeshRenderer); the clips animate `PropertyNN.offsetUV.x/.y` as typeID 114 bindings (attribute = crc32 of that path). The pupils sit in
+# a 2x4 atlas, so the offset moves them (verified against the Bulbapedia VS images; the eyeball bones carry no gaze).
+UV_PROPS = {zlib.crc32(f"Property0{n}.offsetUV.{a}".encode()): (n, a) for n in range(4) for a in "xy"}
+
+
+def _uv_targets(objs, smr_by_id: dict, get_material) -> dict[int, str]:
+    """UVConnection property index -> exported material name."""
+    out: dict[int, str] = {}
+    for o in objs:
+        if o.type.name != "MonoBehaviour":
+            continue
+        try:
+            t = o.read_typetree()
+        except Exception:
+            continue
+        if not isinstance(t, dict) or "Property00" not in t:
+            continue
+        for n in range(4):
+            try:
+                p = t.get(f"Property0{n}")
+                if not p or p.get("propertyName") != "_UVOffset":
+                    continue
+                smr = smr_by_id.get(p.get("renderer", {}).get("m_PathID"))
+                mats = list(smr.m_Materials) if smr is not None else []
+                if smr is not None and 0 <= int(p.get("materialIndex", -1)) < len(mats):
+                    out[n] = get_material(mats[int(p["materialIndex"])])
+            except (AttributeError, TypeError, ValueError):  # a different layout (player bundles): no gaze data
+                continue
+    return out
+
+
+def _uv_offset_tracks(clip, targets: dict[int, str]) -> dict[str, tuple[np.ndarray, np.ndarray]]:
+    if not targets:
+        return {}
+    curves = _clip_curves(clip)
+    slot = 0
+    found: dict[tuple[int, str], tuple[np.ndarray, np.ndarray]] = {}
+    for g in clip.m_ClipBindingConstant.genericBindings:
+        if g.typeID == 4:
+            slot += 4 if g.attribute == ATTR_ROT else 3
+            continue
+        key = UV_PROPS.get(int(g.attribute))
+        c = curves.get(slot)
+        slot += 1
+        if key is not None and key[0] in targets and c is not None:
+            found[key] = c
+    out: dict[str, tuple[np.ndarray, np.ndarray]] = {}
+    for n, name in targets.items():
+        cx, cy = found.get((n, "x")), found.get((n, "y"))
+        if cx is None and cy is None:
+            continue
+        times = np.unique(np.concatenate([c[0] for c in (cx, cy) if c is not None]))
+
+        def at(c):
+            if c is None:
+                return np.zeros(len(times), np.float32)
+            return np.interp(times, c[0], c[1]).astype(np.float32) if len(c[0]) > 1 else np.full(len(times), c[1][0], np.float32)
+
+        vals = np.stack([at(cx), at(cy)], axis=1)
+        if np.abs(vals).max() < 1e-4:
+            continue
+        if np.abs(vals - vals[0]).max() < 1e-4:
+            times, vals = times[:1], vals[:1]
+        out[name] = (times.astype(np.float32), vals.astype(np.float32))
+    return out
+
+
+def _clips(objs, h: Hierarchy, index: dict[int, int], skeleton: Skeleton, uv_targets: dict[int, str] | None = None) -> list[Clip]:
     clips = []
     for o in objs:
         if o.type.name != "AnimationClip":
@@ -396,6 +464,7 @@ def _clips(objs, h: Hierarchy, index: dict[int, int], skeleton: Skeleton) -> lis
             Clip(
                 name=c.m_Name,
                 tracks=_clip_tracks(c, h, index, skeleton),
+                uv_offset=_uv_offset_tracks(c, uv_targets or {}),
                 frame_rate=rate,
                 frame_count=int(round(stop * rate)) + 1,
                 loop=bool(c.m_MuscleClip.m_LoopTime),
@@ -453,7 +522,8 @@ def import_bundle(path: str, model_id: str, display_name: str, kind: str = "trai
 
     _soften_lenses(meshes, materials, textures)
 
-    clips = _clips(objs, h, index, skeleton) if with_anim else []
+    smr_by_id = {o.path_id: o.read() for o in objs if o.type.name == "SkinnedMeshRenderer"}
+    clips = _clips(objs, h, index, skeleton, _uv_targets(objs, smr_by_id, get_material)) if with_anim else []
     default = next((c.name for c in clips if re.search(r"wait|idle", c.name)), clips[0].name if clips else None)
     return Model(
         id=model_id,
