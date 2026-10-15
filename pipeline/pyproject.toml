@@ -1,0 +1,18 @@
+[project]
+name = "pokemon-model-pipeline"
+version = "0.1.0"
+description = "Converts Pokémon game model/animation rips into a common glTF-based format"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "pillow",
+    "flatbuffers",
+    "pygltflib",
+    "texture2ddecoder",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
