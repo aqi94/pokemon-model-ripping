@@ -26,6 +26,15 @@ import { OptionsBar } from '../ui/OptionsBar';
 const EMPTY: PlaybackState = { clip: null, time: 0, duration: 0, frame: 0, frameCount: 0, paused: false, timeScale: 1 };
 const DEFAULT_OPTIONS: Options = { shadows: false, skeleton: false, wireframe: false, background: '#1b1d23', autoRotate: 0, mirror: false, albedo: 'baked', shading: 'game', env: loadLastEnv() };
 
+/** Everything the user changed on one model, captured when the GPU context is lost and re-applied after the rebuild. */
+interface Snapshot {
+  id: string; variantSel: Record<string, number>; groupSel: Record<string, string>; partsVis: Record<string, boolean>;
+  palettes: Record<string, { materials: string[]; indices: number[] }>; heldItem: string; heldBone: string;
+  clip: string | null; frame: number; paused: boolean; timeScale: number;
+  cam: { fov: number; position: [number, number, number]; target: [number, number, number] };
+}
+const lowGpu = () => { try { return sessionStorage.getItem('lowGpu') === '1'; } catch { return false; } };
+
 /** Stays mounted while the model changes (single page): options persist, only the scene is rebuilt. */
 export function Viewer({ game, id, onSelect }: { game: string; id: string; onSelect: (m: IndexModel) => void }) {
   const canvasHost = useRef<HTMLDivElement>(null);
@@ -54,6 +63,14 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
   const [heldBone, setHeldBone] = useState('');
   const [heldOnly, setHeldOnly] = useState(true);
   const itemsRef = useRef<IndexModel[]>([]);
+  // GPU context-loss recovery: the scene is rebuilt in place and the per-model state below is re-applied.
+  const [reloadKey, setReloadKey] = useState(0);
+  const [gpuFailed, setGpuFailed] = useState(false);
+  const snapRef = useRef<Snapshot | null>(null);
+  const lossTimes = useRef<number[]>([]);
+  const palApplied = useRef<Record<string, { materials: string[]; indices: number[] }>>({});
+  const live = useRef({ variantSel, groupSel, partsVis, heldItem, heldBone });
+  live.current = { variantSel, groupSel, partsVis, heldItem, heldBone };
   const heldOnlyRef = useRef(true);
 
   useEffect(() => {
@@ -85,26 +102,76 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
     requestAnimationFrame(() => requestAnimationFrame(() => applyRef(r)));
   };
 
+  /** Re-apply the user's per-model choices on a freshly rebuilt scene (options come from optionsRef). */
+  const restoreSnapshot = async (vs: ViewerScene, man: Manifest, snap: Snapshot) => {
+    for (const g of man.variantGroups) {
+      const v = snap.variantSel[g.name];
+      if (v !== undefined && g.options.some((o) => o.variant === v)) await vs.variants?.select(v);
+    }
+    setVariantSel((s) => ({ ...s, ...snap.variantSel }));
+    for (const g of man.partGroups ?? []) {
+      const opt = snap.groupSel[g.name];
+      if (!opt) continue;
+      for (const o of g.options) for (const node of o.nodes) {
+        const acc = man.parts.find((p) => p.node === node)?.accessory;
+        vs.setPartVisible(node, o.id === opt && !acc);
+      }
+    }
+    setGroupSel((s) => ({ ...s, ...snap.groupSel }));
+    for (const pal of Object.values(snap.palettes)) await vs.setPalette(pal.materials, pal.indices);
+    palApplied.current = snap.palettes;
+    setPalSel(Object.fromEntries(Object.entries(snap.palettes).map(([k, v]) => [k, v.indices])));
+    for (const [node, v] of Object.entries(snap.partsVis)) vs.setPartVisible(node, v);
+    setPartsVis((cur) => ({ ...cur, ...snap.partsVis }));
+    if (snap.clip && vs.anim) {
+      vs.anim.play(snap.clip); vs.anim.setTimeScale(snap.timeScale); vs.anim.scrubToFrame(snap.frame); vs.anim.setPaused(snap.paused);
+      setPb(vs.anim.state());
+    }
+    const it = itemsRef.current.find((m) => m.id === snap.heldItem);
+    setHeldBone(snap.heldBone); setHeldItem(snap.heldItem);
+    if (it) await vs.setHeldItem(modelAsset(`${it.path}model.glb`), man.props?.find((p) => p.bone === snap.heldBone));
+    vs.setCameraPose(snap.cam.fov, snap.cam.position, snap.cam.target);
+  };
+
   // load model
   useEffect(() => {
     let cancelled = false;
     const host = canvasHost.current!;
-    const vs = new ViewerScene(host);
+    const vs = new ViewerScene(host, lowGpu());
     sceneRef.current = vs;
     vs.onFrame = setPb;
     vs.onPartsState = (v, d) => { setPartsVis(v); setPartsDriven(d); };
-    // GPU context lost: three.js cannot rebuild a loaded scene in place, so
-    // show a message and reload once the browser restores the context.
+    // GPU context lost: three.js cannot rebuild a loaded scene in place, so snapshot the user's state, then
+    // rebuild the scene on a fresh canvas (reloadKey) and re-apply it. After a loss we render at reduced
+    // quality, and give up (no reload loop) after 2 losses within a minute.
+    let recovering = false;
     vs.onContextChange = (lost) => {
-      if (lost) setError('The graphics context was lost (GPU reset or out of memory). Reloading when the browser allows it…');
-      else window.location.reload();
+      if (!lost || recovering) return;
+      recovering = true;
+      const now = Date.now();
+      lossTimes.current = [...lossTimes.current.filter((t) => now - t < 60000), now];
+      try { sessionStorage.setItem('lowGpu', '1'); } catch { /* ignore */ }
+      if (lossTimes.current.length > 2) { setGpuFailed(true); setError('The graphics context keeps getting lost (GPU reset or out of memory). Close other tabs or restart the browser, then retry.'); return; }
+      const st = vs.anim?.state();
+      const l = live.current;
+      snapRef.current = {
+        id, variantSel: l.variantSel, groupSel: l.groupSel, partsVis: l.partsVis, palettes: palApplied.current,
+        heldItem: l.heldItem, heldBone: l.heldBone,
+        clip: st?.clip ?? null, frame: st?.frame ?? 0, paused: st?.paused ?? false, timeScale: st?.timeScale ?? 1,
+        cam: { fov: vs.camera.fov, position: vs.camera.position.toArray() as [number, number, number], target: vs.controls.target.toArray() as [number, number, number] },
+      };
+      setError('The graphics context was lost. Restoring the model and your settings…');
+      setTimeout(() => setReloadKey((k) => k + 1), 500);
     };
     (window as any).__viewer = vs; // handy for debugging
     // Carry the current options over to the new scene (the rest are applied after load).
     const o = optionsRef.current;
     vs.setShadingMode(o.shading); vs.setEnvironment(o.env); vs.setBackground(o.background);
     vs.setAutoRotate(o.autoRotate); vs.setMirror(o.mirror); vs.setShadows(o.shadows); vs.setWireframe(o.wireframe);
-    setManifest(null); setError(null); setProgress(0); setHeldItem(''); setPb(EMPTY); setVariantColors({});
+    setManifest(null); setError(null); setGpuFailed(false); setProgress(0); setHeldItem(''); setPb(EMPTY); setVariantColors({});
+    const snap = snapRef.current?.id === id ? snapRef.current : null;
+    snapRef.current = null;
+    if (!snap) { palApplied.current = {}; lossTimes.current = []; }
     (async () => {
       try {
         const index = await loadGameIndex(game);
@@ -131,9 +198,10 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
         const gsel: Record<string, string> = {};
         for (const g of man.partGroups ?? []) gsel[g.name] = (g.options.find((o) => o.default) ?? g.options[0]).id;
         setGroupSel(gsel);
-        setPalSel({});
+        setPalSel({}); if (!snap) palApplied.current = {};
         setHeldBone(man.props?.find((p) => p.side === 'right')?.bone ?? man.props?.[0]?.bone ?? '');
         vs.setHeldOnlyInClips(heldOnlyRef.current);
+        if (snap) await restoreSnapshot(vs, man, snap);
         setManifest(man);
         setProgress(null);
         document.title = `${man.displayName} - Pokémon Model Viewer`;
@@ -148,7 +216,7 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
       }
     })();
     return () => { cancelled = true; vs.dispose(); sceneRef.current = null; };
-  }, [game, id]);
+  }, [game, id, reloadKey]);
 
   const clips = manifest?.clips ?? [];
   const playClip = useCallback((name: string) => {
@@ -229,6 +297,7 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
     const next = [...(palSel[key] ?? entry.indices)];
     next[layer - 1] = zone;
     setPalSel((s) => ({ ...s, [key]: next }));
+    palApplied.current = { ...palApplied.current, [key]: { materials: entry.materials, indices: next } };
     void sceneRef.current?.setPalette(entry.materials, next);
   };
   const allParts = (v: boolean) => {
@@ -277,7 +346,7 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
             {refActive && refMode === 'split' && <img className="ref-side-img" src={refActive.image} alt="" />}
             {refActive && refMode === 'overlay' && <img className="ref-img" src={refActive.image} alt="" style={{ opacity: refOpacity }} />}
             {progress !== null && !error && <div className="overlay">Loading model{progress ? ` ${Math.round(progress * 100)}%` : '...'}</div>}
-            {error && <div className="overlay err">{error}</div>}
+            {error && <div className="overlay err">{error}{gpuFailed && <> <button className="btn small" onClick={() => { lossTimes.current = []; setReloadKey((k) => k + 1); }}>Retry</button></>}</div>}
           </div>
           <Timeline
             state={pb}

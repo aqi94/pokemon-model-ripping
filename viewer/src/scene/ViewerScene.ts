@@ -71,9 +71,10 @@ export class ViewerScene {
   private lastEmit = 0;
   private ro: ResizeObserver;
 
-  constructor(private container: HTMLElement) {
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); // alpha: transparent PNG export
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  /** `low` = reduced GPU load (no MSAA, pixel ratio 1, 1024 shadow map), used after a lost WebGL context. */
+  constructor(private container: HTMLElement, private low = false) {
+    this.renderer = new THREE.WebGLRenderer({ antialias: !low, alpha: true }); // alpha: transparent PNG export
+    this.renderer.setPixelRatio(low ? 1 : Math.min(window.devicePixelRatio, 2));
     this.renderer.toneMapping = THREE.LinearToneMapping; // linear = no curve, but honours toneMappingExposure
     this.renderer.toneMappingExposure = 1;
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -89,7 +90,7 @@ export class ViewerScene {
     this.scene.add(hemi);
     this.key.position.set(3, 6, 4);
     this.key.castShadow = false;
-    this.key.shadow.mapSize.set(2048, 2048);
+    this.key.shadow.mapSize.set(low ? 1024 : 2048, low ? 1024 : 2048);
     this.key.shadow.bias = -0.0005;
     this.scene.add(this.key, this.key.target);
     this.scene.add(this.back, this.back.target);
@@ -725,13 +726,29 @@ export class ViewerScene {
 
   /** PNG exports always have a transparent background (the background colour is only for the live view). */
   png(filename: string) {
-    exportCanvasPng(this.renderer.domElement, filename, () => this.renderTransparent());
+    let restore = () => {};
+    exportCanvasPng(this.renderer.domElement, filename, () => { restore = this.exportQuality(); this.renderTransparent(); }, () => restore());
+  }
+
+  /** In low-GPU mode the live view is reduced; exports are still full definition (2x pixels, 2048 shadow map). Returns the undo. */
+  private exportQuality(): () => void {
+    if (!this.low) return () => {};
+    const sh = this.key.shadow;
+    this.renderer.setPixelRatio(Math.max(2, Math.min(window.devicePixelRatio, 2)));
+    sh.mapSize.set(2048, 2048); sh.map?.dispose(); sh.map = null;
+    return () => {
+      this.renderer.setPixelRatio(1);
+      sh.mapSize.set(1024, 1024); sh.map?.dispose(); sh.map = null;
+    };
   }
 
   /** Same image as png(), as a data URL (used by tools/render_models.mjs). */
   pngDataUrl(): string {
+    const restore = this.exportQuality();
     this.renderTransparent();
-    return this.renderer.domElement.toDataURL('image/png');
+    const url = this.renderer.domElement.toDataURL('image/png');
+    restore();
+    return url;
   }
 
   private renderTransparent() {

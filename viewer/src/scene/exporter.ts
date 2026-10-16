@@ -8,9 +8,10 @@ export function download(blob: Blob, filename: string) {
   setTimeout(() => URL.revokeObjectURL(a.href), 5000);
 }
 
-export function exportCanvasPng(canvas: HTMLCanvasElement, filename: string, renderNow: () => void) {
+export function exportCanvasPng(canvas: HTMLCanvasElement, filename: string, renderNow: () => void, after?: () => void) {
   renderNow(); // render immediately before reading the buffer
-  canvas.toBlob((b) => b && download(b, filename), 'image/png');
+  canvas.toBlob((b) => b && download(b, filename), 'image/png'); // snapshots the buffer synchronously
+  after?.();
 }
 
 export async function exportGlb(url: string, filename: string) {
