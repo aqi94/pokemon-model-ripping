@@ -1,0 +1,174 @@
+{
+ "schema": 1,
+ "slug": "indoor_lab_mable_01",
+ "scene": "indoor_lab",
+ "model": "za/tr0023_00",
+ "clip": "speak02_loop",
+ "frame": 0,
+ "screenshot": "indoor_lab_mable_01.png",
+ "width": 1920,
+ "height": 1080,
+ "camera": {
+  "fov": 30,
+  "position": [
+   0.5265,
+   1.48,
+   1.0321
+  ],
+  "target": [
+   0.0375,
+   1.4318,
+   -0.0166
+  ]
+ },
+ "subjectBox": [
+  770,
+  30,
+  1340,
+  790
+ ],
+ "subjectCut": "bottom",
+ "faceBox": [
+  840,
+  180,
+  1060,
+  520
+ ],
+ "yaw": 25,
+ "weight": 1,
+ "skip": false,
+ "regions": [
+  {
+   "name": "hairstyle_1",
+   "box": [
+    1032,
+    81,
+    1072,
+    121
+   ],
+   "renderBox": [
+    1032,
+    81,
+    1072,
+    121
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    1.6,
+    1.9
+   ],
+   "dE0": 12
+  },
+  {
+   "name": "hairstyle_2",
+   "box": [
+    1072,
+    131,
+    1112,
+    171
+   ],
+   "renderBox": [
+    1072,
+    131,
+    1112,
+    171
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    2.3,
+    1.6
+   ],
+   "dE0": 11.4
+  },
+  {
+   "name": "face_skin_1",
+   "box": [
+    936,
+    184,
+    976,
+    224
+   ],
+   "renderBox": [
+    936,
+    184,
+    976,
+    224
+   ],
+   "weight": 1.5,
+   "auto": true,
+   "flat": [
+    2.3,
+    1.1
+   ],
+   "dE0": 3.7
+  },
+  {
+   "name": "face_skin_2",
+   "box": [
+    966,
+    454,
+    1006,
+    494
+   ],
+   "renderBox": [
+    966,
+    454,
+    1006,
+    494
+   ],
+   "weight": 1.5,
+   "auto": true,
+   "flat": [
+    6.4,
+    2.5
+   ],
+   "dE0": 6.4
+  },
+  {
+   "name": "obj_1",
+   "box": [
+    840,
+    285,
+    880,
+    325
+   ],
+   "renderBox": [
+    840,
+    285,
+    880,
+    325
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    2.2,
+    0.8
+   ],
+   "dE0": 5.7
+  },
+  {
+   "name": "obj_2",
+   "box": [
+    930,
+    375,
+    970,
+    415
+   ],
+   "renderBox": [
+    930,
+    375,
+    970,
+    415
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    6.4,
+    10.7
+   ],
+   "dE0": 16.4
+  }
+ ]
+}

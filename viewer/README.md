@@ -9,5 +9,5 @@ Vite + React + TypeScript + three.js viewer for the models produced by `pipeline
 
 For a static deployment, copy or symlink `out/` to `dist/models` (e.g. `cp -r ../out dist/models`).
 
-Routes: `/` browse grid, `/model-viewer?id=za/pm0001_00_00`, `/pokemon/pm0001_00_00`.
+Routes: `/` game list, `/<game>` grid, `/<game>/<id>` viewer (legacy `/model-viewer?id=za/pm0001_00_00` still works). Run `python -m pipeline index` to build the per-game indexes.
 Keys: Left/Right previous/next clip, P pause, T time scale.

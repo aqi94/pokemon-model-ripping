@@ -1,0 +1,80 @@
+{
+ "schema": 1,
+ "slug": "lumiose_dusk_taunie_01",
+ "scene": "lumiose_dusk",
+ "model": "za/tr0001_00",
+ "clip": "defaultwait01_loop",
+ "frame": 0,
+ "screenshot": "lumiose_dusk_taunie_01.png",
+ "width": 1920,
+ "height": 1080,
+ "camera": {
+  "fov": 35,
+  "position": [
+   -0.38,
+   1.4,
+   1.56
+  ],
+  "target": [
+   -0.38,
+   1.21,
+   0
+  ]
+ },
+ "weight": 1.0,
+ "skip": false,
+ "regions": [
+  {
+   "name": "skin_cheek",
+   "box": [
+    1295,
+    380,
+    1325,
+    405
+   ],
+   "renderBox": [
+    1318,
+    372,
+    1348,
+    398
+   ],
+   "weight": 1.5,
+   "manual": true
+  },
+  {
+   "name": "shorts",
+   "box": [
+    1230,
+    870,
+    1290,
+    920
+   ],
+   "weight": 1.5,
+   "renderBox": [
+    1255,
+    880,
+    1305,
+    915
+   ],
+   "manual": true
+  },
+  {
+   "name": "leg_skin",
+   "box": [
+    1230,
+    990,
+    1270,
+    1040
+   ],
+   "weight": 1.5,
+   "renderBox": [
+    1240,
+    990,
+    1280,
+    1040
+   ],
+   "manual": true
+  }
+ ],
+ "notes": "Taunie (tr0001) from Shirrako full game 12:04:57.5 (dusk cutscene); camera estimated from frame geometry."
+}

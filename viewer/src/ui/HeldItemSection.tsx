@@ -1,5 +1,4 @@
 import type { IndexModel, PropInfo } from '../types';
-import { Accordion } from './Accordion';
 
 interface Props {
   items: IndexModel[];
@@ -16,8 +15,9 @@ const sideLabel = (s: string) => (s ? s[0].toUpperCase() + s.slice(1) + ' hand' 
 
 export function HeldItemSection({ items, props, item, bone, onlyInClips, onItem, onBone, onOnlyInClips }: Props) {
   return (
-    <Accordion title="Held Item">
+    <>
       <div className="var-group">
+        <div className="label">Held item</div>
         <select className="text" value={item} onChange={(e) => onItem(e.target.value)} aria-label="Held item">
           <option value="">None</option>
           {items.map((m) => <option key={m.id} value={m.id}>{m.displayName}</option>)}
@@ -33,6 +33,6 @@ export function HeldItemSection({ items, props, item, bone, onlyInClips, onItem,
       <label className="check">
         <input type="checkbox" checked={onlyInClips} onChange={(e) => onOnlyInClips(e.target.checked)} /> Only in animations that use it
       </label>
-    </Accordion>
+    </>
   );
 }

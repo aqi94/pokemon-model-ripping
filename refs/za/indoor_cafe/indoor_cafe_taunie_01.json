@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "slug": "indoor_cafe_taunie_01",
+ "scene": "indoor_cafe",
+ "game": "za",
+ "source": "youtube",
+ "video": {
+  "id": "4spEtYJBlVE",
+  "url": "https://www.youtube.com/watch?v=4spEtYJBlVE",
+  "title": "POKEMON LEGENDS Z-A Gameplay Walkthrough Part 1 (4K 60FPS) No Commentary",
+  "channel": "Shirrako",
+  "platform": "switch2",
+  "formatId": "315",
+  "width": 3840,
+  "height": 2160,
+  "fps": 60.0,
+  "vcodec": "vp9"
+ },
+ "timestamp": 3662.5,
+ "timecode": "01:01:02.500",
+ "grabbedAt": "2026-10-16T14:35:19Z",
+ "image": {
+  "file": "indoor_cafe_taunie_01.png",
+  "width": 1920,
+  "height": 1080,
+  "scaledFrom": [
+   3840,
+   2160
+  ]
+ },
+ "tags": {
+  "timeOfDay": "day",
+  "weather": "none",
+  "location": "Hotel Z lounge, warm lamps and window light",
+  "indoor": true,
+  "lightType": "window+lamp"
+ },
+ "subject": {
+  "kind": "trainer",
+  "model": "tr0001_00",
+  "name": "Taunie",
+  "confidence": "high"
+ },
+ "clipGuess": "speak01_loop",
+ "context": "cutscene",
+ "quality": {
+  "ui": false,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": ""
+}

@@ -1,5 +1,7 @@
-import { Accordion } from './Accordion';
-import { DEFAULT_ENV, LIGHTING_PRESETS, matchPreset, type Environment, type ToneMap } from '../scene/environment';
+import { useState } from 'react';
+import { DEFAULT_ENV, DEFAULT_HABLE, matchPreset, type Environment, type ToneMap } from '../scene/environment';
+import { USER_PREFIX, deleteUserPreset, matchAnyPreset, saveUserPreset } from '../scene/userPresets';
+import { LightingSelect } from './LightingSelect';
 
 export interface Options {
   shadows: boolean;
@@ -16,12 +18,12 @@ export interface Options {
 interface Props {
   options: Options;
   onChange: (patch: Partial<Options>) => void;
-  onFullscreen: () => void;
-  onRecenter: () => void;
-  onCamera: (p: 'fit' | 'vs' | 'front' | 'side' | 'back' | 'top') => void;
 }
 
-type NumKey = { [K in keyof Environment]: Environment[K] extends number ? K : never }[keyof Environment];
+// Kelvin sliders drop the explicit colour a game-data preset may carry (the colour would otherwise win).
+const CLEARS: Partial<Record<keyof Environment, keyof Environment>> = { keyTemp: 'keyColor', skyTemp: 'skyColor', backTemp: 'backColor' };
+
+type NumKey = { [K in keyof Environment]-?: Environment[K] extends number ? K : never }[keyof Environment];
 
 const ENV_SLIDERS: { key: NumKey; label: string; min: number; max: number; step: number; digits: number; gameOnly?: boolean }[] = [
   { key: 'ambient', label: 'Ambient', min: 0, max: 4, step: 0.05, digits: 2 },
@@ -44,9 +46,9 @@ const ENV_SLIDERS: { key: NumKey; label: string; min: number; max: number; step:
   { key: 'gi', label: 'Ambient tint', min: 0, max: 2, step: 0.05, digits: 2, gameOnly: true },
 ];
 
-export function OptionsSection({ options, onChange, onFullscreen, onRecenter, onCamera }: Props) {
+export function RenderPanel({ options, onChange }: Props) {
   return (
-    <Accordion title="Options">
+    <div className="pane">
       <label className="check"><input type="checkbox" checked={options.shadows} onChange={(e) => onChange({ shadows: e.target.checked })} /><span>Shadows</span></label>
       <label className="check"><input type="checkbox" checked={options.skeleton} onChange={(e) => onChange({ skeleton: e.target.checked })} /><span>Skeleton</span></label>
       <label className="check"><input type="checkbox" checked={options.wireframe} onChange={(e) => onChange({ wireframe: e.target.checked })} /><span>Wireframe</span></label>
@@ -70,23 +72,54 @@ export function OptionsSection({ options, onChange, onFullscreen, onRecenter, on
         <span>Auto-rotate {options.autoRotate ? options.autoRotate.toFixed(1) : 'off'}</span>
         <input type="range" min={0} max={5} step={0.1} value={options.autoRotate} onChange={(e) => onChange({ autoRotate: Number(e.target.value) })} />
       </label>
+    </div>
+  );
+}
+
+const icon = { width: 14, height: 14, viewBox: '0 0 16 16', fill: 'none', stroke: 'currentColor', strokeWidth: 1.4, strokeLinejoin: 'round', strokeLinecap: 'round', 'aria-hidden': true } as const;
+const FloppyIcon = () => <svg {...icon}><path d="M2.5 2.5h9l2 2v9h-11z" /><path d="M5 2.5v3.5h5V2.5M5 13.5V9h6v4.5" /></svg>;
+const TrashIcon = () => <svg {...icon}><path d="M2.5 4h11M6 4V2.5h4V4M4 4l.7 9.5h6.6L12 4M6.8 6.5v4.5M9.2 6.5v4.5" /></svg>;
+
+export function LightingPanel({ options, onChange }: Props) {
+  const setEnv = (key: keyof Environment, value: number) => {
+    const env = { ...options.env, [key]: value };
+    const clear = CLEARS[key];
+    if (clear) delete env[clear];
+    onChange({ env });
+  };
+  const [name, setName] = useState('');
+  const current = matchAnyPreset(options.env, matchPreset);
+  const save = () => { if (!name.trim()) return; saveUserPreset(name, options.env); setName(''); };
+  return (
+    <div className="pane">
       <div className="field"><span><b>Environment</b></span><button className="btn small" onClick={() => onChange({ env: { ...DEFAULT_ENV } })}>Reset environment</button></div>
       <label className="field">
         <span>Lighting</span>
-        <select className="text" value={matchPreset(options.env) ?? ''} onChange={(e) => { const pr = LIGHTING_PRESETS.find((x) => x.id === e.target.value); if (pr) onChange({ env: { ...pr.env } }); }}>
-          {matchPreset(options.env) === null && <option value="">Custom</option>}
-          {LIGHTING_PRESETS.map((pr) => <option key={pr.id} value={pr.id}>{pr.label}</option>)}
-        </select>
+        <LightingSelect env={options.env} onPick={(env) => onChange({ env })} />
       </label>
+      <div className="field save-preset">
+        <input className="text" placeholder="Save current as..." value={name} maxLength={40} onChange={(e) => setName(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') save(); }} />
+        <button className="btn small" disabled={!name.trim()} onClick={save} title="Save" aria-label="Save current lighting as a preset (same name overwrites)"><FloppyIcon /></button>
+        {current?.startsWith(USER_PREFIX) && <button className="btn small" onClick={() => deleteUserPreset(current)} title="Delete" aria-label="Delete the selected saved preset"><TrashIcon /></button>}
+      </div>
       <label className="field">
         <span>Tone mapping</span>
-        <select className="text" value={options.env.toneMapping} onChange={(e) => onChange({ env: { ...options.env, toneMapping: e.target.value as ToneMap } })}>
+        <select className="text" value={options.env.toneMapping} onChange={(e) => {
+          const toneMapping = e.target.value as ToneMap;
+          const env = { ...options.env, toneMapping };
+          if (toneMapping === 'hable') env.hable ??= { ...DEFAULT_HABLE }; else delete env.hable;
+          onChange({ env });
+        }}>
           <option value="linear">Linear</option>
           <option value="aces">ACES filmic</option>
           <option value="agx">AgX</option>
           <option value="neutral">Khronos neutral</option>
+          <option value="hable">Hable filmic (game curve)</option>
         </select>
       </label>
+      {(options.env.keyColor || options.env.skyColor || options.env.backColor) && (
+        <div className="field"><span className="muted">Light colours come from the game data; moving a temperature slider replaces them.</span></div>
+      )}
       <label className="field"><span>Ground bounce</span><input type="color" value={options.env.ground} onChange={(e) => onChange({ env: { ...options.env, ground: e.target.value } })} /></label>
       {ENV_SLIDERS.map((sl) => {
         const dis = sl.gameOnly && options.shading !== 'game';
@@ -94,21 +127,10 @@ export function OptionsSection({ options, onChange, onFullscreen, onRecenter, on
           <label className="field" key={sl.key}>
             <span>{sl.label} {options.env[sl.key].toFixed(sl.digits)}</span>
             <input type="range" min={sl.min} max={sl.max} step={sl.step} disabled={dis} value={options.env[sl.key]}
-              onChange={(e) => onChange({ env: { ...options.env, [sl.key]: Number(e.target.value) } })} />
+              onChange={(e) => setEnv(sl.key, Number(e.target.value))} />
           </label>
         );
       })}
-      <div className="field"><span>Camera</span></div>
-      <div className="row wrap">
-        {(['fit', 'vs', 'front', 'side', 'back', 'top'] as const).map((p) => (
-          <button key={p} className="btn small" onClick={() => onCamera(p)}>{p === 'vs' ? 'VS' : p[0].toUpperCase() + p.slice(1)}</button>
-        ))}
-      </div>
-      <div className="row wrap">
-        <button className="btn small" onClick={onFullscreen}>Full screen</button>
-        <button className="btn small" onClick={() => onChange({ mirror: !options.mirror })}>Mirror model{options.mirror ? ' (on)' : ''}</button>
-        <button className="btn small" onClick={onRecenter}>Recenter camera</button>
-      </div>
-    </Accordion>
+    </div>
   );
 }

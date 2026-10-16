@@ -10,6 +10,8 @@ from dataclasses import dataclass, field
 from functools import lru_cache
 
 from ..importers.za.composite import CcPart, import_cc_model, part_label
+from ..importers.za.trvat import attach_vat_clips
+from .za_demo import demo_animations
 from ..importers.za.importer import AnimationFile, ZipSource, clip_name_from_file, import_model
 
 DEFAULT_DATA_DIR = os.environ.get("POKEMODELS_DATA") or os.path.join(os.path.expanduser("~"), "Documents", "MEGA downloads", "PokéModels")
@@ -23,6 +25,8 @@ TRAINER_SHARED_TEX_ZIPS = ["ZA-TrainersSharedTex.zip", "ZA-TrainersSharedTexDLC.
 POKE_RE = re.compile(r"^ik_pokemon/data/(pm\d{4})/(pm\d{4}_\d{2}_\d{2})/\2\.trmdl$")
 TRAINER_UQ_RE = re.compile(r"^ik_chara/model_uq/(tr\d{4}_\d{2}_[^/]+)/(tr\d{4}_\d{2})\.trmdl$")
 BALL_RE = re.compile(r"^ik_chara/model_ob/(ob02\d{2}_\d{2}_([a-z]+ball))/(ob02\d{2}_\d{2})\.trmdl$")
+# Standalone NPCs built on a cc base (rival tr0001/tr0002, Co members tr0030/tr0031): ZA-TrainersNPCCommon, clips in motion_cc_ir.
+CC_IR_RE = re.compile(r"^ik_chara/model_cc_ir/(tr\d{4}_\d{2}_[^/]+)/(tr\d{4}_\d{2})\.trmdl$")
 CC_BASE_RE = re.compile(r"^ik_chara/model_cc_base/(\w+)/\1_base\.trmdl$")
 CC_PART_RE = re.compile(
     r"^ik_chara/model_cc_vr/(?P<grp>drs|face|hrs)/(?P<base>[a-z]{2})_(?P=grp)(?P<num>\d{4})_(?P<var>\d{2})_(?P<name>[^/]+)"
@@ -64,6 +68,7 @@ class ZaCatalog:
     TRAINER_ANIM_ROOT = "ik_chara/motion_uq"  # "" = trainers have no clips
     CC_MODEL_ZIPS = ["ZA-TrainersNPCCommon.zip"]  # [] = no modular generic NPCs
     CC_ANIM_ROOT = "ik_chara/motion_cc_base"
+    CC_IR_ANIM_ROOT = "ik_chara/motion_cc_ir"  # "" = none
 
     def __init__(self, data_dir: str = DEFAULT_DATA_DIR):
         self.data_dir = data_dir
@@ -125,6 +130,24 @@ class ZaCatalog:
                     anim_folder=f"{self.TRAINER_ANIM_ROOT}/{folder_name}/" if self.TRAINER_ANIM_ROOT else "",
                     extras={"folder": folder_name},
                 )
+        if self.CC_IR_ANIM_ROOT:
+            for z in self.zips(self.CC_MODEL_ZIPS):
+                for n in z.namelist():
+                    m = CC_IR_RE.match(n)
+                    if not m or m.group(2) in refs:
+                        continue
+                    folder_name, mid = m.group(1), m.group(2)
+                    label = re.sub(r"^tr\d{4}_(\d{2}_)?", "", folder_name).replace("_", " ").title()
+                    refs[mid] = ModelRef(
+                        game=self.GAME,
+                        kind="trainer",
+                        id=mid,
+                        folder=n[: n.rindex("/") + 1],
+                        display_name=label,
+                        species=mid[:6],
+                        anim_folder=f"{self.CC_IR_ANIM_ROOT}/{folder_name}/",
+                        extras={"folder": folder_name, "cc_ir": True},
+                    )
         return [refs[k] for k in sorted(refs)] + self.cc_models()
 
     # -- modular generic NPCs (model_cc_*) ----------------------------------------
@@ -222,11 +245,18 @@ class ZaCatalog:
                 animations=anims,
                 game=ref.game,
             )
-        return import_model(self.model_source(ref), ref.id, ref.display_name, kind=ref.kind, animations=anims, game=ref.game)
+        model = import_model(self.model_source(ref), ref.id, ref.display_name, kind=ref.kind, animations=anims, game=ref.game)
+        if ref.kind == "trainer" and ref.anim_folder:
+            # Crowd NPCs (tr05xx) animate through baked vertex textures (.trvat), see importers/za/trvat.py.
+            if attach_vat_clips(model, ZipSource(self.zips(self.TRAINER_ANIM_ZIPS), ref.anim_folder)):
+                model.clips.sort(key=lambda c: (c.index, c.name))
+        return model
 
     # -- sources -----------------------------------------------------------
     def model_source(self, ref: ModelRef) -> ZipSource:
         zips = self.POKE_MODEL_ZIPS if ref.kind == "pokemon" else self.TRAINER_MODEL_ZIPS + self.TRAINER_SHARED_TEX_ZIPS
+        if ref.extras.get("cc_ir"):
+            zips = self.CC_MODEL_ZIPS + self.TRAINER_SHARED_TEX_ZIPS
         return ZipSource(self.zips(zips), ref.folder)
 
     def animations(self, ref: ModelRef) -> list[AnimationFile]:
@@ -235,7 +265,7 @@ class ZaCatalog:
         zips = self.POKE_ANIM_ZIPS if ref.kind == "pokemon" else self.TRAINER_ANIM_ZIPS
         src = ZipSource(self.zips(zips), ref.anim_folder)
         if ref.extras.get("cc_base"):
-            return self._cc_animations(src)
+            return self._cc_animations(src) + self._demo_animations(ref)
         out = []
         for n in src.list():
             base = os.path.basename(n)
@@ -253,8 +283,43 @@ class ZaCatalog:
                 name, idx = os.path.splitext(base)[0], 99999
             cfg = n[: -len(".tranm")] + ".tracm"
             out.append(AnimationFile(name=name, index=idx, data=src.read(n), config=src.read(cfg) if src.exists(cfg) else None))
-        return out
+        if ref.extras.get("cc_ir"):
+            self._attach_rival_body(out, zips)
+        return out + self._demo_animations(ref)
 
+    # The rival's body motion is shared on the player's rig: motion_cc_base/rv/<rival_f>/ has the waist/spine/limb tracks,
+    # motion_cc_ir/<rival>/ only the face/hair/dummy layer for the same clip index.
+    RIVAL_BODY_FOLDER = "ik_chara/motion_cc_base/rv/tr0001_00_rival_f/"
+
+    def _attach_rival_body(self, files: list[AnimationFile], zips: list[str]) -> None:
+        body = ZipSource(self.zips(zips), self.RIVAL_BODY_FOLDER)
+        by_index = {}
+        for n in body.list():
+            if "/" not in n and n.endswith(".tranm"):
+                parsed = clip_name_from_file(os.path.basename(n))
+                if parsed:
+                    by_index[parsed[1]] = n
+        for af in files:
+            if af.index in by_index:
+                af.extra = body.read(by_index[af.index])
+
+    # Cutscene clips (`ik_chara/demo_*`): ordinary bone .tranm, see catalog/za_demo.py.
+    DEMO_ROOT = "ik_chara"
+
+    def _demo_animations(self, ref: ModelRef) -> list[AnimationFile]:
+        if not self.DEMO_ROOT or ref.kind != "trainer":
+            return []
+        zips = self.zips(self.TRAINER_ANIM_ZIPS)
+        out: list[AnimationFile] = []
+        if ref.extras.get("cc_base"):
+            skel = ref.extras["cc_skeleton"]
+            for sub in dict.fromkeys([ref.extras["cc_base"], skel]):
+                out += demo_animations(ZipSource(zips, f"{self.DEMO_ROOT}/demo_cc_base/{sub}"))
+            if ref.extras["cc_base"] == "rv":
+                out += demo_animations(ZipSource(zips, f"{self.DEMO_ROOT}/demo_cc_ir"))
+        else:
+            out += demo_animations(ZipSource(zips, f"{self.DEMO_ROOT}/demo_uq/{ref.extras.get('folder', '')}"))
+        return out
 
     @staticmethod
     def _cc_animations(src: ZipSource) -> list[AnimationFile]:

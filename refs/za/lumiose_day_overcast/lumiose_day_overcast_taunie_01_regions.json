@@ -1,0 +1,102 @@
+{
+ "schema": 1,
+ "slug": "lumiose_day_overcast_taunie_01",
+ "scene": "lumiose_day_overcast",
+ "model": "za/tr0001_00",
+ "clip": "defaultwait01_loop",
+ "frame": 0,
+ "screenshot": "lumiose_day_overcast_taunie_01.png",
+ "width": 1920,
+ "height": 1080,
+ "camera": {
+  "fov": 30,
+  "position": [
+   -1.2551,
+   1.2301,
+   1.98
+  ],
+  "target": [
+   -0.4687,
+   1.1381,
+   -0.1807
+  ]
+ },
+ "subjectBox": [
+  1160,
+  150,
+  1600,
+  1035
+ ],
+ "subjectCut": "bottom",
+ "yaw": -20,
+ "weight": 1,
+ "skip": false,
+ "regions": [
+  {
+   "name": "body_1",
+   "box": [
+    1233,
+    570,
+    1268,
+    605
+   ],
+   "renderBox": [
+    1233,
+    570,
+    1268,
+    605
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    3.9,
+    1.7
+   ],
+   "dE0": 7.8
+  },
+  {
+   "name": "body_2",
+   "box": [
+    1281,
+    666,
+    1316,
+    701
+   ],
+   "renderBox": [
+    1281,
+    666,
+    1316,
+    701
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    5,
+    0.7
+   ],
+   "dE0": 7.4
+  },
+  {
+   "name": "face_skin_1",
+   "box": [
+    1407,
+    279,
+    1442,
+    314
+   ],
+   "renderBox": [
+    1407,
+    279,
+    1442,
+    314
+   ],
+   "weight": 1.5,
+   "auto": true,
+   "flat": [
+    7.6,
+    4.7
+   ],
+   "dE0": 14.3
+  }
+ ]
+}

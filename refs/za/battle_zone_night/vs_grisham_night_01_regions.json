@@ -1,0 +1,147 @@
+{
+ "schema": 1,
+ "slug": "vs_grisham_night_01",
+ "scene": "battle_zone_night",
+ "model": "za/tr0009_00",
+ "clip": "advent01_loop",
+ "frame": 40,
+ "screenshot": "vs_grisham_night_01.png",
+ "width": 1024,
+ "height": 682,
+ "camera": {
+  "fov": 50.0,
+  "position": [
+   -0.024,
+   1.543,
+   0.37
+  ],
+  "target": [
+   -0.024,
+   1.543,
+   0.0
+  ]
+ },
+ "regions": [
+  {
+   "name": "skin_forehead",
+   "box": [
+    480,
+    95,
+    550,
+    125
+   ],
+   "renderBox": [
+    480,
+    110,
+    550,
+    140
+   ]
+  },
+  {
+   "name": "skin_cheek",
+   "box": [
+    570,
+    320,
+    620,
+    355
+   ],
+   "renderBox": [
+    570,
+    265,
+    615,
+    295
+   ]
+  },
+  {
+   "name": "hair_red",
+   "box": [
+    580,
+    25,
+    680,
+    50
+   ],
+   "renderBox": [
+    545,
+    62,
+    595,
+    85
+   ]
+  },
+  {
+   "name": "hair_white",
+   "box": [
+    490,
+    10,
+    540,
+    50
+   ],
+   "renderBox": [
+    500,
+    60,
+    525,
+    90
+   ]
+  },
+  {
+   "name": "shirt_lit",
+   "box": [
+    700,
+    590,
+    790,
+    650
+   ],
+   "renderBox": [
+    690,
+    520,
+    750,
+    570
+   ]
+  },
+  {
+   "name": "shirt_dark",
+   "box": [
+    110,
+    545,
+    190,
+    620
+   ],
+   "renderBox": [
+    300,
+    540,
+    370,
+    600
+   ]
+  },
+  {
+   "name": "hand_skin",
+   "box": [
+    380,
+    545,
+    440,
+    585
+   ],
+   "renderBox": [
+    440,
+    420,
+    490,
+    460
+   ]
+  },
+  {
+   "name": "arm_skin",
+   "box": [
+    235,
+    590,
+    285,
+    640
+   ],
+   "renderBox": [
+    400,
+    560,
+    440,
+    590
+   ]
+  }
+ ],
+ "_comment": "Boxes [x0,y0,x1,y1] in screenshot px (box) and render px (renderBox); fit knobs come from tools/lightrefs/fit_profiles.json."
+}

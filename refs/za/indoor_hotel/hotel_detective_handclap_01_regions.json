@@ -1,0 +1,147 @@
+{
+ "schema": 1,
+ "slug": "hotel_detective_handclap_01",
+ "scene": "indoor_hotel",
+ "model": "za/tr0013_00",
+ "clip": "handclap01_loop",
+ "frame": 0,
+ "screenshot": "hotel_detective_handclap_01.png",
+ "width": 651,
+ "height": 635,
+ "camera": {
+  "fov": 50,
+  "position": [
+   -0.02,
+   1.46,
+   1.05
+  ],
+  "target": [
+   -0.02,
+   1.31,
+   0
+  ]
+ },
+ "regions": [
+  {
+   "name": "hair_crown",
+   "box": [
+    300,
+    85,
+    350,
+    115
+   ],
+   "renderBox": [
+    300,
+    70,
+    350,
+    100
+   ]
+  },
+  {
+   "name": "hair_fringe",
+   "box": [
+    310,
+    125,
+    340,
+    150
+   ],
+   "renderBox": [
+    310,
+    125,
+    340,
+    150
+   ]
+  },
+  {
+   "name": "skin_cheek",
+   "box": [
+    295,
+    205,
+    320,
+    228
+   ],
+   "renderBox": [
+    298,
+    222,
+    322,
+    244
+   ]
+  },
+  {
+   "name": "coat_lapel",
+   "box": [
+    255,
+    295,
+    290,
+    330
+   ],
+   "renderBox": [
+    245,
+    300,
+    280,
+    335
+   ]
+  },
+  {
+   "name": "coat_shoulder",
+   "box": [
+    405,
+    300,
+    440,
+    340
+   ],
+   "renderBox": [
+    410,
+    310,
+    445,
+    350
+   ]
+  },
+  {
+   "name": "coat_front",
+   "box": [
+    318,
+    455,
+    355,
+    490
+   ],
+   "renderBox": [
+    316,
+    470,
+    344,
+    505
+   ]
+  },
+  {
+   "name": "coat_sleeve",
+   "box": [
+    420,
+    410,
+    455,
+    445
+   ],
+   "renderBox": [
+    430,
+    430,
+    465,
+    470
+   ]
+  },
+  {
+   "name": "pants",
+   "box": [
+    275,
+    565,
+    310,
+    620
+   ],
+   "renderBox": [
+    275,
+    575,
+    315,
+    625
+   ]
+  }
+ ],
+ "_comment": "Boxes [x0,y0,x1,y1] in screenshot px (box) and render px (renderBox); fit knobs come from tools/lightrefs/fit_profiles.json."
+}

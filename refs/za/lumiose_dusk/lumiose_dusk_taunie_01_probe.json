@@ -1,0 +1,167 @@
+{
+ "modelBox": [
+  1070,
+  132,
+  1653,
+  1080
+ ],
+ "pixels": 307063,
+ "materials": {
+  "body": {
+   "color": "#3f98f9",
+   "pixels": 226784,
+   "bbox": [
+    1071,
+    260,
+    1647,
+    1025
+   ],
+   "centroid": [
+    1357,
+    734
+   ]
+  },
+  "baggage": {
+   "color": "#c8f93f",
+   "pixels": 296,
+   "bbox": [
+    1274,
+    143,
+    1493,
+    413
+   ],
+   "centroid": [
+    1369,
+    233
+   ]
+  },
+  "barefoots_skin": {
+   "color": "#f93fec",
+   "pixels": 1,
+   "bbox": [
+    1504,
+    325,
+    1505,
+    326
+   ],
+   "centroid": [
+    1504,
+    325
+   ]
+  },
+  "upperbody_skin": {
+   "color": "#3ff9e7",
+   "pixels": 8147,
+   "bbox": [
+    1327,
+    271,
+    1479,
+    797
+   ],
+   "centroid": [
+    1401,
+    719
+   ]
+  },
+  "barehands_skin": {
+   "color": "#f9c23f",
+   "pixels": 19495,
+   "bbox": [
+    1089,
+    132,
+    1652,
+    1080
+   ],
+   "centroid": [
+    1378,
+    993
+   ]
+  },
+  "eyebrow": {
+   "color": "#8f3ff9",
+   "pixels": 2845,
+   "bbox": [
+    1070,
+    218,
+    1648,
+    1025
+   ],
+   "centroid": [
+    1409,
+    342
+   ]
+  },
+  "face_skin": {
+   "color": "#54f93f",
+   "pixels": 31116,
+   "bbox": [
+    1243,
+    144,
+    1493,
+    406
+   ],
+   "centroid": [
+    1390,
+    281
+   ]
+  },
+  "r_eye": {
+   "color": "#f93fa0",
+   "pixels": 2253,
+   "bbox": [
+    1088,
+    257,
+    1653,
+    1080
+   ],
+   "centroid": [
+    1350,
+    369
+   ]
+  },
+  "l_eye": {
+   "color": "#3fcdf9",
+   "pixels": 1815,
+   "bbox": [
+    1326,
+    260,
+    1479,
+    797
+   ],
+   "centroid": [
+    1452,
+    315
+   ]
+  },
+  "hairstyle01": {
+   "color": "#f1f93f",
+   "pixels": 14198,
+   "bbox": [
+    1274,
+    132,
+    1518,
+    419
+   ],
+   "centroid": [
+    1392,
+    255
+   ]
+  },
+  "hairstyle00": {
+   "color": "#e23ff9",
+   "pixels": 113,
+   "bbox": [
+    1106,
+    257,
+    1540,
+    1025
+   ],
+   "centroid": [
+    1343,
+    869
+   ]
+  }
+ },
+ "width": 1920,
+ "height": 1080
+}

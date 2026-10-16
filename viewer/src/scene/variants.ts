@@ -50,17 +50,18 @@ export class VariantSwitcher {
   /** Average opaque colour of the largest base-colour texture of a variant (for the swatch). */
   async sampleColor(variantIndex: number): Promise<string | null> {
     try {
-      let best: { img: CanvasImageSource; area: number } | null = null;
+      let best: { img: CanvasImageSource | null; area: number; tint: THREE.Color } | null = null;
       for (const e of this.entries) {
         const map = e.mappings.find((m) => m.variants.includes(variantIndex));
         if (!map) continue;
         const mat = (await this.material(map.material)) as THREE.MeshStandardMaterial;
         const img = mat.map?.image as (CanvasImageSource & { width: number; height: number }) | undefined;
-        if (!img) continue;
-        const area = img.width * img.height;
-        if (!best || area > best.area) best = { img, area };
+        const area = img ? img.width * img.height : 0;
+        if (!best || area > best.area) best = { img: img ?? null, area, tint: mat.color };
       }
       if (!best) return null;
+      // Variants that only change the material colour factor (skin tones) share one texture: apply the factor.
+      if (!best.img) return best.tint.getStyle();
       const c = document.createElement('canvas');
       c.width = c.height = 32;
       const ctx = c.getContext('2d', { willReadFrequently: true })!;
@@ -71,7 +72,9 @@ export class VariantSwitcher {
         if (d[i + 3] < 200) continue;
         r += d[i]; g += d[i + 1]; b += d[i + 2]; n++;
       }
-      return n ? `rgb(${Math.round(r / n)}, ${Math.round(g / n)}, ${Math.round(b / n)})` : null;
+      if (!n) return null;
+      const avg = new THREE.Color().setRGB(r / n / 255, g / n / 255, b / n / 255, THREE.SRGBColorSpace);
+      return avg.multiply(best.tint).getStyle();
     } catch {
       return null;
     }

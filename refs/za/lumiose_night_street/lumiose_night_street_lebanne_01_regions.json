@@ -1,0 +1,176 @@
+{
+ "schema": 1,
+ "slug": "lumiose_night_street_lebanne_01",
+ "scene": "lumiose_night_street",
+ "model": "za/tr0020_00",
+ "clip": "defaultwait01_loop",
+ "frame": 0,
+ "screenshot": "lumiose_night_street_lebanne_01.png",
+ "width": 1920,
+ "height": 1080,
+ "camera": {
+  "fov": 35,
+  "position": [
+   0.5414,
+   1.6112,
+   0.772
+  ],
+  "target": [
+   -0.0069,
+   1.5634,
+   -0.0111
+  ]
+ },
+ "yaw": 35,
+ "weight": 1,
+ "skip": false,
+ "regions": [
+  {
+   "name": "face_skin_1",
+   "box": [
+    905,
+    264,
+    945,
+    304
+   ],
+   "renderBox": [
+    905,
+    264,
+    945,
+    304
+   ],
+   "weight": 1.5,
+   "auto": true,
+   "flat": [
+    3.3,
+    1.7
+   ],
+   "dE0": 17.9
+  },
+  {
+   "name": "face_skin_2",
+   "box": [
+    965,
+    274,
+    1005,
+    314
+   ],
+   "renderBox": [
+    965,
+    274,
+    1005,
+    314
+   ],
+   "weight": 1.5,
+   "auto": true,
+   "flat": [
+    3.6,
+    4.9
+   ],
+   "dE0": 18.1
+  },
+  {
+   "name": "obj_1",
+   "box": [
+    1189,
+    50,
+    1229,
+    90
+   ],
+   "renderBox": [
+    1189,
+    50,
+    1229,
+    90
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    8.3,
+    2.3
+   ],
+   "dE0": 13.6
+  },
+  {
+   "name": "obj_2",
+   "box": [
+    1069,
+    10,
+    1109,
+    50
+   ],
+   "renderBox": [
+    1069,
+    10,
+    1109,
+    50
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    6.1,
+    4.5
+   ],
+   "dE0": 23.4
+  },
+  {
+   "name": "hairstyle_1",
+   "box": [
+    1110,
+    478,
+    1150,
+    518
+   ],
+   "renderBox": [
+    1110,
+    478,
+    1150,
+    518
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    7.5,
+    3.3
+   ],
+   "dE0": 33.7
+  },
+  {
+   "name": "hairstyle_2",
+   "box": [
+    1000,
+    108,
+    1040,
+    148
+   ],
+   "renderBox": [
+    1000,
+    108,
+    1040,
+    148
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    4.1,
+    7.7
+   ],
+   "dE0": 33.2
+  }
+ ],
+ "notes": "PROVISIONAL. Mega-tower purple night variant (16:08:25, tr0020_00 Lebanne, idle defaultwait01_loop, yaw 35 face mode). Only shot in this scene; the lamp-lit fountain square (8:03:50) had no identifiable subject.",
+ "faceBox": [
+  840,
+  230,
+  1080,
+  580
+ ],
+ "excludeBoxes": [
+  [
+   210,
+   390,
+   750,
+   520
+  ]
+ ]
+}

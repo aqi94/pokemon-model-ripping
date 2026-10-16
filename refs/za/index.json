@@ -1,0 +1,306 @@
+{
+ "game": "za",
+ "builtAt": "2026-10-16",
+ "refs": [
+  {
+   "scene": "lumiose_day_sunny",
+   "sceneLabel": "Lumiose, sunny day",
+   "preset": "za_lumiose_day_sunny",
+   "slug": "lumiose_day_sunny_taunie_01",
+   "model": "tr0001_00",
+   "name": "Taunie",
+   "context": "field",
+   "clip": "defaultwait01_loop",
+   "frame": 0,
+   "camera": {
+    "fov": 23,
+    "position": [
+     2.9305,
+     0.8254,
+     3.9484
+    ],
+    "target": [
+     1.1672,
+     0.7418,
+     0.167
+    ]
+   },
+   "image": "/refs/za/lumiose_day_sunny/lumiose_day_sunny_taunie_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 6.71,
+   "video": "https://www.youtube.com/watch?v=4spEtYJBlVE",
+   "timecode": "00:44:59.500"
+  },
+  {
+   "scene": "lumiose_day_overcast",
+   "sceneLabel": "Lumiose, overcast",
+   "preset": "za_lumiose_day_overcast",
+   "slug": "lumiose_day_overcast_taunie_01",
+   "model": "tr0001_00",
+   "name": "Taunie",
+   "context": "cutscene",
+   "clip": "defaultwait01_loop",
+   "frame": 0,
+   "camera": {
+    "fov": 30,
+    "position": [
+     -1.2551,
+     1.2301,
+     1.98
+    ],
+    "target": [
+     -0.4687,
+     1.1381,
+     -0.1807
+    ]
+   },
+   "image": "/refs/za/lumiose_day_overcast/lumiose_day_overcast_taunie_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 6.23,
+   "video": "https://www.youtube.com/watch?v=4spEtYJBlVE",
+   "timecode": "01:45:00.500"
+  },
+  {
+   "scene": "lumiose_dusk",
+   "sceneLabel": "Lumiose, dusk",
+   "preset": "za_lumiose_dusk",
+   "slug": "lumiose_dusk_taunie_01",
+   "model": "tr0001_00",
+   "name": "Taunie",
+   "context": "cutscene",
+   "clip": "defaultwait01_loop",
+   "frame": 0,
+   "camera": {
+    "fov": 35,
+    "position": [
+     -0.38,
+     1.4,
+     1.56
+    ],
+    "target": [
+     -0.38,
+     1.21,
+     0
+    ]
+   },
+   "image": "/refs/za/lumiose_dusk/lumiose_dusk_taunie_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 9.1,
+   "video": "https://www.youtube.com/watch?v=6qiJ2FnPSFM",
+   "timecode": "12:04:57.500"
+  },
+  {
+   "scene": "lumiose_night_street",
+   "sceneLabel": "Lumiose, night street",
+   "preset": "za_lumiose_night_street",
+   "slug": "lumiose_night_street_lebanne_01",
+   "model": "tr0020_00",
+   "name": "Lebanne",
+   "context": "cutscene",
+   "clip": "defaultwait01_loop",
+   "frame": 0,
+   "camera": {
+    "fov": 35,
+    "position": [
+     0.5414,
+     1.6112,
+     0.772
+    ],
+    "target": [
+     -0.0069,
+     1.5634,
+     -0.0111
+    ]
+   },
+   "image": "/refs/za/lumiose_night_street/lumiose_night_street_lebanne_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 8.62,
+   "video": "https://www.youtube.com/watch?v=6qiJ2FnPSFM",
+   "timecode": "16:08:25.000"
+  },
+  {
+   "scene": "battle_zone_night",
+   "sceneLabel": "Battle Zone, night",
+   "preset": "za_battle_zone_night",
+   "slug": "vs_grisham_night_01",
+   "model": "tr0009_00",
+   "name": "Grisham",
+   "context": "vs",
+   "clip": "advent01_loop",
+   "frame": 40,
+   "camera": {
+    "fov": 50.0,
+    "position": [
+     -0.024,
+     1.543,
+     0.37
+    ],
+    "target": [
+     -0.024,
+     1.543,
+     0.0
+    ]
+   },
+   "image": "/refs/za/battle_zone_night/vs_grisham_night_01.png",
+   "width": 1024,
+   "height": 682,
+   "dE": 8.32,
+   "video": null,
+   "timecode": "00:00:00.000"
+  },
+  {
+   "scene": "wild_zone_day",
+   "sceneLabel": "Wild Zone, day",
+   "preset": "za_wild_zone_day",
+   "slug": "wild_zone_day_taunie_01",
+   "model": "tr0001_00",
+   "name": "Taunie",
+   "context": "field",
+   "clip": "defaultwait01_loop",
+   "frame": 0,
+   "camera": {
+    "fov": 30,
+    "position": [
+     0.4517,
+     0.8467,
+     3.395
+    ],
+    "target": [
+     0.4517,
+     0.7788,
+     0.0024
+    ]
+   },
+   "image": "/refs/za/wild_zone_day/wild_zone_day_taunie_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 8.98,
+   "video": "https://www.youtube.com/watch?v=4spEtYJBlVE",
+   "timecode": "00:47:28.000"
+  },
+  {
+   "scene": "indoor_hotel",
+   "sceneLabel": "Hotel Z, window light",
+   "preset": "za_indoor_hotel",
+   "slug": "hotel_detective_handclap_01",
+   "model": "tr0013_00",
+   "name": "Detective",
+   "context": "cutscene",
+   "clip": "handclap01_loop",
+   "frame": 0,
+   "camera": {
+    "fov": 50,
+    "position": [
+     -0.02,
+     1.46,
+     1.05
+    ],
+    "target": [
+     -0.02,
+     1.31,
+     0
+    ]
+   },
+   "image": "/refs/za/indoor_hotel/hotel_detective_handclap_01.png",
+   "width": 651,
+   "height": 635,
+   "dE": 4.91,
+   "video": null,
+   "timecode": "00:00:00.000"
+  },
+  {
+   "scene": "indoor_cafe",
+   "sceneLabel": "Cafe, window light",
+   "preset": "za_indoor_cafe",
+   "slug": "indoor_cafe_taunie_01",
+   "model": "tr0001_00",
+   "name": "Taunie",
+   "context": "cutscene",
+   "clip": "speak02_loop",
+   "frame": 10,
+   "camera": {
+    "fov": 35,
+    "position": [
+     -0.0486,
+     1.4855,
+     1.3469
+    ],
+    "target": [
+     -0.0486,
+     1.3252,
+     0.017
+    ]
+   },
+   "image": "/refs/za/indoor_cafe/indoor_cafe_taunie_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 6.04,
+   "video": "https://www.youtube.com/watch?v=4spEtYJBlVE",
+   "timecode": "01:01:02.500"
+  },
+  {
+   "scene": "indoor_lab",
+   "sceneLabel": "Lab / Pokemon Center, fluorescent",
+   "preset": "za_indoor_lab",
+   "slug": "indoor_lab_mable_01",
+   "model": "tr0023_00",
+   "name": "Mable",
+   "context": "cutscene",
+   "clip": "speak02_loop",
+   "frame": 0,
+   "camera": {
+    "fov": 30,
+    "position": [
+     0.5265,
+     1.48,
+     1.0321
+    ],
+    "target": [
+     0.0375,
+     1.4318,
+     -0.0166
+    ]
+   },
+   "image": "/refs/za/indoor_lab/indoor_lab_mable_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 4.74,
+   "video": "https://www.youtube.com/watch?v=4spEtYJBlVE",
+   "timecode": "00:54:00.000"
+  },
+  {
+   "scene": "sewers",
+   "sceneLabel": "Lumiose sewers",
+   "preset": "za_sewers",
+   "slug": "sewers_ivor_01",
+   "model": "tr0017_00",
+   "name": "Ivor",
+   "context": "cutscene",
+   "clip": "defaultwait01_loop",
+   "frame": 0,
+   "camera": {
+    "fov": 30,
+    "position": [
+     1.0279,
+     1.3664,
+     4.8702
+    ],
+    "target": [
+     -0.6614,
+     1.2168,
+     0.2289
+    ]
+   },
+   "image": "/refs/za/sewers/sewers_ivor_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 4.49,
+   "video": "https://www.youtube.com/watch?v=6qiJ2FnPSFM",
+   "timecode": "08:25:36.000"
+  }
+ ]
+}

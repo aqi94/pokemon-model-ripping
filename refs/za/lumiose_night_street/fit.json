@@ -1,0 +1,67 @@
+{
+ "schema": 1,
+ "scene": "lumiose_night_street",
+ "profile": "night",
+ "locks": {},
+ "seeds": [
+  "night"
+ ],
+ "bestSeed": "restart 1",
+ "passes": 3,
+ "seedLog": [
+  {
+   "seed": "night",
+   "start": 22.35,
+   "end": 8.66
+  },
+  {
+   "seed": "restart 1",
+   "start": 18.03,
+   "end": 8.62
+  }
+ ],
+ "env": {
+  "ambient": 2.397,
+  "key": 0.4,
+  "azimuth": 3,
+  "elevation": 61,
+  "keyTemp": 8083,
+  "back": 0,
+  "backAzimuth": 160,
+  "backElevation": 42.33,
+  "backTemp": 12000,
+  "skyTemp": 9500,
+  "ground": "#6190c4",
+  "warmth": 0,
+  "shadow": 1,
+  "rim": 0,
+  "detail": 0.5,
+  "exposure": 1.387,
+  "toneMapping": "agx",
+  "contrast": 1.5,
+  "saturation": 0.8,
+  "gi": 1.327
+ },
+ "score": {
+  "mean": 8.62,
+  "perShot": {
+   "lumiose_night_street_lebanne_01": {
+    "dE": 8.62,
+    "weight": 1,
+    "regions": {
+     "face_skin_1": 4,
+     "face_skin_2": 4.9,
+     "obj_1": 18.8,
+     "obj_2": 12.8,
+     "hairstyle_1": 2.4,
+     "hairstyle_2": 13
+    }
+   }
+  }
+ },
+ "shots": [
+  "lumiose_night_street_lebanne_01"
+ ],
+ "fittedAt": "2026-10-16T14:48:54.471Z",
+ "tool": "fit_scene.mjs"
+}

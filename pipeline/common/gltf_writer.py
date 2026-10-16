@@ -287,12 +287,15 @@ def write_glb(model: Model, path: str) -> dict:
                 attrs["JOINTS_0"] = b.add_accessor(p.joints, 34962, dtype=np.uint16)
                 attrs["WEIGHTS_0"] = b.add_accessor(p.weights, 34962, dtype=np.float32)
             idx_dtype = np.uint16 if p.positions.shape[0] <= 65535 else np.uint32
+            targets = [{"POSITION": b.add_accessor(d, 34962, minmax=True, dtype=np.float32)} for d in p.morph_targets]
             prim = {
                 "attributes": attrs,
                 "indices": b.add_accessor(p.indices, 34963, dtype=idx_dtype),
                 "mode": 4,
                 "material": material(model.materials[p.material], None),
             }
+            if targets:
+                prim["targets"] = targets
             if variant_names:
                 mappings = []
                 for vi, v in enumerate(model.variants):
@@ -301,6 +304,8 @@ def write_glb(model: Model, path: str) -> dict:
                 prim["extensions"] = {"KHR_materials_variants": {"mappings": mappings}}
             prims.append(prim)
         g["meshes"].append({"name": mesh.name, "primitives": prims})
+        if mesh.primitives and mesh.primitives[0].morph_targets:
+            g["meshes"][-1]["weights"] = [0.0] * len(mesh.primitives[0].morph_targets)
         node = {"name": mesh.name, "mesh": len(g["meshes"]) - 1}
         extras = {"lod": mesh.lod, "visible": mesh.visible}
         extras.update(mesh.extras)
@@ -328,6 +333,18 @@ def write_glb(model: Model, path: str) -> dict:
                 }
             )
             channels.append({"sampler": len(samplers) - 1, "target": {"node": joint_node[ji], "path": tr.kind}})
+        for mesh_name, (mtimes, mweights) in clip.morph.items():
+            mi = next((i for i, m in enumerate(model.meshes) if m.name == mesh_name), -1)
+            if mi < 0 or len(mtimes) == 0:
+                continue
+            samplers.append(
+                {
+                    "input": b.add_accessor(mtimes, minmax=True, dtype=np.float32),
+                    "output": b.add_accessor(np.ascontiguousarray(mweights).reshape(-1), dtype=np.float32),
+                    "interpolation": "LINEAR",
+                }
+            )
+            channels.append({"sampler": len(samplers) - 1, "target": {"node": mesh_nodes[mi], "path": "weights"}})
         if not channels:
             continue
         g["animations"].append(

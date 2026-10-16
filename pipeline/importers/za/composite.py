@@ -240,7 +240,9 @@ def import_cc_model(
             textures.setdefault(key, tex)
         for mesh in pm.meshes:
             mesh.name = f"{part.id}__{mesh.name}"
-            accessory = all(rename.get(p.material, p.material).split("__", 1)[-1].startswith("obj") for p in mesh.primitives)
+            # obj* meshes (glasses, beards) default hidden; hair-part headwear (hat/cap/bandana) is not optional:
+            # its hairstyle is cut away under it, so hiding it leaves a bald crown.
+            accessory = part.group != "hrs" and all(rename.get(p.material, p.material).split("__", 1)[-1].startswith("obj") for p in mesh.primitives)
             mesh.visible = part.default and not accessory
             mesh.extras = {"group": part.group, "option": part.id, **({"accessory": True} if accessory else {})}
             for prim in mesh.primitives:

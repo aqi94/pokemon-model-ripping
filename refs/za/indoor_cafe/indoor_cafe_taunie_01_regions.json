@@ -1,0 +1,100 @@
+{
+ "schema": 1,
+ "slug": "indoor_cafe_taunie_01",
+ "scene": "indoor_cafe",
+ "model": "za/tr0001_00",
+ "clip": "speak02_loop",
+ "frame": 10,
+ "screenshot": "indoor_cafe_taunie_01.png",
+ "width": 1920,
+ "height": 1080,
+ "weight": 1,
+ "skip": false,
+ "subjectBox": [
+  600,
+  0,
+  1250,
+  790
+ ],
+ "subjectCut": "bottom",
+ "yaw": 0,
+ "regions": [
+  {
+   "name": "face_skin_1",
+   "box": [
+    930,
+    270,
+    960,
+    300
+   ],
+   "renderBox": [
+    930,
+    270,
+    960,
+    300
+   ],
+   "weight": 1.5,
+   "manual": true
+  },
+  {
+   "name": "face_skin_2",
+   "box": [
+    985,
+    410,
+    1015,
+    440
+   ],
+   "renderBox": [
+    985,
+    410,
+    1015,
+    440
+   ],
+   "weight": 1.5,
+   "manual": true
+  },
+  {
+   "name": "coat_chest_left",
+   "box": [
+    760,
+    640,
+    800,
+    700
+   ],
+   "renderBox": [
+    820,
+    640,
+    860,
+    680
+   ],
+   "manual": true
+  }
+ ],
+ "faceBox": [
+  850,
+  270,
+  1100,
+  520
+ ],
+ "excludeBoxes": [
+  [
+   600,
+   780,
+   1300,
+   1080
+  ]
+ ],
+ "camera": {
+  "fov": 35,
+  "position": [
+   -0.0486,
+   1.4855,
+   1.3469
+  ],
+  "target": [
+   -0.0486,
+   1.3252,
+   0.017
+  ]
+ }
+}

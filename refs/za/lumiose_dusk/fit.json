@@ -1,0 +1,70 @@
+{
+ "schema": 1,
+ "scene": "lumiose_dusk",
+ "profile": "dusk",
+ "locks": {},
+ "seeds": [
+  "sunset",
+  "day"
+ ],
+ "bestSeed": "sunset",
+ "passes": 3,
+ "seedLog": [
+  {
+   "seed": "sunset",
+   "start": 21.57,
+   "end": 9.1
+  },
+  {
+   "seed": "day",
+   "start": 14.1,
+   "end": 9.66
+  },
+  {
+   "seed": "restart 1",
+   "start": 10.05,
+   "end": 9.44
+  }
+ ],
+ "env": {
+  "ambient": 3.9,
+  "key": 4,
+  "azimuth": -23.333,
+  "elevation": 0,
+  "keyTemp": 3167,
+  "back": 4,
+  "backAzimuth": 246.667,
+  "backElevation": 0,
+  "backTemp": 6517,
+  "skyTemp": 12000,
+  "ground": "#ff84ac",
+  "warmth": 0,
+  "shadow": 0,
+  "rim": 1,
+  "detail": 0.5,
+  "exposure": 1.367,
+  "toneMapping": "agx",
+  "contrast": 1.083,
+  "saturation": 0.7,
+  "gi": 2
+ },
+ "score": {
+  "mean": 9.1,
+  "perShot": {
+   "lumiose_dusk_taunie_01": {
+    "dE": 9.1,
+    "weight": 1,
+    "regions": {
+     "skin_cheek": 10.6,
+     "shorts": 7.7,
+     "leg_skin": 9
+    }
+   }
+  }
+ },
+ "shots": [
+  "lumiose_dusk_taunie_01"
+ ],
+ "fittedAt": "2026-10-16T14:45:47.255Z",
+ "tool": "fit_scene.mjs"
+}

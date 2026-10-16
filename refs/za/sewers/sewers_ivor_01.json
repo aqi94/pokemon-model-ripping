@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "slug": "sewers_ivor_01",
+ "scene": "sewers",
+ "game": "za",
+ "source": "youtube",
+ "video": {
+  "id": "6qiJ2FnPSFM",
+  "url": "https://www.youtube.com/watch?v=6qiJ2FnPSFM",
+  "title": "POKEMON LEGENDS Z-A Gameplay Walkthrough FULL GAME (4K 60FPS) No Commentary",
+  "channel": "Shirrako",
+  "platform": "switch2",
+  "formatId": "315",
+  "width": 3840,
+  "height": 2160,
+  "fps": 60.0,
+  "vcodec": "vp9"
+ },
+ "timestamp": 30336.0,
+ "timecode": "08:25:36.000",
+ "grabbedAt": "2026-10-16T14:54:13Z",
+ "image": {
+  "file": "sewers_ivor_01.png",
+  "width": 1920,
+  "height": 1080,
+  "scaledFrom": [
+   3840,
+   2160
+  ]
+ },
+ "tags": {
+  "timeOfDay": "night",
+  "weather": "none",
+  "location": "Lumiose Sewers",
+  "indoor": true,
+  "lightType": "lamp"
+ },
+ "subject": {
+  "kind": "trainer",
+  "model": "tr0017_00",
+  "name": "Ivor",
+  "confidence": "high"
+ },
+ "clipGuess": "defaultwait01_loop",
+ "context": "cutscene",
+ "quality": {
+  "ui": false,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": ""
+}

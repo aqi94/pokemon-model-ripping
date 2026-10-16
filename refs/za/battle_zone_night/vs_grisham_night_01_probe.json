@@ -1,0 +1,139 @@
+{
+ "modelBox": [
+  240,
+  99,
+  804,
+  682
+ ],
+ "pixels": 121154,
+ "materials": {
+  "obj": {
+   "color": "#3f98f9",
+   "pixels": 6492,
+   "bbox": [
+    415,
+    180,
+    661,
+    272
+   ],
+   "centroid": [
+    537,
+    221
+   ]
+  },
+  "body": {
+   "color": "#c8f93f",
+   "pixels": 74914,
+   "bbox": [
+    240,
+    224,
+    804,
+    682
+   ],
+   "centroid": [
+    518,
+    563
+   ]
+  },
+  "body_skin": {
+   "color": "#f93fec",
+   "pixels": 58,
+   "bbox": [
+    483,
+    286,
+    585,
+    382
+   ],
+   "centroid": [
+    535,
+    319
+   ]
+  },
+  "obj_ring": {
+   "color": "#f9c23f",
+   "pixels": 1755,
+   "bbox": [
+    240,
+    360,
+    802,
+    681
+   ],
+   "centroid": [
+    514,
+    479
+   ]
+  },
+  "obj_stone": {
+   "color": "#8f3ff9",
+   "pixels": 539,
+   "bbox": [
+    415,
+    185,
+    661,
+    484
+   ],
+   "centroid": [
+    516,
+    445
+   ]
+  },
+  "eyebrow": {
+   "color": "#54f93f",
+   "pixels": 1636,
+   "bbox": [
+    439,
+    171,
+    634,
+    243
+   ],
+   "centroid": [
+    537,
+    207
+   ]
+  },
+  "face_skin": {
+   "color": "#f93fa0",
+   "pixels": 35394,
+   "bbox": [
+    385,
+    99,
+    710,
+    681
+   ],
+   "centroid": [
+    537,
+    216
+   ]
+  },
+  "r_eye": {
+   "color": "#f1f93f",
+   "pixels": 350,
+   "bbox": [
+    454,
+    225,
+    507,
+    234
+   ],
+   "centroid": [
+    479,
+    229
+   ]
+  },
+  "hairstyle": {
+   "color": "#e23ff9",
+   "pixels": 16,
+   "bbox": [
+    432,
+    184,
+    644,
+    265
+   ],
+   "centroid": [
+    613,
+    233
+   ]
+  }
+ },
+ "width": 1024,
+ "height": 682
+}

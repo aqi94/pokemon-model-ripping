@@ -1,0 +1,72 @@
+{
+ "schema": 1,
+ "scene": "indoor_cafe",
+ "profile": "indoor",
+ "locks": {
+  "rim": 0
+ },
+ "seeds": [
+  "indoorWindow",
+  "indoorWarm"
+ ],
+ "bestSeed": "indoorWindow",
+ "passes": 3,
+ "seedLog": [
+  {
+   "seed": "indoorWindow",
+   "start": 15.6,
+   "end": 6.04
+  },
+  {
+   "seed": "indoorWarm",
+   "start": 17.89,
+   "end": 9.25
+  },
+  {
+   "seed": "restart 1",
+   "start": 9.43,
+   "end": 6.19
+  }
+ ],
+ "env": {
+  "ambient": 1.617,
+  "key": 0.35,
+  "azimuth": 80,
+  "elevation": 5,
+  "keyTemp": 2817,
+  "back": 0.7,
+  "backAzimuth": 167,
+  "backElevation": 25,
+  "backTemp": 9000,
+  "skyTemp": 5500,
+  "ground": "#6b9373",
+  "warmth": 0,
+  "shadow": 0.45,
+  "rim": 0,
+  "detail": 0.5,
+  "exposure": 1.867,
+  "toneMapping": "agx",
+  "contrast": 1.417,
+  "saturation": 1,
+  "gi": 0
+ },
+ "score": {
+  "mean": 6.04,
+  "perShot": {
+   "indoor_cafe_taunie_01": {
+    "dE": 6.04,
+    "weight": 1,
+    "regions": {
+     "face_skin_1": 1.7,
+     "face_skin_2": 0.4,
+     "coat_chest_left": 21
+    }
+   }
+  }
+ },
+ "shots": [
+  "indoor_cafe_taunie_01"
+ ],
+ "fittedAt": "2026-10-16T14:48:12.629Z",
+ "tool": "fit_scene.mjs"
+}

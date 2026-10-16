@@ -11,7 +11,7 @@ from pipeline.common.gltf_writer import write_glb
 from pipeline.common.manifest import build_manifest
 from pipeline.common.model import Clip, Joint, Material, Mesh, Model, Primitive, Skeleton, TextureImage, Track
 from pipeline.importers.za import trinity as T
-from pipeline.importers.za.importer import FolderSource, bake_layers, collect_animations, import_model
+from pipeline.importers.za.importer import FolderSource, bake_layer_specular, bake_layers, collect_animations, import_model
 
 FIX = os.path.join(os.path.dirname(__file__), "fixtures", "pm0001_00_00")
 MID = "pm0001_00_00"
@@ -255,3 +255,48 @@ def test_layer_strength_placeholder_vs_real_alpha_zero():
     assert _layer_strength((1.0, 0.0, 0.0, 0.0)) == 0.0  # placeholder red
     assert _layer_strength((0.023, 0.972, 0.875, 0.0)) == 0.0  # placeholder cyan
     assert _layer_strength((0.2, 0.5, 0.4, 1.0)) == 1.0
+
+
+def _material(name: str, colors: dict) -> T.TrMaterial:
+    return T.TrMaterial(
+        name=name, shader="Hair", shader_flags={"EnableBaseColorMap": "True"},
+        textures=[T.TextureBinding("BaseColorMap", "hair_alb.bntx", 0)], samplers=[("repeat", "repeat")],
+        floats={}, colors=colors, ints={}, alpha_type="Opaque", cull=-1,
+    )
+
+
+def test_shadow_texture_carries_unbaked_base_color():
+    # No layer mask: BaseColor stays the glTF factor, so the shadow-side texture must be tinted
+    # by it too (the Game shader uses it instead of factor x map). Rika's hair: near-white strands,
+    # teal BaseColor; the untinted shadow bake made the hair grey-sage.
+    from pipeline.importers.za.importer import _convert_material, linear_to_srgb
+
+    alb = np.full((4, 4, 4), 255, np.uint8)
+    textures: dict = {}
+    bc = (0.0075, 0.171, 0.168, 1.0)
+    load = lambda f: alb.copy()  # noqa: E731
+    teal = _convert_material(_material("hairstyle", {"BaseColor": bc}), "", load, textures, {})
+    plain = _convert_material(_material("hairstyle_obj", {}), "", load, textures, {})
+    assert tuple(round(x, 4) for x in teal.base_color_factor[:3]) == tuple(round(x, 4) for x in bc[:3])
+    sh = textures[teal.extras["shadow_color"]].rgba[0, 0]
+    lit = linear_to_srgb(np.asarray(bc[:3], np.float32)) * 255
+    assert sh[1] > 3 * sh[0] and sh[2] > 3 * sh[0]  # teal, not grey
+    assert sh[1] < lit[1] and sh[2] < lit[2]  # darker than the lit colour
+    # Same albedo, different BaseColor -> separate shadow textures (no key collision).
+    assert teal.extras["shadow_color"] != plain.extras["shadow_color"]
+    assert textures[plain.extras["shadow_color"]].rgba[0, 0, 0] > 150
+
+
+def test_layer_specular_per_texel_offset():
+    # Courier outfit (ff_drs0002_00 body): base 0.14 / offset 0.4 on unpainted texels, layer 2
+    # (black trousers) 0.03 / offset 0. The trousers must keep their own offset in the mask.
+    floats = {"SpecularIntensity": 0.14, "SpecularOffset": 0.4, "SpecularContrast": 0.0,
+              "SpecularLayer2Intensity": 0.03, "SpecularLayer2Offset": 0.0, "SpecularLayer2Contrast": 0.0}
+    mask = np.zeros((2, 2, 4), np.uint8)
+    mask[0, :, 1] = 255  # top row: layer 2
+    rgba, peak, off, con = bake_layer_specular(floats, mask, None, [1.0] * 4)
+    assert peak == pytest.approx(0.14)
+    assert rgba[0, 0, 0] == round(0.03 / 0.14 * 255) and rgba[1, 0, 0] == 255
+    assert rgba[0, 0, 1] == 128 and abs(int(rgba[1, 0, 1]) - 0.7 * 255) <= 1  # offset 0 / 0.4 as (o+1)/2
+    assert (rgba[..., 2] == 0).all()
+    assert 0.0 < off < 0.4

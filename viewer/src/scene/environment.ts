@@ -3,7 +3,20 @@
 // ambient (the L1 approximation of a light probe), exposure + filmic tone
 // mapping, and named profiles that swap the whole set (post-process volumes).
 
-export type ToneMap = 'linear' | 'aces' | 'agx' | 'neutral';
+import { SV_PRESETS } from './svPresets';
+import { ZA_PRESETS } from './zaPresets';
+
+export type ToneMap = 'linear' | 'aces' | 'agx' | 'neutral' | 'hable';
+
+/** John Hable's piecewise filmic curve ("Filmic Worlds" user params); Game Freak's `PfxTonemapMode 2` stores exactly these. */
+export interface HableParams {
+  toeStrength: number;     // 0..1
+  toeLength: number;       // 0..1
+  shoulderStrength: number; // F-stops of extra white point, 0..1 in the UI space
+  shoulderLength: number;  // 0..1
+  shoulderAngle: number;   // 0..1
+  gamma: number;
+}
 
 export interface Environment {
   ambient: number;     // hemisphere intensity
@@ -26,6 +39,12 @@ export interface Environment {
   contrast: number;
   saturation: number;
   gi: number;          // ambient tint toward the material's shadow colours (x ShadowingGIGain)
+  // Optional explicit light colours (sRGB hex). When present they replace the Kelvin fields, which the
+  // game-data presets cannot express (a pink GI tint has no blackbody temperature). Moving a Kelvin slider clears them.
+  keyColor?: string;
+  skyColor?: string;
+  backColor?: string;
+  hable?: HableParams; // only read when toneMapping === 'hable'
 }
 
 /** Tuned against the VS screenshots (neutral white light, linear output). */
@@ -35,47 +54,40 @@ export const DEFAULT_ENV: Environment = {
   warmth: 0, shadow: 0.65, rim: 1, detail: 0.5, exposure: 1, toneMapping: 'linear', contrast: 1, saturation: 1, gi: 1,
 };
 
-export interface LightingPreset { id: string; label: string; env: Environment }
+/** Scarlet/Violet's master post-process curve (romfs/env/master/master.trlgt Global.Pfx*), the default when 'hable' is picked by hand. */
+export const DEFAULT_HABLE: HableParams = { toeStrength: 0.085, toeLength: 0.5, shoulderStrength: 0.9999, shoulderLength: 0.5, shoulderAngle: 0, gamma: 0.967 };
 
-const p = (id: string, label: string, e: Partial<Environment>): LightingPreset => ({ id, label, env: { ...DEFAULT_ENV, ...e } });
+/** `game` records which game's data a preset came from (provenance only; every preset is offered for every model). */
+export interface LightingPreset { id: string; label: string; env: Environment; game?: string }
+
+const p = (id: string, label: string, e: Partial<Environment>, game?: string): LightingPreset => ({ id, label, env: { ...DEFAULT_ENV, ...e }, game });
 
 // Temperatures are the standard reference values: sun 5500-6500 K, overcast
 // sky ~7000 K, incandescent / warm LED 2700-3000 K, fluorescent ~4300 K,
 // sodium street lamp ~2000 K, moonlight rendered ~4100 K at low exposure.
-// Only "Indoor, window" is calibrated against a screenshot
-// (samples/detective_handclap01_*, tools/match_lighting.mjs).
+// Calibrated entries say so in their comment; SV entries come from the game's own light rigs (svPresets.ts, generated).
 export const LIGHTING_PRESETS: LightingPreset[] = [
   p('studio', 'Studio (VS)', {}),
   // Fitted with tools/fit_lighting_refs.mjs to 15 BDSP trainers vs their Bulbapedia VS images (mean |dRGB| 41.7 -> 21.6, 5 held-out
   // trainers 49.8 -> 23.7): mostly exposure (the game is much brighter than Studio) plus a flatter, lower key. Linear output.
   p('bdspVs', 'BDSP VS render', { ambient: 1.84, azimuth: -32, elevation: 16, keyTemp: 6125, back: 0.1, skyTemp: 5900, shadow: 0.39, detail: 0.4,
-    exposure: 1.8, contrast: 0.9 }),
-  p('day', 'Day, street', { ambient: 2.2, key: 1.4, azimuth: -35, elevation: 55, keyTemp: 5800, skyTemp: 8000, ground: '#b5a890',
-    back: 0.4, backTemp: 8000, rim: 0.5, toneMapping: 'agx', exposure: 1.6, contrast: 1.3 }),
-  p('overcast', 'Overcast', { ambient: 3.0, key: 0.3, elevation: 60, keyTemp: 7000, skyTemp: 7000, ground: '#a8a8a4',
-    rim: 0.3, shadow: 0.4, toneMapping: 'agx', exposure: 1.7, contrast: 1.25 }),
-  p('sunset', 'Sunset', { ambient: 1.8, key: 1.6, azimuth: -60, elevation: 8, keyTemp: 3000, skyTemp: 9000, ground: '#8a6a70',
-    back: 0.8, backAzimuth: 150, backElevation: 10, backTemp: 2600, rim: 0.6, toneMapping: 'agx', exposure: 1.6, contrast: 1.3 }),
-  // Fitted to samples/VSGrisham_advent_loop_night* (Grisham tr0009_00, mean dE 8.4 vs 15.9 for Studio and 20.5 for the
-  // old guess): bright artificial night = strong cool ambient (sky 12000 K), cool back light from behind, modest high
-  // key, light rim; ACES. The shirt shadow side stays too bright (pose differs from the screenshot).
-  p('night', 'Night, battle zone', { ambient: 3.76, key: 0.6, azimuth: -37, elevation: 56, keyTemp: 6600, skyTemp: 12000, ground: '#e06941',
-    back: 2.1, backAzimuth: 122, backElevation: 29, backTemp: 12000, shadow: 0.72, rim: 0.16, gi: 1.09,
-    toneMapping: 'aces', exposure: 1.22, contrast: 1.22, saturation: 0.85 }),
-  // Fitted to samples/detective_handclap01_* (mean dE 4.9 vs 13.4 for Studio): light on her front is the room's
-  // warm bounce, not a key; the window behind her is a cool back light; no rim glow; AgX + contrast.
-  p('indoorWindow', 'Indoor, window behind', { ambient: 2.75, key: 0.25, azimuth: 120, elevation: 0, keyTemp: 5900, skyTemp: 6000, ground: '#af8680',
-    back: 0.7, backAzimuth: 167, backElevation: 25, backTemp: 9000, shadow: 0.35, rim: 0, gi: 0.1,
-    toneMapping: 'agx', exposure: 1.7, contrast: 1.35 }),
-  p('indoorWarm', 'Indoor, lamp-lit', { ambient: 2.4, key: 0.6, azimuth: -40, elevation: 60, keyTemp: 2900, skyTemp: 3800, ground: '#a08068',
-    rim: 0.2, toneMapping: 'agx', exposure: 1.7, contrast: 1.3 }),
-  p('indoorCool', 'Indoor, fluorescent', { ambient: 2.8, key: 0.6, azimuth: 0, elevation: 75, keyTemp: 4300, skyTemp: 5000, ground: '#b8bcb8',
-    rim: 0.3, shadow: 0.4, toneMapping: 'agx', exposure: 1.6, contrast: 1.25 }),
+    exposure: 1.8, contrast: 0.9 }, 'bdsp'),
+  // Z-A scene presets fitted to gameplay frames (refs/za/<scene>/, tools/fit_scene.mjs, generated zaPresets.ts).
+  ...ZA_PRESETS,
+  ...SV_PRESETS,
+  // The hand-fitted 'night' (Grisham VS, dE 8.4) and 'indoorWindow' (detective, dE 4.9) presets became
+  // za_battle_zone_night and za_indoor_hotel in zaPresets.ts (same screenshots, refitted by tools/fit_scene.mjs).
 ];
+// The old uncalibrated guesses (day / overcast / sunset / indoorWarm / indoorCool) now live in
+// tools/lightrefs/seed_envs.json as fit seeds only.
+
+const same = (a: unknown, b: unknown) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
 
 export function matchPreset(env: Environment): string | null {
+  const keys = (e: Environment) => (Object.keys(e) as (keyof Environment)[]).filter((k) => e[k] !== undefined);
   for (const pr of LIGHTING_PRESETS) {
-    if ((Object.keys(pr.env) as (keyof Environment)[]).every((k) => pr.env[k] === env[k])) return pr.id;
+    const ks = new Set([...keys(pr.env), ...keys(env)]);
+    if ([...ks].every((k) => same(pr.env[k], env[k]))) return pr.id;
   }
   return null;
 }

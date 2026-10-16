@@ -1,0 +1,104 @@
+{
+ "schema": 1,
+ "slug": "sewers_ivor_01",
+ "scene": "sewers",
+ "model": "za/tr0017_00",
+ "clip": "defaultwait01_loop",
+ "frame": 0,
+ "screenshot": "sewers_ivor_01.png",
+ "width": 1920,
+ "height": 1080,
+ "camera": {
+  "fov": 30,
+  "position": [
+   1.0279,
+   1.3664,
+   4.8702
+  ],
+  "target": [
+   -0.6614,
+   1.2168,
+   0.2289
+  ]
+ },
+ "subjectBox": [
+  1040,
+  70,
+  1465,
+  1050
+ ],
+ "yaw": 20,
+ "weight": 1,
+ "skip": false,
+ "regions": [
+  {
+   "name": "hair_crown",
+   "box": [
+    1200,
+    175,
+    1265,
+    205
+   ],
+   "renderBox": [
+    1200,
+    175,
+    1265,
+    205
+   ],
+   "manual": true,
+   "weight": 1.0
+  },
+  {
+   "name": "hair_fringe",
+   "box": [
+    1200,
+    215,
+    1265,
+    240
+   ],
+   "renderBox": [
+    1200,
+    215,
+    1265,
+    240
+   ],
+   "manual": true,
+   "weight": 1.0
+  },
+  {
+   "name": "skin_forehead_cheek",
+   "box": [
+    1200,
+    270,
+    1260,
+    300
+   ],
+   "renderBox": [
+    1200,
+    270,
+    1260,
+    300
+   ],
+   "manual": true,
+   "weight": 1.5
+  },
+  {
+   "name": "skin_chin",
+   "box": [
+    1215,
+    320,
+    1255,
+    345
+   ],
+   "renderBox": [
+    1215,
+    320,
+    1255,
+    345
+   ],
+   "manual": true,
+   "weight": 1.5
+  }
+ ],
+ "notes": "Outfit differs from the viewer default (red sash and gloves vs orange trim): only skin and hair boxes are kept; hand-placed."
+}

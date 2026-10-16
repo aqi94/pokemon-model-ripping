@@ -1,0 +1,39 @@
+{
+ "schema": 1,
+ "slug": "hotel_detective_handclap_01",
+ "scene": "indoor_hotel",
+ "game": "za",
+ "source": "manual",
+ "video": null,
+ "timestamp": 0.0,
+ "timecode": "00:00:00.000",
+ "grabbedAt": "2026-10-16T14:12:38Z",
+ "image": {
+  "file": "hotel_detective_handclap_01.png",
+  "width": 651,
+  "height": 635,
+  "scaledFrom": null
+ },
+ "tags": {
+  "timeOfDay": "day",
+  "weather": "none",
+  "location": "Hotel Z room",
+  "indoor": true,
+  "lightType": "window"
+ },
+ "subject": {
+  "kind": "trainer",
+  "model": "tr0013_00",
+  "name": "Detective",
+  "confidence": "high"
+ },
+ "clipGuess": "handclap01_loop",
+ "context": "cutscene",
+ "quality": {
+  "ui": false,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": "migrated from samples/ (user-supplied screenshot)"
+}

@@ -1,0 +1,69 @@
+{
+ "schema": 1,
+ "scene": "indoor_lab",
+ "profile": "indoor",
+ "locks": {
+  "rim": 0
+ },
+ "seeds": [
+  "indoorCool"
+ ],
+ "bestSeed": "restart 1",
+ "passes": 3,
+ "seedLog": [
+  {
+   "seed": "indoorCool",
+   "start": 8.5,
+   "end": 4.96
+  },
+  {
+   "seed": "restart 1",
+   "start": 7.22,
+   "end": 4.74
+  }
+ ],
+ "env": {
+  "ambient": 1.633,
+  "key": 0.667,
+  "azimuth": 33.333,
+  "elevation": 60,
+  "keyTemp": 4300,
+  "back": 0,
+  "backAzimuth": 90,
+  "backElevation": 25,
+  "backTemp": 6500,
+  "skyTemp": 4917,
+  "ground": "#c0c9b8",
+  "warmth": 0,
+  "shadow": 0.55,
+  "rim": 0,
+  "detail": 0.5,
+  "exposure": 1.867,
+  "toneMapping": "agx",
+  "contrast": 1.5,
+  "saturation": 0.817,
+  "gi": 1.3
+ },
+ "score": {
+  "mean": 4.74,
+  "perShot": {
+   "indoor_lab_mable_01": {
+    "dE": 4.74,
+    "weight": 1,
+    "regions": {
+     "hairstyle_1": 3.6,
+     "hairstyle_2": 3.5,
+     "face_skin_1": 3.9,
+     "face_skin_2": 0.9,
+     "obj_1": 3.2,
+     "obj_2": 15.8
+    }
+   }
+  }
+ },
+ "shots": [
+  "indoor_lab_mable_01"
+ ],
+ "fittedAt": "2026-10-16T14:50:39.066Z",
+ "tool": "fit_scene.mjs"
+}

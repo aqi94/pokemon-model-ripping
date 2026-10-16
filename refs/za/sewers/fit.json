@@ -1,0 +1,74 @@
+{
+ "schema": 1,
+ "scene": "sewers",
+ "profile": "indoor",
+ "locks": {
+  "rim": 0,
+  "exposure": 2.2
+ },
+ "seeds": [
+  "indoorCool",
+  "indoorWarm"
+ ],
+ "bestSeed": "restart 1",
+ "passes": 3,
+ "seedLog": [
+  {
+   "seed": "indoorCool",
+   "start": 32.68,
+   "end": 7.74
+  },
+  {
+   "seed": "indoorWarm",
+   "start": 17.51,
+   "end": 5.62
+  },
+  {
+   "seed": "restart 1",
+   "start": 6.3,
+   "end": 4.49
+  }
+ ],
+ "env": {
+  "ambient": 0.533,
+  "key": 0.533,
+  "azimuth": -26.667,
+  "elevation": 60,
+  "keyTemp": 2900,
+  "back": 0.467,
+  "backAzimuth": 90,
+  "backElevation": 0,
+  "backTemp": 12000,
+  "skyTemp": 2883,
+  "ground": "#59c059",
+  "warmth": 0,
+  "shadow": 0.867,
+  "rim": 0,
+  "detail": 0.5,
+  "exposure": 2.2,
+  "toneMapping": "agx",
+  "contrast": 1.167,
+  "saturation": 1.05,
+  "gi": 0
+ },
+ "score": {
+  "mean": 4.49,
+  "perShot": {
+   "sewers_ivor_01": {
+    "dE": 4.49,
+    "weight": 1,
+    "regions": {
+     "hair_crown": 1,
+     "hair_fringe": 9.4,
+     "skin_forehead_cheek": 1.3,
+     "skin_chin": 6.8
+    }
+   }
+  }
+ },
+ "shots": [
+  "sewers_ivor_01"
+ ],
+ "fittedAt": "2026-10-16T14:57:19.965Z",
+ "tool": "fit_scene.mjs"
+}

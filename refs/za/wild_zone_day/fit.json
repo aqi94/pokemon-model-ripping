@@ -1,0 +1,75 @@
+{
+ "schema": 1,
+ "scene": "wild_zone_day",
+ "profile": "outdoor",
+ "locks": {},
+ "seeds": [
+  "studio",
+  "day"
+ ],
+ "bestSeed": "restart 1",
+ "passes": 3,
+ "seedLog": [
+  {
+   "seed": "studio",
+   "start": 16.83,
+   "end": 9.7
+  },
+  {
+   "seed": "day",
+   "start": 11.87,
+   "end": 9.29
+  },
+  {
+   "seed": "restart 1",
+   "start": 14.9,
+   "end": 8.98
+  }
+ ],
+ "env": {
+  "ambient": 2.2,
+  "key": 1.233,
+  "azimuth": 11.667,
+  "elevation": 25,
+  "keyTemp": 8000,
+  "back": 0,
+  "backAzimuth": 90,
+  "backElevation": 25,
+  "backTemp": 8000,
+  "skyTemp": 12000,
+  "ground": "#ffb059",
+  "warmth": 0,
+  "shadow": 1,
+  "rim": 0,
+  "detail": 0.5,
+  "exposure": 1.55,
+  "toneMapping": "agx",
+  "contrast": 1.375,
+  "saturation": 0.867,
+  "gi": 0
+ },
+ "score": {
+  "mean": 8.98,
+  "perShot": {
+   "wild_zone_day_taunie_01": {
+    "dE": 8.98,
+    "weight": 1,
+    "regions": {
+     "face_cheek": 7.1,
+     "jacket_front": 5,
+     "top_magenta": 20.5,
+     "shorts_white": 12.1,
+     "leg_skin": 8.5,
+     "shoe_navy": 13.7,
+     "body_2": 3.2,
+     "face_skin_1": 5
+    }
+   }
+  }
+ },
+ "shots": [
+  "wild_zone_day_taunie_01"
+ ],
+ "fittedAt": "2026-10-16T14:49:21.729Z",
+ "tool": "fit_scene.mjs"
+}

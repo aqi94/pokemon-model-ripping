@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "slug": "lumiose_dusk_taunie_01",
+ "scene": "lumiose_dusk",
+ "game": "za",
+ "source": "youtube",
+ "video": {
+  "id": "6qiJ2FnPSFM",
+  "url": "https://www.youtube.com/watch?v=6qiJ2FnPSFM",
+  "title": "POKEMON LEGENDS Z-A Gameplay Walkthrough FULL GAME (4K 60FPS) No Commentary",
+  "channel": "Shirrako",
+  "platform": "switch2",
+  "formatId": "315",
+  "width": 3840,
+  "height": 2160,
+  "fps": 60.0,
+  "vcodec": "vp9"
+ },
+ "timestamp": 43497.5,
+ "timecode": "12:04:57.500",
+ "grabbedAt": "2026-10-16T14:40:19Z",
+ "image": {
+  "file": "lumiose_dusk_taunie_01.png",
+  "width": 1920,
+  "height": 1080,
+  "scaledFrom": [
+   3840,
+   2160
+  ]
+ },
+ "tags": {
+  "timeOfDay": "dusk",
+  "weather": "sunny",
+  "location": "Lumiose, outdoor cutscene, warm sunset",
+  "indoor": false,
+  "lightType": "sun"
+ },
+ "subject": {
+  "kind": "trainer",
+  "model": "tr0001_00",
+  "name": "Taunie",
+  "confidence": "high"
+ },
+ "clipGuess": "speak01_loop",
+ "context": "cutscene",
+ "quality": {
+  "ui": false,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": ""
+}

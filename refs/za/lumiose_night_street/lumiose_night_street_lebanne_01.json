@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "slug": "lumiose_night_street_lebanne_01",
+ "scene": "lumiose_night_street",
+ "game": "za",
+ "source": "youtube",
+ "video": {
+  "id": "6qiJ2FnPSFM",
+  "url": "https://www.youtube.com/watch?v=6qiJ2FnPSFM",
+  "title": "POKEMON LEGENDS Z-A Gameplay Walkthrough FULL GAME (4K 60FPS) No Commentary",
+  "channel": "Shirrako",
+  "platform": "switch2",
+  "formatId": "315",
+  "width": 3840,
+  "height": 2160,
+  "fps": 60.0,
+  "vcodec": "vp9"
+ },
+ "timestamp": 58105.0,
+ "timecode": "16:08:25.000",
+ "grabbedAt": "2026-10-16T14:38:32Z",
+ "image": {
+  "file": "lumiose_night_street_lebanne_01.png",
+  "width": 1920,
+  "height": 1080,
+  "scaledFrom": [
+   3840,
+   2160
+  ]
+ },
+ "tags": {
+  "timeOfDay": "night",
+  "weather": "none",
+  "location": "Lumiose street, Mega-tower purple light",
+  "indoor": false,
+  "lightType": "street+neon (Mega-tower purple cast)"
+ },
+ "subject": {
+  "kind": "trainer",
+  "model": "tr0020_00",
+  "name": "Lebanne",
+  "confidence": "high"
+ },
+ "clipGuess": "speak01_loop",
+ "context": "cutscene",
+ "quality": {
+  "ui": true,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": "This shot is the Mega-tower purple NIGHT VARIANT (not lamp-lit street). Lebanne identified (teal hair, maid frills). The lamp-lit fountain square at 8:03:50 had no identifiable subject."
+}

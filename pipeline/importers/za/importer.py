@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import math
 import os
 import posixpath
@@ -105,6 +106,7 @@ class AnimationFile:
     data: bytes
     config: bytes | None = None  # companion .tracm (visibility / material tracks)
     group: str | None = None  # alternate animation set label; None = derive from the index
+    extra: bytes | None = None  # second .tranm whose bones this clip lacks (rival: body from motion_cc_base/rv, face/hair from motion_cc_ir)
 
 
 SKIN_MATERIALS = ("body_skin", "face_skin")
@@ -292,6 +294,9 @@ def import_model(
         except Exception as e:  # noqa: BLE001 - keep going on a bad clip
             warnings.append(f"skipped animation {af.name}: {e}")
             continue
+        if af.extra:
+            have = {t.bone for t in tr.tracks}
+            tr.tracks += [t for t in T.parse_tranm(af.extra).tracks if t.bone not in have]
         clips.append(_convert_clip(tr, af))
     clips.sort(key=lambda c: (c.index, c.name))
     # Rest visibility: a mesh that any clip toggles starts hidden, unless the
@@ -518,8 +523,10 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
         scales = [tm.floats.get(f"LayerMaskScale{i}", 1.0) * layer_enable[i - 1] for i in range(1, 5)]
         multiply = flags.get("BaseColorMultiply", "True") != "False"
         bc = tuple(float(base_factor[k]) for k in range(3))
-        layered = lym is not None and all(c is not None for c in layer_colors) and any(e > 0 for e in layer_enable)
+        # SV materials often define only layers 1..3 (Geeta's face, Ryme's skin): missing layers are disabled, not "no bake".
+        layered = lym is not None and any(e > 0 for e in layer_enable)
         if layered:
+            layer_colors = [c if c is not None else (1.0, 1.0, 1.0) for c in layer_colors]
             # BaseColor goes into the texture (see bake_layers), the glTF factor becomes 1.
             baked = bake_layers(alb, lym, layer_colors, scales, multiply, bc if multiply else (1.0, 1.0, 1.0))
         # Key on albedo + mask so materials sharing a placeholder albedo
@@ -529,7 +536,14 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
         # vs ear tips), and identical colour sets (left/right eye) still dedupe.
         import hashlib
 
-        sig = hashlib.sha1(repr((layer_colors, scales if lym is not None else None, multiply if lym is not None else None, bc if layered else None)).encode()).hexdigest()[:8]
+        # When the layers are not baked the glTF factor keeps BaseColor, and the shadow-side
+        # texture must carry that same tint: the viewer's Game shader uses the shadow texture
+        # *instead of* diffuseColor (factor x map), so an untinted shadow texture renders the
+        # raw near-white albedo on the shadow/ambient side (Rika's teal hair went grey-sage,
+        # ZA bare skin went pale). Colour-table skin tones replace the factor, so no tint there.
+        baked_bc = layered and multiply
+        shadow_bc = (1.0, 1.0, 1.0) if (baked_bc or "skin_tones" in mat.extras) else bc
+        sig = hashlib.sha1(repr((layer_colors, scales if lym is not None else None, multiply if lym is not None else None, bc if layered else None, shadow_bc)).encode()).hexdigest()[:8]
         key = f"{stem(alb_file)}_{stem(lym_file)}_{sig}{'_' + tag if tag else ''}_baked" if baked is not alb else stem(alb_file)
         mat.base_color = register(key, baked, True, mat.extras["mirror"])
         if baked is not alb:
@@ -559,9 +573,11 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
             shadow_palette.append(tuple(float(base_i[k]) * tint[k] for k in range(3)))
             shadow_scales.append(tm.floats.get(f"LayerMaskScale{i + 1}", 1.0) * (1.0 if (shl is not None or enabled) else 0.0))
         if lym is not None and any(sc > 0 for sc in shadow_scales):
-            shadow = bake_layers(alb, lym, shadow_palette, shadow_scales, multiply, bc if (layered and multiply) else (1.0, 1.0, 1.0))
+            shadow = bake_layers(alb, lym, shadow_palette, shadow_scales, multiply, bc if baked_bc else (1.0, 1.0, 1.0))
+            if shadow_bc != (1.0, 1.0, 1.0):
+                shadow = tint_linear(shadow, shadow_bc)
         else:
-            tint = np.asarray([1.0 + (float(sh_base[k]) - 1.0) * strength for k in range(3)], np.float32)
+            tint = np.asarray([(1.0 + (float(sh_base[k]) - 1.0) * strength) * float(shadow_bc[k]) for k in range(3)], np.float32)
             lin = srgb_to_linear(alb[..., :3].astype(np.float32) / 255.0) * tint[None, None, :]
             shadow = np.empty_like(alb)
             shadow[..., :3] = np.clip(linear_to_srgb(lin) * 255.0 + 0.5, 0, 255).astype(np.uint8)
@@ -572,6 +588,7 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
             shadow = darken_saturate(shadow, 0.78, 1.15)  # no per-layer shadow data: generic darker shade
         mat.extras["shadow_color"] = register(f"{stem(alb_file)}_{sig}{'_' + tag if tag else ''}_shadow", shadow, True, mat.extras["mirror"])
     baked_bc = alb is not None and layered and multiply
+    # (shadow texture: see shadow_bc above; it carries the factor whenever this keeps BaseColor)
     # Skin tone comes from the colour table; the body material's authored BaseColor tint would
     # make it redder than the face, so it is dropped for modular skin.
     mat.base_color_factor = (1.0, 1.0, 1.0, 1.0) if (baked_bc or "skin_tones" in mat.extras) else (
@@ -665,6 +682,7 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
         "metallic": float(f.get("Metallic", 0.0)),
         "giGain": float(f.get("ShadowingGIGain", 0.5)),
     }
+    spec_mask = None
     # Specular / rim masks (single-channel). Shared white/black placeholders
     # are skipped; the viewer falls back to 1.0 (white) when absent.
     for slot, key in (("SpecularMaskMap", "specular_mask"), ("RimLightMaskMap", "rim_mask")):
@@ -673,7 +691,74 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
             mt = load_tex(mf)
             if mt is not None and not _is_flat(mt):
                 mat.extras[key] = register(stem(mf), mt, False, mat.extras["mirror"])
+                if key == "specular_mask":
+                    spec_mask = mt
+    # Per-layer specular: the game evaluates SpecularLayerN* through the layer mask like the colours
+    # (Lebanne's skin is layer 1 = 0.0 while the base 0.74 only covers unpainted texels).
+    if lym is not None:
+        lscales = [tm.floats.get(f"LayerMaskScale{i}", 1.0) * _layer_strength(tm.colors.get(f"BaseColorLayer{i}")) for i in range(1, 5)]
+        ls = bake_layer_specular(tm.floats, lym, spec_mask, lscales)
+        if ls is not None:
+            mask_rgba, inten, off, con = ls
+            sh = mat.extras["shading"]
+            sh["specularIntensity"], sh["specularOffset"], sh["specularContrast"] = inten, off, con
+            if mask_rgba is None:
+                mat.extras.pop("specular_mask", None)
+            else:
+                sh["specularMaskChannels"] = True  # mask G/B = per-texel offset/contrast
+                sig = hashlib.sha1(repr((inten, off, con, lscales)).encode()).hexdigest()[:8]
+                mat.extras["specular_mask"] = register(f"{stem(lym_file)}_{stem(_tex_file(tm, 'SpecularMaskMap') or '')}_{sig}_spec", mask_rgba, False, mat.extras["mirror"])
     return mat
+
+
+def bake_layer_specular(floats: dict, mask: np.ndarray, spec_mask: np.ndarray | None, scales: list[float]):
+    """Compose SpecularLayerN{Intensity,Offset,Contrast} over the base values with the layer mask.
+
+    Layers lerp over what is below, in order, exactly like the colour layers. Returns None when no
+    layer differs from the base (nothing to do), else (mask rgba or None, intensity, offset, contrast):
+    the per-texel intensity is normalised into the specular mask R, offset is stored in G as
+    (offset + 1) / 2 and contrast in B as contrast / 2 (the shader saturates contrast * 0.5). The
+    returned offset/contrast are intensity-weighted means for consumers that only read R. One mean
+    offset was not enough: the Courier outfit's base 0.4 offset widened the black trousers'
+    highlight although their layer offset is 0.
+    """
+    base = (float(floats.get("SpecularIntensity", 0.04)), float(floats.get("SpecularOffset", 0.0)), float(floats.get("SpecularContrast", 1.0)))
+    layers = []
+    for i in range(1, 5):
+        inten = floats.get(f"SpecularLayer{i}Intensity")
+        layers.append(None if inten is None else (float(inten), float(floats.get(f"SpecularLayer{i}Offset", base[1])), float(floats.get(f"SpecularLayer{i}Contrast", base[2]))))
+    if not any(l is not None and abs(l[0] - base[0]) > 0.02 for l in layers):
+        return None
+    h, w = mask.shape[:2]
+    if spec_mask is not None:
+        h, w = max(h, spec_mask.shape[0]), max(w, spec_mask.shape[1])
+        if spec_mask.shape[:2] != (h, w):
+            spec_mask = resize_rgba(spec_mask, w, h)
+    if mask.shape[:2] != (h, w):
+        mask = resize_rgba(mask, w, h)
+    weights = np.clip(mask.astype(np.float32) / 255.0 * np.asarray(scales, np.float32)[None, None, :], 0.0, 1.0)
+    eff = np.stack([np.full((h, w), v, np.float32) for v in base])  # intensity, offset, contrast
+    for i, l in enumerate(layers):
+        if l is None:
+            continue
+        wt = weights[..., i]
+        for k in range(3):
+            eff[k] += (l[k] - eff[k]) * wt
+    inten = eff[0]
+    if spec_mask is not None:
+        inten = inten * (spec_mask[..., 0].astype(np.float32) / 255.0)
+    peak = float(inten.max())
+    if peak <= 1e-4:
+        return None, 0.0, base[1], base[2]
+    tot = float(eff[0].sum()) or 1.0
+    off = float((eff[1] * eff[0]).sum() / tot)
+    con = float((eff[2] * eff[0]).sum() / tot)
+    rgba = np.empty((h, w, 4), np.uint8)
+    rgba[..., 0] = np.clip(inten / peak * 255.0 + 0.5, 0, 255)
+    rgba[..., 1] = np.clip((eff[1] + 1.0) * 0.5 * 255.0 + 0.5, 0, 255)
+    rgba[..., 2] = np.clip(eff[2] * 0.5 * 255.0 + 0.5, 0, 255)
+    rgba[..., 3] = 255
+    return rgba, peak, off, con
 
 
 def _is_flat(rgba: np.ndarray) -> bool:
@@ -799,6 +884,15 @@ def apply_color_table(albedo: np.ndarray, mask: np.ndarray, table: np.ndarray, d
         img[..., 3] = albedo[..., 3]
         out.append(img)
     return out[0], out[1]
+
+
+def tint_linear(rgba: np.ndarray, tint: tuple[float, float, float]) -> np.ndarray:
+    """Multiply an sRGB-encoded image by a linear-light colour factor (what the glTF factor does)."""
+    lin = srgb_to_linear(rgba[..., :3].astype(np.float32) / 255.0) * np.asarray(tint, np.float32)[None, None, :]
+    out = np.empty_like(rgba)
+    out[..., :3] = np.clip(linear_to_srgb(lin) * 255.0 + 0.5, 0, 255).astype(np.uint8)
+    out[..., 3] = rgba[..., 3]
+    return out
 
 
 def darken_saturate(rgba: np.ndarray, value: float, saturation: float) -> np.ndarray:

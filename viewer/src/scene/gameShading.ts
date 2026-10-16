@@ -5,6 +5,8 @@ export interface ShadingParams {
   rimIntensity: number; rimOffset: number; rimContrast: number; specularIntensity: number;
   occlusionStrength: number; normalHeight: number; unlit: boolean;
   specularOffset: number; specularContrast: number; backRimIntensity: number; hairSpecular: boolean;
+  /** specular mask G/B carry per-texel offset ((o+1)/2) and contrast (c/2); R is the intensity. */
+  specularMaskChannels: boolean;
   fresnel: boolean; fresnelIntensity: number; roughness: number; metallic: number; giGain: number;
 }
 
@@ -14,7 +16,7 @@ const DEFAULTS: ShadingParams = {
   halfLambertBias: 0.5, shadowStrength: 0.8, shadowColor: [0.6, 0.6, 0.6], shadowShift: 0,
   rimIntensity: 0, rimOffset: 0, rimContrast: 1, specularIntensity: 0.04,
   occlusionStrength: 1, normalHeight: 1, unlit: false,
-  specularOffset: 0, specularContrast: 1, backRimIntensity: 0, hairSpecular: false,
+  specularOffset: 0, specularContrast: 1, backRimIntensity: 0, hairSpecular: false, specularMaskChannels: false,
   fresnel: false, fresnelIntensity: 0, roughness: 1, metallic: 0, giGain: 0.5,
 };
 
@@ -74,13 +76,19 @@ ${head}`);
   f2 = f2.replace(c, `float gNV = saturate( dot( geometryNormal, geometryViewDir ) );
 	float gRimM = 1.0;
 	float gSpecM = 1.0;
+	vec2 gSpecOC = uSpecP.yz;
 	#ifdef USE_MAP
 		gRimM = mix( 1.0, texture2D( uRimTex, vMapUv ).r, step( 0.5, uHasRimTex ) );
-		gSpecM = mix( 1.0, texture2D( uSpecTex, vMapUv ).r, step( 0.5, uHasSpecTex ) );
+		vec3 gSpecT = texture2D( uSpecTex, vMapUv ).rgb;
+		gSpecM = mix( 1.0, gSpecT.r, step( 0.5, uHasSpecTex ) );
+		if ( uHasSpecTex > 1.5 ) gSpecOC = vec2( gSpecT.g * 2.0 - 1.0, gSpecT.b * 2.0 );
 	#endif
-	float rimF = gRimM * uRim.x * uRimScale * pow( saturate( 1.0 - gNV + uRim.y * 0.5 ), max( uRim.z, 1.0 ) ) * 0.25;
-	float gNH = saturate( dot( geometryNormal, normalize( directLight.direction + geometryViewDir ) ) + uSpecP.y * 0.5 );
-	float specF = gSpecM * uSpec * pow( gNH, mix( 96.0, 16.0, saturate( uSpecP.z * 0.5 ) ) );
+	// Rim is tinted by the albedo: added as white it turned a red Poké Ball pink and dark hair grey.
+	vec3 rimF = material.diffuseColor * ( gRimM * uRim.x * uRimScale * pow( saturate( 1.0 - gNV + uRim.y * 0.5 ), max( uRim.z, 1.0 ) ) * 0.25 );
+	// SpecularOffset widens the lobe (lower exponent). Adding it to N.H before the power clipped every texel within
+	// ~35 deg of the half vector to full intensity: a flat glossy cap over the whole Poké Ball top.
+	float gNH = saturate( dot( geometryNormal, normalize( directLight.direction + geometryViewDir ) ) );
+	float specF = gSpecM * uSpec * pow( gNH, mix( 96.0, 16.0, saturate( gSpecOC.y * 0.5 ) ) * ( 1.0 - 0.75 * clamp( gSpecOC.x, -1.0, 1.0 ) ) );
 	if ( uSpecP.x > 0.5 ) specF = gSpecM * max( uSpec, 0.2 ) * pow( gNH, 24.0 ) * 1.5;
 	if ( uFres.x > 0.5 ) specF += 0.5 * uFres.z * pow( gNH, 96.0 );
 	reflectedLight.directSpecular += directLight.color * rimF + directLight.color * specF * lit;`);
@@ -91,7 +99,7 @@ ${head}`);
   f2 = f2.replace(e, `vec3 gColI = mix( material.diffuseColor, gameShadowCol( material.diffuseColor ), saturate( max( ( 1.0 - gGameLit ) * uShadowAmount, uGI ) ) );
 	reflectedLight.indirectDiffuse += irradiance * gColI * RECIPROCAL_PI;
 	float gNV2 = saturate( dot( geometryNormal, geometryViewDir ) );
-	reflectedLight.indirectDiffuse += vec3( uBackRim * pow( 1.0 - gNV2, 3.0 ) * uRimScale );
+	reflectedLight.indirectDiffuse += material.diffuseColor * ( uBackRim * pow( 1.0 - gNV2, 3.0 ) * uRimScale );
 	if ( uFres.x > 0.5 ) reflectedLight.indirectDiffuse += vec3( uFres.y * pow( 1.0 - gNV2, 2.5 ) );`);
   f = f.replace(inc, f2);
   const dith = '#include <dithering_fragment>';
@@ -187,7 +195,7 @@ export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail:
   u.uContrast.value = env.contrast ?? 1;
   u.uShadowTex.value = tex.shadow;
   u.uHasShadowTex.value = tex.shadow ? 1 : 0;
-  u.uSpecTex.value = tex.spec; u.uHasSpecTex.value = tex.spec ? 1 : 0;
+  u.uSpecTex.value = tex.spec; u.uHasSpecTex.value = tex.spec ? (p.specularMaskChannels ? 2 : 1) : 0;
   u.uRimTex.value = tex.rim; u.uHasRimTex.value = tex.rim ? 1 : 0;
   (u.uSpecP.value as THREE.Vector3).set(p.hairSpecular ? 1 : 0, p.specularOffset, p.specularContrast);
   u.uBackRim.value = p.backRimIntensity;

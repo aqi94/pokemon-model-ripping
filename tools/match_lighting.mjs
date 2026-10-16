@@ -1,6 +1,6 @@
 // Compare (and optionally fit) a viewer lighting environment against an in-game screenshot.
 //
-//   node tools/match_lighting.mjs samples/detective_handclap01_regions.json [--preset indoorWindow] [--env env.json]
+//   node tools/match_lighting.mjs samples/detective_handclap01_regions.json [--preset za_indoor_hotel] [--env env.json]
 //        [--out render.png] [--fit] [--url http://localhost:5173]
 //
 // Needs the viewer dev server running (cd viewer && npm run dev). The regions file names the model, clip, frame,

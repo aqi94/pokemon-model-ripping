@@ -1,0 +1,75 @@
+{
+ "schema": 1,
+ "scene": "battle_zone_night",
+ "profile": "night",
+ "locks": {},
+ "seeds": [
+  "night",
+  "studio"
+ ],
+ "bestSeed": "night",
+ "passes": 2,
+ "seedLog": [
+  {
+   "seed": "night",
+   "start": 8.32,
+   "end": 8.32
+  },
+  {
+   "seed": "studio",
+   "start": 14.01,
+   "end": 9.34
+  },
+  {
+   "seed": "restart 1",
+   "start": 10.86,
+   "end": 8.38
+  }
+ ],
+ "env": {
+  "ambient": 3.53,
+  "key": 0.8,
+  "azimuth": -7,
+  "elevation": 56,
+  "keyTemp": 7683,
+  "back": 2.93,
+  "backAzimuth": 120,
+  "backElevation": 42.33,
+  "backTemp": 12000,
+  "skyTemp": 12000,
+  "ground": "#e0834e",
+  "warmth": 0,
+  "shadow": 0.72,
+  "rim": 0,
+  "detail": 0.5,
+  "exposure": 1.12,
+  "toneMapping": "aces",
+  "contrast": 1.2,
+  "saturation": 0.85,
+  "gi": 1.26
+ },
+ "score": {
+  "mean": 8.32,
+  "perShot": {
+   "vs_grisham_night_01": {
+    "dE": 8.32,
+    "weight": 1,
+    "regions": {
+     "skin_forehead": 15,
+     "skin_cheek": 0.3,
+     "hair_red": 5.4,
+     "hair_white": 15.8,
+     "shirt_lit": 4.5,
+     "shirt_dark": 14.2,
+     "hand_skin": 4.8,
+     "arm_skin": 6.6
+    }
+   }
+  }
+ },
+ "shots": [
+  "vs_grisham_night_01"
+ ],
+ "fittedAt": "2026-10-16T14:15:40.387Z",
+ "tool": "fit_scene.mjs"
+}

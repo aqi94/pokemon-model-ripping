@@ -1,3 +1,5 @@
+import { createPortal } from 'react-dom';
+import { useEffect, useRef, useState } from 'react';
 import type { PartGroup, PaletteEntry } from '../types';
 import { Accordion } from './Accordion';
 
@@ -8,6 +10,74 @@ interface Props {
   palettes: Record<string, number[]>;
   onSelect: (group: string, option: string) => void;
   onPalette: (entry: PaletteEntry, layer: number, zone: number) => void;
+}
+
+/** One colour layer: a single square showing the current zone; click to expand the full swatch grid. */
+function PaletteRow({ entry: p, layer, current, onPalette }: {
+  entry: PaletteEntry; layer: number; current: number; onPalette: Props['onPalette'];
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const popRef = useRef<HTMLDivElement>(null);
+  const [pos, setPos] = useState<{ top: number; right: number } | null>(null);
+  const name = `${p.label}${p.layers.length > 1 ? ` colour ${layer}` : ' colour'}`;
+  const toggle = () => {
+    if (!open && btnRef.current) {
+      const r = btnRef.current.getBoundingClientRect();
+      setPos({ top: r.bottom + 4, right: window.innerWidth - r.right });
+    }
+    setOpen(!open);
+  };
+  useEffect(() => {
+    if (!open) return;
+    const down = (e: PointerEvent) => {
+      const t = e.target as Node;
+      if (!ref.current?.contains(t) && !popRef.current?.contains(t)) setOpen(false);
+    };
+    const key = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    const close = () => setOpen(false);
+    document.addEventListener('pointerdown', down);
+    document.addEventListener('keydown', key);
+    window.addEventListener('resize', close);
+    document.addEventListener('scroll', close, true);
+    return () => {
+      document.removeEventListener('pointerdown', down); document.removeEventListener('keydown', key);
+      window.removeEventListener('resize', close); document.removeEventListener('scroll', close, true);
+    };
+  }, [open]);
+  return (
+    <div className="pal" ref={ref}>
+      <div className="pal-head">
+        <div className="label">{name}</div>
+        <button
+          className="zone current"
+          style={{ background: p.zones[current - 1] ?? 'var(--bg3)' }}
+          title={`${name}: palette ${current} (click to change)`}
+          aria-label={`${name}: current palette ${current}`}
+          aria-haspopup="true"
+          aria-expanded={open}
+          ref={btnRef}
+          onClick={toggle}
+        />
+      </div>
+      {open && pos && createPortal(
+        <div className="zones popover" role="dialog" aria-label={name} ref={popRef} style={{ top: pos.top, right: pos.right }}>
+          {p.zones.map((hex, z) => (
+            <button
+              key={z}
+              className={'zone' + (current === z + 1 ? ' active' : '')}
+              style={{ background: hex }}
+              title={`Palette colour ${z + 1}`}
+              aria-label={`${name}: palette ${z + 1}`}
+              onClick={() => { onPalette(p, layer, z + 1); setOpen(false); }}
+            />
+          ))}
+        </div>,
+        document.body,
+      )}
+    </div>
+  );
 }
 
 /** Modular models (generic NPCs): exactly one option per group is shown; its colour layers pick palette zones. */
@@ -31,21 +101,7 @@ export function PartGroupsSection({ groups, selected, palettes, onSelect, onPale
             {(opt.palettes ?? []).filter((p) => p.divide > 1).map((p) => {
               const cur = palettes[p.materials[0]] ?? p.indices;
               return p.layers.map((layer) => (
-                <div className="pal" key={`${p.materials[0]}:${layer}`}>
-                  <div className="label">{p.label}{p.layers.length > 1 ? ` colour ${layer}` : ' colour'}</div>
-                  <div className="zones">
-                    {p.zones.map((hex, z) => (
-                      <button
-                        key={z}
-                        className={'zone' + (cur[layer - 1] === z + 1 ? ' active' : '')}
-                        style={{ background: hex }}
-                        title={`Palette colour ${z + 1}`}
-                        aria-label={`${p.label} colour ${layer}: palette ${z + 1}`}
-                        onClick={() => onPalette(p, layer, z + 1)}
-                      />
-                    ))}
-                  </div>
-                </div>
+                <PaletteRow key={`${p.materials[0]}:${layer}`} entry={p} layer={layer} current={cur[layer - 1]} onPalette={onPalette} />
               ));
             })}
           </div>

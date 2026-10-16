@@ -1,0 +1,39 @@
+{
+ "schema": 1,
+ "slug": "vs_grisham_night_01",
+ "scene": "battle_zone_night",
+ "game": "za",
+ "source": "manual",
+ "video": null,
+ "timestamp": 0.0,
+ "timecode": "00:00:00.000",
+ "grabbedAt": "2026-10-16T14:12:38Z",
+ "image": {
+  "file": "vs_grisham_night_01.png",
+  "width": 1024,
+  "height": 682,
+  "scaledFrom": null
+ },
+ "tags": {
+  "timeOfDay": "night",
+  "weather": "none",
+  "location": "Battle Zone VS screen",
+  "indoor": false,
+  "lightType": "floodlight"
+ },
+ "subject": {
+  "kind": "trainer",
+  "model": "tr0009_00",
+  "name": "Grisham",
+  "confidence": "high"
+ },
+ "clipGuess": "advent01_loop",
+ "context": "vs",
+ "quality": {
+  "ui": false,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": "migrated from samples/ (user-supplied screenshot)"
+}

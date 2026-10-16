@@ -1,0 +1,130 @@
+{
+ "schema": 1,
+ "slug": "lumiose_day_sunny_taunie_01",
+ "scene": "lumiose_day_sunny",
+ "model": "za/tr0001_00",
+ "clip": "defaultwait01_loop",
+ "frame": 0,
+ "screenshot": "lumiose_day_sunny_taunie_01.png",
+ "width": 1920,
+ "height": 1080,
+ "camera": {
+  "fov": 23,
+  "position": [
+   2.9305,
+   0.8254,
+   3.9484
+  ],
+  "target": [
+   1.1672,
+   0.7418,
+   0.167
+  ]
+ },
+ "weight": 1,
+ "skip": false,
+ "regions": [
+  {
+   "name": "jacket_lit",
+   "box": [
+    340,
+    380,
+    400,
+    440
+   ],
+   "renderBox": [
+    390,
+    300,
+    440,
+    360
+   ],
+   "weight": 1,
+   "manual": true
+  },
+  {
+   "name": "shorts",
+   "box": [
+    350,
+    470,
+    420,
+    520
+   ],
+   "renderBox": [
+    400,
+    450,
+    450,
+    490
+   ],
+   "weight": 1,
+   "manual": true
+  },
+  {
+   "name": "skin_leg",
+   "box": [
+    395,
+    600,
+    425,
+    680
+   ],
+   "renderBox": [
+    425,
+    630,
+    452,
+    680
+   ],
+   "weight": 1.5,
+   "manual": true
+  },
+  {
+   "name": "body_1",
+   "box": [
+    318,
+    858,
+    355,
+    895
+   ],
+   "renderBox": [
+    318,
+    858,
+    355,
+    895
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    10.5,
+    1.5
+   ],
+   "dE0": 24.9
+  },
+  {
+   "name": "body_2",
+   "box": [
+    372,
+    327,
+    409,
+    364
+   ],
+   "renderBox": [
+    372,
+    327,
+    409,
+    364
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    12.5,
+    5.4
+   ],
+   "dE0": 32.4
+  }
+ ],
+ "subjectBox": [
+  290,
+  70,
+  490,
+  950
+ ],
+ "yaw": 25
+}

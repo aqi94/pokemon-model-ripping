@@ -1,0 +1,153 @@
+{
+ "modelBox": [
+  1161,
+  150,
+  1602,
+  979
+ ],
+ "pixels": 188689,
+ "materials": {
+  "body": {
+   "color": "#3f98f9",
+   "pixels": 137278,
+   "bbox": [
+    1161,
+    250,
+    1590,
+    882
+   ],
+   "centroid": [
+    1369,
+    644
+   ]
+  },
+  "baggage": {
+   "color": "#c8f93f",
+   "pixels": 268,
+   "bbox": [
+    1342,
+    159,
+    1498,
+    369
+   ],
+   "centroid": [
+    1400,
+    240
+   ]
+  },
+  "upperbody_skin": {
+   "color": "#3ff9e7",
+   "pixels": 3895,
+   "bbox": [
+    1348,
+    260,
+    1487,
+    680
+   ],
+   "centroid": [
+    1431,
+    582
+   ]
+  },
+  "barehands_skin": {
+   "color": "#f9c23f",
+   "pixels": 16246,
+   "bbox": [
+    1180,
+    150,
+    1602,
+    978
+   ],
+   "centroid": [
+    1386,
+    862
+   ]
+  },
+  "eyebrow": {
+   "color": "#8f3ff9",
+   "pixels": 1662,
+   "bbox": [
+    1163,
+    213,
+    1591,
+    879
+   ],
+   "centroid": [
+    1434,
+    342
+   ]
+  },
+  "face_skin": {
+   "color": "#54f93f",
+   "pixels": 18341,
+   "bbox": [
+    1295,
+    159,
+    1497,
+    366
+   ],
+   "centroid": [
+    1417,
+    268
+   ]
+  },
+  "r_eye": {
+   "color": "#f93fa0",
+   "pixels": 1494,
+   "bbox": [
+    1180,
+    245,
+    1602,
+    979
+   ],
+   "centroid": [
+    1396,
+    384
+   ]
+  },
+  "l_eye": {
+   "color": "#3fcdf9",
+   "pixels": 848,
+   "bbox": [
+    1348,
+    251,
+    1487,
+    680
+   ],
+   "centroid": [
+    1470,
+    307
+   ]
+  },
+  "hairstyle01": {
+   "color": "#f1f93f",
+   "pixels": 8556,
+   "bbox": [
+    1343,
+    150,
+    1516,
+    377
+   ],
+   "centroid": [
+    1424,
+    251
+   ]
+  },
+  "hairstyle00": {
+   "color": "#e23ff9",
+   "pixels": 101,
+   "bbox": [
+    1194,
+    245,
+    1521,
+    880
+   ],
+   "centroid": [
+    1376,
+    694
+   ]
+  }
+ },
+ "width": 1920,
+ "height": 1080
+}

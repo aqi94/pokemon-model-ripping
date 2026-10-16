@@ -1,0 +1,72 @@
+{
+ "schema": 1,
+ "scene": "lumiose_day_sunny",
+ "profile": "outdoor",
+ "locks": {},
+ "seeds": [
+  "studio",
+  "day"
+ ],
+ "bestSeed": "restart 1",
+ "passes": 3,
+ "seedLog": [
+  {
+   "seed": "studio",
+   "start": 25.94,
+   "end": 7.03
+  },
+  {
+   "seed": "day",
+   "start": 26.9,
+   "end": 7.63
+  },
+  {
+   "seed": "restart 1",
+   "start": 6.95,
+   "end": 6.71
+  }
+ ],
+ "env": {
+  "ambient": 2.2,
+  "key": 0.567,
+  "azimuth": 83.4,
+  "elevation": 53.8,
+  "keyTemp": 4500,
+  "back": 0,
+  "backAzimuth": 90,
+  "backElevation": 25,
+  "backTemp": 6500,
+  "skyTemp": 6333,
+  "ground": "#ff5959",
+  "warmth": 0,
+  "shadow": 0.65,
+  "rim": 0,
+  "detail": 0.5,
+  "exposure": 1.4,
+  "toneMapping": "agx",
+  "contrast": 0.5,
+  "saturation": 0.867,
+  "gi": 2
+ },
+ "score": {
+  "mean": 6.71,
+  "perShot": {
+   "lumiose_day_sunny_taunie_01": {
+    "dE": 6.71,
+    "weight": 1,
+    "regions": {
+     "jacket_lit": 5.9,
+     "shorts": 10.4,
+     "skin_leg": 6.5,
+     "body_1": 6.6,
+     "body_2": 4.2
+    }
+   }
+  }
+ },
+ "shots": [
+  "lumiose_day_sunny_taunie_01"
+ ],
+ "fittedAt": "2026-10-16T14:38:19.789Z",
+ "tool": "fit_scene.mjs"
+}

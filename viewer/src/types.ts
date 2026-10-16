@@ -11,11 +11,13 @@ export interface IndexModel {
   thumbnail?: string | null; // relative to out/ (served at /models/)
   item?: string | null;
 }
-export interface ModelIndex {
+export interface GameIndex {
   indexVersion: number;
-  games: Record<string, string>;
+  game: string;
+  name: string;
   models: IndexModel[];
 }
+export interface GameSummary { name: string; count: number; kinds: Record<string, number> }
 export interface VariantOption { variant: number; name: string; label: string; default: boolean }
 export interface VariantGroup { name: string; label: string; options: VariantOption[] }
 export interface ClipInfo {
@@ -46,3 +48,11 @@ export interface Manifest {
   stats: { joints: number; meshes: number; triangles: number; textures: number; clips: number; glbBytes: number };
   extras?: { dex?: number; form?: string; species?: string };
 }
+
+/** A calibrated gameplay screenshot (refs/<game>/index.json, written by tools/lightrefs/build_presets.py). */
+export interface RefEntry {
+  scene: string; sceneLabel: string; preset: string; slug: string; model: string; name: string; context: string;
+  clip: string; frame: number; camera: { fov: number; position: [number, number, number]; target: [number, number, number] };
+  image: string; width: number; height: number; dE: number | null; video?: string | null; timecode?: string | null;
+}
+export interface RefIndex { game: string; builtAt: string; refs: RefEntry[] }

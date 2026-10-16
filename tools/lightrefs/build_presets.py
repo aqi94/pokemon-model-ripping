@@ -1,0 +1,171 @@
+"""Aggregate refs/<game>/<scene>/fit.json into viewer presets, the Reference-panel index and a review sheet.
+
+  python -m tools.lightrefs.build_presets [--game za] [--scenes a,b] [--min-score 12] [--no-sheet]
+
+Writes viewer/src/scene/<game>Presets.ts (generated), refs/<game>/index.json (consumed by the viewer's Reference
+panel through the dev server's /refs/ route) and out/<game>_lighting_sheet.png (screenshot | fitted render per shot).
+"""
+
+from __future__ import annotations
+
+import argparse
+import os
+from datetime import date
+
+from .scenes import SCENES, preset_id
+from .sidecar import load_json, save_json, validate_regions, validate_sidecar
+
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ENV_KEYS = ["ambient", "key", "azimuth", "elevation", "keyTemp", "back", "backAzimuth", "backElevation", "backTemp", "skyTemp",
+            "ground", "warmth", "shadow", "rim", "detail", "exposure", "toneMapping", "contrast", "saturation", "gi"]
+DEFAULT_ENV = {"ambient": 1.9, "key": 1.2, "azimuth": -26.6, "elevation": 38.8, "keyTemp": 6500, "back": 0, "backAzimuth": 160,
+               "backElevation": 25, "backTemp": 6500, "skyTemp": 6500, "ground": "#f6ecd8", "warmth": 0, "shadow": 0.65, "rim": 1,
+               "detail": 0.5, "exposure": 1, "toneMapping": "linear", "contrast": 1, "saturation": 1, "gi": 1}
+
+
+def _ts(v) -> str:
+    if isinstance(v, bool):
+        return "true" if v else "false"
+    if isinstance(v, (int, float)):
+        return repr(v)
+    if isinstance(v, str):
+        return "'" + v.replace("'", "\\'") + "'"
+    if isinstance(v, dict):
+        return "{ " + ", ".join(f"{k}: {_ts(x)}" for k, x in v.items()) + " }"
+    raise TypeError(type(v))
+
+
+def collect(game: str, scenes: list[str] | None, min_score: float) -> tuple[list[dict], list[dict], list[str]]:
+    """-> (presets, refs, warnings)"""
+    presets, refs, warn = [], [], []
+    base = os.path.join(ROOT, "refs", game)
+    for sid, sc in SCENES[game].items():
+        if scenes and sid not in scenes:
+            continue
+        d = os.path.join(base, sid)
+        fit_path = os.path.join(d, "fit.json")
+        if not os.path.isfile(fit_path):
+            warn.append(f"{sid}: no fit.json")
+            continue
+        fit = load_json(fit_path)
+        if fit.get("score", {}).get("mean", 99) > min_score:
+            warn.append(f"{sid}: mean dE {fit['score']['mean']} > {min_score}, skipped")
+            continue
+        env = dict(DEFAULT_ENV)
+        env.update({k: v for k, v in fit["env"].items() if k in ENV_KEYS or k in ("keyColor", "skyColor", "backColor", "hable")})
+        shots = []
+        for slug in fit.get("shots", []):
+            sp, rp = os.path.join(d, slug + ".json"), os.path.join(d, slug + "_regions.json")
+            if not (os.path.isfile(sp) and os.path.isfile(rp)):
+                warn.append(f"{sid}/{slug}: sidecar or regions missing")
+                continue
+            side, reg = load_json(sp), load_json(rp)
+            errs = validate_sidecar(side) + validate_regions(reg, side)
+            if errs:
+                warn.append(f"{sid}/{slug}: " + "; ".join(errs))
+                continue
+            if side["subject"].get("confidence") == "low":
+                warn.append(f"{sid}/{slug}: low-confidence subject, excluded from the index")
+                continue
+            per = fit.get("score", {}).get("perShot", {}).get(slug, {})
+            shots.append((slug, side, reg, per.get("dE")))
+            refs.append({
+                "scene": sid, "sceneLabel": sc.label, "preset": preset_id(game, sid), "slug": slug,
+                "model": side["subject"]["model"], "name": side["subject"]["name"], "context": side["context"],
+                "clip": reg["clip"], "frame": reg["frame"], "camera": reg["camera"],
+                "image": f"/refs/{game}/{sid}/{side['image']['file']}", "width": reg["width"], "height": reg["height"],
+                "dE": per.get("dE"), "video": (side.get("video") or {}).get("url"), "timecode": side.get("timecode"),
+            })
+        ctx = {s[1]["context"] for s in shots}
+        des = [s[3] for s in shots if s[3] is not None]
+        if len(ctx) > 1 and des and max(des) - min(des) > 6:
+            warn.append(f"{sid}: mixes contexts {sorted(ctx)} with per-shot dE spread {max(des) - min(des):.1f}")
+        presets.append({
+            "id": preset_id(game, sid), "label": sc.label, "game": game, "env": env,
+            "comment": f"{sid}: {len(shots)} shot(s) {', '.join(s[0] for s in shots)}; mean dE {fit['score'].get('mean')} "
+                       f"(seed {fit.get('bestSeed')}, profile {fit.get('profile')}); fitted {str(fit.get('fittedAt', ''))[:10]}",
+            "shots": shots,
+        })
+    return presets, refs, warn
+
+
+def presets_ts(game: str, presets: list[dict]) -> str:
+    name = f"{game.upper()}_PRESETS"
+    lines = [
+        f"// GENERATED by `python -m tools.lightrefs.build_presets --game {game}` from refs/{game}/*/fit.json (tools/fit_scene.mjs).",
+        f"// Do not edit; refit a scene and rerun. Generated {date.today().isoformat()}.",
+        "import type { LightingPreset } from './environment';",
+        "",
+        f"export const {name}: LightingPreset[] = [",
+    ]
+    for p in presets:
+        lines.append(f"  // {p['comment']}")
+        lines.append(f"  {{ id: {_ts(p['id'])}, label: {_ts(p['label'])}, game: {_ts(game)}, env: {_ts(p['env'])} }},")
+    lines += ["];", ""]
+    return "\n".join(lines)
+
+
+def review_sheet(game: str, presets: list[dict], out_png: str, width: int = 420) -> None:
+    from PIL import Image, ImageDraw, ImageFont
+    try:
+        font = ImageFont.truetype("arial.ttf", 14)
+    except OSError:
+        font = ImageFont.load_default()
+    rows = []
+    for p in presets:
+        for slug, side, reg, de in p["shots"]:
+            d = os.path.join(ROOT, "refs", game, p["id"][len(game) + 1:])
+            shot = os.path.join(d, side["image"]["file"])
+            ren = os.path.join(d, slug + "_render.png")
+            rows.append((p["id"], slug, side["subject"]["model"], de, shot, ren))
+    if not rows:
+        return
+    tiles = []
+    for pid, slug, model, de, shot, ren in rows:
+        a = Image.open(shot).convert("RGB") if os.path.isfile(shot) else Image.new("RGB", (width, width * 9 // 16), "#303030")
+        a = a.resize((width, round(a.height * width / a.width)), Image.LANCZOS)
+        if os.path.isfile(ren):
+            b = Image.open(ren).convert("RGBA")
+            b = b.resize((width, round(b.height * width / b.width)), Image.LANCZOS)
+            bg = Image.new("RGB", b.size, "#404040"); bg.paste(b, (0, 0), b); b = bg
+        else:
+            b = Image.new("RGB", a.size, "#303030")
+        tiles.append((f"{pid} / {slug} / {model} / dE {de}", a, b))
+    cell_h = max(max(a.height, b.height) for _, a, b in tiles) + 22
+    sheet = Image.new("RGB", (width * 2 + 10, cell_h * len(tiles)), "#202020")
+    dr = ImageDraw.Draw(sheet)
+    for i, (label, a, b) in enumerate(tiles):
+        y = i * cell_h
+        dr.text((4, y + 3), label, fill="white", font=font)
+        sheet.paste(a, (0, y + 22)); sheet.paste(b, (width + 10, y + 22))
+    os.makedirs(os.path.dirname(out_png), exist_ok=True)
+    sheet.save(out_png)
+
+
+def main(argv=None) -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--game", default="za")
+    ap.add_argument("--scenes", default="")
+    ap.add_argument("--min-score", type=float, default=12.0)
+    ap.add_argument("--no-sheet", action="store_true")
+    ap.add_argument("--ts-out", default=None)
+    a = ap.parse_args(argv)
+    scenes = [s for s in a.scenes.split(",") if s] or None
+    presets, refs, warn = collect(a.game, scenes, a.min_score)
+    for w in warn:
+        print("warn:", w)
+    ts = a.ts_out or os.path.join(ROOT, "viewer", "src", "scene", f"{a.game}Presets.ts")
+    with open(ts, "w", encoding="utf-8", newline="\n") as f:
+        f.write(presets_ts(a.game, presets))
+    print(f"wrote {os.path.relpath(ts, ROOT)} ({len(presets)} presets)")
+    idx = os.path.join(ROOT, "refs", a.game, "index.json")
+    save_json(idx, {"game": a.game, "builtAt": date.today().isoformat(), "refs": refs})
+    print(f"wrote {os.path.relpath(idx, ROOT)} ({len(refs)} refs)")
+    if not a.no_sheet:
+        out = os.path.join(ROOT, "out", f"{a.game}_lighting_sheet.png")
+        review_sheet(a.game, presets, out)
+        print(f"wrote {os.path.relpath(out, ROOT)}")
+
+
+if __name__ == "__main__":
+    main()

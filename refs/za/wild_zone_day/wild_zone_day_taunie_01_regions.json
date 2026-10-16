@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "slug": "wild_zone_day_taunie_01",
+  "scene": "wild_zone_day",
+  "model": "za/tr0001_00",
+  "clip": "defaultwait01_loop",
+  "frame": 0,
+  "screenshot": "wild_zone_day_taunie_01.png",
+  "width": 1920,
+  "height": 1080,
+  "camera": {
+    "fov": 30,
+    "position": [
+      0.4517,
+      0.8467,
+      3.395
+    ],
+    "target": [
+      0.4517,
+      0.7788,
+      0.0024
+    ]
+  },
+  "subjectBox": [
+    488,
+    60,
+    835,
+    1020
+  ],
+  "yaw": 0,
+  "weight": 1,
+  "skip": false,
+  "regions": [
+    {
+      "name": "face_cheek",
+      "box": [
+        600,
+        240,
+        625,
+        262
+      ],
+      "renderBox": [
+        632,
+        158,
+        652,
+        176
+      ],
+      "manual": true,
+      "weight": 1.5
+    },
+    {
+      "name": "jacket_front",
+      "box": [
+        520,
+        400,
+        560,
+        440
+      ],
+      "renderBox": [
+        560,
+        410,
+        590,
+        440
+      ],
+      "manual": true
+    },
+    {
+      "name": "top_magenta",
+      "box": [
+        620,
+        380,
+        660,
+        420
+      ],
+      "renderBox": [
+        680,
+        280,
+        715,
+        315
+      ],
+      "manual": true
+    },
+    {
+      "name": "shorts_white",
+      "box": [
+        600,
+        520,
+        640,
+        560
+      ],
+      "renderBox": [
+        640,
+        495,
+        680,
+        520
+      ],
+      "manual": true
+    },
+    {
+      "name": "leg_skin",
+      "box": [
+        685,
+        700,
+        715,
+        730
+      ],
+      "renderBox": [
+        735,
+        720,
+        765,
+        750
+      ],
+      "manual": true,
+      "weight": 1.5
+    },
+    {
+      "name": "shoe_navy",
+      "box": [
+        700,
+        900,
+        740,
+        930
+      ],
+      "renderBox": [
+        745,
+        905,
+        775,
+        935
+      ],
+      "manual": true
+    },
+    {
+      "name": "body_2",
+      "box": [
+        602,
+        365,
+        642,
+        405
+      ],
+      "renderBox": [
+        602,
+        365,
+        642,
+        405
+      ],
+      "weight": 1,
+      "auto": true,
+      "flat": [
+        11.8,
+        4.8
+      ],
+      "dE0": 11.1
+    },
+    {
+      "name": "face_skin_1",
+      "box": [
+        653,
+        156,
+        693,
+        196
+      ],
+      "renderBox": [
+        653,
+        156,
+        693,
+        196
+      ],
+      "weight": 1.5,
+      "auto": true,
+      "flat": [
+        13.3,
+        15.1
+      ],
+      "dE0": 16.3
+    }
+  ]
+}

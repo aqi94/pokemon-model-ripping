@@ -6,7 +6,8 @@ import { AnimationController, type PlaybackState } from './animation';
 import { VariantSwitcher } from './variants';
 import { loadGlb } from './loader';
 import { exportCanvasPng } from './exporter';
-import { DEFAULT_ENV, kelvinToRGB, type Environment, type ToneMap } from './environment';
+import { DEFAULT_ENV, DEFAULT_HABLE, kelvinToRGB, type Environment, type ToneMap } from './environment';
+import { installHable } from './hable';
 import { applyGameShading, removeGameShading, syncUnlit } from './gameShading';
 import { isReflective, makeReflectionEnv } from './reflection';
 import { bakePalette, type PaletteData } from './palette';
@@ -17,11 +18,13 @@ export type AlbedoMode = 'baked' | 'raw' | 'off';
 
 const TONE_MAPS: Record<ToneMap, THREE.ToneMapping> = {
   linear: THREE.LinearToneMapping, aces: THREE.ACESFilmicToneMapping, agx: THREE.AgXToneMapping, neutral: THREE.NeutralToneMapping,
+  hable: THREE.CustomToneMapping, // Hable filmic with the game's parameters, see hable.ts
 };
 
 interface AlbedoState { baked: THREE.Texture | null; color: THREE.Color; raw?: THREE.Texture | null }
 
 export class ViewerScene {
+  static THREE = THREE; // for page.evaluate tooling (tools/*.mjs) that needs the viewer's own three instance
   renderer: THREE.WebGLRenderer;
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(35, 1, 0.01, 1000);
@@ -61,6 +64,7 @@ export class ViewerScene {
   private raf = 0;
   private key = new THREE.DirectionalLight(0xffffff, 2.2);
   private back = new THREE.DirectionalLight(0xffffff, 0);
+  private hableKey = '';
   private ground: THREE.Mesh;
   private wireframe = false;
   private disposed = false;
@@ -477,8 +481,12 @@ export class ViewerScene {
     this.env = { ...env };
     this.renderer.toneMappingExposure = env.exposure;
     const tm = TONE_MAPS[env.toneMapping] ?? THREE.LinearToneMapping;
-    if (this.renderer.toneMapping !== tm) {
+    // The Hable curve lives in three's shared tonemapping chunk with its constants baked in, so a parameter
+    // change needs new programs: the key goes into every material's customProgramCacheKey (applyShading).
+    const hableKey = env.toneMapping === 'hable' ? installHable(env.hable ?? DEFAULT_HABLE) : '';
+    if (this.renderer.toneMapping !== tm || hableKey !== this.hableKey) {
       this.renderer.toneMapping = tm;
+      this.hableKey = hableKey;
       this.scene.traverse((o) => { const m = o as THREE.Mesh; if (m.isMesh) for (const mat of ([] as THREE.Material[]).concat(m.material)) mat.needsUpdate = true; });
     }
     this.applyRig();
@@ -494,20 +502,20 @@ export class ViewerScene {
     const ak = game ? 1 : 1.2 / DEFAULT_ENV.ambient;
     const kk = game ? 1 : 2.2 / DEFAULT_ENV.key;
     const w = e.warmth;
-    // Colour temperature (Kelvin) first, then the global white-balance shift.
-    const tint = (kelvin: number) => {
-      const c = new THREE.Color().setRGB(...kelvinToRGB(kelvin), THREE.LinearSRGBColorSpace);
+    // Explicit colour (game-data presets) or colour temperature (Kelvin) first, then the global white-balance shift.
+    const tint = (kelvin: number, hex?: string) => {
+      const c = hex ? new THREE.Color(hex) : new THREE.Color().setRGB(...kelvinToRGB(kelvin), THREE.LinearSRGBColorSpace);
       const t = new THREE.Color(w >= 0 ? 0xffc27a : 0x9db8ff);
       return c.lerp(t, Math.abs(w) * 0.5);
     };
     const hemi = (game ? this.gameLights[0] : this.pbrLights[0]) as THREE.HemisphereLight;
     hemi.intensity = e.ambient * ak;
-    hemi.color.copy(tint(e.skyTemp));
+    hemi.color.copy(tint(e.skyTemp, e.skyColor));
     if (game) hemi.groundColor.set(e.ground);
     this.key.intensity = e.key * kk;
-    this.key.color.copy(tint(e.keyTemp));
+    this.key.color.copy(tint(e.keyTemp, e.keyColor));
     this.back.intensity = e.back * kk;
-    this.back.color.copy(tint(e.backTemp));
+    this.back.color.copy(tint(e.backTemp, e.backColor));
     this.back.visible = e.back > 0;
     this.positionKey();
   }
@@ -546,6 +554,8 @@ export class ViewerScene {
         seen.add(mat);
         applyGameBlend(mat); // variant materials are swapped in after load
         const sm = mat as THREE.MeshStandardMaterial;
+        const hk = this.hableKey;
+        sm.customProgramCacheKey = () => hk;
         if (this.shadingMode === 'game') {
           const tex = {
             shadow: this.albedoMode === 'baked' ? this.getTex(sm, parser, 'shadowColorTexture', true) : null,
@@ -607,6 +617,20 @@ export class ViewerScene {
   }
 
   private pendingPreset?: CameraPreset;
+
+  /** Explicit camera pose (world metres), used by the lighting reference tools and the Reference panel. */
+  setCameraPose(fov: number, position: [number, number, number], target: [number, number, number]) {
+    const damp = this.controls.enableDamping;
+    this.controls.enableDamping = false;
+    this.camera.fov = fov;
+    this.camera.position.set(position[0], position[1], position[2]);
+    this.controls.target.set(target[0], target[1], target[2]);
+    const fi = this.fitInfo();
+    if (fi) { this.camera.near = Math.max(0.001, fi.radius * 0.01); this.camera.far = Math.max(100, fi.radius * 100); }
+    this.camera.updateProjectionMatrix();
+    this.controls.update();
+    this.controls.enableDamping = damp;
+  }
 
   setCameraPreset(name: CameraPreset) {
     if (name === 'fit') { this.recenter(); return; }

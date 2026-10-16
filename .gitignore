@@ -20,3 +20,6 @@ samples/
 *.bntx
 *.npz
 pipeline/tests/fixtures/
+
+# lighting reference scratch (stream URLs, scout tiles)
+refs/_cache/

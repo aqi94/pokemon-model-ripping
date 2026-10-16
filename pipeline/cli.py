@@ -150,6 +150,18 @@ def build_index(out_root: str) -> dict:
     index = {"indexVersion": 1, "games": games, "models": models}
     with open(os.path.join(out_root, "index.json"), "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=1)
+    # Per-game indexes + a tiny games list: the viewer loads only the game (domain) being viewed.
+    summary = {}
+    for g, name in games.items():
+        gm = [m for m in models if m["game"] == g]
+        with open(os.path.join(out_root, g, "index.json"), "w", encoding="utf-8") as f:
+            json.dump({"indexVersion": 1, "game": g, "name": name, "models": gm}, f, ensure_ascii=False)
+        kinds = {}
+        for m in gm:
+            kinds[m["kind"]] = kinds.get(m["kind"], 0) + 1
+        summary[g] = {"name": name, "count": len(gm), "kinds": kinds}
+    with open(os.path.join(out_root, "games.json"), "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False)
     return index
 
 
@@ -205,6 +217,42 @@ def cmd_thumbs(args) -> None:
     build_index(args.out)
 
 
+def cmd_lights(args) -> None:
+    """Scene light rigs (`.trlgt`): list / dump / export / presets. SV only for now (see pipeline/lighting)."""
+    from .lighting.catalog import SvLightCatalog, merge
+    from .importers.za.trlgt import dump_rig
+
+    if args.game != "sv":
+        sys.exit("lights: only --game sv has an extracted light-rig tree (POKEMODELS_SV_ENV)")
+    cat = SvLightCatalog(args.env_dir) if args.env_dir else SvLightCatalog()
+    if not cat.available():
+        sys.exit(f"lights: no rigs under {cat.romfs}; extract SV-Everything.7z romfs/env there first (POKEMODELS_SV_ENV)")
+    if args.what == "list":
+        for r in cat.rigs():
+            if args.group and r.group != args.group:
+                continue
+            print(f"{r.group:10} {r.name}")
+        return
+    if args.what == "dump":
+        rig = cat.load(args.rig)
+        if args.merge:
+            rig = merge(cat.master(), rig)
+        print(dump_rig(rig))
+        return
+    if args.what == "export":
+        from .lighting.export import export_rigs
+        names = [r.name for r in cat.rigs()] if args.all else list(args.rig_list)
+        out_dir = os.path.join(args.out, "sv", "lights")
+        n = export_rigs(cat, names, out_dir, probes=not args.no_probes)
+        print(f"wrote {n} rigs to {out_dir}")
+        return
+    if args.what == "presets":
+        from .lighting.presets import write_sv_presets
+        path = write_sv_presets(cat, args.ts_out, category=args.category)
+        print(f"wrote {path}")
+        return
+
+
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(prog="pipeline")
     ap.add_argument("--game", default="za")
@@ -232,6 +280,19 @@ def main(argv=None) -> None:
     p = sub.add_parser("export")
     p.add_argument("--id", action="append", required=True)
     p.set_defaults(fn=cmd_export)
+
+    p = sub.add_parser("lights", help="scene light rigs (.trlgt): list | dump <rig> | export | presets")
+    p.add_argument("what", choices=["list", "dump", "export", "presets"])
+    p.add_argument("rig", nargs="?", help="rig name for dump (e.g. master, fel_interior, weather_rain)")
+    p.add_argument("--group", help="list: master|weather|area|cutscene|filter|terrain|shieldmap")
+    p.add_argument("--merge", action="store_true", help="dump: merge the rig over master first")
+    p.add_argument("--all", action="store_true", help="export: every rig")
+    p.add_argument("--rig-list", nargs="*", default=[], help="export: rig names")
+    p.add_argument("--no-probes", action="store_true", help="export: skip probe cube PNGs")
+    p.add_argument("--env-dir", default=None, help="extracted SV env tree (default POKEMODELS_SV_ENV)")
+    p.add_argument("--category", type=int, default=5, help="presets: material CategoryLabel (5 trainer skin, 6 Pokemon)")
+    p.add_argument("--ts-out", default=os.path.join("viewer", "src", "scene", "svPresets.ts"))
+    p.set_defaults(fn=cmd_lights)
 
     p = sub.add_parser("thumbs")
     p.add_argument("--id", action="append", default=[])

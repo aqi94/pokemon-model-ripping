@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { IndexModel, Manifest, ModelIndex, PaletteEntry } from '../types';
-import { DEFAULT_ENV } from '../scene/environment';
+import type { GameIndex, IndexModel, Manifest, PaletteEntry, RefEntry } from '../types';
+import { loadGameIndex, loadRefIndex, modelAsset } from '../data';
+import { DEFAULT_ENV, LIGHTING_PRESETS } from '../scene/environment';
+import { ReferencePanel, type RefMode } from '../ui/ReferencePanel';
+import { loadLastEnv, storeLastEnv } from '../scene/userPresets';
 import { ViewerScene } from '../scene/ViewerScene';
 import { TIME_SCALES, type PlaybackState } from '../scene/animation';
 import { exportGlb } from '../scene/exporter';
@@ -10,15 +13,21 @@ import { VariationsSection } from '../ui/VariationsSection';
 import { HeldItemSection } from '../ui/HeldItemSection';
 import { PartsSection } from '../ui/PartsSection';
 import { PartGroupsSection } from '../ui/PartGroupsSection';
-import { OptionsSection, type Options } from '../ui/OptionsSection';
-import { ExportSection } from '../ui/ExportSection';
+import { RenderPanel, type Options } from '../ui/OptionsSection';
+import { Accordion } from '../ui/Accordion';
+import { SplitPane } from '../ui/SplitPane';
 import { ModelPicker } from '../ui/ModelPicker';
+import { Panel } from '../ui/Panel';
+import { Tabs } from '../ui/Tabs';
+import { Timeline } from '../ui/Timeline';
+import { Toolbox } from '../ui/Toolbox';
+import { OptionsBar } from '../ui/OptionsBar';
 
 const EMPTY: PlaybackState = { clip: null, time: 0, duration: 0, frame: 0, frameCount: 0, paused: false, timeScale: 1 };
-const DEFAULT_OPTIONS: Options = { shadows: false, skeleton: false, wireframe: false, background: '#1b1d23', autoRotate: 0, mirror: false, albedo: 'baked', shading: 'game', env: { ...DEFAULT_ENV } };
+const DEFAULT_OPTIONS: Options = { shadows: false, skeleton: false, wireframe: false, background: '#1b1d23', autoRotate: 0, mirror: false, albedo: 'baked', shading: 'game', env: loadLastEnv() };
 
 /** Stays mounted while the model changes (single page): options persist, only the scene is rebuilt. */
-export function Viewer({ game, id, onSelect }: { game?: string; id: string; onSelect: (m: IndexModel) => void }) {
+export function Viewer({ game, id, onSelect }: { game: string; id: string; onSelect: (m: IndexModel) => void }) {
   const canvasHost = useRef<HTMLDivElement>(null);
   const stage = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<ViewerScene | null>(null);
@@ -35,7 +44,7 @@ export function Viewer({ game, id, onSelect }: { game?: string; id: string; onSe
   const [variantColors, setVariantColors] = useState<Record<number, string | null>>({});
   const [options, setOptions] = useState<Options>(DEFAULT_OPTIONS);
   const optionsRef = useRef<Options>(DEFAULT_OPTIONS);
-  const [index, setIndex] = useState<ModelIndex | null>(null);
+  const [index, setIndex] = useState<GameIndex | null>(null);
   const [sidebarW, setSidebarW] = useState(() => {
     try { return Number(localStorage.getItem('sidebarW')) || 340; } catch { return 340; }
   });
@@ -48,8 +57,33 @@ export function Viewer({ game, id, onSelect }: { game?: string; id: string; onSe
   const heldOnlyRef = useRef(true);
 
   useEffect(() => {
-    fetch('/models/index.json').then((r) => r.json()).then(setIndex).catch(() => { /* the load effect reports errors */ });
+    loadGameIndex(game).then(setIndex).catch(() => { /* the load effect reports errors */ });
+  }, [game]);
+  const [panelsHidden, setPanelsHidden] = useState(false);
+
+  // Reference panel: calibrated gameplay screenshots (refs/<game>/index.json, served at /refs/)
+  const [refs, setRefs] = useState<RefEntry[]>([]);
+  const [refActive, setRefActive] = useState<RefEntry | null>(null);
+  const [refMode, setRefMode] = useState<RefMode>('off');
+  const [refOpacity, setRefOpacity] = useState(0.5);
+  const [refShowAll, setRefShowAll] = useState(false);
+  useEffect(() => { loadRefIndex(game).then((ix) => setRefs(ix?.refs ?? [])); }, [game]);
+  useEffect(() => { setRefActive(null); setRefMode('off'); }, [id]);
+  const applyRef = useCallback((r: RefEntry) => {
+    const vs = sceneRef.current; if (!vs?.anim) return;
+    vs.anim.play(r.clip); vs.anim.setPaused(true); vs.anim.scrubToFrame(r.frame);
+    const s = vs.anim.state(); if (s) setPb(s);
+    vs.setCameraPose(r.camera.fov, r.camera.position, r.camera.target);
   }, []);
+  const pickRef = (r: RefEntry) => {
+    if (r.model !== id) { const m = index?.models.find((x) => x.id === r.model); if (m) onSelect(m); return; }
+    setRefActive(r);
+    if (refMode === 'off') setRefMode('split');
+    const pr = LIGHTING_PRESETS.find((p) => p.id === r.preset);
+    if (pr) patchOptions({ env: { ...pr.env } });
+    // the camera pose depends on the canvas aspect, which the split/overlay layout changes: apply after the layout settles
+    requestAnimationFrame(() => requestAnimationFrame(() => applyRef(r)));
+  };
 
   // load model
   useEffect(() => {
@@ -73,18 +107,17 @@ export function Viewer({ game, id, onSelect }: { game?: string; id: string; onSe
     setManifest(null); setError(null); setProgress(0); setHeldItem(''); setPb(EMPTY); setVariantColors({});
     (async () => {
       try {
-        const index: ModelIndex = await (await fetch('/models/index.json')).json();
-        const entry = index.models.find((m) => m.id === id && (!game || m.game === game));
-        if (!entry) throw new Error(`Model not found in index: ${game ? game + '/' : ''}${id}`);
+        const index = await loadGameIndex(game);
+        const entry = index.models.find((m) => m.id === id);
+        if (!entry) throw new Error(`Model not found in index: ${game}/${id}`);
         const objs = index.models.filter((m) => m.kind === 'object').sort((a, b) => a.id.localeCompare(b.id));
         itemsRef.current = objs; setItems(objs);
-        setGameName(index.games[entry.game] ?? entry.game);
-        const base = `/models/${entry.path}`;
-        const man: Manifest = await (await fetch(base + 'manifest.json')).json();
+        setGameName(index.name);
+        const man: Manifest = await (await fetch(modelAsset(entry.path + 'manifest.json'))).json();
         // manifests can contain duplicate clip names; the glTF mixer can only address one per name
         const seen = new Set<string>();
         man.clips = man.clips.filter((c) => !seen.has(c.name) && !!seen.add(c.name));
-        modelUrl.current = base + man.files.model;
+        modelUrl.current = modelAsset(entry.path + man.files.model);
         await vs.load(man, modelUrl.current, (f) => setProgress(f));
         if (cancelled) return;
         if (optionsRef.current.skeleton) vs.setSkeleton(true);
@@ -145,6 +178,9 @@ export function Viewer({ game, id, onSelect }: { game?: string; id: string; onSe
       else if (e.key === 'ArrowRight') { step(1); e.preventDefault(); }
       else if (e.key === 'p' || e.key === 'P') togglePause();
       else if (e.key === 't' || e.key === 'T') cycleScale();
+      else if (e.key === 'Tab') { setPanelsHidden((h) => !h); e.preventDefault(); }
+      else if (e.key === 'f' || e.key === 'F') sceneRef.current?.setCameraPreset('fit');
+      else if (e.key >= '1' && e.key <= '5') sceneRef.current?.setCameraPreset((['front', 'side', 'back', 'top', 'vs'] as const)[Number(e.key) - 1]);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -153,6 +189,7 @@ export function Viewer({ game, id, onSelect }: { game?: string; id: string; onSe
   const patchOptions = (patch: Partial<Options>) => {
     optionsRef.current = { ...optionsRef.current, ...patch };
     setOptions(optionsRef.current);
+    if (patch.env) storeLastEnv(patch.env);
     const vs = sceneRef.current; if (!vs) return;
     if (patch.shadows !== undefined) vs.setShadows(patch.shadows);
     if (patch.skeleton !== undefined) vs.setSkeleton(patch.skeleton);
@@ -168,7 +205,7 @@ export function Viewer({ game, id, onSelect }: { game?: string; id: string; onSe
   const applyHeld = (itemId: string, bone: string) => {
     const it = itemsRef.current.find((m) => m.id === itemId);
     const prop = manifest?.props?.find((p) => p.bone === bone);
-    void sceneRef.current?.setHeldItem(it ? `/models/${it.path}model.glb` : null, prop);
+    void sceneRef.current?.setHeldItem(it ? modelAsset(`${it.path}model.glb`) : null, prop);
   };
 
   const togglePart = (node: string, v: boolean) => {
@@ -210,67 +247,102 @@ export function Viewer({ game, id, onSelect }: { game?: string; id: string; onSe
     window.addEventListener('pointerup', up);
   };
 
+  const visibleParts = manifest ? manifest.parts.filter((p) => p.lod === 0 && (!p.group || groupSel[p.group] === p.option)) : [];
+
   return (
-    <div className="viewer" style={{ ['--sidebar-w' as string]: sidebarW + 'px' }}>
-      <div className="stage" ref={stage}>
-        <div className="canvas-host" ref={canvasHost} />
-        <a className="back" href="/browse">&#9638; Grid</a>
-        {manifest && <div className="title-chip">{manifest.displayName}</div>}
-        {progress !== null && !error && <div className="overlay">Loading model{progress ? ` ${Math.round(progress * 100)}%` : '...'}</div>}
-        {error && <div className="overlay err">{error}</div>}
+    <div className={'viewer' + (panelsHidden ? ' no-panels' : '')} style={{ ['--sidebar-w' as string]: sidebarW + 'px' }}>
+      <OptionsBar game={game} gameName={gameName} title={manifest?.displayName ?? id} options={options} onChange={patchOptions}
+        panelsHidden={panelsHidden} onTogglePanels={() => setPanelsHidden((h) => !h)} />
+      <div className="workspace">
+        <Toolbox
+          options={options}
+          onChange={patchOptions}
+          disabled={!manifest}
+          onCamera={(p) => sceneRef.current?.setCameraPreset(p)}
+          onRecenter={() => sceneRef.current?.recenter()}
+          onFullscreen={() => { stage.current?.requestFullscreen?.(); }}
+          onPng={() => manifest && sceneRef.current?.png(`${manifest.id}.png`)}
+          onGlb={() => manifest && void exportGlb(modelUrl.current, `${manifest.id}.glb`)}
+        />
+        <aside className="leftrail">
+          <Panel title="Models" grow><ModelPicker index={index} id={id} onSelect={onSelect} /></Panel>
+          <Panel title={`Animations${clips.length ? ` (${clips.length})` : ''}`} grow>
+            <AnimationsSection clips={clips} state={pb} onSelect={playClip} />
+          </Panel>
+        </aside>
+        <div className="center">
+          <div className={'stage' + (refActive && refMode !== 'off' ? ` ref-${refMode}` : '')} ref={stage}
+            style={refActive ? { ['--ref-ar' as string]: `${refActive.width} / ${refActive.height}` } : undefined}>
+            <div className="canvas-host" ref={canvasHost} />
+            {refActive && refMode === 'split' && <img className="ref-side-img" src={refActive.image} alt="" />}
+            {refActive && refMode === 'overlay' && <img className="ref-img" src={refActive.image} alt="" style={{ opacity: refOpacity }} />}
+            {progress !== null && !error && <div className="overlay">Loading model{progress ? ` ${Math.round(progress * 100)}%` : '...'}</div>}
+            {error && <div className="overlay err">{error}</div>}
+          </div>
+          <Timeline
+            state={pb}
+            onPrev={() => step(-1)}
+            onNext={() => step(1)}
+            onTogglePause={togglePause}
+            onScrub={(f) => { sceneRef.current?.anim?.scrubToFrame(f); const s = sceneRef.current?.anim?.state(); if (s) setPb(s); }}
+            onCycleScale={cycleScale}
+          />
+        </div>
+        <div className="handle" onPointerDown={startDrag} role="separator" aria-orientation="vertical" />
+        <aside className="sidebar">
+          {manifest && (
+            <Tabs storageKey="rightTab" tabs={[
+              {
+                id: 'look', label: 'Appearance', content: (
+                  <SplitPane storageKey="partsPaneH" bottom={
+                    <PartsSection parts={visibleParts} visible={partsVis} driven={partsDriven} onToggle={togglePart} onAll={allParts}>
+                      {(manifest.props?.length ?? 0) > 0 && (
+                        <HeldItemSection
+                          items={items}
+                          props={manifest.props!}
+                          item={heldItem}
+                          bone={heldBone}
+                          onlyInClips={heldOnly}
+                          onItem={(i) => { setHeldItem(i); applyHeld(i, heldBone); }}
+                          onBone={(b) => { setHeldBone(b); applyHeld(heldItem, b); }}
+                          onOnlyInClips={(v) => { setHeldOnly(v); heldOnlyRef.current = v; sceneRef.current?.setHeldOnlyInClips(v); }}
+                        />
+                      )}
+                    </PartsSection>
+                  } top={
+                  <>
+                    <VariationsSection
+                      groups={manifest.variantGroups}
+                      selected={variantSel}
+                      colors={variantColors}
+                      onSelect={(g, v) => { setVariantSel((s) => ({ ...s, [g]: v })); void sceneRef.current?.variants?.select(v); }}
+                    />
+                    {(manifest.partGroups?.length ?? 0) > 0 && (
+                      <PartGroupsSection groups={manifest.partGroups!} selected={groupSel} palettes={palSel} onSelect={selectPartOption} onPalette={selectPalette} />
+                    )}
+                  </>
+                  } />
+                ),
+              },
+              {
+                id: 'ref', label: 'Reference', hidden: !refs.length, content: (
+                  <ReferencePanel refs={refs} modelId={id} active={refActive} mode={refMode} opacity={refOpacity} showAll={refShowAll}
+                    onPick={pickRef} onMode={(m) => { setRefMode(m); if (refActive) requestAnimationFrame(() => requestAnimationFrame(() => applyRef(refActive))); }}
+                    onOpacity={setRefOpacity} onShowAll={setRefShowAll} onReapply={() => refActive && applyRef(refActive)} />
+                ),
+              },
+              {
+                id: 'render', label: 'Render & Info', content: (
+                  <>
+                    <Accordion title="Render"><RenderPanel options={options} onChange={patchOptions} /></Accordion>
+                    <InfoSection manifest={manifest} gameName={gameName} />
+                  </>
+                ),
+              },
+            ]} />
+          )}
+        </aside>
       </div>
-      <div className="handle" onPointerDown={startDrag} role="separator" aria-orientation="vertical" />
-      <aside className="sidebar">
-        <ModelPicker index={index} game={game} id={id} onSelect={onSelect} />
-        {manifest && (
-          <>
-            <InfoSection manifest={manifest} gameName={gameName} />
-            <AnimationsSection
-              clips={clips}
-              state={pb}
-              onSelect={playClip}
-              onPrev={() => step(-1)}
-              onNext={() => step(1)}
-              onTogglePause={togglePause}
-              onScrub={(f) => { sceneRef.current?.anim?.scrubToFrame(f); const s = sceneRef.current?.anim?.state(); if (s) setPb(s); }}
-              onCycleScale={cycleScale}
-            />
-            <VariationsSection
-              groups={manifest.variantGroups}
-              selected={variantSel}
-              colors={variantColors}
-              onSelect={(g, v) => { setVariantSel((s) => ({ ...s, [g]: v })); void sceneRef.current?.variants?.select(v); }}
-            />
-            {(manifest.props?.length ?? 0) > 0 && (
-              <HeldItemSection
-                items={items}
-                props={manifest.props!}
-                item={heldItem}
-                bone={heldBone}
-                onlyInClips={heldOnly}
-                onItem={(i) => { setHeldItem(i); applyHeld(i, heldBone); }}
-                onBone={(b) => { setHeldBone(b); applyHeld(heldItem, b); }}
-                onOnlyInClips={(v) => { setHeldOnly(v); heldOnlyRef.current = v; sceneRef.current?.setHeldOnlyInClips(v); }}
-              />
-            )}
-            {(manifest.partGroups?.length ?? 0) > 0 && (
-              <PartGroupsSection groups={manifest.partGroups!} selected={groupSel} palettes={palSel} onSelect={selectPartOption} onPalette={selectPalette} />
-            )}
-            <PartsSection parts={manifest.parts.filter((p) => p.lod === 0 && (!p.group || groupSel[p.group] === p.option))} visible={partsVis} driven={partsDriven} onToggle={togglePart} onAll={allParts} />
-            <OptionsSection
-              options={options}
-              onChange={patchOptions}
-              onFullscreen={() => { stage.current?.requestFullscreen?.(); }}
-              onRecenter={() => sceneRef.current?.recenter()}
-              onCamera={(p) => sceneRef.current?.setCameraPreset(p)}
-            />
-            <ExportSection
-              onPng={() => sceneRef.current?.png(`${manifest.id}.png`)}
-              onGlb={() => void exportGlb(modelUrl.current, `${manifest.id}.glb`)}
-            />
-          </>
-        )}
-      </aside>
     </div>
   );
 }

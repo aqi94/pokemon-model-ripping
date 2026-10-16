@@ -1,0 +1,77 @@
+{
+ "schema": 1,
+ "scene": "indoor_hotel",
+ "profile": "indoor",
+ "locks": {
+  "rim": 0
+ },
+ "seeds": [
+  "indoorWindow",
+  "indoorWarm"
+ ],
+ "bestSeed": "restart 1",
+ "passes": 2,
+ "seedLog": [
+  {
+   "seed": "indoorWindow",
+   "start": 4.98,
+   "end": 4.93
+  },
+  {
+   "seed": "indoorWarm",
+   "start": 20.72,
+   "end": 5.35
+  },
+  {
+   "seed": "restart 1",
+   "start": 6.31,
+   "end": 4.91
+  }
+ ],
+ "env": {
+  "ambient": 2.35,
+  "key": 0.3,
+  "azimuth": 160,
+  "elevation": 5,
+  "keyTemp": 4900,
+  "back": 0.8,
+  "backAzimuth": -153,
+  "backElevation": 15,
+  "backTemp": 9500,
+  "skyTemp": 6000,
+  "ground": "#af8680",
+  "warmth": 0,
+  "shadow": 0.4,
+  "rim": 0,
+  "detail": 0.5,
+  "exposure": 2,
+  "toneMapping": "agx",
+  "contrast": 1.35,
+  "saturation": 1,
+  "gi": 0.1
+ },
+ "score": {
+  "mean": 4.91,
+  "perShot": {
+   "hotel_detective_handclap_01": {
+    "dE": 4.91,
+    "weight": 1,
+    "regions": {
+     "hair_crown": 6,
+     "hair_fringe": 5.2,
+     "skin_cheek": 6.2,
+     "coat_lapel": 5.3,
+     "coat_shoulder": 5.6,
+     "coat_front": 0.4,
+     "coat_sleeve": 3.4,
+     "pants": 7.3
+    }
+   }
+  }
+ },
+ "shots": [
+  "hotel_detective_handclap_01"
+ ],
+ "fittedAt": "2026-10-16T14:17:54.612Z",
+ "tool": "fit_scene.mjs"
+}

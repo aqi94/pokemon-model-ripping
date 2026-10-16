@@ -1,0 +1,70 @@
+{
+ "schema": 1,
+ "scene": "lumiose_day_overcast",
+ "profile": "outdoor",
+ "locks": {},
+ "seeds": [
+  "overcast",
+  "studio"
+ ],
+ "bestSeed": "restart 1",
+ "passes": 3,
+ "seedLog": [
+  {
+   "seed": "overcast",
+   "start": 10.39,
+   "end": 6.42
+  },
+  {
+   "seed": "studio",
+   "start": 13.42,
+   "end": 6.47
+  },
+  {
+   "seed": "restart 1",
+   "start": 7.39,
+   "end": 6.23
+  }
+ ],
+ "env": {
+  "ambient": 2.067,
+  "key": 0.5,
+  "azimuth": 3.4,
+  "elevation": 50,
+  "keyTemp": 5250,
+  "back": 0,
+  "backAzimuth": 90,
+  "backElevation": 25,
+  "backTemp": 6500,
+  "skyTemp": 12000,
+  "ground": "#c18268",
+  "warmth": 0,
+  "shadow": 0,
+  "rim": 0.05,
+  "detail": 0.5,
+  "exposure": 2.083,
+  "toneMapping": "agx",
+  "contrast": 1.5,
+  "saturation": 0.95,
+  "gi": 0
+ },
+ "score": {
+  "mean": 6.23,
+  "perShot": {
+   "lumiose_day_overcast_taunie_01": {
+    "dE": 6.23,
+    "weight": 1,
+    "regions": {
+     "body_1": 2.6,
+     "body_2": 2.6,
+     "face_skin_1": 11.1
+    }
+   }
+  }
+ },
+ "shots": [
+  "lumiose_day_overcast_taunie_01"
+ ],
+ "fittedAt": "2026-10-16T14:44:22.694Z",
+ "tool": "fit_scene.mjs"
+}

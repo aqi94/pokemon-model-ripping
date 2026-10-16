@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { PartInfo } from '../types';
 import { Accordion } from './Accordion';
 
@@ -7,11 +8,14 @@ interface Props {
   driven?: string[];
   onToggle: (node: string, v: boolean) => void;
   onAll: (v: boolean) => void;
+  /** extra controls shown at the top of the section (held item) */
+  children?: ReactNode;
 }
 
-export function PartsSection({ parts, visible, driven = [], onToggle, onAll }: Props) {
+export function PartsSection({ parts, visible, driven = [], onToggle, onAll, children }: Props) {
   return (
     <Accordion title="Model Parts">
+      {children}
       <div className="row">
         <button className="btn small" onClick={() => onAll(true)}>Show all</button>
         <button className="btn small" onClick={() => onAll(false)}>Hide all</button>

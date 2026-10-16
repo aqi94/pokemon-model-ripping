@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ClipInfo } from '../types';
 import type { PlaybackState } from '../scene/animation';
-import { Accordion } from './Accordion';
 
 const ORDER = ['idle', 'move', 'battle', 'emote', 'other'];
 
@@ -9,14 +8,10 @@ interface Props {
   clips: ClipInfo[];
   state: PlaybackState;
   onSelect: (name: string) => void;
-  onPrev: () => void;
-  onNext: () => void;
-  onTogglePause: () => void;
-  onScrub: (frame: number) => void;
-  onCycleScale: () => void;
 }
 
-export function AnimationsSection({ clips, state, onSelect, onPrev, onNext, onTogglePause, onScrub, onCycleScale }: Props) {
+/** Clip list (transport + timeline live in the bottom Timeline bar). */
+export function AnimationsSection({ clips, state, onSelect }: Props) {
   const [q, setQ] = useState('');
   const activeRef = useRef<HTMLButtonElement>(null);
   const groups = useMemo(() => {
@@ -34,7 +29,7 @@ export function AnimationsSection({ clips, state, onSelect, onPrev, onNext, onTo
   useEffect(() => { activeRef.current?.scrollIntoView({ block: 'nearest' }); }, [state.clip]);
 
   return (
-    <Accordion title="Animations">
+    <div className="picker">
       <input className="text" placeholder="Filter animations..." value={q} onChange={(e) => setQ(e.target.value)} />
       <div className="anim-list" role="listbox">
         {groups.map(([cat, list]) => (
@@ -57,27 +52,6 @@ export function AnimationsSection({ clips, state, onSelect, onPrev, onNext, onTo
         ))}
         {groups.length === 0 && <div className="dim pad">No matches</div>}
       </div>
-      <div className="row">
-        <button className="btn" onClick={onPrev} title="Previous (Left)">&#9664; Prev</button>
-        <button className="btn primary" onClick={onTogglePause} title="Play/Pause (P)">{state.paused ? '▶ Play' : '❚❚ Pause'}</button>
-        <button className="btn" onClick={onNext} title="Next (Right)">Next &#9654;</button>
-      </div>
-      <div className="row timeline">
-        <input
-          type="range"
-          min={0}
-          max={Math.max(0, state.frameCount - 1)}
-          step={1}
-          value={state.frame}
-          onChange={(e) => onScrub(Number(e.target.value))}
-          aria-label="Timeline"
-        />
-      </div>
-      <div className="row between">
-        <span className="dim">Frame {state.frame} / {Math.max(0, state.frameCount - 1)}</span>
-        <button className="btn small" onClick={onCycleScale} title="Time scale (T)">{state.timeScale}x</button>
-      </div>
-      <div className="dim hint">Keys: &larr; &rarr; clip, P pause, T speed</div>
-    </Accordion>
+    </div>
   );
 }

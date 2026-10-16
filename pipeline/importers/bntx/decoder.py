@@ -76,7 +76,7 @@ def _decode_pixels(base: int, ftype: int, w: int, h: int, lin: bytes) -> np.ndar
             zb = np.round((z * 0.5 + 0.5) * 255).astype(np.uint8)
             rgba = np.dstack([px[..., 0], px[..., 1], zb, np.full_like(zb, 255)])
         elif name == "BC6H":
-            rgba = _bgra_to_rgba(t2d.decode_bc6(lin, pw, ph, False), pw, ph)
+            rgba = _bgra_to_rgba(t2d.decode_bc6(lin, pw, ph), pw, ph)
         elif name.startswith("ASTC"):
             rgba = _bgra_to_rgba(t2d.decode_astc(lin, pw, ph, bw, bh), pw, ph)
         else:
