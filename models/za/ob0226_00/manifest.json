@@ -1,0 +1,50 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0226_00",
+ "kind": "object",
+ "displayName": "Parallel Ball",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "upperobj_mesh",
+   "label": "upperobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lowerobj_mesh",
+   "label": "lowerobj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 8,
+  "meshes": 2,
+  "triangles": 1066,
+  "textures": 7,
+  "clips": 0,
+  "glbBytes": 238724
+ },
+ "source": [
+  "ik_chara/model_ob/ob0226_00_parallelball/"
+ ],
+ "extras": {
+  "item": "parallelball",
+  "species": "ob0226",
+  "form": ""
+ }
+}

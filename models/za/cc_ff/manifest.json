@@ -1,0 +1,2138 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "left_attach",
+   "side": "left",
+   "clips": [
+    "defaultwait01_loop",
+    "defaultwait02_start",
+    "defaultwait02_loop",
+    "defaultwait02_end",
+    "def01_idle01",
+    "def02_idle01",
+    "turn01_r000",
+    "turn01_r090",
+    "turn01_r180",
+    "turn01_l000",
+    "turn01_l090",
+    "turn01_l180",
+    "turnmove01_r090",
+    "turnmove01_l090",
+    "walk01_000_start",
+    "walk01_000_loop",
+    "walk01_000_end",
+    "run01_000_start",
+    "run01_000_loop",
+    "run01_000_end",
+    "sit01_start",
+    "sit01_loop",
+    "sit01_end",
+    "sit02_loop",
+    "sit03_start",
+    "sit03_loop",
+    "sit03_end",
+    "sit04_loop",
+    "sitspeak01_loop",
+    "sitspeak02_loop",
+    "sitspeak03_loop",
+    "sitspeak04_loop",
+    "getpass01",
+    "yes01",
+    "no01",
+    "search01_start",
+    "search01_loop",
+    "search01_end",
+    "speak01_loop",
+    "speak02_loop",
+    "glad01",
+    "surprise01",
+    "grief01",
+    "think01_start",
+    "think01_loop",
+    "think01_end",
+    "byebye01_start",
+    "byebye01_loop",
+    "byebye01_end",
+    "cheer01_start",
+    "cheer01_loop",
+    "cheer01_end",
+    "battlewait01_start",
+    "battlewait01_loop",
+    "battlewait01_end",
+    "btl01_idle01",
+    "ballthrow01",
+    "order01",
+    "advent01_start",
+    "advent01_loop",
+    "advent01_end",
+    "lose01_start",
+    "lose01_loop",
+    "lose01_end",
+    "landscape01_loop",
+    "landscape02_loop",
+    "landscape03_loop",
+    "landscape04_loop",
+    "landscape05_loop",
+    "landscape06_loop",
+    "landscape07_loop",
+    "landscape08_loop",
+    "landscape09_loop",
+    "landscape10_loop",
+    "landscape11_loop",
+    "landscape12_loop",
+    "landscape13_loop",
+    "landscape14_loop",
+    "landscape18_loop",
+    "yes01",
+    "no01",
+    "ballreturn01_start",
+    "ballreturn01_loop",
+    "ballreturn01_end",
+    "damage01",
+    "speak01_loop",
+    "jobwait01_loop [00_delivery_m]",
+    "job01_idle01 [00_delivery_m]",
+    "jobmove01_loop [00_delivery_m]",
+    "jobmove01_end [00_delivery_m]",
+    "jobwait01_loop [00_delivery_f]",
+    "job01_idle01 [00_delivery_f]",
+    "jobmove01_loop [00_delivery_f]",
+    "jobmove01_end [00_delivery_f]"
+   ]
+  },
+  {
+   "bone": "right_attach",
+   "side": "right",
+   "clips": [
+    "defaultwait01_loop",
+    "defaultwait02_start",
+    "defaultwait02_loop",
+    "defaultwait02_end",
+    "def01_idle01",
+    "def02_idle01",
+    "turn01_r000",
+    "turn01_r090",
+    "turn01_r180",
+    "turn01_l000",
+    "turn01_l090",
+    "turn01_l180",
+    "turnmove01_r090",
+    "turnmove01_l090",
+    "walk01_000_start",
+    "walk01_000_loop",
+    "walk01_000_end",
+    "run01_000_start",
+    "run01_000_loop",
+    "run01_000_end",
+    "sit01_start",
+    "sit01_loop",
+    "sit01_end",
+    "sit02_loop",
+    "sit03_start",
+    "sit03_loop",
+    "sit03_end",
+    "sit04_loop",
+    "sitspeak01_loop",
+    "sitspeak02_loop",
+    "sitspeak03_loop",
+    "sitspeak04_loop",
+    "getpass01",
+    "yes01",
+    "no01",
+    "search01_start",
+    "search01_loop",
+    "search01_end",
+    "speak01_loop",
+    "speak02_loop",
+    "glad01",
+    "surprise01",
+    "grief01",
+    "think01_start",
+    "think01_loop",
+    "think01_end",
+    "byebye01_start",
+    "byebye01_loop",
+    "byebye01_end",
+    "cheer01_start",
+    "cheer01_loop",
+    "cheer01_end",
+    "battlewait01_start",
+    "battlewait01_loop",
+    "battlewait01_end",
+    "btl01_idle01",
+    "ballthrow01",
+    "order01",
+    "advent01_start",
+    "advent01_loop",
+    "advent01_end",
+    "lose01_start",
+    "lose01_loop",
+    "lose01_end",
+    "landscape01_loop",
+    "landscape02_loop",
+    "landscape03_loop",
+    "landscape04_loop",
+    "landscape05_loop",
+    "landscape06_loop",
+    "landscape07_loop",
+    "landscape08_loop",
+    "landscape09_loop",
+    "landscape10_loop",
+    "landscape11_loop",
+    "landscape12_loop",
+    "landscape13_loop",
+    "landscape14_loop",
+    "landscape18_loop",
+    "yes01",
+    "no01",
+    "ballreturn01_start",
+    "ballreturn01_loop",
+    "ballreturn01_end",
+    "damage01",
+    "speak01_loop",
+    "jobwait01_loop [00_delivery_m]",
+    "job01_idle01 [00_delivery_m]",
+    "jobmove01_loop [00_delivery_m]",
+    "jobmove01_end [00_delivery_m]",
+    "jobwait01_loop [00_delivery_f]",
+    "job01_idle01 [00_delivery_f]",
+    "jobmove01_loop [00_delivery_f]",
+    "jobmove01_end [00_delivery_f]"
+   ]
+  }
+ ],
+ "game": "za",
+ "id": "cc_ff",
+ "kind": "trainer",
+ "displayName": "NPC Fit F",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "skin",
+   "label": "Skin",
+   "options": [
+    {
+     "variant": 0,
+     "name": "tone1",
+     "label": "Tone 1",
+     "default": false
+    },
+    {
+     "variant": 1,
+     "name": "tone2",
+     "label": "Tone 2",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "tone3",
+     "label": "Tone 3",
+     "default": true
+    },
+    {
+     "variant": 3,
+     "name": "tone4",
+     "label": "Tone 4",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 1,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "defaultwait02_start",
+   "index": 2,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_loop",
+   "index": 3,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_end",
+   "index": 4,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def01_idle01",
+   "index": 11,
+   "duration": 5.8333,
+   "frameRate": 60.0,
+   "frameCount": 351,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def02_idle01",
+   "index": 15,
+   "duration": 5.8333,
+   "frameRate": 60.0,
+   "frameCount": 351,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r000",
+   "index": 20,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r090",
+   "index": 21,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r180",
+   "index": 22,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l000",
+   "index": 23,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l090",
+   "index": 24,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l180",
+   "index": 25,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_start",
+   "index": 50,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_loop",
+   "index": 51,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_end",
+   "index": 52,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_start",
+   "index": 70,
+   "duration": 0.25,
+   "frameRate": 60.0,
+   "frameCount": 16,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_loop",
+   "index": 71,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_end",
+   "index": 72,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_start",
+   "index": 270,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_loop",
+   "index": 271,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_end",
+   "index": 272,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit02_loop",
+   "index": 273,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit03_start",
+   "index": 274,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit03_loop",
+   "index": 275,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit03_end",
+   "index": 276,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit04_loop",
+   "index": 277,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak01_loop",
+   "index": 291,
+   "duration": 6.6667,
+   "frameRate": 60.0,
+   "frameCount": 401,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak02_loop",
+   "index": 296,
+   "duration": 4.8333,
+   "frameRate": 60.0,
+   "frameCount": 291,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak03_loop",
+   "index": 301,
+   "duration": 5.3333,
+   "frameRate": 60.0,
+   "frameCount": 321,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak04_loop",
+   "index": 306,
+   "duration": 5.3333,
+   "frameRate": 60.0,
+   "frameCount": 321,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "getpass01",
+   "index": 315,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "yes01",
+   "index": 320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "no01",
+   "index": 321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "search01_start",
+   "index": 340,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "search01_loop",
+   "index": 341,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "search01_end",
+   "index": 342,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak01_loop",
+   "index": 551,
+   "duration": 3.8333,
+   "frameRate": 60.0,
+   "frameCount": 231,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak02_loop",
+   "index": 554,
+   "duration": 3.8333,
+   "frameRate": 60.0,
+   "frameCount": 231,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "glad01",
+   "index": 570,
+   "duration": 3.6667,
+   "frameRate": 60.0,
+   "frameCount": 221,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "surprise01",
+   "index": 573,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "emote",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "grief01",
+   "index": 576,
+   "duration": 4.3333,
+   "frameRate": 60.0,
+   "frameCount": 261,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "think01_start",
+   "index": 600,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "think01_loop",
+   "index": 601,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "think01_end",
+   "index": 602,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "byebye01_start",
+   "index": 603,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "byebye01_loop",
+   "index": 604,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "byebye01_end",
+   "index": 605,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "cheer01_start",
+   "index": 612,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "cheer01_loop",
+   "index": 613,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "cheer01_end",
+   "index": 614,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "battlewait01_start",
+   "index": 1000,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "battlewait01_loop",
+   "index": 1001,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "battlewait01_end",
+   "index": 1002,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "btl01_idle01",
+   "index": 1011,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "ballthrow01",
+   "index": 1020,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "order01",
+   "index": 1030,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "advent01_start",
+   "index": 1060,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "advent01_loop",
+   "index": 1061,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "advent01_end",
+   "index": 1062,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "lose01_start",
+   "index": 1080,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "lose01_loop",
+   "index": 1081,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "lose01_end",
+   "index": 1082,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape01_loop",
+   "index": 4000,
+   "duration": 9.1667,
+   "frameRate": 60.0,
+   "frameCount": 551,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape02_loop",
+   "index": 4005,
+   "duration": 9.1667,
+   "frameRate": 60.0,
+   "frameCount": 551,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape03_loop",
+   "index": 4010,
+   "duration": 10.0,
+   "frameRate": 60.0,
+   "frameCount": 601,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape04_loop",
+   "index": 4015,
+   "duration": 12.5,
+   "frameRate": 60.0,
+   "frameCount": 751,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape05_loop",
+   "index": 4020,
+   "duration": 10.8333,
+   "frameRate": 60.0,
+   "frameCount": 651,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape06_loop",
+   "index": 4025,
+   "duration": 10.3333,
+   "frameRate": 60.0,
+   "frameCount": 621,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape07_loop",
+   "index": 4030,
+   "duration": 12.5,
+   "frameRate": 60.0,
+   "frameCount": 751,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape08_loop",
+   "index": 4035,
+   "duration": 5.8333,
+   "frameRate": 60.0,
+   "frameCount": 351,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape09_loop",
+   "index": 4040,
+   "duration": 8.3333,
+   "frameRate": 60.0,
+   "frameCount": 501,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape10_loop",
+   "index": 4045,
+   "duration": 12.5,
+   "frameRate": 60.0,
+   "frameCount": 751,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape11_loop",
+   "index": 4050,
+   "duration": 10.0,
+   "frameRate": 60.0,
+   "frameCount": 601,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape12_loop",
+   "index": 4055,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape13_loop",
+   "index": 4060,
+   "duration": 9.1667,
+   "frameRate": 60.0,
+   "frameCount": 551,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape14_loop",
+   "index": 4065,
+   "duration": 8.3333,
+   "frameRate": 60.0,
+   "frameCount": 501,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape18_loop",
+   "index": 4085,
+   "duration": 7.7667,
+   "frameRate": 60.0,
+   "frameCount": 467,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "yes01",
+   "index": 7320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "no01",
+   "index": 7321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "ballreturn01_start",
+   "index": 7460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "ballreturn01_loop",
+   "index": 7461,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "ballreturn01_end",
+   "index": 7462,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "damage01",
+   "index": 7500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak01_loop",
+   "index": 7551,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "jobwait01_loop [00_delivery_m]",
+   "index": 104300,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "00_delivery_m",
+   "default": false
+  },
+  {
+   "name": "job01_idle01 [00_delivery_m]",
+   "index": 104301,
+   "duration": 5.0,
+   "frameRate": 60.0,
+   "frameCount": 301,
+   "loop": false,
+   "category": "idle",
+   "group": "00_delivery_m",
+   "default": false
+  },
+  {
+   "name": "jobmove01_loop [00_delivery_m]",
+   "index": 104311,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "00_delivery_m",
+   "default": false
+  },
+  {
+   "name": "jobmove01_end [00_delivery_m]",
+   "index": 104312,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "00_delivery_m",
+   "default": false
+  },
+  {
+   "name": "jobwait01_loop [00_delivery_f]",
+   "index": 204300,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "00_delivery_f",
+   "default": false
+  },
+  {
+   "name": "job01_idle01 [00_delivery_f]",
+   "index": 204301,
+   "duration": 5.3333,
+   "frameRate": 60.0,
+   "frameCount": 321,
+   "loop": false,
+   "category": "idle",
+   "group": "00_delivery_f",
+   "default": false
+  },
+  {
+   "name": "jobmove01_loop [00_delivery_f]",
+   "index": 204311,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "00_delivery_f",
+   "default": false
+  },
+  {
+   "name": "jobmove01_end [00_delivery_f]",
+   "index": 204312,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "00_delivery_f",
+   "default": false
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "ff_face0000_00__face_mesh",
+   "label": "face",
+   "lod": 0,
+   "visible": true,
+   "group": "face",
+   "option": "ff_face0000_00"
+  },
+  {
+   "node": "ff_face0000_00__eye_default_mesh",
+   "label": "eye default",
+   "lod": 0,
+   "visible": true,
+   "group": "face",
+   "option": "ff_face0000_00"
+  },
+  {
+   "node": "ff_face0000_00__face_parts_mesh",
+   "label": "face parts",
+   "lod": 0,
+   "visible": true,
+   "group": "face",
+   "option": "ff_face0000_00"
+  },
+  {
+   "node": "ff_face0000_00__earrings_mesh",
+   "label": "earrings",
+   "lod": 0,
+   "visible": true,
+   "group": "face",
+   "option": "ff_face0000_00"
+  },
+  {
+   "node": "ff_face0001_00__eye_default_mesh",
+   "label": "eye default",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face0001_00"
+  },
+  {
+   "node": "ff_face0001_00__face_mesh",
+   "label": "face",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face0001_00"
+  },
+  {
+   "node": "ff_face0001_00__face_parts_mesh",
+   "label": "face parts",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face0001_00"
+  },
+  {
+   "node": "ff_face0002_00__face_mesh",
+   "label": "face",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face0002_00"
+  },
+  {
+   "node": "ff_face0002_00__eye_default_mesh",
+   "label": "eye default",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face0002_00"
+  },
+  {
+   "node": "ff_face0002_00__face_parts_mesh",
+   "label": "face parts",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face0002_00"
+  },
+  {
+   "node": "ff_face1000_00__face_mesh",
+   "label": "face",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face1000_00"
+  },
+  {
+   "node": "ff_face1000_00__face_parts_mesh",
+   "label": "face parts",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face1000_00"
+  },
+  {
+   "node": "ff_face1000_00__eye_default_mesh",
+   "label": "eye default",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face1000_00"
+  },
+  {
+   "node": "ff_face1001_00__eye_default_mesh",
+   "label": "eye default",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face1001_00"
+  },
+  {
+   "node": "ff_face1001_00__face_mesh",
+   "label": "face",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face1001_00"
+  },
+  {
+   "node": "ff_face1001_00__face_parts_mesh",
+   "label": "face parts",
+   "lod": 0,
+   "visible": false,
+   "group": "face",
+   "option": "ff_face1001_00"
+  },
+  {
+   "node": "ff_hrs0000_00__hairstyle_mesh",
+   "label": "hairstyle",
+   "lod": 0,
+   "visible": true,
+   "group": "hrs",
+   "option": "ff_hrs0000_00"
+  },
+  {
+   "node": "ff_hrs0001_00__obj_hrs_mesh",
+   "label": "obj hrs",
+   "lod": 0,
+   "visible": false,
+   "group": "hrs",
+   "option": "ff_hrs0001_00"
+  },
+  {
+   "node": "ff_hrs0001_00__hairstyle_mesh",
+   "label": "hairstyle",
+   "lod": 0,
+   "visible": false,
+   "group": "hrs",
+   "option": "ff_hrs0001_00"
+  },
+  {
+   "node": "ff_hrs0002_00__hairstyle_mesh",
+   "label": "hairstyle",
+   "lod": 0,
+   "visible": false,
+   "group": "hrs",
+   "option": "ff_hrs0002_00"
+  },
+  {
+   "node": "ff_hrs0002_00__obj_hrs_mesh",
+   "label": "obj hrs",
+   "lod": 0,
+   "visible": false,
+   "group": "hrs",
+   "option": "ff_hrs0002_00"
+  },
+  {
+   "node": "ff_drs0000_00__body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true,
+   "group": "drs",
+   "option": "ff_drs0000_00"
+  },
+  {
+   "node": "ff_drs0000_00__body_skin_mesh",
+   "label": "body skin",
+   "lod": 0,
+   "visible": true,
+   "group": "drs",
+   "option": "ff_drs0000_00"
+  },
+  {
+   "node": "ff_drs0000_00__baggage_mesh",
+   "label": "baggage",
+   "lod": 0,
+   "visible": false,
+   "group": "drs",
+   "option": "ff_drs0000_00",
+   "accessory": true
+  },
+  {
+   "node": "ff_drs0001_00__body_skin_mesh",
+   "label": "body skin",
+   "lod": 0,
+   "visible": false,
+   "group": "drs",
+   "option": "ff_drs0001_00"
+  },
+  {
+   "node": "ff_drs0001_00__body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": false,
+   "group": "drs",
+   "option": "ff_drs0001_00"
+  },
+  {
+   "node": "ff_drs0001_00__obj_drs_mesh",
+   "label": "obj drs",
+   "lod": 0,
+   "visible": false,
+   "group": "drs",
+   "option": "ff_drs0001_00",
+   "accessory": true
+  },
+  {
+   "node": "ff_drs0002_00__body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": false,
+   "group": "drs",
+   "option": "ff_drs0002_00"
+  },
+  {
+   "node": "ff_drs0002_00__body_skin_mesh",
+   "label": "body skin",
+   "lod": 0,
+   "visible": false,
+   "group": "drs",
+   "option": "ff_drs0002_00"
+  },
+  {
+   "node": "ff_drs0002_00__obj_drs_mesh",
+   "label": "obj drs",
+   "lod": 0,
+   "visible": false,
+   "group": "drs",
+   "option": "ff_drs0002_00",
+   "accessory": true
+  },
+  {
+   "node": "ff_drs0002_00__obj_drs_02_mesh",
+   "label": "obj drs 02",
+   "lod": 0,
+   "visible": false,
+   "group": "drs",
+   "option": "ff_drs0002_00",
+   "accessory": true
+  }
+ ],
+ "partGroups": [
+  {
+   "name": "face",
+   "label": "Face",
+   "options": [
+    {
+     "id": "ff_face0000_00",
+     "label": "Hunk F",
+     "default": true,
+     "palettes": [
+      {
+       "label": "Eyes",
+       "materials": [
+        "ff_face0000_00__l_eye",
+        "ff_face0000_00__r_eye"
+       ],
+       "divide": 16,
+       "indices": [
+        1,
+        2,
+        2,
+        2
+       ],
+       "layers": [
+        1,
+        2
+       ],
+       "zones": [
+        "#8d8d8d",
+        "#8d8d8d",
+        "#4c7c67",
+        "#4c7c67",
+        "#5d5a5e",
+        "#5d5a5e",
+        "#71c5a7",
+        "#71c5a7",
+        "#cfbfad",
+        "#685751",
+        "#ae9678",
+        "#d38d71",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e"
+       ]
+      },
+      {
+       "label": "Eyebrows",
+       "materials": [
+        "ff_face0000_00__eyebrow"
+       ],
+       "divide": 16,
+       "indices": [
+        13,
+        9,
+        1,
+        1
+       ],
+       "layers": [
+        1,
+        2
+       ],
+       "zones": [
+        "#8d8d8d",
+        "#8d8d8d",
+        "#4c7c67",
+        "#4c7c67",
+        "#5d5a5e",
+        "#5d5a5e",
+        "#71c5a7",
+        "#71c5a7",
+        "#cfbfad",
+        "#685751",
+        "#ae9678",
+        "#d38d71",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e"
+       ]
+      }
+     ],
+     "nodes": [
+      "ff_face0000_00__face_mesh",
+      "ff_face0000_00__eye_default_mesh",
+      "ff_face0000_00__face_parts_mesh",
+      "ff_face0000_00__earrings_mesh"
+     ]
+    },
+    {
+     "id": "ff_face0001_00",
+     "label": "Police F",
+     "default": false,
+     "palettes": [
+      {
+       "label": "Eyes",
+       "materials": [
+        "ff_face0001_00__l_eye",
+        "ff_face0001_00__r_eye"
+       ],
+       "divide": 32,
+       "indices": [
+        1,
+        2,
+        3,
+        1
+       ],
+       "layers": [
+        1,
+        2
+       ],
+       "zones": [
+        "#323232",
+        "#3dc3ed",
+        "#3dc3ed",
+        "#323232",
+        "#3dc2ed",
+        "#3dc2ed",
+        "#323232",
+        "#3dc3ed",
+        "#3dc3ed",
+        "#323232",
+        "#3dc2ed",
+        "#3dc2ed",
+        "#302c25",
+        "#657366",
+        "#723a36",
+        "#836958",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e"
+       ]
+      },
+      {
+       "label": "Eyebrows",
+       "materials": [
+        "ff_face0001_00__eyebrow"
+       ],
+       "divide": 32,
+       "indices": [
+        20,
+        16,
+        1,
+        1
+       ],
+       "layers": [
+        1,
+        2
+       ],
+       "zones": [
+        "#323232",
+        "#3dc3ed",
+        "#3dc3ed",
+        "#323232",
+        "#3dc2ed",
+        "#3dc2ed",
+        "#323232",
+        "#3dc3ed",
+        "#3dc3ed",
+        "#323232",
+        "#3dc2ed",
+        "#3dc2ed",
+        "#302c25",
+        "#657366",
+        "#723a36",
+        "#836958",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e"
+       ]
+      }
+     ],
+     "nodes": [
+      "ff_face0001_00__eye_default_mesh",
+      "ff_face0001_00__face_mesh",
+      "ff_face0001_00__face_parts_mesh"
+     ]
+    },
+    {
+     "id": "ff_face0002_00",
+     "label": "Delivery F",
+     "default": false,
+     "palettes": [
+      {
+       "label": "Eyes",
+       "materials": [
+        "ff_face0002_00__l_eye",
+        "ff_face0002_00__r_eye"
+       ],
+       "divide": 16,
+       "indices": [
+        3,
+        4,
+        1,
+        1
+       ],
+       "layers": [
+        1,
+        2
+       ],
+       "zones": [
+        "#20201e",
+        "#77799b",
+        "#20201e",
+        "#61b092",
+        "#20201e",
+        "#63463a",
+        "#20201e",
+        "#a3e3f7",
+        "#ca969a",
+        "#5c5c5c",
+        "#95795e",
+        "#c6be92",
+        "#20201e",
+        "#20201e",
+        "#20201e",
+        "#20201e"
+       ]
+      },
+      {
+       "label": "Eyebrows",
+       "materials": [
+        "ff_face0002_00__eyebrow"
+       ],
+       "divide": 16,
+       "indices": [
+        14,
+        10,
+        1,
+        1
+       ],
+       "layers": [
+        1,
+        2
+       ],
+       "zones": [
+        "#20201e",
+        "#77799b",
+        "#20201e",
+        "#61b092",
+        "#20201e",
+        "#63463a",
+        "#20201e",
+        "#a3e3f7",
+        "#ca969a",
+        "#5c5c5c",
+        "#95795e",
+        "#c6be92",
+        "#20201e",
+        "#20201e",
+        "#20201e",
+        "#20201e"
+       ]
+      }
+     ],
+     "nodes": [
+      "ff_face0002_00__face_mesh",
+      "ff_face0002_00__eye_default_mesh",
+      "ff_face0002_00__face_parts_mesh"
+     ]
+    },
+    {
+     "id": "ff_face1000_00",
+     "label": "Common A",
+     "default": false,
+     "nodes": [
+      "ff_face1000_00__face_mesh",
+      "ff_face1000_00__face_parts_mesh",
+      "ff_face1000_00__eye_default_mesh"
+     ]
+    },
+    {
+     "id": "ff_face1001_00",
+     "label": "Common B",
+     "default": false,
+     "nodes": [
+      "ff_face1001_00__eye_default_mesh",
+      "ff_face1001_00__face_mesh",
+      "ff_face1001_00__face_parts_mesh"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hrs",
+   "label": "Hair",
+   "options": [
+    {
+     "id": "ff_hrs0000_00",
+     "label": "Hunk F",
+     "default": true,
+     "palettes": [
+      {
+       "label": "Hair",
+       "materials": [
+        "ff_hrs0000_00__hairstyle"
+       ],
+       "divide": 4,
+       "indices": [
+        1,
+        1,
+        1,
+        1
+       ],
+       "layers": [
+        1
+       ],
+       "zones": [
+        "#cfbfad",
+        "#685751",
+        "#ae9678",
+        "#d38d71"
+       ]
+      }
+     ],
+     "nodes": [
+      "ff_hrs0000_00__hairstyle_mesh"
+     ]
+    },
+    {
+     "id": "ff_hrs0001_00",
+     "label": "Police F",
+     "default": false,
+     "palettes": [
+      {
+       "label": "Hair",
+       "materials": [
+        "ff_hrs0001_00__hairstyle"
+       ],
+       "divide": 4,
+       "indices": [
+        4,
+        1,
+        1,
+        1
+       ],
+       "layers": [
+        1
+       ],
+       "zones": [
+        "#332b25",
+        "#667166",
+        "#723a36",
+        "#836958"
+       ]
+      }
+     ],
+     "nodes": [
+      "ff_hrs0001_00__obj_hrs_mesh",
+      "ff_hrs0001_00__hairstyle_mesh"
+     ]
+    },
+    {
+     "id": "ff_hrs0002_00",
+     "label": "Delivery F",
+     "default": false,
+     "palettes": [
+      {
+       "label": "Hair",
+       "materials": [
+        "ff_hrs0002_00__hairstyle"
+       ],
+       "divide": 4,
+       "indices": [
+        2,
+        1,
+        1,
+        1
+       ],
+       "layers": [
+        1
+       ],
+       "zones": [
+        "#ca969a",
+        "#5c5c5c",
+        "#95795e",
+        "#c6be92"
+       ]
+      }
+     ],
+     "nodes": [
+      "ff_hrs0002_00__hairstyle_mesh",
+      "ff_hrs0002_00__obj_hrs_mesh"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "drs",
+   "label": "Outfit",
+   "options": [
+    {
+     "id": "ff_drs0000_00",
+     "label": "Hunk F",
+     "default": true,
+     "palettes": [
+      {
+       "label": "Bottom",
+       "materials": [
+        "ff_drs0000_00__bottoms"
+       ],
+       "divide": 32,
+       "indices": [
+        17,
+        18,
+        19,
+        20
+       ],
+       "layers": [
+        1,
+        2,
+        3,
+        4
+       ],
+       "zones": [
+        "#ddd4c9",
+        "#ddd4c9",
+        "#656565",
+        "#656565",
+        "#8e8e8e",
+        "#eeeeee",
+        "#e4e2dd",
+        "#e4e2dd",
+        "#666673",
+        "#f0f0ee",
+        "#88a3d3",
+        "#88a3d3",
+        "#cfbdb3",
+        "#eef0f0",
+        "#e4e2dd",
+        "#e4e2dd",
+        "#9a9a9a",
+        "#ddd4c9",
+        "#595959",
+        "#9a9a9a",
+        "#4b515b",
+        "#724e42",
+        "#554d4f",
+        "#494f5b",
+        "#8d93a9",
+        "#e6dedc",
+        "#926053",
+        "#6e7587",
+        "#cfc7a2",
+        "#e6dedc",
+        "#6c6c6c",
+        "#b6a386"
+       ]
+      },
+      {
+       "label": "Top",
+       "materials": [
+        "ff_drs0000_00__tops"
+       ],
+       "divide": 32,
+       "indices": [
+        1,
+        2,
+        3,
+        2
+       ],
+       "layers": [
+        1,
+        2,
+        3,
+        4
+       ],
+       "zones": [
+        "#ddd4c9",
+        "#ddd4c9",
+        "#656565",
+        "#656565",
+        "#8e8e8e",
+        "#eeeeee",
+        "#e4e2dd",
+        "#e4e2dd",
+        "#666673",
+        "#f0f0ee",
+        "#88a3d3",
+        "#88a3d3",
+        "#cfbdb3",
+        "#eef0f0",
+        "#e4e2dd",
+        "#e4e2dd",
+        "#9a9a9a",
+        "#ddd4c9",
+        "#595959",
+        "#9a9a9a",
+        "#4b515b",
+        "#724e42",
+        "#554d4f",
+        "#494f5b",
+        "#8d93a9",
+        "#e6dedc",
+        "#926053",
+        "#6e7587",
+        "#cfc7a2",
+        "#e6dedc",
+        "#6c6c6c",
+        "#b6a386"
+       ]
+      },
+      {
+       "label": "Accessory",
+       "materials": [
+        "ff_drs0000_00__obj_drs"
+       ],
+       "divide": 8,
+       "indices": [
+        1,
+        2,
+        1,
+        1
+       ],
+       "layers": [
+        1,
+        2
+       ],
+       "zones": [
+        "#ebebeb",
+        "#fcc20c",
+        "#4d797d",
+        "#c8c8c8",
+        "#585858",
+        "#ffc70f",
+        "#783e3e",
+        "#ffc70f"
+       ]
+      }
+     ],
+     "nodes": [
+      "ff_drs0000_00__body_mesh",
+      "ff_drs0000_00__body_skin_mesh",
+      "ff_drs0000_00__baggage_mesh"
+     ]
+    },
+    {
+     "id": "ff_drs0001_00",
+     "label": "Police F",
+     "default": false,
+     "nodes": [
+      "ff_drs0001_00__body_skin_mesh",
+      "ff_drs0001_00__body_mesh",
+      "ff_drs0001_00__obj_drs_mesh"
+     ]
+    },
+    {
+     "id": "ff_drs0002_00",
+     "label": "Delivery F",
+     "default": false,
+     "nodes": [
+      "ff_drs0002_00__body_mesh",
+      "ff_drs0002_00__body_skin_mesh",
+      "ff_drs0002_00__obj_drs_mesh",
+      "ff_drs0002_00__obj_drs_02_mesh"
+     ]
+    }
+   ]
+  }
+ ],
+ "stats": {
+  "joints": 229,
+  "meshes": 31,
+  "triangles": 30202,
+  "textures": 223,
+  "clips": 94,
+  "glbBytes": 31720124
+ },
+ "source": [
+  "ik_chara/model_cc_base/fm/"
+ ],
+ "extras": {
+  "cc_base": "ff",
+  "cc_skeleton": "fm",
+  "species": "cc_ff",
+  "form": ""
+ }
+}

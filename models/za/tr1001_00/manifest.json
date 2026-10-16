@@ -1,0 +1,1278 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "left_attach",
+   "side": "left",
+   "clips": [
+    "defaultwait01_loop",
+    "defaultwait02_start",
+    "defaultwait02_loop",
+    "defaultwait02_end",
+    "def01_idle01",
+    "def01_idle02",
+    "def02_idle01",
+    "def02_idle02",
+    "turn01_r000",
+    "turn01_r090",
+    "turn01_r180",
+    "turn01_l000",
+    "turn01_l090",
+    "turn01_l180",
+    "turnmove01_r090",
+    "turnmove01_l090",
+    "walk01_000_start",
+    "walk01_000_loop",
+    "walk01_000_end",
+    "run01_000_start",
+    "run01_000_loop",
+    "run01_000_end",
+    "sit01_start",
+    "sit01_loop",
+    "sit01_end",
+    "sit02_loop",
+    "sitspeak01_loop",
+    "sitspeak02_loop",
+    "getpass01",
+    "yes01",
+    "no01",
+    "speak01_loop",
+    "speak02_loop",
+    "glad01",
+    "surprise01",
+    "grief01",
+    "think01_start",
+    "think01_loop",
+    "think01_end",
+    "gesture01_start",
+    "gesture01_loop",
+    "gesture01_end",
+    "onceaction01",
+    "onceaction02",
+    "loopaction01_start",
+    "loopaction01_loop",
+    "loopaction01_end",
+    "loopaction02_loop",
+    "yes01",
+    "no01",
+    "speak01_loop",
+    "eyeblink01",
+    "iris01",
+    "mouth01",
+    "mouth02",
+    "mouth03",
+    "mouth04",
+    "d130_tr1001_c06 [demo d130]"
+   ]
+  },
+  {
+   "bone": "right_attach",
+   "side": "right",
+   "clips": [
+    "defaultwait01_loop",
+    "defaultwait02_start",
+    "defaultwait02_loop",
+    "defaultwait02_end",
+    "def01_idle01",
+    "def02_idle01",
+    "def02_idle02",
+    "turn01_r000",
+    "turn01_r090",
+    "turn01_r180",
+    "turn01_l000",
+    "turn01_l090",
+    "turn01_l180",
+    "turnmove01_r090",
+    "turnmove01_l090",
+    "walk01_000_start",
+    "walk01_000_loop",
+    "walk01_000_end",
+    "run01_000_start",
+    "run01_000_loop",
+    "run01_000_end",
+    "sit01_start",
+    "sit01_loop",
+    "sit01_end",
+    "sit02_loop",
+    "sitspeak01_loop",
+    "sitspeak02_loop",
+    "getpass01",
+    "yes01",
+    "no01",
+    "speak01_loop",
+    "speak02_loop",
+    "glad01",
+    "surprise01",
+    "grief01",
+    "think01_start",
+    "think01_loop",
+    "think01_end",
+    "gesture01_start",
+    "gesture01_loop",
+    "gesture01_end",
+    "onceaction02",
+    "loopaction01_start",
+    "loopaction01_loop",
+    "loopaction01_end",
+    "loopaction02_loop",
+    "yes01",
+    "no01",
+    "speak01_loop",
+    "d130_tr1001_c06 [demo d130]"
+   ]
+  }
+ ],
+ "game": "za",
+ "id": "tr1001_00",
+ "kind": "trainer",
+ "displayName": "Ca",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 1,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "defaultwait02_start",
+   "index": 2,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_loop",
+   "index": 3,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_end",
+   "index": 4,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def01_idle01",
+   "index": 11,
+   "duration": 3.1667,
+   "frameRate": 60.0,
+   "frameCount": 191,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def01_idle02",
+   "index": 12,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def02_idle01",
+   "index": 15,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def02_idle02",
+   "index": 16,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r000",
+   "index": 20,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r090",
+   "index": 21,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r180",
+   "index": 22,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l000",
+   "index": 23,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l090",
+   "index": 24,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l180",
+   "index": 25,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_start",
+   "index": 50,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_loop",
+   "index": 51,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_end",
+   "index": 52,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_start",
+   "index": 70,
+   "duration": 0.25,
+   "frameRate": 60.0,
+   "frameCount": 16,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_loop",
+   "index": 71,
+   "duration": 0.6,
+   "frameRate": 60.0,
+   "frameCount": 37,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_end",
+   "index": 72,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_start",
+   "index": 270,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_loop",
+   "index": 271,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "hairstyle_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "obj_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "face_parts_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_default_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "face_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sit01_end",
+   "index": 272,
+   "duration": 2.1,
+   "frameRate": 60.0,
+   "frameCount": 127,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit02_loop",
+   "index": 273,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak01_loop",
+   "index": 291,
+   "duration": 3.8333,
+   "frameRate": 60.0,
+   "frameCount": 231,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak02_loop",
+   "index": 296,
+   "duration": 3.8333,
+   "frameRate": 60.0,
+   "frameCount": 231,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "getpass01",
+   "index": 315,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "yes01",
+   "index": 320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "no01",
+   "index": 321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak01_loop",
+   "index": 551,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak02_loop",
+   "index": 554,
+   "duration": 3.6667,
+   "frameRate": 60.0,
+   "frameCount": 221,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "glad01",
+   "index": 570,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "surprise01",
+   "index": 573,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "emote",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "grief01",
+   "index": 576,
+   "duration": 2.9333,
+   "frameRate": 60.0,
+   "frameCount": 177,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "think01_start",
+   "index": 600,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "think01_loop",
+   "index": 601,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "think01_end",
+   "index": 602,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "gesture01_start",
+   "index": 606,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "gesture01_loop",
+   "index": 607,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "gesture01_end",
+   "index": 608,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "onceaction01",
+   "index": 900,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "onceaction02",
+   "index": 901,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction01_start",
+   "index": 930,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction01_loop",
+   "index": 931,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction01_end",
+   "index": 932,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction02_loop",
+   "index": 934,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "yes01",
+   "index": 7320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "no01",
+   "index": 7321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak01_loop",
+   "index": 7551,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eyeblink01",
+   "index": 8000,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "iris01",
+   "index": 8050,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth01",
+   "index": 8101,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth02",
+   "index": 8102,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth03",
+   "index": 8103,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth04",
+   "index": 8104,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye01",
+   "index": 8201,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face01",
+   "index": 8201,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye02",
+   "index": 8202,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face02",
+   "index": 8202,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye03",
+   "index": 8203,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face03",
+   "index": 8203,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye04",
+   "index": 8204,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face04",
+   "index": 8204,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye05",
+   "index": 8205,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face05",
+   "index": 8205,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye06",
+   "index": 8206,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face06",
+   "index": 8206,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye07",
+   "index": 8207,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face07",
+   "index": 8207,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye08",
+   "index": 8208,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face08",
+   "index": 8208,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye09",
+   "index": 8209,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face09",
+   "index": 8209,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye10",
+   "index": 8210,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face10",
+   "index": 8210,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye11",
+   "index": 8211,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face11",
+   "index": 8211,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face12",
+   "index": 8212,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face13",
+   "index": 8213,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face14",
+   "index": 8214,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face15",
+   "index": 8215,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face16",
+   "index": 8216,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face17",
+   "index": 8217,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face18",
+   "index": 8218,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye19",
+   "index": 8219,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face19",
+   "index": 8219,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "d130_tr1001_c06 [demo d130]",
+   "index": 213006,
+   "duration": 15.6667,
+   "frameRate": 60.0,
+   "frameCount": 941,
+   "loop": false,
+   "category": "other",
+   "group": "demo d130",
+   "default": false
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "hairstyle_mesh",
+   "label": "hairstyle",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_mesh",
+   "label": "obj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "face_parts_mesh",
+   "label": "face parts",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "eye_default_mesh",
+   "label": "eye default",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "face_mesh",
+   "label": "face",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "hairstyle_mesh_lod1",
+   "label": "hairstyle lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "face_parts_mesh_lod1",
+   "label": "face parts lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "eye_default_mesh_lod1",
+   "label": "eye default lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "face_mesh_lod1",
+   "label": "face lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "obj_mesh_lod1",
+   "label": "obj lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "face_mesh_lod2",
+   "label": "face lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "face_parts_mesh_lod2",
+   "label": "face parts lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "hairstyle_mesh_lod2",
+   "label": "hairstyle lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "eye_default_mesh_lod2",
+   "label": "eye default lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "obj_mesh_lod2",
+   "label": "obj lod2",
+   "lod": 2,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 167,
+  "meshes": 18,
+  "triangles": 16080,
+  "textures": 43,
+  "clips": 89,
+  "glbBytes": 20873748
+ },
+ "source": [
+  "ik_chara/model_uq/tr1001_00_ca/"
+ ],
+ "extras": {
+  "species": "tr1001",
+  "form": ""
+ }
+}

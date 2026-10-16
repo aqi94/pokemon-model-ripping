@@ -1,0 +1,50 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0208_00",
+ "kind": "object",
+ "displayName": "Nest Ball",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "upperobj_mesh",
+   "label": "upperobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lowerobj_mesh",
+   "label": "lowerobj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 8,
+  "meshes": 2,
+  "triangles": 1026,
+  "textures": 7,
+  "clips": 0,
+  "glbBytes": 199356
+ },
+ "source": [
+  "ik_chara/model_ob/ob0208_00_nestball/"
+ ],
+ "extras": {
+  "item": "nestball",
+  "species": "ob0208",
+  "form": ""
+ }
+}

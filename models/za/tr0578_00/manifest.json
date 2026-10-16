@@ -1,0 +1,71 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "tr0578_00",
+ "kind": "trainer",
+ "displayName": "Fat M",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 1,
+   "duration": 2.5,
+   "frameRate": 30.0,
+   "frameCount": 76,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak01_loop",
+   "index": 551,
+   "duration": 3.8333,
+   "frameRate": 30.0,
+   "frameCount": 116,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape11_loop",
+   "index": 4050,
+   "duration": 10.0,
+   "frameRate": 30.0,
+   "frameCount": 301,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 0,
+  "meshes": 1,
+  "triangles": 1002,
+  "textures": 4,
+  "clips": 3,
+  "glbBytes": 6819480
+ },
+ "source": [
+  "ik_chara/model_uq/tr0578_00_fat_m/"
+ ],
+ "extras": {
+  "species": "tr0578",
+  "form": ""
+ }
+}

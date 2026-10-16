@@ -1,0 +1,71 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "tr0581_00",
+ "kind": "trainer",
+ "displayName": "Tall F",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait02_loop",
+   "index": 3,
+   "duration": 2.5,
+   "frameRate": 30.0,
+   "frameCount": 76,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak02_loop",
+   "index": 554,
+   "duration": 3.8333,
+   "frameRate": 30.0,
+   "frameCount": 116,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape07_loop",
+   "index": 4030,
+   "duration": 8.3333,
+   "frameRate": 30.0,
+   "frameCount": 251,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 0,
+  "meshes": 1,
+  "triangles": 999,
+  "textures": 4,
+  "clips": 3,
+  "glbBytes": 6216760
+ },
+ "source": [
+  "ik_chara/model_uq/tr0581_00_tall_f/"
+ ],
+ "extras": {
+  "species": "tr0581",
+  "form": ""
+ }
+}

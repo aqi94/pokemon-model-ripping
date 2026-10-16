@@ -1,0 +1,50 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0204_00",
+ "kind": "object",
+ "displayName": "Poké Ball",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "upperobj_mesh",
+   "label": "upperobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lowerobj_mesh",
+   "label": "lowerobj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 8,
+  "meshes": 2,
+  "triangles": 1026,
+  "textures": 7,
+  "clips": 0,
+  "glbBytes": 177720
+ },
+ "source": [
+  "ik_chara/model_ob/ob0204_00_monsterball/"
+ ],
+ "extras": {
+  "item": "monsterball",
+  "species": "ob0204",
+  "form": ""
+ }
+}
