@@ -1,0 +1,340 @@
+[
+ {
+  "label": "Contact 01 \u00b7 black",
+  "iris": [
+   100,
+   96,
+   80
+  ],
+  "inner": [
+   151,
+   142,
+   123
+  ]
+ },
+ {
+  "label": "Contact 02 \u00b7 slate",
+  "iris": [
+   77,
+   74,
+   79
+  ],
+  "inner": [
+   106,
+   108,
+   114
+  ]
+ },
+ {
+  "label": "Contact 03 \u00b7 brown",
+  "iris": [
+   111,
+   82,
+   69
+  ],
+  "inner": [
+   161,
+   116,
+   104
+  ]
+ },
+ {
+  "label": "Contact 04 \u00b7 light blue",
+  "iris": [
+   113,
+   156,
+   162
+  ],
+  "inner": [
+   161,
+   198,
+   200
+  ]
+ },
+ {
+  "label": "Contact 05 \u00b7 pitch black",
+  "iris": [
+   44,
+   45,
+   36
+  ],
+  "inner": [
+   108,
+   110,
+   100
+  ]
+ },
+ {
+  "label": "Contact 06 \u00b7 dark red",
+  "iris": [
+   141,
+   79,
+   78
+  ],
+  "inner": [
+   186,
+   131,
+   126
+  ]
+ },
+ {
+  "label": "Contact 07 \u00b7 navy",
+  "iris": [
+   59,
+   75,
+   98
+  ],
+  "inner": [
+   118,
+   133,
+   144
+  ]
+ },
+ {
+  "label": "Contact 08 \u00b7 olive grey",
+  "iris": [
+   90,
+   103,
+   72
+  ],
+  "inner": [
+   140,
+   151,
+   121
+  ]
+ },
+ {
+  "label": "Contact 09 \u00b7 violet",
+  "iris": [
+   101,
+   81,
+   109
+  ],
+  "inner": [
+   150,
+   135,
+   151
+  ]
+ },
+ {
+  "label": "Contact 10 \u00b7 poppy red",
+  "iris": [
+   202,
+   109,
+   90
+  ],
+  "inner": [
+   247,
+   150,
+   126
+  ]
+ },
+ {
+  "label": "Contact 11 \u00b7 marine",
+  "iris": [
+   45,
+   95,
+   95
+  ],
+  "inner": [
+   110,
+   145,
+   142
+  ]
+ },
+ {
+  "label": "Contact 12 \u00b7 grey",
+  "iris": [
+   114,
+   115,
+   124
+  ],
+  "inner": [
+   161,
+   159,
+   164
+  ]
+ },
+ {
+  "label": "Contact 13 \u00b7 rose",
+  "iris": [
+   187,
+   106,
+   104
+  ],
+  "inner": [
+   232,
+   146,
+   149
+  ]
+ },
+ {
+  "label": "Contact 14 \u00b7 sapphire",
+  "iris": [
+   98,
+   115,
+   167
+  ],
+  "inner": [
+   143,
+   159,
+   199
+  ]
+ },
+ {
+  "label": "Contact 15 \u00b7 lime",
+  "iris": [
+   137,
+   166,
+   55
+  ],
+  "inner": [
+   177,
+   204,
+   105
+  ]
+ },
+ {
+  "label": "Contact 16 \u00b7 lavender",
+  "iris": [
+   148,
+   117,
+   146
+  ],
+  "inner": [
+   193,
+   157,
+   185
+  ]
+ },
+ {
+  "label": "Contact 17 \u00b7 amber",
+  "iris": [
+   213,
+   152,
+   99
+  ],
+  "inner": [
+   255,
+   186,
+   129
+  ]
+ },
+ {
+  "label": "Contact 18 \u00b7 turquoise",
+  "iris": [
+   74,
+   177,
+   150
+  ],
+  "inner": [
+   124,
+   218,
+   189
+  ]
+ },
+ {
+  "label": "Contact 19 \u00b7 silver",
+  "iris": [
+   169,
+   169,
+   163
+  ],
+  "inner": [
+   207,
+   205,
+   203
+  ]
+ },
+ {
+  "label": "Contact 20 \u00b7 pale pink",
+  "iris": [
+   205,
+   167,
+   153
+  ],
+  "inner": [
+   255,
+   203,
+   200
+  ]
+ },
+ {
+  "label": "Contact 21 \u00b7 blue",
+  "iris": [
+   81,
+   150,
+   210
+  ],
+  "inner": [
+   113,
+   186,
+   255
+  ]
+ },
+ {
+  "label": "Contact 22 \u00b7 emerald",
+  "iris": [
+   103,
+   179,
+   101
+  ],
+  "inner": [
+   143,
+   218,
+   142
+  ]
+ },
+ {
+  "label": "Contact 23 \u00b7 pale lavender",
+  "iris": [
+   171,
+   163,
+   191
+  ],
+  "inner": [
+   213,
+   202,
+   240
+  ]
+ },
+ {
+  "label": "Contact 24 \u00b7 gold",
+  "iris": [
+   202,
+   168,
+   86
+  ],
+  "inner": [
+   255,
+   208,
+   113
+  ]
+ },
+ {
+  "label": "Contact 25 \u00b7 aqua",
+  "iris": [
+   128,
+   190,
+   183
+  ],
+  "inner": [
+   164,
+   234,
+   226
+  ]
+ },
+ {
+  "label": "Contact 26 \u00b7 khaki",
+  "iris": [
+   173,
+   166,
+   124
+  ],
+  "inner": [
+   213,
+   204,
+   162
+  ]
+ }
+]

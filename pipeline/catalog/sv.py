@@ -9,6 +9,7 @@ from .za import DEFAULT_DATA_DIR, ZaCatalog  # noqa: F401  (DEFAULT_DATA_DIR re-
 
 class SvCatalog(ZaCatalog):
     GAME = "sv"
+    NAME_MAX_ID = 10**6  # SV ids are national dex
     POKE_MODEL_ZIPS = ["SV-Poke.zip", "SV-PokeDLC1.zip", "SV-PokeDLC2.zip"]
     POKE_ANIM_ZIPS = ["SV-PokeAnim.zip", "SV-PokeAnimDLC1.zip", "SV-PokeAnimDLC2.zip"]
     TRAINER_MODEL_ZIPS = [
@@ -26,6 +27,8 @@ class SvCatalog(ZaCatalog):
     OBJECT_RE = re.compile(r"^chara/model_ob/(ob\d{4}_([^/]+))/(ob\d{4}_\d{2})\.trmdl$")
     POKE_ROOT = "pokemon/data"
     TRAINER_ANIM_ROOT = ""
+    OBJECT_ANIM_ROOT = ""
+    OBJECT_DEMO_ROOT = ""
     CC_MODEL_ZIPS: list[str] = []  # SV's modular NPCs (model_vr) are not catalogued
 
     def _anim_folders(self) -> set[str]:

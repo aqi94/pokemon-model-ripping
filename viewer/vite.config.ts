@@ -5,11 +5,17 @@ import path from 'node:path';
 
 const OUT_DIR = path.resolve(__dirname, '../out');
 const REFS_DIR = path.resolve(__dirname, '../refs');
+// Reference images for the viewer's "Reference image" picker (local deployment only).
+const SAMPLES_DIR = path.resolve(__dirname, process.env.REF_SAMPLES_DIR ?? '../samples');
+const IMAGE_EXT = new Set(['.png', '.jpg', '.jpeg', '.webp', '.gif', '.bmp']);
 const TYPES: Record<string, string> = {
   '.json': 'application/json',
   '.glb': 'model/gltf-binary',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.gif': 'image/gif',
+  '.bmp': 'image/bmp',
   '.webp': 'image/webp',
 };
 
@@ -36,8 +42,38 @@ function serveDir(prefix: string, dir: string): Plugin {
   };
 }
 
+/** GET /__samples.json: every image under SAMPLES_DIR (recursive, newest first). 404 when the folder is missing,
+ *  which the viewer reads as "no local samples" (web build) and offers upload / drag-drop only. */
+function samplesListing(): Plugin {
+  const list = (dir: string, rel = ''): { path: string; size: number; mtime: number }[] => {
+    const out: { path: string; size: number; mtime: number }[] = [];
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const r = rel ? `${rel}/${e.name}` : e.name;
+      if (e.isDirectory()) out.push(...list(path.join(dir, e.name), r));
+      else if (IMAGE_EXT.has(path.extname(e.name).toLowerCase())) {
+        const st = fs.statSync(path.join(dir, e.name));
+        out.push({ path: r, size: st.size, mtime: st.mtimeMs });
+      }
+    }
+    return out;
+  };
+  const mw = (req: any, res: any, next: any) => {
+    if ((req.url ?? '').split('?')[0] !== '/__samples.json') return next();
+    if (!fs.existsSync(SAMPLES_DIR)) { res.statusCode = 404; return res.end('no samples folder'); }
+    const body = JSON.stringify(list(SAMPLES_DIR).sort((a, b) => b.mtime - a.mtime));
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.end(body);
+  };
+  return {
+    name: 'samples-listing',
+    configureServer: (s) => void s.middlewares.use(mw),
+    configurePreviewServer: (s) => void s.middlewares.use(mw),
+  };
+}
+
 export default defineConfig({
   base: process.env.VITE_BASE ?? '/',
-  plugins: [react(), serveDir('/models/', OUT_DIR), serveDir('/refs/', REFS_DIR)],
+  plugins: [react(), serveDir('/models/', OUT_DIR), serveDir('/refs/', REFS_DIR), serveDir('/samples/', SAMPLES_DIR), samplesListing()],
   server: { port: 5173, fs: { allow: ['..'] } },
 });

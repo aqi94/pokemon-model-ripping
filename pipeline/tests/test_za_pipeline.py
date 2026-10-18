@@ -147,7 +147,7 @@ def test_import_model_structure(model):
         f"{MID}_right_tuta_mesh",
     ]
     assert {m.lod for m in model.meshes} == {0, 1, 2, 3}
-    assert model.skeleton and len(model.skeleton.joints) == 114 and len(model.skeleton.palette) == 91
+    assert model.skeleton and len([j for j in model.skeleton.joints if not j.name.endswith("_scale")]) == 114 and len(model.skeleton.palette) == 91
     assert set(model.materials) == {"body_a", "body_b", "r_eye", "l_eye"}
     assert model.materials["body_a"].base_color.endswith("_baked")
     assert [v.name for v in model.variants] == ["normal", "rare"]

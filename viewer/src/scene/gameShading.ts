@@ -4,6 +4,8 @@ export interface ShadingParams {
   halfLambertBias: number; shadowStrength: number; shadowColor: [number, number, number]; shadowShift: number;
   rimIntensity: number; rimOffset: number; rimContrast: number; specularIntensity: number;
   occlusionStrength: number; normalHeight: number; unlit: boolean;
+  /** SV `NonDirectional` (Gastly smoke): lit by key + ambient colour with no N.L term, no shadow band, no rim/spec. */
+  nonDirectional?: boolean;
   specularOffset: number; specularContrast: number; backRimIntensity: number; hairSpecular: boolean;
   /** specular mask G/B carry per-texel offset ((o+1)/2) and contrast (c/2); R is the intensity. */
   specularMaskChannels: boolean;
@@ -183,12 +185,15 @@ export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail:
     };
     mat.userData.__gameUniforms = u;
   }
-  u.uWrap.value = p.halfLambertBias;
+  const nd = !!p.nonDirectional;
+  // uWrap 1 makes `wrapped = saturate(nlRaw * (1 - uWrap) + uWrap)` 1 everywhere: the toon band is fully lit, so
+  // the colour is albedo x (key + ambient) with no direction, as the game's NonDirectional shader shows in footage.
+  u.uWrap.value = nd ? 1 : p.halfLambertBias;
   u.uShadowStrength.value = p.shadowStrength;
-  u.uShadowShift.value = p.shadowShift;
+  u.uShadowShift.value = nd ? 0 : p.shadowShift;
   (u.uShadowColor.value as THREE.Vector3).set(...p.shadowColor);
-  (u.uRim.value as THREE.Vector3).set(p.rimIntensity, p.rimOffset, p.rimContrast);
-  u.uSpec.value = p.specularIntensity;
+  (u.uRim.value as THREE.Vector3).set(nd ? 0 : p.rimIntensity, p.rimOffset, p.rimContrast);
+  u.uSpec.value = nd ? 0 : p.specularIntensity;
   u.uShadowAmount.value = env.shadow;
   u.uRimScale.value = env.rim;
   u.uSaturation.value = env.saturation;
@@ -198,13 +203,15 @@ export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail:
   u.uSpecTex.value = tex.spec; u.uHasSpecTex.value = tex.spec ? (p.specularMaskChannels ? 2 : 1) : 0;
   u.uRimTex.value = tex.rim; u.uHasRimTex.value = tex.rim ? 1 : 0;
   (u.uSpecP.value as THREE.Vector3).set(p.hairSpecular ? 1 : 0, p.specularOffset, p.specularContrast);
-  u.uBackRim.value = p.backRimIntensity;
+  u.uBackRim.value = nd ? 0 : p.backRimIntensity;
   u.uGI.value = Math.min(1, (env.gi ?? 1) * p.giGain);
   (u.uFres.value as THREE.Vector3).set(p.fresnel ? 1 : 0, p.fresnelIntensity, Math.min(1, Math.max(0, 1.3 - p.roughness + p.metallic)));
   if (first) {
     const uu = u;
-    mat.onBeforeCompile = (shader) => patch(shader as never, uu);
-    mat.customProgramCacheKey = () => 'game-shading-v3';
+    // Chain any patch installed before (gas shells, see gas.ts) so both survive the mode switch.
+    const prev = pbr.onBeforeCompile, prevKey = pbr.customProgramCacheKey;
+    mat.onBeforeCompile = function (this: THREE.Material, shader, renderer) { prev?.call(this, shader, renderer); patch(shader as never, uu); };
+    mat.customProgramCacheKey = function (this: THREE.Material) { return 'game-shading-v3' + (prevKey?.call(this) ?? ''); };
     mat.needsUpdate = true;
   }
 }

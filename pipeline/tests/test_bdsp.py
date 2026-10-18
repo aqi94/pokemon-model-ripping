@@ -22,7 +22,9 @@ def test_bake_tint_modes():
     P, S, K = (0.5, 0.5, 0.5), (1.0, 0.0, 0.0), (0.0, 1.0, 0.0)
     z = B.bake_tint(albedo, mask, P, S, K, "zones")
     assert tuple(z[0, 0, :3]) == (0, 200, 0) and tuple(z[1, 0, :3]) == (100, 100, 100)  # R = skin, G = primary
-    assert tuple(B.bake_tint(albedo, mask, P, S, K, "hair")[1, 1, :3]) == (100, 100, 100)
+    # hair: primary linearised (0.5 -> 0.214) and the albedo's dark end lifted to HAIR_SHADE_FLOOR of white
+    lifted = 255 * B.HAIR_SHADE_FLOOR + 255 * (1 - B.HAIR_SHADE_FLOOR) * 200 / 255
+    assert abs(int(B.bake_tint(albedo, mask, P, S, K, "hair")[1, 1, 0]) - lifted * 0.2140) <= 1
     sk = B.bake_tint(albedo, mask, P, S, K, "skin")
     assert tuple(sk[0, 0, :3]) == (0, 200, 0) and tuple(sk[1, 0, :3]) == (200, 200, 200)
     assert z[0, 0, 3] == 200  # alpha untouched

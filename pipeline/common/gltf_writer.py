@@ -217,6 +217,14 @@ def write_glb(model: Model, path: str) -> dict:
                 t = tex(mask_key, m.wrap.get("base_color", ("repeat", "repeat")))
                 if t is not None:
                     extras[dst_key] = t
+        gas_key = extras.pop("gas_density", None)
+        if gas_key:
+            # Animated gas shells pan this tileable cloud map, so it always repeats.
+            t = tex(gas_key, ("repeat", "repeat"))
+            if t is not None:
+                extras["gasDensityTexture"] = t
+            else:
+                extras.pop("gas", None)
         for internal in ("uv_scale_offset", "uv_scale_effective", "mirror", "mirror_normal"):
             extras.pop(internal, None)
         if extras:
@@ -282,6 +290,8 @@ def write_glb(model: Model, path: str) -> dict:
                 attrs[f"TEXCOORD_{i}"] = b.add_accessor(uv, 34962, dtype=np.float32)
             if p.colors is not None:
                 attrs["COLOR_0"] = b.add_accessor(p.colors, 34962, dtype=np.float32)
+            if p.gas_weight is not None:
+                attrs["_GASWEIGHT"] = b.add_accessor(p.gas_weight, 34962, dtype=np.float32)
             skinned = skin_index is not None and p.joints is not None and p.weights is not None
             if skinned:
                 attrs["JOINTS_0"] = b.add_accessor(p.joints, 34962, dtype=np.uint16)

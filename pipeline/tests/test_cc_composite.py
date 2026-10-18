@@ -42,3 +42,23 @@ def test_remap_joints_into_combined_palette():
     )
     bad = _remap_joints(prim, _PartRig({204: 80, 205: 81}), base_count=74)
     assert bad == 0 and prim.joints.tolist() == [[3, 0, 0, 0], [80, 81, 0, 0]]
+
+
+def test_cc_animations_only_sets_skips_per_npc_folders():
+    from pipeline.catalog.za import CC_IR_BODY_DONORS, ZaCatalog
+
+    class Src:
+        names = ["cc0003_adl_m/cc0003_00_00001_defaultwait01_loop.tranm", "tr0037_00_driver_m/tr0037_00_00001_defaultwait01_loop.tranm"]
+
+        def list(self):
+            return self.names
+
+        def read(self, n):
+            return b""
+
+        def exists(self, n):
+            return False
+
+    out = ZaCatalog._cc_animations(Src(), only_sets=True)
+    assert [a.name for a in out] == ["defaultwait01_loop"]
+    assert CC_IR_BODY_DONORS == {"tr0030_00": "dm", "tr0031_00": "df"}

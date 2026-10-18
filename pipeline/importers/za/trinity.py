@@ -597,3 +597,43 @@ def parse_tracm_visibility(data: bytes) -> list[VisibilityTrack]:
         if len(frames):
             out.append(VisibilityTrack(shape.string(0), frames, values.astype(bool)))
     return out
+
+
+@dataclass
+class MaterialParamTrack:
+    shape: str  # mesh shape name (LOD copies repeat the same track)
+    material: str  # .trmtr material name, e.g. r_eye_a
+    param: str  # e.g. UVScaleOffset, UVScaleOffset1, BaseColor
+    # One (frames (K,), values (K,)) pair per component (x, y, z, w); keys are held until the next key.
+    channels: list[tuple[np.ndarray, np.ndarray]]
+
+
+def parse_tracm_materials(data: bytes) -> list[MaterialParamTrack]:
+    """Material parameter tracks: root[1] shapes, shape[4] -> [2] materials {0 name, 2 params {0 name,
+    1 channel table with one slot per component, slot[0] -> vector of keys {0 frame f32, 1 value f32}}}.
+
+    Verified on Falinks (pm0923): UVScaleOffset (2, 1, 0, ov) with ov stepping 0 / 0.25 / 0.5 through the
+    rows of the eye atlas (open, half-closed, closed).
+    """
+    t = fb.root(data)
+    out: list[MaterialParamTrack] = []
+    for shape in t.tables(1):
+        mt = shape.table(4)
+        if mt is None:
+            continue
+        for me in mt.tables(2):
+            for p in me.tables(2):
+                ch = p.table(1)
+                if ch is None:
+                    continue
+                comps = []
+                for k in range(ch.field_count()):
+                    slot = ch.table(k)
+                    keys = slot.vector(0) if slot is not None else None
+                    if keys is None:
+                        comps.append((np.zeros(0, np.float32), np.zeros(0, np.float32)))
+                        continue
+                    kt = list(keys.tables())
+                    comps.append((np.array([x.f32(0) for x in kt], np.float32), np.array([x.f32(1) for x in kt], np.float32)))
+                out.append(MaterialParamTrack(shape.string(0), me.string(0), p.string(0), comps))
+    return out

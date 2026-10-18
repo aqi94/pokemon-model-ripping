@@ -145,6 +145,14 @@ def _resize_channel(ch: np.ndarray, w: int, h: int) -> np.ndarray:
     return np.asarray(Image.fromarray(ch).resize((w, h), Image.BILINEAR), np.float32) / 255.0
 
 
+def _srgb_to_linear(c) -> np.ndarray:
+    c = np.asarray(c[:3], np.float32)
+    return np.where(c <= 0.04045, c / 12.92, ((c + 0.055) / 1.055) ** 2.4).astype(np.float32)
+
+
+HAIR_SHADE_FLOOR = 0.35
+
+
 def bake_tint(albedo: np.ndarray, mask: np.ndarray, primary, secondary, skin, mode: str = "zones") -> np.ndarray:
     """The game's character shader colours a (near-greyscale) albedo by mask region, multiplied in the albedo's own space.
 
@@ -155,6 +163,12 @@ def bake_tint(albedo: np.ndarray, mask: np.ndarray, primary, secondary, skin, mo
     hair:  the hair shader (_LIGHTING_HAIR) colours the whole texture with _PrimaryColor (Cynthia blonde, Lucas navy).
     """
     h, w = albedo.shape[:2]
+    # The hair shader (_LIGHTING_HAIR) uses its _PrimaryColor as a linear value on the gamma-space albedo: Flint's (0.8, 0.35, 0.32)
+    # gives the game's deep red only when linearised (green:red 0.11 vs 0.13 measured on the in-game screenshot; Cynthia's (0.9, 0.83,
+    # 0.63) -> blue:red 0.46 vs 0.49, green:red 0.85 vs 0.86). Clothing/skin zones keep the plain multiply: Flint's yellow shirt went
+    # from B 59 in game to ~6 when linearised too, so this is the hair shader's rule, not a global one.
+    if mode == "hair":
+        primary = _srgb_to_linear(primary)
     if mode == "hair":
         tint = np.broadcast_to(np.asarray(primary[:3], np.float32), (h, w, 3))
     elif mode == "skin":
@@ -166,7 +180,14 @@ def bake_tint(albedo: np.ndarray, mask: np.ndarray, primary, secondary, skin, mo
             m = _resize_channel(mask[..., c], w, h)[..., None]
             tint = tint * (1.0 - m) + np.asarray(col[:3], np.float32) * m
     out = albedo.copy()
-    out[..., :3] = np.clip(albedo[..., :3].astype(np.float32) * tint, 0, 255).astype(np.uint8)
+    rgb = albedo[..., :3].astype(np.float32)
+    if mode == "hair":
+        # The hair albedo carries a heavy painted gradient (Flint: edges ~15 % grey), but the game's hair stays bright and saturated in its
+        # darkest folds (Flint in game: lit 252,69,59 -> shadow 133,0,0, i.e. ~0.53 of lit in sRGB; Cynthia 254,223,130 -> 150,123,65).
+        # Lift the dark end to a floor that follows the hair hue, so the shadow side keeps its colour instead of going to near-black.
+        floor = HAIR_SHADE_FLOOR * (np.asarray(primary[:3], np.float32) / max(float(np.max(primary[:3])), 1e-3)) ** 0.5 * 255.0
+        rgb = floor + (255.0 - floor) * rgb / 255.0
+    out[..., :3] = np.clip(rgb * tint, 0, 255).astype(np.uint8)
     return out
 
 
@@ -192,8 +213,13 @@ def _material(m, cache, textures) -> Material:
         # Dark albedos (glasses frames: ~0.27) keep a weak sheen, otherwise the boost turns them silver.
         lum = float(textures[mat.base_color].rgba[..., :3].mean()) / 255.0 if mat.base_color in textures else 0.5
         dark = lum < 0.32
-        mat.extras["shading"] = {"specularIntensity": 0.6 if dark else 3.0, "specularContrast": 1.5}
-        mat.extras["reflect"] = {"envIntensity": 0.4 if dark else 1.5}
+        # The boost (3.0 / 1.5) was tuned on glasses (_Reflectivity 0.3, _ReflectionBias 0). Scale it by the game's own values:
+        # reflectivity relative to 0.3, and _ReflectionBias = mip bias of the environment lookup (3-5 = a blurred, soft reflection,
+        # squared: Cynthia's near-black hairpieces, reflectivity 0.2 / bias 3, ended up silver at the first-order damping).
+        fl_ = dict((k, float(v)) for k, v in props.m_Floats)
+        k = min(1.0, fl_.get("_Reflectivity", 0.3) / 0.3) / (1.0 + fl_.get("_ReflectionBias", 0.0) / 3.0) ** 2
+        mat.extras["shading"] = {"specularIntensity": 0.6 if dark else 3.0 * k, "specularContrast": 1.5}
+        mat.extras["reflect"] = {"envIntensity": 0.4 if dark else 1.5 * k}
     cols = mat.extras["unity"]["colors"]
     msk = keys.get("msk")
     fl = {k: float(v) for k, v in props.m_Floats}
@@ -270,6 +296,36 @@ def _soften_lenses(meshes: list[Mesh], materials: dict[str, Material], textures:
             prim.material = new.name
 
 
+def _fix_tangents(pos: np.ndarray, nrm: np.ndarray | None, tan: np.ndarray, uv: np.ndarray | None, tris: np.ndarray) -> np.ndarray:
+    """Replace non-finite / degenerate tangents. Some game meshes ship NaN tangents (Rich Boy's left sole: 15 vertices); a NaN poisons
+    the normal-mapped lighting of every pixel it touches (white or black depending on the GPU). Rebuild them from the UV
+    layout of the surrounding triangles, else any vector perpendicular to the normal."""
+    bad = ~np.isfinite(tan).all(axis=1) | (np.linalg.norm(np.nan_to_num(tan[:, :3]), axis=1) < 1e-6)
+    if not bad.any() or nrm is None:
+        return tan
+    tan = tan.copy()
+    w = float(np.median(tan[~bad, 3])) if (~bad).any() else 1.0
+    acc = np.zeros((len(pos), 3), np.float64)
+    if uv is not None and len(tris):
+        p0, p1, p2 = pos[tris[:, 0]], pos[tris[:, 1]], pos[tris[:, 2]]
+        e1, e2 = p1 - p0, p2 - p0
+        d1, d2 = uv[tris[:, 1]] - uv[tris[:, 0]], uv[tris[:, 2]] - uv[tris[:, 0]]
+        det = d1[:, 0] * d2[:, 1] - d2[:, 0] * d1[:, 1]
+        ok = np.abs(det) > 1e-12
+        t = (e1 * d2[:, 1:2] - e2 * d1[:, 1:2]) / np.where(ok, det, 1.0)[:, None]
+        t[~ok] = 0
+        for k in range(3):
+            np.add.at(acc, tris[:, k], t)
+    for v in np.where(bad)[0]:
+        n = nrm[v] / max(float(np.linalg.norm(nrm[v])), 1e-9)
+        t = acc[v] - n * float(acc[v] @ n)
+        if not np.isfinite(t).all() or np.linalg.norm(t) < 1e-9:
+            t = np.cross(n, [0.0, 1.0, 0.0] if abs(n[1]) < 0.9 else [1.0, 0.0, 0.0])
+        tan[v, :3] = t / np.linalg.norm(t)
+        tan[v, 3] = w
+    return tan
+
+
 def _mesh_primitives(smr, get_material, palette_of: dict[int, int]) -> list[Primitive]:
     from UnityPy.helpers.MeshHelper import MeshHandler
 
@@ -292,6 +348,9 @@ def _mesh_primitives(smr, get_material, palette_of: dict[int, int]) -> list[Prim
         # Rigid single-bone parts (goggle lens, glasses): a bind pose but no per-vertex weights; they follow bone 0 entirely.
         bi = np.zeros((len(pos), 4), np.int64)
         bw = np.tile(np.array([1, 0, 0, 0], np.float32), (len(pos), 1))
+    if tan is not None and tan.ndim == 2 and tan.shape[1] == 4:
+        all_tris = [np.asarray(t, np.int64).reshape(-1, 3) for t in mh.get_triangles()]
+        tan = _fix_tangents(pos, nrm, tan, uv, np.vstack(all_tris) if all_tris else np.zeros((0, 3), np.int64))
     mirror = np.array([-1.0, 1.0, 1.0], np.float32)
     pos = pos * mirror
     if nrm is not None:

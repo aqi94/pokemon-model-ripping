@@ -13,7 +13,7 @@ import re
 
 from ..importers.za.importer import AnimationFile, ZipSource
 
-DEMO_CLIP_RE = re.compile(r"^(?P<ev>d\d+[ab]?)_(?P<who>[A-Za-z0-9]+?(?:_\d+)?)_anim_(?P<rest>.+)\.tranm$")
+DEMO_CLIP_RE = re.compile(r"^(?P<ev>d\d+[ab]?)_(?P<who>[A-Za-z0-9_]+?)_anim_(?P<rest>.+)\.tranm$")
 DEMO_INDEX_BASE = 200000
 
 

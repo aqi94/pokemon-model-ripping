@@ -1,6 +1,6 @@
 import type { Options } from './OptionsSection';
 
-export type CameraPreset = 'fit' | 'vs' | 'front' | 'side' | 'back' | 'top';
+export type CameraPreset = 'fit' | 'vs' | 'front' | 'side' | 'back' | 'top' | 'idle';
 
 interface Props {
   options: Options;
@@ -8,17 +8,23 @@ interface Props {
   onCamera: (p: CameraPreset) => void;
   onRecenter: () => void;
   onFullscreen: () => void;
-  onPng: () => void;
+  onPngOptions: (top: number) => void;
   onGlb: () => void;
   disabled: boolean;
+  refImage: boolean;
+  refVisible: boolean;
+  refTransforming: boolean;
+  onRefVisible: () => void;
+  onRefTransform: () => void;
 }
 
 const VIEWS: [CameraPreset, string, string][] = [
-  ['fit', '◎', 'Fit view (F)'], ['front', 'F', 'Front (1)'], ['side', 'S', 'Side (2)'], ['back', 'B', 'Back (3)'], ['top', 'T', 'Top (4)'], ['vs', 'VS', 'VS shot (5)'],
+  ['fit', '◎', 'Fit view (F)'], ['front', 'F', 'Front (1)'], ['side', 'S', 'Side (2)'], ['back', 'B', 'Back (3)'], ['top', 'T', 'Top (4)'], ['vs', 'VS', 'VS shot (5)'], ['idle', 'I', 'Idle ortho shot (6)'],
 ];
 
 /** Photoshop-style vertical toolbox: view presets, display toggles, export. */
-export function Toolbox({ options, onChange, onCamera, onRecenter, onFullscreen, onPng, onGlb, disabled }: Props) {
+export function Toolbox({ options, onChange, onCamera, onRecenter, onFullscreen, onPngOptions, onGlb, disabled,
+  refImage, refVisible, refTransforming, onRefVisible, onRefTransform }: Props) {
   const tog = (key: 'skeleton' | 'wireframe' | 'shadows' | 'mirror', glyph: string, title: string) => (
     <button className={'tool-btn' + (options[key] ? ' on' : '')} title={title} aria-pressed={options[key]} onClick={() => onChange({ [key]: !options[key] })}>{glyph}</button>
   );
@@ -32,8 +38,14 @@ export function Toolbox({ options, onChange, onCamera, onRecenter, onFullscreen,
       {tog('wireframe', '▦', 'Wireframe')}
       {tog('shadows', '◐', 'Shadows')}
       <hr />
+      <button className={'tool-btn' + (refImage && refVisible ? ' on' : '')} title={refImage ? 'Show reference image' : 'Reference image: load one in the Reference tab or drop it on the canvas'}
+        aria-pressed={refImage && refVisible} disabled={!refImage} onClick={onRefVisible}>🖼</button>
+      <button className={'tool-btn' + (refTransforming ? ' on' : '')} title="Move / scale / rotate the reference image (R)"
+        aria-pressed={refTransforming} disabled={!refImage} onClick={onRefTransform}>⤧</button>
+      <hr />
       <button className="tool-btn" title="Full screen" onClick={onFullscreen}>⛶</button>
-      <button className="tool-btn txt" title="Export PNG (transparent)" onClick={onPng} disabled={disabled}>PNG</button>
+      <button className="tool-btn txt" title="Export PNG (opens options)" disabled={disabled}
+        onClick={(e) => onPngOptions(e.currentTarget.getBoundingClientRect().top)}>PNG</button>
       <button className="tool-btn txt" title="Export GLB" onClick={onGlb} disabled={disabled}>GLB</button>
     </nav>
   );

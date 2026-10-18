@@ -31,13 +31,14 @@ def build_manifest(model: Model, glb_summary: dict | None = None) -> dict:
             "default": c.name == model.default_clip,
             **({"visibility": {k: [[f, int(v)] for f, v in keys] for k, keys in c.visibility.items()}} if c.visibility else {}),
             **({"uvOffset": {m: {"times": [round(float(t), 4) for t in ts], "values": [[round(float(x), 5), round(float(y), 5)] for x, y in vs]} for m, (ts, vs) in c.uv_offset.items()}} if c.uv_offset else {}),
+            **({"uvOffsetMode": c.uv_offset_mode} if c.uv_offset and c.uv_offset_mode else {}),
         }
         for c in model.clips
     ]
     parts = [
         {
             "node": m.name,
-            "label": _part_label(m.name, model.id),
+            "label": _part_label(m.name, model.extras["stem"] if model.extras.get("form_layer") else model.id),  # form layers keep the source stem
             "lod": m.lod,
             "visible": m.visible,
             **({k: m.extras[k] for k in ("group", "option") if k in m.extras}),
@@ -52,10 +53,7 @@ def build_manifest(model: Model, glb_summary: dict | None = None) -> dict:
         part_groups.append(
             {
                 **g,
-                "options": [
-                    {**o, "nodes": [m.name for m in model.meshes if m.extras.get("group") == g["name"] and m.extras.get("option") == o["id"]]}
-                    for o in g["options"]
-                ],
+                "options": [_with_nodes(model, g["name"], o) for o in g["options"]],
             }
         )
     # Held-item attachment points: joints named *_attach; a clip "shows" the
@@ -80,6 +78,7 @@ def build_manifest(model: Model, glb_summary: dict | None = None) -> dict:
         "defaultClip": model.default_clip,
         "parts": parts,
         **({"partGroups": part_groups} if part_groups else {}),
+        **({"holocast": model.extras["holocast"]} if model.extras.get("holocast") else {}),
         "stats": {
             "joints": len(model.skeleton.joints) if model.skeleton else 0,
             "meshes": len(model.meshes),
@@ -108,3 +107,13 @@ def write_manifest(model: Model, path: str, glb_summary: dict | None = None) -> 
     with open(path, "w", encoding="utf-8") as f:
         json.dump(m, f, indent=1, ensure_ascii=False)
     return m
+
+
+FACIAL_HAIR_MESH = ("beard", "face_hair")  # accessory meshes of a face part that are facial hair (not glasses/earrings)
+
+
+def _with_nodes(model, group: str, option: dict) -> dict:
+    """A part option with its mesh nodes; `facialHair` = the hidden-by-default beard meshes the viewer offers as a toggle."""
+    meshes = [m for m in model.meshes if m.extras.get("group") == group and m.extras.get("option") == option["id"]]
+    beards = [m.name for m in meshes if m.extras.get("accessory") and any(k in m.name.split("__", 1)[-1] for k in FACIAL_HAIR_MESH)]
+    return {**option, "nodes": [m.name for m in meshes], **({"facialHair": beards} if beards else {})}

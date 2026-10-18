@@ -101,6 +101,9 @@ class Primitive:
     # Morph targets (absolute position deltas, (V, 3) float32 each); used by baked vertex
     # animation (crowd NPCs). Clips drive them through `Clip.morph`.
     morph_targets: list[np.ndarray] = field(default_factory=list)
+    # Gas shells (Gastly smoke): per-vertex displacement weight (V,) float32 0..1, written as the custom
+    # glTF attribute `_GASWEIGHT` for viewers that animate the cloud (see Material.extras["gas"]).
+    gas_weight: np.ndarray | None = None
 
 
 @dataclass
@@ -140,6 +143,9 @@ class Clip:
     # Per-material texture-offset animation (eye gaze on BDSP trainers): material name -> (times (K,) seconds, offsets (K, 2) in UV units,
     # Unity convention: x right, y up). The viewer applies it to the material's base-colour map.
     uv_offset: dict[str, tuple[np.ndarray, np.ndarray]] = field(default_factory=dict)
+    # "" = the BDSP convention above (linear, Unity axes); "gltf_step" = offsets in glTF UV space (x right, y down the
+    # image) held until the next key (Trinity .tracm UVScaleOffset tracks step through eye-atlas cells).
+    uv_offset_mode: str = ""
 
     @property
     def duration(self) -> float:

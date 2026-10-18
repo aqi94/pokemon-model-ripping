@@ -14,6 +14,7 @@ exactly one option per group.
 
 from __future__ import annotations
 
+import copy
 import re
 from dataclasses import dataclass, replace
 
@@ -21,7 +22,7 @@ import numpy as np
 
 from ...common.model import Joint, Mesh, Model, Skeleton, Variant
 from . import trinity as T
-from .importer import SKIN_DEFAULT_TONE, AnimationFile, Source, _build_skeleton, import_model
+from .importer import SKIN_DEFAULT_TONE, AnimationFile, Source, _build_skeleton, dedupe_holocast, import_model
 
 GROUP_LABELS = {"face": "Face", "hrs": "Hair", "drs": "Outfit"}
 GROUP_ORDER = ["face", "hrs", "drs"]
@@ -44,7 +45,7 @@ def part_label(name: str, variant: int) -> str:
 PALETTE_LABELS = {
     "tops": "Top", "bottoms": "Bottom", "body": "Body", "obj": "Accessory", "obj_drs": "Accessory", "obj_drs_01": "Accessory",
     "hairstyle": "Hair", "hairstyle_obj": "Hair accessory", "obj_hrs": "Hair accessory", "obj_hrs00": "Hair accessory",
-    "eyebrow": "Eyebrows", "l_eye": "Eyes", "r_eye": "Eyes", "eyewear": "Eyewear",
+    "eyebrow": "Eyebrows", "face_skin": "Lips", "l_eye": "Eyes", "r_eye": "Eyes", "eyewear": "Eyewear",
     "obj_face": "Face accessory", "obj_face00": "Face accessory", "obj_face01": "Face accessory", "obj00_face": "Face accessory",
 }
 
@@ -56,7 +57,7 @@ def _palette_entries(mats) -> list[dict]:
         pal = m.extras.get("palette")
         if not pal:
             continue
-        label = PALETTE_LABELS.get(m.name.split("__", 1)[-1], m.name.split("__", 1)[-1].replace("_", " ").title())
+        label = "Facial hair" if m.extras.get("beard") else PALETTE_LABELS.get(m.name.split("__", 1)[-1], m.name.split("__", 1)[-1].replace("_", " ").title())
         key = (label, tuple(pal["indices"]), tuple(pal["layers"]))
         e = out.setdefault(
             key,
@@ -67,10 +68,48 @@ def _palette_entries(mats) -> list[dict]:
                 "indices": pal["indices"],
                 "layers": pal["layers"],
                 "zones": ["#%02x%02x%02x" % tuple(c) for c in pal["lit"]],
+                # Colours the model did not ship with (custom_eye_palette): the viewer labels them as custom.
+                **({"custom": True, **{k: pal[k] for k in ("pairs", "pairLabels", "zoneLabels", "skinLink", "offer", "noneLabel") if k in pal}} if pal.get("custom") else {}),
             },
         )
         e["materials"].append(m.name)
     return list(out.values())
+
+
+def skin_variants(materials: dict, skin_mats: dict[str, list]) -> list[Variant]:
+    """Skin-tone variants for materials carrying `skin_tones`."""
+    # Skin tone: one variant per shared palette zone, overriding every body_skin / face_skin material at once
+    # (body and head stay matched).
+    variants: list[Variant] = []
+    tone_ids = sorted({t[0] for tones in skin_mats.values() for t in tones})
+    for z in tone_ids:
+        over = {}
+        for name, tones in skin_mats.items():
+            t = next((t for t in tones if t[0] == z), None)
+            if t:
+                m = materials[name]
+                over[name] = replace(m, base_color=t[1], extras={**m.extras, "shadow_color": t[2]})
+        variants.append(Variant(name=f"tone{z}", materials=over, group="skin", label=f"Tone {z}", default=z == SKIN_DEFAULT_TONE))
+    return variants
+
+
+def apply_appearance(model: Model) -> None:
+    """Standalone palette-driven NPCs (cc_ir: Co members, rival): expose skin tones and
+    hair/eye palettes like the modular NPCs, as one always-visible option."""
+    skin_mats: dict[str, list] = {}
+    for name, mat in model.materials.items():
+        tones = mat.extras.pop("skin_tones", None)
+        if tones:
+            skin_mats[name] = tones
+    palettes = _palette_entries(list(model.materials.values()))
+    if not skin_mats and not palettes:
+        return
+    model.variants = list(model.variants) + [v for v in skin_variants(model.materials, skin_mats)]
+    for mesh in model.meshes:
+        mesh.extras = {**mesh.extras, "group": "appearance", "option": "default"}
+    model.extras["part_groups"] = [
+        {"name": "appearance", "label": "Colours", "options": [{"id": "default", "label": "Default", "default": True, **({"palettes": palettes} if palettes else {})}]}
+    ]
 
 
 def _local_matrix(j: Joint) -> np.ndarray:
@@ -226,9 +265,13 @@ def import_cc_model(
     unmapped = 0
     skin_mats: dict[str, list] = {}
     part_palettes: dict[str, list] = {}
+    holo: dict[str, list[dict]] = {}  # holocast set -> each part's preset (merged below)
+    alt_options: list[tuple[str, str, str]] = []  # (group, option id, label) of colourway options (.trmmt tex_NN sets)
     for part in sorted(parts, key=lambda p: (GROUP_ORDER.index(p.group), p.id)):
         pm = import_model(sources[part.id], part.id, kind="trainer", game=game, skeleton=skeleton, lod0_only=True, skin_tones=True)
         warnings += [f"{part.id}: {w}" for w in pm.extras.get("warnings", [])]
+        for hp in pm.extras.get("holocast", []):
+            holo.setdefault(hp["name"], []).append(hp)
         rename = {n: f"{part.id}__{n}" for n in pm.materials}
         for n, mat in pm.materials.items():
             mat.name = rename[n]
@@ -251,37 +294,58 @@ def import_cc_model(
             meshes.append(mesh)
         used = {p.material for m in pm.meshes for p in m.primitives}
         part_palettes[part.id] = _palette_entries([materials[n] for n in rename.values() if n in used])
+        # Colourways (.trmmt tex_00 ...: other albedo + mask, own colour table or none: the Boy M / Girl F outfits' Station
+        # Battle Club look with gold glove emblems) become extra options of the same group, sharing the part's rig.
+        base_meshes = [m for m in meshes if m.extras.get("option") == part.id]
+        for var in pm.variants:
+            if var.name == "normal" or not var.materials:
+                continue
+            alt_id = f"{part.id}@{var.name}"
+            alt_rename = {}
+            for n, mat in var.materials.items():
+                if n not in rename:
+                    continue
+                mat.name = alt_rename[n] = f"{alt_id}__{n}"
+                materials[mat.name] = mat
+                tones = mat.extras.pop("skin_tones", None)
+                if tones:
+                    skin_mats[mat.name] = tones
+            to_alt = {rename[n]: new for n, new in alt_rename.items()}
+            for mesh in base_meshes:
+                alt = copy.deepcopy(mesh)
+                alt.name = f"{alt_id}__{mesh.name.split('__', 1)[-1]}"
+                alt.visible = False
+                alt.extras = {**alt.extras, "option": alt_id}
+                for prim in alt.primitives:
+                    prim.material = to_alt.get(prim.material, prim.material)
+                meshes.append(alt)
+            alt_used = {p.material for m in base_meshes for p in m.primitives}
+            part_palettes[alt_id] = _palette_entries([materials[to_alt.get(n, n)] for n in rename.values() if n in alt_used])
+            alt_options.append((part.group, alt_id, f"{part.label} [{var.name}]"))
     if unmapped:
         warnings.append(f"{unmapped} weighted vertices reference joints missing from the rig")
 
-    # Skin tone: one variant per shared palette zone, overriding every body_skin / face_skin material at once
-    # (body and head stay matched).
-    variants: list[Variant] = []
-    tone_ids = sorted({t[0] for tones in skin_mats.values() for t in tones})
-    for z in tone_ids:
-        over = {}
-        for name, tones in skin_mats.items():
-            t = next((t for t in tones if t[0] == z), None)
-            if t:
-                m = materials[name]
-                over[name] = replace(m, base_color=t[1], extras={**m.extras, "shadow_color": t[2]})
-        variants.append(Variant(name=f"tone{z}", materials=over, group="skin", label=f"Tone {z}", default=z == SKIN_DEFAULT_TONE))
+    variants = skin_variants(materials, skin_mats)
 
     groups = []
     for g in GROUP_ORDER:
-        opts = [p for p in parts if p.group == g]
+        opts = [(p.id, p.label, p.default) for p in parts if p.group == g] + [(i, label, False) for gg, i, label in alt_options if gg == g]
         if opts:
             groups.append(
                 {
                     "name": g,
                     "label": GROUP_LABELS[g],
                     "options": [
-                        {"id": p.id, "label": p.label, "default": p.default, **({"palettes": part_palettes[p.id]} if part_palettes.get(p.id) else {})}
-                        for p in sorted(opts, key=lambda p: p.id)
+                        {"id": i, "label": label, "default": default, **({"palettes": part_palettes[i]} if part_palettes.get(i) else {})}
+                        for i, label, default in sorted(opts)
                     ],
                 }
             )
     extras = {"part_groups": groups}
+    if holo:
+        # Parts author slightly different colours per set; the model preset is the most common one.
+        merged = [max(ps, key=lambda p: sum(q == p for q in ps)) for ps in holo.values()]
+        extras["holocast"] = dedupe_holocast(merged)
     if warnings:
         extras["warnings"] = warnings
     return Model(

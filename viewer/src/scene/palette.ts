@@ -18,6 +18,7 @@ const L2S_N = 4096;
 const L2S = new Uint8ClampedArray(L2S_N + 1);
 for (let i = 0; i <= L2S_N; i++) { const c = i / L2S_N; L2S[i] = Math.round((c <= 0.0031308 ? c * 12.92 : 1.055 * Math.pow(c, 1 / 2.4) - 0.055) * 255); }
 
+/** Zone 0 on a layer means "same zone as layer 1" (a lip layer painted in the skin colour = no lipstick). */
 const zoneLin = (table: number[][], zone1: number): [number, number, number] => {
   const z = Math.min(Math.max(zone1, 1), table.length) - 1;
   const c = table[z];
@@ -29,8 +30,9 @@ export function bakePalette(alb: Uint8ClampedArray, mask: Uint8ClampedArray, pal
   const n = alb.length / 4;
   const lit = new Uint8ClampedArray(alb.length);
   const shadow = new Uint8ClampedArray(alb.length);
-  const lc = [0, 1, 2, 3].map((c) => zoneLin(pal.lit, indices[c] ?? 1));
-  const sc = [0, 1, 2, 3].map((c) => zoneLin(pal.shadow, indices[c] ?? 1));
+  const zoneOf = (c: number) => (indices[c] || indices[0]) ?? 1;
+  const lc = [0, 1, 2, 3].map((c) => zoneLin(pal.lit, zoneOf(c)));
+  const sc = [0, 1, 2, 3].map((c) => zoneLin(pal.shadow, zoneOf(c)));
   for (let p = 0, o = 0; p < n; p++, o += 4) {
     let tl0 = 1, tl1 = 1, tl2 = 1, ts0 = 1, ts1 = 1, ts2 = 1;
     for (let c = 0; c < 4; c++) {
