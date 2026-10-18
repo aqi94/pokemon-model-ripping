@@ -1,0 +1,50 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob1005_00",
+ "kind": "object",
+ "displayName": "Bgalette",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_knifefork_mesh",
+   "label": "obj knifefork",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_galette_mesh",
+   "label": "obj galette",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 6,
+  "meshes": 2,
+  "triangles": 3216,
+  "textures": 7,
+  "clips": 0,
+  "glbBytes": 716572
+ },
+ "source": [
+  "ik_chara/model_ob/ob1005_00_bgalette/"
+ ],
+ "extras": {
+  "item": "bgalette",
+  "species": "ob1005",
+  "form": ""
+ }
+}

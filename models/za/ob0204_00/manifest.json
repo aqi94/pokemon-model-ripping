@@ -1,0 +1,78 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": [
+    "d003_ob0204_00_main_c03 [demo d003]"
+   ]
+  }
+ ],
+ "game": "za",
+ "id": "ob0204_00",
+ "kind": "object",
+ "displayName": "Poké Ball",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "d003_ob0204_00_main_c03 [demo d003]",
+   "index": 200303,
+   "duration": 8.3333,
+   "frameRate": 60.0,
+   "frameCount": 501,
+   "loop": false,
+   "category": "other",
+   "group": "demo d003",
+   "default": true,
+   "visibility": {
+    "upperobj_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "lowerobj_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "d003_ob0204_00_main_c03 [demo d003]",
+ "parts": [
+  {
+   "node": "upperobj_mesh",
+   "label": "upperobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lowerobj_mesh",
+   "label": "lowerobj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 8,
+  "meshes": 2,
+  "triangles": 1026,
+  "textures": 7,
+  "clips": 1,
+  "glbBytes": 191156
+ },
+ "source": [
+  "ik_chara/model_ob/ob0204_00_monsterball/"
+ ],
+ "extras": {
+  "item": "monsterball",
+  "species": "ob0204",
+  "form": ""
+ }
+}

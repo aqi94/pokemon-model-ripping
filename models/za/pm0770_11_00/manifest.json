@@ -1,0 +1,6536 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0770_11_00",
+ "kind": "pokemon",
+ "displayName": "pm0770 (11_00)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 0,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battlewait01_loop",
+   "index": 1,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultidle01",
+   "index": 10,
+   "duration": 2.8667,
+   "frameRate": 60.0,
+   "frameCount": 173,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000",
+   "index": 20,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090",
+   "index": 21,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090",
+   "index": 24,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop",
+   "index": 30,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop",
+   "index": 100,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start",
+   "index": 140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01",
+   "index": 141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end",
+   "index": 142,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin02",
+   "index": 143,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepright02",
+   "index": 144,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start",
+   "index": 145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01",
+   "index": 146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end",
+   "index": 147,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout02",
+   "index": 148,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepleft02",
+   "index": 149,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start",
+   "index": 150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop",
+   "index": 151,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start",
+   "index": 152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop",
+   "index": 153,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02",
+   "index": 155,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_start",
+   "index": 270,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_loop",
+   "index": 271,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_end",
+   "index": 272,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_start",
+   "index": 280,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_loop",
+   "index": 281,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_end",
+   "index": 282,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_start",
+   "index": 293,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_loop",
+   "index": 294,
+   "duration": 3.5,
+   "frameRate": 60.0,
+   "frameCount": 211,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_end",
+   "index": 295,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01",
+   "index": 300,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      30,
+      1
+     ],
+     [
+      140,
+      0
+     ]
+    ]
+   },
+   "uvOffset": {
+    "eff_body_c": {
+     "times": [
+      0.0,
+      0.6667,
+      2.1833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.875,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "eff_body_d": {
+     "times": [
+      0.0,
+      0.6333,
+      0.7667,
+      0.9,
+      1.0333,
+      1.1667,
+      1.3,
+      1.4333,
+      1.5667,
+      1.7,
+      1.8333,
+      1.9667,
+      2.1,
+      2.2333,
+      2.3667,
+      2.5
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.25,
+       0.0
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.75,
+       0.0
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.25,
+       0.0
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.75,
+       0.0
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.25,
+       0.0
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.75,
+       0.0
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "appeal01",
+   "index": 310,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      30,
+      1
+     ],
+     [
+      140,
+      0
+     ]
+    ]
+   },
+   "uvOffset": {
+    "eff_body_c": {
+     "times": [
+      0.0,
+      0.6667,
+      2.1833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.875,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "eff_body_d": {
+     "times": [
+      0.0,
+      0.6333,
+      0.7667,
+      0.9,
+      1.0333,
+      1.1667,
+      1.3,
+      1.4333,
+      1.5667,
+      1.7,
+      1.8333,
+      1.9667,
+      2.1,
+      2.2333,
+      2.3667,
+      2.5
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.25,
+       0.0
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.75,
+       0.0
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.25,
+       0.0
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.75,
+       0.0
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.25,
+       0.0
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.75,
+       0.0
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "refresh01",
+   "index": 320,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_start",
+   "index": 330,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_loop",
+   "index": 331,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_end",
+   "index": 332,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01",
+   "index": 400,
+   "duration": 2.2333,
+   "frameRate": 60.0,
+   "frameCount": 135,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_start",
+   "index": 420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_loop",
+   "index": 421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end",
+   "index": 422,
+   "duration": 1.2,
+   "frameRate": 60.0,
+   "frameCount": 73,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01",
+   "index": 450,
+   "duration": 2.2,
+   "frameRate": 60.0,
+   "frameCount": 133,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      30,
+      1
+     ],
+     [
+      110,
+      0
+     ]
+    ]
+   },
+   "uvOffset": {
+    "eff_body_c": {
+     "times": [
+      0.0,
+      0.6667,
+      1.7
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.875,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "eff_body_d": {
+     "times": [
+      0.0,
+      0.6333,
+      0.7667,
+      0.9,
+      1.0333,
+      1.1667,
+      1.3,
+      1.4333,
+      1.5667,
+      1.7,
+      1.8333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.25,
+       0.0
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.75,
+       0.0
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.25,
+       0.0
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.75,
+       0.0
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rangeattack02_start",
+   "index": 460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop",
+   "index": 461,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end",
+   "index": 462,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop",
+   "index": 490,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01",
+   "index": 500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02",
+   "index": 501,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start",
+   "index": 510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop",
+   "index": 511,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end",
+   "index": 512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start",
+   "index": 520,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop",
+   "index": 521,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end",
+   "index": 522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "glad01",
+   "index": 550,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "notice01",
+   "index": 560,
+   "duration": 1.4,
+   "frameRate": 60.0,
+   "frameCount": 85,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hate01",
+   "index": 563,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "ev_once_action01",
+   "index": 5100,
+   "duration": 1.4,
+   "frameRate": 60.0,
+   "frameCount": 85,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eye01",
+   "index": 8000,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "loop01_loop",
+   "index": 8201,
+   "duration": 6.0,
+   "frameRate": 60.0,
+   "frameCount": 361,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_11_00_tongue_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body00_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_eyebrow_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_ura_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_body01_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offset_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_11_00_offseteffb01_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "eff_body_c": {
+     "times": [
+      0.0,
+      0.0333,
+      0.0667,
+      0.1,
+      0.1333,
+      0.1667,
+      0.2,
+      0.2333,
+      0.2667,
+      0.3,
+      0.3333,
+      0.3667,
+      0.4,
+      0.4333,
+      0.4667,
+      0.5,
+      0.5333,
+      0.5667,
+      0.6,
+      0.6333,
+      0.6667,
+      0.7,
+      0.7333,
+      0.7667,
+      0.8,
+      0.8333,
+      0.8667,
+      0.9,
+      0.9333,
+      0.9667,
+      1.0,
+      1.0333,
+      1.0667,
+      1.1,
+      1.1333,
+      1.1667,
+      1.2,
+      1.2333,
+      1.2667,
+      1.3,
+      1.3333,
+      1.3667,
+      1.4,
+      1.4333,
+      1.4667,
+      1.5,
+      1.5333,
+      1.5667,
+      1.6,
+      1.6333,
+      1.6667,
+      1.7,
+      1.7333,
+      1.7667,
+      1.8,
+      1.8333,
+      1.8667,
+      1.9,
+      1.9333,
+      1.9667,
+      2.0,
+      2.0333,
+      2.0667,
+      2.1,
+      2.1333,
+      2.1667,
+      2.2,
+      2.2333,
+      2.2667,
+      2.3,
+      2.3333,
+      2.3667,
+      2.4,
+      2.4333,
+      2.4667,
+      2.5,
+      2.5333,
+      2.5667,
+      2.6,
+      2.6333,
+      2.6667,
+      2.7,
+      2.7333,
+      2.7667,
+      2.8,
+      2.8333,
+      2.8667,
+      2.9,
+      2.9333,
+      2.9667,
+      3.0,
+      3.0333,
+      3.0667,
+      3.1,
+      3.1333,
+      3.1667,
+      3.2,
+      3.2333,
+      3.2667,
+      3.3,
+      3.3333,
+      3.3667,
+      3.4,
+      3.4333,
+      3.4667,
+      3.5,
+      3.5333,
+      3.5667,
+      3.6,
+      3.6333,
+      3.6667,
+      3.7,
+      3.7333,
+      3.7667,
+      3.8,
+      3.8333,
+      3.8667,
+      3.9,
+      3.9333,
+      3.9667,
+      4.0,
+      4.0333,
+      4.0667,
+      4.1,
+      4.1333,
+      4.1667,
+      4.2,
+      4.2333,
+      4.2667,
+      4.3,
+      4.3333,
+      4.3667,
+      4.4,
+      4.4333,
+      4.4667,
+      4.5,
+      4.5333,
+      4.5667,
+      4.6,
+      4.6333,
+      4.6667,
+      4.7,
+      4.7333,
+      4.7667,
+      4.8,
+      4.8333,
+      4.8667,
+      4.9,
+      4.9333,
+      4.9667,
+      5.0,
+      5.0333,
+      5.0667,
+      5.1,
+      5.1333,
+      5.1667,
+      5.2,
+      5.2333,
+      5.2667,
+      5.3,
+      5.3333,
+      5.3667,
+      5.4,
+      5.4333,
+      5.4667,
+      5.5,
+      5.5333,
+      5.5667,
+      5.6,
+      5.6333,
+      5.6667,
+      5.7,
+      5.7333,
+      5.7667,
+      5.8,
+      5.8333,
+      5.8667,
+      5.9,
+      5.9333,
+      5.9667,
+      6.0
+     ],
+     "values": [
+      [
+       -0.25,
+       0.0
+      ],
+      [
+       -0.25,
+       0.00556
+      ],
+      [
+       -0.25,
+       0.01111
+      ],
+      [
+       -0.25,
+       0.01667
+      ],
+      [
+       -0.25,
+       0.02222
+      ],
+      [
+       -0.25,
+       0.02778
+      ],
+      [
+       -0.25,
+       0.03333
+      ],
+      [
+       -0.25,
+       0.03889
+      ],
+      [
+       -0.25,
+       0.04444
+      ],
+      [
+       -0.25,
+       0.05
+      ],
+      [
+       -0.25,
+       0.05556
+      ],
+      [
+       -0.25,
+       0.06111
+      ],
+      [
+       -0.25,
+       0.06667
+      ],
+      [
+       -0.25,
+       0.07222
+      ],
+      [
+       -0.25,
+       0.07778
+      ],
+      [
+       -0.25,
+       0.08333
+      ],
+      [
+       -0.25,
+       0.08889
+      ],
+      [
+       -0.25,
+       0.09444
+      ],
+      [
+       -0.25,
+       0.1
+      ],
+      [
+       -0.25,
+       0.10556
+      ],
+      [
+       -0.25,
+       0.11111
+      ],
+      [
+       -0.25,
+       0.11667
+      ],
+      [
+       -0.25,
+       0.12222
+      ],
+      [
+       -0.25,
+       0.12778
+      ],
+      [
+       -0.25,
+       0.13333
+      ],
+      [
+       -0.25,
+       0.13889
+      ],
+      [
+       -0.25,
+       0.14444
+      ],
+      [
+       -0.25,
+       0.15
+      ],
+      [
+       -0.25,
+       0.15556
+      ],
+      [
+       -0.25,
+       0.16111
+      ],
+      [
+       -0.25,
+       0.16667
+      ],
+      [
+       -0.25,
+       0.17222
+      ],
+      [
+       -0.25,
+       0.17778
+      ],
+      [
+       -0.25,
+       0.18333
+      ],
+      [
+       -0.25,
+       0.18889
+      ],
+      [
+       -0.25,
+       0.19444
+      ],
+      [
+       -0.25,
+       0.2
+      ],
+      [
+       -0.25,
+       0.20556
+      ],
+      [
+       -0.25,
+       0.21111
+      ],
+      [
+       -0.25,
+       0.21667
+      ],
+      [
+       -0.25,
+       0.22222
+      ],
+      [
+       -0.25,
+       0.22778
+      ],
+      [
+       -0.25,
+       0.23333
+      ],
+      [
+       -0.25,
+       0.23889
+      ],
+      [
+       -0.25,
+       0.24444
+      ],
+      [
+       -0.25,
+       0.25
+      ],
+      [
+       -0.25,
+       0.25556
+      ],
+      [
+       -0.25,
+       0.26111
+      ],
+      [
+       -0.25,
+       0.26667
+      ],
+      [
+       -0.25,
+       0.27222
+      ],
+      [
+       -0.25,
+       0.27778
+      ],
+      [
+       -0.25,
+       0.28333
+      ],
+      [
+       -0.25,
+       0.28889
+      ],
+      [
+       -0.25,
+       0.29444
+      ],
+      [
+       -0.25,
+       0.3
+      ],
+      [
+       -0.25,
+       0.30556
+      ],
+      [
+       -0.25,
+       0.31111
+      ],
+      [
+       -0.25,
+       0.31667
+      ],
+      [
+       -0.25,
+       0.32222
+      ],
+      [
+       -0.25,
+       0.32778
+      ],
+      [
+       -0.25,
+       0.33333
+      ],
+      [
+       -0.25,
+       0.33889
+      ],
+      [
+       -0.25,
+       0.34444
+      ],
+      [
+       -0.25,
+       0.35
+      ],
+      [
+       -0.25,
+       0.35556
+      ],
+      [
+       -0.25,
+       0.36111
+      ],
+      [
+       -0.25,
+       0.36667
+      ],
+      [
+       -0.25,
+       0.37222
+      ],
+      [
+       -0.25,
+       0.37778
+      ],
+      [
+       -0.25,
+       0.38333
+      ],
+      [
+       -0.25,
+       0.38889
+      ],
+      [
+       -0.25,
+       0.39444
+      ],
+      [
+       -0.25,
+       0.4
+      ],
+      [
+       -0.25,
+       0.40556
+      ],
+      [
+       -0.25,
+       0.41111
+      ],
+      [
+       -0.25,
+       0.41667
+      ],
+      [
+       -0.25,
+       0.42222
+      ],
+      [
+       -0.25,
+       0.42778
+      ],
+      [
+       -0.25,
+       0.43333
+      ],
+      [
+       -0.25,
+       0.43889
+      ],
+      [
+       -0.25,
+       0.44444
+      ],
+      [
+       -0.25,
+       0.45
+      ],
+      [
+       -0.25,
+       0.45556
+      ],
+      [
+       -0.25,
+       0.46111
+      ],
+      [
+       -0.25,
+       0.46667
+      ],
+      [
+       -0.25,
+       0.47222
+      ],
+      [
+       -0.25,
+       0.47778
+      ],
+      [
+       -0.25,
+       0.48333
+      ],
+      [
+       -0.25,
+       0.48889
+      ],
+      [
+       -0.25,
+       0.49444
+      ],
+      [
+       -0.25,
+       0.5
+      ],
+      [
+       -0.25,
+       0.50556
+      ],
+      [
+       -0.25,
+       0.51111
+      ],
+      [
+       -0.25,
+       0.51667
+      ],
+      [
+       -0.25,
+       0.52222
+      ],
+      [
+       -0.25,
+       0.52778
+      ],
+      [
+       -0.25,
+       0.53333
+      ],
+      [
+       -0.25,
+       0.53889
+      ],
+      [
+       -0.25,
+       0.54444
+      ],
+      [
+       -0.25,
+       0.55
+      ],
+      [
+       -0.25,
+       0.55556
+      ],
+      [
+       -0.25,
+       0.56111
+      ],
+      [
+       -0.25,
+       0.56667
+      ],
+      [
+       -0.25,
+       0.57222
+      ],
+      [
+       -0.25,
+       0.57778
+      ],
+      [
+       -0.25,
+       0.58333
+      ],
+      [
+       -0.25,
+       0.58889
+      ],
+      [
+       -0.25,
+       0.59444
+      ],
+      [
+       -0.25,
+       0.6
+      ],
+      [
+       -0.25,
+       0.60556
+      ],
+      [
+       -0.25,
+       0.61111
+      ],
+      [
+       -0.25,
+       0.61667
+      ],
+      [
+       -0.25,
+       0.62222
+      ],
+      [
+       -0.25,
+       0.62778
+      ],
+      [
+       -0.25,
+       0.63333
+      ],
+      [
+       -0.25,
+       0.63889
+      ],
+      [
+       -0.25,
+       0.64444
+      ],
+      [
+       -0.25,
+       0.65
+      ],
+      [
+       -0.25,
+       0.65556
+      ],
+      [
+       -0.25,
+       0.66111
+      ],
+      [
+       -0.25,
+       0.66667
+      ],
+      [
+       -0.25,
+       0.67222
+      ],
+      [
+       -0.25,
+       0.67778
+      ],
+      [
+       -0.25,
+       0.68333
+      ],
+      [
+       -0.25,
+       0.68889
+      ],
+      [
+       -0.25,
+       0.69444
+      ],
+      [
+       -0.25,
+       0.7
+      ],
+      [
+       -0.25,
+       0.70556
+      ],
+      [
+       -0.25,
+       0.71111
+      ],
+      [
+       -0.25,
+       0.71667
+      ],
+      [
+       -0.25,
+       0.72222
+      ],
+      [
+       -0.25,
+       0.72778
+      ],
+      [
+       -0.25,
+       0.73333
+      ],
+      [
+       -0.25,
+       0.73889
+      ],
+      [
+       -0.25,
+       0.74444
+      ],
+      [
+       -0.25,
+       0.75
+      ],
+      [
+       -0.25,
+       0.75556
+      ],
+      [
+       -0.25,
+       0.76111
+      ],
+      [
+       -0.25,
+       0.76667
+      ],
+      [
+       -0.25,
+       0.77222
+      ],
+      [
+       -0.25,
+       0.77778
+      ],
+      [
+       -0.25,
+       0.78333
+      ],
+      [
+       -0.25,
+       0.78889
+      ],
+      [
+       -0.25,
+       0.79444
+      ],
+      [
+       -0.25,
+       0.8
+      ],
+      [
+       -0.25,
+       0.80556
+      ],
+      [
+       -0.25,
+       0.81111
+      ],
+      [
+       -0.25,
+       0.81667
+      ],
+      [
+       -0.25,
+       0.82222
+      ],
+      [
+       -0.25,
+       0.82778
+      ],
+      [
+       -0.25,
+       0.83333
+      ],
+      [
+       -0.25,
+       0.83889
+      ],
+      [
+       -0.25,
+       0.84444
+      ],
+      [
+       -0.25,
+       0.85
+      ],
+      [
+       -0.25,
+       0.85556
+      ],
+      [
+       -0.25,
+       0.86111
+      ],
+      [
+       -0.25,
+       0.86667
+      ],
+      [
+       -0.25,
+       0.87222
+      ],
+      [
+       -0.25,
+       0.87778
+      ],
+      [
+       -0.25,
+       0.88333
+      ],
+      [
+       -0.25,
+       0.88889
+      ],
+      [
+       -0.25,
+       0.89444
+      ],
+      [
+       -0.25,
+       0.9
+      ],
+      [
+       -0.25,
+       0.90556
+      ],
+      [
+       -0.25,
+       0.91111
+      ],
+      [
+       -0.25,
+       0.91667
+      ],
+      [
+       -0.25,
+       0.92222
+      ],
+      [
+       -0.25,
+       0.92778
+      ],
+      [
+       -0.25,
+       0.93333
+      ],
+      [
+       -0.25,
+       0.93889
+      ],
+      [
+       -0.25,
+       0.94444
+      ],
+      [
+       -0.25,
+       0.95
+      ],
+      [
+       -0.25,
+       0.95556
+      ],
+      [
+       -0.25,
+       0.96111
+      ],
+      [
+       -0.25,
+       0.96667
+      ],
+      [
+       -0.25,
+       0.97222
+      ],
+      [
+       -0.25,
+       0.97778
+      ],
+      [
+       -0.25,
+       0.98333
+      ],
+      [
+       -0.25,
+       0.98889
+      ],
+      [
+       -0.25,
+       0.99444
+      ],
+      [
+       -0.25,
+       1.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "pm0770_11_00_tongue_mesh",
+   "label": "tongue",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_ura_mesh",
+   "label": "ura",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body00_mesh",
+   "label": "body00",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_eye_mesh",
+   "label": "eye",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_eyebrow_mesh",
+   "label": "eyebrow",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_core_mesh",
+   "label": "core",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body01_ura_mesh",
+   "label": "body01 ura",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body01_mesh",
+   "label": "body01",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offset_a_mesh",
+   "label": "offset a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offset_b_mesh",
+   "label": "offset b",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offseteffb01_mesh",
+   "label": "offseteffb01",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0770_11_00_tongue_mesh_lod1",
+   "label": "tongue lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_ura_mesh_lod1",
+   "label": "ura lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body00_mesh_lod1",
+   "label": "body00 lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_eye_mesh_lod1",
+   "label": "eye lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_eyebrow_mesh_lod1",
+   "label": "eyebrow lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_core_mesh_lod1",
+   "label": "core lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body01_ura_mesh_lod1",
+   "label": "body01 ura lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body01_mesh_lod1",
+   "label": "body01 lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offset_a_mesh_lod1",
+   "label": "offset a lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offset_b_mesh_lod1",
+   "label": "offset b lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offseteffb01_mesh_lod1",
+   "label": "offseteffb01 lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0770_11_00_tongue_mesh_lod2",
+   "label": "tongue lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_ura_mesh_lod2",
+   "label": "ura lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body00_mesh_lod2",
+   "label": "body00 lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_eye_mesh_lod2",
+   "label": "eye lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_eyebrow_mesh_lod2",
+   "label": "eyebrow lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_core_mesh_lod2",
+   "label": "core lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body01_ura_mesh_lod2",
+   "label": "body01 ura lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body01_mesh_lod2",
+   "label": "body01 lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offset_a_mesh_lod2",
+   "label": "offset a lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offset_b_mesh_lod2",
+   "label": "offset b lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offseteffb01_mesh_lod2",
+   "label": "offseteffb01 lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0770_11_00_tongue_mesh_lod3",
+   "label": "tongue lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_ura_mesh_lod3",
+   "label": "ura lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body00_mesh_lod3",
+   "label": "body00 lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_eye_mesh_lod3",
+   "label": "eye lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_eyebrow_mesh_lod3",
+   "label": "eyebrow lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_core_mesh_lod3",
+   "label": "core lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body01_ura_mesh_lod3",
+   "label": "body01 ura lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_body01_mesh_lod3",
+   "label": "body01 lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offset_a_mesh_lod3",
+   "label": "offset a lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offset_b_mesh_lod3",
+   "label": "offset b lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0770_11_00_offseteffb01_mesh_lod3",
+   "label": "offseteffb01 lod3",
+   "lod": 3,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 129,
+  "meshes": 44,
+  "triangles": 5986,
+  "textures": 52,
+  "clips": 63,
+  "glbBytes": 9793572
+ },
+ "source": [
+  "ik_pokemon/data/pm0770/pm0770_11_00/"
+ ],
+ "extras": {
+  "dex": null,
+  "species": "pm0770",
+  "form": "11_00"
+ }
+}

@@ -1,0 +1,813 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "ob0009_00",
+ "kind": "object",
+ "displayName": "Flower",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "tex_00",
+     "label": "tex_00",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "battlewait01_loop",
+   "index": 1,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battleidle02",
+   "index": 12,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000",
+   "index": 20,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090",
+   "index": 21,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090",
+   "index": 24,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01",
+   "index": 300,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01",
+   "index": 400,
+   "duration": 2.2333,
+   "frameRate": 60.0,
+   "frameCount": 135,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01",
+   "index": 450,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start",
+   "index": 460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop",
+   "index": 461,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end",
+   "index": 462,
+   "duration": 1.0333,
+   "frameRate": 60.0,
+   "frameCount": 63,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop",
+   "index": 490,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01",
+   "index": 500,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02",
+   "index": 501,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start",
+   "index": 510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop",
+   "index": 511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end",
+   "index": 512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start",
+   "index": 520,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop",
+   "index": 521,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end",
+   "index": 522,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "ev_once_action01",
+   "index": 5100,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "ev_once_action02",
+   "index": 5110,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      90,
+      0
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      90,
+      0
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      90,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "ev_loop_action01_loop",
+   "index": 5201,
+   "duration": 0.1667,
+   "frameRate": 60.0,
+   "frameCount": 11,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "crystal_out_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "crystal_in_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "last_boss_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "battlewait01_loop",
+ "parts": [
+  {
+   "node": "crystal_in_mesh",
+   "label": "crystal in",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "crystal_out_mesh",
+   "label": "crystal out",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "last_boss_mesh",
+   "label": "last boss",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "crystal_in_mesh_lod1",
+   "label": "crystal in lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "crystal_out_mesh_lod1",
+   "label": "crystal out lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "last_boss_mesh_lod1",
+   "label": "last boss lod1",
+   "lod": 1,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 53,
+  "meshes": 6,
+  "triangles": 12236,
+  "textures": 12,
+  "clips": 23,
+  "glbBytes": 11075432
+ },
+ "source": [
+  "ik_chara/model_ob/ob0009_00_flower/"
+ ],
+ "extras": {
+  "item": "flower",
+  "species": "ob0009",
+  "form": ""
+ }
+}

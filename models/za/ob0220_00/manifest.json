@@ -1,0 +1,56 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0220_00",
+ "kind": "object",
+ "displayName": "Heavy Ball",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "uppertopobj_mesh",
+   "label": "uppertopobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "upperobj_mesh",
+   "label": "upperobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lowerobj_mesh",
+   "label": "lowerobj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 9,
+  "meshes": 3,
+  "triangles": 1474,
+  "textures": 7,
+  "clips": 0,
+  "glbBytes": 212372
+ },
+ "source": [
+  "ik_chara/model_ob/ob0220_00_heavyball/"
+ ],
+ "extras": {
+  "item": "heavyball",
+  "species": "ob0220",
+  "form": ""
+ }
+}

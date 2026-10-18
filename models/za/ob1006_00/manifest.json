@@ -1,0 +1,77 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "ob1006_00",
+ "kind": "object",
+ "displayName": "Jacket",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 1,
+   "duration": 0.1667,
+   "frameRate": 60.0,
+   "frameCount": 11,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "obj_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "onceaction01",
+   "index": 900,
+   "duration": 1.4333,
+   "frameRate": 60.0,
+   "frameCount": 87,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "obj_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "obj_mesh",
+   "label": "obj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 41,
+  "meshes": 1,
+  "triangles": 2990,
+  "textures": 7,
+  "clips": 2,
+  "glbBytes": 766028
+ },
+ "source": [
+  "ik_chara/model_ob/ob1006_00_jacket/"
+ ],
+ "extras": {
+  "item": "jacket",
+  "species": "ob1006",
+  "form": ""
+ }
+}

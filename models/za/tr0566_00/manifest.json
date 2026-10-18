@@ -1,0 +1,71 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "tr0566_00",
+ "kind": "trainer",
+ "displayName": "Adult A M",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "speak01_loop",
+   "index": 551,
+   "duration": 3.8333,
+   "frameRate": 30.0,
+   "frameCount": 116,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape07_loop",
+   "index": 4030,
+   "duration": 12.5,
+   "frameRate": 30.0,
+   "frameCount": 376,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape14_loop",
+   "index": 4065,
+   "duration": 8.3333,
+   "frameRate": 30.0,
+   "frameCount": 251,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 0,
+  "meshes": 1,
+  "triangles": 999,
+  "textures": 4,
+  "clips": 3,
+  "glbBytes": 11750560
+ },
+ "source": [
+  "ik_chara/model_uq/tr0566_00_adult_a_m/"
+ ],
+ "extras": {
+  "species": "tr0566",
+  "form": ""
+ }
+}

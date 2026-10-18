@@ -1,0 +1,3185 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0485_51_00",
+ "kind": "pokemon",
+ "displayName": "Heatran (51_00)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "battlewait01_loop",
+   "index": 1,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battlewait01_loop_offscreen",
+   "index": 1,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battleidle02",
+   "index": 12,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000",
+   "index": 20,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090",
+   "index": 21,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090",
+   "index": 24,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.6,
+   "frameRate": 60.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.6,
+   "frameRate": 60.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop",
+   "index": 30,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop",
+   "index": 100,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start",
+   "index": 140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01",
+   "index": 141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end",
+   "index": 142,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin02",
+   "index": 143,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepright02",
+   "index": 144,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start",
+   "index": 145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01",
+   "index": 146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end",
+   "index": 147,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout02",
+   "index": 148,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepleft02",
+   "index": 149,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start",
+   "index": 150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop",
+   "index": 151,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start",
+   "index": 152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop",
+   "index": 153,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02",
+   "index": 155,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01",
+   "index": 300,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01_offscreen",
+   "index": 300,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01",
+   "index": 400,
+   "duration": 2.2333,
+   "frameRate": 60.0,
+   "frameCount": 135,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01_offscreen",
+   "index": 400,
+   "duration": 2.2333,
+   "frameRate": 60.0,
+   "frameCount": 135,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_start",
+   "index": 420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_loop",
+   "index": 421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end",
+   "index": 422,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01",
+   "index": 450,
+   "duration": 2.2,
+   "frameRate": 60.0,
+   "frameCount": 133,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01_offscreen",
+   "index": 450,
+   "duration": 2.2,
+   "frameRate": 60.0,
+   "frameCount": 133,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start",
+   "index": 460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop",
+   "index": 461,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end",
+   "index": 462,
+   "duration": 1.0333,
+   "frameRate": 60.0,
+   "frameCount": 63,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop",
+   "index": 490,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01",
+   "index": 500,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02",
+   "index": 501,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start",
+   "index": 510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop",
+   "index": 511,
+   "duration": 1.8667,
+   "frameRate": 60.0,
+   "frameCount": 113,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end",
+   "index": 512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start",
+   "index": 520,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop",
+   "index": 521,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end",
+   "index": 522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "megaappeal01",
+   "index": 620,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "loop01_loop",
+   "index": 8201,
+   "duration": 4.6667,
+   "frameRate": 60.0,
+   "frameCount": 281,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "loop02_loop",
+   "index": 8211,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0485_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_finger_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_smog_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0485_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "battlewait01_loop",
+ "parts": [
+  {
+   "node": "pm0485_51_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_teeth_mesh",
+   "label": "teeth",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_foot_mesh",
+   "label": "foot",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_metal_mesh",
+   "label": "metal",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_finger_mesh",
+   "label": "finger",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_eyelid_mesh",
+   "label": "eyelid",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_teeth_mesh_lod1",
+   "label": "teeth lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_foot_mesh_lod1",
+   "label": "foot lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_metal_mesh_lod1",
+   "label": "metal lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_finger_mesh_lod1",
+   "label": "finger lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_eyelid_mesh_lod1",
+   "label": "eyelid lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_teeth_mesh_lod2",
+   "label": "teeth lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_foot_mesh_lod2",
+   "label": "foot lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_metal_mesh_lod2",
+   "label": "metal lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_finger_mesh_lod2",
+   "label": "finger lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_eyelid_mesh_lod2",
+   "label": "eyelid lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_body_mesh_lod3",
+   "label": "body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_teeth_mesh_lod3",
+   "label": "teeth lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_foot_mesh_lod3",
+   "label": "foot lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_metal_mesh_lod3",
+   "label": "metal lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_finger_mesh_lod3",
+   "label": "finger lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0485_51_00_eyelid_mesh_lod3",
+   "label": "eyelid lod3",
+   "lod": 3,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 133,
+  "meshes": 24,
+  "triangles": 8154,
+  "textures": 32,
+  "clips": 49,
+  "glbBytes": 9828380
+ },
+ "source": [
+  "ik_pokemon/data/pm0485/pm0485_51_00/"
+ ],
+ "extras": {
+  "dex": 485,
+  "species": "pm0485",
+  "form": "51_00"
+ }
+}

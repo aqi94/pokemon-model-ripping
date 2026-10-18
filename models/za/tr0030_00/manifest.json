@@ -1,0 +1,3910 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "left_attach",
+   "side": "left",
+   "clips": [
+    "defaultwait01_loop",
+    "defaultwait02_start",
+    "defaultwait02_loop",
+    "defaultwait02_end",
+    "def01_idle01",
+    "def02_idle01",
+    "turn01_r000",
+    "turn01_r090",
+    "turn01_r180",
+    "turn01_l000",
+    "turn01_l090",
+    "turn01_l180",
+    "turnmove01_r090",
+    "turnmove01_l090",
+    "walk01_000_start",
+    "walk01_000_loop",
+    "walk01_000_end",
+    "run01_000_start",
+    "run01_000_loop",
+    "run01_000_end",
+    "sit01_start",
+    "sit01_loop",
+    "sit01_end",
+    "sit02_loop",
+    "sit03_start",
+    "sit03_loop",
+    "sit03_end",
+    "sit04_loop",
+    "sitspeak01_loop",
+    "sitspeak02_loop",
+    "sitspeak03_loop",
+    "sitspeak04_loop",
+    "getpass01",
+    "yes01",
+    "no01",
+    "search01_start",
+    "search01_loop",
+    "search01_end",
+    "speak01_loop",
+    "speak02_loop",
+    "glad01",
+    "surprise01",
+    "grief01",
+    "think01_start",
+    "think01_loop",
+    "think01_end",
+    "byebye01_start",
+    "byebye01_loop",
+    "byebye01_end",
+    "cheer01_start",
+    "cheer01_loop",
+    "cheer01_end",
+    "danpose01_start",
+    "danpose01_loop",
+    "danpose01_end",
+    "loopaction01_start",
+    "loopaction01_loop",
+    "loopaction01_end",
+    "loopaction02_start",
+    "loopaction02_loop",
+    "loopaction02_end",
+    "battlewait01_start",
+    "battlewait01_loop",
+    "battlewait01_end",
+    "btl01_idle01",
+    "ballthrow01",
+    "order01",
+    "advent01_start",
+    "advent01_loop",
+    "advent01_end",
+    "lose01_start",
+    "lose01_loop",
+    "lose01_end",
+    "landscape01_loop",
+    "landscape02_loop",
+    "landscape03_loop",
+    "landscape04_loop",
+    "landscape06_loop",
+    "landscape07_loop",
+    "landscape08_loop",
+    "landscape09_loop",
+    "landscape10_loop",
+    "landscape11_loop",
+    "landscape12_loop",
+    "landscape14_loop",
+    "landscape18_loop",
+    "yes01",
+    "no01",
+    "ballreturn01_start",
+    "ballreturn01_loop",
+    "ballreturn01_end",
+    "damage01",
+    "speak01_loop",
+    "defaultwait01_loop [cla_m]",
+    "defaultwait02_start [cla_m]",
+    "defaultwait02_loop [cla_m]",
+    "defaultwait02_end [cla_m]",
+    "def01_idle01 [cla_m]",
+    "def02_idle01 [cla_m]",
+    "turn01_r000 [cla_m]",
+    "turn01_r090 [cla_m]",
+    "turn01_r180 [cla_m]",
+    "turn01_l000 [cla_m]",
+    "turn01_l090 [cla_m]",
+    "turn01_l180 [cla_m]",
+    "turnmove01_r090 [cla_m]",
+    "turnmove01_l090 [cla_m]",
+    "walk01_000_start [cla_m]",
+    "walk01_000_loop [cla_m]",
+    "walk01_000_end [cla_m]",
+    "run01_000_start [cla_m]",
+    "run01_000_loop [cla_m]",
+    "run01_000_end [cla_m]",
+    "sit01_start [cla_m]",
+    "sit01_loop [cla_m]",
+    "sit01_end [cla_m]",
+    "sit02_loop [cla_m]",
+    "sit03_start [cla_m]",
+    "sit03_loop [cla_m]",
+    "sit03_end [cla_m]",
+    "sit04_loop [cla_m]",
+    "sitspeak01_loop [cla_m]",
+    "sitspeak02_loop [cla_m]",
+    "sitspeak03_loop [cla_m]",
+    "sitspeak04_loop [cla_m]",
+    "getpass01 [cla_m]",
+    "yes01 [cla_m]",
+    "no01 [cla_m]",
+    "search01_start [cla_m]",
+    "search01_loop [cla_m]",
+    "search01_end [cla_m]",
+    "speak01_loop [cla_m]",
+    "speak02_loop [cla_m]",
+    "glad01 [cla_m]",
+    "surprise01 [cla_m]",
+    "grief01 [cla_m]",
+    "think01_start [cla_m]",
+    "think01_loop [cla_m]",
+    "think01_end [cla_m]",
+    "byebye01_start [cla_m]",
+    "byebye01_loop [cla_m]",
+    "byebye01_end [cla_m]",
+    "cheer01_start [cla_m]",
+    "cheer01_loop [cla_m]",
+    "cheer01_end [cla_m]",
+    "battlewait01_start [cla_m]",
+    "battlewait01_loop [cla_m]",
+    "battlewait01_end [cla_m]",
+    "btl01_idle01 [cla_m]",
+    "ballthrow01 [cla_m]",
+    "order01 [cla_m]",
+    "advent01_start [cla_m]",
+    "advent01_loop [cla_m]",
+    "advent01_end [cla_m]",
+    "lose01_start [cla_m]",
+    "lose01_loop [cla_m]",
+    "lose01_end [cla_m]",
+    "yes01 [cla_m]",
+    "no01 [cla_m]",
+    "ballreturn01_start [cla_m]",
+    "ballreturn01_loop [cla_m]",
+    "ballreturn01_end [cla_m]",
+    "damage01 [cla_m]",
+    "speak01_loop [cla_m]"
+   ]
+  },
+  {
+   "bone": "right_attach",
+   "side": "right",
+   "clips": [
+    "defaultwait01_loop",
+    "defaultwait02_start",
+    "defaultwait02_loop",
+    "defaultwait02_end",
+    "def01_idle01",
+    "def02_idle01",
+    "turn01_r000",
+    "turn01_r090",
+    "turn01_r180",
+    "turn01_l000",
+    "turn01_l090",
+    "turn01_l180",
+    "turnmove01_r090",
+    "turnmove01_l090",
+    "walk01_000_start",
+    "walk01_000_loop",
+    "walk01_000_end",
+    "run01_000_start",
+    "run01_000_loop",
+    "run01_000_end",
+    "sit01_start",
+    "sit01_loop",
+    "sit01_end",
+    "sit02_loop",
+    "sit03_start",
+    "sit03_loop",
+    "sit03_end",
+    "sit04_loop",
+    "sitspeak01_loop",
+    "sitspeak02_loop",
+    "sitspeak03_loop",
+    "sitspeak04_loop",
+    "getpass01",
+    "yes01",
+    "no01",
+    "search01_start",
+    "search01_loop",
+    "search01_end",
+    "speak01_loop",
+    "speak02_loop",
+    "glad01",
+    "surprise01",
+    "grief01",
+    "think01_start",
+    "think01_loop",
+    "think01_end",
+    "byebye01_start",
+    "byebye01_loop",
+    "byebye01_end",
+    "cheer01_start",
+    "cheer01_loop",
+    "cheer01_end",
+    "danpose01_start",
+    "danpose01_loop",
+    "danpose01_end",
+    "loopaction01_start",
+    "loopaction01_loop",
+    "loopaction01_end",
+    "loopaction02_start",
+    "loopaction02_loop",
+    "loopaction02_end",
+    "battlewait01_start",
+    "battlewait01_loop",
+    "battlewait01_end",
+    "btl01_idle01",
+    "ballthrow01",
+    "order01",
+    "advent01_start",
+    "advent01_loop",
+    "advent01_end",
+    "lose01_start",
+    "lose01_loop",
+    "lose01_end",
+    "landscape01_loop",
+    "landscape02_loop",
+    "landscape03_loop",
+    "landscape04_loop",
+    "landscape06_loop",
+    "landscape07_loop",
+    "landscape08_loop",
+    "landscape09_loop",
+    "landscape10_loop",
+    "landscape11_loop",
+    "landscape12_loop",
+    "landscape14_loop",
+    "landscape18_loop",
+    "yes01",
+    "no01",
+    "ballreturn01_start",
+    "ballreturn01_loop",
+    "ballreturn01_end",
+    "damage01",
+    "speak01_loop",
+    "defaultwait01_loop [cla_m]",
+    "defaultwait02_start [cla_m]",
+    "defaultwait02_loop [cla_m]",
+    "defaultwait02_end [cla_m]",
+    "def01_idle01 [cla_m]",
+    "def02_idle01 [cla_m]",
+    "turn01_r000 [cla_m]",
+    "turn01_r090 [cla_m]",
+    "turn01_r180 [cla_m]",
+    "turn01_l000 [cla_m]",
+    "turn01_l090 [cla_m]",
+    "turn01_l180 [cla_m]",
+    "turnmove01_r090 [cla_m]",
+    "turnmove01_l090 [cla_m]",
+    "walk01_000_start [cla_m]",
+    "walk01_000_loop [cla_m]",
+    "walk01_000_end [cla_m]",
+    "run01_000_start [cla_m]",
+    "run01_000_loop [cla_m]",
+    "run01_000_end [cla_m]",
+    "sit01_start [cla_m]",
+    "sit01_loop [cla_m]",
+    "sit01_end [cla_m]",
+    "sit02_loop [cla_m]",
+    "sit03_start [cla_m]",
+    "sit03_loop [cla_m]",
+    "sit03_end [cla_m]",
+    "sit04_loop [cla_m]",
+    "sitspeak01_loop [cla_m]",
+    "sitspeak02_loop [cla_m]",
+    "sitspeak03_loop [cla_m]",
+    "sitspeak04_loop [cla_m]",
+    "getpass01 [cla_m]",
+    "yes01 [cla_m]",
+    "no01 [cla_m]",
+    "search01_start [cla_m]",
+    "search01_loop [cla_m]",
+    "search01_end [cla_m]",
+    "speak01_loop [cla_m]",
+    "speak02_loop [cla_m]",
+    "glad01 [cla_m]",
+    "surprise01 [cla_m]",
+    "grief01 [cla_m]",
+    "think01_start [cla_m]",
+    "think01_loop [cla_m]",
+    "think01_end [cla_m]",
+    "byebye01_start [cla_m]",
+    "byebye01_loop [cla_m]",
+    "byebye01_end [cla_m]",
+    "cheer01_start [cla_m]",
+    "cheer01_loop [cla_m]",
+    "cheer01_end [cla_m]",
+    "battlewait01_start [cla_m]",
+    "battlewait01_loop [cla_m]",
+    "battlewait01_end [cla_m]",
+    "btl01_idle01 [cla_m]",
+    "ballthrow01 [cla_m]",
+    "order01 [cla_m]",
+    "advent01_start [cla_m]",
+    "advent01_loop [cla_m]",
+    "advent01_end [cla_m]",
+    "lose01_start [cla_m]",
+    "lose01_loop [cla_m]",
+    "lose01_end [cla_m]",
+    "yes01 [cla_m]",
+    "no01 [cla_m]",
+    "ballreturn01_start [cla_m]",
+    "ballreturn01_loop [cla_m]",
+    "ballreturn01_end [cla_m]",
+    "damage01 [cla_m]",
+    "speak01_loop [cla_m]"
+   ]
+  }
+ ],
+ "game": "za",
+ "id": "tr0030_00",
+ "kind": "trainer",
+ "displayName": "Co Member M",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "skin",
+   "label": "Skin",
+   "options": [
+    {
+     "variant": 0,
+     "name": "tone1",
+     "label": "Tone 1",
+     "default": false
+    },
+    {
+     "variant": 1,
+     "name": "tone2",
+     "label": "Tone 2",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "tone3",
+     "label": "Tone 3",
+     "default": true
+    },
+    {
+     "variant": 3,
+     "name": "tone4",
+     "label": "Tone 4",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 1,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "defaultwait02_start",
+   "index": 2,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_loop",
+   "index": 3,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_end",
+   "index": 4,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def01_idle01",
+   "index": 11,
+   "duration": 5.8333,
+   "frameRate": 60.0,
+   "frameCount": 351,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def02_idle01",
+   "index": 15,
+   "duration": 5.8333,
+   "frameRate": 60.0,
+   "frameCount": 351,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r000",
+   "index": 20,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r090",
+   "index": 21,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r180",
+   "index": 22,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l000",
+   "index": 23,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l090",
+   "index": 24,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l180",
+   "index": 25,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_start",
+   "index": 50,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_loop",
+   "index": 51,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_end",
+   "index": 52,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_start",
+   "index": 70,
+   "duration": 0.25,
+   "frameRate": 60.0,
+   "frameCount": 16,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_loop",
+   "index": 71,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_end",
+   "index": 72,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_start",
+   "index": 270,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_loop",
+   "index": 271,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_end",
+   "index": 272,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit02_loop",
+   "index": 273,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit03_start",
+   "index": 274,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit03_loop",
+   "index": 275,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit03_end",
+   "index": 276,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit04_loop",
+   "index": 277,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak01_loop",
+   "index": 291,
+   "duration": 6.1667,
+   "frameRate": 60.0,
+   "frameCount": 371,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak02_loop",
+   "index": 296,
+   "duration": 7.0,
+   "frameRate": 60.0,
+   "frameCount": 421,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak03_loop",
+   "index": 301,
+   "duration": 5.0,
+   "frameRate": 60.0,
+   "frameCount": 301,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak04_loop",
+   "index": 306,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "getpass01",
+   "index": 315,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "yes01",
+   "index": 320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "no01",
+   "index": 321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "search01_start",
+   "index": 340,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "search01_loop",
+   "index": 341,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "search01_end",
+   "index": 342,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak01_loop",
+   "index": 551,
+   "duration": 3.8333,
+   "frameRate": 60.0,
+   "frameCount": 231,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak02_loop",
+   "index": 554,
+   "duration": 3.8333,
+   "frameRate": 60.0,
+   "frameCount": 231,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "glad01",
+   "index": 570,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "surprise01",
+   "index": 573,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "emote",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "grief01",
+   "index": 576,
+   "duration": 3.0667,
+   "frameRate": 60.0,
+   "frameCount": 185,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "think01_start",
+   "index": 600,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "think01_loop",
+   "index": 601,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "think01_end",
+   "index": 602,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "byebye01_start",
+   "index": 603,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "byebye01_loop",
+   "index": 604,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "byebye01_end",
+   "index": 605,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "cheer01_start",
+   "index": 612,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "cheer01_loop",
+   "index": 613,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "cheer01_end",
+   "index": 614,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "danpose01_start",
+   "index": 618,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "danpose01_loop",
+   "index": 619,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "danpose01_end",
+   "index": 620,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction01_start",
+   "index": 930,
+   "duration": 0.6,
+   "frameRate": 60.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction01_loop",
+   "index": 931,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction01_end",
+   "index": 932,
+   "duration": 0.6,
+   "frameRate": 60.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction02_start",
+   "index": 933,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction02_loop",
+   "index": 934,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction02_end",
+   "index": 935,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "battlewait01_start",
+   "index": 1000,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "battlewait01_loop",
+   "index": 1001,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "battlewait01_end",
+   "index": 1002,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "btl01_idle01",
+   "index": 1011,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "ballthrow01",
+   "index": 1020,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "order01",
+   "index": 1030,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "advent01_start",
+   "index": 1060,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "advent01_loop",
+   "index": 1061,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "advent01_end",
+   "index": 1062,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "lose01_start",
+   "index": 1080,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "lose01_loop",
+   "index": 1081,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "lose01_end",
+   "index": 1082,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape01_loop",
+   "index": 4000,
+   "duration": 9.1667,
+   "frameRate": 60.0,
+   "frameCount": 551,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape02_loop",
+   "index": 4005,
+   "duration": 9.1667,
+   "frameRate": 60.0,
+   "frameCount": 551,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape03_loop",
+   "index": 4010,
+   "duration": 10.0,
+   "frameRate": 60.0,
+   "frameCount": 601,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape04_loop",
+   "index": 4015,
+   "duration": 12.5,
+   "frameRate": 60.0,
+   "frameCount": 751,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape06_loop",
+   "index": 4025,
+   "duration": 10.3333,
+   "frameRate": 60.0,
+   "frameCount": 621,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape07_loop",
+   "index": 4030,
+   "duration": 12.5,
+   "frameRate": 60.0,
+   "frameCount": 751,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape08_loop",
+   "index": 4035,
+   "duration": 5.8333,
+   "frameRate": 60.0,
+   "frameCount": 351,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape09_loop",
+   "index": 4040,
+   "duration": 9.1667,
+   "frameRate": 60.0,
+   "frameCount": 551,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape10_loop",
+   "index": 4045,
+   "duration": 12.5,
+   "frameRate": 60.0,
+   "frameCount": 751,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape11_loop",
+   "index": 4050,
+   "duration": 10.0,
+   "frameRate": 60.0,
+   "frameCount": 601,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape12_loop",
+   "index": 4055,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape14_loop",
+   "index": 4065,
+   "duration": 8.3333,
+   "frameRate": 60.0,
+   "frameCount": 501,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "landscape18_loop",
+   "index": 4085,
+   "duration": 11.1667,
+   "frameRate": 60.0,
+   "frameCount": 671,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "yes01",
+   "index": 7320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "no01",
+   "index": 7321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "ballreturn01_start",
+   "index": 7460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "ballreturn01_loop",
+   "index": 7461,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "ballreturn01_end",
+   "index": 7462,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "damage01",
+   "index": 7500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "speak01_loop",
+   "index": 7551,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eyeblink01",
+   "index": 8000,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15
+     ],
+     "values": [
+      [
+       0.0,
+       -0.035
+      ],
+      [
+       0.0,
+       -0.11199
+      ],
+      [
+       0.0,
+       -0.10029
+      ],
+      [
+       0.0,
+       -0.09171
+      ],
+      [
+       0.0,
+       -0.087
+      ],
+      [
+       0.0,
+       -0.08892
+      ],
+      [
+       0.0,
+       -0.10029
+      ],
+      [
+       0.0,
+       -0.12774
+      ],
+      [
+       0.0,
+       -0.0933
+      ],
+      [
+       0.0,
+       -0.035
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15
+     ],
+     "values": [
+      [
+       0.0,
+       -0.035
+      ],
+      [
+       0.0,
+       -0.11199
+      ],
+      [
+       0.0,
+       -0.10029
+      ],
+      [
+       0.0,
+       -0.09171
+      ],
+      [
+       0.0,
+       -0.087
+      ],
+      [
+       0.0,
+       -0.08892
+      ],
+      [
+       0.0,
+       -0.10029
+      ],
+      [
+       0.0,
+       -0.12774
+      ],
+      [
+       0.0,
+       -0.0933
+      ],
+      [
+       0.0,
+       -0.035
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "iris01",
+   "index": 8050,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      1.6667,
+      1.6833,
+      1.7,
+      1.7167,
+      1.7333,
+      1.75,
+      1.7667,
+      1.7833,
+      1.8,
+      1.8167,
+      1.8333,
+      1.85,
+      1.8667,
+      1.8833,
+      1.9,
+      1.9167,
+      1.9333,
+      1.95,
+      1.9667,
+      1.9833,
+      2.0,
+      2.0167,
+      2.0333,
+      2.05,
+      2.0667,
+      2.1,
+      2.1167,
+      2.1333,
+      2.15,
+      2.1667,
+      2.1833,
+      2.2,
+      2.2167,
+      2.2333,
+      2.25,
+      2.2667,
+      2.2833,
+      2.3,
+      2.3167,
+      2.3333,
+      2.35,
+      2.3667,
+      2.3833,
+      2.4,
+      2.4167,
+      2.4333,
+      2.45,
+      2.4667,
+      2.4833,
+      2.5,
+      2.5167,
+      2.5333,
+      2.55,
+      2.5667,
+      2.5833,
+      2.6,
+      2.6167,
+      2.6333,
+      2.65,
+      2.6667,
+      2.6833,
+      2.7,
+      2.7167,
+      2.7333,
+      2.75,
+      2.7667,
+      2.7833,
+      2.8,
+      2.8167,
+      2.8333,
+      2.85,
+      2.8667,
+      2.8833,
+      2.9,
+      2.9167,
+      2.9333,
+      2.95,
+      2.9667,
+      2.9833,
+      3.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.0408,
+       0.0182
+      ],
+      [
+       -0.04076,
+       0.01789
+      ],
+      [
+       -0.04047,
+       0.01702
+      ],
+      [
+       -0.0397,
+       0.01568
+      ],
+      [
+       -0.03819,
+       0.01394
+      ],
+      [
+       -0.0357,
+       0.0119
+      ],
+      [
+       -0.03199,
+       0.00963
+      ],
+      [
+       -0.02681,
+       0.00963
+      ],
+      [
+       -0.01991,
+       0.00476
+      ],
+      [
+       -0.01106,
+       0.00232
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0169,
+       -0.00256
+      ],
+      [
+       0.04163,
+       -0.00563
+      ],
+      [
+       0.07191,
+       -0.00904
+      ],
+      [
+       0.10548,
+       -0.00904
+      ],
+      [
+       0.1401,
+       -0.0161
+      ],
+      [
+       0.17349,
+       -0.01939
+      ],
+      [
+       0.2034,
+       -0.02227
+      ],
+      [
+       0.22756,
+       -0.02455
+      ],
+      [
+       0.24371,
+       -0.02606
+      ],
+      [
+       0.2496,
+       -0.0266
+      ],
+      [
+       0.24147,
+       -0.02586
+      ],
+      [
+       0.2194,
+       -0.02383
+      ],
+      [
+       0.18687,
+       -0.02085
+      ],
+      [
+       0.14738,
+       -0.01724
+      ],
+      [
+       0.06142,
+       -0.00936
+      ],
+      [
+       0.02193,
+       -0.00575
+      ],
+      [
+       -0.0106,
+       -0.00277
+      ],
+      [
+       -0.03267,
+       -0.00074
+      ],
+      [
+       -0.0408,
+       0.0
+      ],
+      [
+       -0.04076,
+       0.0
+      ],
+      [
+       -0.04047,
+       0.0
+      ],
+      [
+       -0.0397,
+       0.0
+      ],
+      [
+       -0.03819,
+       0.0
+      ],
+      [
+       -0.0357,
+       0.0
+      ],
+      [
+       -0.03199,
+       0.0
+      ],
+      [
+       -0.02681,
+       0.0
+      ],
+      [
+       -0.01991,
+       0.0
+      ],
+      [
+       -0.01106,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0169,
+       -0.00081
+      ],
+      [
+       0.04163,
+       -0.00311
+      ],
+      [
+       0.07191,
+       -0.00668
+      ],
+      [
+       0.10548,
+       -0.0113
+      ],
+      [
+       0.1401,
+       -0.01676
+      ],
+      [
+       0.17349,
+       -0.02283
+      ],
+      [
+       0.2034,
+       -0.02931
+      ],
+      [
+       0.22756,
+       -0.02931
+      ],
+      [
+       0.24371,
+       -0.04261
+      ],
+      [
+       0.2496,
+       -0.049
+      ],
+      [
+       0.24196,
+       -0.05569
+      ],
+      [
+       0.22124,
+       -0.06322
+      ],
+      [
+       0.19069,
+       -0.07133
+      ],
+      [
+       0.1536,
+       -0.07133
+      ],
+      [
+       0.1536,
+       -0.08833
+      ],
+      [
+       0.07287,
+       -0.09673
+      ],
+      [
+       0.03578,
+       -0.10473
+      ],
+      [
+       0.00523,
+       -0.11209
+      ],
+      [
+       -0.0155,
+       -0.11856
+      ],
+      [
+       -0.02313,
+       -0.1239
+      ],
+      [
+       -0.02311,
+       -0.12823
+      ],
+      [
+       -0.02295,
+       -0.13187
+      ],
+      [
+       -0.02251,
+       -0.13488
+      ],
+      [
+       -0.02165,
+       -0.13731
+      ],
+      [
+       -0.02024,
+       -0.13921
+      ],
+      [
+       -0.01814,
+       -0.14065
+      ],
+      [
+       -0.0152,
+       -0.14167
+      ],
+      [
+       -0.01129,
+       -0.14234
+      ],
+      [
+       -0.00627,
+       -0.14269
+      ],
+      [
+       0.0,
+       -0.1428
+      ],
+      [
+       0.0111,
+       -0.14235
+      ],
+      [
+       0.02923,
+       -0.14114
+      ],
+      [
+       0.05245,
+       -0.13935
+      ],
+      [
+       0.07884,
+       -0.13718
+      ],
+      [
+       0.10647,
+       -0.13718
+      ],
+      [
+       0.13341,
+       -0.13246
+      ],
+      [
+       0.15772,
+       -0.13029
+      ],
+      [
+       0.17748,
+       -0.1285
+      ],
+      [
+       0.19075,
+       -0.12729
+      ],
+      [
+       0.1956,
+       -0.12684
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      1.6667,
+      1.6833,
+      1.7,
+      1.7167,
+      1.7333,
+      1.75,
+      1.7667,
+      1.7833,
+      1.8,
+      1.8167,
+      1.8333,
+      1.85,
+      1.8667,
+      1.8833,
+      1.9,
+      1.9167,
+      1.9333,
+      1.95,
+      1.9667,
+      1.9833,
+      2.0,
+      2.0167,
+      2.0333,
+      2.05,
+      2.0667,
+      2.1,
+      2.1167,
+      2.1333,
+      2.15,
+      2.1667,
+      2.1833,
+      2.2,
+      2.2167,
+      2.2333,
+      2.25,
+      2.2667,
+      2.2833,
+      2.3,
+      2.3167,
+      2.3333,
+      2.35,
+      2.3667,
+      2.3833,
+      2.4,
+      2.4167,
+      2.4333,
+      2.45,
+      2.4667,
+      2.4833,
+      2.5,
+      2.5167,
+      2.5333,
+      2.55,
+      2.5667,
+      2.5833,
+      2.6,
+      2.6167,
+      2.6333,
+      2.65,
+      2.6667,
+      2.6833,
+      2.7,
+      2.7167,
+      2.7333,
+      2.75,
+      2.7667,
+      2.7833,
+      2.8,
+      2.8167,
+      2.8333,
+      2.85,
+      2.8667,
+      2.8833,
+      2.9,
+      2.9167,
+      2.9333,
+      2.95,
+      2.9667,
+      2.9833,
+      3.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.2496,
+       -0.0266
+      ],
+      [
+       -0.24371,
+       -0.02606
+      ],
+      [
+       -0.22756,
+       -0.02455
+      ],
+      [
+       -0.2034,
+       -0.02227
+      ],
+      [
+       -0.17349,
+       -0.01939
+      ],
+      [
+       -0.1401,
+       -0.0161
+      ],
+      [
+       -0.10548,
+       -0.0161
+      ],
+      [
+       -0.07191,
+       -0.00904
+      ],
+      [
+       -0.04163,
+       -0.00563
+      ],
+      [
+       -0.0169,
+       -0.00256
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.01106,
+       0.00232
+      ],
+      [
+       0.01991,
+       0.00232
+      ],
+      [
+       0.02681,
+       0.00722
+      ],
+      [
+       0.03199,
+       0.00963
+      ],
+      [
+       0.0357,
+       0.0119
+      ],
+      [
+       0.03819,
+       0.01394
+      ],
+      [
+       0.0397,
+       0.01568
+      ],
+      [
+       0.04047,
+       0.01702
+      ],
+      [
+       0.04076,
+       0.01789
+      ],
+      [
+       0.0408,
+       0.0182
+      ],
+      [
+       0.03267,
+       0.01632
+      ],
+      [
+       0.0106,
+       0.01121
+      ],
+      [
+       -0.02193,
+       0.00368
+      ],
+      [
+       -0.06142,
+       -0.00545
+      ],
+      [
+       -0.14738,
+       -0.02535
+      ],
+      [
+       -0.18687,
+       -0.03448
+      ],
+      [
+       -0.2194,
+       -0.04201
+      ],
+      [
+       -0.24147,
+       -0.04712
+      ],
+      [
+       -0.2496,
+       -0.049
+      ],
+      [
+       -0.24371,
+       -0.04763
+      ],
+      [
+       -0.22756,
+       -0.0439
+      ],
+      [
+       -0.2034,
+       -0.03842
+      ],
+      [
+       -0.17349,
+       -0.03175
+      ],
+      [
+       -0.1401,
+       -0.03175
+      ],
+      [
+       -0.10548,
+       -0.01725
+      ],
+      [
+       -0.07191,
+       -0.01058
+      ],
+      [
+       -0.04163,
+       -0.0051
+      ],
+      [
+       -0.0169,
+       -0.00137
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.01106,
+       0.0
+      ],
+      [
+       0.01991,
+       0.0
+      ],
+      [
+       0.02681,
+       0.0
+      ],
+      [
+       0.03199,
+       0.0
+      ],
+      [
+       0.0357,
+       0.0
+      ],
+      [
+       0.03819,
+       0.0
+      ],
+      [
+       0.0397,
+       0.0
+      ],
+      [
+       0.04047,
+       0.0
+      ],
+      [
+       0.04076,
+       0.0
+      ],
+      [
+       0.0408,
+       0.0
+      ],
+      [
+       0.03417,
+       -0.00312
+      ],
+      [
+       0.01617,
+       -0.01165
+      ],
+      [
+       -0.01035,
+       -0.02437
+      ],
+      [
+       -0.04256,
+       -0.04004
+      ],
+      [
+       -0.04256,
+       -0.05741
+      ],
+      [
+       -0.11265,
+       -0.07527
+      ],
+      [
+       -0.14486,
+       -0.09237
+      ],
+      [
+       -0.17138,
+       -0.10749
+      ],
+      [
+       -0.18937,
+       -0.11938
+      ],
+      [
+       -0.19601,
+       -0.12681
+      ],
+      [
+       -0.19114,
+       -0.13115
+      ],
+      [
+       -0.17784,
+       -0.13462
+      ],
+      [
+       -0.15805,
+       -0.13732
+      ],
+      [
+       -0.13368,
+       -0.13935
+      ],
+      [
+       -0.10669,
+       -0.1408
+      ],
+      [
+       -0.079,
+       -0.14178
+      ],
+      [
+       -0.05255,
+       -0.14237
+      ],
+      [
+       -0.02928,
+       -0.14267
+      ],
+      [
+       -0.01112,
+       -0.14267
+      ],
+      [
+       0.0,
+       -0.1428
+      ],
+      [
+       0.00628,
+       -0.14227
+      ],
+      [
+       0.0113,
+       -0.14083
+      ],
+      [
+       0.01522,
+       -0.13872
+      ],
+      [
+       0.01816,
+       -0.13615
+      ],
+      [
+       0.02026,
+       -0.13615
+      ],
+      [
+       0.02168,
+       -0.13055
+      ],
+      [
+       0.02253,
+       -0.12798
+      ],
+      [
+       0.02297,
+       -0.12587
+      ],
+      [
+       0.02314,
+       -0.12443
+      ],
+      [
+       0.02316,
+       -0.1239
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "mouth01",
+   "index": 8101,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth02",
+   "index": 8102,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth03",
+   "index": 8103,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth04",
+   "index": 8104,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye01",
+   "index": 8201,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face01",
+   "index": 8201,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye02",
+   "index": 8202,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.04333
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.04333
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "face02",
+   "index": 8202,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.04333
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.04333
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eye03",
+   "index": 8203,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face03",
+   "index": 8203,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye04",
+   "index": 8204,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face04",
+   "index": 8204,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye05",
+   "index": 8205,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face05",
+   "index": 8205,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye06",
+   "index": 8206,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face06",
+   "index": 8206,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye07",
+   "index": 8207,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face07",
+   "index": 8207,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye08",
+   "index": 8208,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face08",
+   "index": 8208,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye09",
+   "index": 8209,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face09",
+   "index": 8209,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye10",
+   "index": 8210,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.035
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.035
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "face10",
+   "index": 8210,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.035
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.035
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eye11",
+   "index": 8211,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face11",
+   "index": 8211,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face12",
+   "index": 8212,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face13",
+   "index": 8213,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face14",
+   "index": 8214,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face15",
+   "index": 8215,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face16",
+   "index": 8216,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face17",
+   "index": 8217,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face18",
+   "index": 8218,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "defaultwait01_loop [cla_m]",
+   "index": 100001,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_start [cla_m]",
+   "index": 100002,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_loop [cla_m]",
+   "index": 100003,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_end [cla_m]",
+   "index": 100004,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "def01_idle01 [cla_m]",
+   "index": 100011,
+   "duration": 5.8333,
+   "frameRate": 60.0,
+   "frameCount": 351,
+   "loop": false,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "def02_idle01 [cla_m]",
+   "index": 100015,
+   "duration": 5.8333,
+   "frameRate": 60.0,
+   "frameCount": 351,
+   "loop": false,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "turn01_r000 [cla_m]",
+   "index": 100020,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "turn01_r090 [cla_m]",
+   "index": 100021,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "turn01_r180 [cla_m]",
+   "index": 100022,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "turn01_l000 [cla_m]",
+   "index": 100023,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "turn01_l090 [cla_m]",
+   "index": 100024,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "turn01_l180 [cla_m]",
+   "index": 100025,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "turnmove01_r090 [cla_m]",
+   "index": 100026,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "turnmove01_l090 [cla_m]",
+   "index": 100028,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "walk01_000_start [cla_m]",
+   "index": 100050,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "walk01_000_loop [cla_m]",
+   "index": 100051,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "walk01_000_end [cla_m]",
+   "index": 100052,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "run01_000_start [cla_m]",
+   "index": 100070,
+   "duration": 0.25,
+   "frameRate": 60.0,
+   "frameCount": 16,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "run01_000_loop [cla_m]",
+   "index": 100071,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "run01_000_end [cla_m]",
+   "index": 100072,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sit01_start [cla_m]",
+   "index": 100270,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sit01_loop [cla_m]",
+   "index": 100271,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sit01_end [cla_m]",
+   "index": 100272,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sit02_loop [cla_m]",
+   "index": 100273,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sit03_start [cla_m]",
+   "index": 100274,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sit03_loop [cla_m]",
+   "index": 100275,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sit03_end [cla_m]",
+   "index": 100276,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sit04_loop [cla_m]",
+   "index": 100277,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sitspeak01_loop [cla_m]",
+   "index": 100291,
+   "duration": 5.3333,
+   "frameRate": 60.0,
+   "frameCount": 321,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sitspeak02_loop [cla_m]",
+   "index": 100296,
+   "duration": 5.3333,
+   "frameRate": 60.0,
+   "frameCount": 321,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sitspeak03_loop [cla_m]",
+   "index": 100301,
+   "duration": 6.0,
+   "frameRate": 60.0,
+   "frameCount": 361,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "sitspeak04_loop [cla_m]",
+   "index": 100306,
+   "duration": 5.3333,
+   "frameRate": 60.0,
+   "frameCount": 321,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "getpass01 [cla_m]",
+   "index": 100315,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "yes01 [cla_m]",
+   "index": 100320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "no01 [cla_m]",
+   "index": 100321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "search01_start [cla_m]",
+   "index": 100340,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "search01_loop [cla_m]",
+   "index": 100341,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "search01_end [cla_m]",
+   "index": 100342,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "speak01_loop [cla_m]",
+   "index": 100551,
+   "duration": 5.8333,
+   "frameRate": 60.0,
+   "frameCount": 351,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "speak02_loop [cla_m]",
+   "index": 100554,
+   "duration": 5.0,
+   "frameRate": 60.0,
+   "frameCount": 301,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "glad01 [cla_m]",
+   "index": 100570,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "surprise01 [cla_m]",
+   "index": 100573,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "emote",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "grief01 [cla_m]",
+   "index": 100576,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "think01_start [cla_m]",
+   "index": 100600,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "think01_loop [cla_m]",
+   "index": 100601,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "think01_end [cla_m]",
+   "index": 100602,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "byebye01_start [cla_m]",
+   "index": 100603,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "byebye01_loop [cla_m]",
+   "index": 100604,
+   "duration": 0.8667,
+   "frameRate": 60.0,
+   "frameCount": 53,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "byebye01_end [cla_m]",
+   "index": 100605,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "cheer01_start [cla_m]",
+   "index": 100612,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "cheer01_loop [cla_m]",
+   "index": 100613,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "cheer01_end [cla_m]",
+   "index": 100614,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "battlewait01_start [cla_m]",
+   "index": 101000,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "battlewait01_loop [cla_m]",
+   "index": 101001,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "battlewait01_end [cla_m]",
+   "index": 101002,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "btl01_idle01 [cla_m]",
+   "index": 101011,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "idle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "ballthrow01 [cla_m]",
+   "index": 101020,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "order01 [cla_m]",
+   "index": 101030,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "advent01_start [cla_m]",
+   "index": 101060,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "advent01_loop [cla_m]",
+   "index": 101061,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "advent01_end [cla_m]",
+   "index": 101062,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "lose01_start [cla_m]",
+   "index": 101080,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "lose01_loop [cla_m]",
+   "index": 101081,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "lose01_end [cla_m]",
+   "index": 101082,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "yes01 [cla_m]",
+   "index": 107320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "no01 [cla_m]",
+   "index": 107321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "ballreturn01_start [cla_m]",
+   "index": 107460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "ballreturn01_loop [cla_m]",
+   "index": 107461,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "ballreturn01_end [cla_m]",
+   "index": 107462,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "move",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "damage01 [cla_m]",
+   "index": 107500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "cla_m",
+   "default": false
+  },
+  {
+   "name": "speak01_loop [cla_m]",
+   "index": 107551,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": true,
+   "category": "other",
+   "group": "cla_m",
+   "default": false
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "eye_default_mesh",
+   "label": "eye default",
+   "lod": 0,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "face_mesh",
+   "label": "face",
+   "lod": 0,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "face_parts_mesh",
+   "label": "face parts",
+   "lod": 0,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "hairstyle_mesh",
+   "label": "hairstyle",
+   "lod": 0,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "badge_mesh",
+   "label": "badge",
+   "lod": 0,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "sunglasses_mesh",
+   "label": "sunglasses",
+   "lod": 0,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "eye_default_mesh_lod1",
+   "label": "eye default lod1",
+   "lod": 1,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "face_mesh_lod1",
+   "label": "face lod1",
+   "lod": 1,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "face_parts_mesh_lod1",
+   "label": "face parts lod1",
+   "lod": 1,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "hairstyle_mesh_lod1",
+   "label": "hairstyle lod1",
+   "lod": 1,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "badge_mesh_lod1",
+   "label": "badge lod1",
+   "lod": 1,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "sunglasses_mesh_lod1",
+   "label": "sunglasses lod1",
+   "lod": 1,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "eye_default_mesh_lod2",
+   "label": "eye default lod2",
+   "lod": 2,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "face_mesh_lod2",
+   "label": "face lod2",
+   "lod": 2,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "face_parts_mesh_lod2",
+   "label": "face parts lod2",
+   "lod": 2,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "hairstyle_mesh_lod2",
+   "label": "hairstyle lod2",
+   "lod": 2,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "badge_mesh_lod2",
+   "label": "badge lod2",
+   "lod": 2,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  },
+  {
+   "node": "sunglasses_mesh_lod2",
+   "label": "sunglasses lod2",
+   "lod": 2,
+   "visible": true,
+   "group": "appearance",
+   "option": "default"
+  }
+ ],
+ "partGroups": [
+  {
+   "name": "appearance",
+   "label": "Colours",
+   "options": [
+    {
+     "id": "default",
+     "label": "Default",
+     "default": true,
+     "palettes": [
+      {
+       "label": "Eyes",
+       "materials": [
+        "l_eye",
+        "r_eye"
+       ],
+       "divide": 16,
+       "indices": [
+        7,
+        8,
+        1,
+        1
+       ],
+       "layers": [
+        1
+       ],
+       "zones": [
+        "#675d86",
+        "#9284c3",
+        "#1e1e1e",
+        "#9b8652",
+        "#d0a848",
+        "#1e1e1e",
+        "#895f5b",
+        "#b58480",
+        "#1e1e1e",
+        "#7676b6",
+        "#a3a3ed",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e"
+       ]
+      },
+      {
+       "label": "Hair",
+       "materials": [
+        "hairstyle"
+       ],
+       "divide": 16,
+       "indices": [
+        9,
+        1,
+        1,
+        1
+       ],
+       "layers": [
+        1
+       ],
+       "zones": [
+        "#484850",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#634d46",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#333337",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#c1ab4f",
+        "#1e1e1e",
+        "#1e1e1e",
+        "#1e1e1e"
+       ]
+      }
+     ],
+     "nodes": [
+      "eye_default_mesh",
+      "face_mesh",
+      "face_parts_mesh",
+      "hairstyle_mesh",
+      "badge_mesh",
+      "body_mesh",
+      "sunglasses_mesh",
+      "eye_default_mesh_lod1",
+      "face_mesh_lod1",
+      "face_parts_mesh_lod1",
+      "hairstyle_mesh_lod1",
+      "badge_mesh_lod1",
+      "body_mesh_lod1",
+      "sunglasses_mesh_lod1",
+      "eye_default_mesh_lod2",
+      "face_mesh_lod2",
+      "face_parts_mesh_lod2",
+      "hairstyle_mesh_lod2",
+      "badge_mesh_lod2",
+      "body_mesh_lod2",
+      "sunglasses_mesh_lod2"
+     ]
+    }
+   ]
+  }
+ ],
+ "stats": {
+  "joints": 134,
+  "meshes": 21,
+  "triangles": 9700,
+  "textures": 62,
+  "clips": 199,
+  "glbBytes": 23955780
+ },
+ "source": [
+  "ik_chara/model_cc_ir/tr0030_00_co_member_m/"
+ ],
+ "extras": {
+  "cc_ir": true,
+  "cc_donor": "dm",
+  "species": "tr0030",
+  "form": ""
+ }
+}

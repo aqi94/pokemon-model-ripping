@@ -1,0 +1,9037 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0892_00_00",
+ "kind": "pokemon",
+ "displayName": "pm0892",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 0,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battlewait01_loop",
+   "index": 1,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultidle01",
+   "index": 10,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000",
+   "index": 20,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090",
+   "index": 21,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090",
+   "index": 24,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop",
+   "index": 30,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop",
+   "index": 100,
+   "duration": 0.6333,
+   "frameRate": 60.0,
+   "frameCount": 39,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start",
+   "index": 140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01",
+   "index": 141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end",
+   "index": 142,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start",
+   "index": 145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01",
+   "index": 146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end",
+   "index": 147,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start",
+   "index": 150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop",
+   "index": 151,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start",
+   "index": 152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop",
+   "index": 153,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02",
+   "index": 155,
+   "duration": 0.9,
+   "frameRate": 60.0,
+   "frameCount": 55,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_start",
+   "index": 270,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_loop",
+   "index": 271,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_end",
+   "index": 272,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_start",
+   "index": 280,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_loop",
+   "index": 281,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_end",
+   "index": 282,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_start",
+   "index": 293,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_loop",
+   "index": 294,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_end",
+   "index": 295,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01",
+   "index": 300,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      10,
+      0
+     ],
+     [
+      130,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      10,
+      1
+     ],
+     [
+      130,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "appeal01",
+   "index": 310,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      10,
+      0
+     ],
+     [
+      130,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      10,
+      1
+     ],
+     [
+      130,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "refresh01",
+   "index": 320,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_start",
+   "index": 330,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_loop",
+   "index": 331,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_end",
+   "index": 332,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01",
+   "index": 400,
+   "duration": 1.9667,
+   "frameRate": 60.0,
+   "frameCount": 119,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      6,
+      0
+     ],
+     [
+      100,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      6,
+      1
+     ],
+     [
+      100,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_start",
+   "index": 420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      5,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      5,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_loop",
+   "index": 421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end",
+   "index": 422,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      81,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      81,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01",
+   "index": 450,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      10,
+      0
+     ],
+     [
+      38,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      10,
+      1
+     ],
+     [
+      38,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start",
+   "index": 460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      10,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      10,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop",
+   "index": 461,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end",
+   "index": 462,
+   "duration": 1.0333,
+   "frameRate": 60.0,
+   "frameCount": 63,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      39,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      39,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop",
+   "index": 490,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01",
+   "index": 500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      22,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      22,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02",
+   "index": 501,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      22,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      22,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start",
+   "index": 510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop",
+   "index": 511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end",
+   "index": 512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start",
+   "index": 520,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      6,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      6,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      26,
+      0
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      26,
+      1
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      53,
+      0
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      75,
+      0
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop",
+   "index": 521,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end",
+   "index": 522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      6,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      6,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      38,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      38,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      6,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      4,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "glad01",
+   "index": 550,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      8,
+      0
+     ],
+     [
+      80,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      8,
+      1
+     ],
+     [
+      80,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "notice01",
+   "index": 560,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hate01",
+   "index": 563,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      7,
+      0
+     ],
+     [
+      87,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      7,
+      1
+     ],
+     [
+      87,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eye01",
+   "index": 8000,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0892_00_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_eye_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_bodydown_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0892_00_00_natchest_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nathead_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_natbelly_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_left_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_forearm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_nat_right_sholder_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_left_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_right_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0892_00_00_tail_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "pm0892_00_00_eye_a_mesh",
+   "label": "eye a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_eye_b_mesh",
+   "label": "eye b",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_c_mesh",
+   "label": "eye c",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_d_mesh",
+   "label": "eye d",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_e_mesh",
+   "label": "eye e",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_bodydown_mesh",
+   "label": "bodydown",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_natchest_mesh",
+   "label": "natchest",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nathead_mesh",
+   "label": "nathead",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_natbelly_a_mesh",
+   "label": "natbelly a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_natbelly_b_mesh",
+   "label": "natbelly b",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_foot_mesh",
+   "label": "nat left foot",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_forearm_mesh",
+   "label": "nat left forearm",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_hand_mesh",
+   "label": "nat left hand",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_sholder_mesh",
+   "label": "nat left sholder",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_foot_mesh",
+   "label": "nat right foot",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_forearm_mesh",
+   "label": "nat right forearm",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_hand_mesh",
+   "label": "nat right hand",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_sholder_mesh",
+   "label": "nat right sholder",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_left_arm_mesh",
+   "label": "left arm",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_right_arm_mesh",
+   "label": "right arm",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_tail_mesh",
+   "label": "tail",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_eye_a_mesh_lod1",
+   "label": "eye a lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_eye_b_mesh_lod1",
+   "label": "eye b lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_c_mesh_lod1",
+   "label": "eye c lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_d_mesh_lod1",
+   "label": "eye d lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_e_mesh_lod1",
+   "label": "eye e lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_bodydown_mesh_lod1",
+   "label": "bodydown lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_natchest_mesh_lod1",
+   "label": "natchest lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nathead_mesh_lod1",
+   "label": "nathead lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_natbelly_a_mesh_lod1",
+   "label": "natbelly a lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_natbelly_b_mesh_lod1",
+   "label": "natbelly b lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_foot_mesh_lod1",
+   "label": "nat left foot lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_forearm_mesh_lod1",
+   "label": "nat left forearm lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_hand_mesh_lod1",
+   "label": "nat left hand lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_sholder_mesh_lod1",
+   "label": "nat left sholder lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_foot_mesh_lod1",
+   "label": "nat right foot lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_forearm_mesh_lod1",
+   "label": "nat right forearm lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_hand_mesh_lod1",
+   "label": "nat right hand lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_sholder_mesh_lod1",
+   "label": "nat right sholder lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_left_arm_mesh_lod1",
+   "label": "left arm lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_right_arm_mesh_lod1",
+   "label": "right arm lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_tail_mesh_lod1",
+   "label": "tail lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_eye_a_mesh_lod2",
+   "label": "eye a lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_eye_b_mesh_lod2",
+   "label": "eye b lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_c_mesh_lod2",
+   "label": "eye c lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_d_mesh_lod2",
+   "label": "eye d lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_e_mesh_lod2",
+   "label": "eye e lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_bodydown_mesh_lod2",
+   "label": "bodydown lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_natchest_mesh_lod2",
+   "label": "natchest lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nathead_mesh_lod2",
+   "label": "nathead lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_natbelly_a_mesh_lod2",
+   "label": "natbelly a lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_natbelly_b_mesh_lod2",
+   "label": "natbelly b lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_foot_mesh_lod2",
+   "label": "nat left foot lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_forearm_mesh_lod2",
+   "label": "nat left forearm lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_hand_mesh_lod2",
+   "label": "nat left hand lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_sholder_mesh_lod2",
+   "label": "nat left sholder lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_foot_mesh_lod2",
+   "label": "nat right foot lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_forearm_mesh_lod2",
+   "label": "nat right forearm lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_hand_mesh_lod2",
+   "label": "nat right hand lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_sholder_mesh_lod2",
+   "label": "nat right sholder lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_left_arm_mesh_lod2",
+   "label": "left arm lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_right_arm_mesh_lod2",
+   "label": "right arm lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_tail_mesh_lod2",
+   "label": "tail lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_eye_a_mesh_lod3",
+   "label": "eye a lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_eye_b_mesh_lod3",
+   "label": "eye b lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_c_mesh_lod3",
+   "label": "eye c lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_d_mesh_lod3",
+   "label": "eye d lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_eye_e_mesh_lod3",
+   "label": "eye e lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_body_mesh_lod3",
+   "label": "body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_bodydown_mesh_lod3",
+   "label": "bodydown lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0892_00_00_natchest_mesh_lod3",
+   "label": "natchest lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nathead_mesh_lod3",
+   "label": "nathead lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_natbelly_a_mesh_lod3",
+   "label": "natbelly a lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_natbelly_b_mesh_lod3",
+   "label": "natbelly b lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_foot_mesh_lod3",
+   "label": "nat left foot lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_forearm_mesh_lod3",
+   "label": "nat left forearm lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_hand_mesh_lod3",
+   "label": "nat left hand lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_left_sholder_mesh_lod3",
+   "label": "nat left sholder lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_foot_mesh_lod3",
+   "label": "nat right foot lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_forearm_mesh_lod3",
+   "label": "nat right forearm lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_hand_mesh_lod3",
+   "label": "nat right hand lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_nat_right_sholder_mesh_lod3",
+   "label": "nat right sholder lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_left_arm_mesh_lod3",
+   "label": "left arm lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_right_arm_mesh_lod3",
+   "label": "right arm lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0892_00_00_tail_mesh_lod3",
+   "label": "tail lod3",
+   "lod": 3,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 184,
+  "meshes": 88,
+  "triangles": 12890,
+  "textures": 46,
+  "clips": 57,
+  "glbBytes": 10132196
+ },
+ "source": [
+  "ik_pokemon/data/pm0892/pm0892_00_00/"
+ ],
+ "extras": {
+  "dex": null,
+  "species": "pm0892",
+  "form": "00_00"
+ }
+}

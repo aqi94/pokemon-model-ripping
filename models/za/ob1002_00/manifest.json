@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob1002_00",
+ "kind": "object",
+ "displayName": "Whisk",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "whisk_mesh",
+   "label": "whisk",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 1796,
+  "textures": 6,
+  "clips": 0,
+  "glbBytes": 190964
+ },
+ "source": [
+  "ik_chara/model_ob/ob1002_00_whisk/"
+ ],
+ "extras": {
+  "item": "whisk",
+  "species": "ob1002",
+  "form": ""
+ }
+}

@@ -1,0 +1,733 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0770_15_00",
+ "kind": "pokemon",
+ "displayName": "pm0770 (15_00)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 0,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultidle01",
+   "index": 10,
+   "duration": 1.4333,
+   "frameRate": 60.0,
+   "frameCount": 87,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000",
+   "index": 20,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090",
+   "index": 21,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090",
+   "index": 24,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop",
+   "index": 30,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop",
+   "index": 100,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start",
+   "index": 150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop",
+   "index": 151,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start",
+   "index": 152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop",
+   "index": 153,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02",
+   "index": 155,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "refresh01",
+   "index": 320,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_start",
+   "index": 330,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_loop",
+   "index": 331,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_end",
+   "index": 332,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "glad01",
+   "index": 550,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "notice01",
+   "index": 560,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hate01",
+   "index": 563,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "ev_once_action01",
+   "index": 5100,
+   "duration": 2.8167,
+   "frameRate": 60.0,
+   "frameCount": 170,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0770_15_00_core_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodyb_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0770_15_00_bodya_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "pm0770_15_00_core_mesh",
+   "label": "core",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_15_00_bodyb_mesh",
+   "label": "bodyb",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0770_15_00_bodya_mesh",
+   "label": "bodya",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 28,
+  "meshes": 3,
+  "triangles": 2976,
+  "textures": 12,
+  "clips": 22,
+  "glbBytes": 1341832
+ },
+ "source": [
+  "ik_pokemon/data/pm0770/pm0770_15_00/"
+ ],
+ "extras": {
+  "dex": null,
+  "species": "pm0770",
+  "form": "15_00"
+ }
+}

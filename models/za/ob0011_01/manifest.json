@@ -1,0 +1,80 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0011_01",
+ "kind": "object",
+ "displayName": "Cafe",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_pot_mesh",
+   "label": "obj pot",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_cup_mesh",
+   "label": "obj cup",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_milk_tea_mesh",
+   "label": "obj milk tea",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_green_tea_mesh",
+   "label": "obj green tea",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_yellow_tea_mesh",
+   "label": "obj yellow tea",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_purple_tea_mesh",
+   "label": "obj purple tea",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_red_tea_mesh",
+   "label": "obj red tea",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 11,
+  "meshes": 7,
+  "triangles": 990,
+  "textures": 3,
+  "clips": 0,
+  "glbBytes": 335276
+ },
+ "source": [
+  "ik_chara/model_ob/ob0011_01_cafe/"
+ ],
+ "extras": {
+  "item": "cafe",
+  "species": "ob0011",
+  "form": ""
+ }
+}

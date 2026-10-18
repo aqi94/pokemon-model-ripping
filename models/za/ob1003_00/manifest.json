@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob1003_00",
+ "kind": "object",
+ "displayName": "Bowl",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "bowl_mesh",
+   "label": "bowl",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 1120,
+  "textures": 6,
+  "clips": 0,
+  "glbBytes": 243380
+ },
+ "source": [
+  "ik_chara/model_ob/ob1003_00_bowl/"
+ ],
+ "extras": {
+  "item": "bowl",
+  "species": "ob1003",
+  "form": ""
+ }
+}

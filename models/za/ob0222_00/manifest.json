@@ -1,0 +1,56 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0222_00",
+ "kind": "object",
+ "displayName": "Friend Ball",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "goldobj_mesh",
+   "label": "goldobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "upperobj_mesh",
+   "label": "upperobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lowerobj_mesh",
+   "label": "lowerobj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 9,
+  "meshes": 3,
+  "triangles": 1098,
+  "textures": 7,
+  "clips": 0,
+  "glbBytes": 197252
+ },
+ "source": [
+  "ik_chara/model_ob/ob0222_00_friendball/"
+ ],
+ "extras": {
+  "item": "friendball",
+  "species": "ob0222",
+  "form": ""
+ }
+}

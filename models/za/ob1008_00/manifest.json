@@ -1,0 +1,69 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob1008_00",
+ "kind": "object",
+ "displayName": "S",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "tex_00",
+     "label": "tex_00",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "tex_01",
+     "label": "tex_01",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_mesh",
+   "label": "obj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 930,
+  "textures": 11,
+  "clips": 0,
+  "glbBytes": 236404
+ },
+ "source": [
+  "ik_chara/model_ob/ob1008_00_s/"
+ ],
+ "extras": {
+  "item": "s",
+  "species": "ob1008",
+  "form": ""
+ }
+}

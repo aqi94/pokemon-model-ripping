@@ -1,0 +1,4869 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "ob0005_00",
+ "kind": "object",
+ "displayName": "Mf",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "battlewait01_loop",
+   "index": 1,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battleidle02",
+   "index": 12,
+   "duration": 12.0,
+   "frameRate": 60.0,
+   "frameCount": 721,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000",
+   "index": 20,
+   "duration": 8.0,
+   "frameRate": 60.0,
+   "frameCount": 481,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090",
+   "index": 21,
+   "duration": 8.0,
+   "frameRate": 60.0,
+   "frameCount": 481,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090",
+   "index": 24,
+   "duration": 8.0,
+   "frameRate": 60.0,
+   "frameCount": 481,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01",
+   "index": 300,
+   "duration": 8.0,
+   "frameRate": 60.0,
+   "frameCount": 481,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01",
+   "index": 400,
+   "duration": 22.5,
+   "frameRate": 60.0,
+   "frameCount": 1351,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start",
+   "index": 460,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop",
+   "index": 461,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end",
+   "index": 462,
+   "duration": 4.6667,
+   "frameRate": 60.0,
+   "frameCount": 281,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_start",
+   "index": 490,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop",
+   "index": 491,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01",
+   "index": 500,
+   "duration": 8.0,
+   "frameRate": 60.0,
+   "frameCount": 481,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start",
+   "index": 510,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop",
+   "index": 511,
+   "duration": 8.3333,
+   "frameRate": 60.0,
+   "frameCount": 501,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop",
+   "index": 521,
+   "duration": 12.0,
+   "frameRate": 60.0,
+   "frameCount": 721,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "ev_once_action01",
+   "index": 5100,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "ev_once_action02",
+   "index": 5110,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battle_loop01",
+   "index": 8330,
+   "duration": 12.8333,
+   "frameRate": 60.0,
+   "frameCount": 771,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d032_ob0005_00_c03 [demo d032]",
+   "index": 203203,
+   "duration": 12.0,
+   "frameRate": 60.0,
+   "frameCount": 721,
+   "loop": false,
+   "category": "other",
+   "group": "demo d032",
+   "default": false
+  },
+  {
+   "name": "d032_ob0005_00_c06 [demo d032]",
+   "index": 203206,
+   "duration": 19.15,
+   "frameRate": 60.0,
+   "frameCount": 1150,
+   "loop": false,
+   "category": "other",
+   "group": "demo d032",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d033a_ob0005_00_c01 [demo d033a]",
+   "index": 203301,
+   "duration": 3.8167,
+   "frameRate": 60.0,
+   "frameCount": 230,
+   "loop": false,
+   "category": "other",
+   "group": "demo d033a",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d033b_ob0005_00_c03 [demo d033b]",
+   "index": 203303,
+   "duration": 2.8167,
+   "frameRate": 60.0,
+   "frameCount": 170,
+   "loop": false,
+   "category": "other",
+   "group": "demo d033b",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d033b_ob0005_00_c05 [demo d033b]",
+   "index": 203305,
+   "duration": 0.8667,
+   "frameRate": 60.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "other",
+   "group": "demo d033b",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d033b_ob0005_00_c07 [demo d033b]",
+   "index": 203307,
+   "duration": 4.3167,
+   "frameRate": 60.0,
+   "frameCount": 260,
+   "loop": false,
+   "category": "other",
+   "group": "demo d033b",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d033a_ob0005_00_c10 [demo d033a]",
+   "index": 203310,
+   "duration": 3.75,
+   "frameRate": 60.0,
+   "frameCount": 226,
+   "loop": false,
+   "category": "other",
+   "group": "demo d033a",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d033b_ob0005_00_c11 [demo d033b]",
+   "index": 203311,
+   "duration": 7.8167,
+   "frameRate": 60.0,
+   "frameCount": 470,
+   "loop": false,
+   "category": "other",
+   "group": "demo d033b",
+   "default": false
+  },
+  {
+   "name": "d033a_ob0005_00_c12 [demo d033a]",
+   "index": 203312,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": false,
+   "category": "other",
+   "group": "demo d033a",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d033b_ob0005_00_c12 [demo d033b]",
+   "index": 203312,
+   "duration": 7.6667,
+   "frameRate": 60.0,
+   "frameCount": 461,
+   "loop": false,
+   "category": "other",
+   "group": "demo d033b",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d034_ob0005_00_c01 [demo d034]",
+   "index": 203401,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": false,
+   "category": "other",
+   "group": "demo d034",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d034_ob0005_00_c03 [demo d034]",
+   "index": 203403,
+   "duration": 11.1667,
+   "frameRate": 60.0,
+   "frameCount": 671,
+   "loop": false,
+   "category": "other",
+   "group": "demo d034",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d034_ob0005_00_c06 [demo d034]",
+   "index": 203406,
+   "duration": 9.1667,
+   "frameRate": 60.0,
+   "frameCount": 551,
+   "loop": false,
+   "category": "other",
+   "group": "demo d034",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d034_ob0005_00_c09 [demo d034]",
+   "index": 203409,
+   "duration": 6.5,
+   "frameRate": 60.0,
+   "frameCount": 391,
+   "loop": false,
+   "category": "other",
+   "group": "demo d034",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d035_ob0005_00_c08 [demo d035]",
+   "index": 203508,
+   "duration": 7.5167,
+   "frameRate": 60.0,
+   "frameCount": 452,
+   "loop": false,
+   "category": "other",
+   "group": "demo d035",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d035_ob0005_00_c10 [demo d035]",
+   "index": 203510,
+   "duration": 8.3333,
+   "frameRate": 60.0,
+   "frameCount": 501,
+   "loop": true,
+   "category": "other",
+   "group": "demo d035",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d036_ob0005_00_c01 [demo d036]",
+   "index": 203601,
+   "duration": 3.9833,
+   "frameRate": 60.0,
+   "frameCount": 240,
+   "loop": false,
+   "category": "other",
+   "group": "demo d036",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d036_ob0005_00_c02 [demo d036]",
+   "index": 203602,
+   "duration": 2.4833,
+   "frameRate": 60.0,
+   "frameCount": 150,
+   "loop": false,
+   "category": "other",
+   "group": "demo d036",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d036_ob0005_00_c03 [demo d036]",
+   "index": 203603,
+   "duration": 7.8833,
+   "frameRate": 60.0,
+   "frameCount": 474,
+   "loop": false,
+   "category": "other",
+   "group": "demo d036",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d036_ob0005_00_c08 [demo d036]",
+   "index": 203608,
+   "duration": 3.65,
+   "frameRate": 60.0,
+   "frameCount": 220,
+   "loop": false,
+   "category": "other",
+   "group": "demo d036",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d036_ob0005_00_c08_loop [demo d036]",
+   "index": 203608,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "other",
+   "group": "demo d036",
+   "default": false,
+   "visibility": {
+    "tower_collar_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_collar_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_in_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_crystal_out_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_bottom_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_right_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_top_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_mouth_petal_left_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_vines_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_seat_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_panel_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_cockpit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg1_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg2_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg3_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "tower_floette_leg4_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "battlewait01_loop",
+ "parts": [
+  {
+   "node": "tower_collar_mesh",
+   "label": "tower collar",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_collar_top_mesh",
+   "label": "tower collar top",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_collar_bottom_mesh",
+   "label": "tower collar bottom",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_crystal_in_mesh",
+   "label": "tower crystal in",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_crystal_out_mesh",
+   "label": "tower crystal out",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_mouth_petal_bottom_mesh",
+   "label": "tower mouth petal bottom",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_mouth_petal_right_mesh",
+   "label": "tower mouth petal right",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_mouth_petal_top_mesh",
+   "label": "tower mouth petal top",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_mouth_petal_left_mesh",
+   "label": "tower mouth petal left",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_vines_mesh",
+   "label": "tower vines",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_body_mesh",
+   "label": "tower body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_seat_mesh",
+   "label": "tower seat",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_panel_mesh",
+   "label": "tower panel",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_cockpit_mesh",
+   "label": "tower cockpit",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_leg1_mesh",
+   "label": "tower leg1",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_leg2_mesh",
+   "label": "tower leg2",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_leg3_mesh",
+   "label": "tower leg3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_leg4_mesh",
+   "label": "tower leg4",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "tower_collar_mesh_lod1",
+   "label": "tower collar lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_collar_top_mesh_lod1",
+   "label": "tower collar top lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_collar_bottom_mesh_lod1",
+   "label": "tower collar bottom lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_crystal_in_mesh_lod1",
+   "label": "tower crystal in lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_crystal_out_mesh_lod1",
+   "label": "tower crystal out lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_mouth_petal_bottom_mesh_lod1",
+   "label": "tower mouth petal bottom lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_mouth_petal_right_mesh_lod1",
+   "label": "tower mouth petal right lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_mouth_petal_top_mesh_lod1",
+   "label": "tower mouth petal top lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_mouth_petal_left_mesh_lod1",
+   "label": "tower mouth petal left lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_vines_mesh_lod1",
+   "label": "tower vines lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_body_mesh_lod1",
+   "label": "tower body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_seat_mesh_lod1",
+   "label": "tower seat lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_panel_mesh_lod1",
+   "label": "tower panel lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_cockpit_mesh_lod1",
+   "label": "tower cockpit lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_leg1_mesh_lod1",
+   "label": "tower leg1 lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_leg2_mesh_lod1",
+   "label": "tower leg2 lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_leg3_mesh_lod1",
+   "label": "tower leg3 lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "tower_leg4_mesh_lod1",
+   "label": "tower leg4 lod1",
+   "lod": 1,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 224,
+  "meshes": 36,
+  "triangles": 60410,
+  "textures": 30,
+  "clips": 40,
+  "glbBytes": 61522340
+ },
+ "source": [
+  "ik_chara/model_ob/ob0005_00_mf/"
+ ],
+ "extras": {
+  "item": "mf",
+  "species": "ob0005",
+  "form": ""
+ }
+}

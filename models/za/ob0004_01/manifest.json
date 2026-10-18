@@ -1,0 +1,216 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": [
+    "d001_ob0004_01_f_c11 [demo d001]",
+    "d001_ob0004_01_m_c11 [demo d001]",
+    "d001_ob0004_01_f_c18 [demo d001]",
+    "d001_ob0004_01_m_c18 [demo d001]"
+   ]
+  }
+ ],
+ "game": "za",
+ "id": "ob0004_01",
+ "kind": "object",
+ "displayName": "Phone",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "d001_ob0004_01_f_c11 [demo d001]",
+   "index": 200111,
+   "duration": 22.55,
+   "frameRate": 60.0,
+   "frameCount": 1354,
+   "loop": false,
+   "category": "other",
+   "group": "demo d001",
+   "default": true,
+   "visibility": {
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d001_ob0004_01_m_c11 [demo d001]",
+   "index": 200111,
+   "duration": 22.55,
+   "frameRate": 60.0,
+   "frameCount": 1354,
+   "loop": false,
+   "category": "other",
+   "group": "demo d001",
+   "default": false,
+   "visibility": {
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d001_ob0004_01_f_c18 [demo d001]",
+   "index": 200118,
+   "duration": 6.6667,
+   "frameRate": 60.0,
+   "frameCount": 401,
+   "loop": false,
+   "category": "other",
+   "group": "demo d001",
+   "default": false,
+   "visibility": {
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d001_ob0004_01_m_c18 [demo d001]",
+   "index": 200118,
+   "duration": 6.6667,
+   "frameRate": 60.0,
+   "frameCount": 401,
+   "loop": false,
+   "category": "other",
+   "group": "demo d001",
+   "default": false,
+   "visibility": {
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "d001_ob0004_01_f_c11 [demo d001]",
+ "parts": [
+  {
+   "node": "mouth_mesh",
+   "label": "mouth",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "eye_mesh",
+   "label": "eye",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "display_mesh",
+   "label": "display",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 11,
+  "meshes": 4,
+  "triangles": 929,
+  "textures": 19,
+  "clips": 4,
+  "glbBytes": 1222904
+ },
+ "source": [
+  "ik_chara/model_ob/ob0004_01_phone/"
+ ],
+ "extras": {
+  "item": "phone",
+  "species": "ob0004",
+  "form": ""
+ }
+}

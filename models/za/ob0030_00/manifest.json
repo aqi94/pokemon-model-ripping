@@ -1,0 +1,50 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0030_00",
+ "kind": "object",
+ "displayName": "Obon",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "airbag_mesh",
+   "label": "airbag",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "plastic_mesh",
+   "label": "plastic",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 7,
+  "meshes": 2,
+  "triangles": 1320,
+  "textures": 6,
+  "clips": 0,
+  "glbBytes": 587052
+ },
+ "source": [
+  "ik_chara/model_ob/ob0030_00_obon/"
+ ],
+ "extras": {
+  "item": "obon",
+  "species": "ob0030",
+  "form": ""
+ }
+}

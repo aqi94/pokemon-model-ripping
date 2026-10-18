@@ -1,0 +1,2725 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0517_00_00",
+ "kind": "pokemon",
+ "displayName": "Munna",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "defaultwait01_loop [set2]",
+   "index": 20000,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": true,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battlewait01_loop [set2]",
+   "index": 20001,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultidle01 [set2]",
+   "index": 20010,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battleidle02 [set2]",
+   "index": 20012,
+   "duration": 1.95,
+   "frameRate": 60.0,
+   "frameCount": 118,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000 [set2]",
+   "index": 20020,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090 [set2]",
+   "index": 20021,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090 [set2]",
+   "index": 20024,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090 [set2]",
+   "index": 20026,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090 [set2]",
+   "index": 20028,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop [set2]",
+   "index": 20030,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop [set2]",
+   "index": 20100,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start [set2]",
+   "index": 20140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01 [set2]",
+   "index": 20141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end [set2]",
+   "index": 20142,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start [set2]",
+   "index": 20145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01 [set2]",
+   "index": 20146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end [set2]",
+   "index": 20147,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start [set2]",
+   "index": 20150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop [set2]",
+   "index": 20151,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start [set2]",
+   "index": 20152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop [set2]",
+   "index": 20153,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02 [set2]",
+   "index": 20155,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_start [set2]",
+   "index": 20270,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_loop [set2]",
+   "index": 20271,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_end [set2]",
+   "index": 20272,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_start [set2]",
+   "index": 20280,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      12,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      12,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_loop [set2]",
+   "index": 20281,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_end [set2]",
+   "index": 20282,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      16,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      16,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_start [set2]",
+   "index": 20293,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_loop [set2]",
+   "index": 20294,
+   "duration": 3.5,
+   "frameRate": 60.0,
+   "frameCount": 211,
+   "loop": true,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_end [set2]",
+   "index": 20295,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01 [set2]",
+   "index": 20300,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "appeal01 [set2]",
+   "index": 20310,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "refresh01 [set2]",
+   "index": 20320,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_start [set2]",
+   "index": 20330,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_loop [set2]",
+   "index": 20331,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_end [set2]",
+   "index": 20332,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01 [set2]",
+   "index": 20400,
+   "duration": 2.2333,
+   "frameRate": 60.0,
+   "frameCount": 135,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_start [set2]",
+   "index": 20420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_loop [set2]",
+   "index": 20421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end [set2]",
+   "index": 20422,
+   "duration": 1.2,
+   "frameRate": 60.0,
+   "frameCount": 73,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01 [set2]",
+   "index": 20450,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start [set2]",
+   "index": 20460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop [set2]",
+   "index": 20461,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end [set2]",
+   "index": 20462,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop [set2]",
+   "index": 20490,
+   "duration": 0.5833,
+   "frameRate": 60.0,
+   "frameCount": 36,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01 [set2]",
+   "index": 20500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02 [set2]",
+   "index": 20501,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start [set2]",
+   "index": 20510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop [set2]",
+   "index": 20511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end [set2]",
+   "index": 20512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start [set2]",
+   "index": 20520,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop [set2]",
+   "index": 20521,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end [set2]",
+   "index": 20522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "glad01 [set2]",
+   "index": 20550,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "notice01 [set2]",
+   "index": 20560,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hate01 [set2]",
+   "index": 20563,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "inquiringly01 [set2]",
+   "index": 20566,
+   "duration": 1.9167,
+   "frameRate": 60.0,
+   "frameCount": 116,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eye01 [set2]",
+   "index": 28000,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0517_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_eyelash_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0517_00_00_baloon_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0517_00_00_baloon_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "defaultwait01_loop [set2]",
+ "parts": [
+  {
+   "node": "pm0517_00_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_eye_mesh",
+   "label": "eye",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_eyelash_mesh",
+   "label": "eyelash",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_baloon_b_mesh",
+   "label": "baloon b",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0517_00_00_baloon_a_mesh",
+   "label": "baloon a",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0517_00_00_body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_eye_mesh_lod1",
+   "label": "eye lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_eyelash_mesh_lod1",
+   "label": "eyelash lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_baloon_b_mesh_lod1",
+   "label": "baloon b lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0517_00_00_baloon_a_mesh_lod1",
+   "label": "baloon a lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0517_00_00_body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_eye_mesh_lod2",
+   "label": "eye lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_eyelash_mesh_lod2",
+   "label": "eyelash lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_baloon_b_mesh_lod2",
+   "label": "baloon b lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0517_00_00_baloon_a_mesh_lod2",
+   "label": "baloon a lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0517_00_00_body_mesh_lod3",
+   "label": "body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_eye_mesh_lod3",
+   "label": "eye lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_eyelash_mesh_lod3",
+   "label": "eyelash lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0517_00_00_baloon_b_mesh_lod3",
+   "label": "baloon b lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0517_00_00_baloon_a_mesh_lod3",
+   "label": "baloon a lod3",
+   "lod": 3,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 140,
+  "meshes": 20,
+  "triangles": 3496,
+  "textures": 30,
+  "clips": 59,
+  "glbBytes": 8696500
+ },
+ "source": [
+  "ik_pokemon/data/pm0517/pm0517_00_00/"
+ ],
+ "extras": {
+  "dex": 517,
+  "species": "pm0517",
+  "form": "00_00"
+ }
+}

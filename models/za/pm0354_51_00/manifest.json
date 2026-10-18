@@ -1,0 +1,6797 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0354_51_00",
+ "kind": "pokemon",
+ "displayName": "Banette (51_00)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "battlewait01_loop",
+   "index": 1,
+   "duration": 2.4,
+   "frameRate": 60.0,
+   "frameCount": 145,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000",
+   "index": 20,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090",
+   "index": 21,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.1667,
+      0.1833,
+      0.2,
+      0.45,
+      0.4667,
+      0.4833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0078
+      ],
+      [
+       0.0,
+       -0.05209
+      ],
+      [
+       0.0,
+       -0.08448
+      ],
+      [
+       0.0,
+       -0.0627
+      ],
+      [
+       0.0,
+       -0.02199
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.1667,
+      0.1833,
+      0.2,
+      0.45,
+      0.4667,
+      0.4833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0078
+      ],
+      [
+       0.0,
+       -0.05209
+      ],
+      [
+       0.0,
+       -0.08448
+      ],
+      [
+       0.0,
+       -0.0627
+      ],
+      [
+       0.0,
+       -0.02199
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "turn_l090",
+   "index": 24,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.1833,
+      0.2,
+      0.2167,
+      0.45,
+      0.4667,
+      0.4833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01192
+      ],
+      [
+       0.0,
+       -0.06703
+      ],
+      [
+       0.0,
+       -0.10431
+      ],
+      [
+       0.0,
+       -0.07749
+      ],
+      [
+       0.0,
+       -0.02721
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.1833,
+      0.2,
+      0.2167,
+      0.45,
+      0.4667,
+      0.4833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01192
+      ],
+      [
+       0.0,
+       -0.06703
+      ],
+      [
+       0.0,
+       -0.10431
+      ],
+      [
+       0.0,
+       -0.07749
+      ],
+      [
+       0.0,
+       -0.02721
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.8667,
+   "frameRate": 60.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.1667,
+      0.1833,
+      0.2,
+      0.45,
+      0.4667,
+      0.4833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0078
+      ],
+      [
+       0.0,
+       -0.05209
+      ],
+      [
+       0.0,
+       -0.08448
+      ],
+      [
+       0.0,
+       -0.0627
+      ],
+      [
+       0.0,
+       -0.02199
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.1667,
+      0.1833,
+      0.2,
+      0.45,
+      0.4667,
+      0.4833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0078
+      ],
+      [
+       0.0,
+       -0.05209
+      ],
+      [
+       0.0,
+       -0.08448
+      ],
+      [
+       0.0,
+       -0.0627
+      ],
+      [
+       0.0,
+       -0.02199
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.8667,
+   "frameRate": 60.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.1833,
+      0.2,
+      0.2167,
+      0.45,
+      0.4667,
+      0.4833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01192
+      ],
+      [
+       0.0,
+       -0.06703
+      ],
+      [
+       0.0,
+       -0.10431
+      ],
+      [
+       0.0,
+       -0.07749
+      ],
+      [
+       0.0,
+       -0.02721
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.1833,
+      0.2,
+      0.2167,
+      0.45,
+      0.4667,
+      0.4833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01192
+      ],
+      [
+       0.0,
+       -0.06703
+      ],
+      [
+       0.0,
+       -0.10431
+      ],
+      [
+       0.0,
+       -0.07749
+      ],
+      [
+       0.0,
+       -0.02721
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "walk01_loop",
+   "index": 30,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop",
+   "index": 100,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start",
+   "index": 140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0667,
+      0.0833,
+      0.1
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.08018
+      ],
+      [
+       0.0,
+       -0.05949
+      ],
+      [
+       0.0,
+       -0.02086
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0667,
+      0.0833,
+      0.1
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.08018
+      ],
+      [
+       0.0,
+       -0.05949
+      ],
+      [
+       0.0,
+       -0.02086
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stepin01",
+   "index": 141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end",
+   "index": 142,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin02",
+   "index": 143,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepright02",
+   "index": 144,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start",
+   "index": 145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0833,
+      0.1
+     ],
+     "values": [
+      [
+       0.0,
+       -0.01477
+      ],
+      [
+       0.0,
+       -0.08262
+      ],
+      [
+       0.0,
+       -0.04061
+      ],
+      [
+       0.0,
+       0.0379
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0833,
+      0.1
+     ],
+     "values": [
+      [
+       0.0,
+       -0.01477
+      ],
+      [
+       0.0,
+       -0.08262
+      ],
+      [
+       0.0,
+       -0.04061
+      ],
+      [
+       0.0,
+       0.0379
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stepout01",
+   "index": 146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2
+     ],
+     "values": [
+      [
+       0.0,
+       0.0379
+      ],
+      [
+       0.0,
+       0.07993
+      ],
+      [
+       0.0,
+       0.07808
+      ],
+      [
+       0.0,
+       0.07301
+      ],
+      [
+       0.0,
+       0.06542
+      ],
+      [
+       0.0,
+       0.05602
+      ],
+      [
+       0.0,
+       0.04552
+      ],
+      [
+       0.0,
+       0.03464
+      ],
+      [
+       0.0,
+       0.0241
+      ],
+      [
+       0.0,
+       0.01465
+      ],
+      [
+       0.0,
+       0.00699
+      ],
+      [
+       0.0,
+       0.00187
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2
+     ],
+     "values": [
+      [
+       0.0,
+       0.0379
+      ],
+      [
+       0.0,
+       0.07993
+      ],
+      [
+       0.0,
+       0.07808
+      ],
+      [
+       0.0,
+       0.07301
+      ],
+      [
+       0.0,
+       0.06542
+      ],
+      [
+       0.0,
+       0.05602
+      ],
+      [
+       0.0,
+       0.04552
+      ],
+      [
+       0.0,
+       0.03464
+      ],
+      [
+       0.0,
+       0.0241
+      ],
+      [
+       0.0,
+       0.01465
+      ],
+      [
+       0.0,
+       0.00699
+      ],
+      [
+       0.0,
+       0.00187
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stepout01_end",
+   "index": 147,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7833,
+      0.8,
+      0.8167,
+      0.8333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0074
+      ],
+      [
+       0.0,
+       -0.05066
+      ],
+      [
+       0.0,
+       -0.08262
+      ],
+      [
+       0.0,
+       -0.06627
+      ],
+      [
+       0.0,
+       -0.03267
+      ],
+      [
+       0.0,
+       -0.00539
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7833,
+      0.8,
+      0.8167,
+      0.8333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0074
+      ],
+      [
+       0.0,
+       -0.05066
+      ],
+      [
+       0.0,
+       -0.08262
+      ],
+      [
+       0.0,
+       -0.06627
+      ],
+      [
+       0.0,
+       -0.03267
+      ],
+      [
+       0.0,
+       -0.00539
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stepout02",
+   "index": 148,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2
+     ],
+     "values": [
+      [
+       0.0,
+       0.0379
+      ],
+      [
+       0.0,
+       0.07993
+      ],
+      [
+       0.0,
+       0.07808
+      ],
+      [
+       0.0,
+       0.07301
+      ],
+      [
+       0.0,
+       0.06542
+      ],
+      [
+       0.0,
+       0.05602
+      ],
+      [
+       0.0,
+       0.04552
+      ],
+      [
+       0.0,
+       0.03464
+      ],
+      [
+       0.0,
+       0.0241
+      ],
+      [
+       0.0,
+       0.01465
+      ],
+      [
+       0.0,
+       0.00699
+      ],
+      [
+       0.0,
+       0.00187
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2
+     ],
+     "values": [
+      [
+       0.0,
+       0.0379
+      ],
+      [
+       0.0,
+       0.07993
+      ],
+      [
+       0.0,
+       0.07808
+      ],
+      [
+       0.0,
+       0.07301
+      ],
+      [
+       0.0,
+       0.06542
+      ],
+      [
+       0.0,
+       0.05602
+      ],
+      [
+       0.0,
+       0.04552
+      ],
+      [
+       0.0,
+       0.03464
+      ],
+      [
+       0.0,
+       0.0241
+      ],
+      [
+       0.0,
+       0.01465
+      ],
+      [
+       0.0,
+       0.00699
+      ],
+      [
+       0.0,
+       0.00187
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stepleft02",
+   "index": 149,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start",
+   "index": 150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0667,
+      0.0833,
+      0.1
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0848
+      ],
+      [
+       0.0,
+       -0.06294
+      ],
+      [
+       0.0,
+       -0.02207
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0667,
+      0.0833,
+      0.1
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0848
+      ],
+      [
+       0.0,
+       -0.06294
+      ],
+      [
+       0.0,
+       -0.02207
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "jumpup01_loop",
+   "index": 151,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start",
+   "index": 152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.1333,
+      0.15,
+      0.1667,
+      0.2667,
+      0.2833,
+      0.3
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.02207
+      ],
+      [
+       0.0,
+       -0.06294
+      ],
+      [
+       0.0,
+       -0.0848
+      ],
+      [
+       0.0,
+       -0.06294
+      ],
+      [
+       0.0,
+       -0.02207
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.1333,
+      0.15,
+      0.1667,
+      0.2667,
+      0.2833,
+      0.3
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.02207
+      ],
+      [
+       0.0,
+       -0.06294
+      ],
+      [
+       0.0,
+       -0.0848
+      ],
+      [
+       0.0,
+       -0.06294
+      ],
+      [
+       0.0,
+       -0.02207
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "jumpdown01_loop",
+   "index": 153,
+   "duration": 0.5333,
+   "frameRate": 60.0,
+   "frameCount": 33,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02",
+   "index": 155,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.4167,
+      0.4333,
+      0.45,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.02207
+      ],
+      [
+       0.0,
+       -0.06294
+      ],
+      [
+       0.0,
+       -0.0848
+      ],
+      [
+       0.0,
+       -0.07164
+      ],
+      [
+       0.0,
+       -0.04254
+      ],
+      [
+       0.0,
+       -0.01331
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.4167,
+      0.4333,
+      0.45,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.02207
+      ],
+      [
+       0.0,
+       -0.06294
+      ],
+      [
+       0.0,
+       -0.0848
+      ],
+      [
+       0.0,
+       -0.07164
+      ],
+      [
+       0.0,
+       -0.04254
+      ],
+      [
+       0.0,
+       -0.01331
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "roar01",
+   "index": 300,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      1.5,
+      1.5167,
+      1.5333,
+      1.6333,
+      1.65,
+      1.6667,
+      1.6833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01175
+      ],
+      [
+       0.0,
+       -0.06234
+      ],
+      [
+       0.0,
+       -0.0965
+      ],
+      [
+       0.0,
+       -0.07737
+      ],
+      [
+       0.0,
+       -0.03804
+      ],
+      [
+       0.0,
+       -0.00623
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      1.5,
+      1.5167,
+      1.5333,
+      1.6333,
+      1.65,
+      1.6667,
+      1.6833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01175
+      ],
+      [
+       0.0,
+       -0.06234
+      ],
+      [
+       0.0,
+       -0.0965
+      ],
+      [
+       0.0,
+       -0.07737
+      ],
+      [
+       0.0,
+       -0.03804
+      ],
+      [
+       0.0,
+       -0.00623
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "attack01",
+   "index": 400,
+   "duration": 1.7667,
+   "frameRate": 60.0,
+   "frameCount": 107,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7333,
+      0.75,
+      0.7667,
+      0.7833,
+      0.8,
+      1.35,
+      1.3667,
+      1.4667,
+      1.4833,
+      1.5
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.00073,
+       0.0
+      ],
+      [
+       0.00276,
+       0.0
+      ],
+      [
+       0.00586,
+       0.0
+      ],
+      [
+       0.00978,
+       0.0
+      ],
+      [
+       0.01429,
+       0.0
+      ],
+      [
+       0.01916,
+       0.0
+      ],
+      [
+       0.02415,
+       0.0
+      ],
+      [
+       0.02901,
+       0.0
+      ],
+      [
+       0.03352,
+       0.0
+      ],
+      [
+       0.03744,
+       0.0
+      ],
+      [
+       0.04052,
+       0.0
+      ],
+      [
+       0.04255,
+       0.0
+      ],
+      [
+       0.04327,
+       0.0
+      ],
+      [
+       0.04299,
+       -0.00166
+      ],
+      [
+       0.04219,
+       -0.00621
+      ],
+      [
+       0.04101,
+       -0.01301
+      ],
+      [
+       0.03955,
+       -0.02141
+      ],
+      [
+       0.03955,
+       -0.03076
+      ],
+      [
+       0.03623,
+       -0.04043
+      ],
+      [
+       0.0346,
+       -0.04976
+      ],
+      [
+       0.03314,
+       -0.05813
+      ],
+      [
+       0.03196,
+       -0.06488
+      ],
+      [
+       0.03116,
+       -0.06939
+      ],
+      [
+       0.03087,
+       -0.07104
+      ],
+      [
+       0.03001,
+       -0.06906
+      ],
+      [
+       0.02767,
+       -0.06369
+      ],
+      [
+       0.02421,
+       -0.05576
+      ],
+      [
+       0.02001,
+       -0.04611
+      ],
+      [
+       0.01087,
+       -0.02507
+      ],
+      [
+       0.00667,
+       -0.01539
+      ],
+      [
+       0.00321,
+       -0.00741
+      ],
+      [
+       0.00086,
+       -0.002
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0372
+      ],
+      [
+       0.0,
+       -0.07422
+      ],
+      [
+       0.0,
+       -0.05506
+      ],
+      [
+       0.0,
+       -0.0193
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7333,
+      0.75,
+      0.7667,
+      0.7833,
+      0.8,
+      1.35,
+      1.3667,
+      1.4667,
+      1.4833,
+      1.5
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.00073,
+       0.0
+      ],
+      [
+       -0.00276,
+       0.0
+      ],
+      [
+       -0.00586,
+       0.0
+      ],
+      [
+       -0.00978,
+       0.0
+      ],
+      [
+       -0.01429,
+       0.0
+      ],
+      [
+       -0.01916,
+       0.0
+      ],
+      [
+       -0.02415,
+       0.0
+      ],
+      [
+       -0.02901,
+       0.0
+      ],
+      [
+       -0.03352,
+       0.0
+      ],
+      [
+       -0.03744,
+       0.0
+      ],
+      [
+       -0.04052,
+       0.0
+      ],
+      [
+       -0.04255,
+       0.0
+      ],
+      [
+       -0.04327,
+       0.0
+      ],
+      [
+       -0.04299,
+       -0.00166
+      ],
+      [
+       -0.04219,
+       -0.00621
+      ],
+      [
+       -0.04101,
+       -0.01301
+      ],
+      [
+       -0.03955,
+       -0.02141
+      ],
+      [
+       -0.03955,
+       -0.03076
+      ],
+      [
+       -0.03623,
+       -0.04043
+      ],
+      [
+       -0.0346,
+       -0.04976
+      ],
+      [
+       -0.03314,
+       -0.05813
+      ],
+      [
+       -0.03196,
+       -0.06488
+      ],
+      [
+       -0.03116,
+       -0.06939
+      ],
+      [
+       -0.03087,
+       -0.07104
+      ],
+      [
+       -0.03001,
+       -0.06906
+      ],
+      [
+       -0.02767,
+       -0.06369
+      ],
+      [
+       -0.02421,
+       -0.05576
+      ],
+      [
+       -0.02001,
+       -0.04611
+      ],
+      [
+       -0.01087,
+       -0.02507
+      ],
+      [
+       -0.00667,
+       -0.01539
+      ],
+      [
+       -0.00321,
+       -0.00741
+      ],
+      [
+       -0.00086,
+       -0.002
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0372
+      ],
+      [
+       0.0,
+       -0.07422
+      ],
+      [
+       0.0,
+       -0.05506
+      ],
+      [
+       0.0,
+       -0.0193
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "attack03_start",
+   "index": 420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.00063,
+       0.0
+      ],
+      [
+       -0.00241,
+       0.0
+      ],
+      [
+       -0.0052,
+       0.0
+      ],
+      [
+       -0.00883,
+       0.0
+      ],
+      [
+       -0.01316,
+       0.0
+      ],
+      [
+       -0.01802,
+       0.0
+      ],
+      [
+       -0.02327,
+       0.0
+      ],
+      [
+       -0.03429,
+       0.0
+      ],
+      [
+       -0.03976,
+       0.0
+      ],
+      [
+       -0.045,
+       0.0
+      ],
+      [
+       -0.04984,
+       0.0
+      ],
+      [
+       -0.05415,
+       0.0
+      ],
+      [
+       -0.05776,
+       0.0
+      ],
+      [
+       -0.06053,
+       0.0
+      ],
+      [
+       -0.0623,
+       0.0
+      ],
+      [
+       -0.06293,
+       0.0
+      ],
+      [
+       -0.06024,
+       0.0
+      ],
+      [
+       -0.05313,
+       0.0
+      ],
+      [
+       -0.04307,
+       0.0
+      ],
+      [
+       -0.01995,
+       0.0
+      ],
+      [
+       -0.00986,
+       0.0
+      ],
+      [
+       -0.00271,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.00061,
+       0.0
+      ],
+      [
+       0.00235,
+       0.0
+      ],
+      [
+       0.00506,
+       0.0
+      ],
+      [
+       0.00859,
+       0.0
+      ],
+      [
+       0.0128,
+       0.0
+      ],
+      [
+       0.01753,
+       0.0
+      ],
+      [
+       0.02263,
+       0.0
+      ],
+      [
+       0.03335,
+       0.0
+      ],
+      [
+       0.03867,
+       0.0
+      ],
+      [
+       0.04376,
+       0.0
+      ],
+      [
+       0.04848,
+       0.0
+      ],
+      [
+       0.05267,
+       0.0
+      ],
+      [
+       0.05618,
+       0.0
+      ],
+      [
+       0.05887,
+       0.0
+      ],
+      [
+       0.0606,
+       0.0
+      ],
+      [
+       0.06121,
+       0.0
+      ],
+      [
+       0.05859,
+       0.0
+      ],
+      [
+       0.05168,
+       0.0
+      ],
+      [
+       0.04189,
+       0.0
+      ],
+      [
+       0.0194,
+       0.0
+      ],
+      [
+       0.00958,
+       0.0
+      ],
+      [
+       0.00264,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "attack03_loop",
+   "index": 421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end",
+   "index": 422,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.75,
+      0.85,
+      0.8667,
+      0.8833,
+      0.9
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.10442
+      ],
+      [
+       0.0,
+       -0.08827
+      ],
+      [
+       0.0,
+       -0.05247
+      ],
+      [
+       0.0,
+       -0.01642
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.75,
+      0.85,
+      0.8667,
+      0.8833,
+      0.9
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.10442
+      ],
+      [
+       0.0,
+       -0.08827
+      ],
+      [
+       0.0,
+       -0.05247
+      ],
+      [
+       0.0,
+       -0.01642
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rangeattack01",
+   "index": 450,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      1.6667,
+      1.7667,
+      1.7833,
+      1.8,
+      1.8167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0938
+      ],
+      [
+       0.0,
+       -0.07478
+      ],
+      [
+       0.0,
+       -0.03603
+      ],
+      [
+       0.0,
+       -0.0056
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      1.6667,
+      1.7667,
+      1.7833,
+      1.8,
+      1.8167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.0938
+      ],
+      [
+       0.0,
+       -0.07478
+      ],
+      [
+       0.0,
+       -0.03603
+      ],
+      [
+       0.0,
+       -0.0056
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rangeattack02_start",
+   "index": 460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.15,
+      0.1667,
+      0.1833,
+      0.5333,
+      0.55,
+      0.5667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01877
+      ],
+      [
+       0.0,
+       -0.05354
+      ],
+      [
+       0.0,
+       -0.07218
+      ],
+      [
+       0.0,
+       -0.05354
+      ],
+      [
+       0.0,
+       -0.01877
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.15,
+      0.1667,
+      0.1833,
+      0.5333,
+      0.55,
+      0.5667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01877
+      ],
+      [
+       0.0,
+       -0.05354
+      ],
+      [
+       0.0,
+       -0.07218
+      ],
+      [
+       0.0,
+       -0.05354
+      ],
+      [
+       0.0,
+       -0.01877
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rangeattack02_loop",
+   "index": 461,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end",
+   "index": 462,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop",
+   "index": 490,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       -0.0,
+       0.08028
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.08028
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "damage01",
+   "index": 500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      24,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      24,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02",
+   "index": 501,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      62,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      62,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start",
+   "index": 510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.3833,
+      0.4,
+      0.4167,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.00925
+      ],
+      [
+       0.0,
+       -0.0313
+      ],
+      [
+       0.0,
+       -0.05754
+      ],
+      [
+       0.0,
+       -0.07942
+      ],
+      [
+       0.0,
+       -0.08856
+      ],
+      [
+       0.0,
+       -0.08479
+      ],
+      [
+       0.0,
+       -0.07483
+      ],
+      [
+       0.0,
+       -0.06069
+      ],
+      [
+       0.0,
+       -0.02814
+      ],
+      [
+       0.0,
+       -0.0139
+      ],
+      [
+       0.0,
+       -0.00382
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.3833,
+      0.4,
+      0.4167,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.00925
+      ],
+      [
+       0.0,
+       -0.0313
+      ],
+      [
+       0.0,
+       -0.05754
+      ],
+      [
+       0.0,
+       -0.07942
+      ],
+      [
+       0.0,
+       -0.08856
+      ],
+      [
+       0.0,
+       -0.08479
+      ],
+      [
+       0.0,
+       -0.07483
+      ],
+      [
+       0.0,
+       -0.06069
+      ],
+      [
+       0.0,
+       -0.02814
+      ],
+      [
+       0.0,
+       -0.0139
+      ],
+      [
+       0.0,
+       -0.00382
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stun01_loop",
+   "index": 511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end",
+   "index": 512,
+   "duration": 0.8667,
+   "frameRate": 60.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.5667,
+      0.5833,
+      0.6
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.02306
+      ],
+      [
+       0.0,
+       -0.06574
+      ],
+      [
+       0.0,
+       -0.08856
+      ],
+      [
+       0.0,
+       -0.06574
+      ],
+      [
+       0.0,
+       -0.02306
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.5667,
+      0.5833,
+      0.6
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.02306
+      ],
+      [
+       0.0,
+       -0.06574
+      ],
+      [
+       0.0,
+       -0.08856
+      ],
+      [
+       0.0,
+       -0.06574
+      ],
+      [
+       0.0,
+       -0.02306
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "down01_start",
+   "index": 520,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      9,
+      0
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      9,
+      1
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop",
+   "index": 521,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end",
+   "index": 522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      36,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      36,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.6667,
+      0.6833,
+      0.7
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.00071
+      ],
+      [
+       0.0,
+       -0.00273
+      ],
+      [
+       0.0,
+       -0.0059
+      ],
+      [
+       0.0,
+       -0.01006
+      ],
+      [
+       0.0,
+       -0.01503
+      ],
+      [
+       0.0,
+       -0.02066
+      ],
+      [
+       0.0,
+       -0.02677
+      ],
+      [
+       0.0,
+       -0.03321
+      ],
+      [
+       0.0,
+       -0.0464
+      ],
+      [
+       0.0,
+       -0.05282
+      ],
+      [
+       0.0,
+       -0.05891
+      ],
+      [
+       0.0,
+       -0.0645
+      ],
+      [
+       0.0,
+       -0.06943
+      ],
+      [
+       0.0,
+       -0.07355
+      ],
+      [
+       0.0,
+       -0.07669
+      ],
+      [
+       0.0,
+       -0.07869
+      ],
+      [
+       0.0,
+       -0.07939
+      ],
+      [
+       0.0,
+       -0.07355
+      ],
+      [
+       0.0,
+       -0.05891
+      ],
+      [
+       0.0,
+       -0.02066
+      ],
+      [
+       0.0,
+       -0.0059
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.6667,
+      0.6833,
+      0.7
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.00071
+      ],
+      [
+       0.0,
+       -0.00273
+      ],
+      [
+       0.0,
+       -0.0059
+      ],
+      [
+       0.0,
+       -0.01006
+      ],
+      [
+       0.0,
+       -0.01503
+      ],
+      [
+       0.0,
+       -0.02066
+      ],
+      [
+       0.0,
+       -0.02677
+      ],
+      [
+       0.0,
+       -0.03321
+      ],
+      [
+       0.0,
+       -0.0464
+      ],
+      [
+       0.0,
+       -0.05282
+      ],
+      [
+       0.0,
+       -0.05891
+      ],
+      [
+       0.0,
+       -0.0645
+      ],
+      [
+       0.0,
+       -0.06943
+      ],
+      [
+       0.0,
+       -0.07355
+      ],
+      [
+       0.0,
+       -0.07669
+      ],
+      [
+       0.0,
+       -0.07869
+      ],
+      [
+       0.0,
+       -0.07939
+      ],
+      [
+       0.0,
+       -0.07355
+      ],
+      [
+       0.0,
+       -0.05891
+      ],
+      [
+       0.0,
+       -0.02066
+      ],
+      [
+       0.0,
+       -0.0059
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "megaappeal01",
+   "index": 620,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.05,
+      0.0833,
+      0.1
+     ],
+     "values": [
+      [
+       0.0,
+       -0.07751
+      ],
+      [
+       0.0,
+       -0.06546
+      ],
+      [
+       0.0,
+       -0.01215
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.05,
+      0.0833,
+      0.1
+     ],
+     "values": [
+      [
+       0.0,
+       -0.07751
+      ],
+      [
+       0.0,
+       -0.06546
+      ],
+      [
+       0.0,
+       -0.01215
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eye01",
+   "index": 8000,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0354_51_00_suit_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eyelid_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_eye_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_eye_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_body_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0354_51_00_suit_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_tooth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_slider_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_left_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_right_zipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_underzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0354_51_00_upperzipper_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.0333,
+      0.05,
+      0.0833,
+      0.1167,
+      0.15,
+      0.2,
+      0.2333,
+      0.25,
+      0.2833,
+      0.3,
+      0.3333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.00597
+      ],
+      [
+       0.0,
+       -0.00895
+      ],
+      [
+       0.0,
+       -0.03236
+      ],
+      [
+       0.0,
+       -0.0557
+      ],
+      [
+       0.0,
+       -0.07893
+      ],
+      [
+       0.0,
+       -0.05246
+      ],
+      [
+       0.0,
+       -0.02585
+      ],
+      [
+       0.0,
+       -0.01251
+      ],
+      [
+       0.0,
+       -0.0051
+      ],
+      [
+       0.0,
+       -0.0014
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.0333,
+      0.05,
+      0.0833,
+      0.1167,
+      0.15,
+      0.2,
+      0.2333,
+      0.25,
+      0.2833,
+      0.3,
+      0.3333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.00597
+      ],
+      [
+       0.0,
+       -0.00895
+      ],
+      [
+       0.0,
+       -0.03236
+      ],
+      [
+       0.0,
+       -0.0557
+      ],
+      [
+       0.0,
+       -0.07893
+      ],
+      [
+       0.0,
+       -0.05246
+      ],
+      [
+       0.0,
+       -0.02585
+      ],
+      [
+       0.0,
+       -0.01251
+      ],
+      [
+       0.0,
+       -0.0051
+      ],
+      [
+       0.0,
+       -0.0014
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  }
+ ],
+ "defaultClip": "battlewait01_loop",
+ "parts": [
+  {
+   "node": "pm0354_51_00_suit_a_mesh",
+   "label": "suit a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eyelid_mesh",
+   "label": "eyelid",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eye_a_mesh",
+   "label": "eye a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eye_b_mesh",
+   "label": "eye b",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0354_51_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_suit_mesh",
+   "label": "suit",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_tooth_mesh",
+   "label": "tooth",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_slider_mesh",
+   "label": "slider",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_left_zipper_mesh",
+   "label": "left zipper",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_right_zipper_mesh",
+   "label": "right zipper",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_underzipper_mesh",
+   "label": "underzipper",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_upperzipper_mesh",
+   "label": "upperzipper",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_suit_a_mesh_lod1",
+   "label": "suit a lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eyelid_mesh_lod1",
+   "label": "eyelid lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eye_a_mesh_lod1",
+   "label": "eye a lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eye_b_mesh_lod1",
+   "label": "eye b lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0354_51_00_body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_suit_mesh_lod1",
+   "label": "suit lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_tooth_mesh_lod1",
+   "label": "tooth lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_slider_mesh_lod1",
+   "label": "slider lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_left_zipper_mesh_lod1",
+   "label": "left zipper lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_right_zipper_mesh_lod1",
+   "label": "right zipper lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_underzipper_mesh_lod1",
+   "label": "underzipper lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_upperzipper_mesh_lod1",
+   "label": "upperzipper lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_suit_a_mesh_lod2",
+   "label": "suit a lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eyelid_mesh_lod2",
+   "label": "eyelid lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eye_a_mesh_lod2",
+   "label": "eye a lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eye_b_mesh_lod2",
+   "label": "eye b lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0354_51_00_body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_suit_mesh_lod2",
+   "label": "suit lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_tooth_mesh_lod2",
+   "label": "tooth lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_slider_mesh_lod2",
+   "label": "slider lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_left_zipper_mesh_lod2",
+   "label": "left zipper lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_right_zipper_mesh_lod2",
+   "label": "right zipper lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_underzipper_mesh_lod2",
+   "label": "underzipper lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_upperzipper_mesh_lod2",
+   "label": "upperzipper lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_suit_a_mesh_lod3",
+   "label": "suit a lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eyelid_mesh_lod3",
+   "label": "eyelid lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eye_a_mesh_lod3",
+   "label": "eye a lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_eye_b_mesh_lod3",
+   "label": "eye b lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0354_51_00_body_mesh_lod3",
+   "label": "body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_suit_mesh_lod3",
+   "label": "suit lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_tooth_mesh_lod3",
+   "label": "tooth lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_slider_mesh_lod3",
+   "label": "slider lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_left_zipper_mesh_lod3",
+   "label": "left zipper lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_right_zipper_mesh_lod3",
+   "label": "right zipper lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_underzipper_mesh_lod3",
+   "label": "underzipper lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0354_51_00_upperzipper_mesh_lod3",
+   "label": "upperzipper lod3",
+   "lod": 3,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 145,
+  "meshes": 48,
+  "triangles": 5992,
+  "textures": 38,
+  "clips": 43,
+  "glbBytes": 9937828
+ },
+ "source": [
+  "ik_pokemon/data/pm0354/pm0354_51_00/"
+ ],
+ "extras": {
+  "dex": 354,
+  "species": "pm0354",
+  "form": "51_00"
+ }
+}

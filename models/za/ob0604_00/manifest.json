@@ -1,0 +1,1091 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "ob0604_00",
+ "kind": "object",
+ "displayName": "Donho",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 0,
+   "duration": 2.4,
+   "frameRate": 60.0,
+   "frameCount": 145,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000",
+   "index": 20,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090",
+   "index": 21,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090",
+   "index": 24,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start",
+   "index": 150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop",
+   "index": 151,
+   "duration": 0.4667,
+   "frameRate": 60.0,
+   "frameCount": 29,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start",
+   "index": 152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop",
+   "index": 153,
+   "duration": 0.4667,
+   "frameRate": 60.0,
+   "frameCount": 29,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02",
+   "index": 155,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "appeal01",
+   "index": 310,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01",
+   "index": 400,
+   "duration": 1.9667,
+   "frameRate": 60.0,
+   "frameCount": 119,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "glad01",
+   "index": 550,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hate01",
+   "index": 563,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultwait01_loop [set1]",
+   "index": 10000,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "idle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000 [set1]",
+   "index": 10020,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090 [set1]",
+   "index": 10021,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090 [set1]",
+   "index": 10024,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start [set1]",
+   "index": 10150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop [set1]",
+   "index": 10151,
+   "duration": 0.4667,
+   "frameRate": 60.0,
+   "frameCount": 29,
+   "loop": true,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start [set1]",
+   "index": 10152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop [set1]",
+   "index": 10153,
+   "duration": 0.4667,
+   "frameRate": 60.0,
+   "frameCount": 29,
+   "loop": true,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02 [set1]",
+   "index": 10155,
+   "duration": 0.7333,
+   "frameRate": 60.0,
+   "frameCount": 45,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "appeal01 [set1]",
+   "index": 10310,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01 [set1]",
+   "index": 10400,
+   "duration": 1.9667,
+   "frameRate": 60.0,
+   "frameCount": 119,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "glad01 [set1]",
+   "index": 10550,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hate01 [set1]",
+   "index": 10563,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0604_00_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0604_00_00_feeler_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "pm0604_00_00_eye_mesh",
+   "label": "pm0604 00 00 eye",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_body_mesh",
+   "label": "pm0604 00 00 body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_feeler_a_mesh",
+   "label": "pm0604 00 00 feeler a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_feeler_b_mesh",
+   "label": "pm0604 00 00 feeler b",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_eye_mesh_lod1",
+   "label": "pm0604 00 00 eye lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_body_mesh_lod1",
+   "label": "pm0604 00 00 body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_feeler_a_mesh_lod1",
+   "label": "pm0604 00 00 feeler a lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_feeler_b_mesh_lod1",
+   "label": "pm0604 00 00 feeler b lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_eye_mesh_lod2",
+   "label": "pm0604 00 00 eye lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_body_mesh_lod2",
+   "label": "pm0604 00 00 body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_feeler_a_mesh_lod2",
+   "label": "pm0604 00 00 feeler a lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_feeler_b_mesh_lod2",
+   "label": "pm0604 00 00 feeler b lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_eye_mesh_lod3",
+   "label": "pm0604 00 00 eye lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_body_mesh_lod3",
+   "label": "pm0604 00 00 body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_feeler_a_mesh_lod3",
+   "label": "pm0604 00 00 feeler a lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0604_00_00_feeler_b_mesh_lod3",
+   "label": "pm0604 00 00 feeler b lod3",
+   "lod": 3,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 86,
+  "meshes": 16,
+  "triangles": 5952,
+  "textures": 18,
+  "clips": 26,
+  "glbBytes": 5764960
+ },
+ "source": [
+  "ik_chara/model_ob/ob0604_00_donho/"
+ ],
+ "extras": {
+  "item": "donho",
+  "species": "ob0604",
+  "form": ""
+ }
+}

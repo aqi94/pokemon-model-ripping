@@ -1,0 +1,74 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0011_00",
+ "kind": "object",
+ "displayName": "Cafe",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_coffee_cup_mesh",
+   "label": "obj coffee cup",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_coffee_normal_mesh",
+   "label": "obj coffee normal",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_coffee_weak_mesh",
+   "label": "obj coffee weak",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_coffee_strong_mesh",
+   "label": "obj coffee strong",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_cafe_au_lait_mesh",
+   "label": "obj cafe au lait",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_hot_milk_mesh",
+   "label": "obj hot milk",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 10,
+  "meshes": 6,
+  "triangles": 450,
+  "textures": 3,
+  "clips": 0,
+  "glbBytes": 237148
+ },
+ "source": [
+  "ik_chara/model_ob/ob0011_00_cafe/"
+ ],
+ "extras": {
+  "item": "cafe",
+  "species": "ob0011",
+  "form": ""
+ }
+}

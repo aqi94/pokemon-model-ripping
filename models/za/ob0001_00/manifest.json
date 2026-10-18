@@ -1,0 +1,50 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0001_00",
+ "kind": "object",
+ "displayName": "Bangle",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_stone_mesh",
+   "label": "obj stone",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_bangle_mesh",
+   "label": "obj bangle",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 7,
+  "meshes": 2,
+  "triangles": 620,
+  "textures": 8,
+  "clips": 0,
+  "glbBytes": 267392
+ },
+ "source": [
+  "ik_chara/model_ob/ob0001_00_bangle/"
+ ],
+ "extras": {
+  "item": "bangle",
+  "species": "ob0001",
+  "form": ""
+ }
+}

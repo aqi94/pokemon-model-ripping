@@ -1,0 +1,192 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0000_00_00",
+ "kind": "pokemon",
+ "displayName": "pm0000",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 0,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "pm0000_00_00_crack03_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0000_00_00_crack02_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0000_00_00_crack01_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0000_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultidle01",
+   "index": 10,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0000_00_00_crack03_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0000_00_00_crack02_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0000_00_00_crack01_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0000_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "generaldemo01",
+   "index": 9000,
+   "duration": 8.3333,
+   "frameRate": 60.0,
+   "frameCount": 501,
+   "loop": false,
+   "category": "emote",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0000_00_00_crack03_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      285,
+      1
+     ]
+    ],
+    "pm0000_00_00_crack02_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      225,
+      1
+     ],
+     [
+      285,
+      0
+     ]
+    ],
+    "pm0000_00_00_crack01_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      145,
+      1
+     ],
+     [
+      225,
+      0
+     ]
+    ],
+    "pm0000_00_00_body_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      145,
+      0
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "pm0000_00_00_crack03_mesh",
+   "label": "crack03",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0000_00_00_crack02_mesh",
+   "label": "crack02",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0000_00_00_crack01_mesh",
+   "label": "crack01",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0000_00_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 11,
+  "meshes": 4,
+  "triangles": 5254,
+  "textures": 8,
+  "clips": 3,
+  "glbBytes": 1071552
+ },
+ "source": [
+  "ik_pokemon/data/pm0000/pm0000_00_00/"
+ ],
+ "extras": {
+  "dex": 0,
+  "species": "pm0000",
+  "form": "00_00"
+ }
+}
