@@ -46,7 +46,7 @@ export function Toolbox({ options, onChange, onCamera, onRecenter, onFullscreen,
       <button className="tool-btn" title="Full screen" onClick={onFullscreen}>⛶</button>
       <button className="tool-btn txt" title="Export PNG (opens options)" disabled={disabled}
         onClick={(e) => onPngOptions(e.currentTarget.getBoundingClientRect().top)}>PNG</button>
-      <button className="tool-btn txt" title="Export GLB" onClick={onGlb} disabled={disabled}>GLB</button>
+      {!import.meta.env.VITE_GLB_BASE && <button className="tool-btn txt" title="Export GLB" onClick={onGlb} disabled={disabled}>GLB</button>}
     </nav>
   );
 }
