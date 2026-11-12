@@ -13,9 +13,3 @@ export function exportCanvasPng(canvas: HTMLCanvasElement, filename: string, ren
   canvas.toBlob((b) => b && download(b, filename), 'image/png'); // snapshots the buffer synchronously
   after?.();
 }
-
-export async function exportGlb(url: string, filename: string) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`GLB download failed: ${res.status}`);
-  download(await res.blob(), filename);
-}

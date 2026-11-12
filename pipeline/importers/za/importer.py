@@ -109,11 +109,14 @@ class AnimationFile:
     config: bytes | None = None  # companion .tracm (visibility / material tracks)
     group: str | None = None  # alternate animation set label; None = derive from the index
     extra: bytes | None = None  # second .tranm whose bones this clip lacks (rival: body from motion_cc_base/rv, face/hair from motion_cc_ir)
+    skip_bones: re.Pattern | None = None  # bones the game's layer mask keeps out of this clip (SV body sets: the eyes)
+    rotation_only: frozenset[str] | None = None  # borrowed clips: bones whose bind offset differs keep only rotations
 
 
 SKIN_MATERIALS = ("body_skin", "face_skin")
 SKIN_TONES = 4  # zones 1..4 of the shared skin tables (deep .. pale)
 SKIN_DEFAULT_TONE = 3
+# FITTED: lipstick-layer size heuristic on the 14 cc faces with a lip layer, 2026-10-19 (engine-rules debt)
 LIP_MAX_COVER = 0.012  # a face-skin mask layer this small, centred on the mouth, is lipstick (the others paint facial hair / makeup)
 
 ANIM_RE = re.compile(r"^(?P<model>.+?)_(?P<idx>\d{5})_(?P<name>.+)\.tranm$")
@@ -141,6 +144,17 @@ def clip_name_from_file(filename: str) -> tuple[str, int] | None:
     return m.group("name"), int(m.group("idx"))
 
 
+def dedupe_clip_names(clips: list) -> None:
+    """Clip names must be unique (glTF animation / Blender action names). One folder can reuse a name under different
+    indexes: the Z-A player's `motion_pc/base` has `ballthrow01` as 00352 (field) and 01020 (battle), `damage01` as
+    00500 and 07500. The lowest index keeps the bare name, later ones get ` [NNNNN]` (their 5-digit index)."""
+    seen: set[str] = set()
+    for c in sorted(clips, key=lambda c: (c.index, c.name)):
+        if c.name in seen:
+            c.name = f"{c.name} [{c.index:05d}]"
+        seen.add(c.name)
+
+
 # --------------------------------------------------------------------------
 
 
@@ -151,6 +165,7 @@ def clip_name_from_file(filename: str) -> tuple[str, int] | None:
 # materials switch the listed layers on (intensity 1), the active-only meshes use them, and the shared triangles are split
 # into `<mesh>_neutral` / `<mesh>_active` meshes whose per-clip visibility follows the neutral / active meshes. Verified
 # against the Z-A battle shot (samples/za_xerneas.png) and SwSh Active Mode (samples/xerneas_active_swsh.png).
+# FITTED: per-species mode table, Xerneas pm0768 only; should become a clip-visibility rule shared with SPOT_GLOW_SPECIES, 2026-10-19 (engine-rules debt)
 MODE_SWITCH = {
     ("za", "pm0768"): {"layers": (3, 4), "active": ("horninc_a_mesh", "horninc_b_mesh"), "neutral": "horn_a_mesh"},
 }
@@ -307,8 +322,10 @@ def import_model(
     skeleton: Skeleton | None = None,
     lod0_only: bool = False,
     skin_tones: bool = False,
+    body: dict | None = None,
 ) -> Model:
-    """`skeleton` replaces the model's own .trskl (modular parts skin to a shared rig);
+    """`body` = SV generic-NPC body type {"table": trbsm table, "weights": ccdata weights} (`trbsm.apply_body_type`);
+    `skeleton` replaces the model's own .trskl (modular parts skin to a shared rig);
     `lod0_only` drops the _lodN mesh files; `skin_tones` bakes the shared skin palette
     zones of body_skin / face_skin materials into `extras["skin_tones"]`."""
     trmdl = T.parse_trmdl(source.read(f"{model_id}.trmdl"))
@@ -358,12 +375,17 @@ def import_model(
 
     beard_mats = _beard_materials(source, trmdl) if skin_tones else set()
 
-    def build_materials(files: list[str], tag: str) -> dict[str, Material]:
+    def build_materials(files: list[str], tag: str, patch=None) -> dict[str, Material]:
+        """`patch(tm) -> TrMaterial | None` (variation groups): convert only the materials it returns, as returned."""
         out = {}
         for fn in files:
             if not source.exists(fn):
                 continue
             for tm in T.parse_trmtr(source.read(fn)):
+                if patch is not None:
+                    tm = patch(tm)
+                    if tm is None:
+                        continue
                 ovs: list[Material] = []
                 out[tm.name] = _convert_material(tm, tag, load_tex, textures, tex_meta, skin_tones, lid_atlas=tm.name not in lid_unfit, overlays=ovs,
                                                  lid_parked=tm.name in lid_parked, layer5_moves=tm.name in l5_moving, beard=tm.name in beard_mats)
@@ -408,6 +430,9 @@ def import_model(
             variants.append(Variant(name=s.name, materials=mats, group="coloring", label=label))
     if variants:
         variants.insert(0, Variant(name="normal", materials={}, group="coloring", label="Normal", default=True))
+    base_set = next((s for s in sets if s.name == "normal"), sets[0] if sets else None)
+    if base_set is not None:
+        variants += variation_variants(base_set, normal_files, source, build_materials)
 
     # ---- meshes ---------------------------------------------------------------
     meshes: list[Mesh] = []
@@ -425,12 +450,13 @@ def import_model(
         for si, shape in enumerate(trmsh.shapes):
             if si >= len(buffers):
                 break
-            decoded = [T.decode_vertices(d, buffers[si]) for d in shape.declarations]
+            used = {0} | {p.declaration for p in shape.parts}  # the others are blend-shape target layouts
+            decoded = [T.decode_vertices(d, buffers[si]) if di in used else None for di, d in enumerate(shape.declarations)]
             prims = []
             for part in shape.parts:
                 if part.index_count <= 0:
                     continue
-                v = decoded[part.declaration] if part.declaration < len(decoded) else decoded[0]
+                v = decoded[part.declaration] if part.declaration < len(decoded) and decoded[part.declaration] is not None else decoded[0]
                 mat_name = part.material
                 if mat_name not in materials:
                     materials[mat_name] = Material(name=mat_name)
@@ -498,15 +524,22 @@ def import_model(
                     prims.append(Primitive(
                         material=ov.name, indices=base_prim.indices, positions=base_prim.positions,
                         normals=base_prim.normals, tangents=base_prim.tangents,
-                        uvs=[layer_overlay_uvs(v.uvs[lo["uv_set"]], lo) if lo is not None else lid_overlay_uvs(v.uvs[0], ov.extras["lid_overlay"])],
+                        # The tile comes from this part's vertices: SV shapes share one vertex buffer between the body
+                        # (tile 1) and the eyes (tile 0), and the whole buffer's median put Corphish's lids a tile off.
+                        uvs=[layer_overlay_uvs(v.uvs[lo["uv_set"]], lo, part_tile(v.uvs[lo["uv_set"]], base_prim.indices)) if lo is not None
+                             else lid_overlay_uvs(v.uvs[0], ov.extras["lid_overlay"], part_tile(v.uvs[0], base_prim.indices))],
                         joints=base_prim.joints, weights=base_prim.weights,
                     ))
             name = shape.mesh_name or shape.name.replace("_shape", "")
             if lod and not name.endswith(f"_lod{lod}"):
                 name = f"{name}_lod{lod}"
-            meshes.append(Mesh(name=name, primitives=prims, lod=lod))
+            mesh = Mesh(name=name, primitives=prims, lod=lod)
+            if (shape.morph_regions or shape.morph_names) and prims and decoded[0] is not None:
+                _attach_blend_shapes(mesh, shape, buffers[si], decoded[0].positions)
+            meshes.append(mesh)
 
     # ---- animations -------------------------------------------------------
+    morph_meshes = {m.name: m.extras["targetNames"] for m in meshes if m.extras.get("targetNames")}
     clips: list[Clip] = []
     rest_states: dict[str, bool] = {}
     for af in animations or []:
@@ -524,10 +557,23 @@ def import_model(
         except Exception as e:  # noqa: BLE001 - keep going on a bad clip
             warnings.append(f"skipped animation {af.name}: {e}")
             continue
+        if af.skip_bones is not None:
+            tr.tracks = [t for t in tr.tracks if not af.skip_bones.search(t.bone)]
+        if af.rotation_only:
+            # The donor keys translations at its own offsets; on a rig whose bind differs they would pull the
+            # borrower's bones to the donor's proportions.
+            for t in tr.tracks:
+                if t.bone in af.rotation_only:
+                    t.translation = None
         if af.extra:
             have = {t.bone for t in tr.tracks}
             tr.tracks += [t for t in T.parse_tranm(af.extra).tracks if t.bone not in have]
         clips.append(_convert_clip(tr, af))
+        if af.config and morph_meshes:
+            try:
+                clips[-1].morph = blend_shape_weights(T.parse_tracm_blendshapes(af.config), morph_meshes, float(tr.frame_rate))
+            except Exception as e:  # noqa: BLE001 - face tracks are optional
+                warnings.append(f"{af.name}: blend-shape tracks unreadable ({e})")
         if af.config:
             try:
                 uv = material_uv_offsets(T.parse_tracm_materials(af.config), materials, float(tr.frame_rate))
@@ -537,8 +583,17 @@ def import_model(
             if uv:
                 clips[-1].uv_offset, clips[-1].uv_offset_mode = uv, "gltf_step"
     clips.sort(key=lambda c: (c.index, c.name))
+    dedupe_clip_names(clips)
+    for c in clips:
+        # Clips without face tracks return the face to neutral (three.js would keep the previous clip's weights).
+        for mname, names in morph_meshes.items():
+            c.morph.setdefault(mname, (np.zeros(1, np.float32), np.zeros((1, len(names)), np.float32)))
     if skeleton is not None:
         split_scale_joints(skeleton, clips)
+        if body:
+            from .trbsm import apply_body_type
+
+            apply_body_type(skeleton, clips, body["table"], body.get("weights"))
     # Rest visibility: a mesh that any clip toggles starts hidden, unless the
     # default clip's track shows it at frame 0 (Griselle's cup only appears in
     # sit/walk clips; Pokémon alt wing poses are mutually exclusive).
@@ -638,6 +693,10 @@ def _build_skeleton(sk: T.Trskl) -> Skeleton:
                 scale=tuple(float(x) for x in n.scale),
                 inverse_bind=inv,
                 skinning=skinning,
+                # Only joints with a JointInfo carry the flag; it is written only when on, so a missing field = off
+                # (SV trainers' `*_eyeball_segoff` under `eyescale` (1.3-1.6, 1, 1): their inverse binds include it).
+                scale_compensate=(sk.joints[n.joint_info].segment_scale_compensate
+                                  if 0 <= n.joint_info < len(sk.joints) else True),
             )
         )
     palette: list[int] = [-1] * len(sk.joints)
@@ -656,11 +715,180 @@ def _tex_file(tm: T.TrMaterial, slot: str) -> str | None:
     return None
 
 
-def _finish_pbr_material(mat: Material, tm: T.TrMaterial, load_tex, register, stem) -> Material:
+MORPH_TARGET_RE = re.compile(r"^(?P<t>.+)_m(?P<k>\d)_(?P<mesh>.+)_shape$")
+
+
+def _attach_blend_shapes(mesh: Mesh, shape: T.MeshShape, buffers: T.MeshBuffers, base: np.ndarray) -> None:
+    """SV trainer face expressions: the shape's blend-shape targets as glTF morph targets on every primitive (glTF
+    needs the same targets on all primitives of a mesh). Names become `<target>_m<region>` (`mouth_i_m1`), the key
+    the clips' `blend_<deformer>:<target>` weights are matched on (`blend_shape_weights`)."""
+    names, deltas = [], []
+    for name, d in T.morph_targets(shape, buffers, base):
+        m = MORPH_TARGET_RE.match(name)
+        if m is None or not np.any(np.abs(d) > 1e-6):
+            continue
+        names.append(f"{m.group('t')}_m{m.group('k')}")
+        deltas.append(d)
+    if not names:
+        return
+    for p in mesh.primitives:
+        if len(p.positions) == len(base):
+            p.morph_targets = list(deltas)
+    if any(len(p.morph_targets) != len(names) for p in mesh.primitives):
+        for p in mesh.primitives:
+            p.morph_targets = []
+        return
+    mesh.extras["targetNames"] = names
+
+
+def blend_shape_weights(tracks: list, morph_meshes: dict[str, list[str]], fps: float) -> dict[str, tuple[np.ndarray, np.ndarray]]:
+    """Clip morph weights per mesh from `.tracm` blend-shape curves. A curve `blend_<deformer>:<target>` drives the
+    targets named `<target>_m<k>` where k is the face region its deformer covers (from the region shapes it lists:
+    `face_m1_mesh_shape` -> 1; mouth = m1, eyes m2/m3, brows m4). Weights are linear between keys."""
+    by_key: dict[str, tuple[np.ndarray, np.ndarray]] = {}
+    for tr in tracks:
+        target = tr.name.split(":", 1)[-1]
+        k = next((m.group(1) for sname in tr.shapes for m in [re.search(r"(?:^|_)m(\d)(?:_|$)", sname)] if m), None)
+        if k is None:
+            continue
+        f, idx = np.unique(tr.frames, return_index=True)
+        by_key[f"{target}_m{k}"] = (f.astype(np.float64), tr.weights[idx].astype(np.float64))
+    out = {}
+    for mesh, names in morph_meshes.items():
+        hits = {j: by_key[n] for j, n in enumerate(names) if n in by_key}
+        if not hits:
+            continue
+        frames = np.unique(np.concatenate([f for f, _ in hits.values()]))
+        w = np.zeros((len(frames), len(names)), np.float32)
+        for j, (f, v) in hits.items():
+            w[:, j] = np.interp(frames, f, v)
+        out[mesh] = ((frames / fps).astype(np.float32), w)
+    return out
+
+
+VARIATION_COLOUR_GROUP = re.compile(r"^colou?r")  # per-NPC colour axes (`color_00`, `color01`, `color_skin`...)
+
+
+def _patch_params(tm: T.TrMaterial, values: dict[str, tuple[float, ...]]) -> T.TrMaterial:
+    colors, floats = dict(tm.colors), dict(tm.floats)
+    for param, v in values.items():
+        if param in floats or (param not in colors and len(v) == 1):
+            floats[param] = float(v[0])
+        else:
+            colors[param] = tuple(float(x) for x in (tuple(v) + (1.0, 1.0, 1.0, 1.0))[:4])
+    return dataclasses.replace(tm, colors=colors, floats=floats)
+
+
+def _same_params(tm: T.TrMaterial, values: dict[str, tuple[float, ...]], tol: float = 2e-3) -> bool:
+    for param, v in values.items():
+        cur = tm.floats.get(param)
+        cur = (cur,) if cur is not None else tm.colors.get(param)
+        if cur is None or any(abs(float(a) - float(b)) > tol for a, b in zip(cur, v)):
+            return False
+    return True
+
+
+def _variation_label(materials: set[str]) -> str:
+    """Group name from the material names it recolours (the game's own names: `color_00`.. say nothing)."""
+    kinds = [k for k, hit in (("Skin", lambda m: "skin" in m and "hair" not in m), ("Hair", lambda m: "hair" in m),
+                              ("Eyes", lambda m: "eye" in m and "brow" not in m and "lash" not in m))
+             if any(hit(m) for m in materials)]
+    return " / ".join(kinds) if kinds else "Accessory colour"
+
+
+def variation_variants(base_set: T.MaterialVariantSet, files: list[str], source, build_materials) -> list[Variant]:
+    """SV per-NPC colour axes (`.trmmt` variation groups `color*`): one Variant per colour id of each group.
+
+    The game picks an id per NPC (`.ccdata` race00..03; base-game generics: 4 skin/hair/eye tones 300..303) and sets
+    the listed material params to the group's keyed values at that id. Each group becomes its own variant group
+    (`tone:<group>`) whose options re-bake only that group's materials, so groups combine (the viewer only swaps
+    meshes whose material differs inside the selected group). The option matching the authored .trmtr is default."""
+    tms = {tm.name: tm for fn in files if source.exists(fn) for tm in T.parse_trmtr(source.read(fn))}
+    out: list[Variant] = []
+    for g in base_set.groups:
+        if not VARIATION_COLOUR_GROUP.match(g.name) or not g.tracks:
+            continue
+        mats = sorted({t.material for t in g.tracks if t.material in tms})
+        if not mats or g.last < g.first or g.last - g.first > 40:
+            continue
+        per_id = []
+        for k in range(g.first, g.last + 1):
+            vals: dict[str, dict[str, tuple[float, ...]]] = {}
+            for t in g.tracks:
+                if t.material in tms:
+                    v = T.track_value(t, k)
+                    if v is not None:
+                        vals.setdefault(t.material, {}).setdefault(t.param, v)
+            per_id.append((k, vals))
+        # Ids that change nothing relative to the previous one are the same look: keep one option each.
+        seen, opts = [], []
+        for k, vals in per_id:
+            key = repr(sorted((m, p, tuple(round(x, 4) for x in v)) for m, d in vals.items() for p, v in d.items()))
+            if key not in seen:
+                seen.append(key)
+                opts.append((k, vals))
+        if len(opts) < 2:
+            continue
+        group = f"tone:{g.name}"
+        label = _variation_label(set(mats))
+        defaults = [all(_same_params(tms[m], vals.get(m, {})) for m in mats) for _, vals in opts]
+        for n, ((k, vals), dflt) in enumerate(zip(opts, defaults), 1):
+            name = f"{g.name}_{k}"
+            built = build_materials(files, name, patch=lambda tm, vals=vals: _patch_params(tm, vals[tm.name]) if tm.name in vals else None)
+            out.append(Variant(name=name, materials=built, group=group, label=f"{label.split(' / ')[0]} {n}", group_label=label,
+                               default=dflt and not any(defaults[: n - 1])))
+    return out
+
+
+def _finish_pbr_material(mat: Material, tm: T.TrMaterial, load_tex, register, stem,
+                         lym: np.ndarray | None = None, lym_file: str | None = None) -> Material:
     mat.extras.pop("shading", None)
     mat.extras["pbr"] = True
     mat.metallic_factor = float(tm.floats.get("Metallic", 0.0))
+    # Layer enable as for the colours and the per-layer specular (mask scale x layer strength).
+    scales = [tm.floats.get(f"LayerMaskScale{i}", 1.0) * _layer_strength(tm.colors.get(f"BaseColorLayer{i}")) for i in range(1, 5)]
+    if lym is not None and any(x > 0 for x in scales):
+        mr = bake_layer_metal(tm.floats, lym, scales)
+        if mr is not None:
+            rgba, sig = mr
+            mat.metallic_roughness = register(f"{stem(lym_file)}_mr_{sig}", rgba, False, mat.extras["mirror"])
+            mat.wrap["metallic_roughness"] = ("repeat", "repeat")
+            mat.metallic_factor = mat.roughness_factor = 1.0
     return mat
+
+
+def bake_layer_metal(floats: dict, mask: np.ndarray, scales: list[float]) -> tuple[np.ndarray, str] | None:
+    """Per-texel metallic/roughness from `MetallicLayerN` / `RoughnessLayerN` over the base `Metallic`/`Roughness`,
+    lerped through the layer mask in order like the colours (SV/LA PBR shaders). Returns a glTF metallicRoughness
+    texture (G roughness, B metallic) + a cache signature, or None when no layer differs from the base.
+
+    SV eyes (`EyeClearCoat`) paint the iris as metallic layers (Vulpix: layers 1/3 brown, metallic 1, roughness 0.8):
+    a metal has no diffuse term, so the iris reads dark brown in game. Baked as plain diffuse it was a lit pale disc.
+    """
+    base = (float(floats.get("Metallic", 0.0)), float(floats.get("Roughness", 0.8)))
+    layers = []
+    for i in range(1, 5):
+        m, r = floats.get(f"MetallicLayer{i}"), floats.get(f"RoughnessLayer{i}")
+        layers.append(None if m is None and r is None else
+                      (base[0] if m is None else float(m), base[1] if r is None else float(r)))
+    live = [l for i, l in enumerate(layers) if l is not None and scales[i] > 0]
+    if not any(abs(l[0] - base[0]) > 0.02 or abs(l[1] - base[1]) > 0.02 for l in live):
+        return None
+    w = np.clip(mask.astype(np.float32) / 255.0 * np.asarray(scales, np.float32)[None, None, :], 0.0, 1.0)
+    metal = np.full(mask.shape[:2], base[0], np.float32)
+    rough = np.full(mask.shape[:2], base[1], np.float32)
+    for i, l in enumerate(layers):
+        if l is None or scales[i] <= 0:
+            continue
+        metal += (l[0] - metal) * w[..., i]
+        rough += (l[1] - rough) * w[..., i]
+    rgba = np.empty(mask.shape[:2] + (4,), np.uint8)
+    rgba[..., 0] = 255
+    rgba[..., 1] = np.clip(rough * 255.0 + 0.5, 0, 255)
+    rgba[..., 2] = np.clip(metal * 255.0 + 0.5, 0, 255)
+    rgba[..., 3] = 255
+    sig = hashlib.sha1(repr((base, layers, [float(x) for x in scales])).encode()).hexdigest()[:8]
+    return rgba, sig
 
 
 def _is_gas_shell(tm: T.TrMaterial) -> bool:
@@ -678,11 +906,13 @@ def _is_gas_shell(tm: T.TrMaterial) -> bool:
 
 
 # Eyelid layers of the IkCharacter / SV eye shaders: (texture slot, UV param, colour layer, shadow layer, overlay key,
-# EyelidType values that enable it). Upper lid = UpperEyelidColorMap x layer 7 (shadow tint 9) through UVScaleOffset2;
-# lower lid = LowerEyelidColorMap x layer 8 (shadow 10) through UVScaleOffset4. UVScaleOffset3 (EyelidShadowMaskMap)
-# follows UVScaleOffset2 in every clip seen and is not drawn.
+# EyelidType values that enable it). Upper lid = UpperEyelidColorMap x layer 7 (shadow tint 9) through UVScaleOffset3;
+# lower lid = LowerEyelidColorMap x layer 8 (shadow 10) through UVScaleOffset4. UVScaleOffset2 never moves on its own
+# (ZA/SV/LA survey: equal to 3 in every clip that keys both), while 3 moves alone where it is the visible lid: SV
+# Sinistcha (pm1134) steps its expression atlas from the spiral row to the closed row (blink) through 3 only, ZA
+# pm0860_51 blinks its (0, 1)-scale lid edge through 3 with 2 parked at (1, 1, 0, 0).
 LID_LAYERS = (
-    ("UpperEyelidColorMap", "UVScaleOffset2", 7, 9, "lidU", ("All", "Upper")),
+    ("UpperEyelidColorMap", "UVScaleOffset3", 7, 9, "lidU", ("All", "Upper")),
     ("LowerEyelidColorMap", "UVScaleOffset4", 8, 10, "lidL", ("All", "Lower")),
 )
 
@@ -734,13 +964,21 @@ def _lid_overlay(tm: T.TrMaterial, spec, tag: str, load_tex, register, wrap_of) 
     return ov
 
 
-def lid_overlay_uvs(uv: np.ndarray, lo: dict) -> np.ndarray:
+def part_tile(uv: np.ndarray, indices: np.ndarray) -> float:
+    """Integer V tile of the vertices a part's triangles use (median, so a stray vertex does not move it)."""
+    used = np.unique(np.asarray(indices).reshape(-1))
+    return float(np.floor(np.median(uv[used, 1]))) if used.size else float(np.floor(np.median(uv[:, 1])))
+
+
+def lid_overlay_uvs(uv: np.ndarray, lo: dict, tile: float | None = None) -> np.ndarray:
     """Trinity UVs (bottom-left origin, material V tile included) -> glTF UVs of a lid overlay at its rest offset.
 
     In glTF/image space (+V down) a larger game offset samples further down the lid texture, the direction the
     viewer applies clip offsets in (verified on Falinks' blink rows), so the rest transform is
-    `v' = (v + o - c) * s + c` there too. No tile wrap after the transform: the lid relies on its clamp sampler."""
-    tile = np.floor(np.median(uv[:, 1]))
+    `v' = (v + o - c) * s + c` there too. No tile wrap after the transform: the lid relies on its clamp sampler.
+    `tile` = the part's V tile (`part_tile`); default: the median of all of `uv`."""
+    if tile is None:
+        tile = np.floor(np.median(uv[:, 1]))
     u = uv[:, 0]
     v = 1.0 - (uv[:, 1] - tile)
     (su, sv), (ou, ov), (cu, cv) = lo["scale"], lo["offset"], lo["center"]
@@ -867,10 +1105,11 @@ def _layer5_overlay(tm: T.TrMaterial, l5: dict, tag: str, register) -> Material 
     return ov
 
 
-def layer_overlay_uvs(uv: np.ndarray, lo: dict) -> np.ndarray:
+def layer_overlay_uvs(uv: np.ndarray, lo: dict, tile: float | None = None) -> np.ndarray:
     """Trinity UVs of the layer's UV set -> glTF UVs of a layer-5 overlay at its rest offset: `uv * scale - offset` with
     the V tile dropped (see _layer5), then V flipped. No wrap: the overlay relies on its sampler (clamp)."""
-    tile = np.floor(np.median(uv[:, 1]))
+    if tile is None:
+        tile = np.floor(np.median(uv[:, 1]))
     (su, sv), (ou, ov) = lo["scale"], lo["offset"]
     u = uv[:, 0] * su - ou
     v = (uv[:, 1] - tile) * sv - ov
@@ -947,6 +1186,15 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
     flags = tm.shader_flags
     uvso = tm.colors.get("UVScaleOffset", (1.0, 1.0, 0.0, 0.0))
     uvso_n = tm.colors.get("UVScaleOffsetNormal", uvso) if flags.get("EnableUVScaleOffsetNormal", "True") != "False" else uvso
+    # `UVTransformMode T` (SV/LA eyes; the flag's only value) = translate only: the scale is not applied. Every such
+    # eye with a scale != 1 (Magnemite/Lumineon (2, 4), Magikarp/Cutiefly (1, 0), LA Carnivine (1, 2)) has UVs that
+    # already cover exactly one cell of a 2x2 expression atlas (U < 0.5, V > 0.5) and clips step the offset between
+    # cells (Magnemite: U 0 -> 0.5 = pupil -> closed); applied, the scale smeared the atlas or collapsed it to one row.
+    translate_only = flags.get("UVTransformMode") == "T"
+    if translate_only:
+        uvso = (1.0, 1.0, float(uvso[2]), float(uvso[3]))
+        uvso_n = (1.0, 1.0, float(uvso_n[2]), float(uvso_n[3]))
+        mat.extras["uv_translate_only"] = True
     mat.extras["uv_scale_offset"] = tuple(float(x) for x in uvso[:4])
 
     def wrap_of(slot: str) -> tuple[str, str]:
@@ -1036,61 +1284,59 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
                 # unpainted cloth stay untinted); skin keeps layer 1 as the base under everything.
                 masked = eye or (modular and not skin)
                 scl = [tm.floats.get(f"LayerMaskScale{i}", 1.0) for i in range(1, 5)] if (eye or modular) else None
+                skin_layers: list[int] = []
                 if skin:
                     idxs[0] = SKIN_DEFAULT_TONE
+                    skin_layers = skin_zone_layers(lym, scl, idxs)
+                    for sl in skin_layers:
+                        idxs[sl - 1] = SKIN_DEFAULT_TONE
                 raw_alb = alb
-                alb, table_shadow = apply_color_table(raw_alb, lym, ct, div, idxs, masked_only=masked, scales=scl)
+                alb, table_shadow = apply_color_table(raw_alb, lym, ct, div, idxs, masked_only=masked, scales=scl, deeper=skin_layers)
                 ct_sig = (stem(ct_file), div, tuple(idxs), tuple(float(s) for s in scl) if scl else None, masked)
                 if modular and not skin:
                     mask_r = lym if lym.shape[:2] == raw_alb.shape[:2] else resize_rgba(lym, raw_alb.shape[1], raw_alb.shape[0])
                     cover = [float(((mask_r[..., c] / 255.0 * (scl[c] if scl else 1.0)) > 0.02).mean()) for c in range(4)]
                     layers = [c + 1 for c in range(4) if cover[c] > 0.01]
                     if layers:
-                        th, tw = ct.shape[:2]
-
-                        def zone_rgb(row: int, z: int) -> list[int]:
-                            tx = min(((z * 2 + 1) * tw) // (2 * max(1, div)), tw - 1)
-                            return [int(v) for v in ct[min(row, th - 1), tx, :3]]
-
-                        h, w = raw_alb.shape[:2]
-                        mask_rgb = mask_r.copy()
-                        mask_rgb[..., 3] = 255
-                        mask_alpha = np.repeat(mask_r[..., 3:4], 4, axis=2).copy()
-                        mask_alpha[..., 3] = 255
-                        mat.extras["palette"] = {
-                            "albedo": register(f"{stem(alb_file)}_raw", raw_alb, True, mat.extras["mirror"]),
-                            # RGB and alpha travel as two opaque images: browsers premultiply alpha on canvas reads and would zero RGB where A=0.
-                            "mask": register(f"{stem(lym_file)}_mask{w}x{h}", mask_rgb, False, mat.extras["mirror"]),
-                            "maskA": register(f"{stem(lym_file)}_maskA{w}x{h}", mask_alpha, False, mat.extras["mirror"]),
-                            "divide": div,
-                            "indices": idxs,
-                            "scales": [float(s) for s in scl],
-                            "maskedOnly": True,
-                            "layers": layers,
-                            "lit": [zone_rgb(th // 4, z) for z in range(div)],
-                            "shadow": [table_shadow_rgb(zone_rgb(th // 4, z), zone_rgb((3 * th) // 4, z)) for z in range(div)],
-                        }
+                        # NPC hair colour is runtime data; the part's table holds only a few authoring swatches (Sleeves
+                        # F: grey/rust/cream/navy, default cream), so every hair also offers the player's 32 hair colours.
+                        extra = _hair_colors() if tm.name.startswith("hairstyle") and layers == [1] else None
+                        layer_palette(mat, raw_alb, mask_r, ct, div, idxs, scl, layers, alb_file, lym_file, register, extra=extra)
                 if skin:
                     # Body and head share one skin palette: zone N of both tables is the same tone, so
                     # tone variants keep head and body matched. Layer 4 (lips) keeps its own zone.
                     # A face whose mask has a lipstick layer also gets a runtime lip-colour row (custom_lip_palette).
                     tones = []
                     # Keyed by mask + table too: outfits share sh_body_skin_01_alb but paint different layers (Artist's hands).
-                    skin_key = f"{stem(alb_file)}_{stem(lym_file)}_{hashlib.md5(repr((stem(ct_file), div, tuple(idxs[1:]), tuple(scl))).encode()).hexdigest()[:8]}"
+                    skin_key = f"{stem(alb_file)}_{stem(lym_file)}_{hashlib.md5(repr((stem(ct_file), div, tuple(idxs[1:]), tuple(scl), tuple(skin_layers))).encode()).hexdigest()[:8]}"
                     for z in range(1, min(div, SKIN_TONES) + 1):
-                        lit, shd = apply_color_table(raw_alb, lym, ct, div, [z] + idxs[1:], scales=scl)
+                        lit, shd = apply_color_table(raw_alb, lym, ct, div, [z] + [z if c + 1 in skin_layers else idxs[c] for c in range(1, 4)], scales=scl, deeper=skin_layers)
                         entry = (z, register(f"{skin_key}_skin{z}", lit, True), register(f"{skin_key}_skin{z}_shadow", shd, True))
                         tones.append(entry)
                     mat.extras["skin_tones"] = tones
+                    if tm.name == "body_skin":
+                        # Painted non-skin layers on the body (Occult F's leggings = layer 2): a runtime palette whose layer 1 follows the skin tone.
+                        mask_r = lym if lym.shape[:2] == raw_alb.shape[:2] else resize_rgba(lym, raw_alb.shape[1], raw_alb.shape[0])
+                        body_layers = [c + 1 for c in range(1, 4)
+                                       if scl[c] > 0 and idxs[c] != idxs[0] and float(((mask_r[..., c] / 255.0 * scl[c]) > 0.02).mean()) > 0.01]
+                        if body_layers:
+                            layer_palette(mat, raw_alb, mask_r, ct, div, idxs, scl, body_layers, alb_file, lym_file, register, skin_link=True, skin_layers=skin_layers)
                     lip = tm.name == "face_skin" and lip_layer(lym, scl, idxs)
                     beard = 0 if lip or tm.name != "face_skin" else beard_paint_layer(lym, scl, idxs)
                     if lip:
-                        custom_lip_palette(mat, raw_alb, lym, ct, div, idxs, scl, lip, alb_file, lym_file, register)
+                        custom_lip_palette(mat, raw_alb, lym, ct, div, idxs, scl, lip, alb_file, lym_file, register, skin_layers=skin_layers)
                     elif beard:
                         # A beard painted on the skin mask (Middle A M, Jogger M): "No beard" + the player's hair colours.
-                        custom_lip_palette(mat, raw_alb, lym, ct, div, idxs, scl, beard, alb_file, lym_file, register, colors=_hair_colors(), none_label="No beard")
+                        custom_lip_palette(mat, raw_alb, lym, ct, div, idxs, scl, beard, alb_file, lym_file, register, colors=_hair_colors(), none_label="No beard", skin_layers=skin_layers)
                         mat.extras["beard"] = True
         beard_neutral = None
+        if (skin_tones and flags.get("EnableEyeOptions") == "True" and lym is not None and layer_enable[1] == 0
+                and layer_colors[1] is not None and tm.floats.get("LayerMaskScale2", 1.0) > 0):
+            # Common A/B eyes ship placeholder swatches for the iris layers (the game colours them per NPC): give them a
+            # default iris so the bake is not left unpainted and custom_eye_palette can offer the player's contacts.
+            default_iris = _default_iris_colors()
+            layer_colors[1], layer_colors[2] = default_iris
+            layer_enable[1] = layer_enable[2] = 1.0
         if skin_tones and "palette" not in mat.extras and flags.get("EnableEyeOptions") == "True":
             custom_eye_palette(mat, tm, lym, alb, alb_file, lym_file, layer_colors, layer_enable, register)
         elif skin_tones and "palette" not in mat.extras and tm.name == "eyebrow" and lym is not None:
@@ -1216,7 +1462,8 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
         # the game draws over the eye with their own UVScaleOffsetN, which clips animate (Greninja's battle glare,
         # Feebas/Metagross blinks). They become overlay materials on a copy of the eye triangles (see _lid_overlay).
         made = set()
-        if overlays is not None and flags.get("EnableEyeOptions") == "True" and not eye_fix:
+        # (No EnableEyeOptions gate: only Z-A writes that flag. SV and LA lids have EyelidType + the lid textures alone.)
+        if overlays is not None and not eye_fix:
             et = flags.get("EyelidType", "None")
             for spec in LID_LAYERS:
                 if et in spec[5]:
@@ -1225,12 +1472,13 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
                         overlays.append(ov)
                         made.add(spec[4])
         # Upper eyelid (Malamar's drooping lid): EyelidShadowMaskMap is white where the lid covers the eye (a slanted
-        # edge across the disc), filled with the lid colour (layer 7). Only without an upper-lid overlay.
+        # edge across the disc), filled with the lid colour (layer 7). Only without an upper-lid overlay, and only for a
+        # mask with an edge: a flat white one (Sinistcha's 32x32 placeholder) painted the whole eye in the lid colour.
         lid_file = _tex_file(tm, "EyelidShadowMaskMap")
         c7 = tm.colors.get("BaseColorLayer7")
         if layered and baked is not alb and lid_file and c7 and flags.get("EyelidType") in ("All", "Upper") and "lidU" not in made:
             lid = load_tex(lid_file)
-            if lid is not None:
+            if lid is not None and not _is_flat(lid):
                 a = np.asarray(Image.fromarray(lid[..., 0]).resize((baked.shape[1], baked.shape[0]), Image.BILINEAR), np.float32)[..., None] / 255.0
                 col = np.clip(linear_to_srgb(np.asarray(c7[:3], np.float32)) * 255.0 + 0.5, 0, 255)
                 baked = baked.copy()
@@ -1429,9 +1677,48 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
     # Stylised-shading parameters of the game's IkCharacter shader, for the
     # viewer's "Game" shading mode. Colours are linear floats.
     f, c = tm.floats, tm.colors
+    # The scene light rig lights each CategoryLabel with its own dir_N / rim_N / GILightCommon.ColorN set
+    # (Z-A: 4 = the character's own skin, hair, eyes; 5 = clothing and accessories; 6 = Pokémon; 0 = props).
+    if "CategoryLabel" in tm.ints:
+        mat.extras["category"] = int(tm.ints["CategoryLabel"])
+    # SV/LA catchlights: `EnableHighlight` eyes without a HighlightMaskMap (~1430 SV materials, Pikachu included) carry
+    # a highlight lobe of their own (RoughnessHighlight / MetallicHighlight), a glow EmissionIntensityLayer5 x
+    # EmissionColorLayer5 and usually a per-eye PointLightIndex (Pikachu: left 1, right 2): the game reflects a
+    # dedicated eye light off the clear coat (the rig's `EyeHighlightIntensity` / `EyeHighlightMaxLuminance` scale and
+    # clamp it). The light's position is not in the files; the viewer draws it (viewer/src/scene/eyeHighlight.ts).
+    if (tm.shader_flags.get("EnableHighlight") == "True" and "RoughnessHighlight" in f
+            and not _tex_file(tm, "HighlightMaskMap") and float(f.get("EmissionIntensityLayer5", 0.0)) > 0):
+        ec = c.get("EmissionColorLayer5", (1.0, 1.0, 1.0, 1.0))
+        mat.extras["eyeHighlight"] = {
+            "roughness": float(f["RoughnessHighlight"]),
+            "metallic": float(f.get("MetallicHighlight", 0.0)),
+            "intensity": float(f["EmissionIntensityLayer5"]),
+            "color": [float(ec[0]), float(ec[1]), float(ec[2])],
+            "light": int(tm.ints.get("PointLightIndex", 0)),
+            "normalHeight": float(f.get("NormalHeight1", 1.0)),  # dome strength (Chansey 0.2: a flatter dome)
+        }
+        # The lobe forms on the clear-coat dome: NormalMap1 (`eye2_nrm`, convex), not NormalMap (`eye_nrm`, concave: the
+        # iris' sunken look). On the near-flat eye disc the mesh normal alone lit the whole eye at once.
+        n1 = _tex_file(tm, "NormalMap1")
+        if n1 and tm.shader_flags.get("EnableNormalMap1", "True") != "False":
+            img = load_tex(n1)
+            if img is not None:
+                mat.extras["highlight_normal"] = register(stem(n1), img, False, mat.extras.get("mirror", (False, False)))
+    # SV/LA `EyeClearCoat`: a glossy dielectric coat over the (often black metal) iris, on the domed NormalMap1. Without it
+    # a black eye (Chansey: every layer 0.013, iris metallic) rendered as a flat black hole: the coat's sheen and
+    # reflections are what make it read as a wet eye in game. Written as KHR_materials_clearcoat.
+    if tm.shader == "EyeClearCoat" and float(f.get("MetallicClearCoat", 0.0)) < 0.5:
+        cc = {"factor": 1.0, "roughness": float(f.get("RoughnessClearCoat", 0.2))}
+        n1 = _tex_file(tm, "NormalMap1")
+        if n1 and tm.shader_flags.get("EnableNormalMap1", "True") != "False":
+            img = load_tex(n1)
+            if img is not None:
+                cc["normal"] = register(stem(n1), img, False, mat.extras.get("mirror", (False, False)))
+                cc["normalScale"] = float(f.get("NormalHeight1", 1.0))
+        mat.extras["clearcoat"] = cc
     if not tm.shader.startswith("IkCharacter") and tm.shader not in ("NonDirectional", "Unlit", "FresnelEffect"):
         # Scarlet/Violet (SSS, EyeClearCoat, Standard, Hair...) is plain PBR: no IkCharacter toon params.
-        return _finish_pbr_material(mat, tm, load_tex, register, stem)
+        return _finish_pbr_material(mat, tm, load_tex, register, stem, lym, lym_file)
     sc = c.get("ShadowingColor", (0.6, 0.6, 0.6, 0.0))
     mat.extras["shading"] = {
         "halfLambertBias": float(f.get("HalfLambertBias", 0.5)),
@@ -1460,6 +1747,10 @@ def _convert_material(tm: T.TrMaterial, tag: str, load_tex, textures: dict[str, 
         "roughness": float(f.get("Roughness", 0.8)),
         "metallic": float(f.get("Metallic", 0.0)),
         "giGain": float(f.get("ShadowingGIGain", 0.5)),
+        # Hue-shift ramp terms (not drawn by the viewer yet; exported so a later shader needs no reconvert).
+        "hueShift": {k: float(f[k]) for k in ("HueShiftBias", "HueShiftAreaValue", "MidAreaShift", "MidAreaContrast",
+                                               "MidAreaHueOffset", "DarkAreaShift", "DarkAreaContrast", "DarkAreaHueOffset",
+                                               "SaturationPower", "BaseColorDarkness") if k in f},
     }
     spec_mask = None
     # Specular / rim masks (single-channel). Shared white/black placeholders
@@ -1557,10 +1848,12 @@ def _is_flat(rgba: np.ndarray) -> bool:
 # >= 0.15 m to vanish, the R 0.7 ring must keep its sink <= 0.07 m to stay visible: 1.0 x 0.3 m at w = 0,
 # 0.167 m at w = 0.2, 0.033 m at w = 0.4, 0 from w = 0.45. (A uniform 0.075 m buried the face; linear pulls of
 # 0.5-0.7 and a quadratic 0.8 sank the ring too and left a hood of gas over an exposed lower body.)
+# FITTED: gas-shell sink on Gastly pm0092 rest pose only (0 since gas draws under the body; comment above describes the old 1.0 pull), 2026-10-19 (engine-rules debt)
 GAS_RETRACT = 0.0
 GAS_RETRACT_END = 0.45
 # Passes of neighbour averaging over the painted weights: six coarse levels on ~1,900 vertices give the face
 # hole a stepped, jagged edge, while the game's is a clean circle.
+# FITTED: edge smoothness on Gastly only, 2026-10-19 (engine-rules debt)
 GAS_WEIGHT_SMOOTH = 3
 
 
@@ -1581,6 +1874,7 @@ def smooth_over_mesh(values: np.ndarray, indices: np.ndarray, passes: int) -> np
 # pattern rise). Not in the data: the per-clip `.tracm` files carry no smoke tracks and the SV shader binary
 # (`non_directional.bnsh`) is stripped Maxwell code, so this is estimated from 5 fps footage, where a lump
 # crosses its own width (~0.2 UV) in 2-3 s.
+# FITTED: cloud pan speed from 5 fps Gastly footage, 2026-10-19 (engine-rules debt)
 SMOKE_DRIFT = (0.01, 0.07)
 
 
@@ -1640,6 +1934,7 @@ def resize_rgba(rgba: np.ndarray, w: int, h: int) -> np.ndarray:
     return out
 
 
+# FITTED: lens clearing on one face (df_face0000 glasses vs samples/nu_glasses.png); MIN/MAX/CLEAR_ALPHA, 2026-10-19 (engine-rules debt)
 LENS_NEAR_OPAQUE_MIN = 0.85  # a Blend albedo whose lowest alpha is at least this has lenses authored ~0.9 (df_face0000 glasses)
 LENS_NEAR_OPAQUE_MAX = 0.97  # texels below this are lens; frames are 1.0
 LENS_CLEAR_ALPHA = 0.18      # in-game look (samples/nu_glasses.png): nearly clear, like the 0.1 eyewear atlas
@@ -1707,6 +2002,7 @@ def bake_layers(
     return rgba
 
 
+# FITTED: colour-table shadow-cell repair on Schoolkids F bu_face0003 brows; also the 0.78 literals, 2026-10-19 (engine-rules debt)
 TABLE_SHADOW_MAX = 0.95  # shadow cell luminance above this x the lit cell's = not a real shadow tone
 TABLE_SHADOW_DARKEN = 0.78  # ... rescaled to this x the lit luminance (same factor as darken_saturate)
 
@@ -1735,7 +2031,8 @@ def table_shadow_rgb(lit: list[int], shadow: list[int]) -> list[int]:
     return [int(v) for v in np.clip(out * 255.0 + 0.5, 0, 255).astype(np.uint8)]
 
 
-def apply_color_table(albedo: np.ndarray, mask: np.ndarray, table: np.ndarray, divide: int, indices: list[int] | None = None, masked_only: bool = False, scales: list[float] | None = None) -> tuple[np.ndarray, np.ndarray]:
+def apply_color_table(albedo: np.ndarray, mask: np.ndarray, table: np.ndarray, divide: int, indices: list[int] | None = None, masked_only: bool = False, scales: list[float] | None = None,
+                      deeper: tuple[int, ...] | list[int] = ()) -> tuple[np.ndarray, np.ndarray]:
     """Skin tone from a face ColorTableMap. Returns (lit, shadow) RGBA images.
 
     The table is `divide` zones wide; the top half holds each zone's lit tint
@@ -1749,6 +2046,9 @@ def apply_color_table(albedo: np.ndarray, mask: np.ndarray, table: np.ndarray, d
 
     `masked_only` (eyes): texels outside every layer stay untinted, so the sclera
     stays white and only the masked iris takes its zone (layer 1 = mask R too).
+
+    `deeper` (1-based layers, `skin_zone_layers`): wrinkle strokes drawn one skin shade deeper than their zone t, i.e. zone t-1,
+    and for t = 1 (the deepest) zone 1 x zone 1 / zone 2 (`deeper_skin`).
     """
     h, w = albedo.shape[:2]
     if mask.shape[:2] != (h, w):
@@ -1779,12 +2079,24 @@ def apply_color_table(albedo: np.ndarray, mask: np.ndarray, table: np.ndarray, d
             tint = np.broadcast_to(cell(idx[0]), a_lin.shape).copy()
             first = 1
         for c in range(first, 4):
-            tint += (cell(idx[c])[None, None, :] - tint) * m[..., c : c + 1]
+            col = deeper_skin(cell, idx[c]) if (c + 1) in deeper else cell(idx[c])
+            tint += (col[None, None, :] - tint) * m[..., c : c + 1]
         img = np.empty_like(albedo)
         img[..., :3] = np.clip(linear_to_srgb(a_lin * tint) * 255.0 + 0.5, 0, 255).astype(np.uint8)
         img[..., 3] = albedo[..., 3]
         out.append(img)
     return out[0], out[1]
+
+
+# FITTED(za): wrinkle strokes drawn one skin zone deeper than the selected tone (the colour-table blend makes a same-zone
+# layer invisible; in-game Rust Grunt M furrow is darker than his skin) on tr0030/tr0031, Jub F, Ga M B, 2026-10-23
+def deeper_skin(cell, zone: int) -> np.ndarray:
+    """Linear colour one skin shade deeper than `zone` (zones 1..SKIN_TONES run deep..pale): zone - 1, and below zone 1 the
+    same step again (zone 1 x zone 1 / zone 2). Wrinkle strokes authored in the skin's own zone (Rust Grunt M/F brow furrow,
+    Jub F, Ga M B) show darker than the skin in game (`samples/za_rust_syndicate_grunt_vs.png`); with the layer covering the
+    skin they would otherwise be invisible. User decision 2026-10-23: one shade deeper than the selected tone, at every tone."""
+    z = max(zone - 1, 1)
+    return cell(z) * cell(z) / np.maximum(cell(z + 1), 1e-4) if zone <= 1 else cell(z)
 
 
 def tint_linear(rgba: np.ndarray, tint: tuple[float, float, float]) -> np.ndarray:
@@ -1855,6 +2167,63 @@ def paint_eye_regions(alb: np.ndarray) -> tuple[np.ndarray, np.ndarray, list[np.
     return out, mask, own
 
 
+def _default_iris_colors(label: str = "brown") -> tuple[tuple, tuple]:
+    """Linear (layer 2, layer 3) colours of the player's eye contact whose label contains `label`."""
+    global _EYE_COLORS
+    if _EYE_COLORS is None:
+        with open(os.path.join(os.path.dirname(__file__), "eye_colors.json"), encoding="utf-8") as f:
+            _EYE_COLORS = json.load(f)
+    entry = next((e for e in _EYE_COLORS if label in e["label"]), _EYE_COLORS[0])
+    return tuple(tuple(srgb_to_linear(np.asarray(c, np.float32) / 255.0).tolist()) for c in entry["lit"][:2])
+
+
+def _palette_planes(alb: np.ndarray, lym: np.ndarray, alb_key: str) -> tuple[np.ndarray, np.ndarray, str]:
+    """Albedo + layer mask at a common size for a runtime palette, the larger of the two like `bake_layers`. Shrinking
+    the mask to a placeholder albedo (the Common faces' brows: 32x32 white vs a 32x64 brow/lash mask) blurred the
+    brow/lash boundary, so a recolour turned the left lash grey. Returns (albedo, mask, albedo texture key)."""
+    h, w = max(alb.shape[0], lym.shape[0]), max(alb.shape[1], lym.shape[1])
+    if alb.shape[:2] != (h, w):
+        alb = resize_rgba(alb, w, h)
+        alb_key = f"{alb_key}{w}x{h}"
+    return alb, (lym if lym.shape[:2] == (h, w) else resize_rgba(lym, w, h)), alb_key
+
+
+def _single_layer_eye_palette(mat: Material, tm: T.TrMaterial, own: list, mask: np.ndarray, alb: np.ndarray, alb_file: str,
+                              lym_file: str, scl: list[float], register, alb_key: str | None = None) -> None:
+    """Adult M Common A-F (`dm_face1000..1005`): the mask's R channel is the whole iris (the pupil is darker in the albedo)
+    and layer 2 (white, a tiny G highlight) is not an iris tint. One swatch row recolours layer 1 with each player contact's
+    iris colour. Zones: 1 = layer 2 as authored (not offered), 2 = the authored iris, then one zone per contact."""
+    s8 = lambda c: [int(v) for v in np.clip(linear_to_srgb(np.asarray(c[:3], np.float32)) * 255.0 + 0.5, 0, 255).astype(np.uint8)]
+    shd_of = lambda i: tm.colors.get(f"ShadowingColorLayer{i + 1}", own[i])
+    lit = [s8(own[1]), s8(own[0])]
+    shadow = [table_shadow_rgb(lit[1 - j], s8(shd_of(1 - j))) for j in range(2)]
+    for e in _EYE_COLORS:
+        lit.append(e["lit"][0])
+        shadow.append(e["shadow"][0])
+    stem = lambda f: os.path.splitext(os.path.basename(f))[0]
+    h, w = alb.shape[:2]
+    mir = mat.extras["mirror"]
+    mask_rgb = mask.copy()
+    mask_rgb[..., 3] = 255
+    mask_alpha = np.repeat(mask[..., 3:4], 4, axis=2).copy()
+    mask_alpha[..., 3] = 255
+    key = stem(lym_file)
+    mat.extras["palette"] = {
+        "albedo": register(alb_key or f"{stem(alb_file)}_raw", alb, True, mir),
+        "mask": register(f"{key}_mask{w}x{h}", mask_rgb, False, mir),
+        "maskA": register(f"{key}_maskA{w}x{h}", mask_alpha, False, mir),
+        "divide": len(lit),
+        "indices": [2, 1, 1, 1],
+        "scales": [scl[0], scl[1] if scl[1] > 0 else 0.0, 0.0, 0.0],
+        "maskedOnly": True,
+        "layers": [1],
+        "lit": lit,
+        "shadow": shadow,
+        "custom": True,
+        "zoneLabels": ["Original base", "Original"] + [e["label"] for e in _EYE_COLORS],
+    }
+
+
 def custom_eye_palette(mat: Material, tm: T.TrMaterial, lym: np.ndarray | None, alb: np.ndarray, alb_file: str, lym_file: str,
                        layer_colors: list, layer_enable: list[float], register) -> None:
     """Runtime-recolourable iris for modular eyes without a ColorTableMap (Common faces `<b>_face1000..1009`, painted eyes).
@@ -1887,14 +2256,19 @@ def custom_eye_palette(mat: Material, tm: T.TrMaterial, lym: np.ndarray | None, 
     else:
         own = [layer_colors[i] for i in range(3)]
         # Layer 2 must be an iris tint: a white layer 2 (Common A's) is a different mask layout, left alone.
+        if own[0] is not None and own[1] is not None and min(own[1]) >= 0.8 and scl[0] > 0 and scl[2] <= 0:
+            alb_p, mask, alb_key = _palette_planes(alb, lym, f"{stem(alb_file)}_raw")
+            _single_layer_eye_palette(mat, tm, own, mask, alb_p, alb_file, lym_file, scl, register, alb_key)
+            return
         if own[0] is None or own[1] is None or own[2] is None or min(own[1]) >= 0.8:
             return
         shd_of = lambda i: tm.colors.get(f"ShadowingColorLayer{i + 1}", own[i])
         lit = [s8(own[0]), s8(own[1]), s8(own[2])]
         shadow = [table_shadow_rgb(lit[i], s8(shd_of(i))) for i in range(3)]
-        mask = lym if lym.shape[:2] == (h, w) else resize_rgba(lym, w, h)
+        alb, mask, alb_key = _palette_planes(alb, lym, f"{stem(alb_file)}_raw")
+        h, w = alb.shape[:2]
         key = stem(lym_file)
-        albedo_key = register(f"{stem(alb_file)}_raw", alb, True, mir)
+        albedo_key = register(alb_key, alb, True, mir)
     # Layer 3 is the lighter inner iris on most faces; where it is darker (a pupil-like ring) it keeps its colour.
     inner_is_iris = sum(lit[2]) >= 0.9 * sum(lit[1])
     for e in _EYE_COLORS:
@@ -1942,15 +2316,15 @@ def custom_brow_palette(mat: Material, tm: T.TrMaterial, lym: np.ndarray, alb: n
         lit += e["lit"]
         shadow += e["shadow"]
     stem = lambda f: os.path.splitext(os.path.basename(f))[0]
+    alb, mask, alb_key = _palette_planes(alb, lym, f"{stem(alb_file)}_raw")
     h, w = alb.shape[:2]
-    mask = lym if lym.shape[:2] == (h, w) else resize_rgba(lym, w, h)
     mask_rgb = mask.copy()
     mask_rgb[..., 3] = 255
     mask_alpha = np.repeat(mask[..., 3:4], 4, axis=2).copy()
     mask_alpha[..., 3] = 255
     mir = mat.extras["mirror"]
     mat.extras["palette"] = {
-        "albedo": register(f"{stem(alb_file)}_raw", alb, True, mir),
+        "albedo": register(alb_key, alb, True, mir),
         "mask": register(f"{stem(lym_file)}_mask{w}x{h}", mask_rgb, False, mir),
         "maskA": register(f"{stem(lym_file)}_maskA{w}x{h}", mask_alpha, False, mir),
         "divide": len(lit),
@@ -2012,6 +2386,7 @@ def custom_hair_palette(mat: Material, alb: np.ndarray, alb_file: str, register,
     return neutral
 
 
+# FITTED: stand-in beard colour (per-NPC runtime data not in the rip), 2026-10-19 (engine-rules debt)
 BEARD_DEFAULT_ZONE = 6  # "Player 04 - dark brown" of the hair table: the stand-in colour for beards the game tints at runtime
 BEARD_MESH = ("beard", "face_hair")
 
@@ -2043,6 +2418,18 @@ def lip_layer(lym: np.ndarray, scl: list[float], idxs: list[int]) -> int:
     return 0
 
 
+def skin_zone_layers(lym: np.ndarray, scl: list[float], idxs: list[int]) -> list[int]:
+    """1-based mask layers (2..4) of a skin material that point at one of the skin zones (1..SKIN_TONES) of the shared table.
+    These are wrinkle strokes authored in the skin's own zone (Rust Grunt M/F brow furrow, Jub F nose bridge and mouth
+    corners, Ga M B). They follow the selected tone like layer 1, drawn one shade deeper (`deeper_skin`): the game shows the
+    Grunt's furrow darker than his skin; left at the authored zone they became pale lines at deeper tones. No coverage
+    floor: Grunt F's strokes cover 0.03% of the texture, and a layer that paints nothing looks the same whatever zone it follows.
+    The lip and beard layers keep their own zones (their palette rows offer the choice)."""
+    own = {lip_layer(lym, scl, idxs), beard_paint_layer(lym, scl, idxs)}
+    return [c + 1 for c in range(1, 4)
+            if (c + 1) not in own and scl[c] > 0 and 1 <= idxs[c] <= SKIN_TONES and bool((lym[..., c] > 0).any())]
+
+
 _LIP_COLORS: list[dict] | None = None
 
 
@@ -2067,8 +2454,53 @@ def _hair_colors() -> list[dict]:
     return _BROW_COLORS
 
 
+def layer_palette(mat: Material, raw_alb: np.ndarray, mask_r: np.ndarray, ct: np.ndarray, div: int, idxs: list[int], scl: list[float],
+                  layers: list[int], alb_file: str, lym_file: str, register, skin_link: bool = False, extra: list[dict] | None = None,
+                  skin_layers: list[int] | None = None) -> None:
+    """`extras.palette` for a colour-table material: raw albedo + layer mask (the viewer re-bakes it per zone choice) and the table's lit/shadow zones.
+    `layers` = the 1-based mask layers offered as swatch rows; `skin_link` = layer 1 is the skin tone (driven by the skin variant group);
+    `skin_layers` = further layers that point at a skin zone and follow the tone too (`skin_zone_layers`).
+    `extra` = colours appended after the table's own zones (`own` = how many zones the table has; labels in `zoneLabels`)."""
+    stem = lambda f: os.path.splitext(os.path.basename(f))[0]
+    th, tw = ct.shape[:2]
+
+    def zone_rgb(row: int, z: int) -> list[int]:
+        tx = min(((z * 2 + 1) * tw) // (2 * max(1, div)), tw - 1)
+        return [int(v) for v in ct[min(row, th - 1), tx, :3]]
+
+    h, w = raw_alb.shape[:2]
+    mask_rgb = mask_r.copy()
+    mask_rgb[..., 3] = 255
+    mask_alpha = np.repeat(mask_r[..., 3:4], 4, axis=2).copy()
+    mask_alpha[..., 3] = 255
+    lit = [zone_rgb(th // 4, z) for z in range(div)]
+    shadow = [table_shadow_rgb(zone_rgb(th // 4, z), zone_rgb((3 * th) // 4, z)) for z in range(div)]
+    labels = None
+    if extra:
+        labels = [f"Palette {z + 1}" for z in range(div)] + [e["label"] for e in extra]
+        lit += [e["lit"][0] for e in extra]
+        shadow += [e["shadow"][0] for e in extra]
+    mat.extras["palette"] = {
+        "albedo": register(f"{stem(alb_file)}_raw", raw_alb, True, mat.extras["mirror"]),
+        # RGB and alpha travel as two opaque images: browsers premultiply alpha on canvas reads and would zero RGB where A=0.
+        "mask": register(f"{stem(lym_file)}_mask{w}x{h}", mask_rgb, False, mat.extras["mirror"]),
+        "maskA": register(f"{stem(lym_file)}_maskA{w}x{h}", mask_alpha, False, mat.extras["mirror"]),
+        "divide": len(lit),
+        "indices": list(idxs),
+        "scales": [float(s) for s in scl],
+        "maskedOnly": True,
+        "layers": layers,
+        "lit": lit,
+        "shadow": shadow,
+        **({"skinLink": True} if skin_link else {}),
+        **({"skinLayers": list(skin_layers)} if skin_link and skin_layers else {}),
+        **({"own": div, "zoneLabels": labels} if labels else {}),
+    }
+
+
 def custom_lip_palette(mat: Material, raw_alb: np.ndarray, lym: np.ndarray, ct: np.ndarray, div: int, idxs: list[int], scl: list[float],
-                       layer: int, alb_file: str, lym_file: str, register, colors: list[dict] | None = None, none_label: str = "No lipstick") -> None:
+                       layer: int, alb_file: str, lym_file: str, register, colors: list[dict] | None = None, none_label: str = "No lipstick",
+                       skin_layers: list[int] | None = None) -> None:
     """Runtime lip colour for a face whose skin mask paints lipstick on `layer` (the player's lip colours,
     `lip_colors.json` = zones 5-13 of p0_face_pallete01). The palette bakes the whole face (skin layer 1 + the other layers
     with their authored zones), so the viewer drives zone `indices[0]` from the selected skin tone (`skinLink`).
@@ -2109,6 +2541,7 @@ def custom_lip_palette(mat: Material, raw_alb: np.ndarray, lym: np.ndarray, ct: 
         "shadow": shadow,
         "custom": True,
         "skinLink": True,
+        **({"skinLayers": list(skin_layers)} if skin_layers else {}),
         "offer": [0, own] + list(range(div + 1, div + 1 + len(colors))),
         "noneLabel": none_label,
         "zoneLabels": [f"Original (palette {z})" if z == own else f"Palette {z}" for z in range(1, div + 1)] + [e["label"] for e in colors],
@@ -2168,6 +2601,7 @@ def decimate(frames: np.ndarray, values: np.ndarray, tol: float) -> tuple[np.nda
     return frames[k], values[k]
 
 
+# FITTED: per-species emission rule, Inkay/Malamar only; opposite reading of intensity-0 emission vs MODE_SWITCH, 2026-10-19 (engine-rules debt)
 SPOT_GLOW_SPECIES = ("pm0726_", "pm0727_")
 
 
@@ -2214,7 +2648,7 @@ def material_uv_offsets(tracks: list[T.MaterialParamTrack], materials: dict, fps
     """
     out: dict[str, tuple[np.ndarray, np.ndarray]] = {}
     # A material follows the track of `uv_track_src` (default: itself) / `uv_track_param`: lid overlays
-    # (`r_eye_a~lidU`) follow their eye's UVScaleOffset2/4.
+    # (`r_eye_a~lidU`) follow their eye's UVScaleOffset3/4.
     by_src: dict[tuple[str, str], list[str]] = {}
     for k, m in materials.items():
         src = m.extras.get("uv_track_src", k.split("@")[0])
@@ -2233,8 +2667,8 @@ def _uv_track_to(out: dict, mt: T.MaterialParamTrack, name: str, targets: list[s
         return  # LOD copies and shared materials carry the same track
     rest = [float(x) for x in m.extras.get("uv_scale_offset", (1.0, 1.0, 0.0, 0.0))]
     mir = m.extras.get("mirror", (False, False))
-    if any(len(mt.channels[k][1]) and float(np.abs(mt.channels[k][1] - rest[k]).max()) > 1e-4 for k in (0, 1)):
-        return
+    if not m.extras.get("uv_translate_only") and any(len(mt.channels[k][1]) and float(np.abs(mt.channels[k][1] - rest[k]).max()) > 1e-4 for k in (0, 1)):
+        return  # (translate-only materials ignore the scale channels, see UVTransformMode in _convert_material)
     frames = np.unique(np.concatenate([mt.channels[2][0], mt.channels[3][0], np.zeros(1, np.float32)]))
     du = _held(*mt.channels[2], frames, rest[2]) - rest[2]
     dv = _held(*mt.channels[3], frames, rest[3]) - rest[3]
@@ -2289,9 +2723,13 @@ def split_scale_joints(skeleton: Skeleton, clips: list[Clip]) -> list[str]:
     over its skin weights and its scale; the bone itself stays unscaled, and its children's translations are
     multiplied by the game's scale (T(ps * t), the compensate rule). Clips that only scale the bone uniformly
     (hide at 0, grow) keep that scale on the bone, so glTF inheritance still hides the chain as before.
+    Children with segment scale compensate OFF (`Joint.scale_compensate`, Trinity `*_segoff`) do inherit the scale:
+    they are re-parented under the leaf with their raw offsets, so glTF inheritance scales both their offset and their
+    mesh as the game does (treated as compensating, SV trainers' irises/pupils were squashed 20-33% under `eyescale`).
     Returns the split bone names."""
     joints = skeleton.joints
     kids: dict[int, list[int]] = {}
+    inherit: dict[int, list[int]] = {}  # scale_compensate off: follow the leaf
     for i, j in enumerate(joints):
         if j.parent >= 0:
             kids.setdefault(j.parent, []).append(i)
@@ -2304,6 +2742,9 @@ def split_scale_joints(skeleton: Skeleton, clips: list[Clip]) -> list[str]:
     split |= {i for i in kids if _non_uniform(joints[i].scale)}
     if not split:
         return []
+    for i in split:
+        inherit[i] = [k for k in kids[i] if not joints[k].scale_compensate]
+        kids[i] = [k for k in kids[i] if joints[k].scale_compensate]
     rest_scale = {i: np.asarray(joints[i].scale, np.float64) for i in split}
     rest_trans = {k: np.asarray(joints[k].translation, np.float64) for i in split for k in kids[i]}
     proxy: dict[int, int] = {}
@@ -2313,6 +2754,8 @@ def split_scale_joints(skeleton: Skeleton, clips: list[Clip]) -> list[str]:
                             inverse_bind=b.inverse_bind, skinning=b.skinning))
         proxy[i] = len(joints) - 1
         b.scale = (1.0, 1.0, 1.0)
+        for k in inherit[i]:
+            joints[k].parent = proxy[i]
         for k in kids[i]:
             joints[k].translation = tuple(float(x) for x in rest_trans[k] * rest_scale[i])
     skeleton.palette = [proxy.get(p, p) for p in skeleton.palette]
@@ -2332,8 +2775,11 @@ def split_scale_joints(skeleton: Skeleton, clips: list[Clip]) -> list[str]:
             else:
                 # Every clip keys both, so switching clips never leaves a stale scale behind.
                 out.append(Track(b.name, "scale", t0, np.ones((1, 3), np.float32)))
-                out.append(Track(f"{b.name}_scale", "scale", st.times, st.values) if st is not None
-                           else Track(f"{b.name}_scale", "scale", t0, rest_scale[i][None].astype(np.float32)))
+                if st is None:
+                    # No scale key this clip: the rest scale holds, and the children's offsets must still be scaled by
+                    # it (writing the raw offsets pulled SV trainers' eyeballs together under `eyescale` (1.6, 1, 1)).
+                    st = Track(b.name, "scale", t0, rest_scale[i][None].astype(np.float32))
+                out.append(Track(f"{b.name}_scale", "scale", st.times, st.values))
                 ps_tr = st
             for k in kids[i]:
                 ct = tr.get((joints[k].name, "translation"))
@@ -2354,7 +2800,13 @@ def split_scale_joints(skeleton: Skeleton, clips: list[Clip]) -> list[str]:
 def _convert_clip(tr: T.Tranm, af: AnimationFile, tol: float = 1e-3, shear_bones: frozenset[str] | None = None) -> Clip:
     fps = float(tr.frame_rate)
     tracks: list[Track] = []
+    seen: set[str] = set()
     for bt in tr.tracks:
+        # Some source clips list the whole track table twice (SV `tr0510_00_01320_ballthrow01`: 59 identical
+        # repeats; LA pm0493): glTF forbids two channels on one target, keep the first.
+        if bt.bone in seen:
+            continue
+        seen.add(bt.bone)
         if bt.translation is not None:
             f, v = decimate(*_strict(bt.translation), tol)
             tracks.append(Track(bt.bone, "translation", f.astype(np.float32) / fps, v))

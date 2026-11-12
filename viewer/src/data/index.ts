@@ -4,6 +4,8 @@ import type { GameIndex, GameSummary, RefIndex } from '../types';
 const cache = new Map<string, Promise<GameIndex>>();
 const BASE = import.meta.env.BASE_URL;
 const GLB_BASE = (import.meta.env.VITE_GLB_BASE as string | undefined)?.replace(/\/$/, '');
+/** The public site (tools/deploy_pages.py sets VITE_GLB_BASE): one game only, no game switching, no GLB export (user decisions). */
+export const PUBLIC_BUILD = !!GLB_BASE;
 
 /** URL of a file under out/ (`za/<id>/manifest.json`). GLBs come from VITE_GLB_BASE (GitHub release assets) when set. */
 export function modelAsset(rel: string): string {

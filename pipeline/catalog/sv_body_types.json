@@ -1,0 +1,6040 @@
+{
+ "tables": {
+  "a": {
+   "ground": [
+    {
+     "bones": [
+      "foot_base"
+     ],
+     "name": "foot"
+    }
+   ],
+   "scalers": [
+    {
+     "bones": [
+      "hips"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      1.387,
+      1.481
+     ],
+     "name": "mesh_scaler_hips"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_01_roll"
+     ],
+     "flags": 20486,
+     "max": [
+      0.0,
+      1.174,
+      1.361
+     ],
+     "name": "mesh_scaler_left_arm_01"
+    },
+    {
+     "bones": [
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_roll"
+     ],
+     "flags": 26630,
+     "max": [
+      0.0,
+      1.361,
+      1.361
+     ],
+     "name": "mesh_scaler_left_arm_02"
+    },
+    {
+     "bones": [
+      "left_arm_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      1.361,
+      1.361,
+      0.0
+     ],
+     "name": "mesh_scaler_left_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.015,
+      0.0
+     ],
+     "name": "mesh_scaler_left_foot"
+    },
+    {
+     "bones": [
+      "left_leg_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.292,
+      1.292
+     ],
+     "name": "mesh_scaler_left_leg_01"
+    },
+    {
+     "bones": [
+      "left_leg_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.292,
+      1.292
+     ],
+     "name": "mesh_scaler_left_leg_02"
+    },
+    {
+     "bones": [
+      "left_leg_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      1.292,
+      1.292,
+      0.0
+     ],
+     "name": "mesh_scaler_left_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      0.664,
+      0.0,
+      1.255
+     ],
+     "name": "mesh_scaler_left_shoulder"
+    },
+    {
+     "bones": [
+      "neck"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      1.682,
+      1.682
+     ],
+     "name": "mesh_scaler_neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_01_roll"
+     ],
+     "flags": 21510,
+     "max": [
+      0.0,
+      1.174,
+      1.361
+     ],
+     "name": "mesh_scaler_right_arm_01"
+    },
+    {
+     "bones": [
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_roll"
+     ],
+     "flags": 27654,
+     "max": [
+      0.0,
+      1.361,
+      1.361
+     ],
+     "name": "mesh_scaler_right_arm_02"
+    },
+    {
+     "bones": [
+      "right_arm_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      1.361,
+      1.361,
+      0.0
+     ],
+     "name": "mesh_scaler_right_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.015,
+      0.0
+     ],
+     "name": "mesh_scaler_right_foot"
+    },
+    {
+     "bones": [
+      "right_leg_01"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      1.292,
+      1.292
+     ],
+     "name": "mesh_scaler_right_leg_01"
+    },
+    {
+     "bones": [
+      "right_leg_02"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      1.292,
+      1.292
+     ],
+     "name": "mesh_scaler_right_leg_02"
+    },
+    {
+     "bones": [
+      "right_leg_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      1.292,
+      1.292,
+      0.0
+     ],
+     "name": "mesh_scaler_right_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      0.664,
+      0.0,
+      1.255
+     ],
+     "name": "mesh_scaler_right_shoulder"
+    },
+    {
+     "bones": [
+      "spine_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.24,
+      1.495
+     ],
+     "name": "mesh_scaler_spine_01"
+    },
+    {
+     "bones": [
+      "spine_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.878,
+      0.929
+     ],
+     "name": "mesh_scaler_spine_02"
+    },
+    {
+     "bones": [
+      "spine_03"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.784,
+      0.986
+     ],
+     "name": "mesh_scaler_spine_03"
+    }
+   ],
+   "sliders": [
+    {
+     "bones": [
+      "left_foot",
+      "left_toe",
+      "right_foot",
+      "right_toe"
+     ],
+     "flags": 0,
+     "max": 0.575,
+     "name": "foot"
+    },
+    {
+     "bones": [
+      "head"
+     ],
+     "flags": 8193,
+     "max": 0.814,
+     "name": "head"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_sub",
+      "left_arm_02_roll",
+      "left_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 0.45,
+     "name": "left_arm"
+    },
+    {
+     "bones": [
+      "left_arm_width"
+     ],
+     "flags": 0,
+     "max": 0.617,
+     "name": "left_arm_width"
+    },
+    {
+     "bones": [
+      "left_hand",
+      "left_thumb_01",
+      "left_thumb_02",
+      "left_thumb_03",
+      "left_index_01",
+      "left_index_02",
+      "left_index_03",
+      "left_middle_01",
+      "left_middle_02",
+      "left_middle_03",
+      "left_ring_01",
+      "left_ring_02",
+      "left_ring_03",
+      "left_pinky_01",
+      "left_pinky_02",
+      "left_pinky_03",
+      "left_attach_on"
+     ],
+     "flags": 0,
+     "max": 0.67,
+     "name": "left_hand"
+    },
+    {
+     "bones": [
+      "leg_width"
+     ],
+     "flags": 0,
+     "max": 1.43,
+     "name": "leg_width"
+    },
+    {
+     "bones": [
+      "foot_base",
+      "waist",
+      "hips",
+      "leg_width",
+      "left_leg_01",
+      "left_leg_02",
+      "left_leg_02_sub",
+      "right_leg_01",
+      "right_leg_02",
+      "right_leg_02_sub"
+     ],
+     "flags": 0,
+     "max": 0.438,
+     "name": "lower_body"
+    },
+    {
+     "bones": [
+      "neck",
+      "look"
+     ],
+     "flags": 0,
+     "max": 0.41,
+     "name": "neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_sub",
+      "right_arm_02_roll",
+      "right_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 0.45,
+     "name": "right_arm"
+    },
+    {
+     "bones": [
+      "right_arm_width"
+     ],
+     "flags": 0,
+     "max": 0.617,
+     "name": "right_arm_width"
+    },
+    {
+     "bones": [
+      "right_hand",
+      "right_thumb_01",
+      "right_thumb_02",
+      "right_thumb_03",
+      "right_index_01",
+      "right_index_02",
+      "right_index_03",
+      "right_middle_01",
+      "right_middle_02",
+      "right_middle_03",
+      "right_ring_01",
+      "right_ring_02",
+      "right_ring_03",
+      "right_pinky_01",
+      "right_pinky_02",
+      "right_pinky_03",
+      "right_attach_on"
+     ],
+     "flags": 0,
+     "max": 0.67,
+     "name": "right_hand"
+    },
+    {
+     "bones": [
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "left_shoulder",
+      "right_shoulder"
+     ],
+     "flags": 0,
+     "max": 0.65,
+     "name": "upper_body"
+    }
+   ]
+  },
+  "df": {
+   "ground": [
+    {
+     "bones": [
+      "foot_base"
+     ],
+     "name": "foot"
+    }
+   ],
+   "scalers": [
+    {
+     "bones": [
+      "hips"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      0.83,
+      0.92
+     ],
+     "name": "mesh_scaler_hips"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_01_roll"
+     ],
+     "flags": 20486,
+     "max": [
+      0.0,
+      0.746,
+      0.989
+     ],
+     "name": "mesh_scaler_left_arm_01"
+    },
+    {
+     "bones": [
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_roll"
+     ],
+     "flags": 26630,
+     "max": [
+      0.0,
+      0.885,
+      0.814
+     ],
+     "name": "mesh_scaler_left_arm_02"
+    },
+    {
+     "bones": [
+      "left_arm_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      0.814,
+      0.885,
+      0.0
+     ],
+     "name": "mesh_scaler_left_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_left_foot"
+    },
+    {
+     "bones": [
+      "left_leg_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.911,
+      0.887
+     ],
+     "name": "mesh_scaler_left_leg_01"
+    },
+    {
+     "bones": [
+      "left_leg_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.841,
+      0.912
+     ],
+     "name": "mesh_scaler_left_leg_02"
+    },
+    {
+     "bones": [
+      "left_leg_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      0.912,
+      0.841,
+      0.0
+     ],
+     "name": "mesh_scaler_left_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      0.64,
+      0.0,
+      0.644
+     ],
+     "name": "mesh_scaler_left_shoulder"
+    },
+    {
+     "bones": [
+      "neck"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      0.83,
+      0.761
+     ],
+     "name": "mesh_scaler_neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_01_roll"
+     ],
+     "flags": 21510,
+     "max": [
+      0.0,
+      0.746,
+      0.989
+     ],
+     "name": "mesh_scaler_right_arm_01"
+    },
+    {
+     "bones": [
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_roll"
+     ],
+     "flags": 27654,
+     "max": [
+      0.0,
+      0.885,
+      0.814
+     ],
+     "name": "mesh_scaler_right_arm_02"
+    },
+    {
+     "bones": [
+      "right_arm_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      0.814,
+      0.885,
+      0.0
+     ],
+     "name": "mesh_scaler_right_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_right_foot"
+    },
+    {
+     "bones": [
+      "right_leg_01"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      0.911,
+      0.887
+     ],
+     "name": "mesh_scaler_right_leg_01"
+    },
+    {
+     "bones": [
+      "right_leg_02"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      0.841,
+      0.912
+     ],
+     "name": "mesh_scaler_right_leg_02"
+    },
+    {
+     "bones": [
+      "right_leg_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      0.912,
+      0.841,
+      0.0
+     ],
+     "name": "mesh_scaler_right_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      0.64,
+      0.0,
+      0.644
+     ],
+     "name": "mesh_scaler_right_shoulder"
+    },
+    {
+     "bones": [
+      "spine_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.773,
+      0.881
+     ],
+     "name": "mesh_scaler_spine_01"
+    },
+    {
+     "bones": [
+      "spine_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.881,
+      0.833
+     ],
+     "name": "mesh_scaler_spine_02"
+    },
+    {
+     "bones": [
+      "spine_03"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.91,
+      1.034
+     ],
+     "name": "mesh_scaler_spine_03"
+    }
+   ],
+   "sliders": [
+    {
+     "bones": [
+      "left_foot",
+      "left_toe",
+      "right_foot",
+      "right_toe"
+     ],
+     "flags": 0,
+     "max": 0.908,
+     "name": "foot"
+    },
+    {
+     "bones": [
+      "head"
+     ],
+     "flags": 8193,
+     "max": 0.95,
+     "name": "head"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_sub",
+      "left_arm_02_roll",
+      "left_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 0.973,
+     "name": "left_arm"
+    },
+    {
+     "bones": [
+      "left_arm_width"
+     ],
+     "flags": 0,
+     "max": 0.815,
+     "name": "left_arm_width"
+    },
+    {
+     "bones": [
+      "left_hand",
+      "left_thumb_01",
+      "left_thumb_02",
+      "left_thumb_03",
+      "left_index_01",
+      "left_index_02",
+      "left_index_03",
+      "left_middle_01",
+      "left_middle_02",
+      "left_middle_03",
+      "left_ring_01",
+      "left_ring_02",
+      "left_ring_03",
+      "left_pinky_01",
+      "left_pinky_02",
+      "left_pinky_03",
+      "left_attach_on"
+     ],
+     "flags": 0,
+     "max": 0.966,
+     "name": "left_hand"
+    },
+    {
+     "bones": [
+      "leg_width"
+     ],
+     "flags": 0,
+     "max": 0.94,
+     "name": "leg_width"
+    },
+    {
+     "bones": [
+      "foot_base",
+      "waist",
+      "hips",
+      "leg_width",
+      "left_leg_01",
+      "left_leg_02",
+      "left_leg_02_sub",
+      "right_leg_01",
+      "right_leg_02",
+      "right_leg_02_sub"
+     ],
+     "flags": 0,
+     "max": 1.026,
+     "name": "lower_body"
+    },
+    {
+     "bones": [
+      "neck",
+      "look"
+     ],
+     "flags": 0,
+     "max": 0.83,
+     "name": "neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_sub",
+      "right_arm_02_roll",
+      "right_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 0.973,
+     "name": "right_arm"
+    },
+    {
+     "bones": [
+      "right_arm_width"
+     ],
+     "flags": 0,
+     "max": 0.815,
+     "name": "right_arm_width"
+    },
+    {
+     "bones": [
+      "right_hand",
+      "right_thumb_01",
+      "right_thumb_02",
+      "right_thumb_03",
+      "right_index_01",
+      "right_index_02",
+      "right_index_03",
+      "right_middle_01",
+      "right_middle_02",
+      "right_middle_03",
+      "right_ring_01",
+      "right_ring_02",
+      "right_ring_03",
+      "right_pinky_01",
+      "right_pinky_02",
+      "right_pinky_03",
+      "right_attach_on"
+     ],
+     "flags": 0,
+     "max": 0.966,
+     "name": "right_hand"
+    },
+    {
+     "bones": [
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "left_shoulder",
+      "right_shoulder"
+     ],
+     "flags": 0,
+     "max": 0.92,
+     "name": "upper_body"
+    }
+   ]
+  },
+  "dm": {
+   "ground": [
+    {
+     "bones": [
+      "foot_base"
+     ],
+     "name": "foot"
+    }
+   ],
+   "scalers": [
+    {
+     "bones": [
+      "hips"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_hips"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_01_roll"
+     ],
+     "flags": 20486,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_left_arm_01"
+    },
+    {
+     "bones": [
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_roll"
+     ],
+     "flags": 26630,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_left_arm_02"
+    },
+    {
+     "bones": [
+      "left_arm_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      1.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_left_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_left_foot"
+    },
+    {
+     "bones": [
+      "left_leg_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_left_leg_01"
+    },
+    {
+     "bones": [
+      "left_leg_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_left_leg_02"
+    },
+    {
+     "bones": [
+      "left_leg_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      1.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_left_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      1.0,
+      0.0,
+      1.0
+     ],
+     "name": "mesh_scaler_left_shoulder"
+    },
+    {
+     "bones": [
+      "neck"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_01_roll"
+     ],
+     "flags": 21510,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_right_arm_01"
+    },
+    {
+     "bones": [
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_roll"
+     ],
+     "flags": 27654,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_right_arm_02"
+    },
+    {
+     "bones": [
+      "right_arm_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      1.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_right_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_right_foot"
+    },
+    {
+     "bones": [
+      "right_leg_01"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_right_leg_01"
+    },
+    {
+     "bones": [
+      "right_leg_02"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_right_leg_02"
+    },
+    {
+     "bones": [
+      "right_leg_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      1.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_right_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      1.0,
+      0.0,
+      1.0
+     ],
+     "name": "mesh_scaler_right_shoulder"
+    },
+    {
+     "bones": [
+      "spine_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_spine_01"
+    },
+    {
+     "bones": [
+      "spine_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_spine_02"
+    },
+    {
+     "bones": [
+      "spine_03"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.0,
+      1.0
+     ],
+     "name": "mesh_scaler_spine_03"
+    }
+   ],
+   "sliders": [
+    {
+     "bones": [
+      "left_foot",
+      "left_toe",
+      "right_foot",
+      "right_toe"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "foot"
+    },
+    {
+     "bones": [
+      "head"
+     ],
+     "flags": 8193,
+     "max": 1.0,
+     "name": "head"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_sub",
+      "left_arm_02_roll",
+      "left_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "left_arm"
+    },
+    {
+     "bones": [
+      "left_arm_width"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "left_arm_width"
+    },
+    {
+     "bones": [
+      "left_hand",
+      "left_thumb_01",
+      "left_thumb_02",
+      "left_thumb_03",
+      "left_index_01",
+      "left_index_02",
+      "left_index_03",
+      "left_middle_01",
+      "left_middle_02",
+      "left_middle_03",
+      "left_ring_01",
+      "left_ring_02",
+      "left_ring_03",
+      "left_pinky_01",
+      "left_pinky_02",
+      "left_pinky_03",
+      "left_attach_on"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "left_hand"
+    },
+    {
+     "bones": [
+      "leg_width"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "leg_width"
+    },
+    {
+     "bones": [
+      "foot_base",
+      "waist",
+      "hips",
+      "leg_width",
+      "left_leg_01",
+      "left_leg_02",
+      "left_leg_02_sub",
+      "right_leg_01",
+      "right_leg_02",
+      "right_leg_02_sub"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "lower_body"
+    },
+    {
+     "bones": [
+      "neck",
+      "look"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_sub",
+      "right_arm_02_roll",
+      "right_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "right_arm"
+    },
+    {
+     "bones": [
+      "right_arm_width"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "right_arm_width"
+    },
+    {
+     "bones": [
+      "right_hand",
+      "right_thumb_01",
+      "right_thumb_02",
+      "right_thumb_03",
+      "right_index_01",
+      "right_index_02",
+      "right_index_03",
+      "right_middle_01",
+      "right_middle_02",
+      "right_middle_03",
+      "right_ring_01",
+      "right_ring_02",
+      "right_ring_03",
+      "right_pinky_01",
+      "right_pinky_02",
+      "right_pinky_03",
+      "right_attach_on"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "right_hand"
+    },
+    {
+     "bones": [
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "left_shoulder",
+      "right_shoulder"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "upper_body"
+    }
+   ]
+  },
+  "ef": {
+   "ground": [
+    {
+     "bones": [
+      "foot_base"
+     ],
+     "name": "foot"
+    }
+   ],
+   "scalers": [
+    {
+     "bones": [
+      "hips"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      1.352,
+      1.732
+     ],
+     "name": "mesh_scaler_hips"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_01_roll"
+     ],
+     "flags": 20486,
+     "max": [
+      0.0,
+      1.064,
+      1.034
+     ],
+     "name": "mesh_scaler_left_arm_01"
+    },
+    {
+     "bones": [
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_roll"
+     ],
+     "flags": 26630,
+     "max": [
+      0.0,
+      1.245,
+      1.19
+     ],
+     "name": "mesh_scaler_left_arm_02"
+    },
+    {
+     "bones": [
+      "left_arm_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      1.19,
+      1.245,
+      0.0
+     ],
+     "name": "mesh_scaler_left_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_left_foot"
+    },
+    {
+     "bones": [
+      "left_leg_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.582,
+      1.479
+     ],
+     "name": "mesh_scaler_left_leg_01"
+    },
+    {
+     "bones": [
+      "left_leg_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.327,
+      1.48
+     ],
+     "name": "mesh_scaler_left_leg_02"
+    },
+    {
+     "bones": [
+      "left_leg_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      1.48,
+      1.327,
+      0.0
+     ],
+     "name": "mesh_scaler_left_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      0.642,
+      0.0,
+      1.44
+     ],
+     "name": "mesh_scaler_left_shoulder"
+    },
+    {
+     "bones": [
+      "neck"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      1.566,
+      1.533
+     ],
+     "name": "mesh_scaler_neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_01_roll"
+     ],
+     "flags": 21510,
+     "max": [
+      0.0,
+      1.064,
+      1.034
+     ],
+     "name": "mesh_scaler_right_arm_01"
+    },
+    {
+     "bones": [
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_roll"
+     ],
+     "flags": 27654,
+     "max": [
+      0.0,
+      1.245,
+      1.19
+     ],
+     "name": "mesh_scaler_right_arm_02"
+    },
+    {
+     "bones": [
+      "right_arm_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      1.19,
+      1.245,
+      0.0
+     ],
+     "name": "mesh_scaler_right_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "name": "mesh_scaler_right_foot"
+    },
+    {
+     "bones": [
+      "right_leg_01"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      1.582,
+      1.479
+     ],
+     "name": "mesh_scaler_right_leg_01"
+    },
+    {
+     "bones": [
+      "right_leg_02"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      1.327,
+      1.48
+     ],
+     "name": "mesh_scaler_right_leg_02"
+    },
+    {
+     "bones": [
+      "right_leg_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      1.48,
+      1.327,
+      0.0
+     ],
+     "name": "mesh_scaler_right_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      0.642,
+      0.0,
+      1.44
+     ],
+     "name": "mesh_scaler_right_shoulder"
+    },
+    {
+     "bones": [
+      "spine_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.28,
+      1.808
+     ],
+     "name": "mesh_scaler_spine_01"
+    },
+    {
+     "bones": [
+      "spine_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.878,
+      0.96
+     ],
+     "name": "mesh_scaler_spine_02"
+    },
+    {
+     "bones": [
+      "spine_03"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.044,
+      1.196
+     ],
+     "name": "mesh_scaler_spine_03"
+    }
+   ],
+   "sliders": [
+    {
+     "bones": [
+      "left_foot",
+      "left_toe",
+      "right_foot",
+      "right_toe"
+     ],
+     "flags": 0,
+     "max": 0.98,
+     "name": "foot"
+    },
+    {
+     "bones": [
+      "head"
+     ],
+     "flags": 8193,
+     "max": 0.98,
+     "name": "head"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_sub",
+      "left_arm_02_roll",
+      "left_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 0.974,
+     "name": "left_arm"
+    },
+    {
+     "bones": [
+      "left_arm_width"
+     ],
+     "flags": 0,
+     "max": 1.14,
+     "name": "left_arm_width"
+    },
+    {
+     "bones": [
+      "left_hand",
+      "left_thumb_01",
+      "left_thumb_02",
+      "left_thumb_03",
+      "left_index_01",
+      "left_index_02",
+      "left_index_03",
+      "left_middle_01",
+      "left_middle_02",
+      "left_middle_03",
+      "left_ring_01",
+      "left_ring_02",
+      "left_ring_03",
+      "left_pinky_01",
+      "left_pinky_02",
+      "left_pinky_03",
+      "left_attach_on"
+     ],
+     "flags": 0,
+     "max": 0.93,
+     "name": "left_hand"
+    },
+    {
+     "bones": [
+      "leg_width"
+     ],
+     "flags": 0,
+     "max": 1.122,
+     "name": "leg_width"
+    },
+    {
+     "bones": [
+      "foot_base",
+      "waist",
+      "hips",
+      "leg_width",
+      "left_leg_01",
+      "left_leg_02",
+      "left_leg_02_sub",
+      "right_leg_01",
+      "right_leg_02",
+      "right_leg_02_sub"
+     ],
+     "flags": 0,
+     "max": 0.974,
+     "name": "lower_body"
+    },
+    {
+     "bones": [
+      "neck",
+      "look"
+     ],
+     "flags": 0,
+     "max": 0.83,
+     "name": "neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_sub",
+      "right_arm_02_roll",
+      "right_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 0.974,
+     "name": "right_arm"
+    },
+    {
+     "bones": [
+      "right_arm_width"
+     ],
+     "flags": 0,
+     "max": 1.14,
+     "name": "right_arm_width"
+    },
+    {
+     "bones": [
+      "right_hand",
+      "right_thumb_01",
+      "right_thumb_02",
+      "right_thumb_03",
+      "right_index_01",
+      "right_index_02",
+      "right_index_03",
+      "right_middle_01",
+      "right_middle_02",
+      "right_middle_03",
+      "right_ring_01",
+      "right_ring_02",
+      "right_ring_03",
+      "right_pinky_01",
+      "right_pinky_02",
+      "right_pinky_03",
+      "right_attach_on"
+     ],
+     "flags": 0,
+     "max": 0.93,
+     "name": "right_hand"
+    },
+    {
+     "bones": [
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "left_shoulder",
+      "right_shoulder"
+     ],
+     "flags": 0,
+     "max": 1.11,
+     "name": "upper_body"
+    }
+   ]
+  },
+  "em": {
+   "ground": [
+    {
+     "bones": [
+      "foot_base"
+     ],
+     "name": "foot"
+    }
+   ],
+   "scalers": [
+    {
+     "bones": [
+      "hips"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      2.187,
+      2.56
+     ],
+     "name": "mesh_scaler_hips"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_01_roll"
+     ],
+     "flags": 20486,
+     "max": [
+      0.0,
+      1.429,
+      1.31
+     ],
+     "name": "mesh_scaler_left_arm_01"
+    },
+    {
+     "bones": [
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_roll"
+     ],
+     "flags": 26630,
+     "max": [
+      0.0,
+      1.263,
+      1.188
+     ],
+     "name": "mesh_scaler_left_arm_02"
+    },
+    {
+     "bones": [
+      "left_arm_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      1.188,
+      1.263,
+      0.0
+     ],
+     "name": "mesh_scaler_left_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.177,
+      0.0
+     ],
+     "name": "mesh_scaler_left_foot"
+    },
+    {
+     "bones": [
+      "left_leg_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      2.113,
+      2.184
+     ],
+     "name": "mesh_scaler_left_leg_01"
+    },
+    {
+     "bones": [
+      "left_leg_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      2.232,
+      2.143
+     ],
+     "name": "mesh_scaler_left_leg_02"
+    },
+    {
+     "bones": [
+      "left_leg_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      2.143,
+      2.232,
+      0.0
+     ],
+     "name": "mesh_scaler_left_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      1.047,
+      0.0,
+      1.429
+     ],
+     "name": "mesh_scaler_left_shoulder"
+    },
+    {
+     "bones": [
+      "neck"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      3.416,
+      2.944
+     ],
+     "name": "mesh_scaler_neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_01_roll"
+     ],
+     "flags": 21510,
+     "max": [
+      0.0,
+      1.429,
+      1.31
+     ],
+     "name": "mesh_scaler_right_arm_01"
+    },
+    {
+     "bones": [
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_roll"
+     ],
+     "flags": 27654,
+     "max": [
+      0.0,
+      1.263,
+      1.188
+     ],
+     "name": "mesh_scaler_right_arm_02"
+    },
+    {
+     "bones": [
+      "right_arm_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      1.188,
+      1.263,
+      0.0
+     ],
+     "name": "mesh_scaler_right_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.177,
+      0.0
+     ],
+     "name": "mesh_scaler_right_foot"
+    },
+    {
+     "bones": [
+      "right_leg_01"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      2.113,
+      2.184
+     ],
+     "name": "mesh_scaler_right_leg_01"
+    },
+    {
+     "bones": [
+      "right_leg_02"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      2.232,
+      2.143
+     ],
+     "name": "mesh_scaler_right_leg_02"
+    },
+    {
+     "bones": [
+      "right_leg_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      2.143,
+      2.232,
+      0.0
+     ],
+     "name": "mesh_scaler_right_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      1.047,
+      0.0,
+      1.429
+     ],
+     "name": "mesh_scaler_right_shoulder"
+    },
+    {
+     "bones": [
+      "spine_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.849,
+      2.658
+     ],
+     "name": "mesh_scaler_spine_01"
+    },
+    {
+     "bones": [
+      "spine_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.34,
+      1.153
+     ],
+     "name": "mesh_scaler_spine_02"
+    },
+    {
+     "bones": [
+      "spine_03"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.94,
+      1.159
+     ],
+     "name": "mesh_scaler_spine_03"
+    }
+   ],
+   "sliders": [
+    {
+     "bones": [
+      "left_foot",
+      "left_toe",
+      "right_foot",
+      "right_toe"
+     ],
+     "flags": 0,
+     "max": 1.254,
+     "name": "foot"
+    },
+    {
+     "bones": [
+      "head"
+     ],
+     "flags": 8193,
+     "max": 1.03,
+     "name": "head"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_sub",
+      "left_arm_02_roll",
+      "left_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 1.12,
+     "name": "left_arm"
+    },
+    {
+     "bones": [
+      "left_arm_width"
+     ],
+     "flags": 0,
+     "max": 1.68,
+     "name": "left_arm_width"
+    },
+    {
+     "bones": [
+      "left_hand",
+      "left_thumb_01",
+      "left_thumb_02",
+      "left_thumb_03",
+      "left_index_01",
+      "left_index_02",
+      "left_index_03",
+      "left_middle_01",
+      "left_middle_02",
+      "left_middle_03",
+      "left_ring_01",
+      "left_ring_02",
+      "left_ring_03",
+      "left_pinky_01",
+      "left_pinky_02",
+      "left_pinky_03",
+      "left_attach_on"
+     ],
+     "flags": 0,
+     "max": 1.045,
+     "name": "left_hand"
+    },
+    {
+     "bones": [
+      "leg_width"
+     ],
+     "flags": 0,
+     "max": 1.69,
+     "name": "leg_width"
+    },
+    {
+     "bones": [
+      "foot_base",
+      "waist",
+      "hips",
+      "leg_width",
+      "left_leg_01",
+      "left_leg_02",
+      "left_leg_02_sub",
+      "right_leg_01",
+      "right_leg_02",
+      "right_leg_02_sub"
+     ],
+     "flags": 0,
+     "max": 0.84,
+     "name": "lower_body"
+    },
+    {
+     "bones": [
+      "neck",
+      "look"
+     ],
+     "flags": 0,
+     "max": 1.0,
+     "name": "neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_sub",
+      "right_arm_02_roll",
+      "right_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 1.12,
+     "name": "right_arm"
+    },
+    {
+     "bones": [
+      "right_arm_width"
+     ],
+     "flags": 0,
+     "max": 1.68,
+     "name": "right_arm_width"
+    },
+    {
+     "bones": [
+      "right_hand",
+      "right_thumb_01",
+      "right_thumb_02",
+      "right_thumb_03",
+      "right_index_01",
+      "right_index_02",
+      "right_index_03",
+      "right_middle_01",
+      "right_middle_02",
+      "right_middle_03",
+      "right_ring_01",
+      "right_ring_02",
+      "right_ring_03",
+      "right_pinky_01",
+      "right_pinky_02",
+      "right_pinky_03",
+      "right_attach_on"
+     ],
+     "flags": 0,
+     "max": 1.045,
+     "name": "right_hand"
+    },
+    {
+     "bones": [
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "left_shoulder",
+      "right_shoulder"
+     ],
+     "flags": 0,
+     "max": 1.48,
+     "name": "upper_body"
+    }
+   ]
+  },
+  "f": {
+   "ground": [
+    {
+     "bones": [
+      "foot_base"
+     ],
+     "name": "foot"
+    }
+   ],
+   "scalers": [
+    {
+     "bones": [
+      "hips"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      1.033,
+      1.056
+     ],
+     "name": "mesh_scaler_hips"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_01_roll"
+     ],
+     "flags": 20486,
+     "max": [
+      0.0,
+      1.217,
+      1.294
+     ],
+     "name": "mesh_scaler_left_arm_01"
+    },
+    {
+     "bones": [
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_roll"
+     ],
+     "flags": 26630,
+     "max": [
+      0.0,
+      1.186,
+      1.106
+     ],
+     "name": "mesh_scaler_left_arm_02"
+    },
+    {
+     "bones": [
+      "left_arm_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      1.106,
+      1.186,
+      0.0
+     ],
+     "name": "mesh_scaler_left_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.022,
+      0.0
+     ],
+     "name": "mesh_scaler_left_foot"
+    },
+    {
+     "bones": [
+      "left_leg_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.15,
+      1.162
+     ],
+     "name": "mesh_scaler_left_leg_01"
+    },
+    {
+     "bones": [
+      "left_leg_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.111,
+      1.247
+     ],
+     "name": "mesh_scaler_left_leg_02"
+    },
+    {
+     "bones": [
+      "left_leg_02_sub"
+     ],
+     "flags": 14339,
+     "max": [
+      1.247,
+      1.111,
+      0.0
+     ],
+     "name": "mesh_scaler_left_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "left_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      1.214,
+      0.0,
+      1.11
+     ],
+     "name": "mesh_scaler_left_shoulder"
+    },
+    {
+     "bones": [
+      "neck"
+     ],
+     "flags": 12294,
+     "max": [
+      0.0,
+      1.658,
+      1.905
+     ],
+     "name": "mesh_scaler_neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_01_roll"
+     ],
+     "flags": 21510,
+     "max": [
+      0.0,
+      1.217,
+      1.294
+     ],
+     "name": "mesh_scaler_right_arm_01"
+    },
+    {
+     "bones": [
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_roll"
+     ],
+     "flags": 27654,
+     "max": [
+      0.0,
+      1.186,
+      1.106
+     ],
+     "name": "mesh_scaler_right_arm_02"
+    },
+    {
+     "bones": [
+      "right_arm_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      1.106,
+      1.186,
+      0.0
+     ],
+     "name": "mesh_scaler_right_arm_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_foot"
+     ],
+     "flags": 13314,
+     "max": [
+      0.0,
+      1.022,
+      0.0
+     ],
+     "name": "mesh_scaler_right_foot"
+    },
+    {
+     "bones": [
+      "right_leg_01"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      1.15,
+      1.162
+     ],
+     "name": "mesh_scaler_right_leg_01"
+    },
+    {
+     "bones": [
+      "right_leg_02"
+     ],
+     "flags": 14342,
+     "max": [
+      0.0,
+      1.111,
+      1.247
+     ],
+     "name": "mesh_scaler_right_leg_02"
+    },
+    {
+     "bones": [
+      "right_leg_02_sub"
+     ],
+     "flags": 15363,
+     "max": [
+      1.247,
+      1.111,
+      0.0
+     ],
+     "name": "mesh_scaler_right_leg_02_xz_trade"
+    },
+    {
+     "bones": [
+      "right_shoulder"
+     ],
+     "flags": 14341,
+     "max": [
+      1.214,
+      0.0,
+      1.11
+     ],
+     "name": "mesh_scaler_right_shoulder"
+    },
+    {
+     "bones": [
+      "spine_01"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      0.92,
+      1.454
+     ],
+     "name": "mesh_scaler_spine_01"
+    },
+    {
+     "bones": [
+      "spine_02"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.045,
+      0.858
+     ],
+     "name": "mesh_scaler_spine_02"
+    },
+    {
+     "bones": [
+      "spine_03"
+     ],
+     "flags": 13318,
+     "max": [
+      0.0,
+      1.044,
+      1.245
+     ],
+     "name": "mesh_scaler_spine_03"
+    }
+   ],
+   "sliders": [
+    {
+     "bones": [
+      "left_foot",
+      "left_toe",
+      "right_foot",
+      "right_toe"
+     ],
+     "flags": 0,
+     "max": 1.1,
+     "name": "foot"
+    },
+    {
+     "bones": [
+      "head"
+     ],
+     "flags": 8193,
+     "max": 0.93,
+     "name": "head"
+    },
+    {
+     "bones": [
+      "left_arm_01",
+      "left_arm_02",
+      "left_hand_roll",
+      "left_arm_02_sub",
+      "left_arm_02_roll",
+      "left_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 1.131,
+     "name": "left_arm"
+    },
+    {
+     "bones": [
+      "left_arm_width"
+     ],
+     "flags": 0,
+     "max": 1.528,
+     "name": "left_arm_width"
+    },
+    {
+     "bones": [
+      "left_hand",
+      "left_thumb_01",
+      "left_thumb_02",
+      "left_thumb_03",
+      "left_index_01",
+      "left_index_02",
+      "left_index_03",
+      "left_middle_01",
+      "left_middle_02",
+      "left_middle_03",
+      "left_ring_01",
+      "left_ring_02",
+      "left_ring_03",
+      "left_pinky_01",
+      "left_pinky_02",
+      "left_pinky_03",
+      "left_attach_on"
+     ],
+     "flags": 0,
+     "max": 1.105,
+     "name": "left_hand"
+    },
+    {
+     "bones": [
+      "leg_width"
+     ],
+     "flags": 0,
+     "max": 1.21,
+     "name": "leg_width"
+    },
+    {
+     "bones": [
+      "foot_base",
+      "waist",
+      "hips",
+      "leg_width",
+      "left_leg_01",
+      "left_leg_02",
+      "left_leg_02_sub",
+      "right_leg_01",
+      "right_leg_02",
+      "right_leg_02_sub"
+     ],
+     "flags": 0,
+     "max": 1.091,
+     "name": "lower_body"
+    },
+    {
+     "bones": [
+      "neck",
+      "look"
+     ],
+     "flags": 0,
+     "max": 1.2,
+     "name": "neck"
+    },
+    {
+     "bones": [
+      "right_arm_01",
+      "right_arm_02",
+      "right_hand_roll",
+      "right_arm_02_sub",
+      "right_arm_02_roll",
+      "right_arm_01_roll"
+     ],
+     "flags": 0,
+     "max": 1.131,
+     "name": "right_arm"
+    },
+    {
+     "bones": [
+      "right_arm_width"
+     ],
+     "flags": 0,
+     "max": 1.528,
+     "name": "right_arm_width"
+    },
+    {
+     "bones": [
+      "right_hand",
+      "right_thumb_01",
+      "right_thumb_02",
+      "right_thumb_03",
+      "right_index_01",
+      "right_index_02",
+      "right_index_03",
+      "right_middle_01",
+      "right_middle_02",
+      "right_middle_03",
+      "right_ring_01",
+      "right_ring_02",
+      "right_ring_03",
+      "right_pinky_01",
+      "right_pinky_02",
+      "right_pinky_03",
+      "right_attach_on"
+     ],
+     "flags": 0,
+     "max": 1.105,
+     "name": "right_hand"
+    },
+    {
+     "bones": [
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "left_shoulder",
+      "right_shoulder"
+     ],
+     "flags": 0,
+     "max": 1.29,
+     "name": "upper_body"
+    }
+   ]
+  }
+ },
+ "trainers": {
+  "tr0330_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "f"
+  },
+  "tr0340_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  },
+  "tr0350_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "dm"
+  },
+  "tr0360_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "a"
+  },
+  "tr0370_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.133,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "f"
+  },
+  "tr0380_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "f"
+  },
+  "tr0390_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "dm"
+  },
+  "tr0400_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  },
+  "tr0410_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "dm"
+  },
+  "tr0420_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "f"
+  },
+  "tr0430_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  },
+  "tr0440_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "dm"
+  },
+  "tr0450_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "dm"
+  },
+  "tr0460_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "ef"
+  },
+  "tr0470_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "em"
+  },
+  "tr0480_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  },
+  "tr0490_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  },
+  "tr0500_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "dm"
+  },
+  "tr0510_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  },
+  "tr0520_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "dm"
+  },
+  "tr0600_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "dm"
+  },
+  "tr0610_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  },
+  "tr0880_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  },
+  "tr0890_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "f"
+  },
+  "tr0900_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "f"
+  },
+  "tr0910_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  },
+  "tr0920_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "dm"
+  },
+  "tr0930_00": {
+   "scalers": {
+    "mesh_scaler_hips": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_left_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_neck": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_arm_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_foot": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_leg_02_xz_trade": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_right_shoulder": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_01": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_02": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "mesh_scaler_spine_03": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "sliders": {
+    "foot": 1.0,
+    "head": 1.0,
+    "left_arm": 1.0,
+    "left_arm_width": 1.0,
+    "left_hand": 1.0,
+    "leg_width": 1.0,
+    "lower_body": 1.0,
+    "neck": 1.0,
+    "right_arm": 1.0,
+    "right_arm_width": 1.0,
+    "right_hand": 1.0,
+    "upper_body": 1.0
+   },
+   "table": "df"
+  }
+ }
+}

@@ -10,6 +10,8 @@ export interface PaletteData {
   layers: number[];
   lit: number[][]; // sRGB 0..255 per zone
   shadow: number[][];
+  /** Wrinkle-stroke layers in a skin zone (pipeline skin_zone_layers): drawn one shade deeper (deeperSkin). */
+  skinLayers?: number[];
 }
 
 const S2L = new Float32Array(256);
@@ -25,14 +27,25 @@ const zoneLin = (table: number[][], zone1: number): [number, number, number] => 
   return [S2L[c[0]], S2L[c[1]], S2L[c[2]]];
 };
 
+/** One skin shade deeper than `zone1` (zones 1..4 deep..pale): zone - 1, below zone 1 the same step again
+ *  (zone 1 x zone 1 / zone 2). Mirrors pipeline deeper_skin (Rust Grunt furrow: darker than the skin in game). */
+const deeperSkin = (table: number[][], zone1: number): [number, number, number] => {
+  const z = Math.max(zone1 - 1, 1);
+  const a = zoneLin(table, z);
+  if (zone1 > 1) return a;
+  const b = zoneLin(table, z + 1);
+  return [a[0] * a[0] / Math.max(b[0], 1e-4), a[1] * a[1] / Math.max(b[1], 1e-4), a[2] * a[2] / Math.max(b[2], 1e-4)];
+};
+
 /** Both outputs are RGBA8 buffers the size of the albedo; alpha is copied from it. */
 export function bakePalette(alb: Uint8ClampedArray, mask: Uint8ClampedArray, pal: PaletteData, indices: number[]) {
   const n = alb.length / 4;
   const lit = new Uint8ClampedArray(alb.length);
   const shadow = new Uint8ClampedArray(alb.length);
   const zoneOf = (c: number) => (indices[c] || indices[0]) ?? 1;
-  const lc = [0, 1, 2, 3].map((c) => zoneLin(pal.lit, zoneOf(c)));
-  const sc = [0, 1, 2, 3].map((c) => zoneLin(pal.shadow, zoneOf(c)));
+  const deep = (c: number) => c > 0 && !!pal.skinLayers?.includes(c + 1);
+  const lc = [0, 1, 2, 3].map((c) => (deep(c) ? deeperSkin : zoneLin)(pal.lit, zoneOf(c)));
+  const sc = [0, 1, 2, 3].map((c) => (deep(c) ? deeperSkin : zoneLin)(pal.shadow, zoneOf(c)));
   for (let p = 0, o = 0; p < n; p++, o += 4) {
     let tl0 = 1, tl1 = 1, tl2 = 1, ts0 = 1, ts1 = 1, ts2 = 1;
     for (let c = 0; c < 4; c++) {

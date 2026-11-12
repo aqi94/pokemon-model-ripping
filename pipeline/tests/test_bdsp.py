@@ -68,3 +68,22 @@ def test_uv_offset_tracks_and_manifest():
               clips=[Clip(name="advent02_b", tracks=[], uv_offset=out)])
     c = build_manifest(m)["clips"][0]
     assert c["uvOffset"]["Reye"] == {"times": [0.0], "values": [[-0.05, 0.0]]}
+
+
+def test_lens_keeps_authored_alpha():
+    """Lenses blend with albedo alpha x _Color.a (Scientist/Collector lens: alpha 0.90, _Color.a 1): no softening, no per-model override."""
+    from pipeline.common.model import TextureImage
+
+    rgba = np.full((4, 4, 4), 225, np.uint8)
+    rgba[..., 3] = 229
+    rgba[0, 0, 3] = 0
+    textures = {"lens_col": TextureImage(key="lens_col", rgba=rgba, srgb=True)}
+    col = lambda r, g, b, a: NS(r=r, g=g, b=b, a=a)
+    m = NS(m_Name="glass", m_ShaderKeywords=["_ALPHABLEND_ON", "_ALPHATEST_ON"],
+           m_SavedProperties=NS(m_TexEnvs=[("_MainTex", NS(m_Texture=NS(file_id=0, path_id=1)))],
+                                m_Colors=[("_Color", col(1.0, 1.0, 1.0, 0.5))], m_Floats=[("_SrcBlend", 5.0), ("_DstBlend", 10.0)]))
+    mat = B._material(m, {(0, 1): "lens_col"}, textures)
+    assert mat.alpha_mode == "BLEND" and mat.base_color == "lens_col"
+    assert mat.base_color_factor[3] == 0.5
+    assert (textures["lens_col"].rgba[1:, 1:, 3] == 229).all()
+    assert not hasattr(B, "_soften_lenses") and not hasattr(B, "_overrides")

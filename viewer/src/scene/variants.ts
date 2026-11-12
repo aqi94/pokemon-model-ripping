@@ -38,20 +38,43 @@ export class VariantSwitcher {
     return m;
   }
 
-  async select(variantIndex: number) {
-    for (const e of this.entries) {
+  private gens = new Map<string, number>();
+
+  /** Entries a variant group recolours: their material differs between the group's options. Other groups' meshes
+   * (and meshes no option changes) are left alone, so groups combine instead of resetting each other (a skin-tone
+   * pick used to put the coloring group's meshes back to their default). Without `group`, every entry. */
+  private owned(group?: number[]): Entry[] {
+    if (!group || group.length < 2) return this.entries;
+    return this.entries.filter((e) => {
+      const mats = new Set(group.map((v) => e.mappings.find((m) => m.variants.includes(v))?.material ?? -1));
+      return mats.size > 1;
+    });
+  }
+
+  /** Loads every material of the variant first, then swaps the group's meshes in one synchronous pass. A select that
+   * a newer one in the same group overtook while loading is dropped (returns false): interleaved selects used to
+   * leave each mesh on whichever variant reached it last (half the hair one colour, half the other). */
+  async select(variantIndex: number, group?: number[]): Promise<boolean> {
+    const key = group ? group.join(',') : '*';
+    const gen = (this.gens.get(key) ?? 0) + 1;
+    this.gens.set(key, gen);
+    const entries = this.owned(group);
+    const mats = await Promise.all(entries.map((e) => {
       const map = e.mappings.find((m) => m.variants.includes(variantIndex));
-      e.mesh.material = map ? await this.material(map.material) : e.defaultMat;
-    }
+      return map ? this.material(map.material) : Promise.resolve(e.defaultMat);
+    }));
+    if (this.gens.get(key) !== gen) return false;
+    entries.forEach((e, i) => { e.mesh.material = mats[i]; });
     this.current = variantIndex;
     this.onMaterialsChanged?.();
+    return true;
   }
 
   /** Average opaque colour of the largest base-colour texture of a variant (for the swatch). */
-  async sampleColor(variantIndex: number): Promise<string | null> {
+  async sampleColor(variantIndex: number, group?: number[]): Promise<string | null> {
     try {
       let best: { img: CanvasImageSource | null; area: number; tint: THREE.Color } | null = null;
-      for (const e of this.entries) {
+      for (const e of this.owned(group)) {
         const map = e.mappings.find((m) => m.variants.includes(variantIndex));
         if (!map) continue;
         const mat = (await this.material(map.material)) as THREE.MeshStandardMaterial;

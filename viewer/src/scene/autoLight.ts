@@ -218,6 +218,7 @@ const KNOBS: Record<Knob, [number, number, number]> = {
 const KNOB_LIST = Object.keys(KNOBS) as Knob[];
 /** Prior: loss units for moving one initial step away from the starting preset (keeps a poor match from drifting
  *  into implausible looks, e.g. saturation 0.57 + a pink ground on the Taunie street shot). */
+// FITTED: auto-lighting fitting prior on the Taunie street shot (samples/), 2026-10-19 (engine-rules debt)
 const PRIOR = 0.12;
 
 type Flat = Environment & { groundR: number; groundG: number; groundB: number };

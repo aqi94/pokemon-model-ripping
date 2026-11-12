@@ -1,0 +1,93 @@
+{
+ "schema": 1,
+ "slug": "battle_theia_gengar_01",
+ "scene": "battle_theia",
+ "model": "unite/pm0094_00",
+ "clip": "idle",
+ "frame": 0,
+ "screenshot": "battle_theia_gengar_01.png",
+ "width": 1920,
+ "height": 1080,
+ "camera": {
+  "fov": 25,
+  "position": [
+   3.8688,
+   16.1471,
+   13.6709
+  ],
+  "target": [
+   0.235,
+   0.352,
+   0.1093
+  ]
+ },
+ "subjectBox": [
+  830,
+  385,
+  1030,
+  580
+ ],
+ "yaw": 15,
+ "weight": 1,
+ "skip": false,
+ "excludeBoxes": [
+  [
+   690,
+   120,
+   1150,
+   220
+  ],
+  [
+   800,
+   290,
+   1020,
+   350
+  ]
+ ],
+ "regions": [
+  {
+   "name": "mat_bat_0094body_lv3_1",
+   "box": [
+    911,
+    428,
+    923,
+    440
+   ],
+   "renderBox": [
+    911,
+    428,
+    923,
+    440
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    1.1,
+    0.4
+   ],
+   "dE0": 15.2
+  },
+  {
+   "name": "mat_bat_0094body_lv3_2",
+   "box": [
+    959,
+    545,
+    971,
+    557
+   ],
+   "renderBox": [
+    959,
+    545,
+    971,
+    557
+   ],
+   "weight": 1,
+   "auto": true,
+   "flat": [
+    1.3,
+    0.6
+   ],
+   "dE0": 24.8
+  }
+ ]
+}

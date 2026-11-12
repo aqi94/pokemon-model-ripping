@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "slug": "battle_auroma_pikachu_01",
+ "scene": "battle_auroma",
+ "game": "unite",
+ "source": "youtube",
+ "video": {
+  "id": "hq1oJzgBGdI",
+  "url": "https://www.youtube.com/watch?v=hq1oJzgBGdI",
+  "title": "Pokémon Unite | Quick Battle | In Auroma Park | 7162025",
+  "channel": "Marcus Alford",
+  "platform": "switch1",
+  "formatId": "298",
+  "width": 1280,
+  "height": 720,
+  "fps": 60.0,
+  "vcodec": "avc1.640020"
+ },
+ "timestamp": 136.0,
+ "timecode": "00:02:16.000",
+ "grabbedAt": "2026-11-01T22:27:44Z",
+ "image": {
+  "file": "battle_auroma_pikachu_01.png",
+  "width": 1920,
+  "height": 1080,
+  "scaledFrom": [
+   1280,
+   720
+  ]
+ },
+ "tags": {
+  "timeOfDay": "day",
+  "weather": "sunny",
+  "location": "Auroma Park",
+  "indoor": false,
+  "lightType": "sun"
+ },
+ "subject": {
+  "kind": "pokemon",
+  "model": "pm0025_00",
+  "name": "Pikachu",
+  "confidence": "medium"
+ },
+ "clipGuess": "run",
+ "context": "battle",
+ "quality": {
+  "ui": true,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": ""
+}

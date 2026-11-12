@@ -1,0 +1,6082 @@
+{
+ "game": "swsh",
+ "meta": {
+  "game": "swsh",
+  "scanned": "2026-10-19",
+  "sample_per_kind": 20,
+  "kinds": [
+   "pokemon",
+   "trainer",
+   "object"
+  ],
+  "models": [
+   "pm0000_00",
+   "pm0032_00",
+   "pm0063_00",
+   "pm0111_00",
+   "pm0138_00",
+   "pm0195_00",
+   "pm0241_00",
+   "pm0279_00",
+   "pm0343_00",
+   "pm0403_00",
+   "pm0445_01",
+   "pm0475_00",
+   "pm0528_00",
+   "pm0565_00",
+   "pm0606_00",
+   "pm0641_12",
+   "pm0735_14",
+   "pm0767_00",
+   "pm0833_00",
+   "pm0862_20",
+   "tr0000_00",
+   "tr0004_00",
+   "tr0009_00",
+   "tr0016_00",
+   "tr0024_00",
+   "tr0031_00",
+   "tr0040_00",
+   "tr0047_00",
+   "tr0055_00",
+   "tr0063_00",
+   "tr0071_00",
+   "tr0079_00",
+   "tr0110_00",
+   "tr0118_00",
+   "tr0125_00",
+   "tr0133_00",
+   "tr0140_00",
+   "tr0149_00",
+   "tr0156_00",
+   "tr0164_00",
+   "ob0001_00",
+   "ob0004_00",
+   "ob0008_00",
+   "ob0019_00",
+   "ob0022_00",
+   "ob0026_00",
+   "ob0030_00",
+   "ob0033_00",
+   "ob0037_00",
+   "ob0041_00",
+   "ob0046_00",
+   "ob0050_00",
+   "ob0204_00",
+   "ob0208_00",
+   "ob0211_00",
+   "ob0215_00",
+   "ob0219_00",
+   "ob0222_00",
+   "ob0226_00",
+   "ob1002_00"
+  ],
+  "failures": [],
+  "formats": [
+   "gfbanm",
+   "gfbmdl"
+  ],
+  "seconds": 12.5,
+  "tool": "python -m pipeline --game swsh audit-fields --sample 20"
+ },
+ "entries": [
+  {
+   "key": "gfbmdl:/10",
+   "format": "gfbmdl",
+   "where": "table `/` field 10",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     59
+    ],
+    [
+     "vec<table>[1]",
+     20
+    ],
+    [
+     "vec<table>[2]",
+     1
+    ]
+   ],
+   "distinct": 3,
+   "instances": 80,
+   "models": 60,
+   "examples": [
+    "pm0000_00: empty vec/str",
+    "pm0032_00: empty vec/str",
+    "pm0063_00: empty vec/str",
+    "pm0111_00: empty vec/str",
+    "pm0138_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 59,
+    "vec<table>": 21
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/3",
+   "format": "gfbmdl",
+   "where": "table `/` field 3",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec[7] 6800000058000000",
+     9
+    ],
+    [
+     "vec[2] 1400000004000000",
+     9
+    ],
+    [
+     "vec[7] 6c0000005c000000",
+     8
+    ],
+    [
+     "vec[1] 0400000003000000",
+     8
+    ],
+    [
+     "vec[3] 2000000014000000",
+     4
+    ],
+    [
+     "vec[4] 3400000024000000",
+     4
+    ],
+    [
+     "vec[4] 3000000024000000",
+     4
+    ],
+    [
+     "vec[3] 2400000014000000",
+     3
+    ]
+   ],
+   "distinct": 24,
+   "instances": 80,
+   "models": 60,
+   "examples": [
+    "pm0000_00: vec[1] 0400000004000000",
+    "pm0032_00: vec[3] 2000000014000000",
+    "pm0063_00: vec[4] 3400000024000000",
+    "pm0111_00: vec[9] 9c0000008c000000",
+    "pm0138_00: vec[3] 2000000014000000"
+   ],
+   "types": {
+    "vec": 80
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/5",
+   "format": "gfbmdl",
+   "where": "table `/` field 5",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec[7] 6800000058000000",
+     9
+    ],
+    [
+     "vec[2] 1400000004000000",
+     9
+    ],
+    [
+     "vec[7] 6c0000005c000000",
+     8
+    ],
+    [
+     "vec[1] 0400000003000000",
+     8
+    ],
+    [
+     "vec[3] 2000000014000000",
+     4
+    ],
+    [
+     "vec[4] 3400000024000000",
+     4
+    ],
+    [
+     "vec[4] 3000000024000000",
+     4
+    ],
+    [
+     "vec[3] 2400000014000000",
+     3
+    ]
+   ],
+   "distinct": 24,
+   "instances": 80,
+   "models": 60,
+   "examples": [
+    "pm0000_00: vec[1] 0400000004000000",
+    "pm0032_00: vec[3] 2000000014000000",
+    "pm0063_00: vec[4] 3400000024000000",
+    "pm0111_00: vec[9] 9c0000008c000000",
+    "pm0138_00: vec[3] 2000000014000000"
+   ],
+   "types": {
+    "vec": 80
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/20/0",
+   "format": "gfbmdl",
+   "where": "table `/6[]/20` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[14]",
+     220
+    ],
+    [
+     "vec<table>[13]",
+     148
+    ],
+    [
+     "vec<table>[12]",
+     43
+    ]
+   ],
+   "distinct": 3,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00: vec<table>[14]",
+    "pm0032_00: vec<table>[14]",
+    "pm0063_00: vec<table>[14]",
+    "pm0111_00: vec<table>[14]",
+    "pm0138_00: vec<table>[14]"
+   ],
+   "types": {
+    "vec<table>": 411
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/20/0[]/0",
+   "format": "gfbmdl",
+   "where": "table `/6[]/20/0[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "FogEnable",
+     405
+    ],
+    [
+     "DiscardEnable",
+     405
+    ],
+    [
+     "CastShadow",
+     405
+    ],
+    [
+     "ReceiveShadow",
+     405
+    ]
+   ],
+   "distinct": 4,
+   "instances": 1644,
+   "models": 60,
+   "examples": [
+    "pm0000_00: FogEnable",
+    "pm0032_00: FogEnable",
+    "pm0063_00: FogEnable",
+    "pm0111_00: FogEnable",
+    "pm0138_00: FogEnable"
+   ],
+   "types": {
+    "str": 1620
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/20/1",
+   "format": "gfbmdl",
+   "where": "table `/6[]/20` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[15]",
+     220
+    ],
+    [
+     "vec<table>[9]",
+     191
+    ]
+   ],
+   "distinct": 2,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00: vec<table>[15]",
+    "pm0032_00: vec<table>[15]",
+    "pm0063_00: vec<table>[15]",
+    "pm0111_00: vec<table>[15]",
+    "pm0138_00: vec<table>[15]"
+   ],
+   "types": {
+    "vec<table>": 411
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/20/1[]/0",
+   "format": "gfbmdl",
+   "where": "table `/6[]/20/1[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "CullMode",
+     405
+    ],
+    [
+     "LightSetNo",
+     405
+    ],
+    [
+     "ShaderType",
+     405
+    ],
+    [
+     "Priority",
+     405
+    ]
+   ],
+   "distinct": 4,
+   "instances": 1644,
+   "models": 60,
+   "examples": [
+    "pm0000_00: CullMode",
+    "pm0032_00: CullMode",
+    "pm0063_00: CullMode",
+    "pm0111_00: CullMode",
+    "pm0138_00: CullMode"
+   ],
+   "types": {
+    "str": 1620
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/7[]/2",
+   "format": "gfbmdl",
+   "where": "table `/7[]` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "<other>",
+     354
+    ],
+    [
+     "(-15.21, -0.1031, -15.21, 15.21, 37.72, 15.21)",
+     2
+    ],
+    [
+     "(-37.78, -0.0219, -27.19, 37.78, 45.59, 41.44)",
+     2
+    ],
+    [
+     "(-35.91, -0, -88.46, 35.91, 90.42, 23.8)",
+     2
+    ],
+    [
+     "(-51.19, -0.0751, -62.34, 51.19, 102.5, 87.8)",
+     2
+    ],
+    [
+     "(-7.324, 18.41, 78.52, 7.324, 41.03, 96.02)",
+     2
+    ],
+    [
+     "(-21.02, -3.525, -18.02, 21.02, 40.07, 29.34)",
+     2
+    ],
+    [
+     "e62e68c2ce6a2423a5fdf1c2e62e6842cd8b0c4304937b42",
+     2
+    ]
+   ],
+   "distinct": 201,
+   "instances": 595,
+   "models": 60,
+   "examples": [
+    "pm0000_00: (-15.21, -0.1031, -15.21, 15.21, 37.72, 15.21)",
+    "pm0032_00: (-37.78, -0.0219, -27.19, 37.78, 45.59, 41.44)",
+    "pm0063_00: (-35.91, -0, -88.46, 35.91, 90.42, 23.8)",
+    "pm0111_00: (-51.19, -0.0751, -62.34, 51.19, 102.5, 87.8)",
+    "pm0138_00: (-21.02, -3.525, -18.02, 21.02, 40.07, 29.34)"
+   ],
+   "types": {
+    "struct": 564,
+    "hex": 31
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:RimColor",
+   "format": "gfbmdl",
+   "where": "material color param `RimColor`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.8, 0.747, 0.48)",
+     188
+    ],
+    [
+     "(0.35, 0.333, 0.315)",
+     16
+    ],
+    [
+     "(0.262, 0.292, 0.35)",
+     16
+    ],
+    [
+     "(0.53, 0.477, 0.53)",
+     16
+    ],
+    [
+     "(0.604, 0.604, 0.604)",
+     12
+    ],
+    [
+     "(0.4, 0.397, 0.38)",
+     12
+    ],
+    [
+     "(0.228, 0.276, 0.291)",
+     10
+    ],
+    [
+     "(0.4, 0.4, 0.4)",
+     10
+    ]
+   ],
+   "distinct": 42,
+   "instances": 410,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=(0.451, 0.451, 0.451)",
+    "pm0032_00/Body=(0.36, 0.34, 0.4)",
+    "pm0063_00/BodyVco01=(0.4, 0.387, 0.32)",
+    "pm0111_00/BodyBSpc01=(0.35, 0.333, 0.315)",
+    "pm0138_00/BodySpc=(0.5, 0.475, 0.45)"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:RimColorShadow",
+   "format": "gfbmdl",
+   "where": "material color param `RimColorShadow`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.2, 0.187, 0.12)",
+     188
+    ],
+    [
+     "(0.15, 0.139, 0.127)",
+     16
+    ],
+    [
+     "(0.42, 0.378, 0.42)",
+     16
+    ],
+    [
+     "(0.319, 0.319, 0.319)",
+     12
+    ],
+    [
+     "(0.3, 0.298, 0.285)",
+     12
+    ],
+    [
+     "(0.131, 0.159, 0.167)",
+     10
+    ],
+    [
+     "(0.16, 0.167, 0.2)",
+     10
+    ],
+    [
+     "(0.15, 0.158, 0.2)",
+     10
+    ]
+   ],
+   "distinct": 42,
+   "instances": 410,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=(0.231, 0.231, 0.231)",
+    "pm0032_00/Body=(0.27, 0.255, 0.3)",
+    "pm0063_00/BodyVco01=(0.2, 0.187, 0.16)",
+    "pm0111_00/BodyBSpc01=(0.15, 0.139, 0.127)",
+    "pm0138_00/BodySpc=(0.45, 0.428, 0.405)"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:LightTblIndex",
+   "format": "gfbmdl",
+   "where": "material float param `LightTblIndex`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "4",
+     235
+    ],
+    [
+     "6",
+     88
+    ],
+    [
+     "5",
+     26
+    ],
+    [
+     "7",
+     22
+    ],
+    [
+     "8",
+     20
+    ],
+    [
+     "3",
+     10
+    ],
+    [
+     "13",
+     6
+    ],
+    [
+     "9",
+     4
+    ]
+   ],
+   "distinct": 8,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=6",
+    "pm0032_00/Body=6",
+    "pm0063_00/BodyVco01=7",
+    "pm0111_00/BodyBSpc01=6",
+    "pm0138_00/BodySpc=4"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:RimPower",
+   "format": "gfbmdl",
+   "where": "material float param `RimPower`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "8",
+     280
+    ],
+    [
+     "10",
+     118
+    ],
+    [
+     "5",
+     8
+    ],
+    [
+     "4",
+     5
+    ]
+   ],
+   "distinct": 4,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=8",
+    "pm0032_00/Body=8",
+    "pm0063_00/BodyVco01=8",
+    "pm0111_00/BodyBSpc01=8",
+    "pm0138_00/BodySpc=8"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:SpecularPower",
+   "format": "gfbmdl",
+   "where": "material float param `SpecularPower`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "6",
+     182
+    ],
+    [
+     "20",
+     44
+    ],
+    [
+     "5",
+     28
+    ],
+    [
+     "100",
+     27
+    ],
+    [
+     "8",
+     24
+    ],
+    [
+     "24",
+     14
+    ],
+    [
+     "12",
+     14
+    ],
+    [
+     "16",
+     12
+    ]
+   ],
+   "distinct": 23,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=3.5",
+    "pm0032_00/Body=6.5",
+    "pm0063_00/BodyVco01=8",
+    "pm0111_00/BodyBSpc01=24",
+    "pm0138_00/BodySpc=13"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:SpecularScale",
+   "format": "gfbmdl",
+   "where": "material float param `SpecularScale`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.25",
+     148
+    ],
+    [
+     "10",
+     49
+    ],
+    [
+     "0.3",
+     46
+    ],
+    [
+     "1",
+     44
+    ],
+    [
+     "0.5",
+     28
+    ],
+    [
+     "5",
+     27
+    ],
+    [
+     "0.4",
+     20
+    ],
+    [
+     "0.15",
+     10
+    ]
+   ],
+   "distinct": 21,
+   "instances": 409,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=0.25",
+    "pm0032_00/Body=0.3",
+    "pm0063_00/BodyVco01=0.2",
+    "pm0111_00/BodyBSpc01=0.5",
+    "pm0138_00/BodySpc=0.6"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:texture:AmbientTex",
+   "format": "gfbmdl",
+   "where": "material texture param `AmbientTex`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "chara_d_ambient",
+     65
+    ],
+    [
+     "pm0833_00_Body_amb",
+     14
+    ],
+    [
+     "pm0063_00_Body_amb",
+     8
+    ],
+    [
+     "pm0111_00_BodyB_amb",
+     8
+    ],
+    [
+     "pm0445_00_BodyA_amb",
+     8
+    ],
+    [
+     "pm0735_11_Body_amb",
+     8
+    ],
+    [
+     "pm0767_00_BodyB_amb",
+     8
+    ],
+    [
+     "pm0862_11_BodyB_amb",
+     8
+    ]
+   ],
+   "distinct": 131,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=dummy_col",
+    "pm0032_00/Body=pm0032_00_Body_amb",
+    "pm0063_00/BodyVco01=pm0063_00_Body_amb",
+    "pm0111_00/BodyBSpc01=pm0111_00_BodyB_amb",
+    "pm0138_00/BodySpc=pm0138_00_Body_amb"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: AO unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:texture:EmissionMaskTex",
+   "format": "gfbmdl",
+   "where": "material texture param `EmissionMaskTex`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "dummy_col",
+     118
+    ],
+    [
+     "chara_d_white",
+     28
+    ],
+    [
+     "pm0833_00_Body_emi",
+     14
+    ],
+    [
+     "pm0063_00_Body_emi",
+     8
+    ],
+    [
+     "pm0195_00_Body_emi",
+     6
+    ],
+    [
+     "pm0445_00_BodyA_emi",
+     6
+    ],
+    [
+     "pm0565_00_BodyA_emi",
+     6
+    ],
+    [
+     "pm0606_00_BodyB_emi",
+     6
+    ]
+   ],
+   "distinct": 52,
+   "instances": 295,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=dummy_col",
+    "pm0032_00/Body=pm0032_00_Body_emi",
+    "pm0063_00/BodyVco01=pm0063_00_Body_emi",
+    "pm0111_00/BodyBSpc01=dummy_col",
+    "pm0138_00/BodySpc=pm0138_00_Body_emi"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: emission unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:texture:LightTblTex",
+   "format": "gfbmdl",
+   "where": "material texture param `LightTblTex`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "Default_lta",
+     220
+    ],
+    [
+     "chara_d_lta",
+     191
+    ]
+   ],
+   "distinct": 2,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=Default_lta",
+    "pm0032_00/Body=Default_lta",
+    "pm0063_00/BodyVco01=Default_lta",
+    "pm0111_00/BodyBSpc01=Default_lta",
+    "pm0138_00/BodySpc=Default_lta"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:ConstantColorSd0",
+   "format": "gfbmdl",
+   "where": "material color param `ConstantColorSd0`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(1, 0.713, 0.6)",
+     66
+    ],
+    [
+     "(0.5, 0.5, 0.5)",
+     41
+    ],
+    [
+     "(0.6, 0.6, 0.6)",
+     32
+    ],
+    [
+     "(0.527, 0.527, 0.527)",
+     31
+    ],
+    [
+     "(0.523, 0.523, 0.523)",
+     16
+    ],
+    [
+     "(0.71, 0.639, 0.71)",
+     16
+    ],
+    [
+     "(0.72, 0.72, 0.8)",
+     14
+    ],
+    [
+     "(0.65, 0.65, 0.65)",
+     12
+    ]
+   ],
+   "distinct": 51,
+   "instances": 405,
+   "models": 59,
+   "examples": [
+    "pm0000_00/Body=(0.451, 0.451, 0.451)",
+    "pm0032_00/Body=(0.563, 0.504, 0.63)",
+    "pm0063_00/BodyVco01=(0.73, 0.686, 0.599)",
+    "pm0111_00/BodyBSpc01=(0.523, 0.523, 0.523)",
+    "pm0138_00/BodySpc=(0.7, 0.616, 0.49)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:OutLineCol",
+   "format": "gfbmdl",
+   "where": "material color param `OutLineCol`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.47, 0.311, 0.306)",
+     90
+    ],
+    [
+     "(0.3, 0.3, 0.3)",
+     57
+    ],
+    [
+     "(0.45, 0.45, 0.45)",
+     22
+    ],
+    [
+     "(0.55, 0.522, 0.495)",
+     16
+    ],
+    [
+     "(0.47, 0.423, 0.47)",
+     16
+    ],
+    [
+     "(0.4, 0.4, 0.4)",
+     12
+    ],
+    [
+     "(0.6, 0.595, 0.57)",
+     12
+    ],
+    [
+     "(0.539, 0.546, 0.561)",
+     12
+    ]
+   ],
+   "distinct": 39,
+   "instances": 389,
+   "models": 59,
+   "examples": [
+    "pm0000_00/Body=(0.5, 0.419, 0.38)",
+    "pm0032_00/Body=(0.559, 0.52, 0.65)",
+    "pm0063_00/BodyVco01=(0.5, 0.475, 0.35)",
+    "pm0111_00/BodyBSpc01=(0.55, 0.522, 0.495)",
+    "pm0138_00/BodySpc=(0.55, 0.517, 0.468)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:NormalMapUVScaleU",
+   "format": "gfbmdl",
+   "where": "material float param `NormalMapUVScaleU`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     280
+    ],
+    [
+     "2",
+     62
+    ]
+   ],
+   "distinct": 2,
+   "instances": 342,
+   "models": 59,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:NormalMapUVScaleV",
+   "format": "gfbmdl",
+   "where": "material float param `NormalMapUVScaleV`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     280
+    ],
+    [
+     "4",
+     62
+    ]
+   ],
+   "distinct": 2,
+   "instances": 342,
+   "models": 59,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:RimColorVal",
+   "format": "gfbmdl",
+   "where": "material float param `RimColorVal`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     285
+    ],
+    [
+     "1.2",
+     124
+    ]
+   ],
+   "distinct": 2,
+   "instances": 409,
+   "models": 59,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:RimStrength",
+   "format": "gfbmdl",
+   "where": "material float param `RimStrength`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "8",
+     395
+    ],
+    [
+     "0.5",
+     13
+    ],
+    [
+     "20",
+     1
+    ]
+   ],
+   "distinct": 3,
+   "instances": 409,
+   "models": 59,
+   "examples": [
+    "pm0000_00/Body=8",
+    "pm0032_00/Body=8",
+    "pm0063_00/BodyVco01=8",
+    "pm0111_00/BodyBSpc01=8",
+    "pm0138_00/BodySpc=8"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:texture:NormalMapTex",
+   "format": "gfbmdl",
+   "where": "material texture param `NormalMapTex`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "chara_d_white",
+     51
+    ],
+    [
+     "pm0833_00_Body_nor",
+     14
+    ],
+    [
+     "pm0063_00_Body_nor",
+     8
+    ],
+    [
+     "pm0111_00_BodyB_nor",
+     8
+    ],
+    [
+     "pm0445_00_BodyA_nor",
+     8
+    ],
+    [
+     "pm0735_11_Body_nor",
+     8
+    ],
+    [
+     "pm0767_00_BodyB_nor",
+     8
+    ],
+    [
+     "pm0862_11_BodyB_nor",
+     8
+    ]
+   ],
+   "distinct": 104,
+   "instances": 342,
+   "models": 59,
+   "examples": [
+    "pm0000_00/Body=dummy_col",
+    "pm0032_00/Body=pm0032_00_Body_nor",
+    "pm0063_00/BodyVco01=pm0063_00_Body_nor",
+    "pm0111_00/BodyBSpc01=pm0111_00_BodyB_nor",
+    "pm0138_00/BodySpc=pm0138_00_Body_nor"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: normal maps unused (plain albedo PBR).",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/10",
+   "format": "gfbmdl",
+   "where": "table `/6[]` field 10",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     70
+    ],
+    [
+     "2",
+     61
+    ],
+    [
+     "3",
+     54
+    ],
+    [
+     "5",
+     42
+    ],
+    [
+     "6",
+     32
+    ],
+    [
+     "7",
+     15
+    ],
+    [
+     "vec[572] e40100000c010000",
+     12
+    ],
+    [
+     "vec[568] e001000008010000",
+     6
+    ]
+   ],
+   "distinct": 25,
+   "instances": 331,
+   "models": 51,
+   "examples": [
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1",
+    "pm0195_00: 1"
+   ],
+   "types": {
+    "i32": 277,
+    "vec": 54
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/8",
+   "format": "gfbmdl",
+   "where": "table `/6[]` field 8",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     70
+    ],
+    [
+     "2",
+     61
+    ],
+    [
+     "3",
+     54
+    ],
+    [
+     "4",
+     46
+    ],
+    [
+     "5",
+     42
+    ],
+    [
+     "6",
+     32
+    ],
+    [
+     "7",
+     15
+    ],
+    [
+     "vec[8] 38020000e0010000",
+     4
+    ]
+   ],
+   "distinct": 14,
+   "instances": 331,
+   "models": 51,
+   "examples": [
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1",
+    "pm0195_00: 1"
+   ],
+   "types": {
+    "i32": 323,
+    "vec": 7,
+    "vec<table>": 1
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:EmissionMaskVal",
+   "format": "gfbmdl",
+   "where": "material float param `EmissionMaskVal`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     254
+    ],
+    [
+     "3",
+     2
+    ]
+   ],
+   "distinct": 2,
+   "instances": 256,
+   "models": 45,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1",
+    "pm0195_00/BodyTattu=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:texture:Col0ColChangeTex",
+   "format": "gfbmdl",
+   "where": "material texture param `Col0ColChangeTex`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "chara_d_white",
+     176
+    ],
+    [
+     "tr0149_00_body_msk",
+     3
+    ],
+    [
+     "tr0000_00_face_msk",
+     2
+    ],
+    [
+     "tr0000_00_eye_msk",
+     2
+    ],
+    [
+     "tr0149_00_face_msk",
+     2
+    ],
+    [
+     "tr0149_00_eye_msk",
+     2
+    ],
+    [
+     "tr0000_00_hair_msk",
+     1
+    ],
+    [
+     "tr0000_00_body_msk",
+     1
+    ]
+   ],
+   "distinct": 10,
+   "instances": 191,
+   "models": 40,
+   "examples": [
+    "tr0000_00/obj=chara_d_white",
+    "tr0004_00/face_parts=chara_d_white",
+    "tr0009_00/obj=chara_d_white",
+    "tr0016_00/face_parts=chara_d_white",
+    "tr0024_00/face_parts=chara_d_white"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:texture:SpecularMap",
+   "format": "gfbmdl",
+   "where": "material texture param `SpecularMap`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "tr0149_00_face_spc",
+     4
+    ],
+    [
+     "tr0149_00_body_spc",
+     4
+    ],
+    [
+     "tr0000_00_face_spc",
+     2
+    ],
+    [
+     "tr0000_00_body_spc",
+     2
+    ],
+    [
+     "tr0004_00_face_spc",
+     2
+    ],
+    [
+     "tr0004_00_body_spc",
+     2
+    ],
+    [
+     "tr0009_00_body_spc",
+     2
+    ],
+    [
+     "tr0016_00_face_spc",
+     2
+    ]
+   ],
+   "distinct": 92,
+   "instances": 145,
+   "models": 40,
+   "examples": [
+    "tr0000_00/obj=tr0000_00_obj_spc",
+    "tr0004_00/face_parts=tr0004_00_face_spc",
+    "tr0009_00/obj=tr0009_00_obj_spc",
+    "tr0016_00/face_parts=tr0016_00_face_spc",
+    "tr0024_00/face_parts=tr0024_00_face_spc"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:SphereMapColorVal",
+   "format": "gfbmdl",
+   "where": "material float param `SphereMapColorVal`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     233
+    ],
+    [
+     "0.4",
+     8
+    ],
+    [
+     "0.3",
+     6
+    ],
+    [
+     "0.25",
+     2
+    ]
+   ],
+   "distinct": 4,
+   "instances": 249,
+   "models": 38,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:texture:SphereMapTex",
+   "format": "gfbmdl",
+   "where": "material texture param `SphereMapTex`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "dummy_col",
+     208
+    ],
+    [
+     "chara_env_00",
+     18
+    ],
+    [
+     "chara_d_white",
+     11
+    ],
+    [
+     "sphere_0116a_env",
+     8
+    ],
+    [
+     "sphere_0227b_env",
+     4
+    ]
+   ],
+   "distinct": 5,
+   "instances": 249,
+   "models": 38,
+   "examples": [
+    "pm0000_00/Body=dummy_col",
+    "pm0032_00/Body=dummy_col",
+    "pm0063_00/BodyVco01=dummy_col",
+    "pm0111_00/BodyBSpc01=dummy_col",
+    "pm0138_00/BodySpc=dummy_col"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:SpecularColor",
+   "format": "gfbmdl",
+   "where": "material color param `SpecularColor`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.1, 0.1, 0.1)",
+     44
+    ],
+    [
+     "(0.595, 0.63, 0.7)",
+     16
+    ],
+    [
+     "(0.604, 0.604, 0.604)",
+     14
+    ],
+    [
+     "(0.948, 1, 0.826)",
+     12
+    ],
+    [
+     "(0.45, 0.446, 0.428)",
+     12
+    ],
+    [
+     "(0.9, 0.9, 0.9)",
+     10
+    ],
+    [
+     "(0.8, 0.773, 0.64)",
+     8
+    ],
+    [
+     "(0.8, 0.8, 0.8)",
+     6
+    ]
+   ],
+   "distinct": 24,
+   "instances": 176,
+   "models": 33,
+   "examples": [
+    "pm0063_00/BodyVco01=(0.8, 0.773, 0.64)",
+    "pm0111_00/BodyBSpc01=(0.604, 0.604, 0.604)",
+    "pm0195_00/BodyTattu=(0.8, 0.8, 0.8)",
+    "pm0241_00/Body=(1, 0.917, 0.75)",
+    "pm0279_00/Body00=(0.76, 0.752, 0.596)"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:DeepShadowColor",
+   "format": "gfbmdl",
+   "where": "material color param `DeepShadowColor`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.9, 0.745, 0.72)",
+     59
+    ],
+    [
+     "(0.6, 0.6, 0.6)",
+     41
+    ],
+    [
+     "(0.88, 0.701, 0.672)",
+     12
+    ],
+    [
+     "(0.631, 0.631, 0.631)",
+     10
+    ]
+   ],
+   "distinct": 4,
+   "instances": 122,
+   "models": 23,
+   "examples": [
+    "tr0000_00/obj=(0.6, 0.6, 0.6)",
+    "tr0004_00/face_parts=(0.9, 0.745, 0.72)",
+    "tr0009_00/obj=(0.631, 0.631, 0.631)",
+    "tr0016_00/face_parts=(0.9, 0.745, 0.72)",
+    "tr0024_00/face_parts=(0.88, 0.701, 0.672)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:OutLineID",
+   "format": "gfbmdl",
+   "where": "material float param `OutLineID`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "2",
+     29
+    ],
+    [
+     "1",
+     27
+    ],
+    [
+     "3",
+     7
+    ],
+    [
+     "5",
+     2
+    ],
+    [
+     "4",
+     2
+    ],
+    [
+     "6",
+     2
+    ]
+   ],
+   "distinct": 6,
+   "instances": 69,
+   "models": 23,
+   "examples": [
+    "pm0063_00/BodyVco01=1",
+    "pm0833_00/Body05=5",
+    "tr0000_00/obj=3",
+    "tr0004_00/hair=1",
+    "tr0009_00/obj=3"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0",
+   "format": "gfbmdl",
+   "where": "table `/10[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "139",
+     2
+    ],
+    [
+     "145",
+     2
+    ],
+    [
+     "vec<table>[12788]",
+     1
+    ],
+    [
+     "159",
+     1
+    ],
+    [
+     "vec<table>[13732]",
+     1
+    ],
+    [
+     "vec<table>[13320]",
+     1
+    ],
+    [
+     "158",
+     1
+    ],
+    [
+     "vec<table>[13636]",
+     1
+    ]
+   ],
+   "distinct": 20,
+   "instances": 22,
+   "models": 21,
+   "examples": [
+    "tr0000_00: vec<table>[12788]",
+    "tr0004_00: 159",
+    "tr0016_00: vec<table>[13732]",
+    "tr0024_00: vec<table>[13320]",
+    "tr0031_00: 158"
+   ],
+   "types": {
+    "i32": 14,
+    "vec<table>": 7,
+    "vec": 1
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/2",
+   "format": "gfbmdl",
+   "where": "table `/10[]` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec[2] 8d0000008e000000",
+     2
+    ],
+    [
+     "vec[6] a0000000a1000000",
+     1
+    ],
+    [
+     "vec[4] 9500000096000000",
+     1
+    ],
+    [
+     "vec[1] 91000000a8000000",
+     1
+    ],
+    [
+     "vec[1] 9f000000b0000000",
+     1
+    ],
+    [
+     "vec[4] 8c0000008d000000",
+     1
+    ],
+    [
+     "vec[1] 9d000000af000000",
+     1
+    ],
+    [
+     "vec[5] 8e0000008f000000",
+     1
+    ]
+   ],
+   "distinct": 21,
+   "instances": 22,
+   "models": 21,
+   "examples": [
+    "tr0000_00: vec[2] 8d0000008e000000",
+    "tr0004_00: vec[6] a0000000a1000000",
+    "tr0016_00: vec[4] 9500000096000000",
+    "tr0024_00: vec[1] 91000000a8000000",
+    "tr0031_00: vec[1] 9f000000b0000000"
+   ],
+   "types": {
+    "vec": 21,
+    "str": 1
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/3",
+   "format": "gfbmdl",
+   "where": "table `/10[]` field 3",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(-11.85, 138.9, 0.5494, 11.85, 148.1, 11.21)",
+     1
+    ],
+    [
+     "(-6.174, 133.4, 8.966, 5.875, 143.6, 12.49)",
+     1
+    ],
+    [
+     "(-8.782, 136.1, 9.033, 8.782, 144.2, 14.28)",
+     1
+    ],
+    [
+     "(-2.212, 172.8, 15.01, 2.212, 175.2, 15.61)",
+     1
+    ],
+    [
+     "(-7.014, 103.2, 8.511, 7.014, 104.2, 9.933)",
+     1
+    ],
+    [
+     "(-3.316, 152.7, 12.58, 3.316, 155.5, 13.95)",
+     1
+    ],
+    [
+     "(-8.847, 144.7, 8.934, 8.847, 147.6, 12.53)",
+     1
+    ],
+    [
+     "(-2.116, 138.7, 11.92, 2.116, 157.4, 14.57)",
+     1
+    ]
+   ],
+   "distinct": 22,
+   "instances": 22,
+   "models": 21,
+   "examples": [
+    "tr0000_00: (-11.85, 138.9, 0.5494, 11.85, 148.1, 11.21)",
+    "tr0004_00: (-6.174, 133.4, 8.966, 5.875, 143.6, 12.49)",
+    "tr0016_00: (-8.782, 136.1, 9.033, 8.782, 144.2, 14.28)",
+    "tr0024_00: (-2.212, 172.8, 15.01, 2.212, 175.2, 15.61)",
+    "tr0031_00: (-7.014, 103.2, 8.511, 7.014, 104.2, 9.933)"
+   ],
+   "types": {
+    "struct": 21,
+    "hex": 1
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0",
+   "format": "gfbanm",
+   "where": "table `/2` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[4]",
+     78
+    ],
+    [
+     "vec<table>[9]",
+     74
+    ],
+    [
+     "vec<table>[8]",
+     70
+    ],
+    [
+     "vec<table>[6]",
+     64
+    ],
+    [
+     "vec<table>[3]",
+     62
+    ],
+    [
+     "vec<table>[5]",
+     42
+    ],
+    [
+     "vec<table>[43]",
+     25
+    ],
+    [
+     "vec<table>[7]",
+     23
+    ]
+   ],
+   "distinct": 9,
+   "instances": 448,
+   "models": 20,
+   "examples": [
+    "pm0000_00: vec<table>[1]",
+    "pm0032_00: vec<table>[1]",
+    "pm0063_00: vec<table>[1]",
+    "pm0111_00: vec<table>[9]",
+    "pm0138_00: vec<table>[1]"
+   ],
+   "types": {
+    "vec<table>": 448
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/0",
+   "format": "gfbanm",
+   "where": "table `/2/0[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "Eye",
+     149
+    ],
+    [
+     "Body",
+     101
+    ],
+    [
+     "LEye",
+     84
+    ],
+    [
+     "Body00",
+     79
+    ],
+    [
+     "Body01",
+     79
+    ],
+    [
+     "REye",
+     69
+    ],
+    [
+     "BodyASpc00",
+     48
+    ],
+    [
+     "BodyVco01",
+     47
+    ]
+   ],
+   "distinct": 32,
+   "instances": 1700,
+   "models": 20,
+   "examples": [
+    "pm0000_00: Body",
+    "pm0032_00: Body",
+    "pm0063_00: Body",
+    "pm0111_00: BodyBSpc01",
+    "pm0138_00: Body"
+   ],
+   "types": {
+    "str": 1198
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/1[]/0",
+   "format": "gfbanm",
+   "where": "table `/2/0[]/1[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "useColorTex",
+     305
+    ],
+    [
+     "SwitchPriority",
+     305
+    ],
+    [
+     "EmissionMaskUse",
+     290
+    ],
+    [
+     "SwitchEmissionMaskTexUV",
+     280
+    ],
+    [
+     "Layer1Enable",
+     25
+    ],
+    [
+     "AmbientMapEnable",
+     15
+    ]
+   ],
+   "distinct": 6,
+   "instances": 4792,
+   "models": 20,
+   "examples": [
+    "pm0000_00: useColorTex",
+    "pm0032_00: useColorTex",
+    "pm0063_00: useColorTex",
+    "pm0111_00: useColorTex",
+    "pm0138_00: useColorTex"
+   ],
+   "types": {
+    "str": 1220
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/1[]/2",
+   "format": "gfbanm",
+   "where": "table `/2/0[]/1[]` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec[4] 1700000053776974",
+     805
+    ],
+    [
+     "vec[6] 000000010b000000",
+     385
+    ],
+    [
+     "vec[4] 0e00000053776974",
+     30
+    ]
+   ],
+   "distinct": 3,
+   "instances": 4792,
+   "models": 20,
+   "examples": [
+    "pm0000_00: vec[6] 000000010b000000",
+    "pm0032_00: vec[6] 000000010b000000",
+    "pm0063_00: vec[6] 000000010b000000",
+    "pm0111_00: vec[6] 000000010b000000",
+    "pm0138_00: vec[6] 000000010b000000"
+   ],
+   "types": {
+    "vec": 1220
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/2",
+   "format": "gfbanm",
+   "where": "table `/2/0[]` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[52]",
+     1062
+    ],
+    [
+     "vec<table>[42]",
+     136
+    ]
+   ],
+   "distinct": 2,
+   "instances": 1700,
+   "models": 20,
+   "examples": [
+    "pm0000_00: vec<table>[52]",
+    "pm0032_00: vec<table>[52]",
+    "pm0063_00: vec<table>[52]",
+    "pm0111_00: vec<table>[42]",
+    "pm0138_00: vec<table>[52]"
+   ],
+   "types": {
+    "vec<table>": 1198
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/2[]/0",
+   "format": "gfbanm",
+   "where": "table `/2/0[]/2[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "ColorUVScaleU",
+     305
+    ],
+    [
+     "ColorUVScaleV",
+     305
+    ],
+    [
+     "ColorUVTranslateU",
+     305
+    ],
+    [
+     "ColorBaseU",
+     290
+    ],
+    [
+     "ConstantColor0Val",
+     15
+    ]
+   ],
+   "distinct": 5,
+   "instances": 4792,
+   "models": 20,
+   "examples": [
+    "pm0000_00: ColorUVScaleU",
+    "pm0032_00: ColorUVScaleU",
+    "pm0063_00: ColorUVScaleU",
+    "pm0111_00: ColorUVScaleU",
+    "pm0138_00: ColorUVScaleU"
+   ],
+   "types": {
+    "str": 1220
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/2[]/1",
+   "format": "gfbanm",
+   "where": "table `/2/0[]/2[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     1204
+    ],
+    [
+     "4",
+     16
+    ]
+   ],
+   "distinct": 2,
+   "instances": 4792,
+   "models": 20,
+   "examples": [
+    "pm0000_00: 1",
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1"
+   ],
+   "types": {
+    "u8": 1220
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/3",
+   "format": "gfbanm",
+   "where": "table `/2/0[]` field 3",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[19]",
+     1062
+    ],
+    [
+     "vec<table>[18]",
+     136
+    ]
+   ],
+   "distinct": 2,
+   "instances": 1700,
+   "models": 20,
+   "examples": [
+    "pm0000_00: vec<table>[19]",
+    "pm0032_00: vec<table>[19]",
+    "pm0063_00: vec<table>[19]",
+    "pm0111_00: vec<table>[18]",
+    "pm0138_00: vec<table>[19]"
+   ],
+   "types": {
+    "vec<table>": 1198
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/3[]/0",
+   "format": "gfbanm",
+   "where": "table `/2/0[]/3[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "ConstantColor0",
+     305
+    ],
+    [
+     "ConstantColorSd0",
+     305
+    ],
+    [
+     "ConstantColor1",
+     305
+    ],
+    [
+     "ConstantColorSd1",
+     305
+    ]
+   ],
+   "distinct": 4,
+   "instances": 4792,
+   "models": 20,
+   "examples": [
+    "pm0000_00: ConstantColor0",
+    "pm0032_00: ConstantColor0",
+    "pm0063_00: ConstantColor0",
+    "pm0111_00: ConstantColor0",
+    "pm0138_00: ConstantColor0"
+   ],
+   "types": {
+    "str": 1220
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/3[]/2",
+   "format": "gfbanm",
+   "where": "table `/2/0[]/3[]` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec[6] 0000803f0000803f",
+     636
+    ],
+    [
+     "table",
+     583
+    ],
+    [
+     "vec[6] 9a99193ff4fd143f",
+     1
+    ]
+   ],
+   "distinct": 3,
+   "instances": 4792,
+   "models": 20,
+   "examples": [
+    "pm0000_00: vec[6] 0000803f0000803f",
+    "pm0032_00: vec[6] 0000803f0000803f",
+    "pm0063_00: vec[6] 0000803f0000803f",
+    "pm0111_00: table",
+    "pm0138_00: vec[6] 0000803f0000803f"
+   ],
+   "types": {
+    "vec": 637,
+    "table": 583
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/7[]/3",
+   "format": "gfbmdl",
+   "where": "table `/7[]` field 3",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     82
+    ],
+    [
+     "5",
+     2
+    ],
+    [
+     "2",
+     1
+    ]
+   ],
+   "distinct": 3,
+   "instances": 85,
+   "models": 20,
+   "examples": [
+    "tr0000_00: 2",
+    "tr0004_00: 1",
+    "tr0016_00: 1",
+    "tr0024_00: 1",
+    "tr0031_00: 1"
+   ],
+   "types": {
+    "i32": 85
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:ConstantColorSd1",
+   "format": "gfbmdl",
+   "where": "material color param `ConstantColorSd1`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.604, 0.517, 0.477)",
+     16
+    ],
+    [
+     "(0.639, 0.653, 0.71)",
+     16
+    ],
+    [
+     "(0.65, 0.645, 0.617)",
+     12
+    ],
+    [
+     "(0.722, 0.707, 0.648)",
+     10
+    ],
+    [
+     "(0.72, 0.763, 0.8)",
+     10
+    ],
+    [
+     "(0.63, 0.688, 0.7)",
+     10
+    ],
+    [
+     "(0.651, 0.651, 0.651)",
+     10
+    ],
+    [
+     "(0.707, 0.702, 0.78)",
+     10
+    ]
+   ],
+   "distinct": 41,
+   "instances": 216,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=(0.451, 0.451, 0.451)",
+    "pm0032_00/Body=(0.504, 0.542, 0.63)",
+    "pm0063_00/BodyVco01=(0.69, 0.669, 0.607)",
+    "pm0111_00/BodyBSpc01=(0.604, 0.517, 0.477)",
+    "pm0138_00/BodySpc=(0.7, 0.644, 0.56)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:Layer1UVScaleU",
+   "format": "gfbmdl",
+   "where": "material float param `Layer1UVScaleU`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     188
+    ],
+    [
+     "4",
+     28
+    ],
+    [
+     "-4",
+     2
+    ],
+    [
+     "2",
+     2
+    ]
+   ],
+   "distinct": 4,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:Layer1UVScaleV",
+   "format": "gfbmdl",
+   "where": "material float param `Layer1UVScaleV`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     190
+    ],
+    [
+     "4",
+     30
+    ]
+   ],
+   "distinct": 2,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:texture:LyCol0Tex",
+   "format": "gfbmdl",
+   "where": "material texture param `LyCol0Tex`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "dummy_col",
+     188
+    ],
+    [
+     "pm0606_00_BodyB_lyc",
+     3
+    ],
+    [
+     "pm0606_00_BodyB_lyc_rare",
+     3
+    ],
+    [
+     "pm0111_00_Iris_lyc",
+     2
+    ],
+    [
+     "pm0111_00_Iris_lyc_rare",
+     2
+    ],
+    [
+     "pm0241_00_Iris_lyc",
+     2
+    ],
+    [
+     "pm0241_00_Iris_lyc_rare",
+     2
+    ],
+    [
+     "pm0403_00_Iris_lyc",
+     2
+    ]
+   ],
+   "distinct": 17,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=dummy_col",
+    "pm0032_00/Body=dummy_col",
+    "pm0063_00/BodyVco01=dummy_col",
+    "pm0111_00/BodyBSpc01=dummy_col",
+    "pm0138_00/BodySpc=dummy_col"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: LyCol0Tex layer blending unused.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0",
+   "format": "gfbanm",
+   "where": "table `/4` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     113
+    ],
+    [
+     "vec<table>[1]",
+     77
+    ],
+    [
+     "vec<table>[2]",
+     58
+    ],
+    [
+     "vec<table>[4]",
+     37
+    ],
+    [
+     "vec<table>[3]",
+     26
+    ],
+    [
+     "vec<table>[5]",
+     11
+    ],
+    [
+     "vec<table>[6]",
+     9
+    ],
+    [
+     "vec<table>[7]",
+     7
+    ]
+   ],
+   "distinct": 16,
+   "instances": 356,
+   "models": 19,
+   "examples": [
+    "pm0032_00: vec<table>[5]",
+    "pm0063_00: vec<table>[1]",
+    "pm0111_00: empty vec/str",
+    "pm0138_00: vec<table>[3]",
+    "pm0195_00: vec<table>[3]"
+   ],
+   "types": {
+    "vec<table>": 243,
+    "empty": 113
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/0",
+   "format": "gfbanm",
+   "where": "table `/4/0[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "Sound/Wwise",
+     474
+    ],
+    [
+     "Pokemon/EffectStart",
+     55
+    ],
+    [
+     "Pokemon/SEStart",
+     49
+    ],
+    [
+     "Pokemon/ButuriStart",
+     9
+    ]
+   ],
+   "distinct": 4,
+   "instances": 599,
+   "models": 19,
+   "examples": [
+    "pm0032_00: Sound/Wwise",
+    "pm0063_00: Sound/Wwise",
+    "pm0111_00: Pokemon/EffectStart",
+    "pm0138_00: Pokemon/EffectStart",
+    "pm0195_00: Pokemon/EffectStart"
+   ],
+   "types": {
+    "str": 587
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/1",
+   "format": "gfbanm",
+   "where": "table `/4/0[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "19",
+     37
+    ],
+    [
+     "1",
+     31
+    ],
+    [
+     "2",
+     23
+    ],
+    [
+     "18",
+     22
+    ],
+    [
+     "15",
+     22
+    ],
+    [
+     "38",
+     20
+    ],
+    [
+     "11",
+     19
+    ],
+    [
+     "10",
+     19
+    ]
+   ],
+   "distinct": 101,
+   "instances": 599,
+   "models": 19,
+   "examples": [
+    "pm0032_00: 1",
+    "pm0063_00: 38",
+    "pm0111_00: 1",
+    "pm0138_00: 6",
+    "pm0195_00: 1"
+   ],
+   "types": {
+    "i32": 469,
+    "vec<table>": 57,
+    "vec": 46,
+    "table": 15
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/2",
+   "format": "gfbanm",
+   "where": "table `/4/0[]` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "2",
+     31
+    ],
+    [
+     "3",
+     23
+    ],
+    [
+     "19",
+     22
+    ],
+    [
+     "20",
+     22
+    ],
+    [
+     "39",
+     20
+    ],
+    [
+     "11",
+     19
+    ],
+    [
+     "21",
+     18
+    ],
+    [
+     "27",
+     17
+    ]
+   ],
+   "distinct": 96,
+   "instances": 599,
+   "models": 19,
+   "examples": [
+    "pm0032_00: 2",
+    "pm0063_00: 39",
+    "pm0111_00: 2",
+    "pm0138_00: 7",
+    "pm0195_00: 2"
+   ],
+   "types": {
+    "i32": 474,
+    "vec<table>": 73,
+    "vec": 29,
+    "table": 11
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/3",
+   "format": "gfbanm",
+   "where": "table `/4/0[]` field 3",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[4]",
+     474
+    ],
+    [
+     "vec<table>[1]",
+     113
+    ]
+   ],
+   "distinct": 2,
+   "instances": 599,
+   "models": 19,
+   "examples": [
+    "pm0032_00: vec<table>[4]",
+    "pm0063_00: vec<table>[4]",
+    "pm0111_00: vec<table>[1]",
+    "pm0138_00: vec<table>[1]",
+    "pm0195_00: vec<table>[1]"
+   ],
+   "types": {
+    "vec<table>": 587
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/3[]/0",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/3[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "PostEvent",
+     272
+    ],
+    [
+     "Fllow",
+     267
+    ],
+    [
+     "Joint",
+     266
+    ],
+    [
+     "Attribute",
+     262
+    ],
+    [
+     "No",
+     68
+    ]
+   ],
+   "distinct": 5,
+   "instances": 2009,
+   "models": 19,
+   "examples": [
+    "pm0032_00: PostEvent",
+    "pm0063_00: PostEvent",
+    "pm0111_00: No",
+    "pm0138_00: No",
+    "pm0195_00: No"
+   ],
+   "types": {
+    "str": 1135
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/3[]/1",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/3[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "4",
+     538
+    ],
+    [
+     "3",
+     529
+    ],
+    [
+     "1",
+     68
+    ]
+   ],
+   "distinct": 3,
+   "instances": 2009,
+   "models": 19,
+   "examples": [
+    "pm0032_00: 4",
+    "pm0063_00: 4",
+    "pm0111_00: 1",
+    "pm0138_00: 1",
+    "pm0195_00: 1"
+   ],
+   "types": {
+    "u8": 1135
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/2[]/0",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/2[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "Attribute",
+     64
+    ],
+    [
+     "Joint",
+     49
+    ],
+    [
+     "Fllow",
+     28
+    ],
+    [
+     "PostEvent",
+     11
+    ],
+    [
+     "1",
+     5
+    ],
+    [
+     "No",
+     3
+    ],
+    [
+     "2",
+     1
+    ]
+   ],
+   "distinct": 7,
+   "instances": 161,
+   "models": 18,
+   "examples": [
+    "pm0032_00: Attribute",
+    "pm0063_00: Attribute",
+    "pm0111_00: Joint",
+    "pm0138_00: PostEvent",
+    "pm0195_00: Attribute"
+   ],
+   "types": {
+    "str": 155,
+    "u8": 4,
+    "i32": 2
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/2[]/1",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/2[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "3",
+     92
+    ],
+    [
+     "4",
+     60
+    ],
+    [
+     "1",
+     3
+    ]
+   ],
+   "distinct": 3,
+   "instances": 155,
+   "models": 18,
+   "examples": [
+    "pm0032_00: 3",
+    "pm0063_00: 3",
+    "pm0111_00: 4",
+    "pm0138_00: 4",
+    "pm0195_00: 3"
+   ],
+   "types": {
+    "u8": 155
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/1[]/0",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/1[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "Attribute",
+     50
+    ],
+    [
+     "Joint",
+     42
+    ],
+    [
+     "Fllow",
+     27
+    ],
+    [
+     "PostEvent",
+     13
+    ],
+    [
+     "1",
+     7
+    ]
+   ],
+   "distinct": 5,
+   "instances": 139,
+   "models": 17,
+   "examples": [
+    "pm0032_00: Attribute",
+    "pm0111_00: Attribute",
+    "pm0138_00: PostEvent",
+    "pm0195_00: PostEvent",
+    "pm0241_00: PostEvent"
+   ],
+   "types": {
+    "str": 132,
+    "u8": 7
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/1[]/1",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/1[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "3",
+     77
+    ],
+    [
+     "4",
+     55
+    ]
+   ],
+   "distinct": 2,
+   "instances": 132,
+   "models": 17,
+   "examples": [
+    "pm0032_00: 3",
+    "pm0111_00: 3",
+    "pm0138_00: 4",
+    "pm0195_00: 4",
+    "pm0241_00: 4"
+   ],
+   "types": {
+    "u8": 132
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:Col0SecondaryColor",
+   "format": "gfbmdl",
+   "where": "material color param `Col0SecondaryColor`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(2.612, 2.612, 2.612)",
+     10
+    ],
+    [
+     "(0.1, 0.136, 0.08)",
+     2
+    ],
+    [
+     "(1.44, 1.44, 1.44)",
+     2
+    ],
+    [
+     "(3.135, 3.135, 3.135)",
+     1
+    ],
+    [
+     "(0.072, 0.086, 0.031)",
+     1
+    ]
+   ],
+   "distinct": 5,
+   "instances": 16,
+   "models": 10,
+   "examples": [
+    "tr0149_00/body=(0.1, 0.136, 0.08)",
+    "ob0001_00/objB=(2.612, 2.612, 2.612)",
+    "ob0008_00/obj=(2.612, 2.612, 2.612)",
+    "ob0019_00/obj00=(2.612, 2.612, 2.612)",
+    "ob0022_00/obj=(2.612, 2.612, 2.612)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/1/0",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/1` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     5
+    ],
+    [
+     "Attribute",
+     4
+    ],
+    [
+     "No",
+     3
+    ],
+    [
+     "Joint",
+     2
+    ],
+    [
+     "PostEvent",
+     1
+    ]
+   ],
+   "distinct": 5,
+   "instances": 15,
+   "models": 8,
+   "examples": [
+    "pm0032_00: 1",
+    "pm0195_00: 1",
+    "pm0403_00: 1",
+    "pm0475_00: Joint",
+    "pm0528_00: Attribute"
+   ],
+   "types": {
+    "str": 10,
+    "i32": 3,
+    "u8": 2
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/2/0",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/2` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "Attribute",
+     5
+    ],
+    [
+     "No",
+     2
+    ],
+    [
+     "1",
+     2
+    ],
+    [
+     "Joint",
+     2
+    ]
+   ],
+   "distinct": 4,
+   "instances": 11,
+   "models": 7,
+   "examples": [
+    "pm0111_00: No",
+    "pm0138_00: Attribute",
+    "pm0445_01: Attribute",
+    "pm0528_00: Attribute",
+    "pm0641_12: No"
+   ],
+   "types": {
+    "str": 9,
+    "u8": 2
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/2/1",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/2` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "3",
+     5
+    ],
+    [
+     "1",
+     2
+    ],
+    [
+     "4",
+     2
+    ]
+   ],
+   "distinct": 3,
+   "instances": 9,
+   "models": 7,
+   "examples": [
+    "pm0111_00: 1",
+    "pm0138_00: 3",
+    "pm0445_01: 3",
+    "pm0528_00: 3",
+    "pm0641_12: 1"
+   ],
+   "types": {
+    "u8": 9
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/2/2",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/2` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     9
+    ]
+   ],
+   "distinct": 1,
+   "instances": 9,
+   "models": 7,
+   "examples": [
+    "pm0111_00: table",
+    "pm0138_00: table",
+    "pm0445_01: table",
+    "pm0528_00: table",
+    "pm0641_12: table"
+   ],
+   "types": {
+    "table": 9
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0[]/0",
+   "format": "gfbmdl",
+   "where": "table `/10[]/0[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "LEyebrowsC",
+     4
+    ],
+    [
+     "LEyebrowsB",
+     3
+    ],
+    [
+     "LEyebrowsD",
+     3
+    ],
+    [
+     "REyebrowsA",
+     3
+    ],
+    [
+     "LEyebrowsA",
+     2
+    ],
+    [
+     "REyebrowsB",
+     2
+    ],
+    [
+     "RFacePartsA",
+     2
+    ],
+    [
+     "RLowerEyelidB",
+     1
+    ]
+   ],
+   "distinct": 16,
+   "instances": 28,
+   "models": 7,
+   "examples": [
+    "tr0000_00: LEyebrowsA",
+    "tr0016_00: RLowerEyelidB",
+    "tr0024_00: REyebrowsA",
+    "tr0047_00: LEyebrowsB",
+    "tr0071_00: LEyebrowsC"
+   ],
+   "types": {
+    "str": 28
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0[]/2",
+   "format": "gfbmdl",
+   "where": "table `/10[]/0[]` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec[4] 0a0000004c457965",
+     12
+    ],
+    [
+     "vec[4] 0a00000052457965",
+     7
+    ],
+    [
+     "22",
+     4
+    ],
+    [
+     "23",
+     4
+    ],
+    [
+     "20",
+     1
+    ]
+   ],
+   "distinct": 5,
+   "instances": 28,
+   "models": 7,
+   "examples": [
+    "tr0000_00: vec[4] 0a0000004c457965",
+    "tr0016_00: 22",
+    "tr0024_00: vec[4] 0a00000052457965",
+    "tr0047_00: vec[4] 0a0000004c457965",
+    "tr0071_00: vec[4] 0a0000004c457965"
+   ],
+   "types": {
+    "vec": 19,
+    "i32": 9
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0[]/6",
+   "format": "gfbmdl",
+   "where": "table `/10[]/0[]` field 6",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0, 0, 0)",
+     4
+    ],
+    [
+     "(0, 0, 0.2618)",
+     2
+    ],
+    [
+     "(0, -0.1745, -0.3142)",
+     2
+    ],
+    [
+     "2a52a83a28812e34176d95be",
+     1
+    ],
+    [
+     "(0.0015, -0.0001, -0.352)",
+     1
+    ],
+    [
+     "c5aa113b208d7c34b87a05bf",
+     1
+    ],
+    [
+     "(0.0026, -0.0012, -0.6349)",
+     1
+    ],
+    [
+     "(-0.0279, -0.0873, 0)",
+     1
+    ]
+   ],
+   "distinct": 23,
+   "instances": 28,
+   "models": 7,
+   "examples": [
+    "tr0000_00: 2a52a83a28812e34176d95be",
+    "tr0016_00: (-0.0279, -0.0873, 0)",
+    "tr0024_00: (0, 0, 0.2618)",
+    "tr0047_00: (0, 0, -0.3491)",
+    "tr0071_00: (0, -0.1745, -0.3142)"
+   ],
+   "types": {
+    "struct": 19,
+    "hex": 9
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0[]/7",
+   "format": "gfbmdl",
+   "where": "table `/10[]/0[]` field 7",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(7.5, -3.9, -7.4)",
+     1
+    ],
+    [
+     "(6.9, -6.2, -7.7)",
+     1
+    ],
+    [
+     "(5.3, -8.7, -6.9)",
+     1
+    ],
+    [
+     "(3.8, -10, -5.7)",
+     1
+    ],
+    [
+     "(3.095, 2.15, 2.082)",
+     1
+    ],
+    [
+     "(2.9, 2.8, 1.5)",
+     1
+    ],
+    [
+     "(3.086, -1.664, 2.758)",
+     1
+    ],
+    [
+     "(3.3, 2.6, -0.7)",
+     1
+    ]
+   ],
+   "distinct": 28,
+   "instances": 28,
+   "models": 7,
+   "examples": [
+    "tr0000_00: (7.5, -3.9, -7.4)",
+    "tr0016_00: (3.095, 2.15, 2.082)",
+    "tr0024_00: (12.65, 2.766, -2.673)",
+    "tr0047_00: (11.67, -5.078, -6.791)",
+    "tr0071_00: (9.465, -8.064, -2.375)"
+   ],
+   "types": {
+    "struct": 28
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:L1ConstantColorSd0",
+   "format": "gfbmdl",
+   "where": "material color param `L1ConstantColorSd0`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.686, 0.686, 0.686)",
+     10
+    ],
+    [
+     "(0.477, 0.56, 0.604)",
+     4
+    ],
+    [
+     "(0.7, 0.63, 0.677)",
+     4
+    ],
+    [
+     "(0.539, 0.566, 0.6)",
+     4
+    ],
+    [
+     "(0.72, 0.72, 0.8)",
+     4
+    ],
+    [
+     "(0.7, 0.7, 0.7)",
+     4
+    ],
+    [
+     "(0.81, 0.431, 0.397)",
+     2
+    ],
+    [
+     "(0.258, 0.68, 0.441)",
+     2
+    ]
+   ],
+   "distinct": 10,
+   "instances": 38,
+   "models": 7,
+   "examples": [
+    "pm0111_00/REye=(0.477, 0.56, 0.604)",
+    "pm0241_00/REye=(0.7, 0.63, 0.677)",
+    "pm0403_00/REye=(0.539, 0.566, 0.6)",
+    "pm0445_01/LEye=(0.72, 0.72, 0.8)",
+    "pm0475_00/LEye=(0.7, 0.7, 0.7)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:L1ConstantColorSd1",
+   "format": "gfbmdl",
+   "where": "material color param `L1ConstantColorSd1`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.686, 0.686, 0.686)",
+     10
+    ],
+    [
+     "(0.477, 0.56, 0.604)",
+     4
+    ],
+    [
+     "(0.63, 0.677, 0.7)",
+     4
+    ],
+    [
+     "(0.539, 0.566, 0.6)",
+     4
+    ],
+    [
+     "(0.72, 0.763, 0.8)",
+     4
+    ],
+    [
+     "(0.7, 0.7, 0.7)",
+     4
+    ],
+    [
+     "(0.75, 0.352, 0.578)",
+     2
+    ],
+    [
+     "(0.223, 0.57, 0.77)",
+     2
+    ]
+   ],
+   "distinct": 10,
+   "instances": 38,
+   "models": 7,
+   "examples": [
+    "pm0111_00/REye=(0.477, 0.56, 0.604)",
+    "pm0241_00/REye=(0.63, 0.677, 0.7)",
+    "pm0403_00/REye=(0.539, 0.566, 0.6)",
+    "pm0445_01/LEye=(0.72, 0.763, 0.8)",
+    "pm0475_00/LEye=(0.7, 0.7, 0.7)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/1/1",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/1` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "3",
+     4
+    ],
+    [
+     "4",
+     3
+    ],
+    [
+     "1",
+     3
+    ]
+   ],
+   "distinct": 3,
+   "instances": 10,
+   "models": 6,
+   "examples": [
+    "pm0032_00: 3",
+    "pm0475_00: 4",
+    "pm0528_00: 3",
+    "pm0565_00: 1",
+    "pm0767_00: 3"
+   ],
+   "types": {
+    "u8": 10
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:Col0PrimaryColor",
+   "format": "gfbmdl",
+   "where": "material color param `Col0PrimaryColor`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.1, 0.044, 0.032)",
+     3
+    ],
+    [
+     "(0.22, 0.337, 0.604)",
+     3
+    ],
+    [
+     "(0.356, 0.168, 0.061)",
+     3
+    ],
+    [
+     "(0.246, 0.386, 0.552)",
+     2
+    ],
+    [
+     "(0.08, 0.038, 0.032)",
+     1
+    ],
+    [
+     "(0.036, 0.02, 0.017)",
+     1
+    ],
+    [
+     "(1.44, 1.44, 1.44)",
+     1
+    ],
+    [
+     "(0.973, 0.631, 0.095)",
+     1
+    ]
+   ],
+   "distinct": 8,
+   "instances": 15,
+   "models": 5,
+   "examples": [
+    "tr0000_00/face_parts=(0.1, 0.044, 0.032)",
+    "tr0063_00/Reye=(0.22, 0.337, 0.604)",
+    "tr0149_00/hair=(0.356, 0.168, 0.061)",
+    "tr0156_00/Reye=(1.44, 1.44, 1.44)",
+    "ob0041_00/tr0148body=(0.973, 0.631, 0.095)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:Col0SkinColor",
+   "format": "gfbmdl",
+   "where": "material color param `Col0SkinColor`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.905, 0.68, 0.558)",
+     4
+    ],
+    [
+     "(0.93, 0.791, 0.738)",
+     3
+    ],
+    [
+     "(1.2, 1.2, 1.2)",
+     1
+    ],
+    [
+     "(0.665, 0.376, 0.205)",
+     1
+    ]
+   ],
+   "distinct": 4,
+   "instances": 9,
+   "models": 5,
+   "examples": [
+    "tr0000_00/face_parts=(0.93, 0.791, 0.738)",
+    "tr0063_00/body_skin=(1.2, 1.2, 1.2)",
+    "tr0149_00/face=(0.905, 0.68, 0.558)",
+    "tr0164_00/body_skin=(0.905, 0.68, 0.558)",
+    "ob0041_00/tr0148body=(0.665, 0.376, 0.205)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:SphereMapColor",
+   "format": "gfbmdl",
+   "where": "material color param `SphereMapColor`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.523, 0.523, 0.523)",
+     8
+    ],
+    [
+     "(0.6, 0.6, 0.6)",
+     4
+    ],
+    [
+     "(0.614, 0.656, 0.66)",
+     4
+    ],
+    [
+     "(-1, -1, -1)",
+     2
+    ]
+   ],
+   "distinct": 4,
+   "instances": 18,
+   "models": 3,
+   "examples": [
+    "pm0195_00/BodyTattu=(0.523, 0.523, 0.523)",
+    "pm0565_00/BodyASpc00=(0.6, 0.6, 0.6)",
+    "ob0046_00/obj00=(-1, -1, -1)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:ConstantColor",
+   "format": "gfbmdl",
+   "where": "material color param `ConstantColor`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(1.13, 1.13, 1.13)",
+     4
+    ]
+   ],
+   "distinct": 1,
+   "instances": 4,
+   "models": 2,
+   "examples": [
+    "tr0024_00/Leye=(1.13, 1.13, 1.13)",
+    "tr0156_00/Leye=(1.13, 1.13, 1.13)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:SphereMaskEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `SphereMaskEnable`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     10
+    ]
+   ],
+   "distinct": 1,
+   "instances": 10,
+   "models": 2,
+   "examples": [
+    "pm0195_00/BodyTattu=True",
+    "pm0565_00/BodyASpc00=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/21",
+   "format": "gfbmdl",
+   "where": "table `/6[]` field 21",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "-200",
+     2
+    ]
+   ],
+   "distinct": 1,
+   "instances": 2,
+   "models": 1,
+   "examples": [
+    "ob0046_00: -200"
+   ],
+   "types": {
+    "i32": 2
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/8[]/0",
+   "format": "gfbmdl",
+   "where": "table `/6[]/8[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[13]",
+     1
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1,
+   "models": 1,
+   "examples": [
+    "ob0041_00: vec<table>[13]"
+   ],
+   "types": {
+    "vec<table>": 1
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/8[]/0[]/0",
+   "format": "gfbmdl",
+   "where": "table `/6[]/8[]/0[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "FogEnable",
+     1
+    ],
+    [
+     "DiscardEnable",
+     1
+    ],
+    [
+     "CastShadow",
+     1
+    ],
+    [
+     "ReceiveShadow",
+     1
+    ]
+   ],
+   "distinct": 4,
+   "instances": 4,
+   "models": 1,
+   "examples": [
+    "ob0041_00: FogEnable"
+   ],
+   "types": {
+    "str": 4
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/8[]/0[]/1",
+   "format": "gfbmdl",
+   "where": "table `/6[]/8[]/0[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     2
+    ]
+   ],
+   "distinct": 1,
+   "instances": 2,
+   "models": 1,
+   "examples": [
+    "ob0041_00: 1"
+   ],
+   "types": {
+    "u8": 2
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/8[]/1",
+   "format": "gfbmdl",
+   "where": "table `/6[]/8[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[9]",
+     1
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1,
+   "models": 1,
+   "examples": [
+    "ob0041_00: vec<table>[9]"
+   ],
+   "types": {
+    "vec<table>": 1
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/8[]/1[]/0",
+   "format": "gfbmdl",
+   "where": "table `/6[]/8[]/1[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "CullMode",
+     1
+    ],
+    [
+     "LightSetNo",
+     1
+    ],
+    [
+     "ShaderType",
+     1
+    ],
+    [
+     "Priority",
+     1
+    ]
+   ],
+   "distinct": 4,
+   "instances": 4,
+   "models": 1,
+   "examples": [
+    "ob0041_00: CullMode"
+   ],
+   "types": {
+    "str": 4
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:ConstantColor0",
+   "format": "gfbmdl",
+   "where": "material color param `ConstantColor0`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.787, 0.787, 0.787)",
+     2
+    ]
+   ],
+   "distinct": 1,
+   "instances": 2,
+   "models": 1,
+   "examples": [
+    "pm0111_00/BodyBSpc02=(0.787, 0.787, 0.787)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:ConstantColor1",
+   "format": "gfbmdl",
+   "where": "material color param `ConstantColor1`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.787, 0.787, 0.787)",
+     2
+    ]
+   ],
+   "distinct": 1,
+   "instances": 2,
+   "models": 1,
+   "examples": [
+    "pm0111_00/BodyBSpc02=(0.787, 0.787, 0.787)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "fitted:viewer/src/scene/ViewerScene.ts:DEFAULT_FOV_35_deg_chosen_by_eye_viewer_default_since_the_f",
+   "format": "code",
+   "where": "viewer/src/scene/ViewerScene.ts:24",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "DEFAULT_FOV 35 deg chosen by eye (viewer default since the first version), 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:viewer/src/scene/ViewerScene.ts:zoom_out_10x_20r_far_20r_near_1_idle_planes_0_05d_10",
+   "format": "code",
+   "where": "viewer/src/scene/ViewerScene.ts:322",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "zoom-out 10x / 20r, far +20r, near 1%, idle planes 0.05d..10d chosen by eye (no data), 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:viewer/src/scene/autoLight.ts:auto_lighting_fitting_prior_on_the_Taunie_street_shot_sampl",
+   "format": "code",
+   "where": "viewer/src/scene/autoLight.ts:221",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "auto-lighting fitting prior on the Taunie street shot (samples/), 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:viewer/src/scene/gameShading.ts:SHADOW_FLOOR_BAND_LO_BAND_HI_toon_band_shape_compared_b",
+   "format": "code",
+   "where": "viewer/src/scene/gameShading.ts:27",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "SHADOW_FLOOR / BAND_LO / BAND_HI toon-band shape, compared by eye against the in-game screenshot, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:viewer/src/scene/outline.ts:tinted_outline_darkness_eyeballed_against_game_outlines_20",
+   "format": "code",
+   "where": "viewer/src/scene/outline.ts:12",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "tinted outline darkness, eyeballed against game outlines, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "gfbmdl:/0",
+   "format": "gfbmdl",
+   "where": "table `/` field 0",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "403704096",
+     80
+    ]
+   ],
+   "distinct": 1,
+   "instances": 80,
+   "models": 60,
+   "examples": [
+    "pm0000_00: 403704096",
+    "pm0032_00: 403704096",
+    "pm0063_00: 403704096",
+    "pm0111_00: 403704096",
+    "pm0138_00: 403704096"
+   ],
+   "types": {
+    "i32": 80
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/11",
+   "format": "gfbmdl",
+   "where": "table `/` field 11",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     80
+    ]
+   ],
+   "distinct": 1,
+   "instances": 80,
+   "models": 60,
+   "examples": [
+    "pm0000_00: empty vec/str",
+    "pm0032_00: empty vec/str",
+    "pm0063_00: empty vec/str",
+    "pm0111_00: empty vec/str",
+    "pm0138_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 80
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/4",
+   "format": "gfbmdl",
+   "where": "table `/` field 4",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     80
+    ]
+   ],
+   "distinct": 1,
+   "instances": 80,
+   "models": 60,
+   "examples": [
+    "pm0000_00: empty vec/str",
+    "pm0032_00: empty vec/str",
+    "pm0063_00: empty vec/str",
+    "pm0111_00: empty vec/str",
+    "pm0138_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 80
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/11[]/2/3",
+   "format": "gfbmdl",
+   "where": "table `/6[]/11[]/2` field 3",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     660
+    ]
+   ],
+   "distinct": 1,
+   "instances": 660,
+   "models": 60,
+   "examples": [
+    "pm0000_00: 1",
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1"
+   ],
+   "types": {
+    "i32": 660
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/11[]/2/4",
+   "format": "gfbmdl",
+   "where": "table `/6[]/11[]/2` field 4",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "(0, 0, 0, 0)",
+     2310
+    ]
+   ],
+   "distinct": 1,
+   "instances": 2895,
+   "models": 60,
+   "examples": [
+    "pm0000_00: (0, 0, 0, 0)",
+    "pm0032_00: (0, 0, 0, 0)",
+    "pm0063_00: (0, 0, 0, 0)",
+    "pm0111_00: (0, 0, 0, 0)",
+    "pm0138_00: (0, 0, 0, 0)"
+   ],
+   "types": {
+    "struct": 2310
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/20",
+   "format": "gfbmdl",
+   "where": "table `/6[]` field 20",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00: table",
+    "pm0032_00: table",
+    "pm0063_00: table",
+    "pm0111_00: table",
+    "pm0138_00: table"
+   ],
+   "types": {
+    "table": 411
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/20/0[]/1",
+   "format": "gfbmdl",
+   "where": "table `/6[]/20/0[]` field 1",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     820
+    ]
+   ],
+   "distinct": 1,
+   "instances": 820,
+   "models": 60,
+   "examples": [
+    "pm0000_00: 1",
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1"
+   ],
+   "types": {
+    "u8": 820
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/4",
+   "format": "gfbmdl",
+   "where": "table `/6[]` field 4",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00: 1",
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1"
+   ],
+   "types": {
+    "u8": 411
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/9",
+   "format": "gfbmdl",
+   "where": "table `/6[]` field 9",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "-1",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00: -1",
+    "pm0032_00: -1",
+    "pm0063_00: -1",
+    "pm0111_00: -1",
+    "pm0138_00: -1"
+   ],
+   "types": {
+    "i32": 411
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/9[]/8",
+   "format": "gfbmdl",
+   "where": "table `/9[]` field 8",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "(0, 0, 0)",
+     2807
+    ]
+   ],
+   "distinct": 1,
+   "instances": 6336,
+   "models": 60,
+   "examples": [
+    "pm0000_00: (0, 0, 0)",
+    "pm0032_00: (0, 0, 0)",
+    "pm0063_00: (0, 0, 0)",
+    "pm0111_00: (0, 0, 0)",
+    "pm0138_00: (0, 0, 0)"
+   ],
+   "types": {
+    "struct": 2807
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/9[]/9",
+   "format": "gfbmdl",
+   "where": "table `/9[]` field 9",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "(0, 0, 0)",
+     2807
+    ]
+   ],
+   "distinct": 1,
+   "instances": 6336,
+   "models": 60,
+   "examples": [
+    "pm0000_00: (0, 0, 0)",
+    "pm0032_00: (0, 0, 0)",
+    "pm0063_00: (0, 0, 0)",
+    "pm0111_00: (0, 0, 0)",
+    "pm0138_00: (0, 0, 0)"
+   ],
+   "types": {
+    "struct": 2807
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:ConstantAlpha",
+   "format": "gfbmdl",
+   "where": "material float param `ConstantAlpha`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:ConstantColor0Val",
+   "format": "gfbmdl",
+   "where": "material float param `ConstantColor0Val`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:ConstantColorSd0Val",
+   "format": "gfbmdl",
+   "where": "material float param `ConstantColorSd0Val`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     410
+    ]
+   ],
+   "distinct": 1,
+   "instances": 410,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:ConstantColorVal",
+   "format": "gfbmdl",
+   "where": "material float param `ConstantColorVal`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:LightMul",
+   "format": "gfbmdl",
+   "where": "material float param `LightMul`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:OnGameAlpha",
+   "format": "gfbmdl",
+   "where": "material float param `OnGameAlpha`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:OnGameColorVal",
+   "format": "gfbmdl",
+   "where": "material float param `OnGameColorVal`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:OnGameEmissionVal",
+   "format": "gfbmdl",
+   "where": "material float param `OnGameEmissionVal`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:BaseColorAddEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `BaseColorAddEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     409
+    ]
+   ],
+   "distinct": 1,
+   "instances": 409,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=True",
+    "pm0032_00/Body=True",
+    "pm0063_00/BodyVco01=True",
+    "pm0111_00/BodyBSpc01=True",
+    "pm0138_00/BodySpc=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:LightTableEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `LightTableEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=True",
+    "pm0032_00/Body=True",
+    "pm0063_00/BodyVco01=True",
+    "pm0111_00/BodyBSpc01=True",
+    "pm0138_00/BodySpc=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:useColorTex",
+   "format": "gfbmdl",
+   "where": "material switch param `useColorTex`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     411
+    ]
+   ],
+   "distinct": 1,
+   "instances": 411,
+   "models": 60,
+   "examples": [
+    "pm0000_00/Body=True",
+    "pm0032_00/Body=True",
+    "pm0063_00/BodyVco01=True",
+    "pm0111_00/BodyBSpc01=True",
+    "pm0138_00/BodySpc=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/16",
+   "format": "gfbmdl",
+   "where": "table `/6[]` field 16",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     409
+    ]
+   ],
+   "distinct": 1,
+   "instances": 409,
+   "models": 59,
+   "examples": [
+    "pm0000_00: 1",
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1"
+   ],
+   "types": {
+    "u8": 409
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/3",
+   "format": "gfbmdl",
+   "where": "table `/6[]` field 3",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     409
+    ]
+   ],
+   "distinct": 1,
+   "instances": 409,
+   "models": 59,
+   "examples": [
+    "pm0000_00: 1",
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1"
+   ],
+   "types": {
+    "u8": 409
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:NormalEdgeEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `NormalEdgeEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     342
+    ]
+   ],
+   "distinct": 1,
+   "instances": 342,
+   "models": 59,
+   "examples": [
+    "pm0000_00/Body=True",
+    "pm0032_00/Body=True",
+    "pm0063_00/Body02=True",
+    "pm0111_00/BodyBSpc01=True",
+    "pm0138_00/BodySpc=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:AmbientMapEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `AmbientMapEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     401
+    ]
+   ],
+   "distinct": 1,
+   "instances": 401,
+   "models": 58,
+   "examples": [
+    "pm0032_00/Body=True",
+    "pm0063_00/BodyVco01=True",
+    "pm0111_00/BodyBSpc01=True",
+    "pm0138_00/BodySpc=True",
+    "pm0195_00/BodyTattu=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:NormalMapEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `NormalMapEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     277
+    ]
+   ],
+   "distinct": 1,
+   "instances": 277,
+   "models": 47,
+   "examples": [
+    "pm0032_00/Body=True",
+    "pm0063_00/BodyVco01=True",
+    "pm0111_00/BodyBSpc01=True",
+    "pm0138_00/BodySpc=True",
+    "pm0195_00/BodyTattu=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/6[]/11[]/2/5",
+   "format": "gfbmdl",
+   "where": "table `/6[]/11[]/2` field 5",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "-2",
+     1126
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1135,
+   "models": 40,
+   "examples": [
+    "tr0000_00: -2",
+    "tr0004_00: -2",
+    "tr0009_00: -2",
+    "tr0016_00: -2",
+    "tr0024_00: -2"
+   ],
+   "types": {
+    "f32": 1126
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:PrimaryColorVal",
+   "format": "gfbmdl",
+   "where": "material float param `PrimaryColorVal`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     191
+    ]
+   ],
+   "distinct": 1,
+   "instances": 191,
+   "models": 40,
+   "examples": [
+    "tr0000_00/obj=1",
+    "tr0004_00/face_parts=1",
+    "tr0009_00/obj=1",
+    "tr0016_00/face_parts=1",
+    "tr0024_00/face_parts=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:SecondaryColorVal",
+   "format": "gfbmdl",
+   "where": "material float param `SecondaryColorVal`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     189
+    ]
+   ],
+   "distinct": 1,
+   "instances": 189,
+   "models": 39,
+   "examples": [
+    "tr0000_00/obj=1",
+    "tr0004_00/face_parts=1",
+    "tr0009_00/obj=1",
+    "tr0016_00/face_parts=1",
+    "tr0024_00/face_parts=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:SpecularMapEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `SpecularMapEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     135
+    ]
+   ],
+   "distinct": 1,
+   "instances": 135,
+   "models": 39,
+   "examples": [
+    "tr0000_00/obj=True",
+    "tr0004_00/face_parts=True",
+    "tr0009_00/obj=True",
+    "tr0016_00/face_parts=True",
+    "tr0024_00/face_parts=True"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:EmissionMaskUse",
+   "format": "gfbmdl",
+   "where": "material switch param `EmissionMaskUse`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     70
+    ]
+   ],
+   "distinct": 1,
+   "instances": 70,
+   "models": 29,
+   "examples": [
+    "pm0279_00/Body01=True",
+    "pm0606_00/BodyB01Red=True",
+    "pm0735_14/BodyIncVco=True",
+    "pm0862_20/BodyA=True",
+    "tr0000_00/Reye=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:UseRimMask_SpcMapAlpha",
+   "format": "gfbmdl",
+   "where": "material switch param `UseRimMask_SpcMapAlpha`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     84
+    ]
+   ],
+   "distinct": 1,
+   "instances": 84,
+   "models": 26,
+   "examples": [
+    "tr0000_00/obj=True",
+    "tr0004_00/face_parts=True",
+    "tr0009_00/obj=True",
+    "tr0016_00/face_parts=True",
+    "tr0024_00/face_parts=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:OutLineIDEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `OutLineIDEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     160
+    ]
+   ],
+   "distinct": 1,
+   "instances": 160,
+   "models": 24,
+   "examples": [
+    "pm0063_00/Body02=True",
+    "pm0833_00/Body05=True",
+    "tr0000_00/obj=True",
+    "tr0004_00/hair=True",
+    "tr0009_00/obj=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2",
+   "format": "gfbanm",
+   "where": "table `/` field 2",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     448
+    ]
+   ],
+   "distinct": 1,
+   "instances": 448,
+   "models": 20,
+   "examples": [
+    "pm0000_00: table",
+    "pm0032_00: table",
+    "pm0063_00: table",
+    "pm0111_00: table",
+    "pm0138_00: table"
+   ],
+   "types": {
+    "table": 448
+   },
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/1",
+   "format": "gfbanm",
+   "where": "table `/2/0[]` field 1",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[20]",
+     1198
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1700,
+   "models": 20,
+   "examples": [
+    "pm0000_00: vec<table>[20]",
+    "pm0032_00: vec<table>[20]",
+    "pm0063_00: vec<table>[20]",
+    "pm0111_00: vec<table>[20]",
+    "pm0138_00: vec<table>[20]"
+   ],
+   "types": {
+    "vec<table>": 1198
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/1[]/1",
+   "format": "gfbanm",
+   "where": "table `/2/0[]/1[]` field 1",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     1220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 4792,
+   "models": 20,
+   "examples": [
+    "pm0000_00: 1",
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1"
+   ],
+   "types": {
+    "u8": 1220
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/2[]/2",
+   "format": "gfbanm",
+   "where": "table `/2/0[]/2[]` field 2",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     1220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 4792,
+   "models": 20,
+   "examples": [
+    "pm0000_00: table",
+    "pm0032_00: table",
+    "pm0063_00: table",
+    "pm0111_00: table",
+    "pm0138_00: table"
+   ],
+   "types": {
+    "table": 1220
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/2/0[]/3[]/1",
+   "format": "gfbanm",
+   "where": "table `/2/0[]/3[]` field 1",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     1220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 4792,
+   "models": 20,
+   "examples": [
+    "pm0000_00: 1",
+    "pm0032_00: 1",
+    "pm0063_00: 1",
+    "pm0111_00: 1",
+    "pm0138_00: 1"
+   ],
+   "types": {
+    "u8": 1220
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "Material animation tables (eye/mouth UV etc.): CLAUDE.md says clips that only drive material UVs are dropped and eye/mouth UV animation is not imported.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:color:EffectColor01",
+   "format": "gfbmdl",
+   "where": "material color param `EffectColor01`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "(1, 0, 1)",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=(1, 0, 1)",
+    "pm0032_00/Body=(1, 0, 1)",
+    "pm0063_00/BodyVco01=(1, 0, 1)",
+    "pm0111_00/BodyBSpc01=(1, 0, 1)",
+    "pm0138_00/BodySpc=(1, 0, 1)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:AlphaDitherValue",
+   "format": "gfbmdl",
+   "where": "material float param `AlphaDitherValue`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     148
+    ]
+   ],
+   "distinct": 1,
+   "instances": 148,
+   "models": 20,
+   "examples": [
+    "tr0000_00/obj=1",
+    "tr0009_00/obj=1",
+    "tr0016_00/face_parts=1",
+    "tr0024_00/face_parts=1",
+    "tr0031_00/face_parts=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:ColorLerpValue",
+   "format": "gfbmdl",
+   "where": "material float param `ColorLerpValue`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     110
+    ]
+   ],
+   "distinct": 1,
+   "instances": 110,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:ConstantColor1Val",
+   "format": "gfbmdl",
+   "where": "material float param `ConstantColor1Val`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:ConstantColorSd1Val",
+   "format": "gfbmdl",
+   "where": "material float param `ConstantColorSd1Val`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:Def0_OneMin1_FreCol",
+   "format": "gfbmdl",
+   "where": "material float param `Def0_OneMin1_FreCol`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:DistortionIntensity",
+   "format": "gfbmdl",
+   "where": "material float param `DistortionIntensity`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:EffectColPower",
+   "format": "gfbmdl",
+   "where": "material float param `EffectColPower`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:EffectTexScaleU",
+   "format": "gfbmdl",
+   "where": "material float param `EffectTexScaleU`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "8",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=8",
+    "pm0032_00/Body=8",
+    "pm0063_00/BodyVco01=8",
+    "pm0111_00/BodyBSpc01=8",
+    "pm0138_00/BodySpc=8"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:EffectTexScaleV",
+   "format": "gfbmdl",
+   "where": "material float param `EffectTexScaleV`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "5",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=5",
+    "pm0032_00/Body=5",
+    "pm0063_00/BodyVco01=5",
+    "pm0111_00/BodyBSpc01=5",
+    "pm0138_00/BodySpc=5"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:L1ConstantColor0Val",
+   "format": "gfbmdl",
+   "where": "material float param `L1ConstantColor0Val`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:L1ConstantColor1Val",
+   "format": "gfbmdl",
+   "where": "material float param `L1ConstantColor1Val`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:L1ConstantColorSd0Val",
+   "format": "gfbmdl",
+   "where": "material float param `L1ConstantColorSd0Val`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:L1ConstantColorSd1Val",
+   "format": "gfbmdl",
+   "where": "material float param `L1ConstantColorSd1Val`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:ScaleUV",
+   "format": "gfbmdl",
+   "where": "material float param `ScaleUV`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0063_00/BodyVco01=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:Sin01",
+   "format": "gfbmdl",
+   "where": "material float param `Sin01`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "4",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=4",
+    "pm0032_00/Body=4",
+    "pm0063_00/BodyVco01=4",
+    "pm0111_00/BodyBSpc01=4",
+    "pm0138_00/BodySpc=4"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:EffectVal",
+   "format": "gfbmdl",
+   "where": "material switch param `EffectVal`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=True",
+    "pm0032_00/Body=True",
+    "pm0063_00/BodyVco01=True",
+    "pm0111_00/BodyBSpc01=True",
+    "pm0138_00/BodySpc=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:texture:EffectTex",
+   "format": "gfbmdl",
+   "where": "material texture param `EffectTex`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "projection_effect_col",
+     220
+    ]
+   ],
+   "distinct": 1,
+   "instances": 220,
+   "models": 20,
+   "examples": [
+    "pm0000_00/Body=projection_effect_col",
+    "pm0032_00/Body=projection_effect_col",
+    "pm0063_00/BodyVco01=projection_effect_col",
+    "pm0111_00/BodyBSpc01=projection_effect_col",
+    "pm0138_00/BodySpc=projection_effect_col"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/1/1",
+   "format": "gfbanm",
+   "where": "table `/1` field 1",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "vec[8] 0000803f0000803f",
+     40
+    ]
+   ],
+   "distinct": 1,
+   "instances": 40,
+   "models": 19,
+   "examples": [
+    "pm0032_00: vec[8] 0000803f0000803f",
+    "pm0063_00: vec[8] 0000803f0000803f",
+    "pm0111_00: vec[8] 0000803f0000803f",
+    "pm0138_00: vec[8] 0000803f0000803f",
+    "pm0195_00: vec[8] 0000803f0000803f"
+   ],
+   "types": {
+    "vec": 40
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4",
+   "format": "gfbanm",
+   "where": "table `/` field 4",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     356
+    ]
+   ],
+   "distinct": 1,
+   "instances": 356,
+   "models": 19,
+   "examples": [
+    "pm0032_00: table",
+    "pm0063_00: table",
+    "pm0111_00: table",
+    "pm0138_00: table",
+    "pm0195_00: table"
+   ],
+   "types": {
+    "table": 356
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/3[]/2",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/3[]` field 2",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     1135
+    ]
+   ],
+   "distinct": 1,
+   "instances": 2009,
+   "models": 19,
+   "examples": [
+    "pm0032_00: table",
+    "pm0063_00: table",
+    "pm0111_00: table",
+    "pm0138_00: table",
+    "pm0195_00: table"
+   ],
+   "types": {
+    "table": 1135
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:float:Layer1OverLerpValue",
+   "format": "gfbmdl",
+   "where": "material float param `Layer1OverLerpValue`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     204
+    ]
+   ],
+   "distinct": 1,
+   "instances": 204,
+   "models": 19,
+   "examples": [
+    "pm0000_00/Body=1",
+    "pm0032_00/Body=1",
+    "pm0111_00/BodyBSpc01=1",
+    "pm0138_00/BodySpc=1",
+    "pm0195_00/BodyTattu=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/2[]/2",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/2[]` field 2",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     155
+    ]
+   ],
+   "distinct": 1,
+   "instances": 155,
+   "models": 18,
+   "examples": [
+    "pm0032_00: table",
+    "pm0063_00: table",
+    "pm0111_00: table",
+    "pm0138_00: table",
+    "pm0195_00: table"
+   ],
+   "types": {
+    "table": 155
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/1[]/2",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/1[]` field 2",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     132
+    ]
+   ],
+   "distinct": 1,
+   "instances": 132,
+   "models": 17,
+   "examples": [
+    "pm0032_00: table",
+    "pm0111_00: table",
+    "pm0138_00: table",
+    "pm0195_00: table",
+    "pm0241_00: table"
+   ],
+   "types": {
+    "table": 132
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:RimMaskEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `RimMaskEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     78
+    ]
+   ],
+   "distinct": 1,
+   "instances": 78,
+   "models": 16,
+   "examples": [
+    "pm0032_00/Body=True",
+    "pm0063_00/BodyVco01=True",
+    "pm0111_00/BodyASpc02=True",
+    "pm0138_00/BodySpc=True",
+    "pm0195_00/Body01=True"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:SphereMapEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `SphereMapEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     23
+    ]
+   ],
+   "distinct": 1,
+   "instances": 23,
+   "models": 13,
+   "examples": [
+    "pm0195_00/BodyTattu=True",
+    "pm0565_00/BodyASpc00=True",
+    "ob0008_00/obj=True",
+    "ob0030_00/obj=True",
+    "ob0037_00/obj=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:Layer1Enable",
+   "format": "gfbmdl",
+   "where": "material switch param `Layer1Enable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     32
+    ]
+   ],
+   "distinct": 1,
+   "instances": 32,
+   "models": 8,
+   "examples": [
+    "pm0111_00/REye=True",
+    "pm0241_00/REye=True",
+    "pm0403_00/REye=True",
+    "pm0445_01/LEye=True",
+    "pm0475_00/LEye=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0[]/1",
+   "format": "gfbmdl",
+   "where": "table `/10[]/0[]` field 1",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     28
+    ]
+   ],
+   "distinct": 1,
+   "instances": 28,
+   "models": 7,
+   "examples": [
+    "tr0000_00: 1",
+    "tr0016_00: 1",
+    "tr0024_00: 1",
+    "tr0047_00: 1",
+    "tr0071_00: 1"
+   ],
+   "types": {
+    "i32": 28
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0[]/4",
+   "format": "gfbmdl",
+   "where": "table `/10[]/0[]` field 4",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     28
+    ]
+   ],
+   "distinct": 1,
+   "instances": 28,
+   "models": 7,
+   "examples": [
+    "tr0000_00: 1",
+    "tr0016_00: 1",
+    "tr0024_00: 1",
+    "tr0047_00: 1",
+    "tr0071_00: 1"
+   ],
+   "types": {
+    "u8": 28
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0[]/5",
+   "format": "gfbmdl",
+   "where": "table `/10[]/0[]` field 5",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     28
+    ]
+   ],
+   "distinct": 1,
+   "instances": 28,
+   "models": 7,
+   "examples": [
+    "tr0000_00: 1",
+    "tr0016_00: 1",
+    "tr0024_00: 1",
+    "tr0047_00: 1",
+    "tr0071_00: 1"
+   ],
+   "types": {
+    "f32": 28
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0[]/8",
+   "format": "gfbmdl",
+   "where": "table `/10[]/0[]` field 8",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "(0, 0, 0)",
+     28
+    ]
+   ],
+   "distinct": 1,
+   "instances": 28,
+   "models": 7,
+   "examples": [
+    "tr0000_00: (0, 0, 0)",
+    "tr0016_00: (0, 0, 0)",
+    "tr0024_00: (0, 0, 0)",
+    "tr0047_00: (0, 0, 0)",
+    "tr0071_00: (0, 0, 0)"
+   ],
+   "types": {
+    "struct": 28
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbmdl:/10[]/0[]/9",
+   "format": "gfbmdl",
+   "where": "table `/10[]/0[]` field 9",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "(0, 0, 0)",
+     28
+    ]
+   ],
+   "distinct": 1,
+   "instances": 28,
+   "models": 7,
+   "examples": [
+    "tr0000_00: (0, 0, 0)",
+    "tr0016_00: (0, 0, 0)",
+    "tr0024_00: (0, 0, 0)",
+    "tr0047_00: (0, 0, 0)",
+    "tr0071_00: (0, 0, 0)"
+   ],
+   "types": {
+    "struct": 28
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "gfbanm:/4/0[]/1/2",
+   "format": "gfbanm",
+   "where": "table `/4/0[]/1` field 2",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     10
+    ]
+   ],
+   "distinct": 1,
+   "instances": 10,
+   "models": 6,
+   "examples": [
+    "pm0032_00: table",
+    "pm0475_00: table",
+    "pm0528_00: table",
+    "pm0565_00: table",
+    "pm0767_00: table"
+   ],
+   "types": {
+    "table": 10
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:SwitchPriority",
+   "format": "gfbmdl",
+   "where": "material switch param `SwitchPriority`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     24
+    ]
+   ],
+   "distinct": 1,
+   "instances": 24,
+   "models": 6,
+   "examples": [
+    "pm0111_00/REye=True",
+    "pm0241_00/REye=True",
+    "pm0403_00/REye=True",
+    "pm0445_01/LEye=True",
+    "pm0475_00/LEye=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:UseCol0ColorChange",
+   "format": "gfbmdl",
+   "where": "material switch param `UseCol0ColorChange`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     16
+    ]
+   ],
+   "distinct": 1,
+   "instances": 16,
+   "models": 4,
+   "examples": [
+    "tr0000_00/face_parts=True",
+    "tr0063_00/Reye=True",
+    "tr0149_00/hair=True",
+    "ob0041_00/tr0148body=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:gfbmdl:switch:SpecularMaskEnable",
+   "format": "gfbmdl",
+   "where": "material switch param `SpecularMaskEnable`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     10
+    ]
+   ],
+   "distinct": 1,
+   "instances": 10,
+   "models": 3,
+   "examples": [
+    "pm0063_00/BodyVco01=True",
+    "pm0138_00/BodySpc=True",
+    "pm0862_20/BodyCIncVco20=True"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md SwSh gaps: light-table/rim/spec params unused.",
+   "seen": true
+  }
+ ]
+}

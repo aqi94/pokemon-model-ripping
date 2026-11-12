@@ -10,7 +10,9 @@ from datetime import datetime, timezone
 from .scenes import SCENES
 
 SCHEMA = 1
-MODEL_RE = re.compile(r"^(tr\d{4}_\d{2}|pm\d{4}_\d{2}_\d{2}|cc_\w+|ob\d{4}_\d{2})$")
+# UNITE ids: pm0025_00, pm0025_00_lob, pm0025_09_camera, pm0025_00F, c_pm0870_00, npc003_zirce.
+MODEL_RE = re.compile(r"^(tr\d{4}_\d{2}|pm\d{4}_\d{2}_\d{2}|cc_\w+|ob\d{4}_\d{2}"
+                      r"|(?:[chs]_)?pm\d{4}_\d{2}F?(?:_[a-z0-9]+)?|npc\d{3}_\w+)$")
 TIMES = {"day", "dusk", "night", "any"}
 WEATHERS = {"sunny", "overcast", "rain", "none"}
 CONTEXTS = {"cutscene", "field", "battle", "vs"}

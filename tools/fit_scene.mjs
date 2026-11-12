@@ -58,6 +58,7 @@ for (const s of shots) {
   if (pages.has(s.model)) continue;
   const page = await browser.newPage({ viewport: { width: maxW + 420, height: maxH + 60 }, deviceScaleFactor: 1 });
   page.on('pageerror', (e) => console.error('page error:', e.message));
+  if (process.env.UNITE_SHADING === 'off') await page.addInitScript(() => { const t = setInterval(() => { if (window.__uniteShading) { window.__uniteShading(false); clearInterval(t); } }, 5); });
   await page.goto(`${base}/model-viewer?id=${encodeURIComponent(s.model)}`);
   await page.waitForFunction(() => window.__viewer?.anim && window.__viewer.manifest, null, { timeout: 120000 });
   await page.evaluate(() => {

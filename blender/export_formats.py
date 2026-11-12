@@ -36,6 +36,42 @@ try:
         if o in before:
             bpy.data.objects.remove(o, do_unlink=True)
 
+    # Optional subset (pipeline export --clips / --rest-visible, see blender_runner.export_formats).
+    clip_re = os.environ.get("EXPORT_CLIPS") or ""
+    if clip_re:
+        keep = re.compile(clip_re)
+        for a in list(bpy.data.actions):
+            if not keep.search(a.name):
+                bpy.data.actions.remove(a)
+        result["clip_filter"] = clip_re
+    # --parts group=option,...: pick part options like the viewer's part picker (only the picked option's meshes of each named
+    # group are visible; accessory meshes stay off unless --accessories), before the rest-visible filter below.
+    parts_sel = dict(kv.split("=", 1) for kv in (os.environ.get("EXPORT_PARTS") or "").split(",") if "=" in kv)
+    if parts_sel:
+        with_acc = bool(os.environ.get("EXPORT_ACCESSORIES"))
+        found = set()
+        for o in bpy.data.objects:
+            g = o.get("group")
+            if o.type != "MESH" or g not in parts_sel:
+                continue
+            on = o.get("option") == parts_sel[g] and (with_acc or not o.get("accessory", False))
+            found.add((g, o.get("option")))
+            o["visible"] = bool(on)
+        missing = [f"{g}={v}" for g, v in parts_sel.items() if (g, v) not in found]
+        if missing:
+            raise RuntimeError(f"--parts options not found on any mesh: {missing}")
+        result["parts"] = parts_sel
+    if os.environ.get("EXPORT_LOD0"):
+        lods = [o for o in bpy.data.objects if o.type == "MESH" and int(o.get("lod", 0) or 0) > 0]
+        for o in lods:
+            bpy.data.objects.remove(o, do_unlink=True)
+        result["dropped_lod_meshes"] = len(lods)
+    if os.environ.get("EXPORT_REST_VISIBLE"):
+        hidden = [o for o in bpy.data.objects if o.type == "MESH" and o.get("visible", True) in (False, 0)]
+        for o in hidden:
+            bpy.data.objects.remove(o, do_unlink=True)
+        result["dropped_hidden_meshes"] = len(hidden)
+
     meshes = [o for o in bpy.data.objects if o.type == "MESH"]
     arms = [o for o in bpy.data.objects if o.type == "ARMATURE"]
     arm = arms[0] if arms else None
@@ -52,6 +88,28 @@ try:
         img.file_format = "PNG"
         img.save()
         tex_files[img.name] = fn
+    # Images referenced only from material extras (LGPE field layer recipes: extras.fieldBlend/fieldRamp/fieldWater) are not
+    # loaded by Blender's glTF importer: copy them straight out of the GLB (PNG bytes) so every glTF image gets its PNG.
+    import struct
+
+    with open(glb, "rb") as f:
+        glb_bytes = f.read()
+    json_len = struct.unpack_from("<I", glb_bytes, 12)[0]
+    gjson = json.loads(glb_bytes[20 : 20 + json_len])
+    bin_start = 20 + json_len + 8
+    written = {os.path.splitext(v)[0] for v in tex_files.values()}
+    for gimg in gjson.get("images", []):
+        if gimg.get("bufferView") is None or not gimg.get("name") or gimg.get("mimeType", "image/png") != "image/png":
+            continue
+        stem = re.sub(r"[^A-Za-z0-9_.-]", "_", gimg["name"])
+        if stem in written:
+            continue
+        view = gjson["bufferViews"][gimg["bufferView"]]
+        start = bin_start + view.get("byteOffset", 0)
+        with open(os.path.join(out_dir, f"{stem}.png"), "wb") as f:
+            f.write(glb_bytes[start : start + view["byteLength"]])
+        written.add(stem)
+        tex_files[gimg["name"]] = f"{stem}.png"
     result["textures"] = sorted(tex_files.values())
 
     # ---- rename objects like the rip: _NNN_<mesh>_shape[_lodN] ------------

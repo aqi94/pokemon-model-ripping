@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "slug": "battle_theia_gengar_01",
+ "scene": "battle_theia",
+ "game": "unite",
+ "source": "youtube",
+ "video": {
+  "id": "n11UvsJySKQ",
+  "url": "https://www.youtube.com/watch?v=n11UvsJySKQ",
+  "title": "Gengar Gameplay in New Map Theia Sky Ruins 🚀🚀| Pokemon Unite India",
+  "channel": "I Am Ronak",
+  "platform": "switch1",
+  "formatId": "299",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "vcodec": "avc1.64002A"
+ },
+ "timestamp": 134.6,
+ "timecode": "00:02:14.600",
+ "grabbedAt": "2026-11-01T22:28:11Z",
+ "image": {
+  "file": "battle_theia_gengar_01.png",
+  "width": 1920,
+  "height": 1080,
+  "scaledFrom": [
+   1920,
+   1080
+  ]
+ },
+ "tags": {
+  "timeOfDay": "day",
+  "weather": "sunny",
+  "location": "Theia Sky Ruins",
+  "indoor": false,
+  "lightType": "sun"
+ },
+ "subject": {
+  "kind": "pokemon",
+  "model": "pm0094_00",
+  "name": "Gengar",
+  "confidence": "medium"
+ },
+ "clipGuess": "idle",
+ "context": "battle",
+ "quality": {
+  "ui": true,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": ""
+}

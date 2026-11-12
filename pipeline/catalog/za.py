@@ -14,7 +14,9 @@ from ..importers.za.composite import CcPart, apply_appearance, import_cc_model, 
 from ..importers.za.form_layers import apply_form_layer, is_layer_candidate, select_form_layers
 from ..importers.za.trvat import attach_vat_clips
 from .za_demo import demo_animations
+from ..importers.za import trinity as T
 from ..importers.za.importer import AnimationFile, ZipSource, clip_name_from_file, import_model
+from ..rigs import compare, rig_signature, trinity_skeleton
 
 DEFAULT_DATA_DIR = os.environ.get("POKEMODELS_DATA") or os.path.join(os.path.expanduser("~"), "Documents", "MEGA downloads", "PokéModels")
 
@@ -41,11 +43,24 @@ CC_BASE_NAMES = {"bu": "Kid", "dm": "Adult M", "em": "Stocky M", "fm": "Fit M", 
 # The female bases are not in the rip but share the male rig (identical bind positions and clip bone
 # values: df = dm, gf = gm, ff = fm).
 CC_SKELETON_DONORS = {"df": "dm", "gf": "gm", "ff": "fm"}
-# cc_ir NPCs whose motion_cc_ir folder only holds face layers (Co members, the Rust Syndicate grunts): their body clips
-# are the matching adult base's sets (verified: skeleton = dm_base, df shares that rig).
-CC_IR_BODY_DONORS = {"tr0030_00": "dm", "tr0031_00": "df"}
-# Colour variants that share the base prop's rig and use its clips (ob0009_01 is the red flower, ob0009_00 the blue one).
-OBJECT_CLIP_DONORS = {"ob0009_01": "ob0009_00"}
+# Clip donors are chosen by rule, with the rigs compared (pipeline/rigs.py), not by tables:
+# - cc_ir NPCs whose motion_cc_ir folder only holds face layers (Co members tr0030/tr0031) take the shared motion sets
+#   of the cc base whose skeleton their rig contains with the same bind pose (`ZaCatalog.cc_ir_body_donor`); the base
+#   and its female twin (CC_SKELETON_DONORS) share that skeleton, so the folder's `_m` / `_f` sex suffix picks one.
+# - a colourway `obNNNN_KK` (KK != 00) with no clips of its own uses `obNNNN_00`'s when the two rigs match
+#   (ob0009_01 red flower = ob0009_00 blue one).
+RIG_MATCH_TOL = 1e-3  # metres, bind world position of every shared joint
+# The player (ZA-TrainersPlayer): `model_pc_base/model/<s>_base` is the skeleton (p0), `model_pc/<prefix>_<grp>NNNN_VV_<name>/`
+# the parts. Parts whose prefix is the skeleton's own (`p0_`: face, hair, headwear, shoes...) fit every body; every other
+# prefix (`p1_`, `p2_`: tops / bottoms / outfits cut for one body) is a body, one composite `pc_<body>` each. Clips:
+# `motion_pc/base/` (`p0_00_<idx>_<name>`, on p0_base); the per-part folders only hold cloth/hair layer clips.
+PC_BASE_RE = re.compile(r"^ik_chara/model_pc_base/model/(p\d)_base\.trmdl$")
+PC_PART_RE = re.compile(
+    r"^ik_chara/model_pc/(?P<body>p\d)_(?P<grp>[a-z]+)(?P<num>\d{4})_(?P<var>\d{2})_(?P<name>[^/]+)"
+    r"/(?P=body)_(?P=grp)(?P=num)_(?P=var)\.trmdl$"
+)
+PC_NONE_NUM = "9999"  # the game's own "none" choice of a group (`p0_bag9999_00_none`)
+COLOURWAY_RE = re.compile(r"^(ob\d{4})_(\d{2})$")
 BALL_NAMES = {"monsterball": "Poké Ball", "masterball": "Master Ball", "ultraball": "Ultra Ball", "greatball": "Great Ball"}
 
 
@@ -83,6 +98,8 @@ class ZaCatalog:
     CC_IR_ANIM_ROOT = "ik_chara/motion_cc_ir"  # "" = none
     OBJECT_ANIM_ROOT = "ik_chara/motion_ob"  # "" = props have no clips
     OBJECT_DEMO_ROOT = "ik_chara/demo_ob"
+    PC_MODEL_ZIPS = ["ZA-TrainersPlayer.zip"]  # [] = the player is not catalogued
+    PC_ANIM_ROOT = "ik_chara/motion_pc/base/"
 
     def __init__(self, data_dir: str = DEFAULT_DATA_DIR):
         self.data_dir = data_dir
@@ -100,6 +117,11 @@ class ZaCatalog:
         return [z for z in (self.zip(n) for n in names) if z is not None]
 
     # -- discovery -------------------------------------------------------
+    def species_dex(self, species: str) -> tuple[int, bool]:
+        """(dex number, whether it is a real national dex number) of a model folder `pm####`."""
+        dex = int(species[2:])
+        return dex, dex <= self.NAME_MAX_ID
+
     def pokemon(self) -> list[ModelRef]:
         refs: dict[str, ModelRef] = {}
         for z in self.zips(self.POKE_MODEL_ZIPS):
@@ -108,9 +130,8 @@ class ZaCatalog:
                 if not m:
                     continue
                 species, mid = m.group(1), m.group(2)
-                dex = int(species[2:])
+                dex, known = self.species_dex(species)
                 form = mid[7:]  # "00_00"
-                known = dex <= self.NAME_MAX_ID
                 base = self.names.get(str(dex), species) if known else species
                 display = base if form == "00_00" else f"{base} ({form})"
                 refs[mid] = ModelRef(
@@ -193,9 +214,9 @@ class ZaCatalog:
                         display_name=label,
                         species=mid[:6],
                         anim_folder=f"{self.CC_IR_ANIM_ROOT}/{folder_name}/",
-                        extras={"folder": folder_name, "cc_ir": True, **({"cc_donor": CC_IR_BODY_DONORS[mid]} if mid in CC_IR_BODY_DONORS else {})},
+                        extras={"folder": folder_name, "cc_ir": True},
                     )
-        return [refs[k] for k in sorted(refs)] + self.cc_models()
+        return [refs[k] for k in sorted(refs)] + self.cc_models() + self.pc_models()
 
     # -- modular generic NPCs (model_cc_*) ----------------------------------------
     def _cc_parts_by_base(self) -> dict[str, list[CcPart]]:
@@ -247,6 +268,65 @@ class ZaCatalog:
                     )
         return sorted(refs, key=lambda r: r.id)
 
+    # -- the player (model_pc_base + model_pc) ------------------------------------------
+    def _pc_parts(self) -> tuple[str, str, dict[str, list[CcPart]]] | None:
+        """(skeleton prefix, skeleton folder, body -> that body's default parts), or None when the zips lack the player."""
+        skel = folder = None
+        found: dict[str, dict[str, CcPart]] = {}
+        nums: dict[str, tuple[str, str, str, str]] = {}
+        for z in self.zips(self.PC_MODEL_ZIPS):
+            for n in z.namelist():
+                m = PC_BASE_RE.match(n)
+                if m:
+                    skel, folder = m.group(1), n[: n.rindex("/") + 1]
+                    continue
+                m = PC_PART_RE.match(n)
+                if not m:
+                    continue
+                pid = f"{m['body']}_{m['grp']}{m['num']}_{m['var']}"
+                found.setdefault(m["body"], {})[pid] = CcPart(group=m["grp"], id=pid, label=part_label(m["name"], int(m["var"])), folder=n[: n.rindex("/") + 1])
+                nums[pid] = (m["body"], m["grp"], m["num"], m["var"])
+        if skel is None:
+            return None
+        shared = list(found.get(skel, {}).values())
+        out: dict[str, list[CcPart]] = {}
+        for body in sorted(b for b in found if b != skel):
+            pool = shared + list(found[body].values())
+            picks = []
+            for g in sorted({p.group for p in pool}):
+                opts = sorted((p for p in pool if p.group == g), key=lambda p: (nums[p.id][2], nums[p.id][3], p.id))
+                real = [p for p in opts if nums[p.id][2] != PC_NONE_NUM]
+                none = [p for p in opts if nums[p.id][2] == PC_NONE_NUM]
+                # Like the cc composites, the lowest-numbered part is the default; the game's "none" part stays selectable.
+                picks += [dataclasses.replace(p, default=i == 0) for i, p in enumerate(real[:1] + none[:1])]
+            out[body] = picks
+        return skel, folder, out
+
+    def pc_models(self) -> list[ModelRef]:
+        """One composite per player body (`pc_p1`, `pc_p2`): the base skeleton + that body's default part of every group.
+
+        Per group only the lowest-numbered part (the default, as in the cc composites) and the game's "none" part (`9999`)
+        are imported: the full wardrobe is ~160 parts, roughly 0.5 GB of textures per body."""
+        if not self.PC_MODEL_ZIPS:
+            return []
+        found = self._pc_parts()
+        if found is None:
+            return []
+        skel, folder, bodies = found
+        return [
+            ModelRef(
+                game=self.GAME,
+                kind="trainer",
+                id=f"pc_{body}",
+                folder=folder,
+                display_name=f"Player {body[1:]}",
+                species=f"pc_{body}",
+                anim_folder=self.PC_ANIM_ROOT,
+                extras={"folder": f"pc_{body}", "pc_body": body, "pc_skeleton": f"{skel}_base"},
+            )
+            for body in bodies
+        ]
+
     def objects(self) -> list[ModelRef]:
         """Held items and props: every model under model_ob (Poké Balls, key items, café food)."""
         refs: dict[str, ModelRef] = {}
@@ -268,11 +348,98 @@ class ZaCatalog:
                     anim_folder=f"{self.OBJECT_ANIM_ROOT}/{folder_name}/" if self.OBJECT_ANIM_ROOT else "",
                     extras={"folder": folder_name, "item": ball},
                 )
-        for mid, donor in OBJECT_CLIP_DONORS.items():
-            if mid in refs and donor in refs and self.OBJECT_ANIM_ROOT:
-                refs[mid].anim_folder = refs[donor].anim_folder
-                refs[mid].extras["clip_id"] = donor
+        if self.OBJECT_ANIM_ROOT:
+            for mid, ref in refs.items():
+                m = COLOURWAY_RE.match(mid)
+                base = refs.get(f"{m.group(1)}_00") if m and m.group(2) != "00" else None
+                if base is None or self._has_object_clips(ref) or not self._has_object_clips(base):
+                    continue
+                if self._rigs_match(self.TRAINER_MODEL_ZIPS, ref, base):
+                    ref.anim_folder = base.anim_folder
+                    ref.extras["clip_id"] = base.id
         return [refs[k] for k in sorted(refs)]
+
+    # -- rule-based clip donors (rigs compared, see pipeline/rigs.py) --------------
+    def _anim_members(self) -> dict[str, list[str]]:
+        """Trainer-anim zips: folder (with trailing /) -> direct child file names. Built once."""
+        if not hasattr(self, "_anim_members_cache"):
+            found: dict[str, list[str]] = {}
+            for z in self.zips(self.TRAINER_ANIM_ZIPS):
+                for n in z.namelist():
+                    if not n.endswith("/"):
+                        found.setdefault(n[: n.rindex("/") + 1], []).append(n[n.rindex("/") + 1 :])
+            self._anim_members_cache = found
+        return self._anim_members_cache
+
+    def _has_object_clips(self, ref: ModelRef) -> bool:
+        files = self._anim_members().get(ref.anim_folder, [])
+        return any(f.endswith(".tranm") and f.startswith(ref.id + "_") for f in files)
+
+    def _rig_signature(self, zip_names: list[str], folder: str, stem: str):
+        cache = self.__dict__.setdefault("_rig_cache", {})
+        key = (tuple(zip_names), folder, stem)
+        if key not in cache:
+            src = ZipSource(self.zips(zip_names), folder)
+            sk = trinity_skeleton(src.read, src.exists, stem)
+            cache[key] = rig_signature(sk) if sk is not None else None
+        return cache[key]
+
+    def _rigs_match(self, zip_names: list[str], a: ModelRef, b: ModelRef) -> bool:
+        sa = self._rig_signature(zip_names, a.folder, a.extras.get("stem", a.id))
+        sb = self._rig_signature(zip_names, b.folder, b.extras.get("stem", b.id))
+        if sa is None or sb is None:
+            return False
+        c = compare(sa, sb)
+        return c.jaccard == 1.0 and not c.parent_mismatch and c.max_world <= RIG_MATCH_TOL
+
+    def cc_ir_body_donor(self, ref: ModelRef) -> str | None:
+        """The cc base whose shared motion sets animate this cc_ir NPC's body.
+
+        Candidates are the bases with `cc####_*` set folders whose skeleton (own, or CC_SKELETON_DONORS for the
+        female bases missing from the rip) lies inside the NPC's rig with the same bind pose. Male and female bases
+        share a skeleton, so the rig cannot tell them apart: the NPC folder's sex suffix (`_f`) picks the female
+        twin, otherwise the skeleton's own base."""
+        cache = self.__dict__.setdefault("_cc_ir_donor_cache", {})
+        if ref.id in cache:
+            return cache[ref.id]
+        cache[ref.id] = None
+        mine = self._rig_signature(self.CC_MODEL_ZIPS, ref.folder, ref.extras.get("stem", ref.id))
+        if mine is None:
+            return None
+        root = self.CC_ANIM_ROOT.rstrip("/") + "/"
+        bases = set()
+        for folder in self._anim_members():
+            parts = folder[len(root):].split("/") if folder.startswith(root) else []
+            if len(parts) >= 3 and re.match(r"cc\d{4}_", parts[1]):
+                bases.add(parts[0])
+        best: tuple[float, str] | None = None
+        for skel in sorted({CC_SKELETON_DONORS.get(b, b) for b in bases}):
+            sig = self._rig_signature(self.CC_MODEL_ZIPS, f"ik_chara/model_cc_base/{skel}/", f"{skel}_base")
+            if sig is None:
+                continue
+            c = compare(sig, mine)
+            if c.a_subset_b and not c.parent_mismatch and c.max_world <= RIG_MATCH_TOL and (best is None or c.max_world < best[0]):
+                best = (c.max_world, skel)
+        if best is None:
+            return None
+        twins = sorted(b for b in bases if CC_SKELETON_DONORS.get(b, b) == best[1])
+        female = ref.extras.get("folder", "").endswith("_f")
+        pick = [b for b in twins if (b in CC_SKELETON_DONORS) == female] or twins
+        cache[ref.id] = pick[0]
+        return pick[0]
+
+    def _lacks_body_clips(self, files: list[AnimationFile], donor: str) -> bool:
+        """True when the NPC's own clips animate under half of the donor skeleton's joints (face/hair layers only)."""
+        skel = CC_SKELETON_DONORS.get(donor, donor)
+        sig = self._rig_signature(self.CC_MODEL_ZIPS, f"ik_chara/model_cc_base/{skel}/", f"{skel}_base")
+        animated: set[str] = set()
+        for af in files:
+            if af.data:
+                try:
+                    animated |= {t.bone for t in T.parse_tranm(af.data).tracks}
+                except Exception:  # noqa: BLE001 - an unreadable clip animates nothing
+                    pass
+        return len(animated & sig.name_set) < 0.5 * len(sig)
 
     def all(self) -> list[ModelRef]:
         return self.pokemon() + self.trainers() + self.objects()
@@ -285,6 +452,18 @@ class ZaCatalog:
 
     def import_ref(self, ref: ModelRef, with_anim: bool = True):
         anims = self.animations(ref) if with_anim else []
+        if ref.extras.get("pc_body"):
+            zips = self.PC_MODEL_ZIPS + self.TRAINER_SHARED_TEX_ZIPS
+            return import_cc_model(
+                ZipSource(self.zips(zips), ref.folder),
+                ref.extras["pc_skeleton"],
+                self._pc_parts()[2][ref.extras["pc_body"]],
+                lambda p: ZipSource(self.zips(zips), p.folder),
+                ref.id,
+                ref.display_name,
+                animations=anims,
+                game=ref.game,
+            )
         if ref.extras.get("cc_base"):
             b = ref.extras["cc_base"]
             zips = self.CC_MODEL_ZIPS + self.TRAINER_SHARED_TEX_ZIPS
@@ -298,7 +477,7 @@ class ZaCatalog:
                 animations=anims,
                 game=ref.game,
             )
-        model = import_model(self.model_source(ref), ref.extras.get("stem", ref.id), ref.display_name, kind=ref.kind, animations=anims, game=ref.game, skin_tones=bool(ref.extras.get("cc_ir")))
+        model = import_model(self.model_source(ref), ref.extras.get("stem", ref.id), ref.display_name, kind=ref.kind, animations=anims, game=ref.game, skin_tones=bool(ref.extras.get("cc_ir")), body=ref.extras.get("sv_body"))
         if ref.extras.get("cc_ir"):
             apply_appearance(model)
         if ref.extras.get("form_layer"):
@@ -345,9 +524,10 @@ class ZaCatalog:
             out.append(AnimationFile(name=name, index=idx, data=src.read(n), config=src.read(cfg) if src.exists(cfg) else None))
         if ref.extras.get("cc_ir"):
             self._attach_rival_body(out, zips)
-        if ref.extras.get("cc_donor"):
-            donor = ZipSource(self.zips(zips), f"{self.CC_ANIM_ROOT}/{ref.extras['cc_donor']}/")
-            out += self._cc_animations(donor, only_sets=True)
+            donor = None if any(af.extra for af in out) else self.cc_ir_body_donor(ref)
+            if donor and self._lacks_body_clips(out, donor):
+                ref.extras["cc_donor"] = donor
+                out += self._cc_animations(ZipSource(self.zips(zips), f"{self.CC_ANIM_ROOT}/{donor}/"), only_sets=True)
         return out + self._demo_animations(ref)
 
     # The rival's body motion is shared on the player's rig: motion_cc_base/rv/<rival_f>/ has the waist/spine/limb tracks,

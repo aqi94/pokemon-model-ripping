@@ -1,0 +1,76 @@
+{
+ "schema": 1,
+ "scene": "result",
+ "profile": "indoor",
+ "locks": {
+  "rim": 0
+ },
+ "seeds": [
+  "studio"
+ ],
+ "bestSeed": "studio",
+ "passes": 3,
+ "seedLog": [
+  {
+   "seed": "studio",
+   "start": 9.76,
+   "end": 5.15
+  },
+  {
+   "seed": "restart 1",
+   "start": 8.63,
+   "end": 5.28
+  }
+ ],
+ "env": {
+  "ambient": 1.7,
+  "key": 1.2,
+  "azimuth": -36.6,
+  "elevation": 52.133,
+  "keyTemp": 6750,
+  "back": 0,
+  "backAzimuth": 160,
+  "backElevation": 25,
+  "backTemp": 6500,
+  "skyTemp": 6500,
+  "ground": "#dccad8",
+  "warmth": 0,
+  "shadow": 0.75,
+  "rim": 0,
+  "detail": 0.5,
+  "exposure": 1.183,
+  "toneMapping": "aces",
+  "contrast": 1,
+  "saturation": 0.967,
+  "gi": 0.967
+ },
+ "score": {
+  "mean": 5.15,
+  "perShot": {
+   "result_garchomp_01": {
+    "dE": 3.93,
+    "weight": 1,
+    "regions": {
+     "belly_yellow": 6.6,
+     "chest_red": 4.5,
+     "thigh_purple": 0.7
+    }
+   },
+   "result_garchomp_02": {
+    "dE": 6.37,
+    "weight": 1,
+    "regions": {
+     "belly_yellow": 12.8,
+     "chest_red": 4.7,
+     "thigh_purple": 1.5
+    }
+   }
+  }
+ },
+ "shots": [
+  "result_garchomp_01",
+  "result_garchomp_02"
+ ],
+ "fittedAt": "2026-11-01T22:30:05.800Z",
+ "tool": "fit_scene.mjs"
+}

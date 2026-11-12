@@ -84,13 +84,18 @@ const BASE_CHUNK = THREE.ShaderChunk.tonemapping_pars_fragment;
 const STUB = 'vec3 CustomToneMapping( vec3 color ) { return color; }';
 let installedKey = '';
 
-/** Swap the CustomToneMapping stub in three's shared chunk for this curve. Returns a cache key that changes with
- *  the parameters; materials must expose it through `customProgramCacheKey` so three recompiles their programs. */
-export function installHable(params: HableParams): string {
-  const key = JSON.stringify(params);
+/** Swap the CustomToneMapping stub in three's shared chunk for a curve's GLSL (`vec3 CustomToneMapping( vec3 )`). One writer
+ *  for every custom curve (Hable, UNITE), so switching between them always rewrites the chunk. Returns the cache key. */
+export function installCustomTone(key: string, glsl: string): string {
   if (key !== installedKey) {
-    THREE.ShaderChunk.tonemapping_pars_fragment = BASE_CHUNK.replace(STUB, hableGLSL(buildHableCurve(params)));
+    THREE.ShaderChunk.tonemapping_pars_fragment = BASE_CHUNK.replace(STUB, glsl);
     installedKey = key;
   }
   return key;
+}
+
+/** Swap the CustomToneMapping stub in three's shared chunk for this curve. Returns a cache key that changes with
+ *  the parameters; materials must expose it through `customProgramCacheKey` so three recompiles their programs. */
+export function installHable(params: HableParams): string {
+  return installCustomTone('hable:' + JSON.stringify(params), hableGLSL(buildHableCurve(params)));
 }

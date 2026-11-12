@@ -2,16 +2,21 @@
 
     ./.venv/Scripts/python.exe tools/bdsp_vs.py [--size 512] [--keep-raw]      (viewer dev server must be running)
 
-Pose = advent02_b frame 0 (falls back to advent_b / wait_b), lighting preset `bdspVs`, front camera, cropped to the alpha box
-and fitted into the square. The class table (which battle model each Bulbapedia class page uses, which hand holds the Poké Ball,
-which light effect applies) was matched by eye against the VS images on Bulbapedia; `models` with two ids are composites
-(the game has no pair model for Double Team / Interviewers / Ranchers / Twins / Young Couple).
+Pose = advent02_b frame 0 (falls back to advent_b / wait_b), front camera, cropped to the alpha box and fitted into the square.
+Lighting = each model's saved look `vs` (out/bdsp/<id>/configs.json: env fitted to its Bulbapedia image), else preset `bdspVs`.
+Poké Ball hand = data rule `ball_hand`: the VS intro clip keys exactly one `*Item1` bone and it stays in the hand.
+The class table (which battle model each Bulbapedia class page uses) was matched against the VS images on Bulbapedia; entries
+with two ids are composites (the game has no pair model for Double Team / Interviewers / Ranchers / Twins / Young Couple).
+The game's light effects (police lamp, Psychic ring) are particles that are not in the rip and are not drawn.
 """
 import argparse
 import json
 import os
+import struct
 import subprocess
 import sys
+
+import numpy as np
 
 from PIL import Image
 
@@ -47,50 +52,67 @@ ENTRIES = {
     "Body / tr2007": "tr2007_00", "Tag02 / tr2008": "tr2008_00", "Tag03 / tr2009": "tr2009_00", "Tag04 / tr2010": "tr2010_00",
     "Tag05 / tr2011": "tr2011_00", "Jasmine / tr2018": "tr2018_00", "Mother02 / tr2036": "tr2036_00",
 }
-# Poké Ball in hand, matched against the VS images: attach bone per model (R = RItem1, L = LItem1)
-BALL = {**{m: "RItem1" for m in "tr1024_00 tr1053_00 tr1054_00 tr1033_00 tr1041_00 tr0054_00 tr1073_00 tr0028_00".split()},
-        **{m: "LItem1" for m in "tr1025_00 tr1028_00 tr1037_00 tr1004_00 tr0018_00 tr1013_00 tr1012_00 tr1085_00 tr0029_00 tr1040_00 tr1032_00 tr1089_00 tr1027_00".split()}}
 # Double-battle pairs are two models in one scene: rendered with the same fixed camera (shared scale + ground line) and overlaid with a
 # horizontal shift of +-PAIR_DX metres each (left model first), the last model in front (Young Couple: the woman). The couple's dance poses are offset around the origin with the woman on the left, so they are shifted past each other.
 PAIR_DX = {"Twins": 0.4, "Young Couple": 0.45, "Double Team": 0.36, "Interviewers": 0.4, "Ranchers": 0.45}
 PAIR_FRONT = {"Young Couple": 1}
 PAIR_WINDOW_M = 2.4
-FX = {"tr0039_00": ("police", None, 1), "tr1049_00": ("psychic", "RItem1", 1.5), "tr1050_00": ("psychic", "RItem1", 1.5)}
+VS_CLIPS = ("advent02_b", "advent_b", "wait_b")  # same fallback order as render_bdsp_vs.mjs
+# FITTED: in-hand vs off-hand split on the 30 VS trainers whose clip keys an Item1 bone, 2026-10-19: in-hand items sit
+# 0.076-0.167 m from the hand, off-hand anchors (Psychic orbs, Poke Fans, Roughneck, Clown) 0.256-0.834 m; the gap decides.
+IN_HAND_MAX = 0.2
 
 
-def _char_overrides():
-    """tools/bdsp_vs_chars/<id>.json (see its README): per-character ball / fx / env overrides."""
-    out = {}
-    d = os.path.join(ROOT, "tools", "bdsp_vs_chars")
-    for f in sorted(os.listdir(d)) if os.path.isdir(d) else []:
-        if f.endswith(".json"):
-            with open(os.path.join(d, f), encoding="utf-8") as fh:
-                out[f[:-5]] = json.load(fh)
-    return out
+def _glb_json_bin(path):
+    with open(path, "rb") as f:
+        data = f.read()
+    n = struct.unpack_from("<I", data, 12)[0]
+    doc = json.loads(data[20:20 + n])
+    off = 20 + n
+    binlen = struct.unpack_from("<I", data, off)[0]
+    return doc, data[off + 8: off + 8 + binlen]
 
 
-def _lighting():
-    """Per-model lighting overrides fitted to each Bulbapedia image (tools/fit_lighting_each.mjs): id -> {param: value}."""
-    p = os.path.join(ROOT, "tools", "bdsp_vs_lighting.json")
+def _accessor(doc, binc, i):
+    a = doc["accessors"][i]
+    bv = doc["bufferViews"][a["bufferView"]]
+    k = {"SCALAR": 1, "VEC3": 3, "VEC4": 4}[a["type"]]
+    arr = np.frombuffer(binc, np.float32, a["count"] * k, bv.get("byteOffset", 0) + a.get("byteOffset", 0))
+    return arr.reshape(a["count"], k)
+
+
+def ball_hand(mid):
+    """The Poké Ball hand from data: the VS intro clip keys exactly one `*Item1` bone (the authored held-item slot) and that
+    bone stays in the hand (offset from its hand bone < IN_HAND_MAX). Keyed bones far from the hand are anchors of other
+    things (Psychic orb above the head, Poké Fan props) and get no ball. None = no signal, or both hands keyed."""
+    p = os.path.join(ROOT, "out", "bdsp", mid, "model.glb")
     if not os.path.isfile(p):
-        return {}
-    with open(p, encoding="utf-8") as f:
-        out = {k: dict(v["env"]) for k, v in json.load(f).items() if v.get("env")}
-    for k, v in _char_overrides().items():
-        if v.get("env"):
-            out[k] = {**out.get(k, {}), **v["env"]}
-    return out
+        return None
+    doc, binc = _glb_json_bin(p)
+    nodes = {n.get("name"): i for i, n in enumerate(doc.get("nodes", []))}
+    anims = {a.get("name"): a for a in doc.get("animations", [])}
+    anim = next((anims[c] for c in VS_CLIPS if c in anims), None)
+    if anim is None:
+        return None
+    keyed = []
+    for bone in ("RItem1", "LItem1"):
+        ni = nodes.get(bone)
+        chs = {ch["target"]["path"]: ch for ch in anim["channels"] if ni is not None and ch["target"].get("node") == ni}
+        if not chs:
+            continue
+        t = np.array(doc["nodes"][ni].get("translation", [0, 0, 0]), np.float32)
+        if "translation" in chs:
+            t = _accessor(doc, binc, anim["samplers"][chs["translation"]["sampler"]]["output"])[0]
+        keyed.append((bone, float(np.linalg.norm(t))))
+    if len(keyed) != 1:
+        return None
+    bone, off = keyed[0]
+    return bone if off < IN_HAND_MAX else None
 
 
-def render(ids, extra, size, lighting=True):
-    if not ids:
-        return
-    light = _lighting() if lighting else {}
-    groups: dict[str, list[str]] = {}
-    for i in ids:  # one node run per distinct lighting override (the default group batches the rest)
-        groups.setdefault(json.dumps(light.get(i, {}), sort_keys=True), []).append(i)
-    for env, group in groups.items():
-        cmd = ["node", os.path.join(ROOT, "tools", "render_bdsp_vs.mjs"), "--out", RAW, "--size", str(size), "--frames", "0", *extra, *(["--env", env] if env != "{}" else []), *[f"bdsp/{i}" for i in group]]
+def render(ids, extra, size):
+    for i in ids:  # one call per model: each loads its own saved look
+        cmd = ["node", os.path.join(ROOT, "tools", "render_bdsp_vs.mjs"), "--out", RAW, "--size", str(size), "--frames", "0", "--look", "vs", *extra, f"bdsp/{i}"]
         subprocess.run(cmd, check=True, cwd=ROOT)
 
 
@@ -126,43 +148,21 @@ def main():
     ap.add_argument("--skip-render", action="store_true", help="reuse out/bdsp_vs_raw (just re-fit / re-compose)")
     a = ap.parse_args()
     os.makedirs(OUT, exist_ok=True)
-    ball_scale = {}
-    for mid, o in _char_overrides().items():  # per-character files win over the tables above
-        if "ball" in o:
-            if o["ball"]:
-                BALL[mid] = o["ball"]
-            else:
-                BALL.pop(mid, None)
-        if o.get("ballscale", 1) != 1:
-            ball_scale[mid] = o["ballscale"]
-        if "fx" in o:
-            if o["fx"]:
-                FX[mid] = (o["fx"], o.get("ball"), o.get("ballscale", 1))
-            else:
-                FX.pop(mid, None)
     ids = sorted({i for v in ENTRIES.values() for i in (v if isinstance(v, list) else [v])})
     if a.only:
         ids = [i for i in ids if i in a.only]
-    plain = [i for i in ids if i not in BALL and i not in FX]
+    ball = {i: ball_hand(i) for i in ids}
+    print("ball hand from data:", {k: v for k, v in sorted(ball.items()) if v})
     pair_ids = sorted({m for v in ENTRIES.values() if isinstance(v, list) for m in v})
     if a.only:
         pair_ids = [m for m in pair_ids if m in a.only]
     if not a.skip_render:
-        render(plain, [], a.render_size)
-        for bone in ("RItem1", "LItem1"):
-            held = [i for i in ids if BALL.get(i) == bone and i not in FX]
-            render([i for i in held if i not in ball_scale], ["--ball", bone], a.render_size)
-            for i in held:
-                if i in ball_scale:
-                    render([i], ["--ball", bone, "--ballscale", str(ball_scale[i])], a.render_size)
-        for i, (fx, bone, scale) in FX.items():
-            if i not in ids:
-                continue
-            render([i], ["--fx", fx] + (["--ball", bone, "--ballscale", str(scale)] if bone else []), a.render_size)
+        for i in ids:
+            render([i], ["--ball", ball[i]] if ball[i] else [], a.render_size)
         pair_dir = os.path.join(RAW, "pairs")
         for m in pair_ids:
-            extra = ["--fixed", str(PAIR_WINDOW_M)] + (["--ball", BALL[m]] if m in BALL else [])
-            subprocess.run(["node", os.path.join(ROOT, "tools", "render_bdsp_vs.mjs"), "--out", pair_dir, "--size", str(a.render_size), "--frames", "0", *extra, f"bdsp/{m}"], check=True, cwd=ROOT)
+            extra = ["--fixed", str(PAIR_WINDOW_M)] + (["--ball", ball_hand(m)] if ball_hand(m) else [])
+            subprocess.run(["node", os.path.join(ROOT, "tools", "render_bdsp_vs.mjs"), "--out", pair_dir, "--size", str(a.render_size), "--frames", "0", "--look", "vs", *extra, f"bdsp/{m}"], check=True, cwd=ROOT)
     index = {}
     for label, v in ENTRIES.items():
         ms = v if isinstance(v, list) else [v]

@@ -32,6 +32,9 @@ class Joint:
     scale: tuple[float, float, float] = (1.0, 1.0, 1.0)
     inverse_bind: np.ndarray | None = None  # 4x4, only for skinning joints
     skinning: bool = False  # participates in the skin palette
+    # Maya/Trinity segment scale compensate: True = the parent's scale moves this joint (its offset scales) but is not
+    # inherited by it; False = it inherits the parent's scale like glTF (Trinity `*_segoff` joints).
+    scale_compensate: bool = True
 
 
 @dataclass
@@ -104,6 +107,9 @@ class Primitive:
     # Gas shells (Gastly smoke): per-vertex displacement weight (V,) float32 0..1, written as the custom
     # glTF attribute `_GASWEIGHT` for viewers that animate the cloud (see Material.extras["gas"]).
     gas_weight: np.ndarray | None = None
+    # Flames (UNITE): per-vertex coordinate along the flame, 0 at the root (end nearest the emitter joint) to 1 at the tip,
+    # written as the custom glTF attribute `_FLAMET` (viewer fireEffect.ts ramps HOME's colours along it).
+    flame_t: np.ndarray | None = None
 
 
 @dataclass
@@ -113,6 +119,9 @@ class Mesh:
     lod: int = 0  # 0 = full detail
     visible: bool = True  # rest-pose visibility (some shapes are alt states)
     extras: dict = field(default_factory=dict)
+    # Per-mesh inverse binds overriding the joints' (palette position -> 4x4, column vectors): Unity keeps bindposes
+    # per renderer and meshes sharing a bone may disagree (UNITE). Written as an extra glTF skin for this mesh.
+    inverse_binds: dict[int, np.ndarray] | None = None
 
 
 @dataclass
@@ -170,6 +179,7 @@ class Variant:
     group: str = "coloring"
     label: str = ""
     default: bool = False
+    group_label: str = ""  # the group's display name (else derived from `group`)
 
 
 @dataclass

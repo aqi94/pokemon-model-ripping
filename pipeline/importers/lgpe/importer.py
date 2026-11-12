@@ -42,6 +42,7 @@ CM = 0.01
 
 # Shaders that are procedural effects in game (flames, smoke): approximated with a tinted alpha mask.
 # slot of the grey mask, tint, opacity scale
+# FITTED: hand-picked tints/opacities per effect shader, 2026-10-19 (engine-rules debt)
 EFFECT_SHADERS = {
     "PokeFireCoreShader1": ("Blend0Tex", (1.0, 0.82, 0.30), 1.0),
     "PokeFireMaskShader1": ("Mask0Texture", (1.0, 0.45, 0.12), 0.85),
@@ -50,6 +51,7 @@ EFFECT_SHADERS = {
 }
 # Helpers that are not renderable character meshes
 SKIP_SHADERS = {"CharaCollisionShader"}
+# FITTED: one material name (Mega Gengar floor slab); find the flag marking ground/shadow geometry, 2026-10-19 (engine-rules debt)
 DROPPED_MATERIALS = {"Yuka"}  # floor slab under mega Gengar (it sinks into it)
 
 

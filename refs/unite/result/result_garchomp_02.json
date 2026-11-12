@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "slug": "result_garchomp_02",
+ "scene": "result",
+ "game": "unite",
+ "source": "youtube",
+ "video": {
+  "id": "B-lxnC_eWNk",
+  "url": "https://www.youtube.com/watch?v=B-lxnC_eWNk",
+  "title": "Pokemon Unite Switch - Garchomp Gameplay & Online Match Win Gameplay No Commentary Walkthrough",
+  "channel": "Ninbunchan",
+  "platform": "switch1",
+  "formatId": "299",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "vcodec": "avc1.64002A"
+ },
+ "timestamp": 482.5,
+ "timecode": "00:08:02.500",
+ "grabbedAt": "2026-11-01T22:27:19Z",
+ "image": {
+  "file": "result_garchomp_02.png",
+  "width": 1920,
+  "height": 1080,
+  "scaledFrom": [
+   1920,
+   1080
+  ]
+ },
+ "tags": {
+  "timeOfDay": "any",
+  "weather": "none",
+  "location": "",
+  "indoor": true,
+  "lightType": "studio"
+ },
+ "subject": {
+  "kind": "pokemon",
+  "model": "pm0445_00_lob",
+  "name": "Garchomp",
+  "confidence": "medium"
+ },
+ "clipGuess": "score",
+ "context": "cutscene",
+ "quality": {
+  "ui": true,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": ""
+}

@@ -1,7 +1,7 @@
 // Square transparent renders of BDSP battle trainers in their `advent02_b` (VS intro) pose, falling back to advent_b then wait_b through the running viewer dev server.
 //
 //   node tools/render_bdsp_vs.mjs --out <dir> [--size 1024] [--clip advent02_b] [--frames 0.5,1] [--camera front] [--preset bdspVs]
-//                                 [--ball RItem1|LItem1] [--fx police|psychic] [--tag _x] <game/id> ...
+//                                 [--ball RItem1|LItem1] [--look vs] [--tag _x] <game/id> ...
 // Writes <id>_f<frame>.png per requested frame fraction; crop/fit to the final canvas afterwards (tools/fit_square.py).
 import { chromium } from 'playwright';
 import fs from 'node:fs';
@@ -38,10 +38,10 @@ const fixedH = Number(opt('fixed', '0'));
 // --gaze x,y: aim both eyeball bones at the camera (0,0) or at a point offset from it (x right, y up, as a fraction of the camera distance).
 const uvsign = opt('uvsign', '').split(',').filter(Boolean).map(Number); // eye-gaze offset signs x,y (default: the viewer's)
 const gaze = opt('gaze', '').split(',').filter(Boolean).map(Number);
-// --fx: the game's light effects are particle systems that are not in the rip; approximate them with additive glow sprites.
-//   police: lens glow on the `Light` bone + baton glow on RItem1.  psychic: ring of beads through LHand -> RItem1 (the orb above the head) -> RHand.
-const fx = opt('fx', '');
-// --env '{"exposure":2}': overrides on top of the preset (per-reference lighting from tools/bdsp_vs_lighting.json)
+// --look <name>: use that saved look's `lighting` (out/<game>/<id>/configs.json, viewer Appearance > Saved looks) instead of the preset
+// when the model has one (bdsp `vs` = lighting fitted to each Bulbapedia reference). Camera/pose stay this script's.
+const lookName = opt('look', '');
+// --env '{"exposure":2}': overrides on top of the preset / look lighting
 const envOverride = opt('env', '') ? JSON.parse(opt('env', '')) : {};
 
 const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--use-angle=d3d11', '--enable-unsafe-swiftshader'] });
@@ -53,7 +53,7 @@ for (const id of ids) {
   try {
     await page.waitForFunction(() => window.__viewer?.anim && window.__viewer.manifest, null, { timeout: 120000 });
   } catch { console.error(id, 'failed to load'); continue; }
-  await page.evaluate(async ({ S, preset, envOverride }) => {
+  await page.evaluate(async ({ S, preset, envOverride, lookName, id }) => {
     const st = document.createElement('style');
     st.textContent = `.sidebar,.handle,.back,.title-chip{display:none!important}.viewer{display:block!important}
       .stage{position:fixed!important;left:0;top:0;width:${S}px!important;height:${S}px!important}`;
@@ -61,10 +61,15 @@ for (const id of ids) {
     const vs = window.__viewer;
     const m = await import('/src/scene/environment.ts');
     vs.renderer.setPixelRatio(1);
-    vs.setEnvironment({ ...m.LIGHTING_PRESETS.find((p) => p.id === preset).env, ...envOverride });
+    let lit = null;
+    if (lookName) {
+      const [g, mid] = id.split('/');
+      try { const f = await (await fetch(`/__configs/${g}/${mid}`)).json(); lit = (f.looks ?? []).find((l) => l.name === lookName)?.lighting ?? null; } catch { /* no looks */ }
+    }
+    vs.setEnvironment({ ...(lit ?? m.LIGHTING_PRESETS.find((p) => p.id === preset).env), ...envOverride });
     vs.controls.enableDamping = false;
     await new Promise((r) => setTimeout(r, 300));
-  }, { S, preset: opt('preset', 'bdspVs'), envOverride });
+  }, { S, preset: opt('preset', 'bdspVs'), envOverride, lookName, id });
   if (variant >= 0) await page.evaluate(async (v) => { const vs = window.__viewer; if (vs.variants?.available) await vs.variants.select(v); await new Promise((r) => setTimeout(r, 400)); }, variant);
   if (ball) await page.evaluate(async (bone) => { const vs = window.__viewer; vs.setHeldOnlyInClips(false); await vs.setHeldItem('/models/bdsp/ob0204_00/model.glb', { bone, side: '', clips: [] }); }, ball);
   if (ball && ballScale !== 1) await page.evaluate((k) => window.__viewer.held.obj.scale.setScalar(k), ballScale);
@@ -73,7 +78,7 @@ for (const id of ids) {
   const used = await page.evaluate((clip) => { const a = window.__viewer.anim; const c = [clip, 'advent_b', 'wait_b'].find((n) => a.has(n)) ?? null; if (c) a.play(c); return c; }, clip);
   const threeUrl = await page.evaluate(() => performance.getEntriesByType('resource').map((r) => r.name).find((n) => /deps\/three\.js/.test(n)));
   for (const f of frames) {
-    const url = await page.evaluate(async ({ f, camera, fx, threeUrl, cam, gz }) => {
+    const url = await page.evaluate(async ({ f, camera, threeUrl, cam, gz }) => {
       const vs = window.__viewer, a = vs.anim;
       a.setPaused(true);
       const fc = Math.max(1, (a.state().frameCount || 1) - 1);
@@ -112,64 +117,9 @@ for (const id of ids) {
           b.updateMatrixWorld(true);
         }
       }
-      if (fx) {
-        const T = await import(threeUrl);
-        const scene = vs.root.parent ?? vs.root;
-        scene.getObjectByName('__fx')?.removeFromParent();
-        const grp = new T.Group(); grp.name = '__fx'; scene.add(grp);
-        vs.root.updateMatrixWorld(true);
-        const c = document.createElement('canvas'); c.width = c.height = 128;
-        const g = c.getContext('2d'); const gr = g.createRadialGradient(64, 64, 0, 64, 64, 64);
-        gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(0.18, 'rgba(255,255,255,0.75)'); gr.addColorStop(0.5, 'rgba(255,255,255,0.18)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
-        g.fillStyle = gr; g.fillRect(0, 0, 128, 128);
-        const tex = new T.CanvasTexture(c);
-        const bone = (n) => { const o = vs.findBone(n); return o ? o.getWorldPosition(new T.Vector3()) : null; };
-        const glow = (p, size, color, op = 1) => {
-          if (!p) return;
-          const m = new T.SpriteMaterial({ map: tex, color, transparent: true, opacity: op, blending: T.AdditiveBlending, depthWrite: false, depthTest: false, toneMapped: false });
-          const sp = new T.Sprite(m); sp.position.copy(p); sp.scale.setScalar(size); sp.renderOrder = 999; grp.add(sp);
-        };
-        if (fx === 'police') {
-          glow(bone('Light'), 0.36, 0xffe84a, 0.75); glow(bone('Light'), 0.12, 0xfff6b0, 0.6);
-          const r = bone('RItem1'), h = bone('RHand'); if (r && h) { const d = new T.Vector3(-0.6, 0.8, 0); for (let k = 0; k < 7; k++) { const q = r.clone().addScaledVector(d, 0.01 + 0.05 * k); glow(q, 0.42, 0xffe030, 0.65); glow(q, 0.16, 0xffe858, 0.6); glow(q, 0.95, 0xffd010, 0.22); } glow(r, 0.55, 0xffe030, 0.55); }
-        } else if (fx === 'psychic') {
-          const l = bone('LHand'), r = bone('RHand'), t = bone('RItem1');
-          if (l && r && t) {
-            // A circle through both hands and the orb above the head, drawn in the camera plane (the game's ring is a clean loop), as a
-            // thin crisp trail of small bright beads plus larger beads at intervals, with only a faint haze.
-            vs.camera.updateMatrixWorld(true);
-            const right = new T.Vector3().setFromMatrixColumn(vs.camera.matrixWorld, 0).normalize();
-            const up = new T.Vector3().setFromMatrixColumn(vs.camera.matrixWorld, 1).normalize();
-            const P = (q) => [q.clone().sub(t).dot(right), q.clone().sub(t).dot(up)];
-            const [ax, ay] = P(l), [bx, by] = [0, 0], [cx0, cy0] = P(r);
-            const dd = 2 * (ax * (by - cy0) + bx * (cy0 - ay) + cx0 * (ay - by));
-            if (Math.abs(dd) > 1e-6) {
-              const ux = ((ax * ax + ay * ay) * (by - cy0) + (bx * bx + by * by) * (cy0 - ay) + (cx0 * cx0 + cy0 * cy0) * (ay - by)) / dd;
-              const uy = ((ax * ax + ay * ay) * (cx0 - bx) + (bx * bx + by * by) * (ax - cx0) + (cx0 * cx0 + cy0 * cy0) * (bx - ax)) / dd;
-              const R = Math.hypot(ax - ux, ay - uy);
-              const TAU = Math.PI * 2, norm = (x) => ((x % TAU) + TAU) % TAU;
-              const aL = Math.atan2(ay - uy, ax - ux), aT = Math.atan2(by - uy, bx - ux), aR = Math.atan2(cy0 - uy, cx0 - ux);
-              let sweep = norm(aR - aL);
-              if (norm(aT - aL) > sweep) sweep -= TAU; // take the arc that passes through the orb
-              const N = 90;
-              for (let i = 0; i <= N; i++) {
-                const th = aL + sweep * (i / N);
-                const p = t.clone().addScaledVector(right, ux + R * Math.cos(th)).addScaledVector(up, uy + R * Math.sin(th));
-                const big = i % 10 === 5;
-                if (p.distanceTo(t) < 0.05) continue;           // keep the glow off the orb itself
-                glow(p, big ? 0.1 : 0.05, 0xffb830, 0.7);       // bright core
-                glow(p, big ? 0.28 : 0.17, 0xff8c10, big ? 0.7 : 0.5);
-                glow(p, big ? 0.6 : 0.4, 0xff7a00, 0.2);        // soft glow
-                glow(p, big ? 1.0 : 0.65, 0xff6a00, 0.08);      // wide blur
-              }
-            }
-            glow(t, 0.26, 0xff9a10, 0.1);
-          }
-        }
-      }
       await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
       return vs.pngDataUrl();
-    }, { f, camera: opt('camera', 'front'), fx, threeUrl, cam: { fov, pitch, yaw, fixedH, cy }, gz: gaze });
+    }, { f, camera: opt('camera', 'front'), threeUrl, cam: { fov, pitch, yaw, fixedH, cy }, gz: gaze });
     fs.writeFileSync(path.join(out, `${id.replace(/\//g, '_')}_f${f}${tag}.png`), Buffer.from(url.split(',')[1], 'base64'));
   }
   console.log(id, used);

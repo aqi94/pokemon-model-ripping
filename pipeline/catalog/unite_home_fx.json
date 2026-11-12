@@ -1,0 +1,2357 @@
+{
+ "source": "Pok\u00e9mon HOME effect core materials (tools/gen_unite_fx_colors.py)",
+ "species": {
+  "4": {
+   "home": "pm0004_00_00",
+   "effects": [
+    {
+     "material": "pm0004_00_00-FireCore",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.1961,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.9412,
+      0.8078,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.224,
+      0.561,
+      0.872,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0004a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0004b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.5922,
+     "noiseMean": 0.2602,
+     "loop": 6.6667
+    }
+   ]
+  },
+  "5": {
+   "home": "pm0005_00_00",
+   "effects": [
+    {
+     "material": "pm0005_00_00-FireCore",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.1961,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.9412,
+      0.8078,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.224,
+      0.561,
+      0.872,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0004a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0004b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.5922,
+     "noiseMean": 0.2602,
+     "loop": 6.6667
+    }
+   ]
+  },
+  "6": {
+   "home": "pm0006_00_00",
+   "effects": [
+    {
+     "material": "pm0006_00_00-FireCore",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.1961,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.9412,
+      0.8078,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.224,
+      0.561,
+      0.872,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0004a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0004b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.5922,
+     "noiseMean": 0.2602,
+     "loop": 6.6667
+    }
+   ]
+  },
+  "6_51": {
+   "home": "pm0006_51_00",
+   "effects": [
+    {
+     "material": "pm0006_51_00-FireCoreA",
+     "kind": "fire",
+     "baseColor": [
+      0.0,
+      0.8543,
+      1.0,
+      1.0
+     ],
+     "layerColor": [
+      0.8007,
+      0.9131,
+      0.9631,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.224,
+      0.561,
+      0.872,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0004a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0004b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.5922,
+     "noiseMean": 0.2602,
+     "loop": 6.6667
+    },
+    {
+     "material": "pm0006_51_00-FireCoreC",
+     "kind": "fire",
+     "baseColor": [
+      0.0,
+      0.8543,
+      1.0,
+      1.0
+     ],
+     "layerColor": [
+      0.8007,
+      0.9131,
+      0.9631,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.224,
+      0.561,
+      0.872,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0004a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        2.25
+       ]
+      },
+      {
+       "file": "firecore_0004b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.5922,
+     "noiseMean": 0.2602,
+     "loop": 6.6667
+    },
+    {
+     "material": "pm0006_51_00-FireCoreB",
+     "kind": "fire",
+     "baseColor": [
+      0.0,
+      0.8543,
+      1.0,
+      1.0
+     ],
+     "layerColor": [
+      0.8007,
+      0.9131,
+      0.9631,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.224,
+      0.561,
+      0.872,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0004a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0004b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.5922,
+     "noiseMean": 0.2602,
+     "loop": 6.6667
+    }
+   ]
+  },
+  "6_52": {
+   "home": "pm0006_52_00",
+   "effects": [
+    {
+     "material": "pm0006_52_00-FireCore",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.198,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.941,
+      0.8077,
+      0.0,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.224,
+      0.561,
+      0.872,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0004a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0004b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.5922,
+     "noiseMean": 0.2602,
+     "loop": 6.6667
+    }
+   ]
+  },
+  "77": {
+   "home": "pm0077_00_00",
+   "effects": [
+    {
+     "material": "pm0077_00_00-FireCoreE",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.232,
+      0.568,
+      0.878,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0077a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0077b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.375,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0077_00_00-FireCoreA",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.232,
+      0.568,
+      0.878,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0077a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.15,
+        0.75
+       ]
+      },
+      {
+       "file": "firecore_0077b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.15,
+        1.125
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0077_00_00-FireCoreB",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.232,
+      0.568,
+      0.878,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0077a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.15,
+        0.75
+       ]
+      },
+      {
+       "file": "firecore_0077b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.15,
+        1.125
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0077_00_00-FireCoreC",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.232,
+      0.568,
+      0.878,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0077a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0077b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.375,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0077_00_00-FireCoreD",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.232,
+      0.568,
+      0.878,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0077a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0077b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.375,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    }
+   ]
+  },
+  "78": {
+   "home": "pm0078_00_00",
+   "effects": [
+    {
+     "material": "pm0078_00_00-FireCoreD",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.125
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.5
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0078_00_00-FireCoreA",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.125,
+        0.75
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.125,
+        0.0
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0078_00_00-FireCoreB",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.125,
+        0.75
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.125,
+        0.0
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0078_00_00-FireCoreG",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.125
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.5
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0078_00_00-FireCoreE",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.125
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.5
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0078_00_00-FireCoreF",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.125
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.5
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0078_00_00-FireCoreC",
+     "kind": "fire",
+     "baseColor": [
+      0.9777,
+      0.391,
+      0.0,
+      1.0
+     ],
+     "layerColor": [
+      0.9405,
+      0.6908,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.125
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.5
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 8.0
+    }
+   ]
+  },
+  "92": {
+   "home": "pm0092_00_00",
+   "effects": [
+    {
+     "material": "pm0092_00_00-SmokeCore",
+     "kind": "smoke",
+     "baseColor": [
+      0.5338,
+      0.4397,
+      0.5657,
+      1.0
+     ],
+     "layerColor": [
+      0.3983,
+      0.2841,
+      0.4366,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       2.0,
+       1.0
+      ],
+      [
+       4.0,
+       2.0
+      ]
+     ],
+     "lerpProfile": [
+      0.999,
+      0.497,
+      0.075,
+      0.0,
+      0.0,
+      0.063,
+      0.469,
+      0.992
+     ],
+     "noise": [
+      {
+       "file": "smokecore_0092a_msk.png",
+       "scale": [
+        2.0,
+        1.0
+       ],
+       "speed": [
+        -0.1172,
+        0.1172
+       ]
+      },
+      {
+       "file": "smokecore_0092a_msk.png",
+       "scale": [
+        4.0,
+        2.0
+       ],
+       "speed": [
+        -0.0781,
+        0.0781
+       ]
+      }
+     ],
+     "noiseNorm": 1.7576,
+     "noiseMean": 0.4761,
+     "loop": 25.6
+    }
+   ]
+  },
+  "146": {
+   "home": "pm0146_00_00",
+   "effects": [
+    {
+     "material": "pm0146_00_00-FireCoreC",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.1961,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.9412,
+      0.8078,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       3.0
+      ],
+      [
+       1.0,
+       3.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        3.0
+       ],
+       "speed": [
+        -0.5625,
+        1.125
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        1.0,
+        3.0
+       ],
+       "speed": [
+        0.0,
+        0.0
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 5.3333
+    },
+    {
+     "material": "pm0146_00_00-FireCoreA01",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.1961,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.9412,
+      0.8078,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       2.0,
+       2.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.375,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        2.0,
+        2.0
+       ],
+       "speed": [
+        -0.5625,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 5.3333
+    },
+    {
+     "material": "pm0146_00_00-FireCoreA00",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.1961,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.9412,
+      0.8078,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       2.0,
+       2.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.375,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        2.0,
+        2.0
+       ],
+       "speed": [
+        -0.5625,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 5.3333
+    },
+    {
+     "material": "pm0146_00_00-FireCoreB",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.1961,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.9412,
+      0.8078,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       3.0
+      ],
+      [
+       1.0,
+       3.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.27,
+      0.754,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0146a_msk.png",
+       "scale": [
+        1.0,
+        3.0
+       ],
+       "speed": [
+        -0.5625,
+        1.125
+       ]
+      },
+      {
+       "file": "firecore_0146b_msk.png",
+       "scale": [
+        1.0,
+        3.0
+       ],
+       "speed": [
+        0.0,
+        0.0
+       ]
+      }
+     ],
+     "noiseNorm": 1.0824,
+     "noiseMean": 0.2325,
+     "loop": 5.3333
+    }
+   ]
+  },
+  "257": {
+   "home": "pm0257_00_00",
+   "effects": [
+    {
+     "material": "pm0257_00_00-FireCoreA",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.5036,
+      0.2321,
+      1.0
+     ],
+     "layerColor": [
+      1.0,
+      0.9044,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.007,
+      0.043,
+      0.163,
+      0.508,
+      0.778
+     ],
+     "noise": [
+      {
+       "file": "firecore_0257a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        2.4
+       ]
+      },
+      {
+       "file": "firecore_0257b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        1.8
+       ]
+      }
+     ],
+     "noiseNorm": 1.1412,
+     "noiseMean": 0.3446,
+     "loop": 6.6667
+    },
+    {
+     "material": "pm0257_00_00-FireCoreB",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.5036,
+      0.2321,
+      1.0
+     ],
+     "layerColor": [
+      1.0,
+      0.9044,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.007,
+      0.043,
+      0.163,
+      0.508,
+      0.778
+     ],
+     "noise": [
+      {
+       "file": "firecore_0257a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        2.4
+       ]
+      },
+      {
+       "file": "firecore_0257b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        1.8
+       ]
+      }
+     ],
+     "noiseNorm": 1.1412,
+     "noiseMean": 0.3446,
+     "loop": 6.6667
+    }
+   ]
+  },
+  "257_01": {
+   "home": "pm0257_01_00",
+   "effects": [
+    {
+     "material": "pm0257_00_00-FireCoreA",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.5036,
+      0.2321,
+      1.0
+     ],
+     "layerColor": [
+      1.0,
+      0.9044,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.007,
+      0.043,
+      0.163,
+      0.508,
+      0.778
+     ],
+     "noise": [
+      {
+       "file": "firecore_0257a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        2.4
+       ]
+      },
+      {
+       "file": "firecore_0257b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        1.8
+       ]
+      }
+     ],
+     "noiseNorm": 1.1412,
+     "noiseMean": 0.3446,
+     "loop": 6.6667
+    },
+    {
+     "material": "pm0257_00_00-FireCoreB",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.5036,
+      0.2321,
+      1.0
+     ],
+     "layerColor": [
+      1.0,
+      0.9044,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.007,
+      0.043,
+      0.163,
+      0.508,
+      0.778
+     ],
+     "noise": [
+      {
+       "file": "firecore_0257a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        2.4
+       ]
+      },
+      {
+       "file": "firecore_0257b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        1.8
+       ]
+      }
+     ],
+     "noiseNorm": 1.1412,
+     "noiseMean": 0.3446,
+     "loop": 6.6667
+    }
+   ]
+  },
+  "257_51": {
+   "home": "pm0257_51_00",
+   "effects": [
+    {
+     "material": "pm0257_51_00-FireCoreD",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.4965,
+      0.2091,
+      1.0
+     ],
+     "layerColor": [
+      0.941,
+      0.8507,
+      0.0,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.056,
+      0.378,
+      0.765,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0257_51a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        0.0,
+        0.7595
+       ]
+      },
+      {
+       "file": "firecore_0257_51b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        0.0,
+        0.7595
+       ]
+      }
+     ],
+     "noiseNorm": 1.6039,
+     "noiseMean": 0.2572,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0257_51_00-FireCoreA",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.4965,
+      0.2091,
+      1.0
+     ],
+     "layerColor": [
+      0.941,
+      0.8507,
+      0.0,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.056,
+      0.378,
+      0.765,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0257_51a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        0.0,
+        0.7595
+       ]
+      },
+      {
+       "file": "firecore_0257_51b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        0.0,
+        0.7595
+       ]
+      }
+     ],
+     "noiseNorm": 1.6039,
+     "noiseMean": 0.2572,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0257_51_00-FireCoreB",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.4965,
+      0.2091,
+      1.0
+     ],
+     "layerColor": [
+      0.941,
+      0.8507,
+      0.0,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.056,
+      0.378,
+      0.765,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0257_51a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        0.0,
+        0.7595
+       ]
+      },
+      {
+       "file": "firecore_0257_51b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        0.0,
+        0.7595
+       ]
+      }
+     ],
+     "noiseNorm": 1.6039,
+     "noiseMean": 0.2572,
+     "loop": 8.0
+    },
+    {
+     "material": "pm0257_51_00-FireCoreC",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.4965,
+      0.2091,
+      1.0
+     ],
+     "layerColor": [
+      0.941,
+      0.8507,
+      0.0,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.056,
+      0.378,
+      0.765,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0257_51a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        0.0,
+        0.7595
+       ]
+      },
+      {
+       "file": "firecore_0257_51b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        0.0,
+        0.7595
+       ]
+      }
+     ],
+     "noiseNorm": 1.6039,
+     "noiseMean": 0.2572,
+     "loop": 8.0
+    }
+   ]
+  },
+  "654": {
+   "home": "pm0654_00_00",
+   "effects": [
+    {
+     "material": "pm0654_00_00-FireCore",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.1961,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.9412,
+      0.8078,
+      0.0,
+      1.0
+     ],
+     "zWrite": 0.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.224,
+      0.561,
+      0.872,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0718a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.25,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0718b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.375,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.2784,
+     "noiseMean": 0.2823,
+     "loop": 8.0
+    }
+   ]
+  },
+  "655": {
+   "home": "pm0655_00_00",
+   "effects": [
+    {
+     "material": "pm0655_00_00-FireCore",
+     "kind": "fire",
+     "baseColor": [
+      1.0,
+      0.1961,
+      0.102,
+      1.0
+     ],
+     "layerColor": [
+      0.9412,
+      0.8078,
+      0.0,
+      1.0
+     ],
+     "zWrite": 1.0,
+     "blendUVScale": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ],
+     "lerpProfile": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.224,
+      0.561,
+      0.872,
+      1.0
+     ],
+     "noise": [
+      {
+       "file": "firecore_0004a_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.3,
+        1.5
+       ]
+      },
+      {
+       "file": "firecore_0004b_msk.png",
+       "scale": [
+        1.0,
+        1.0
+       ],
+       "speed": [
+        -0.45,
+        2.25
+       ]
+      }
+     ],
+     "noiseNorm": 1.5922,
+     "noiseMean": 0.2602,
+     "loop": 6.6667
+    }
+   ]
+  },
+  "911": {
+   "home": "pm0911_00_00",
+   "effects": [],
+   "asFire": [
+    {
+     "material": "pm0911_00_00-BodyC",
+     "colScale": [
+      2.0,
+      1.0
+     ],
+     "displaceHeight": 0.06499999761581421,
+     "displaceUvIndex": 1.0,
+     "motion": {
+      "loop": 10.0,
+      "ColorUVTranslate": [
+       0.0,
+       0.3
+      ],
+      "DisplaceUVTranslate": [
+       -0.2,
+       0.2
+      ]
+     }
+    }
+   ]
+  },
+  "1008_12": {
+   "home": "pm1008_12_00",
+   "effects": [],
+   "asFire": [
+    {
+     "material": "pm1008_12_00-BodyDsp",
+     "colScale": [
+      1.0,
+      1.0
+     ],
+     "displaceHeight": 0.04999999701976776,
+     "displaceUvIndex": 0.0,
+     "motion": {
+      "loop": 6.4
+     }
+    }
+   ]
+  },
+  "1008_13": {
+   "home": "pm1008_13_00",
+   "effects": [],
+   "asFire": [
+    {
+     "material": "pm1008_13_00-BodyDsp",
+     "colScale": [
+      1.0,
+      1.0
+     ],
+     "displaceHeight": 0.04999999701976776,
+     "displaceUvIndex": 0.0,
+     "motion": {
+      "loop": 6.4
+     }
+    }
+   ]
+  },
+  "1008_14": {
+   "home": "pm1008_14_00",
+   "effects": [],
+   "asFire": [
+    {
+     "material": "pm1008_14_00-BodyDsp",
+     "colScale": [
+      1.0,
+      1.0
+     ],
+     "displaceHeight": 0.04999999701976776,
+     "displaceUvIndex": 0.0,
+     "motion": {
+      "loop": 6.4
+     }
+    }
+   ]
+  },
+  "1008_15": {
+   "home": "pm1008_15_00",
+   "effects": [],
+   "asFire": [
+    {
+     "material": "pm1008_15_00-BodyDsp",
+     "colScale": [
+      1.0,
+      1.0
+     ],
+     "displaceHeight": 0.04999999701976776,
+     "displaceUvIndex": 0.0,
+     "motion": {
+      "loop": 6.4,
+      "ColorUVTranslate": [
+       0.0,
+       2.0
+      ],
+      "DisplaceUVTranslate": [
+       0.0,
+       2.0
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

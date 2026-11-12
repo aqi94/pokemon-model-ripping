@@ -56,3 +56,57 @@ def test_uniform_scale_clip_still_hides_the_chain():
     split_scale_joints(sk, [squash, hide])
     vals = {(tr.joint, tr.kind): tr.values[0] for tr in hide.tracks}
     assert np.allclose(_worlds(sk, vals)["b"][:3, :3], 0)  # inherited zero scale hides the child
+
+
+def test_clip_without_scale_key_keeps_rest_scaled_child_offsets():
+    # SV trainers: `eyescale` rests at (1.6, 1, 1) with the eyeballs as children. A clip that keys neither the bone's
+    # scale nor the eyeball offsets must leave the eyes where the rest pose puts them (it wrote the raw offsets,
+    # pulling both eyes towards the centre in every such clip).
+    sk = Skeleton(joints=[Joint("eyescale", -1, scale=(1.6, 1, 1)), Joint("eye_r", 0, (-0.014, 0.031, 0.013))], palette=[0, 1])
+    t = np.array([0.0], np.float32)
+    idle = Clip(name="idle", tracks=[Track("eye_r", "rotation", t, np.array([[0, 0, 0, 1]], np.float32))], frame_rate=60.0)
+    split_scale_joints(sk, [idle])
+    rest = _worlds(sk, {})["eye_r"][:3, 3]
+    vals = {(tr.joint, tr.kind): tr.values[0] for tr in idle.tracks}
+    assert np.allclose(_worlds(sk, vals)["eye_r"][:3, 3], rest, atol=1e-6)
+    assert np.allclose(rest, (-0.014 * 1.6, 0.031, 0.013), atol=1e-6)
+
+
+def test_scale_compensate_off_child_inherits_and_rest_skin_is_identity():
+    # SV trainers: `eyescale` (1.3, 1, 1) -> `left_eyeball_segoff` (compensate OFF: inherits the scale, its inverse bind
+    # includes it) -> `left_pupil`. The rest skin matrix (world x inverse bind) must be identity for every joint.
+    sk = Skeleton(joints=[
+        Joint("head", -1, skinning=True),
+        Joint("eyescale", 0, (0.1, 0, 0.03), scale=(1.3, 1, 1), skinning=True),
+        Joint("segoff", 1, (0.008, -0.018, 0.016), skinning=True, scale_compensate=False),
+        Joint("pupil", 2, (0.01, 0, 0), skinning=True),
+        Joint("brow", 1, (0.02, 0.01, 0), skinning=True),  # compensating sibling
+    ], palette=[0, 1, 2, 3, 4])
+    game = {}
+    for i, j in enumerate(sk.joints):  # game rule: compensating children drop the parent's scale, segoff keeps it
+        loc = _trs(j.translation, j.rotation, j.scale)
+        if j.parent < 0:
+            game[i] = loc
+            continue
+        pw = game[j.parent]
+        if j.scale_compensate:
+            ps = np.asarray(sk.joints[j.parent].scale, float)
+            pw = pw.copy(); pw[:3, :3] /= ps[None, :]
+            loc = _trs(np.asarray(j.translation) * ps, j.rotation, j.scale)
+        game[i] = pw @ loc
+    for i, j in enumerate(sk.joints):
+        j.inverse_bind = np.linalg.inv(game[i]).astype(np.float32)
+    split_scale_joints(sk, [])
+    w = {}
+
+    def world(i):
+        if i not in w:
+            j = sk.joints[i]
+            loc = _trs(j.translation, j.rotation, j.scale)
+            w[i] = loc if j.parent < 0 else world(j.parent) @ loc
+        return w[i]
+
+    for p in sk.palette:
+        j = sk.joints[p]
+        assert np.allclose(world(p) @ j.inverse_bind, np.eye(4), atol=1e-5), j.name
+    assert sk.joints[2].parent == sk.index_of("eyescale_scale")

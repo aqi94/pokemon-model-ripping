@@ -95,6 +95,13 @@ class MeshShape:
     declarations: list[VertexDeclaration]
     parts: list[MeshPart]
     bone_weights: list[BoneWeightSummary]
+    # Blend-shape regions (field 14): (region shape name e.g. `face_m1_mesh_shape`, declarations, target names e.g.
+    # `mouth_i_m1_face_mesh_shape`). Declaration 0 is the affected vertex index list (usage 10, u32), declaration
+    # 1 + i the i-th target's per-vertex position/normal/tangent deltas.
+    morph_regions: list[tuple[str, list[VertexDeclaration], list[str]]] = field(default_factory=list)
+    # Dense blend-shape targets (field 11, meshes without regions: eyebrow, eyelash, tooth, tongue): target i uses
+    # declaration 1 + i and vertex buffer 1 + i (one record per vertex).
+    morph_names: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -116,7 +123,12 @@ def parse_trmsh(data: bytes) -> Trmsh:
             decls.append(VertexDeclaration(elements, strides))
         parts = [MeshPart(p.i32(0), p.i32(1), p.string(3), p.i32(4)) for p in m.tables(4)]
         bw = [BoneWeightSummary(b.i32(0), b.f32(1)) for b in m.tables(10)]
-        shapes.append(MeshShape(m.string(0), m.string(12), m.i32(2), decls, parts, bw))
+        regions = []
+        for rg in m.tables(14):
+            rdecls = [VertexDeclaration([VertexElement(e.i32(0), e.u32(1), e.i32(2), e.u32(3), e.i32(4)) for e in d.tables(0)],
+                                        [x.i32(0) for x in d.tables(1)]) for d in rg.tables(0)]
+            regions.append((rg.string(2), rdecls, [x.string(1) for x in rg.tables(1)]))
+        shapes.append(MeshShape(m.string(0), m.string(12), m.i32(2), decls, parts, bw, regions, [x.string(1) for x in m.tables(11)]))
     return Trmsh(shapes, t.string(2))
 
 
@@ -124,6 +136,7 @@ def parse_trmsh(data: bytes) -> Trmsh:
 class MeshBuffers:
     index_buffers: list[memoryview]
     vertex_buffers: list[memoryview]
+    morph_buffers: list[list[memoryview]] = field(default_factory=list)  # per blend-shape region: [indices, target 0, ...]
 
 
 def parse_trmbf(data: bytes) -> list[MeshBuffers]:
@@ -132,7 +145,44 @@ def parse_trmbf(data: bytes) -> list[MeshBuffers]:
     for b in t.tables(1):
         idx = [_bytes_vec(x, 0) for x in b.tables(0)]
         vtx = [_bytes_vec(x, 0) for x in b.tables(1)]
-        out.append(MeshBuffers(idx, vtx))
+        morph = [[_bytes_vec(x, 0) for x in rg.tables(0)] for rg in b.tables(2)]
+        out.append(MeshBuffers(idx, vtx, morph))
+    return out
+
+
+def morph_targets(shape: "MeshShape", buffers: MeshBuffers, base: np.ndarray) -> list[tuple[str, np.ndarray]]:
+    """Blend-shape targets of a shape as full (vertex_count, 3) position deltas: [(target name, deltas)].
+    Sparse in the file: each region lists the vertices it moves (u32, 0xFFFFFFFF = padding) and per target a
+    28-byte record per listed vertex (position delta f32x3, normal and tangent f16x4). Dense targets (field 11) store
+    absolute positions for every vertex; they are returned as deltas from `base` (the shape's rest positions)."""
+    vertex_count = len(base)
+    out = []
+    for i, name in enumerate(shape.morph_names):
+        if 1 + i >= len(shape.declarations) or 1 + i >= len(buffers.vertex_buffers):
+            break
+        d, buf = shape.declarations[1 + i], buffers.vertex_buffers[1 + i]
+        pos = next((e for e in d.elements if e.usage == 1), None)
+        stride = d.strides[0] if d.strides else 0
+        if pos is None or not stride or len(buf) < stride * vertex_count:
+            continue
+        raw = np.frombuffer(buf, np.uint8)[: stride * vertex_count].reshape(vertex_count, stride)
+        absolute = np.frombuffer(np.ascontiguousarray(raw[:, pos.offset : pos.offset + 12]).tobytes(), "<f4").reshape(-1, 3)
+        out.append((name, (absolute - base).astype(np.float32)))
+    for (region, decls, names), bufs in zip(shape.morph_regions, buffers.morph_buffers):
+        if not decls or len(bufs) < 2:
+            continue
+        idx = np.frombuffer(bufs[0], "<u4")
+        keep = idx < vertex_count
+        for name, d, buf in zip(names, decls[1:], bufs[1:]):
+            pos = next((e for e in d.elements if e.usage == 1), None)
+            stride = d.strides[0] if d.strides else 0
+            if pos is None or not stride or len(buf) < stride * len(idx):
+                continue
+            raw = np.frombuffer(buf, np.uint8)[: stride * len(idx)].reshape(len(idx), stride)
+            p = np.frombuffer(np.ascontiguousarray(raw[:, pos.offset : pos.offset + 12]).tobytes(), "<f4").reshape(-1, 3)
+            delta = np.zeros((vertex_count, 3), np.float32)
+            delta[idx[keep]] = p[keep]
+            out.append((name, delta))
     return out
 
 
@@ -394,10 +444,25 @@ def parse_trmtr(data: bytes) -> list[TrMaterial]:
 
 
 @dataclass
+@dataclass
+class VariationGroup:
+    """One per-NPC variation axis of a `.trmmt` set (SV): `color_00` (skin/hair/eye tones), `color_01..03`, `vis_NN`
+    (mesh toggles), `discard_NN`, `uv_NN`... Field 3 of the set = {0 name, 1 entries {0 shape, 1 material, 2 param},
+    2 first id, 3 last id, 4 {0 nested `.tracm` bytes: material tracks keyed by the id}, 5, 6 (unexplained)}.
+    The game picks an id per NPC (`.ccdata` `race00..03` -> 300..303); a param's value at id k is the last key <= k."""
+
+    name: str
+    first: int
+    last: int
+    tracks: list  # list[MaterialParamTrack]
+
+
+@dataclass
 class MaterialVariantSet:
     name: str  # "normal", "rare"
     material_files: list[str]
     shape_materials: dict[str, str]  # mesh shape name -> material name (if present)
+    groups: list[VariationGroup] = field(default_factory=list)
 
 
 def parse_trmmt(data: bytes) -> list[MaterialVariantSet]:
@@ -408,8 +473,31 @@ def parse_trmmt(data: bytes) -> list[MaterialVariantSet]:
         # Field 2 lists the mesh shapes this variant applies to; its second
         # field is not a string (packed flags), so only shape names are kept.
         mapping = {e.string(0): "" for e in v.tables(2)}
-        out.append(MaterialVariantSet(v.string(0), files, mapping))
+        groups = []
+        for g in v.tables(3):
+            tracks = []
+            holder = g.table(4)
+            nested = holder.vector(0) if holder is not None else None
+            if nested is not None and nested.count:
+                try:
+                    tracks = parse_tracm_materials(bytes(nested.raw(1)))
+                except Exception:  # noqa: BLE001 - an unreadable axis is skipped, not fatal
+                    tracks = []
+            groups.append(VariationGroup(g.string(0), g.u32(2), g.u32(3), tracks))
+        out.append(MaterialVariantSet(v.string(0), files, mapping, groups))
     return out
+
+
+def track_value(track, key: float) -> tuple[float, ...] | None:
+    """Value of a keyed material track at `key` (held: the last key <= key, else the first key)."""
+    out = []
+    for frames, values in track.channels:
+        if not len(frames):
+            out.append(None)
+            continue
+        i = int(np.searchsorted(frames, key + 1e-4, side="right")) - 1
+        out.append(float(values[max(i, 0)]))
+    return None if all(x is None for x in out) else tuple(0.0 if x is None else x for x in out)
 
 
 # --------------------------------------------------------------------------
@@ -596,6 +684,57 @@ def parse_tracm_visibility(data: bytes) -> list[VisibilityTrack]:
             continue
         if len(frames):
             out.append(VisibilityTrack(shape.string(0), frames, values.astype(bool)))
+    return out
+
+
+@dataclass
+class BlendShapeTrack:
+    """A blend-shape (morph) weight curve: `blend_<deformer>:<target>` (e.g. `blend_mouth:battle_01`)."""
+
+    name: str
+    frames: np.ndarray  # (K,) int32
+    weights: np.ndarray  # (K,) float32
+    shapes: list[str] = field(default_factory=list)  # the region shapes it drives (`face_m1_mesh_shape`, `tooth_mesh_shape`)
+
+
+def _scalar_channel(t: fb.Table, kind_field: int, data_field: int) -> tuple[np.ndarray, np.ndarray] | None:
+    """The .tranm channel union for one float: 1 fixed {0 value}, 2 per frame {0 values}, 3/4 keyed {0 u16/u8 frames,
+    1 values}."""
+    kind = t.u8(kind_field)
+    dat = t.table(data_field)
+    if not kind or dat is None:
+        return None
+    if kind == TRACK_FIXED:
+        return np.zeros(1, np.int32), np.array([dat.f32(0)], np.float32)
+    if kind == TRACK_FRAMED:
+        v = dat.vector(0)
+        vals = v.scalars("<f4").astype(np.float32) if v else np.zeros(0, np.float32)
+        return np.arange(len(vals), dtype=np.int32), vals
+    if kind in (TRACK_KEYED16, TRACK_KEYED8):
+        kv, vv = dat.vector(0), dat.vector(1)
+        frames = kv.scalars("<u2" if kind == TRACK_KEYED16 else "u1").astype(np.int32) if kv else np.zeros(0, np.int32)
+        vals = vv.scalars("<f4").astype(np.float32) if vv else np.zeros(0, np.float32)
+        n = min(len(frames), len(vals))
+        return frames[:n], vals[:n]
+    return None
+
+
+def parse_tracm_blendshapes(data: bytes) -> list[BlendShapeTrack]:
+    """Morph weights of a clip: the `.tracm` shape named `__blendShape`, field 6 = {2 targets {0 name
+    `blend_<deformer>:<target>`, 2 union type, 3 union data (as .tranm channels, one float)}, 4 deformers {0 name}}.
+    SV trainers' faces (mouth/brow/eye expressions: VS, battle and face-layer clips)."""
+    t = fb.root(data)
+    out: list[BlendShapeTrack] = []
+    for shape in t.tables(1):
+        if shape.string(0) != "__blendShape":
+            continue
+        bs = shape.table(6)
+        if bs is None:
+            continue
+        for e in bs.tables(2):
+            ch = _scalar_channel(e, 2, 3)
+            if ch is not None and len(ch[0]):
+                out.append(BlendShapeTrack(e.string(0), ch[0], ch[1], [x.string(0) for x in e.tables(1)]))
     return out
 
 

@@ -1,0 +1,402 @@
+{
+ "tr0330_00": {
+  "clips": [],
+  "own": "tr0330_karate",
+  "sets": [
+   "cc0012_msl"
+  ]
+ },
+ "tr0340_00": {
+  "clips": [],
+  "own": "tr0340_artist",
+  "sets": [
+   "cc0003_cut_f",
+   "cc0007_pos_f",
+   "cc0009_neg_f"
+  ]
+ },
+ "tr0350_00": {
+  "clips": [],
+  "own": "tr0350_researcher",
+  "sets": [
+   "cc0004_adl_m",
+   "cc0010_cla_m"
+  ]
+ },
+ "tr0360_00": {
+  "clips": [],
+  "own": "",
+  "sets": [
+   "cc0002_nau_m"
+  ]
+ },
+ "tr0370_00": {
+  "clips": [],
+  "own": "tr0370_worker",
+  "sets": [
+   "cc0006_pos_m",
+   "cc0012_msl"
+  ]
+ },
+ "tr0380_00": {
+  "clips": [],
+  "own": "tr0380_musician",
+  "sets": [
+   "cc0012_msl"
+  ]
+ },
+ "tr0390_00": {
+  "clips": [],
+  "own": "tr0390_businessman",
+  "sets": [
+   "cc0004_adl_m",
+   "cc0010_cla_m"
+  ]
+ },
+ "tr0400_00": {
+  "clips": [],
+  "own": "tr0400_ol",
+  "sets": [
+   "cc0003_cut_f",
+   "cc0009_neg_f",
+   "cc0011_cla_f"
+  ]
+ },
+ "tr0410_00": {
+  "clips": [],
+  "own": "tr0410_mania",
+  "sets": [
+   "cc0004_adl_m",
+   "cc0006_pos_m"
+  ]
+ },
+ "tr0420_00": {
+  "clips": [],
+  "own": "tr0420_mountain",
+  "sets": []
+ },
+ "tr0430_00": {
+  "clips": [],
+  "own": "tr0430_chef",
+  "sets": []
+ },
+ "tr0440_00": {
+  "clips": [],
+  "own": "tr0440_backpacker",
+  "sets": [
+   "cc0004_adl_m",
+   "cc0006_pos_m"
+  ]
+ },
+ "tr0450_00": {
+  "clips": [],
+  "own": "tr0450_waiter",
+  "sets": [
+   "cc0004_adl_m",
+   "cc0010_cla_m"
+  ]
+ },
+ "tr0460_00": {
+  "clips": [],
+  "own": "tr0460_waitress",
+  "sets": []
+ },
+ "tr0470_00": {
+  "clips": [],
+  "own": "tr0470_cleaning",
+  "sets": [
+   "cc0013_fat_m"
+  ]
+ },
+ "tr0480_00": {
+  "clips": [],
+  "own": "",
+  "sets": [
+   "cc0005_adl_f",
+   "cc0003_cut_f",
+   "cc0009_neg_f",
+   "cc0011_cla_f"
+  ]
+ },
+ "tr0490_00": {
+  "clips": [],
+  "own": "tr0490_model",
+  "sets": [
+   "cc0005_adl_f",
+   "cc0003_cut_f",
+   "cc0007_pos_f",
+   "cc0011_cla_f"
+  ]
+ },
+ "tr0500_00": {
+  "clips": [],
+  "own": "",
+  "sets": [
+   "cc0004_adl_m",
+   "cc0010_cla_m"
+  ]
+ },
+ "tr0510_00": {
+  "clips": [],
+  "own": "tr0510_pc",
+  "sets": []
+ },
+ "tr0520_00": {
+  "clips": [],
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr0600_00": {
+  "clips": [
+   "cc0004_adl_m/cc0004_adl_m_04107_squat01_loop"
+  ],
+  "own": "tr0600_tribem",
+  "sets": []
+ },
+ "tr0610_00": {
+  "clips": [
+   "cc0005_adl_f/cc0005_adl_f_04107_squat01_loop"
+  ],
+  "own": "tr0610_tribef",
+  "sets": []
+ },
+ "tr0880_00": {
+  "clips": [],
+  "own": "tr0880_mother",
+  "sets": []
+ },
+ "tr0890_00": {
+  "clips": [],
+  "own": "tr0890_deliverer",
+  "sets": [
+   "cc0006_pos_m",
+   "cc0012_msl"
+  ]
+ },
+ "tr0900_00": {
+  "clips": [],
+  "own": "tr0900_richm",
+  "sets": []
+ },
+ "tr0910_00": {
+  "clips": [],
+  "own": "",
+  "sets": [
+   "cc0011_cla_f"
+  ]
+ },
+ "tr0920_00": {
+  "clips": [],
+  "own": "",
+  "sets": [
+   "cc0004_adl_m",
+   "cc0010_cla_m"
+  ]
+ },
+ "tr0930_00": {
+  "clips": [],
+  "own": "",
+  "sets": [
+   "cc0005_adl_f",
+   "cc0011_cla_f"
+  ]
+ },
+ "tr1300_00": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr1310_00": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ },
+ "tr1340_00": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ },
+ "tr1350_00": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr1360_00": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ },
+ "tr1370_00": {
+  "borrowedFrom": "tr0510_00",
+  "clips": [],
+  "guess": true,
+  "own": "tr0510_pc",
+  "sets": []
+ },
+ "tr1380_00": {
+  "borrowedFrom": "tr0520_00",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr1390_00": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr1400_00": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ },
+ "tr1500_00": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr1500_20": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr1510_00": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ },
+ "tr1510_20": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ },
+ "tr1800_00": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr1810_00": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ },
+ "tr1820_00": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr2350_00": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr2360_00": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ },
+ "tr2500_00": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr2500_20": {
+  "borrowedFrom": "cc0004_adl_m",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0004_adl_m"
+  ]
+ },
+ "tr2510_00": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ },
+ "tr2510_20": {
+  "borrowedFrom": "cc0005_adl_f",
+  "clips": [],
+  "guess": true,
+  "own": "",
+  "sets": [
+   "cc0005_adl_f"
+  ]
+ }
+}

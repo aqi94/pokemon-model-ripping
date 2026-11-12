@@ -71,6 +71,7 @@ class LaCatalog(ZaCatalog):
     POKE_ROOT = "bin/pokemon"
     TRAINER_ANIM_ROOT = ""
     CC_MODEL_ZIPS: list[str] = []
+    PC_MODEL_ZIPS: list[str] = []
 
     def pokemon(self) -> list[ModelRef]:
         refs: dict[str, ModelRef] = {}

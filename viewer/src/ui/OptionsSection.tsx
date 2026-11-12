@@ -1,12 +1,24 @@
 import { useState } from 'react';
-import { DEFAULT_ENV, DEFAULT_HABLE, matchPreset, type Environment, type ToneMap } from '../scene/environment';
+import { CATEGORY_LABELS, DEFAULT_ENV, DEFAULT_HABLE, matchPreset, type CategoryLight, type Environment, type ToneMap } from '../scene/environment';
 import { USER_PREFIX, deleteUserPreset, matchAnyPreset, saveUserPreset } from '../scene/userPresets';
 import { LightingSelect } from './LightingSelect';
 
 export interface Options {
   shadows: boolean;
+  /** UNITE idle particle stand-ins (tail flame, gas); undefined = on. */
+  particles?: boolean;
+  animateEffects?: boolean;
   skeleton: boolean;
   wireframe: boolean;
+  outline: boolean;
+  outlineWidth: number;
+  outlineColor: string;
+  outlineTinted: boolean;
+  /** hull = cartoon inverted hull; sprite = 3DS battle-sprite look (low-res render + 1-px lines). */
+  outlineStyle?: 'auto' | 'hull' | 'sprite';
+  /** Sprite style: screen px per sprite pixel. */
+  outlinePixel?: number;
+  outlineSpriteColor?: string;
   background: string;
   autoRotate: number;
   mirror: boolean;
@@ -50,8 +62,40 @@ export function RenderPanel({ options, onChange }: Props) {
   return (
     <div className="pane">
       <label className="check"><input type="checkbox" checked={options.shadows} onChange={(e) => onChange({ shadows: e.target.checked })} /><span>Shadows</span></label>
+      <label className="check" title="Stand-ins for in-game particle effects the rip lacks (tail flames, gas)"><input type="checkbox" checked={options.particles ?? true} onChange={(e) => onChange({ particles: e.target.checked })} /><span>Particles</span></label>
+      <label className="check" title="Scroll flame noise at Pokémon HOME's speeds (UNITE flames)"><input type="checkbox" checked={options.animateEffects ?? true} onChange={(e) => onChange({ animateEffects: e.target.checked })} /><span>Animate effects</span></label>
       <label className="check"><input type="checkbox" checked={options.skeleton} onChange={(e) => onChange({ skeleton: e.target.checked })} /><span>Skeleton</span></label>
       <label className="check"><input type="checkbox" checked={options.wireframe} onChange={(e) => onChange({ wireframe: e.target.checked })} /><span>Wireframe</span></label>
+      <label className="check"><input type="checkbox" checked={options.outline} onChange={(e) => onChange({ outline: e.target.checked })} /><span>Outline</span></label>
+      {options.outline && (
+        <label className="field">
+          <span>Outline style</span>
+          <select className="text" value={options.outlineStyle ?? 'auto'} onChange={(e) => onChange({ outlineStyle: e.target.value as Options['outlineStyle'] })}>
+            <option value="auto">Game data (else hull)</option>
+            <option value="hull">Cartoon hull</option>
+            <option value="sprite">3DS sprite</option>
+          </select>
+        </label>
+      )}
+      {options.outline && options.outlineStyle === 'sprite' && (
+        <>
+          <label className="field">
+            <span>Pixel size {options.outlinePixel ?? 3} px</span>
+            <input type="range" min={1} max={8} step={1} value={options.outlinePixel ?? 3} onChange={(e) => onChange({ outlinePixel: Number(e.target.value) })} />
+          </label>
+          <label className="field"><span>Silhouette colour</span><input type="color" value={options.outlineSpriteColor ?? '#272726'} onChange={(e) => onChange({ outlineSpriteColor: e.target.value })} /></label>
+        </>
+      )}
+      {options.outline && options.outlineStyle !== 'sprite' && (
+        <>
+          <label className="field">
+            <span>Outline width {options.outlineWidth.toFixed(1)} px</span>
+            <input type="range" min={0.5} max={6} step={0.5} value={options.outlineWidth} onChange={(e) => onChange({ outlineWidth: Number(e.target.value) })} />
+          </label>
+          <label className="check"><input type="checkbox" checked={options.outlineTinted} onChange={(e) => onChange({ outlineTinted: e.target.checked })} /><span>Tint to surface colour</span></label>
+          {!options.outlineTinted && <label className="field"><span>Outline colour</span><input type="color" value={options.outlineColor} onChange={(e) => onChange({ outlineColor: e.target.value })} /></label>}
+        </>
+      )}
       <label className="field">
         <span>Shading</span>
         <select className="text" value={options.shading} onChange={(e) => onChange({ shading: e.target.value as Options['shading'] })}>
@@ -115,6 +159,7 @@ export function LightingPanel({ options, onChange }: Props) {
           <option value="agx">AgX</option>
           <option value="neutral">Khronos neutral</option>
           <option value="hable">Hable filmic (game curve)</option>
+          <option value="unite">UNITE game curve</option>
         </select>
       </label>
       {(options.env.keyColor || options.env.skyColor || options.env.backColor) && (
@@ -131,6 +176,51 @@ export function LightingPanel({ options, onChange }: Props) {
           </label>
         );
       })}
+      {options.shading === 'game' && <CategoryLights env={options.env} onChange={(env) => onChange({ env })} />}
     </div>
+  );
+}
+
+const CAT_SLIDERS: { key: 'key' | 'ambient' | 'rim' | 'rimPower'; color?: 'keyColor' | 'ambientColor' | 'rimColor'; label: string; max: number; def: number }[] = [
+  { key: 'key', color: 'keyColor', label: 'Key', max: 3, def: 1 },
+  { key: 'ambient', color: 'ambientColor', label: 'Ambient', max: 3, def: 1 },
+  { key: 'rim', color: 'rimColor', label: 'Rim light', max: 2, def: 0 },
+  { key: 'rimPower', label: 'Rim power', max: 8, def: 3 },
+];
+
+/** The game lights each material category (CategoryLabel) with its own key / ambient / rim set (dir_N, GILightCommon.ColorN, rim_N). */
+function CategoryLights({ env, onChange }: { env: Environment; onChange: (env: Environment) => void }) {
+  const [cat, setCat] = useState('4');
+  const c: CategoryLight = env.categories?.[cat] ?? {};
+  const set = (patch: Partial<CategoryLight>) => {
+    const next = { ...c, ...patch };
+    const categories = { ...env.categories, [cat]: next };
+    onChange({ ...env, categories });
+  };
+  const reset = () => {
+    const categories = { ...env.categories };
+    delete categories[cat];
+    const { categories: _old, ...rest } = env;
+    onChange(Object.keys(categories).length ? { ...rest, categories } : rest);
+  };
+  return (
+    <>
+      <div className="field"><span><b>Material categories</b></span><button className="btn small" disabled={!env.categories?.[cat]} onClick={reset}>Reset</button></div>
+      <label className="field">
+        <span>Category</span>
+        <select className="text" value={cat} onChange={(e) => setCat(e.target.value)}>
+          {Object.entries(CATEGORY_LABELS).map(([k, v]) => <option key={k} value={k}>{v}{env.categories?.[k] ? ' *' : ''}</option>)}
+        </select>
+      </label>
+      {CAT_SLIDERS.map((sl) => {
+        const v = c[sl.key] ?? sl.def;
+        return (
+          <label className="field" key={sl.key}>
+            <span className="row">{sl.label} {v.toFixed(2)}{sl.color && <input type="color" value={c[sl.color] ?? '#ffffff'} onChange={(e) => set({ [sl.color!]: e.target.value })} />}</span>
+            <input type="range" min={0} max={sl.max} step={0.05} value={v} onChange={(e) => set({ [sl.key]: Number(e.target.value) })} />
+          </label>
+        );
+      })}
+    </>
   );
 }

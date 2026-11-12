@@ -9,13 +9,17 @@ from __future__ import annotations
 
 import io
 import json
+import logging
 import struct
+from collections import Counter
 from dataclasses import dataclass, field
 
 import numpy as np
 from PIL import Image
 
 from .model import Clip, Material, Mesh, Model, Primitive, Skeleton, TextureImage
+
+log = logging.getLogger(__name__)
 
 GLB_MAGIC = 0x46546C67
 CHUNK_JSON = 0x4E4F534A
@@ -101,8 +105,20 @@ class _Builder:
         return idx
 
 
+def dropped_tracks(model: Model) -> dict[str, int]:
+    """Clip name -> number of tracks whose bone is not in the skeleton (the writer cannot target them, so they are
+    left out of the GLB). Non-zero means a borrowed clip set does not fully bind (see pipeline/rigs.py)."""
+    names = {j.name for j in model.skeleton.joints} if model.skeleton else set()
+    out: dict[str, int] = {}
+    for clip in model.clips:
+        n = sum(1 for tr in clip.tracks if tr.joint not in names)
+        if n:
+            out[clip.name] = n
+    return out
+
+
 def write_glb(model: Model, path: str) -> dict:
-    """Write the model and return a small summary dict."""
+    """Write the model and return a small summary dict (`droppedTracks`: clip -> tracks without a bone)."""
     g = {
         "asset": {"version": "2.0", "generator": "pokemon-model-pipeline"},
         "scene": 0,
@@ -155,6 +171,17 @@ def write_glb(model: Model, path: str) -> dict:
                 g["extensionsUsed"].append("KHR_texture_transform")
         return ref
 
+    def field_refs(node):
+        """Material extras layer recipe -> same structure with texture keys replaced by glTF texture references."""
+        if isinstance(node, dict):
+            if isinstance(node.get("texture"), str):
+                t = tex(node["texture"], tuple(node.get("wrap") or ("repeat", "repeat")))
+                return None if t is None else {"index": t, "texCoord": int(node.get("uv", 0)), "name": node["texture"]}
+            return {k: r for k, r in ((k, field_refs(v)) for k, v in node.items()) if r is not None}
+        if isinstance(node, list):
+            return [r for r in (field_refs(v) for v in node) if r is not None]
+        return node
+
     material_index: dict[tuple[str, str | None], int] = {}
 
     def material(m: Material, variant: str | None) -> int:
@@ -191,6 +218,11 @@ def write_glb(model: Model, path: str) -> dict:
         if m.double_sided:
             gm["doubleSided"] = True
         extras = dict(m.extras) if m.extras else {}
+        strength = extras.pop("khrEmissiveStrength", None)  # HDR emission (UNITE player shaders): glTF factors stop at 1
+        if strength and strength > 1.0:
+            gm.setdefault("extensions", {})["KHR_materials_emissive_strength"] = {"emissiveStrength": float(strength)}
+            if "KHR_materials_emissive_strength" not in g["extensionsUsed"]:
+                g["extensionsUsed"].append("KHR_materials_emissive_strength")
         raw_key = extras.pop("raw_base_color", None)
         if raw_key:
             t = tex(raw_key, m.wrap.get("base_color", ("repeat", "repeat")))
@@ -211,7 +243,8 @@ def write_glb(model: Model, path: str) -> dict:
             if ta is not None and tm_ is not None and tma is not None:
                 pal["albedo"], pal["mask"], pal["maskA"] = ta, tm_, tma
                 extras["palette"] = pal
-        for src_key, dst_key in (("specular_mask", "specularMaskTexture"), ("rim_mask", "rimMaskTexture")):
+        for src_key, dst_key in (("specular_mask", "specularMaskTexture"), ("rim_mask", "rimMaskTexture"),
+                                 ("highlight_normal", "highlightNormalTexture"), ("matcap", "matcapTexture")):
             mask_key = extras.pop(src_key, None)
             if mask_key:
                 t = tex(mask_key, m.wrap.get("base_color", ("repeat", "repeat")))
@@ -225,7 +258,23 @@ def write_glb(model: Model, path: str) -> dict:
                 extras["gasDensityTexture"] = t
             else:
                 extras.pop("gas", None)
-        for internal in ("uv_scale_offset", "uv_scale_effective", "mirror", "mirror_normal"):
+        cc = extras.pop("clearcoat", None)
+        if cc:
+            # Clear-coat layer (SV/LA EyeClearCoat eyes): standard glTF, read by three.js and Blender alike.
+            ext: dict = {"clearcoatFactor": float(cc.get("factor", 1.0)), "clearcoatRoughnessFactor": float(cc.get("roughness", 0.2))}
+            t = tex(cc.get("normal"), m.wrap.get("base_color", ("repeat", "repeat"))) if cc.get("normal") else None
+            if t is not None:
+                ext["clearcoatNormalTexture"] = {"index": t, "texCoord": m.uv_sets.get("base_color", 0), "scale": float(cc.get("normalScale", 1.0))}
+            gm.setdefault("extensions", {})["KHR_materials_clearcoat"] = ext
+            if "KHR_materials_clearcoat" not in g["extensionsUsed"]:
+                g["extensionsUsed"].append("KHR_materials_clearcoat")
+        for fk in [k for k in extras if (k.startswith("field") or k in ("unite", "fire", "flipbook")) and isinstance(extras[k], dict)]:  # unite: UNITE shader terms; fire: HOME noise layers; flipbook: Stadium 2 texture-swap frames
+            # Extra layer recipes (LGPE field shaders: fieldBlend / fieldRamp / fieldWater): every {"texture": key, "uv": n}
+            # becomes a glTF texture reference {"index", "texCoord", "name"} (the image is stored like any other texture).
+            extras[fk] = field_refs(extras[fk])
+        if isinstance(extras.get("unite"), dict) and isinstance(extras["unite"].get("outline"), dict):  # UNITE `_OutlineMap` (WP-G)
+            extras["unite"]["outline"] = field_refs(extras["unite"]["outline"])
+        for internal in ("uv_scale_offset", "uv_scale_effective", "mirror", "mirror_normal", "uv_translate_only"):
             extras.pop(internal, None)
         if extras:
             gm["extras"] = extras
@@ -265,7 +314,7 @@ def write_glb(model: Model, path: str) -> dict:
                 "inverseBindMatrices": b.add_accessor(ibm),
                 "name": "skin",
             }
-            if root_nodes:
+            if len(root_nodes) == 1:  # optional; with several roots no single node is a common root (validator error)
                 skin["skeleton"] = root_nodes[0]
             g["skins"].append(skin)
             skin_index = 0
@@ -292,6 +341,8 @@ def write_glb(model: Model, path: str) -> dict:
                 attrs["COLOR_0"] = b.add_accessor(p.colors, 34962, dtype=np.float32)
             if p.gas_weight is not None:
                 attrs["_GASWEIGHT"] = b.add_accessor(p.gas_weight, 34962, dtype=np.float32)
+            if p.flame_t is not None:
+                attrs["_FLAMET"] = b.add_accessor(p.flame_t, 34962, dtype=np.float32)
             skinned = skin_index is not None and p.joints is not None and p.weights is not None
             if skinned:
                 attrs["JOINTS_0"] = b.add_accessor(p.joints, 34962, dtype=np.uint16)
@@ -316,23 +367,41 @@ def write_glb(model: Model, path: str) -> dict:
         g["meshes"].append({"name": mesh.name, "primitives": prims})
         if mesh.primitives and mesh.primitives[0].morph_targets:
             g["meshes"][-1]["weights"] = [0.0] * len(mesh.primitives[0].morph_targets)
+            if mesh.extras.get("targetNames"):
+                g["meshes"][-1]["extras"] = {"targetNames": list(mesh.extras["targetNames"])}
         node = {"name": mesh.name, "mesh": len(g["meshes"]) - 1}
         extras = {"lod": mesh.lod, "visible": mesh.visible}
         extras.update(mesh.extras)
         node["extras"] = extras
         if skin_index is not None and any(p.joints is not None for p in mesh.primitives):
             node["skin"] = skin_index
+            if mesh.inverse_binds:  # this mesh's own bindposes (same joints): a skin of its own
+                base = g["skins"][skin_index]
+                own_ibm = ibm.copy()
+                for pos, m in mesh.inverse_binds.items():
+                    own_ibm[pos] = np.asarray(m, np.float32).T.reshape(16)
+                own_skin = {k: v for k, v in base.items() if k != "inverseBindMatrices"}
+                own_skin["inverseBindMatrices"] = b.add_accessor(own_ibm)
+                own_skin["name"] = f"skin_{mesh.name}"
+                g["skins"].append(own_skin)
+                node["skin"] = len(g["skins"]) - 1
         g["nodes"].append(node)
         mesh_nodes.append(len(g["nodes"]) - 1)
 
     g["scenes"][0]["nodes"] = root_nodes + mesh_nodes
 
     # ---- animations ----------------------------------------------------------
+    dropped: dict[str, int] = {}
+    missing_bones: Counter = Counter()
     for clip in model.clips:
         samplers, channels = [], []
         for tr in clip.tracks:
             ji = model.skeleton.index_of(tr.joint) if model.skeleton else -1
-            if ji < 0 or len(tr.times) == 0:
+            if ji < 0:
+                dropped[clip.name] = dropped.get(clip.name, 0) + 1
+                missing_bones[tr.joint] += 1
+                continue
+            if len(tr.times) == 0:
                 continue
             times = tr.times
             samplers.append(
@@ -373,9 +442,19 @@ def write_glb(model: Model, path: str) -> dict:
             }
         )
 
+    if dropped:
+        log.warning(
+            "%s: dropped %d tracks in %d/%d clips (bones not in the skeleton: %s)", model.id, sum(dropped.values()),
+            len(dropped), len(model.clips), ", ".join(f"{b} x{n}" for b, n in missing_bones.most_common(8)),
+        )
+
+    # Textures no material samples (effect stand-ins the viewer draws itself: UNITE Gastly's gas-disc mask and noise,
+    # `model.extras["fxTextures"]`), stored like any other texture and named in the root extras.
+    fx_textures = {k: t for k in model.extras.get("fxTextures", []) if (t := tex(k)) is not None}
+
     # ---- finish --------------------------------------------------------------
     g["buffers"].append({"byteLength": len(b.bin)})
-    for k in ("animations", "skins", "extensionsUsed", "images", "textures"):
+    for k in ("animations", "skins", "extensionsUsed", "images", "textures", "samplers"):
         if not g[k]:
             del g[k]
     g["extras"] = {
@@ -384,6 +463,7 @@ def write_glb(model: Model, path: str) -> dict:
         "displayName": model.display_name,
         "kind": model.kind,
         "variantGroups": _variant_groups(model),
+        **({"fxTextures": fx_textures} if fx_textures else {}),
     }
     json_bytes = json.dumps(g, separators=(",", ":")).encode("utf-8")
     while len(json_bytes) % 4:
@@ -407,6 +487,7 @@ def write_glb(model: Model, path: str) -> dict:
         "materials": len(g["materials"]),
         "images": len(g.get("images", [])),
         "animations": len(g.get("animations", [])),
+        "droppedTracks": dropped,
     }
 
 

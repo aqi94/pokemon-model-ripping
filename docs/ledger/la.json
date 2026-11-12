@@ -1,0 +1,3044 @@
+{
+ "game": "la",
+ "meta": {
+  "game": "la",
+  "scanned": "2026-10-19",
+  "sample_per_kind": 20,
+  "kinds": [
+   "pokemon",
+   "trainer",
+   "object"
+  ],
+  "models": [
+   "pm0025_00_00",
+   "pm0055_00_00",
+   "pm0078_00_00",
+   "pm0123_00_00",
+   "pm0169_00_00",
+   "pm0201_14_00",
+   "pm0201_31_00",
+   "pm0215_00_41",
+   "pm0265_00_00",
+   "pm0361_00_00",
+   "pm0398_00_00",
+   "pm0407_00_00",
+   "pm0418_00_00",
+   "pm0430_00_00",
+   "pm0445_01_00",
+   "pm0457_01_00",
+   "pm0469_00_00",
+   "pm0481_00_00",
+   "pm0502_00_00",
+   "pm0751_71_41",
+   "tr0002_00",
+   "tr0003_00",
+   "tr0005_00",
+   "tr0006_00",
+   "tr0008_00",
+   "tr0010_00",
+   "tr0011_00",
+   "tr0013_00",
+   "tr0015_00",
+   "tr0016_00",
+   "tr0018_00",
+   "tr0020_00",
+   "tr0021_00",
+   "tr0023_00",
+   "tr0025_00",
+   "tr0027_00",
+   "tr0032_00",
+   "tr0034_00",
+   "tr0035_00",
+   "tr0037_00",
+   "item_001",
+   "item_008",
+   "item_016",
+   "item_024",
+   "item_031",
+   "item_106",
+   "item_205",
+   "item_212",
+   "item_223",
+   "item_231",
+   "item_239",
+   "item_246",
+   "item_254",
+   "item_262",
+   "item_269",
+   "item_305",
+   "item_313",
+   "item_320",
+   "item_329",
+   "item_408"
+  ],
+  "failures": [],
+  "formats": [
+   "tracm",
+   "tranm",
+   "trmbf",
+   "trmdl",
+   "trmmt",
+   "trmsh",
+   "trmtr",
+   "trskl"
+  ],
+  "seconds": 67.6,
+  "tool": "python -m pipeline --game la audit-fields --sample 20"
+ },
+ "entries": [
+  {
+   "key": "trmdl:/5",
+   "format": "trmdl",
+   "where": "table `/` field 5",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec[8] 15ae47bda8c68bbc",
+     3
+    ],
+    [
+     "vec[8] 4a932ebe6ba2b8b8",
+     1
+    ],
+    [
+     "vec[8] e00b71bf6cc54fbb",
+     1
+    ],
+    [
+     "vec[8] c7de8dbe383dc9b8",
+     1
+    ],
+    [
+     "vec[8] cce0cdbf2cf38eb1",
+     1
+    ],
+    [
+     "vec[8] 7cf610c0612ddebe",
+     1
+    ],
+    [
+     "vec[8] b03006be81337d3a",
+     1
+    ],
+    [
+     "vec[8] 0ce072be85b608bb",
+     1
+    ]
+   ],
+   "distinct": 58,
+   "instances": 60,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: vec[8] 4a932ebe6ba2b8b8",
+    "pm0055_00_00: vec[8] e00b71bf6cc54fbb",
+    "pm0078_00_00: vec[8] c7de8dbe383dc9b8",
+    "pm0123_00_00: vec[8] cce0cdbf2cf38eb1",
+    "pm0169_00_00: vec[8] 7cf610c0612ddebe"
+   ],
+   "types": {
+    "vec": 60
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmdl:/6",
+   "format": "trmdl",
+   "where": "table `/` field 6",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0, 0, 0, 0.0806)",
+     3
+    ],
+    [
+     "(0, 0.2637, -0.0297, 0.3792)",
+     1
+    ],
+    [
+     "(0, 0.7705, -0.1198, 0.9874)",
+     1
+    ],
+    [
+     "(0, 1.53, -0.3973, 2.141)",
+     1
+    ],
+    [
+     "(0, 0.8033, -0.4785, 1.667)",
+     1
+    ],
+    [
+     "(0, 0.7763, -0.075, 2.543)",
+     1
+    ],
+    [
+     "(0.0555, 0.2426, -0.0002, 0.2467)",
+     1
+    ],
+    [
+     "(0, 0.1947, 0, 0.2391)",
+     1
+    ]
+   ],
+   "distinct": 58,
+   "instances": 60,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: (0, 0.2637, -0.0297, 0.3792)",
+    "pm0055_00_00: (0, 0.7705, -0.1198, 0.9874)",
+    "pm0078_00_00: (0, 1.53, -0.3973, 2.141)",
+    "pm0123_00_00: (0, 0.8033, -0.4785, 1.667)",
+    "pm0169_00_00: (0, 0.7763, -0.075, 2.543)"
+   ],
+   "types": {
+    "struct": 50,
+    "hex": 10
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmsh:/1[]/1",
+   "format": "trmsh",
+   "where": "table `/1[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     1166
+    ],
+    [
+     "vec[8] 15ae47bda8c68bbc",
+     3
+    ],
+    [
+     "vec[8] de4d2ebe75f67839",
+     2
+    ],
+    [
+     "vec[8] cce0cdbf56cd9d39",
+     2
+    ],
+    [
+     "vec[8] 42fc05be13bef23a",
+     2
+    ],
+    [
+     "vec[8] 0ce072be85b608bb",
+     2
+    ],
+    [
+     "vec[8] 1f0312bfbccd4dbb",
+     2
+    ],
+    [
+     "vec[8] 9a001dbd4060c13d",
+     2
+    ]
+   ],
+   "distinct": 120,
+   "instances": 1330,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: vec[8] 4a932ebe6ba2b8b8",
+    "pm0055_00_00: vec[8] 08d801bee88c973f",
+    "pm0078_00_00: vec[8] d34c89be62e515a5",
+    "pm0123_00_00: vec[8] 75b7cdbf2cf38eb1",
+    "pm0169_00_00: vec[8] 46ac63be0e4b2a3f"
+   ],
+   "types": {
+    "table": 1166,
+    "vec": 140
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmsh:/1[]/9",
+   "format": "trmsh",
+   "where": "table `/1[]` field 9",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "<other>",
+     1050
+    ],
+    [
+     "(-0.0134, 1.278, -0.0066, 2.404)",
+     4
+    ],
+    [
+     "(0, 0.2825, -0.1873, 0.2204)",
+     3
+    ],
+    [
+     "(0, 2.267, -0.1363, 0.976)",
+     3
+    ],
+    [
+     "(0, 0.3221, -0.4793, 0.7833)",
+     3
+    ],
+    [
+     "(0, 0.3178, -0.1666, 0.2619)",
+     3
+    ],
+    [
+     "(0, 0.2567, 0.0305, 0.3186)",
+     2
+    ],
+    [
+     "(0, 0.3424, 0.1211, 0.0205)",
+     2
+    ]
+   ],
+   "distinct": 201,
+   "instances": 1330,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: (0, 0.2566, 0.0301, 0.3185)",
+    "pm0055_00_00: (0, 1.23, 0.3611, 0.1395)",
+    "pm0078_00_00: (0, 0.9349, 0.0911, 1.172)",
+    "pm0123_00_00: (0, 0.8022, -0.479, 1.666)",
+    "pm0169_00_00: (0, 0.7302, 0.2674, 0.2274)"
+   ],
+   "types": {
+    "struct": 1190,
+    "hex": 116
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmtr:/1[]/13",
+   "format": "trmtr",
+   "where": "table `/1[]` field 13",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     254
+    ],
+    [
+     "vec[4] 0000000000000000",
+     79
+    ]
+   ],
+   "distinct": 2,
+   "instances": 333,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: vec[4] 0000000000000000",
+    "pm0055_00_00: vec[4] 0000000000000000",
+    "pm0078_00_00: vec[4] 0000000000000000",
+    "pm0123_00_00: vec[4] 0000000000000000",
+    "pm0169_00_00: vec[4] 0000000000000000"
+   ],
+   "types": {
+    "table": 254,
+    "vec": 79
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:NumMaterialLayer",
+   "format": "trmtr",
+   "where": "material flag param `NumMaterialLayer`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     167
+    ],
+    [
+     "5",
+     165
+    ]
+   ],
+   "distinct": 2,
+   "instances": 332,
+   "models": 59,
+   "examples": [
+    "pm0025_00_00/body_b=5",
+    "pm0055_00_00/r_eye=5",
+    "pm0078_00_00/body_b=5",
+    "pm0123_00_00/body_00=5",
+    "pm0169_00_00/l_eye=5"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trskl:/3",
+   "format": "trskl",
+   "where": "table `/` field 3",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     36
+    ],
+    [
+     "vec<table>[10]",
+     20
+    ]
+   ],
+   "distinct": 2,
+   "instances": 56,
+   "models": 56,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 36,
+    "vec<table>": 20
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:texture:RoughnessMap",
+   "format": "trmtr",
+   "where": "material texture param `RoughnessMap`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "pm0265_00_00_eye_rgn.bntx",
+     4
+    ],
+    [
+     "pm0398_00_00_body_a_rgn.bntx",
+     4
+    ],
+    [
+     "pm0407_00_00_body_a_rgn.bntx",
+     4
+    ],
+    [
+     "pm0469_00_00_eye_rgn.bntx",
+     4
+    ],
+    [
+     "pm0055_00_00_body_b_rgn.bntx",
+     2
+    ],
+    [
+     "pm0055_00_00_body_a_rgn.bntx",
+     2
+    ],
+    [
+     "pm0123_00_00_body_rgn.bntx",
+     2
+    ],
+    [
+     "pm0215_00_41_body_b_rgn.bntx",
+     2
+    ]
+   ],
+   "distinct": 97,
+   "instances": 153,
+   "models": 51,
+   "examples": [
+    "pm0055_00_00/body_b=pm0055_00_00_body_b_rgn.bntx",
+    "pm0123_00_00/tra_body_02=pm0123_00_00_body_rgn.bntx",
+    "pm0215_00_41/body_b_00=pm0215_00_41_body_b_rgn.bntx",
+    "pm0265_00_00/r_eye=pm0265_00_00_eye_rgn.bntx",
+    "pm0398_00_00/body_b=pm0398_00_00_body_b_rgn.bntx"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md (LA): roughness/metallic unread (SV-style PBR).",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:texture:MetallicMap",
+   "format": "trmtr",
+   "where": "material texture param `MetallicMap`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "pm0445_00_00_body_mtl.bntx",
+     4
+    ],
+    [
+     "pm0055_00_00_body_b_mtl.bntx",
+     2
+    ],
+    [
+     "pm0055_00_00_body_a_mtl.bntx",
+     2
+    ],
+    [
+     "pm0123_00_00_body_mtl.bntx",
+     2
+    ],
+    [
+     "pm0215_00_41_body_b_mtl.bntx",
+     2
+    ],
+    [
+     "pm0215_00_41_body_a_mtl.bntx",
+     2
+    ],
+    [
+     "pm0265_00_00_body_b_mtl.bntx",
+     2
+    ],
+    [
+     "pm0265_00_00_body_a_mtl.bntx",
+     2
+    ]
+   ],
+   "distinct": 67,
+   "instances": 104,
+   "models": 41,
+   "examples": [
+    "pm0055_00_00/body_b=pm0055_00_00_body_b_mtl.bntx",
+    "pm0123_00_00/tra_body_02=pm0123_00_00_body_mtl.bntx",
+    "pm0215_00_41/body_b_00=pm0215_00_41_body_b_mtl.bntx",
+    "pm0265_00_00/body_b=pm0265_00_00_body_b_mtl.bntx",
+    "pm0418_00_00/body_a_00=pm0418_00_00_body_a_mtl.bntx"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md (LA): roughness/metallic unread (SV-style PBR).",
+   "seen": true
+  },
+  {
+   "key": "trskl:/1[]/7",
+   "format": "trskl",
+   "where": "table `/1[]` field 7",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "2",
+     1214
+    ],
+    [
+     "1",
+     535
+    ]
+   ],
+   "distinct": 2,
+   "instances": 2560,
+   "models": 40,
+   "examples": [
+    "pm0025_00_00: 1",
+    "pm0055_00_00: 2",
+    "pm0078_00_00: 2",
+    "pm0123_00_00: 2",
+    "pm0169_00_00: 2"
+   ],
+   "types": {
+    "i32": 1749
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmsh:/1[]/1/0",
+   "format": "trmsh",
+   "where": "table `/1[]/1` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "<other>",
+     890
+    ],
+    [
+     "(-0.0432, 1.41, 0.0286)",
+     5
+    ],
+    [
+     "(-0.8868, 1.142, -2.406)",
+     4
+    ],
+    [
+     "(-0.0693, 1.516, 0.0919)",
+     4
+    ],
+    [
+     "(-0.005, 0.0925, -0.3029)",
+     3
+    ],
+    [
+     "(-0.2466, 1.567, -0.8165)",
+     3
+    ],
+    [
+     "(-0.0479, 0.973, -0.5969)",
+     3
+    ],
+    [
+     "(-0.2408, 0.1756, -0.3159)",
+     3
+    ]
+   ],
+   "distinct": 201,
+   "instances": 1166,
+   "models": 39,
+   "examples": [
+    "pm0025_00_00: (-0.0693, 0.361, 0.0798)",
+    "pm0055_00_00: (-0.9416, -0.0032, -0.8329)",
+    "pm0078_00_00: (-0.1178, 1.503, 0.5487)",
+    "pm0123_00_00: (-0.1074, 1.24, 0.2516)",
+    "pm0169_00_00: (-2.257, -0.4293, -0.5085)"
+   ],
+   "types": {
+    "struct": 1161,
+    "hex": 5
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmsh:/1[]/1/1",
+   "format": "trmsh",
+   "where": "table `/1[]/1` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "<other>",
+     886
+    ],
+    [
+     "(0.8599, 1.415, 2.393)",
+     6
+    ],
+    [
+     "(0.0432, 1.457, 0.1164)",
+     4
+    ],
+    [
+     "(0.005, 0.4724, -0.0718)",
+     3
+    ],
+    [
+     "(0.2466, 2.966, 0.5439)",
+     3
+    ],
+    [
+     "(0.082, 1.263, -0.0396)",
+     3
+    ],
+    [
+     "(0.2408, 0.4601, -0.0173)",
+     3
+    ],
+    [
+     "(1.033, 0.3267, 0.6483)",
+     3
+    ]
+   ],
+   "distinct": 201,
+   "instances": 1166,
+   "models": 39,
+   "examples": [
+    "pm0025_00_00: (-0.0334, 0.4004, 0.1104)",
+    "pm0055_00_00: (0.9416, 1.544, 0.5948)",
+    "pm0078_00_00: (0.1178, 1.557, 0.6382)",
+    "pm0123_00_00: (0.1074, 1.361, 0.3409)",
+    "pm0169_00_00: (2.257, 1.972, 0.3689)"
+   ],
+   "types": {
+    "struct": 1166
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:texture:WeatherLayerMaskMap",
+   "format": "trmtr",
+   "where": "material texture param `WeatherLayerMaskMap`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "tr0002_00_body_wlm.bntx",
+     2
+    ],
+    [
+     "tr0002_00_hairstyle_wlm.bntx",
+     2
+    ],
+    [
+     "tr0005_00_body_wlm.bntx",
+     2
+    ],
+    [
+     "tr0008_00_body_wlm.bntx",
+     2
+    ],
+    [
+     "tr0010_00_body_wlm.bntx",
+     2
+    ],
+    [
+     "tr0011_00_body_wlm.bntx",
+     2
+    ],
+    [
+     "tr0011_00_obj02_wlm.bntx",
+     2
+    ],
+    [
+     "tr0013_00_body_wlm.bntx",
+     2
+    ]
+   ],
+   "distinct": 67,
+   "instances": 89,
+   "models": 21,
+   "examples": [
+    "tr0002_00/obj=tr0002_00_obj_wlm.bntx",
+    "tr0003_00/body=tr0003_00_body_wlm.bntx",
+    "tr0005_00/hairstyle=tr0005_00_hairstyle_wlm.bntx",
+    "tr0006_00/hairstyle=tr0006_00_hairstyle_wlm.bntx",
+    "tr0008_00/hairstyle=tr0008_00_hairstyle_wlm.bntx"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:RoughnessLayer1",
+   "format": "trmtr",
+   "where": "material float param `RoughnessLayer1`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.2",
+     72
+    ],
+    [
+     "0.5",
+     32
+    ],
+    [
+     "0.8",
+     12
+    ],
+    [
+     "0.6",
+     11
+    ],
+    [
+     "0.7",
+     8
+    ],
+    [
+     "0.4",
+     8
+    ],
+    [
+     "0.1",
+     5
+    ],
+    [
+     "0.85",
+     4
+    ]
+   ],
+   "distinct": 11,
+   "instances": 157,
+   "models": 20,
+   "examples": [
+    "pm0025_00_00/body_b=0.8",
+    "pm0055_00_00/r_eye=0.2",
+    "pm0078_00_00/body_b=0.7",
+    "pm0123_00_00/body_00=0.6",
+    "pm0169_00_00/l_eye=0.2"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md (LA): roughness/metallic unread.",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:RoughnessLayer2",
+   "format": "trmtr",
+   "where": "material float param `RoughnessLayer2`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.2",
+     64
+    ],
+    [
+     "0.5",
+     30
+    ],
+    [
+     "0.1",
+     26
+    ],
+    [
+     "0.4",
+     14
+    ],
+    [
+     "0.8",
+     8
+    ],
+    [
+     "0.6",
+     4
+    ],
+    [
+     "0.7",
+     2
+    ],
+    [
+     "0.85",
+     2
+    ]
+   ],
+   "distinct": 12,
+   "instances": 157,
+   "models": 20,
+   "examples": [
+    "pm0025_00_00/body_b=0.8",
+    "pm0055_00_00/r_eye=0.2",
+    "pm0078_00_00/body_b=0.1",
+    "pm0123_00_00/body_00=0.4",
+    "pm0169_00_00/l_eye=0.2"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md (LA): roughness/metallic unread.",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:RoughnessLayer3",
+   "format": "trmtr",
+   "where": "material float param `RoughnessLayer3`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.2",
+     58
+    ],
+    [
+     "0.1",
+     46
+    ],
+    [
+     "0.5",
+     24
+    ],
+    [
+     "0.8",
+     10
+    ],
+    [
+     "0.4",
+     8
+    ],
+    [
+     "0.6",
+     6
+    ],
+    [
+     "0.7",
+     2
+    ],
+    [
+     "0.15",
+     2
+    ]
+   ],
+   "distinct": 9,
+   "instances": 157,
+   "models": 20,
+   "examples": [
+    "pm0025_00_00/body_b=0.8",
+    "pm0055_00_00/r_eye=0.2",
+    "pm0078_00_00/body_b=0.1",
+    "pm0123_00_00/body_00=0.5",
+    "pm0169_00_00/l_eye=0.2"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md (LA): roughness/metallic unread.",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:RoughnessLayer4",
+   "format": "trmtr",
+   "where": "material float param `RoughnessLayer4`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.1",
+     106
+    ],
+    [
+     "0.2",
+     22
+    ],
+    [
+     "0.5",
+     18
+    ],
+    [
+     "0.4",
+     8
+    ],
+    [
+     "0.6",
+     2
+    ],
+    [
+     "0.55",
+     1
+    ]
+   ],
+   "distinct": 6,
+   "instances": 157,
+   "models": 20,
+   "examples": [
+    "pm0025_00_00/body_b=0.5",
+    "pm0055_00_00/r_eye=0.2",
+    "pm0078_00_00/body_b=0.1",
+    "pm0123_00_00/body_00=0.4",
+    "pm0169_00_00/l_eye=0.1"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md (LA): roughness/metallic unread.",
+   "seen": true
+  },
+  {
+   "key": "tracm:/3",
+   "format": "tracm",
+   "where": "table `/` field 3",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "2",
+     320
+    ],
+    [
+     "4",
+     303
+    ],
+    [
+     "6",
+     126
+    ],
+    [
+     "1",
+     84
+    ],
+    [
+     "3",
+     50
+    ],
+    [
+     "8",
+     34
+    ]
+   ],
+   "distinct": 6,
+   "instances": 949,
+   "models": 20,
+   "examples": [
+    "pm0025_00_00: 6",
+    "pm0055_00_00: 2",
+    "pm0078_00_00: 6",
+    "pm0123_00_00: 8",
+    "pm0169_00_00: 2"
+   ],
+   "types": {
+    "u8": 917
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trskl:/3[]/0",
+   "format": "trskl",
+   "where": "table `/3[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "left_arm_01_roll",
+     19
+    ],
+    [
+     "left_arm_02_sub",
+     19
+    ],
+    [
+     "left_arm_02_roll",
+     19
+    ],
+    [
+     "left_hand_roll",
+     19
+    ],
+    [
+     "right_arm_01_roll",
+     1
+    ],
+    [
+     "right_arm_02_sub",
+     1
+    ],
+    [
+     "right_arm_02_roll",
+     1
+    ],
+    [
+     "right_hand_roll",
+     1
+    ]
+   ],
+   "distinct": 8,
+   "instances": 80,
+   "models": 20,
+   "examples": [
+    "tr0002_00: left_arm_01_roll",
+    "tr0003_00: left_arm_01_roll",
+    "tr0005_00: left_arm_01_roll",
+    "tr0006_00: left_arm_01_roll",
+    "tr0008_00: right_arm_01_roll"
+   ],
+   "types": {
+    "str": 80
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trskl:/3[]/1",
+   "format": "trskl",
+   "where": "table `/3[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "left_arm_02",
+     57
+    ],
+    [
+     "left_arm_01",
+     19
+    ],
+    [
+     "right_arm_02",
+     3
+    ],
+    [
+     "right_arm_01",
+     1
+    ]
+   ],
+   "distinct": 4,
+   "instances": 80,
+   "models": 20,
+   "examples": [
+    "tr0002_00: left_arm_01",
+    "tr0003_00: left_arm_01",
+    "tr0005_00: left_arm_01",
+    "tr0006_00: left_arm_01",
+    "tr0008_00: right_arm_01"
+   ],
+   "types": {
+    "str": 80
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trskl:/3[]/2",
+   "format": "trskl",
+   "where": "table `/3[]` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "left_hand",
+     38
+    ],
+    [
+     "left_arm_width",
+     19
+    ],
+    [
+     "left_arm_01",
+     19
+    ],
+    [
+     "right_hand",
+     2
+    ],
+    [
+     "right_arm_width",
+     1
+    ],
+    [
+     "right_arm_01",
+     1
+    ]
+   ],
+   "distinct": 6,
+   "instances": 80,
+   "models": 20,
+   "examples": [
+    "tr0002_00: left_arm_width",
+    "tr0003_00: left_arm_width",
+    "tr0005_00: left_arm_width",
+    "tr0006_00: left_arm_width",
+    "tr0008_00: right_arm_width"
+   ],
+   "types": {
+    "str": 80
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trskl:/3[]/5",
+   "format": "trskl",
+   "where": "table `/3[]` field 5",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(1, 0.4, 0)",
+     20
+    ],
+    [
+     "(1, 0.5, 0)",
+     20
+    ],
+    [
+     "(0.5, 1, 0)",
+     20
+    ],
+    [
+     "(0, 1, 0)",
+     20
+    ]
+   ],
+   "distinct": 4,
+   "instances": 80,
+   "models": 20,
+   "examples": [
+    "tr0002_00: (1, 0.4, 0)",
+    "tr0003_00: (1, 0.4, 0)",
+    "tr0005_00: (1, 0.4, 0)",
+    "tr0006_00: (1, 0.4, 0)",
+    "tr0008_00: (1, 0.4, 0)"
+   ],
+   "types": {
+    "struct": 80
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trskl:/3[]/6",
+   "format": "trskl",
+   "where": "table `/3[]` field 6",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0, 0, 0, 1)",
+     62
+    ],
+    [
+     "(0, -0.7071, 0, 0.7071)",
+     18
+    ]
+   ],
+   "distinct": 2,
+   "instances": 80,
+   "models": 20,
+   "examples": [
+    "tr0002_00: (0, -0.7071, 0, 0.7071)",
+    "tr0003_00: (0, -0.7071, 0, 0.7071)",
+    "tr0005_00: (0, -0.7071, 0, 0.7071)",
+    "tr0006_00: (0, -0.7071, 0, 0.7071)",
+    "tr0008_00: (0, -0.7071, 0, 0.7071)"
+   ],
+   "types": {
+    "struct": 80
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/2[]/1",
+   "format": "tracm",
+   "where": "table `/1[]/4/2[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     915
+    ],
+    [
+     "vec<table>[1]",
+     79
+    ]
+   ],
+   "distinct": 2,
+   "instances": 1643,
+   "models": 19,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 915,
+    "vec<table>": 79
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/2",
+   "format": "tracm",
+   "where": "table `/` field 2",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     456
+    ],
+    [
+     "2",
+     130
+    ],
+    [
+     "4",
+     45
+    ],
+    [
+     "3",
+     12
+    ],
+    [
+     "5",
+     8
+    ]
+   ],
+   "distinct": 5,
+   "instances": 661,
+   "models": 19,
+   "examples": [
+    "pm0025_00_00: 2",
+    "pm0055_00_00: 1",
+    "pm0078_00_00: 1",
+    "pm0123_00_00: 1",
+    "pm0169_00_00: 1"
+   ],
+   "types": {
+    "u8": 651
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/4",
+   "format": "tracm",
+   "where": "table `/1[]/4` field 4",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "4",
+     340
+    ],
+    [
+     "2",
+     255
+    ],
+    [
+     "1",
+     64
+    ],
+    [
+     "8",
+     64
+    ]
+   ],
+   "distinct": 4,
+   "instances": 841,
+   "models": 18,
+   "examples": [
+    "pm0025_00_00: 1",
+    "pm0055_00_00: 4",
+    "pm0078_00_00: 4",
+    "pm0123_00_00: 4",
+    "pm0169_00_00: 2"
+   ],
+   "types": {
+    "u8": 723
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:color:UVScaleOffset1",
+   "format": "trmtr",
+   "where": "material color param `UVScaleOffset1`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(1, 1, 0, 0)",
+     20
+    ],
+    [
+     "(1, 1, -0, -0)",
+     12
+    ],
+    [
+     "(1, 1, 0, -0)",
+     12
+    ]
+   ],
+   "distinct": 3,
+   "instances": 44,
+   "models": 12,
+   "examples": [
+    "pm0025_00_00/r_eye=(1, 1, 0, 0)",
+    "pm0055_00_00/r_eye=(1, 1, -0, -0)",
+    "pm0078_00_00/l_eye=(1, 1, 0, -0)",
+    "pm0123_00_00/l_eye=(1, 1, 0, -0)",
+    "pm0201_14_00/eye=(1, 1, 0, 0)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:UVTransformMode",
+   "format": "trmtr",
+   "where": "material flag param `UVTransformMode`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "T",
+     8
+    ]
+   ],
+   "distinct": 1,
+   "instances": 8,
+   "models": 3,
+   "examples": [
+    "pm0201_14_00/eye=T",
+    "pm0201_31_00/eye=T",
+    "pm0457_01_00/l_eye=T"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/2[]/1[]/0",
+   "format": "tracm",
+   "where": "table `/1[]/4/2[]/1[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "EmissionIntensityLayer2",
+     51
+    ],
+    [
+     "LayerMaskScale5",
+     28
+    ]
+   ],
+   "distinct": 2,
+   "instances": 79,
+   "models": 3,
+   "examples": [
+    "pm0025_00_00: EmissionIntensityLayer2",
+    "pm0457_01_00: EmissionIntensityLayer2",
+    "pm0469_00_00: LayerMaskScale5"
+   ],
+   "types": {
+    "str": 79
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/2[]/1[]/1",
+   "format": "tracm",
+   "where": "table `/1[]/4/2[]/1[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "table",
+     42
+    ],
+    [
+     "vec[6] 0400000002000000",
+     27
+    ],
+    [
+     "vec[6] 0400000004000000",
+     2
+    ],
+    [
+     "vec[6] 0400000009000000",
+     1
+    ],
+    [
+     "vec[6] 0400000015000000",
+     1
+    ],
+    [
+     "vec[6] 0400000005000000",
+     1
+    ],
+    [
+     "vec[6] 0400000003000000",
+     1
+    ],
+    [
+     "vec[6] 0400000027000000",
+     1
+    ]
+   ],
+   "distinct": 11,
+   "instances": 79,
+   "models": 3,
+   "examples": [
+    "pm0025_00_00: vec[6] 0400000009000000",
+    "pm0457_01_00: vec[6] 0400000002000000",
+    "pm0469_00_00: vec[6] 0400000002000000"
+   ],
+   "types": {
+    "table": 42,
+    "vec": 37
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/3",
+   "format": "tracm",
+   "where": "table `/1[]/4` field 3",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     72
+    ],
+    [
+     "2",
+     14
+    ]
+   ],
+   "distinct": 2,
+   "instances": 151,
+   "models": 3,
+   "examples": [
+    "pm0025_00_00: 1",
+    "pm0457_01_00: 1",
+    "pm0469_00_00: 2"
+   ],
+   "types": {
+    "u8": 86
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:color:UVScaleOffset3",
+   "format": "trmtr",
+   "where": "material color param `UVScaleOffset3`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(1, 1, 0, 0)",
+     8
+    ],
+    [
+     "(1, 1, 0, 1)",
+     4
+    ]
+   ],
+   "distinct": 2,
+   "instances": 12,
+   "models": 2,
+   "examples": [
+    "pm0078_00_00/fire_a_00=(1, 1, 0, 0)",
+    "pm0418_00_00/l_eye=(1, 1, 0, 1)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:EnableOverrideColor",
+   "format": "trmtr",
+   "where": "material flag param `EnableOverrideColor`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     8
+    ]
+   ],
+   "distinct": 1,
+   "instances": 8,
+   "models": 2,
+   "examples": [
+    "pm0265_00_00/r_eye=True",
+    "pm0469_00_00/l_eye=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:RefractionMode",
+   "format": "trmtr",
+   "where": "material flag param `RefractionMode`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "Thin",
+     1
+    ],
+    [
+     "Disable",
+     1
+    ]
+   ],
+   "distinct": 2,
+   "instances": 2,
+   "models": 2,
+   "examples": [
+    "pm0751_71_41/eyecover_00=Thin",
+    "tr0011_00/obj02_tra=Disable"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:MetallicLayer3",
+   "format": "trmtr",
+   "where": "material float param `MetallicLayer3`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.5",
+     2
+    ],
+    [
+     "0.4",
+     2
+    ]
+   ],
+   "distinct": 2,
+   "instances": 4,
+   "models": 2,
+   "examples": [
+    "pm0055_00_00/body_a=0.5",
+    "pm0481_00_00/body=0.4"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md (LA): roughness/metallic unread.",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:Reflectance",
+   "format": "trmtr",
+   "where": "material float param `Reflectance`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.04",
+     3
+    ]
+   ],
+   "distinct": 1,
+   "instances": 3,
+   "models": 2,
+   "examples": [
+    "pm0751_71_41/body_03=0.04",
+    "tr0011_00/obj02_tra=0.04"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/2[]/1[]/1/0",
+   "format": "tracm",
+   "where": "table `/1[]/4/2[]/1[]/1` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "vec<table>[2]",
+     36
+    ],
+    [
+     "vec<table>[39]",
+     2
+    ],
+    [
+     "vec<table>[34]",
+     2
+    ],
+    [
+     "vec<table>[42]",
+     1
+    ],
+    [
+     "vec<table>[38]",
+     1
+    ]
+   ],
+   "distinct": 5,
+   "instances": 42,
+   "models": 2,
+   "examples": [
+    "pm0457_01_00: vec<table>[2]",
+    "pm0469_00_00: vec<table>[2]"
+   ],
+   "types": {
+    "vec<table>": 42
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/2[]/1[]/1/0[]/0",
+   "format": "tracm",
+   "where": "table `/1[]/4/2[]/1[]/1/0[]` field 0",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "54",
+     4
+    ],
+    [
+     "10",
+     4
+    ],
+    [
+     "120",
+     3
+    ],
+    [
+     "6",
+     3
+    ],
+    [
+     "18",
+     3
+    ],
+    [
+     "14",
+     3
+    ],
+    [
+     "80",
+     2
+    ],
+    [
+     "50",
+     2
+    ]
+   ],
+   "distinct": 30,
+   "instances": 54,
+   "models": 2,
+   "examples": [
+    "pm0457_01_00: 120",
+    "pm0469_00_00: 120"
+   ],
+   "types": {
+    "f32": 54
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/2[]/1[]/1/0[]/1",
+   "format": "tracm",
+   "where": "table `/1[]/4/2[]/1[]/1/0[]` field 1",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.3",
+     48
+    ],
+    [
+     "0.1",
+     8
+    ],
+    [
+     "0.8",
+     4
+    ],
+    [
+     "0.2997",
+     2
+    ],
+    [
+     "0.2989",
+     2
+    ],
+    [
+     "0.1005",
+     2
+    ],
+    [
+     "0.1021",
+     2
+    ],
+    [
+     "0.0014",
+     1
+    ]
+   ],
+   "distinct": 11,
+   "instances": 72,
+   "models": 2,
+   "examples": [
+    "pm0457_01_00: 0.3",
+    "pm0469_00_00: 0.0014"
+   ],
+   "types": {
+    "f32": 72
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/2[]/1[]/1/0[]/4",
+   "format": "tracm",
+   "where": "table `/1[]/4/2[]/1[]/1/0[]` field 4",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     96
+    ]
+   ],
+   "distinct": 1,
+   "instances": 96,
+   "models": 2,
+   "examples": [
+    "pm0457_01_00: 1",
+    "pm0469_00_00: 1"
+   ],
+   "types": {
+    "i32": 96
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:color:BaseColorLayer6",
+   "format": "trmtr",
+   "where": "material color param `BaseColorLayer6`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(0.045, 0.019, 0.005, 1)",
+     2
+    ],
+    [
+     "(0.05, 0.04, 0.011, 1)",
+     2
+    ]
+   ],
+   "distinct": 2,
+   "instances": 4,
+   "models": 1,
+   "examples": [
+    "pm0418_00_00/l_eye=(0.045, 0.019, 0.005, 1)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:color:UVScaleOffset2",
+   "format": "trmtr",
+   "where": "material color param `UVScaleOffset2`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "(1, 1, 0, 1)",
+     4
+    ]
+   ],
+   "distinct": 1,
+   "instances": 4,
+   "models": 1,
+   "examples": [
+    "pm0418_00_00/l_eye=(1, 1, 0, 1)"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:EnableDisplacementMap",
+   "format": "trmtr",
+   "where": "material flag param `EnableDisplacementMap`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     8
+    ]
+   ],
+   "distinct": 1,
+   "instances": 8,
+   "models": 1,
+   "examples": [
+    "pm0078_00_00/fire_a_00=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:EnablePackedMap",
+   "format": "trmtr",
+   "where": "material flag param `EnablePackedMap`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     1
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1,
+   "models": 1,
+   "examples": [
+    "item_001/item_001_01=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:NumRequiredUV",
+   "format": "trmtr",
+   "where": "material flag param `NumRequiredUV`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     8
+    ]
+   ],
+   "distinct": 1,
+   "instances": 8,
+   "models": 1,
+   "examples": [
+    "pm0078_00_00/fire_a_00=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:FresnelAlphaMax",
+   "format": "trmtr",
+   "where": "material float param `FresnelAlphaMax`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     1
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1,
+   "models": 1,
+   "examples": [
+    "pm0751_71_41/eyecover_00=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:FresnelAlphaMin",
+   "format": "trmtr",
+   "where": "material float param `FresnelAlphaMin`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     1
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1,
+   "models": 1,
+   "examples": [
+    "pm0751_71_41/eyecover_00=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:MetallicLayer4",
+   "format": "trmtr",
+   "where": "material float param `MetallicLayer4`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.5",
+     2
+    ]
+   ],
+   "distinct": 1,
+   "instances": 2,
+   "models": 1,
+   "examples": [
+    "pm0215_00_41/body_a=0.5"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md (LA): roughness/metallic unread.",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:float:RoughnessLayer7",
+   "format": "trmtr",
+   "where": "material float param `RoughnessLayer7`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "0.75",
+     4
+    ]
+   ],
+   "distinct": 1,
+   "instances": 4,
+   "models": 1,
+   "examples": [
+    "pm0418_00_00/l_eye=0.75"
+   ],
+   "hypothesis": "",
+   "notes": "CLAUDE.md (LA): roughness/metallic unread.",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:texture:DisplacementMap",
+   "format": "trmtr",
+   "where": "material texture param `DisplacementMap`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "pm0078_00_00_fire_a_msk.bntx",
+     6
+    ],
+    [
+     "pm0078_00_00_fire_b_msk.bntx",
+     2
+    ]
+   ],
+   "distinct": 2,
+   "instances": 8,
+   "models": 1,
+   "examples": [
+    "pm0078_00_00/fire_a_00=pm0078_00_00_fire_a_msk.bntx"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:texture:PackedMap",
+   "format": "trmtr",
+   "where": "material texture param `PackedMap`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "item_001_01_arm.bntx",
+     1
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1,
+   "models": 1,
+   "examples": [
+    "item_001/item_001_01=item_001_01_arm.bntx"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:texture:UpperEyelidColorMap",
+   "format": "trmtr",
+   "where": "material texture param `UpperEyelidColorMap`",
+   "status": "unread",
+   "status_auto": true,
+   "values": [
+    [
+     "pm0418_00_00_upper_eyelid_alb.bntx",
+     4
+    ]
+   ],
+   "distinct": 1,
+   "instances": 4,
+   "models": 1,
+   "examples": [
+    "pm0418_00_00/l_eye=pm0418_00_00_upper_eyelid_alb.bntx"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "fitted:pipeline/importers/za/importer.py:cloud_pan_speed_from_5_fps_Gastly_footage_2026_10_19_engin",
+   "format": "code",
+   "where": "pipeline/importers/za/importer.py:1593",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "cloud pan speed from 5 fps Gastly footage, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:pipeline/importers/za/importer.py:colour_table_shadow_cell_repair_on_Schoolkids_F_bu_face0003",
+   "format": "code",
+   "where": "pipeline/importers/za/importer.py:1721",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "colour-table shadow-cell repair on Schoolkids F bu_face0003 brows; also the 0.78 literals, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:pipeline/importers/za/importer.py:edge_smoothness_on_Gastly_only_2026_10_19_engine_rules_deb",
+   "format": "code",
+   "where": "pipeline/importers/za/importer.py:1572",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "edge smoothness on Gastly only, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:pipeline/importers/za/importer.py:gas_shell_sink_on_Gastly_pm0092_rest_pose_only_0_since_gas",
+   "format": "code",
+   "where": "pipeline/importers/za/importer.py:1567",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "gas-shell sink on Gastly pm0092 rest pose only (0 since gas draws under the body; comment above describes the old 1.0 pull), 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:pipeline/importers/za/importer.py:lens_clearing_on_one_face_df_face0000_glasses_vs_samples_nu",
+   "format": "code",
+   "where": "pipeline/importers/za/importer.py:1653",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "lens clearing on one face (df_face0000 glasses vs samples/nu_glasses.png); MIN/MAX/CLEAR_ALPHA, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:pipeline/importers/za/importer.py:lipstick_layer_size_heuristic_on_the_14_cc_faces_with_a_lip",
+   "format": "code",
+   "where": "pipeline/importers/za/importer.py:118",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "lipstick-layer size heuristic on the 14 cc faces with a lip layer, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:pipeline/importers/za/importer.py:per_species_emission_rule_Inkay_Malamar_only_opposite_read",
+   "format": "code",
+   "where": "pipeline/importers/za/importer.py:2287",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "per-species emission rule, Inkay/Malamar only; opposite reading of intensity-0 emission vs MODE_SWITCH, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:pipeline/importers/za/importer.py:per_species_mode_table_Xerneas_pm0768_only_should_become_a",
+   "format": "code",
+   "where": "pipeline/importers/za/importer.py:156",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "per-species mode table, Xerneas pm0768 only; should become a clip-visibility rule shared with SPOT_GLOW_SPECIES, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:pipeline/importers/za/importer.py:stand_in_beard_colour_per_NPC_runtime_data_not_in_the_rip",
+   "format": "code",
+   "where": "pipeline/importers/za/importer.py:2089",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "stand-in beard colour (per-NPC runtime data not in the rip), 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:viewer/src/scene/ViewerScene.ts:DEFAULT_FOV_35_deg_chosen_by_eye_viewer_default_since_the_f",
+   "format": "code",
+   "where": "viewer/src/scene/ViewerScene.ts:24",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "DEFAULT_FOV 35 deg chosen by eye (viewer default since the first version), 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:viewer/src/scene/ViewerScene.ts:zoom_out_10x_20r_far_20r_near_1_idle_planes_0_05d_10",
+   "format": "code",
+   "where": "viewer/src/scene/ViewerScene.ts:322",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "zoom-out 10x / 20r, far +20r, near 1%, idle planes 0.05d..10d chosen by eye (no data), 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:viewer/src/scene/autoLight.ts:auto_lighting_fitting_prior_on_the_Taunie_street_shot_sampl",
+   "format": "code",
+   "where": "viewer/src/scene/autoLight.ts:221",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "auto-lighting fitting prior on the Taunie street shot (samples/), 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:viewer/src/scene/gameShading.ts:SHADOW_FLOOR_BAND_LO_BAND_HI_toon_band_shape_compared_b",
+   "format": "code",
+   "where": "viewer/src/scene/gameShading.ts:27",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "SHADOW_FLOOR / BAND_LO / BAND_HI toon-band shape, compared by eye against the in-game screenshot, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "fitted:viewer/src/scene/outline.ts:tinted_outline_darkness_eyeballed_against_game_outlines_20",
+   "format": "code",
+   "where": "viewer/src/scene/outline.ts:12",
+   "status": "fitted",
+   "status_auto": true,
+   "values": [],
+   "models": 0,
+   "examples": [],
+   "hypothesis": "",
+   "seen": true,
+   "comment": "tinted outline darkness, eyeballed against game outlines, 2026-10-19 (engine-rules debt)",
+   "notes": ""
+  },
+  {
+   "key": "param:trmtr:int:CastShadow",
+   "format": "trmtr",
+   "where": "material int param `CastShadow`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     333
+    ]
+   ],
+   "distinct": 1,
+   "instances": 333,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00/body_b=1",
+    "pm0055_00_00/r_eye=1",
+    "pm0078_00_00/body_b=1",
+    "pm0123_00_00/body_00=1",
+    "pm0169_00_00/l_eye=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:int:ReceiveShadow",
+   "format": "trmtr",
+   "where": "material int param `ReceiveShadow`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     251
+    ]
+   ],
+   "distinct": 1,
+   "instances": 251,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00/body_b=1",
+    "pm0055_00_00/body_b=1",
+    "pm0078_00_00/body_b=1",
+    "pm0123_00_00/body_00=1",
+    "pm0169_00_00/body=1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmsh:/1[]/11",
+   "format": "trmsh",
+   "where": "table `/1[]` field 11",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     1306
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1330,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 1306
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmtr:/1[]/10",
+   "format": "trmtr",
+   "where": "table `/1[]` field 10",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     333
+    ]
+   ],
+   "distinct": 1,
+   "instances": 333,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 333
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmtr:/1[]/11",
+   "format": "trmtr",
+   "where": "table `/1[]` field 11",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     333
+    ]
+   ],
+   "distinct": 1,
+   "instances": 333,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 333
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmtr:/1[]/12",
+   "format": "trmtr",
+   "where": "table `/1[]` field 12",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     333
+    ]
+   ],
+   "distinct": 1,
+   "instances": 333,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 333
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmtr:/1[]/5",
+   "format": "trmtr",
+   "where": "table `/1[]` field 5",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     333
+    ]
+   ],
+   "distinct": 1,
+   "instances": 333,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 333
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmtr:/1[]/6",
+   "format": "trmtr",
+   "where": "table `/1[]` field 6",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     333
+    ]
+   ],
+   "distinct": 1,
+   "instances": 333,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 333
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmtr:/1[]/8",
+   "format": "trmtr",
+   "where": "table `/1[]` field 8",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     333
+    ]
+   ],
+   "distinct": 1,
+   "instances": 333,
+   "models": 60,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 333
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmtr:/1[]/3[]/12",
+   "format": "trmtr",
+   "where": "table `/1[]/3[]` field 12",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "(1, 1, 1, 1)",
+     1735
+    ]
+   ],
+   "distinct": 1,
+   "instances": 1747,
+   "models": 59,
+   "examples": [
+    "pm0025_00_00: (1, 1, 1, 1)",
+    "pm0055_00_00: (1, 1, 1, 1)",
+    "pm0078_00_00: (1, 1, 1, 1)",
+    "pm0123_00_00: (1, 1, 1, 1)",
+    "pm0169_00_00: (1, 1, 1, 1)"
+   ],
+   "types": {
+    "struct": 1735
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trskl:/1[]/6",
+   "format": "trskl",
+   "where": "table `/1[]` field 6",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     2471
+    ]
+   ],
+   "distinct": 1,
+   "instances": 5373,
+   "models": 56,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 2471
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:EnableRoughnessMap",
+   "format": "trmtr",
+   "where": "material flag param `EnableRoughnessMap`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     153
+    ]
+   ],
+   "distinct": 1,
+   "instances": 153,
+   "models": 51,
+   "examples": [
+    "pm0055_00_00/body_b=True",
+    "pm0123_00_00/tra_body_02=True",
+    "pm0215_00_41/body_b_00=True",
+    "pm0265_00_00/r_eye=True",
+    "pm0398_00_00/body_b=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:EnableMetallicMap",
+   "format": "trmtr",
+   "where": "material flag param `EnableMetallicMap`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     104
+    ]
+   ],
+   "distinct": 1,
+   "instances": 104,
+   "models": 41,
+   "examples": [
+    "pm0055_00_00/body_b=True",
+    "pm0123_00_00/tra_body_02=True",
+    "pm0215_00_41/body_b_00=True",
+    "pm0265_00_00/body_b=True",
+    "pm0418_00_00/body_a_00=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmdl:/4[]/1",
+   "format": "trmdl",
+   "where": "table `/4[]` field 1",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "Custom",
+     40
+    ]
+   ],
+   "distinct": 1,
+   "instances": 40,
+   "models": 40,
+   "examples": [
+    "pm0025_00_00: Custom",
+    "pm0055_00_00: Custom",
+    "pm0078_00_00: Custom",
+    "pm0123_00_00: Custom",
+    "pm0169_00_00: Custom"
+   ],
+   "types": {
+    "str": 40
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:EnableWeatherLayer",
+   "format": "trmtr",
+   "where": "material flag param `EnableWeatherLayer`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     89
+    ]
+   ],
+   "distinct": 1,
+   "instances": 89,
+   "models": 21,
+   "examples": [
+    "tr0002_00/obj=True",
+    "tr0003_00/body=True",
+    "tr0005_00/hairstyle=True",
+    "tr0006_00/hairstyle=True",
+    "tr0008_00/hairstyle=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:WeatherLayerMaskSource",
+   "format": "trmtr",
+   "where": "material flag param `WeatherLayerMaskSource`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "Texture",
+     89
+    ]
+   ],
+   "distinct": 1,
+   "instances": 89,
+   "models": 21,
+   "examples": [
+    "tr0002_00/obj=Texture",
+    "tr0003_00/body=Texture",
+    "tr0005_00/hairstyle=Texture",
+    "tr0006_00/hairstyle=Texture",
+    "tr0008_00/hairstyle=Texture"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:EnableEmissionColorMap",
+   "format": "trmtr",
+   "where": "material flag param `EnableEmissionColorMap`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     20
+    ]
+   ],
+   "distinct": 1,
+   "instances": 20,
+   "models": 20,
+   "examples": [
+    "tr0002_00/eye=True",
+    "tr0003_00/eye=True",
+    "tr0005_00/eye=True",
+    "tr0006_00/eye=True",
+    "tr0008_00/eye=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:int:UVIndexLayerMask",
+   "format": "trmtr",
+   "where": "material int param `UVIndexLayerMask`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "-1",
+     81
+    ]
+   ],
+   "distinct": 1,
+   "instances": 81,
+   "models": 20,
+   "examples": [
+    "pm0025_00_00/body_b=-1",
+    "pm0055_00_00/body_b=-1",
+    "pm0078_00_00/body_b=-1",
+    "pm0123_00_00/body_00=-1",
+    "pm0169_00_00/body=-1"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/0/0",
+   "format": "tracm",
+   "where": "table `/0` field 0",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     321
+    ]
+   ],
+   "distinct": 1,
+   "instances": 321,
+   "models": 20,
+   "examples": [
+    "pm0025_00_00: 1",
+    "pm0055_00_00: 1",
+    "pm0078_00_00: 1",
+    "pm0123_00_00: 1",
+    "pm0169_00_00: 1"
+   ],
+   "types": {
+    "i32": 321
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/0/2",
+   "format": "tracm",
+   "where": "table `/0` field 2",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "60",
+     923
+    ]
+   ],
+   "distinct": 1,
+   "instances": 955,
+   "models": 20,
+   "examples": [
+    "pm0025_00_00: 60",
+    "pm0055_00_00: 60",
+    "pm0078_00_00: 60",
+    "pm0123_00_00: 60",
+    "pm0169_00_00: 60"
+   ],
+   "types": {
+    "i32": 923
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tranm:/1/1",
+   "format": "tranm",
+   "where": "table `/1` field 1",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "vec[8] 010000000000803f",
+     79
+    ]
+   ],
+   "distinct": 1,
+   "instances": 79,
+   "models": 20,
+   "examples": [
+    "pm0025_00_00: vec[8] 010000000000803f",
+    "pm0055_00_00: vec[8] 010000000000803f",
+    "pm0078_00_00: vec[8] 010000000000803f",
+    "pm0123_00_00: vec[8] 010000000000803f",
+    "pm0169_00_00: vec[8] 010000000000803f"
+   ],
+   "types": {
+    "vec": 79
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trskl:/3[]/3",
+   "format": "trskl",
+   "where": "table `/3[]` field 3",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "TwistBend",
+     80
+    ]
+   ],
+   "distinct": 1,
+   "instances": 80,
+   "models": 20,
+   "examples": [
+    "tr0002_00: TwistBend",
+    "tr0003_00: TwistBend",
+    "tr0005_00: TwistBend",
+    "tr0006_00: TwistBend",
+    "tr0008_00: TwistBend"
+   ],
+   "types": {
+    "str": 80
+   },
+   "heuristic": true,
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmmt:/2[]/2[]/1",
+   "format": "trmmt",
+   "where": "table `/2[]/2[]` field 1",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     172
+    ]
+   ],
+   "distinct": 1,
+   "instances": 172,
+   "models": 19,
+   "examples": [
+    "pm0025_00_00: 1",
+    "pm0055_00_00: 1",
+    "pm0078_00_00: 1",
+    "pm0123_00_00: 1",
+    "pm0169_00_00: 1"
+   ],
+   "types": {
+    "u8": 172
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "trmmt:/2[]/3",
+   "format": "trmmt",
+   "where": "table `/2[]` field 3",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "empty vec/str",
+     22
+    ]
+   ],
+   "distinct": 1,
+   "instances": 22,
+   "models": 19,
+   "examples": [
+    "pm0025_00_00: empty vec/str",
+    "pm0055_00_00: empty vec/str",
+    "pm0078_00_00: empty vec/str",
+    "pm0123_00_00: empty vec/str",
+    "pm0169_00_00: empty vec/str"
+   ],
+   "types": {
+    "empty": 22
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/2[]/2[]/1/2/0[]/4",
+   "format": "tracm",
+   "where": "table `/1[]/4/2[]/2[]/1/2/0[]` field 4",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     1058
+    ]
+   ],
+   "distinct": 1,
+   "instances": 13823,
+   "models": 18,
+   "examples": [
+    "pm0025_00_00: 1",
+    "pm0055_00_00: 1",
+    "pm0078_00_00: 1",
+    "pm0123_00_00: 1",
+    "pm0169_00_00: 1"
+   ],
+   "types": {
+    "i32": 1058
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "tracm:/1[]/4/2[]/2[]/1/3/0[]/4",
+   "format": "tracm",
+   "where": "table `/1[]/4/2[]/2[]/1/3/0[]` field 4",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "1",
+     1074
+    ]
+   ],
+   "distinct": 1,
+   "instances": 25750,
+   "models": 18,
+   "examples": [
+    "pm0025_00_00: 1",
+    "pm0055_00_00: 1",
+    "pm0078_00_00: 1",
+    "pm0123_00_00: 1",
+    "pm0169_00_00: 1"
+   ],
+   "types": {
+    "i32": 1074
+   },
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  },
+  {
+   "key": "param:trmtr:flag:EnableLerpBaseColorEmission",
+   "format": "trmtr",
+   "where": "material flag param `EnableLerpBaseColorEmission`",
+   "status": "constant",
+   "status_auto": true,
+   "values": [
+    [
+     "True",
+     62
+    ]
+   ],
+   "distinct": 1,
+   "instances": 62,
+   "models": 16,
+   "examples": [
+    "pm0025_00_00/body_b=True",
+    "pm0055_00_00/body_b=True",
+    "pm0078_00_00/body_b=True",
+    "pm0123_00_00/body_00=True",
+    "pm0169_00_00/body=True"
+   ],
+   "hypothesis": "",
+   "notes": "",
+   "seen": true
+  }
+ ]
+}

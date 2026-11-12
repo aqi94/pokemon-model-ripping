@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import type { CategoryLight } from './environment';
 
 export interface ShadingParams {
   halfLambertBias: number; shadowStrength: number; shadowColor: [number, number, number]; shadowShift: number;
@@ -23,6 +24,7 @@ const DEFAULTS: ShadingParams = {
 };
 
 // Tunables (compared by eye against the in-game screenshot).
+// FITTED: SHADOW_FLOOR / BAND_LO / BAND_HI toon-band shape, compared by eye against the in-game screenshot, 2026-10-19 (engine-rules debt)
 const SHADOW_FLOOR = 0.6;
 const BAND_LO = 0.30;
 const BAND_HI = 0.62;
@@ -35,7 +37,14 @@ interface Pbr {
 }
 type U = { value: unknown };
 interface GameUniforms { uWrap: U; uShadowStrength: U; uShadowShift: U; uShadowColor: U; uRim: U; uSpec: U; uShadowAmount: U; uShadowTex: U; uHasShadowTex: U; uRimScale: U; uSaturation: U; uContrast: U;
-  uSpecTex: U; uHasSpecTex: U; uRimTex: U; uHasRimTex: U; uSpecP: U; uBackRim: U; uFres: U; uGI: U }
+  uSpecTex: U; uHasSpecTex: U; uRimTex: U; uHasRimTex: U; uSpecP: U; uBackRim: U; uFres: U; uGI: U;
+  uCatKey: U; uCatAmb: U; uCatRim: U }
+
+/** Linear RGB multiplier from a scale and an optional sRGB hex colour. */
+function catColor(v: THREE.Vector3, scale: number, hex?: string) {
+  const c = hex ? new THREE.Color(hex) : new THREE.Color(1, 1, 1);
+  v.set(c.r * scale, c.g * scale, c.b * scale);
+}
 
 function params(mat: THREE.Material): ShadingParams {
   const s = (mat.userData?.shading ?? {}) as Partial<ShadingParams>;
@@ -73,6 +82,7 @@ ${head}`);
 	float wrapped = saturate( nlRaw * (1.0 - uWrap) + uWrap );
 	float lit = smoothstep( uShadowShift * 0.5 + ${BAND_LO.toFixed(2)}, uShadowShift * 0.5 + ${BAND_HI.toFixed(2)}, wrapped );
 	if ( gIsKey ) gGameLit = lit;
+	vec3 gCatK = gIsKey ? uCatKey : vec3( 1.0 );
 	float dotNL = wrapped;`);
   f2 = f2.replace(b, 'vec3 irradiance = directLight.color;');
   f2 = f2.replace(c, `float gNV = saturate( dot( geometryNormal, geometryViewDir ) );
@@ -93,14 +103,16 @@ ${head}`);
 	float specF = gSpecM * uSpec * pow( gNH, mix( 96.0, 16.0, saturate( gSpecOC.y * 0.5 ) ) * ( 1.0 - 0.75 * clamp( gSpecOC.x, -1.0, 1.0 ) ) );
 	if ( uSpecP.x > 0.5 ) specF = gSpecM * max( uSpec, 0.2 ) * pow( gNH, 24.0 ) * 1.5;
 	if ( uFres.x > 0.5 ) specF += 0.5 * uFres.z * pow( gNH, 96.0 );
-	reflectedLight.directSpecular += directLight.color * rimF + directLight.color * specF * lit;`);
+	reflectedLight.directSpecular += directLight.color * gCatK * ( rimF + specF * lit );`);
   f2 = f2.replace(d, `vec3 gCol = gIsKey ? mix( material.diffuseColor, gameShadowCol( material.diffuseColor ), ( 1.0 - lit ) * uShadowAmount * uShadowStrength / 0.7 )
 		: material.diffuseColor * saturate( nlRaw ) * lit;
-	reflectedLight.directDiffuse += directLight.color * gCol * RECIPROCAL_PI;`);
+	reflectedLight.directDiffuse += directLight.color * gCatK * gCol * RECIPROCAL_PI;`);
   // Ambient light is tinted toward the shadow colour everywhere (ShadowingGIGain), more so on the shadow side.
   f2 = f2.replace(e, `vec3 gColI = mix( material.diffuseColor, gameShadowCol( material.diffuseColor ), saturate( max( ( 1.0 - gGameLit ) * uShadowAmount, uGI ) ) );
-	reflectedLight.indirectDiffuse += irradiance * gColI * RECIPROCAL_PI;
+	reflectedLight.indirectDiffuse += irradiance * uCatAmb * gColI * RECIPROCAL_PI;
 	float gNV2 = saturate( dot( geometryNormal, geometryViewDir ) );
+	// The category's own rim light (rim_N): a view-dependent edge glow tinted by the albedo like the material rim.
+	reflectedLight.indirectDiffuse += material.diffuseColor * uCatRim.rgb * pow( 1.0 - gNV2, max( uCatRim.a, 0.5 ) );
 	reflectedLight.indirectDiffuse += material.diffuseColor * ( uBackRim * pow( 1.0 - gNV2, 3.0 ) * uRimScale );
 	if ( uFres.x > 0.5 ) reflectedLight.indirectDiffuse += vec3( uFres.y * pow( 1.0 - gNV2, 2.5 ) );`);
   f = f.replace(inc, f2);
@@ -128,6 +140,9 @@ uniform vec3 uSpecP;
 uniform float uBackRim;
 uniform vec3 uFres;
 uniform float uGI;
+uniform vec3 uCatKey;
+uniform vec3 uCatAmb;
+uniform vec4 uCatRim;
 ` + f;
 }
 
@@ -141,7 +156,7 @@ export function syncUnlit(mat: THREE.MeshStandardMaterial) {
   mat.color.setRGB(0, 0, 0);
 }
 
-export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail: number; shadow: number; rim: number; saturation: number; contrast?: number; gi?: number }, tex: GameTextures = { shadow: null, spec: null, rim: null }, reflect: THREE.Texture | null = null, reflectIntensity = 1.5) {
+export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail: number; shadow: number; rim: number; saturation: number; contrast?: number; gi?: number; categories?: Record<string, CategoryLight> }, tex: GameTextures = { shadow: null, spec: null, rim: null }, reflect: THREE.Texture | null = null, reflectIntensity = 1.5) {
   const detail = env.detail;
   if (!mat.userData.__pbr) {
     mat.userData.__pbr = {
@@ -154,6 +169,9 @@ export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail:
   const pbr = mat.userData.__pbr as Pbr;
   const p = params(mat);
   mat.roughness = 1; mat.metalness = 0; mat.envMapIntensity = 0;
+  // Per-texel metallic baked from SV `MetallicLayerN` (metallicRoughness texture): keep it, so three's diffuse
+  // (albedo x (1 - metallic)) drops the metal parts. SV eyes paint the iris as metal; forced to 0 it was a lit pale disc.
+  if (mat.metalnessMap) { mat.metalness = pbr.metalness; mat.roughness = pbr.roughness; }
   if (reflect) { mat.envMap = reflect; mat.envMapIntensity = reflectIntensity; mat.roughness = 0.2; mat.metalness = 0.1; } // _ENVMAP_ON materials (glasses, tubes, metal)
   else if (mat.envMap && mat.userData.__reflEnv) mat.envMap = null;
   mat.userData.__reflEnv = !!reflect;
@@ -182,6 +200,7 @@ export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail:
       uRimScale: { value: 1 }, uSaturation: { value: 1 }, uContrast: { value: 1 },
       uSpecTex: { value: null }, uHasSpecTex: { value: 0 }, uRimTex: { value: null }, uHasRimTex: { value: 0 },
       uSpecP: { value: new THREE.Vector3() }, uBackRim: { value: 0 }, uFres: { value: new THREE.Vector3() }, uGI: { value: 0.5 },
+      uCatKey: { value: new THREE.Vector3(1, 1, 1) }, uCatAmb: { value: new THREE.Vector3(1, 1, 1) }, uCatRim: { value: new THREE.Vector4(0, 0, 0, 3) },
     };
     mat.userData.__gameUniforms = u;
   }
@@ -205,13 +224,19 @@ export function applyGameShading(mat: THREE.MeshStandardMaterial, env: { detail:
   (u.uSpecP.value as THREE.Vector3).set(p.hairSpecular ? 1 : 0, p.specularOffset, p.specularContrast);
   u.uBackRim.value = nd ? 0 : p.backRimIntensity;
   u.uGI.value = Math.min(1, (env.gi ?? 1) * p.giGain);
+  const cat = env.categories?.[String(mat.userData?.category ?? '')];
+  catColor(u.uCatKey.value as THREE.Vector3, cat?.key ?? 1, cat?.keyColor);
+  catColor(u.uCatAmb.value as THREE.Vector3, cat?.ambient ?? 1, cat?.ambientColor);
+  const rimV = new THREE.Vector3();
+  catColor(rimV, nd ? 0 : (cat?.rim ?? 0) * env.rim, cat?.rimColor);
+  (u.uCatRim.value as THREE.Vector4).set(rimV.x, rimV.y, rimV.z, cat?.rimPower ?? 3);
   (u.uFres.value as THREE.Vector3).set(p.fresnel ? 1 : 0, p.fresnelIntensity, Math.min(1, Math.max(0, 1.3 - p.roughness + p.metallic)));
   if (first) {
     const uu = u;
     // Chain any patch installed before (gas shells, see gas.ts) so both survive the mode switch.
     const prev = pbr.onBeforeCompile, prevKey = pbr.customProgramCacheKey;
     mat.onBeforeCompile = function (this: THREE.Material, shader, renderer) { prev?.call(this, shader, renderer); patch(shader as never, uu); };
-    mat.customProgramCacheKey = function (this: THREE.Material) { return 'game-shading-v3' + (prevKey?.call(this) ?? ''); };
+    mat.customProgramCacheKey = function (this: THREE.Material) { return 'game-shading-v4' + (prevKey?.call(this) ?? ''); };
     mat.needsUpdate = true;
   }
 }

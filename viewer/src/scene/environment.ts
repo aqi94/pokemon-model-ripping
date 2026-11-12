@@ -4,9 +4,10 @@
 // mapping, and named profiles that swap the whole set (post-process volumes).
 
 import { SV_PRESETS } from './svPresets';
+import { UNITE_PRESETS } from './unitePresets';
 import { ZA_PRESETS } from './zaPresets';
 
-export type ToneMap = 'linear' | 'aces' | 'agx' | 'neutral' | 'hable';
+export type ToneMap = 'linear' | 'aces' | 'agx' | 'neutral' | 'hable' | 'unite';
 
 /** John Hable's piecewise filmic curve ("Filmic Worlds" user params); Game Freak's `PfxTonemapMode 2` stores exactly these. */
 export interface HableParams {
@@ -45,7 +46,21 @@ export interface Environment {
   skyColor?: string;
   backColor?: string;
   hable?: HableParams; // only read when toneMapping === 'hable'
+  /** Per material category (`.trmtr` CategoryLabel, glTF `extras.category`) light adjustments, like the game's
+   *  `dir_N` / `GILightCommon.ColorN` / `rim_N` sets. Absent or missing category = the base lights unchanged. */
+  categories?: Record<string, CategoryLight>;
 }
+
+/** Multipliers on the base key / ambient for one material category, plus that category's own rim light.
+ *  Colours are sRGB hex; a scale of 1 and white is neutral. */
+export interface CategoryLight {
+  key?: number; keyColor?: string;
+  ambient?: number; ambientColor?: string;
+  rim?: number; rimColor?: string; rimPower?: number;
+}
+
+/** Z-A `CategoryLabel` values (verified over every Z-A .trmtr). SV numbers its categories differently (trainer skin 5). */
+export const CATEGORY_LABELS: Record<string, string> = { '4': 'Body (skin, hair, eyes)', '5': 'Clothing', '6': 'Pokémon', '0': 'Props' };
 
 /** Tuned against the VS screenshots (neutral white light, linear output). */
 export const DEFAULT_ENV: Environment = {
@@ -72,9 +87,19 @@ export const LIGHTING_PRESETS: LightingPreset[] = [
   // trainers 49.8 -> 23.7): mostly exposure (the game is much brighter than Studio) plus a flatter, lower key. Linear output.
   p('bdspVs', 'BDSP VS render', { ambient: 1.84, azimuth: -32, elevation: 16, keyTemp: 6125, back: 0.1, skyTemp: 5900, shadow: 0.39, detail: 0.4,
     exposure: 1.8, contrast: 0.9 }, 'bdsp'),
+  // 3DS battle sprites (X/Y-ORAS, play.pokemonshowdown.com/sprites/ani), for the Outline > 3DS sprite style. Key light low and in
+  // front, from the centre of the battlefield; brighter and flatter than Studio. FITTED by hand on ZA Charizard vs the Showdown
+  // charizard.gif, 2026-10-20: opaque-pixel median luminance 159 vs 155, 90th percentile 211 vs 208, mean saturation 0.55 vs 0.55.
+  // UNITE's own render path (scene/uniteShading.ts): the game's post curve x(1.1295x+0.03)*0.45 / (x(1.0935x+0.59)*0.45+0.08)
+  // (Battle/m_bat_actorbase_lv3.txt:414-423, the 0.45 is folded in) over the shaders' game-unit lighting. Key/ambient are the
+  // defaults, i.e. the game's neutral 1; the scene's real main light is scripted and not in the rip (ledger lighting:toneCurve).
+  p('unite', 'UNITE shader model (game curve)', { toneMapping: 'unite' }, 'unite'),
+  p('xyBattle', '3DS battle (X/Y sprites)', { ambient: 2.4, key: 1.4, azimuth: 10, elevation: 10, shadow: 0.3, exposure: 1.5, saturation: 0.85 }),
   // Z-A scene presets fitted to gameplay frames (refs/za/<scene>/, tools/fit_scene.mjs, generated zaPresets.ts).
   ...ZA_PRESETS,
   ...SV_PRESETS,
+  // UNITE presets fitted to gameplay footage (refs/unite/<scene>/; the APK's own light rigs are encrypted).
+  ...UNITE_PRESETS,
   // The hand-fitted 'night' (Grisham VS, dE 8.4) and 'indoorWindow' (detective, dE 4.9) presets became
   // za_battle_zone_night and za_indoor_hotel in zaPresets.ts (same screenshots, refitted by tools/fit_scene.mjs).
 ];

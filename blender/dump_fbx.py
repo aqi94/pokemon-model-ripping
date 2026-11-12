@@ -71,13 +71,63 @@ def material_info(mat):
 
 try:
     bpy.ops.wm.read_factory_settings(use_empty=True)
-    bpy.ops.import_scene.fbx(filepath=fbx)
+
+    # Blender's FBX importer assigns bones to armatures (find_armatures) before it turns empties inside a skeleton
+    # into fake bones (find_fake_bones), so bones below such an empty keep armature None and skinning crashes with
+    # `mesh.armature_setup[...]` KeyError (UNITE Charmander/Charizard: a `Null` named `all` between bones). Re-run
+    # the bone -> armature assignment once the fake bones exist.
+    try:
+        from io_scene_fbx import import_fbx as _imp
+
+        _orig_fake = _imp.FbxImportHelperNode.find_fake_bones
+        if not getattr(_orig_fake, "_patched", False):
+            def _find_fake_bones(self, in_armature=False):
+                _orig_fake(self, in_armature)
+                if self.parent is None:  # root call: the whole tree is done
+                    stack = [self]
+                    while stack:
+                        n = stack.pop()
+                        if n.is_armature:
+                            n.find_armature_bones(n)
+                        stack.extend(n.children)
+            _find_fake_bones._patched = True
+            _imp.FbxImportHelperNode.find_fake_bones = _find_fake_bones
+    except Exception as e:  # noqa: BLE001
+        result["fake_bone_patch"] = f"not applied: {e}"
+    # DUMP_FBX_SCALE: extra import scale for files whose UnitScaleFactor is wrong (UNITE/AssetStudio: metres stored
+    # with UnitScaleFactor 1 = cm, so Blender would shrink them 100x).
+    bpy.ops.import_scene.fbx(filepath=fbx, global_scale=float(os.environ.get("DUMP_FBX_SCALE") or 1.0))
     scene = bpy.context.scene
     fps = scene.render.fps / (scene.render.fps_base or 1.0)
     result["fps"] = fps
     arrays = {}
 
+    # Optional mesh filter (env DUMP_FBX_MESHES, regex on object or mesh-data name): scene FBXs (UNITE lobby showcases)
+    # hold one character among backdrop cards and other rigs; keep only the matching meshes and their armature.
+    keep = os.environ.get("DUMP_FBX_MESHES") or ""
     arms = [o for o in bpy.data.objects if o.type == "ARMATURE"]
+    if keep:
+        import re
+
+        rx = re.compile(keep)
+        drop = [o for o in bpy.data.objects if o.type == "MESH" and not (rx.search(o.name) or rx.search(o.data.name))]
+        for o in drop:
+            bpy.data.objects.remove(o, do_unlink=True)
+        def rig_of(o):
+            md = next((m for m in o.modifiers if m.type == "ARMATURE" and m.object), None)
+            return md.object if md else (o.parent if o.parent and o.parent.type == "ARMATURE" else None)
+
+        load = {}
+        for o in bpy.data.objects:
+            if o.type == "MESH" and rig_of(o):
+                load[rig_of(o)] = load.get(rig_of(o), 0) + len(o.data.vertices)
+        if load:
+            # One character per dump: the armature deforming the most kept vertices; meshes on other rigs go.
+            main = max(load, key=load.get)
+            for o in [o for o in bpy.data.objects if o.type == "MESH" and rig_of(o) not in (main, None)]:
+                bpy.data.objects.remove(o, do_unlink=True)
+            arms = [main]
+        result["kept_meshes"] = [o.name for o in bpy.data.objects if o.type == "MESH"]
     arm = max(arms, key=lambda o: len(o.data.bones)) if arms else None
     bones, bone_idx, sinv = [], {}, Matrix.Identity(4)
     if arm:
@@ -91,17 +141,22 @@ try:
         ibm = np.zeros((len(bones), 4, 4), np.float32)
         for i, b in enumerate(bones):
             p = bone_idx[b.parent.name] if b.parent else -1
-            local = rest_w[i] if p < 0 else rest_w[p].inverted() @ rest_w[i]
+            local = rest_w[i] if p < 0 else rest_w[p].inverted_safe() @ rest_w[i]
             loc, rot, scl = decompose(local)
             joints.append({"name": b.name, "parent": p, "t": loc, "r": rot, "s": scl})
-            ibm[i] = mat_np(rest_w[i].inverted())
+            ibm[i] = mat_np(rest_w[i].inverted_safe())  # degenerate (zero-scaled) bones: Dragapult skin 05
         result["joints"] = joints
         arrays["ibm"] = ibm
 
     # -- meshes ---------------------------------------------------------
     meshes = []
     materials = {}
+    zero_scale = []
     for oi, obj in enumerate([o for o in bpy.data.objects if o.type == "MESH" and len(o.data.vertices)]):
+        if abs(obj.matrix_world.to_3x3().determinant()) < 1e-12:
+            # scaled to 0 = hidden (Unity convention); nothing to draw and no normal matrix
+            zero_scale.append(obj.name)
+            continue
         me = obj.data
         me.calc_loop_triangles()
         nv, nl, nt = len(me.vertices), len(me.loops), len(me.loop_triangles)
@@ -128,6 +183,23 @@ try:
             uv = uv.reshape(-1, 2)
         else:
             uv = np.zeros((nl, 2), np.float32)
+        # first colour layer per corner, as the file's values (`color_srgb`: the FBX importer stores them as sRGB and
+        # converts to linear). Unity Fx shaders multiply their masks by it (flame gradients); None = no layer.
+        col = None
+        ca = getattr(me, "color_attributes", None)
+        if ca is not None and len(ca):
+            attr = ca[0]
+            n = len(attr.data)
+            raw = np.empty(n * 4, np.float32)
+            try:
+                attr.data.foreach_get("color_srgb", raw)
+            except Exception:  # noqa: BLE001
+                attr.data.foreach_get("color", raw)
+            raw = raw.reshape(-1, 4)
+            if attr.domain == "CORNER" and n == nl:
+                col = raw
+            elif attr.domain == "POINT" and n == nv:
+                col = raw[loop_v]
 
         m4 = CM @ obj.matrix_world
         m3 = np.array(m4.to_3x3(), np.float32)
@@ -164,7 +236,8 @@ try:
             if not sel.any():
                 continue
             loops = tris.reshape(-1, 3)[sel].ravel()
-            key = np.concatenate([loop_v[loops, None].astype(np.float32), uv[loops], nrm[loops]], axis=1)
+            key = np.concatenate([loop_v[loops, None].astype(np.float32), uv[loops], nrm[loops]]
+                                 + ([col[loops]] if col is not None else []), axis=1)
             _, first, inv = np.unique(key, axis=0, return_index=True, return_inverse=True)
             lu = loops[first]
             idx = inv.astype(np.uint32).reshape(-1, 3)
@@ -175,6 +248,8 @@ try:
             arrays[pre + "nrm"] = nrm[lu]
             arrays[pre + "uv"] = uv[lu]
             arrays[pre + "idx"] = idx.ravel()
+            if col is not None:
+                arrays[pre + "col"] = col[lu]
             if skinned:
                 arrays[pre + "joints"] = vj[loop_v[lu]]
                 arrays[pre + "weights"] = vw[loop_v[lu]]
@@ -185,8 +260,9 @@ try:
                 info["name"] = mname
                 materials[mname] = info
             slots.append({"key": pre, "material": mname, "skinned": skinned})
-        meshes.append({"name": obj.name, "slots": slots})
+        meshes.append({"name": obj.name, "slots": slots, "matrix": [list(r) for r in m4]})  # placement used for pos
     result["meshes"] = meshes
+    result["zero_scale_meshes"] = zero_scale
     result["materials"] = list(materials.values())
 
     # -- animation ------------------------------------------------------
@@ -215,7 +291,17 @@ try:
                     world.append(base @ ev.pose.bones[b.name].matrix @ sinv)
                 for i, b in enumerate(bones):
                     p = bone_idx[b.parent.name] if b.parent else -1
-                    local = world[i] if p < 0 else world[p].inverted() @ world[i]
+                    if p < 0:
+                        local = world[i]
+                    elif abs(world[p].determinant()) > 1e-12:
+                        local = world[p].inverted() @ world[i]
+                    else:
+                        # Parent scaled to 0 this frame (Unity clips hide parts that way): no inverse. Blender's
+                        # pose.matrix = parent @ rest_rel @ basis, so the local is the rest offset times the bone's
+                        # own basis, in the same sinv-conjugated space as `world`.
+                        pbe = ev.pose.bones[b.name]
+                        rest_rel = b.parent.matrix_local.inverted_safe() @ b.matrix_local
+                        local = sinv.inverted() @ rest_rel @ pbe.matrix_basis @ sinv
                     l, r, sc = decompose(local)
                     loc[fi, i], rot[fi, i], scl[fi, i] = l, r, sc
             name = act.name.split("|")[1] if act.name.count("|") >= 1 else act.name

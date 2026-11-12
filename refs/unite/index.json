@@ -1,0 +1,126 @@
+{
+ "game": "unite",
+ "builtAt": "2026-11-01",
+ "refs": [
+  {
+   "scene": "lobby",
+   "sceneLabel": "UNITE lobby / holowear showcase",
+   "preset": "unite_lobby",
+   "slug": "lobby_gardevoir_01",
+   "model": "pm0282_00_lob",
+   "name": "Gardevoir",
+   "context": "field",
+   "clip": "idle",
+   "frame": 0,
+   "camera": {
+    "fov": 35,
+    "position": [
+     -0.1982,
+     0.9676,
+     3.7402
+    ],
+    "target": [
+     -0.1982,
+     0.8429,
+     0.0019
+    ]
+   },
+   "image": "/refs/unite/lobby/lobby_gardevoir_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 5.09,
+   "video": "https://www.youtube.com/watch?v=s2ra5myIAmc",
+   "timecode": "00:00:19.000"
+  },
+  {
+   "scene": "battle_theia",
+   "sceneLabel": "UNITE battle, Theia Sky Ruins (day)",
+   "preset": "unite_battle_theia",
+   "slug": "battle_theia_gengar_01",
+   "model": "pm0094_00",
+   "name": "Gengar",
+   "context": "battle",
+   "clip": "idle",
+   "frame": 0,
+   "camera": {
+    "fov": 25,
+    "position": [
+     3.8688,
+     16.1471,
+     13.6709
+    ],
+    "target": [
+     0.235,
+     0.352,
+     0.1093
+    ]
+   },
+   "image": "/refs/unite/battle_theia/battle_theia_gengar_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 0.69,
+   "video": "https://www.youtube.com/watch?v=n11UvsJySKQ",
+   "timecode": "00:02:14.600"
+  },
+  {
+   "scene": "result",
+   "sceneLabel": "UNITE results / MVP screen",
+   "preset": "unite_result",
+   "slug": "result_garchomp_01",
+   "model": "pm0445_00_lob",
+   "name": "Garchomp",
+   "context": "cutscene",
+   "clip": "idle",
+   "frame": 0,
+   "camera": {
+    "fov": 35,
+    "position": [
+     2.7861,
+     0.8262,
+     5.2083
+    ],
+    "target": [
+     1.8124,
+     0.6859,
+     -0.3141
+    ]
+   },
+   "image": "/refs/unite/result/result_garchomp_01.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 3.93,
+   "video": "https://www.youtube.com/watch?v=B-lxnC_eWNk",
+   "timecode": "00:08:15.500"
+  },
+  {
+   "scene": "result",
+   "sceneLabel": "UNITE results / MVP screen",
+   "preset": "unite_result",
+   "slug": "result_garchomp_02",
+   "model": "pm0445_00_lob",
+   "name": "Garchomp",
+   "context": "cutscene",
+   "clip": "idle",
+   "frame": 0,
+   "camera": {
+    "fov": 35,
+    "position": [
+     2.4955,
+     0.7612,
+     5.0885
+    ],
+    "target": [
+     1.5513,
+     0.6253,
+     -0.2666
+    ]
+   },
+   "image": "/refs/unite/result/result_garchomp_02.png",
+   "width": 1920,
+   "height": 1080,
+   "dE": 6.37,
+   "video": "https://www.youtube.com/watch?v=B-lxnC_eWNk",
+   "timecode": "00:08:02.500"
+  }
+ ]
+}

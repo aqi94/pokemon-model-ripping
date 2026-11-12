@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 
+from .gltf_writer import dropped_tracks
 from .model import Model
 
 MANIFEST_VERSION = 1
@@ -12,12 +13,13 @@ MANIFEST_VERSION = 1
 def build_manifest(model: Model, glb_summary: dict | None = None) -> dict:
     groups: dict[str, dict] = {}
     for vi, v in enumerate(model.variants):
-        grp = groups.setdefault(v.group, {"name": v.group, "label": v.group.replace("_", " ").title(), "options": []})
+        grp = groups.setdefault(v.group, {"name": v.group, "label": v.group_label or v.group.replace("_", " ").title(), "options": []})
         grp["options"].append({"variant": vi, "name": v.name, "label": v.label or v.name, "default": v.default})
     for grp in groups.values():
         if not any(o["default"] for o in grp["options"]) and grp["options"]:
             grp["options"][0]["default"] = True
 
+    dropped = glb_summary["droppedTracks"] if glb_summary and "droppedTracks" in glb_summary else dropped_tracks(model)
     clips = [
         {
             "name": c.name,
@@ -32,6 +34,7 @@ def build_manifest(model: Model, glb_summary: dict | None = None) -> dict:
             **({"visibility": {k: [[f, int(v)] for f, v in keys] for k, keys in c.visibility.items()}} if c.visibility else {}),
             **({"uvOffset": {m: {"times": [round(float(t), 4) for t in ts], "values": [[round(float(x), 5), round(float(y), 5)] for x, y in vs]} for m, (ts, vs) in c.uv_offset.items()}} if c.uv_offset else {}),
             **({"uvOffsetMode": c.uv_offset_mode} if c.uv_offset and c.uv_offset_mode else {}),
+            **({"droppedTracks": dropped[c.name]} if dropped.get(c.name) else {}),
         }
         for c in model.clips
     ]
@@ -85,6 +88,7 @@ def build_manifest(model: Model, glb_summary: dict | None = None) -> dict:
             "triangles": int(sum(len(p.indices) // 3 for m in model.meshes if m.lod == 0 for p in m.primitives)),
             "textures": len(model.textures),
             "clips": len(model.clips),
+            "droppedTracks": sum(dropped.values()),  # clip tracks whose bone is not in the skeleton (left out of the GLB)
             **({"glbBytes": glb_summary["bytes"]} if glb_summary else {}),
         },
         "source": model.source_paths,

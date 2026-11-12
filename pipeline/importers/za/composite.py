@@ -24,8 +24,18 @@ from ...common.model import Joint, Mesh, Model, Skeleton, Variant
 from . import trinity as T
 from .importer import SKIN_DEFAULT_TONE, AnimationFile, Source, _build_skeleton, dedupe_holocast, import_model
 
-GROUP_LABELS = {"face": "Face", "hrs": "Hair", "drs": "Outfit"}
-GROUP_ORDER = ["face", "hrs", "drs"]
+GROUP_LABELS = {
+    "face": "Face", "hrs": "Hair", "drs": "Outfit",
+    # Z-A player parts (`model_pc/<body>_<group>NNNN_VV_<name>`, catalog `pc_<body>`)
+    "upb": "Tops", "lwb": "Bottoms", "hdw": "Headwear", "eyw": "Eyewear", "acc": "Accessory", "bag": "Bag",
+    "glv": "Gloves", "lgw": "Legwear", "ftw": "Footwear",
+}
+GROUP_ORDER = ["face", "hrs", "drs", "upb", "lwb", "hdw", "eyw", "acc", "bag", "glv", "lgw", "ftw"]
+
+
+def group_rank(group: str) -> tuple[int, str]:
+    """Sort key of a part group: known groups in GROUP_ORDER, unknown ones after them alphabetically."""
+    return (GROUP_ORDER.index(group) if group in GROUP_ORDER else len(GROUP_ORDER), group)
 
 
 @dataclass
@@ -45,7 +55,7 @@ def part_label(name: str, variant: int) -> str:
 PALETTE_LABELS = {
     "tops": "Top", "bottoms": "Bottom", "body": "Body", "obj": "Accessory", "obj_drs": "Accessory", "obj_drs_01": "Accessory",
     "hairstyle": "Hair", "hairstyle_obj": "Hair accessory", "obj_hrs": "Hair accessory", "obj_hrs00": "Hair accessory",
-    "eyebrow": "Eyebrows", "face_skin": "Lips", "l_eye": "Eyes", "r_eye": "Eyes", "eyewear": "Eyewear",
+    "eyebrow": "Eyebrows", "face_skin": "Lips", "body_skin": "Legs & body paint", "l_eye": "Eyes", "r_eye": "Eyes", "eyewear": "Eyewear",
     "obj_face": "Face accessory", "obj_face00": "Face accessory", "obj_face01": "Face accessory", "obj00_face": "Face accessory",
 }
 
@@ -70,6 +80,10 @@ def _palette_entries(mats) -> list[dict]:
                 "zones": ["#%02x%02x%02x" % tuple(c) for c in pal["lit"]],
                 # Colours the model did not ship with (custom_eye_palette): the viewer labels them as custom.
                 **({"custom": True, **{k: pal[k] for k in ("pairs", "pairLabels", "zoneLabels", "skinLink", "offer", "noneLabel") if k in pal}} if pal.get("custom") else {}),
+                **({"skinLink": True} if pal.get("skinLink") and not pal.get("custom") else {}),
+                **({"skinLayers": pal["skinLayers"]} if pal.get("skinLink") and pal.get("skinLayers") else {}),
+                # Table zones followed by borrowed colours (the player's hair colours on table hair): own = table size.
+                **({"own": pal["own"], "zoneLabels": pal["zoneLabels"]} if "own" in pal and not pal.get("custom") else {}),
             },
         )
         e["materials"].append(m.name)
@@ -267,7 +281,7 @@ def import_cc_model(
     part_palettes: dict[str, list] = {}
     holo: dict[str, list[dict]] = {}  # holocast set -> each part's preset (merged below)
     alt_options: list[tuple[str, str, str]] = []  # (group, option id, label) of colourway options (.trmmt tex_NN sets)
-    for part in sorted(parts, key=lambda p: (GROUP_ORDER.index(p.group), p.id)):
+    for part in sorted(parts, key=lambda p: (group_rank(p.group), p.id)):
         pm = import_model(sources[part.id], part.id, kind="trainer", game=game, skeleton=skeleton, lod0_only=True, skin_tones=True)
         warnings += [f"{part.id}: {w}" for w in pm.extras.get("warnings", [])]
         for hp in pm.extras.get("holocast", []):
@@ -328,13 +342,13 @@ def import_cc_model(
     variants = skin_variants(materials, skin_mats)
 
     groups = []
-    for g in GROUP_ORDER:
+    for g in sorted({p.group for p in parts}, key=group_rank):
         opts = [(p.id, p.label, p.default) for p in parts if p.group == g] + [(i, label, False) for gg, i, label in alt_options if gg == g]
         if opts:
             groups.append(
                 {
                     "name": g,
-                    "label": GROUP_LABELS[g],
+                    "label": GROUP_LABELS.get(g, g.upper()),
                     "options": [
                         {"id": i, "label": label, "default": default, **({"palettes": part_palettes[i]} if part_palettes.get(i) else {})}
                         for i, label, default in sorted(opts)

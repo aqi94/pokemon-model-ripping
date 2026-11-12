@@ -12,11 +12,40 @@ import { autoLight } from '../scene/autoLight';
 import { loadExcludes, storeExcludes, type RefBox } from '../scene/refImage';
 import type { SolveSummary } from '../ui/RefImageSection';
 import { loadLastEnv, storeLastEnv } from '../scene/userPresets';
-import { ViewerScene } from '../scene/ViewerScene';
+import { ViewerScene, type CameraOrbit } from '../scene/ViewerScene';
+import { Flyout } from '../ui/Flyout';
+import { CameraPanel } from '../ui/CameraPanel';
 import { TIME_SCALES, type PlaybackState } from '../scene/animation';
-import { exportGlb } from '../scene/exporter';
-import { DEFAULT_EXPORT, loadExportOptions, saveExportOptions, type ExportOptions } from '../scene/exportOptions';
+import { DEFAULT_EXPORT, loadExportOptions, saveExportOptions, loadGlbOptions, saveGlbOptions, type ExportFormat, type ExportOptions, type GlbExportOptions } from '../scene/exportOptions';
 import { ExportPanel } from '../ui/ExportPanel';
+import { SPRITE_SILHOUETTE } from '../scene/spriteStyle';
+import { DEFAULT_GIF_EXPORT, type GifExportOptions } from '../scene/ViewerScene';
+import { download } from '../scene/exporter';
+import { DEFAULT_STL, type StlOptions } from '../scene/stl';
+import type { OutlineState } from '../scene/outline';
+
+/** Render-tab outline options -> ViewerScene state (the sprite style keeps its own silhouette colour). */
+function outlineState(o: Options): OutlineState {
+  const sprite = o.outlineStyle === 'sprite';
+  return { on: o.outline, width: o.outlineWidth, color: sprite ? (o.outlineSpriteColor ?? SPRITE_SILHOUETTE) : o.outlineColor, tinted: o.outlineTinted,
+    style: sprite ? 'sprite' : (o.outlineStyle ?? 'auto'), pixel: o.outlinePixel ?? 3 };
+}
+
+const GIF_KEY = 'spriteGif';
+const formatBytes = (n: number) => (n >= 1 << 20 ? `${(n / (1 << 20)).toFixed(1)} MB` : `${Math.max(1, Math.round(n / 1024))} KB`);
+/** Popover heights, to keep each export popover on screen. */
+const EXPORT_H: Record<ExportFormat, number> = { png: 470, gif: 300, stl: 250, glb: 380 };
+
+const STL_KEY = 'stlExport';
+function loadStlOptions(): StlOptions {
+  try { const raw = localStorage.getItem(STL_KEY); if (raw) return { ...DEFAULT_STL, ...JSON.parse(raw) }; } catch { /* storage unavailable */ }
+  return { ...DEFAULT_STL };
+}
+
+function loadGifOptions(): GifExportOptions {
+  try { const raw = localStorage.getItem(GIF_KEY); if (raw) return { ...DEFAULT_GIF_EXPORT, ...JSON.parse(raw) }; } catch { /* storage unavailable */ }
+  return { ...DEFAULT_GIF_EXPORT };
+}
 import { InfoSection } from '../ui/InfoSection';
 import { AnimationsSection } from '../ui/AnimationsSection';
 import { VariationsSection } from '../ui/VariationsSection';
@@ -24,6 +53,7 @@ import { HeldItemSection } from '../ui/HeldItemSection';
 import { PartsSection } from '../ui/PartsSection';
 import { PartGroupsSection } from '../ui/PartGroupsSection';
 import { HologramSection, defaultHologram } from '../ui/HologramSection';
+import { JawSection } from '../ui/JawSection';
 import type { HologramState } from '../scene/hologram';
 import { RenderPanel, type Options } from '../ui/OptionsSection';
 import { Accordion } from '../ui/Accordion';
@@ -34,17 +64,17 @@ import { Tabs } from '../ui/Tabs';
 import { Timeline } from '../ui/Timeline';
 import { Toolbox } from '../ui/Toolbox';
 import { OptionsBar } from '../ui/OptionsBar';
+import { SavedLooksSection } from '../ui/SavedLooksSection';
+import { deleteLook, loadLooks, saveLook, setDefaultLook, startupLook, useLooks, type Look } from '../scene/savedLooks';
 
-const EMPTY: PlaybackState = { clip: null, time: 0, duration: 0, frame: 0, frameCount: 0, paused: false, timeScale: 1 };
-const DEFAULT_OPTIONS: Options = { shadows: false, skeleton: false, wireframe: false, background: '#1b1d23', autoRotate: 0, mirror: false, albedo: 'baked', shading: 'game', env: loadLastEnv() };
+const EMPTY: PlaybackState = { clip: null, time: 0, duration: 0, frame: 0, frameCount: 0, paused: false, timeScale: 1, loop: true };
+const DEFAULT_OPTIONS: Options = { shadows: false, skeleton: false, wireframe: false, outline: false, outlineWidth: 2, outlineColor: '#14121a', outlineTinted: false, outlineStyle: 'auto', outlinePixel: 3, outlineSpriteColor: SPRITE_SILHOUETTE, background: '#1b1d23', autoRotate: 0, mirror: false, albedo: 'baked', shading: 'game', env: loadLastEnv() };
 
-/** Everything the user changed on one model, captured when the GPU context is lost and re-applied after the rebuild. */
-interface Snapshot {
-  id: string; variantSel: Record<string, number>; groupSel: Record<string, string>; partsVis: Record<string, boolean>;
-  palettes: Record<string, { materials: string[]; indices: number[] }>; heldItem: string; heldBone: string;
-  clip: string | null; frame: number; paused: boolean; timeScale: number;
-  cam: { fov: number; position: [number, number, number]; target: [number, number, number] };
-}
+/** Everything the user changed on one model (same shape as a saved look), captured when the GPU context is lost and
+ *  re-applied after the rebuild of the same model. */
+interface Snapshot { id: string; look: Look }
+/** `?look=<name>`: the saved look to apply on open instead of the default one (tools/*.mjs use it). */
+const urlLook = () => { try { return new URLSearchParams(window.location.search).get('look'); } catch { return null; } };
 const lowGpu = () => { try { return sessionStorage.getItem('lowGpu') === '1'; } catch { return false; } };
 
 /** Stays mounted while the model changes (single page): options persist, only the scene is rebuilt. */
@@ -76,6 +106,8 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
     sceneRef.current?.setHologramState(st);
     try { localStorage.setItem('hologram.look', JSON.stringify({ opacity: st.opacity, edgeGlow: st.edgeGlow, gradientStrength: st.gradientStrength })); } catch { /* ignore */ }
   };
+  const [jaw, setJawS] = useState(0);
+  const setJaw = (v: number) => { setJawS(v); sceneRef.current?.setJawOpen(v); };
   const [options, setOptions] = useState<Options>(DEFAULT_OPTIONS);
   const optionsRef = useRef<Options>(DEFAULT_OPTIONS);
   const [index, setIndex] = useState<GameIndex | null>(null);
@@ -88,10 +120,28 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
   const modelUrl = useRef('');
   // null until the user configures an export: the PNG button then exports the live canvas as before.
   const [exportOpts, setExportOpts] = useState<ExportOptions | null>(loadExportOptions);
-  const [exportPanelTop, setExportPanelTop] = useState<number | null>(null);
+  const [camOrbit, setCamOrbit] = useState<CameraOrbit | null>(null);
+  const [camPanelTop, setCamPanelTop] = useState<number | null>(null);
+  const [exportFly, setExportFly] = useState<{ format: ExportFormat; top: number } | null>(null);
   const patchExport = (patch: Partial<ExportOptions>) => {
     const next = { ...(exportOpts ?? DEFAULT_EXPORT), ...patch };
     setExportOpts(next); saveExportOptions(next);
+  };
+  const [gifOpts, setGifOpts] = useState<GifExportOptions>(loadGifOptions);
+  const [stlOpts, setStlOpts] = useState<StlOptions>(loadStlOptions);
+  const [stlInfo, setStlInfo] = useState<string | null>(null);
+  const patchStl = (patch: Partial<StlOptions>) => {
+    setStlOpts((o) => { const next = { ...o, ...patch }; try { localStorage.setItem(STL_KEY, JSON.stringify(next)); } catch { /* ignore */ } return next; });
+  };
+  const [glbOpts, setGlbOpts] = useState<GlbExportOptions>(loadGlbOptions);
+  const [glbInfo, setGlbInfo] = useState<string | null>(null);
+  const [glbBusy, setGlbBusy] = useState(false);
+  const patchGlb = (patch: Partial<GlbExportOptions>) => {
+    setGlbOpts((g) => { const next = { ...g, ...patch }; saveGlbOptions(next); return next; });
+  };
+  const [gifProgress, setGifProgress] = useState<string | null>(null);
+  const patchGif = (patch: Partial<GifExportOptions>) => {
+    setGifOpts((g) => { const next = { ...g, ...patch }; try { localStorage.setItem(GIF_KEY, JSON.stringify(next)); } catch { /* ignore */ } return next; });
   };
   const [items, setItems] = useState<IndexModel[]>([]);
   const [heldItem, setHeldItem] = useState('');
@@ -107,6 +157,11 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
   const live = useRef({ variantSel, groupSel, partsVis, heldItem, heldBone });
   live.current = { variantSel, groupSel, partsVis, heldItem, heldBone };
   const heldOnlyRef = useRef(true);
+  // Saved looks (Appearance tab): the look applied last, and the state before it (Revert)
+  const looks = useLooks(game, id);
+  const [currentLook, setCurrentLook] = useState<string | null>(null);
+  const [revertLook, setRevertLook] = useState<Look | null>(null);
+  useEffect(() => { setCurrentLook(null); setRevertLook(null); }, [game, id]);
 
   useEffect(() => {
     loadGameIndex(game).then(setIndex).catch(() => { /* the load effect reports errors */ });
@@ -221,6 +276,7 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
   /** Solved camera lens, relative to the reference image ('image') or the canvas ('canvas'); null = free camera. */
   const [lensLock, setLensLock] = useState<{ kind: 'image' | 'canvas'; fov: number; roll: number } | null>(null);
   const lensLockRef = useRef(lensLock); lensLockRef.current = lensLock;
+  const refLive = useRef({ refImg, refSet }); refLive.current = { refImg, refSet };
   const searchCancel = useRef(false);
   const [solveErr, setSolveErr] = useState<string | null>(null);
   const pinKey = refImg?.samplePath ? `${game}/${id}` : null;
@@ -384,6 +440,7 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
   useEffect(() => {
     const vs = sceneRef.current; if (!vs) return;
     vs.onLensCleared = () => setLensLock(null);
+    vs.onCameraChange = setCamOrbit;
     if (!lensLock) { vs.setLens(null); return; }
     vs.setLens(() => {
       const L = lensLockRef.current, { refImg: img, refSet: rs } = pivotLive.current;
@@ -422,35 +479,117 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
     requestAnimationFrame(() => requestAnimationFrame(() => applyRef(r)));
   };
 
-  /** Re-apply the user's per-model choices on a freshly rebuilt scene (options come from optionsRef). */
-  const restoreSnapshot = async (vs: ViewerScene, man: Manifest, snap: Snapshot) => {
+  /** The current per-model state as a look (appearance, held item, animation, camera + lens lock). */
+  const captureLook = (vs: ViewerScene, name: string): Look => {
+    const st = vs.anim?.state();
+    const l = live.current, L = lensLockRef.current, r = refLive.current;
+    // part overrides minus what the selected group options already imply (keeps configs.json small and readable)
+    const implied = new Map<string, boolean>();
+    for (const g of vs.manifest?.partGroups ?? []) for (const o of g.options) for (const node of o.nodes)
+      implied.set(node, o.id === l.groupSel[g.name] && !vs.manifest!.parts.find((p) => p.node === node)?.accessory);
+    const partsVis = Object.fromEntries(Object.entries(vs.partOverrides()).filter(([n, v]) => implied.get(n) !== v));
+    return {
+      name,
+      appearance: { variantSel: { ...l.variantSel }, groupSel: { ...l.groupSel }, palettes: { ...palApplied.current }, partsVis,
+        hologram: { ...hologramRef.current }, albedo: optionsRef.current.albedo },
+      held: { item: l.heldItem, bone: l.heldBone, only: heldOnlyRef.current },
+      anim: { clip: st?.clip ?? null, frame: st?.frame ?? 0, paused: st?.paused ?? false, timeScale: st?.timeScale ?? 1 },
+      camera: { ...vs.cameraPose(), ...(L ? { lens: { ...L, samplePath: r.refImg?.samplePath ?? null, transform: { ...r.refSet.transform } } } : {}) },
+    };
+  };
+
+  /**
+   * Applies a look (saved look, `?look=`, or the context-loss snapshot) to the loaded scene. Order matters: variants ->
+   * part groups -> palettes (awaited) -> part overrides -> hologram -> held item -> animation -> lighting -> camera (raw
+   * pose, never the VS preset, which forces advent01_loop) -> lens lock on a later frame (after the lens-reset effect).
+   * `reset` first returns parts/palettes to the model defaults (switching looks on an open model); missing sections are
+   * left as they are. Options that are not in the look persist; `albedo` is a global option, so applying it carries over.
+   */
+  const applyLook = async (vs: ViewerScene, man: Manifest, look: Look, reset: boolean) => {
+    const ap = look.appearance ?? {};
+    const vsel: Record<string, number> = {};
     for (const g of man.variantGroups) {
-      const v = snap.variantSel[g.name];
-      if (v !== undefined && g.options.some((o) => o.variant === v)) await vs.variants?.select(v);
+      const v = ap.variantSel?.[g.name];
+      if (v !== undefined && g.options.some((o) => o.variant === v)) { await vs.variants?.select(v, g.options.map((o) => o.variant)); vsel[g.name] = v; }
     }
-    setVariantSel((s) => ({ ...s, ...snap.variantSel }));
-    for (const g of man.partGroups ?? []) {
-      const opt = snap.groupSel[g.name];
-      if (!opt) continue;
+    setVariantSel((s) => ({ ...s, ...vsel }));
+    const groups = man.partGroups ?? [];
+    if (reset) vs.clearPartOverrides();
+    const gsel: Record<string, string> = {};
+    for (const g of groups) {
+      const want = ap.groupSel?.[g.name];
+      const def = (g.options.find((o) => o.default) ?? g.options[0]).id;
+      const cur = reset ? def : live.current.groupSel[g.name] ?? def;
+      gsel[g.name] = want && g.options.some((o) => o.id === want) ? want : cur;
+      if (!reset && gsel[g.name] === cur) continue;
       for (const o of g.options) for (const node of o.nodes) {
         const acc = man.parts.find((p) => p.node === node)?.accessory;
-        vs.setPartVisible(node, o.id === opt && !acc);
+        vs.setPartVisible(node, o.id === gsel[g.name] && !acc);
       }
     }
-    setGroupSel((s) => ({ ...s, ...snap.groupSel }));
-    for (const pal of Object.values(snap.palettes)) await vs.setPalette(pal.materials, pal.indices);
-    palApplied.current = snap.palettes;
-    setPalSel(Object.fromEntries(Object.entries(snap.palettes).map(([k, v]) => [k, v.indices])));
-    for (const [node, v] of Object.entries(snap.partsVis)) vs.setPartVisible(node, v);
-    setPartsVis((cur) => ({ ...cur, ...snap.partsVis }));
-    if (snap.clip && vs.anim) {
-      vs.anim.play(snap.clip); vs.anim.setTimeScale(snap.timeScale); vs.anim.scrubToFrame(snap.frame); vs.anim.setPaused(snap.paused);
+    setGroupSel((s) => ({ ...s, ...gsel }));
+    const pals = ap.palettes ?? {};
+    if (reset) {
+      const entries = groups.flatMap((g) => g.options).flatMap((o) => o.palettes ?? []);
+      for (const key of Object.keys(palApplied.current)) {
+        if (pals[key]) continue;
+        const e = entries.find((p) => p.materials[0] === key);
+        if (e) await vs.setPalette(e.materials, e.indices);
+      }
+    }
+    for (const pal of Object.values(pals)) await vs.setPalette(pal.materials, pal.indices);
+    palApplied.current = reset ? { ...pals } : { ...palApplied.current, ...pals };
+    setPalSel(Object.fromEntries(Object.entries(palApplied.current).map(([k, v]) => [k, v.indices])));
+    for (const [node, v] of Object.entries(ap.partsVis ?? {})) vs.setPartVisible(node, v);
+    if (ap.hologram) setHologram({ ...hologramRef.current, ...ap.hologram });
+    if (ap.albedo && ap.albedo !== optionsRef.current.albedo) patchOptions({ albedo: ap.albedo });
+    if (look.held) {
+      const h = look.held;
+      const prop = man.props?.find((p) => p.bone === h.bone) ?? man.props?.find((p) => p.side === 'right') ?? man.props?.[0];
+      const it = itemsRef.current.find((m) => m.id === h.item);
+      setHeldOnly(h.only); heldOnlyRef.current = h.only; vs.setHeldOnlyInClips(h.only);
+      if (prop) setHeldBone(prop.bone);
+      setHeldItem(it ? it.id : '');
+      if (prop) await vs.setHeldItem(it ? modelAsset(`${it.path}model.glb`) : null, prop);
+    }
+    const an = look.anim;
+    if (an?.clip && vs.anim?.has(an.clip)) {
+      vs.anim.play(an.clip); vs.anim.setTimeScale(an.timeScale); vs.anim.scrubToFrame(an.frame); vs.anim.setPaused(an.paused);
       setPb(vs.anim.state());
     }
-    const it = itemsRef.current.find((m) => m.id === snap.heldItem);
-    setHeldBone(snap.heldBone); setHeldItem(snap.heldItem);
-    if (it) await vs.setHeldItem(modelAsset(`${it.path}model.glb`), man.props?.find((p) => p.bone === snap.heldBone));
-    vs.setCameraPose(snap.cam.fov, snap.cam.position, snap.cam.target);
+    if (look.lighting) patchOptions({ env: { ...DEFAULT_ENV, ...look.lighting } });
+    const cam = look.camera;
+    if (cam) {
+      vs.setCameraPose(cam.fov, cam.position, cam.target, cam.roll ?? 0);
+      const L = cam.lens;
+      if (L) {
+        // an image lock only makes sense over the same reference sample; otherwise keep the effective lens relative to the canvas
+        const img = refLive.current.refImg;
+        const same = L.kind === 'image' && !!L.samplePath && img?.samplePath === L.samplePath;
+        const lock = same ? { kind: 'image' as const, fov: L.fov, roll: L.roll }
+          : { kind: 'canvas' as const, fov: L.kind === 'canvas' ? L.fov : cam.fov, roll: L.kind === 'canvas' ? L.roll : L.roll - (L.transform?.rotation ?? 0) };
+        if (same && L.transform) setRefSet((st) => ({ ...st, transform: { ...L.transform! } }));
+        requestAnimationFrame(() => requestAnimationFrame(() => { if (sceneRef.current === vs) setLensLock(lock); }));
+      }
+    }
+  };
+
+  const lookWhere = looks.backend === 'server' ? `out/${game}/${id}/configs.json` : 'this browser (localStorage)';
+  const pickLook = async (name: string) => {
+    const vs = sceneRef.current, lk = looks.looks.find((l) => l.name === name);
+    if (!vs || !manifest || !lk) return;
+    setRevertLook(captureLook(vs, '(before)'));
+    setCurrentLook(name);
+    await applyLook(vs, manifest, lk, true);
+  };
+  const storeLook = async (name: string, withLighting: boolean) => {
+    const vs = sceneRef.current; if (!vs) return;
+    const lk = captureLook(vs, name);
+    const old = looks.looks.find((l) => l.name.toLowerCase() === name.toLowerCase());
+    if (old?.default) lk.default = true;
+    if (withLighting) lk.lighting = structuredClone(optionsRef.current.env);
+    await saveLook(game, id, lk);
+    setCurrentLook(old?.name ?? name);
   };
 
   // load model
@@ -477,28 +616,39 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
       lossTimes.current = [...lossTimes.current.filter((t) => now - t < 60000), now];
       try { sessionStorage.setItem('lowGpu', '1'); } catch { /* ignore */ }
       if (lossTimes.current.length > 2) { setGpuFailed(true); setError('The graphics context keeps getting lost (GPU reset or out of memory). Close other tabs or restart the browser, then retry.'); return; }
-      const st = vs.anim?.state();
-      const l = live.current;
-      snapRef.current = {
-        id, variantSel: l.variantSel, groupSel: l.groupSel, partsVis: l.partsVis, palettes: palApplied.current,
-        heldItem: l.heldItem, heldBone: l.heldBone,
-        clip: st?.clip ?? null, frame: st?.frame ?? 0, paused: st?.paused ?? false, timeScale: st?.timeScale ?? 1,
-        cam: { fov: vs.camera.fov, position: vs.camera.position.toArray() as [number, number, number], target: vs.controls.target.toArray() as [number, number, number] },
-      };
+      snapRef.current = { id, look: captureLook(vs, '') };
       setError('The graphics context was lost. Restoring the model and your settings…');
       setTimeout(() => setReloadKey((k) => k + 1), 500);
     };
     (window as any).__viewer = vs; // handy for debugging
+    // tools/*.mjs: GIF of the current clip as the view draws it, as a data URL (__sprite = old name).
+    (window as any).__gif = (window as any).__sprite = async (opts: Partial<GifExportOptions> = {}) => {
+      const b = await vs.animatedGif(opts);
+      return await new Promise<string>((res) => { const r = new FileReader(); r.onload = () => res(r.result as string); r.readAsDataURL(b); });
+    };
+    (window as any).__stl = async (opts: Partial<StlOptions> = {}) => {
+      const { blob } = vs.stl(opts);
+      return await new Promise<string>((res) => { const r = new FileReader(); r.onload = () => res(r.result as string); r.readAsDataURL(blob); });
+    };
+    // tools: GLB as the view shows it (scene/glbExport.ts), as a data URL
+    (window as any).__glb = async (opts: Partial<GlbExportOptions> = {}) => {
+      const { blob } = await vs.glbExport(modelUrl.current, { ...loadGlbOptions(), ...opts }, () => {});
+      return await new Promise<string>((res) => { const r = new FileReader(); r.onload = () => res(r.result as string); r.readAsDataURL(blob); });
+    };
+    // tools: capture / apply a look without the UI (render scripts that want a saved look's state)
+    (window as any).__looks = { capture: (name = '') => captureLook(vs, name), apply: (look: Look) => (vs.manifest ? applyLook(vs, vs.manifest, look, true) : Promise.resolve()) };
     // Carry the current options over to the new scene (the rest are applied after load).
     const o = optionsRef.current;
     vs.setShadingMode(o.shading); vs.setEnvironment(o.env); vs.setBackground(o.background);
-    vs.setAutoRotate(o.autoRotate); vs.setMirror(o.mirror); vs.setShadows(o.shadows); vs.setWireframe(o.wireframe);
+    vs.setAutoRotate(o.autoRotate); vs.setMirror(o.mirror); vs.setShadows(o.shadows); vs.setParticles(o.particles ?? true); vs.setEffectsAnimated(o.animateEffects ?? true); vs.setWireframe(o.wireframe);
+    vs.setOutline(outlineState(o));
     vs.setBackgroundVisible(!refBgHiddenRef.current);
     setManifest(null); setError(null); setGpuFailed(false); setProgress(0); setHeldItem(''); setPb(EMPTY); setVariantColors({});
     const snap = snapRef.current?.id === id ? snapRef.current : null;
     snapRef.current = null;
     if (!snap) { palApplied.current = {}; lossTimes.current = []; }
     (async () => {
+      const looksP = loadLooks(game, id).catch(() => null);
       try {
         const index = await loadGameIndex(game);
         const entry = index.models.find((m) => m.id === id);
@@ -527,15 +677,19 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
         setPalSel({}); if (!snap) palApplied.current = {};
         setHeldBone(man.props?.find((p) => p.side === 'right')?.bone ?? man.props?.[0]?.bone ?? '');
         vs.setHeldOnlyInClips(heldOnlyRef.current);
-        if (snap) await restoreSnapshot(vs, man, snap);
+        setJawS(0); vs.setJawOpen(0);
         { const h = defaultHologram(man.holocast ?? [], hologramRef.current); hologramRef.current = h; setHologramS(h); vs.setHologramState(h); }
+        // context-loss snapshot of this model, else `?look=<name>`, else the model's default saved look
+        const start = snap?.look ?? startupLook((await looksP)?.looks ?? [], urlLook());
+        if (cancelled) return;
+        if (start) { await applyLook(vs, man, start, false); if (!snap) setCurrentLook(start.name); }
         setManifest(man);
         setProgress(null);
         document.title = `${man.displayName} - Pokémon Model Viewer`;
         // swatches
         const cols: Record<number, string | null> = {};
         const current = vs.variants?.current ?? 0;
-        for (const g of man.variantGroups) for (const o of g.options) cols[o.variant] = (await vs.variants?.sampleColor(o.variant)) ?? null;
+        for (const g of man.variantGroups) for (const o of g.options) cols[o.variant] = (await vs.variants?.sampleColor(o.variant, g.options.map((x) => x.variant))) ?? null;
         if (!cancelled) setVariantColors(cols);
         void current;
       } catch (e) {
@@ -559,6 +713,10 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
   const togglePause = useCallback(() => {
     const a = sceneRef.current?.anim; if (!a) return;
     a.setPaused(!a.paused); setPb(a.state());
+  }, []);
+  const toggleLoop = useCallback(() => {
+    const a = sceneRef.current?.anim; if (!a) return;
+    a.setLoop(!a.state().loop); setPb(a.state());
   }, []);
   const cycleScale = useCallback(() => {
     const a = sceneRef.current?.anim; if (!a) return;
@@ -593,17 +751,24 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
           return;
         }
       }
+      if (e.shiftKey && e.key.startsWith('Arrow') && !e.ctrlKey && !e.metaKey) {
+        // Shift+arrows: 45° camera steps (Shift+←/→ turn, Shift+↑/↓ tilt)
+        const r = { ArrowLeft: ['yaw', -45], ArrowRight: ['yaw', 45], ArrowUp: ['pitch', 45], ArrowDown: ['pitch', -45] } as const;
+        const hit = r[e.key as keyof typeof r];
+        if (hit) { sceneRef.current?.rotateCamera(hit[0], hit[1]); e.preventDefault(); return; }
+      }
       if (e.key === 'ArrowLeft') { step(-1); e.preventDefault(); }
       else if (e.key === 'ArrowRight') { step(1); e.preventDefault(); }
       else if (e.key === 'p' || e.key === 'P') togglePause();
+      else if (e.key === 'l' || e.key === 'L') toggleLoop();
       else if (e.key === 't' || e.key === 'T') cycleScale();
       else if (e.key === 'Tab') { setPanelsHidden((h) => !h); e.preventDefault(); }
       else if (e.key === 'f' || e.key === 'F') sceneRef.current?.setCameraPreset('fit');
-      else if (e.key >= '1' && e.key <= '6') sceneRef.current?.setCameraPreset((['front', 'side', 'back', 'top', 'vs', 'idle'] as const)[Number(e.key) - 1]);
+      else if (e.key >= '1' && e.key <= '8') sceneRef.current?.setCameraPreset((['front', 'side', 'back', 'top', 'vs', 'idle', 'battle', 'battleBack'] as const)[Number(e.key) - 1]);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [step, togglePause, cycleScale]);
+  }, [step, togglePause, cycleScale, toggleLoop]);
 
   const patchOptions = (patch: Partial<Options>) => {
     optionsRef.current = { ...optionsRef.current, ...patch };
@@ -611,8 +776,15 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
     if (patch.env) storeLastEnv(patch.env);
     const vs = sceneRef.current; if (!vs) return;
     if (patch.shadows !== undefined) vs.setShadows(patch.shadows);
+    if (patch.particles !== undefined) vs.setParticles(patch.particles);
+    if (patch.animateEffects !== undefined) vs.setEffectsAnimated(patch.animateEffects);
     if (patch.skeleton !== undefined) vs.setSkeleton(patch.skeleton);
     if (patch.wireframe !== undefined) vs.setWireframe(patch.wireframe);
+    if (patch.outline !== undefined || patch.outlineWidth !== undefined || patch.outlineColor !== undefined || patch.outlineTinted !== undefined
+      || patch.outlineStyle !== undefined || patch.outlinePixel !== undefined || patch.outlineSpriteColor !== undefined) {
+      const o = { ...optionsRef.current, ...patch };
+      vs.setOutline(outlineState(o));
+    }
     if (patch.background !== undefined) vs.setBackground(patch.background);
     if (patch.autoRotate !== undefined) vs.setAutoRotate(patch.autoRotate);
     if (patch.mirror !== undefined) vs.setMirror(patch.mirror);
@@ -654,13 +826,14 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
   };
   /** Switching variants swaps the skin materials back to the pre-baked tone: palettes whose layer 1 is the skin are re-baked with the new tone. */
   const selectVariant = async (group: string, variant: number) => {
-    await sceneRef.current?.variants?.select(variant);
-    if (group !== 'skin') return;
+    const opts = manifest?.variantGroups.find((x) => x.name === group)?.options.map((o) => o.variant);
+    const applied = await sceneRef.current?.variants?.select(variant, opts);
+    if (applied === false || group !== 'skin') return; // overtaken by a newer pick: its own call re-bakes
     const tone = skinTone({ ...variantSel, skin: variant });
     for (const [key, ap] of Object.entries(palApplied.current)) {
       const entry = manifest?.partGroups?.flatMap((g) => g.options).flatMap((o) => o.palettes ?? []).find((p) => p.materials[0] === key);
       if (!entry?.skinLink) continue;
-      const indices = [tone, ...ap.indices.slice(1)];
+      const indices = [tone, ...ap.indices.slice(1).map((z, i) => (entry.skinLayers?.includes(i + 2) ? tone : z))];
       palApplied.current = { ...palApplied.current, [key]: { ...ap, indices } };
       setPalSel((s) => ({ ...s, [key]: indices }));
       await sceneRef.current?.setPalette(ap.materials, indices);
@@ -671,7 +844,10 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
     const key = entry.materials[0];
     const next = [...(palSel[key] ?? entry.indices)];
     next[layer - 1] = zone;
-    if (entry.skinLink) next[0] = skinTone();
+    if (entry.skinLink) {
+      next[0] = skinTone();
+      for (const l of entry.skinLayers ?? []) next[l - 1] = skinTone();
+    }
     if (entry.pairs) next[layer] = zone + 1; // a pair row sets iris (layer 2) and inner iris (layer 3) together
     setPalSel((s) => ({ ...s, [key]: next }));
     palApplied.current = { ...palApplied.current, [key]: { materials: entry.materials, indices: next } };
@@ -718,21 +894,63 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
           options={options}
           onChange={patchOptions}
           disabled={!manifest}
-          onCamera={(p) => sceneRef.current?.setCameraPreset(p)}
-          onRecenter={() => sceneRef.current?.recenter()}
+          cameraOpen={camPanelTop !== null}
+          onCameraPanel={(top) => { setExportFly(null); setCamPanelTop((t) => (t === null ? top : null)); }}
           onFullscreen={() => { stage.current?.requestFullscreen?.(); }}
-          onPngOptions={(top) => setExportPanelTop((t) => (t === null ? top : null))}
-          onGlb={() => manifest && void exportGlb(modelUrl.current, `${manifest.id}.glb`)}
+          exportOpen={exportFly?.format ?? null}
+          onExport={(format, top) => { setCamPanelTop(null); setExportFly((f) => (f?.format === format ? null : { format, top })); }}
           refImage={!!refImg}
           refVisible={refSet.visible}
           refTransforming={refXf}
           onRefVisible={() => setRefSet((s) => ({ ...s, visible: !s.visible }))}
           onRefTransform={() => { setPlacing(false); setRefXf((v) => !v); }}
         />
-        {exportPanelTop !== null && (
-          <ExportPanel top={Math.max(48, Math.min(exportPanelTop, window.innerHeight - 440))} value={exportOpts ?? DEFAULT_EXPORT}
-            onChange={patchExport} onClose={() => setExportPanelTop(null)}
-            onExport={() => { if (manifest) sceneRef.current?.png(`${manifest.id}.png`, exportOpts ?? DEFAULT_EXPORT); }} />
+        {camPanelTop !== null && (
+          <Flyout title="Camera" top={Math.max(48, Math.min(camPanelTop, window.innerHeight - 330))} onClose={() => setCamPanelTop(null)} className="cam-fly">
+            <CameraPanel orbit={manifest ? camOrbit : null}
+              onChange={(p) => sceneRef.current?.setCameraOrbit(p)}
+              onRotate={(axis, d) => sceneRef.current?.rotateCamera(axis, d)}
+              onPreset={(p) => sceneRef.current?.setCameraPreset(p)}
+              ranges={() => sceneRef.current?.cameraRanges() ?? null} />
+          </Flyout>
+        )}
+        {exportFly !== null && (
+          <ExportPanel format={exportFly.format} top={Math.max(48, Math.min(exportFly.top, window.innerHeight - EXPORT_H[exportFly.format]))} value={exportOpts ?? DEFAULT_EXPORT}
+            onChange={patchExport} onClose={() => setExportFly(null)}
+            onExport={() => { if (manifest) sceneRef.current?.png(`${manifest.id}.png`, exportOpts ?? DEFAULT_EXPORT); }}
+            stl={stlOpts} onStlChange={patchStl} stlInfo={stlInfo}
+            onStl={() => {
+              const vs = sceneRef.current;
+              if (!vs || !manifest) return;
+              try {
+                const { blob, triangles } = vs.stl(stlOpts);
+                download(blob, `${manifest.id}.stl`);
+                setStlInfo(`${triangles.toLocaleString()} triangles`);
+              } catch (e) { console.error('[stl]', e); setStlInfo(String((e as Error).message ?? e)); }
+            }}
+            glb={glbOpts} onGlbChange={patchGlb} glbInfo={glbInfo} glbBusy={glbBusy}
+            glbHas={{ clips: clips.length > 0, held: !!sceneRef.current?.hasHeld() }}
+            onGlb={() => {
+              const vs = sceneRef.current;
+              if (!vs || !manifest || glbBusy) return;
+              setGlbBusy(true); setGlbInfo('Loading…');
+              const clip = glbOpts.animations === 'current' && vs.anim?.current ? `_${vs.anim.current.replace(/[^\w.-]+/g, '_')}` : '';
+              vs.glbExport(modelUrl.current, glbOpts, (phase) => setGlbInfo(phase))
+                .then(({ blob, bytes }) => { download(blob, `${manifest.id}${clip}.glb`); setGlbInfo(formatBytes(bytes)); })
+                .catch((e) => { console.error('[glb]', e); setGlbInfo(String((e as Error).message ?? e)); })
+                .finally(() => setGlbBusy(false));
+            }}
+            gif={gifOpts} onGifChange={patchGif} gifProgress={gifProgress}
+            onGif={() => {
+              const vs = sceneRef.current;
+              if (!vs || !manifest || gifProgress !== null) return;
+              const clip = vs.anim?.current ?? 'pose';
+              setGifProgress('0%');
+              vs.animatedGif(gifOpts, (d, t) => setGifProgress(`${Math.round((100 * d) / t)}%`))
+                .then((b) => download(b, `${manifest.id}_${clip.replace(/[^\w.-]+/g, '_')}.gif`))
+                .catch((e) => console.error('[gif]', e))
+                .finally(() => setGifProgress(null));
+            }} />
         )}
         <aside className="leftrail">
           <Panel title="Models" grow flex={railSplit}><ModelPicker index={index} id={id} onSelect={onSelect} /></Panel>
@@ -780,6 +998,7 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
             onTogglePause={togglePause}
             onScrub={(f) => { sceneRef.current?.anim?.scrubToFrame(f); const s = sceneRef.current?.anim?.state(); if (s) setPb(s); }}
             onCycleScale={cycleScale}
+            onToggleLoop={toggleLoop}
           />
         </div>
         <div className="handle" onPointerDown={startDrag} role="separator" aria-orientation="vertical" />
@@ -789,7 +1008,7 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
               {
                 id: 'look', label: 'Appearance', content: (
                   <SplitPane storageKey="partsPaneH" bottom={
-                    <PartsSection parts={visibleParts} visible={partsVis} driven={partsDriven} onToggle={togglePart} onAll={allParts} lockToClip={lockParts} onLockChange={changeLock}>
+                    <PartsSection parts={visibleParts} visible={partsVis} driven={partsDriven} onToggle={togglePart} onAll={allParts} onHover={(n) => sceneRef.current?.setHoverPart(n)} lockToClip={lockParts} onLockChange={changeLock}>
                       {(manifest.props?.length ?? 0) > 0 && (
                         <HeldItemSection
                           items={items}
@@ -805,6 +1024,11 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
                     </PartsSection>
                   } top={
                   <>
+                    <SavedLooksSection entry={looks} where={lookWhere} current={currentLook} canRevert={!!revertLook}
+                      onApply={(n) => void pickLook(n)} onSave={(n, wl) => void storeLook(n, wl)}
+                      onDelete={(n) => { void deleteLook(game, id, n); setCurrentLook(null); }}
+                      onDefault={(n) => void setDefaultLook(game, id, n)}
+                      onRevert={() => { const vs = sceneRef.current; if (vs && manifest && revertLook) void applyLook(vs, manifest, revertLook, true); setRevertLook(null); setCurrentLook(null); }} />
                     <VariationsSection
                       groups={manifest.variantGroups}
                       selected={variantSel}
@@ -814,6 +1038,7 @@ export function Viewer({ game, id, onSelect }: { game: string; id: string; onSel
                     {(manifest.partGroups?.length ?? 0) > 0 && (
                       <PartGroupsSection groups={manifest.partGroups!} selected={groupSel} palettes={palSel} onSelect={selectPartOption} onPalette={selectPalette} skin={skinTone()} partsVis={partsVis} onTogglePart={(n, v) => { togglePart(n, v); setPartsVis((c) => ({ ...c, [n]: v })); }} />
                     )}
+                    {(manifest.extras?.jaws?.length ?? 0) > 0 && <JawSection value={jaw} onChange={setJaw} />}
                     <HologramSection presets={manifest.holocast ?? []} state={hologram} onChange={setHologram} />
                   </>
                   } />

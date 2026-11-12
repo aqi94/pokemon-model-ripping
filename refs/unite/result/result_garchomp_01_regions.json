@@ -1,0 +1,83 @@
+{
+ "schema": 1,
+ "slug": "result_garchomp_01",
+ "scene": "result",
+ "model": "unite/pm0445_00_lob",
+ "clip": "idle",
+ "frame": 0,
+ "screenshot": "result_garchomp_01.png",
+ "width": 1920,
+ "height": 1080,
+ "camera": {
+  "fov": 35,
+  "position": [
+   2.7861,
+   0.8262,
+   5.2083
+  ],
+  "target": [
+   1.8124,
+   0.6859,
+   -0.3141
+  ]
+ },
+ "subjectBox": [
+  80,
+  150,
+  600,
+  790
+ ],
+ "yaw": 10,
+ "weight": 1,
+ "skip": false,
+ "regions": [
+  {
+   "name": "belly_yellow",
+   "box": [
+    349,
+    522,
+    381,
+    554
+   ],
+   "renderBox": [
+    291,
+    487,
+    323,
+    519
+   ],
+   "manual": true
+  },
+  {
+   "name": "chest_red",
+   "box": [
+    349,
+    368,
+    381,
+    400
+   ],
+   "renderBox": [
+    291,
+    320,
+    323,
+    352
+   ],
+   "manual": true
+  },
+  {
+   "name": "thigh_purple",
+   "box": [
+    272,
+    627,
+    304,
+    659
+   ],
+   "renderBox": [
+    282,
+    618,
+    314,
+    650
+   ],
+   "manual": true
+  }
+ ]
+}

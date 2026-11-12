@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { GameIndex, IndexModel } from '../types';
 import { modelAsset } from '../data';
 
-const KINDS = [['all', 'All'], ['pokemon', 'Pokémon'], ['trainer', 'Trainers'], ['object', 'Items']] as const;
+const KINDS = [['all', 'All'], ['pokemon', 'Pokémon'], ['trainer', 'Trainers'], ['object', 'Items'], ['map', 'Maps'], ['prop', 'Props']] as const;
 const ROW = 34;
 const OVERSCAN = 6;
 

@@ -150,6 +150,7 @@ def _srgb_to_linear(c) -> np.ndarray:
     return np.where(c <= 0.04045, c / 12.92, ((c + 0.055) / 1.055) ** 2.4).astype(np.float32)
 
 
+# FITTED: hair shade floor on Flint/Cynthia screenshots, 2026-10-19 (engine-rules debt)
 HAIR_SHADE_FLOOR = 0.35
 
 
@@ -212,12 +213,14 @@ def _material(m, cache, textures) -> Material:
         # on top of the environment reflection; the viewer's Game shader reads these params (default specular is nearly off).
         # Dark albedos (glasses frames: ~0.27) keep a weak sheen, otherwise the boost turns them silver.
         lum = float(textures[mat.base_color].rgba[..., :3].mean()) / 255.0 if mat.base_color in textures else 0.5
+        # FITTED: dark-frame cutoff lum < 0.32 on glasses frames, 2026-10-19 (engine-rules debt)
         dark = lum < 0.32
         # The boost (3.0 / 1.5) was tuned on glasses (_Reflectivity 0.3, _ReflectionBias 0). Scale it by the game's own values:
         # reflectivity relative to 0.3, and _ReflectionBias = mip bias of the environment lookup (3-5 = a blurred, soft reflection,
         # squared: Cynthia's near-black hairpieces, reflectivity 0.2 / bias 3, ended up silver at the first-order damping).
         fl_ = dict((k, float(v)) for k, v in props.m_Floats)
         k = min(1.0, fl_.get("_Reflectivity", 0.3) / 0.3) / (1.0 + fl_.get("_ReflectionBias", 0.0) / 3.0) ** 2
+        # FITTED: env boosts 3.0 / 1.5 (dark 0.6 / 0.4) tuned on glasses, 2026-10-19 (engine-rules debt)
         mat.extras["shading"] = {"specularIntensity": 0.6 if dark else 3.0 * k, "specularContrast": 1.5}
         mat.extras["reflect"] = {"envIntensity": 0.4 if dark else 1.5 * k}
     cols = mat.extras["unity"]["colors"]
@@ -249,51 +252,12 @@ def _material(m, cache, textures) -> Material:
         mat.extras["raw_base_color"] = mat.base_color
         mat.base_color = key
     if mat.base_color and "_ALPHABLEND_ON" in kw and textures[mat.base_color].rgba[..., 3].min() < 250:
+        # Opacity = albedo alpha x `_Color.a` (SrcAlpha / OneMinusSrcAlpha), lenses included: no extra softening.
         mat.alpha_mode = "BLEND"
+        a = cols.get("_Color", [1.0, 1.0, 1.0, 1.0])[3]
+        mat.base_color_factor = (*mat.base_color_factor[:3], float(a))
     return mat
 
-
-
-def _overrides(model_id: str) -> dict:
-    """Per-character import overrides: overrides/<model id>.json next to this file (see overrides/README.md)."""
-    import json
-    import os
-
-    p = os.path.join(os.path.dirname(__file__), "overrides", f"{model_id}.json")
-    if not os.path.isfile(p):
-        return {}
-    with open(p, encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _soften_lenses(meshes: list[Mesh], materials: dict[str, Material], textures: dict[str, TextureImage], opacity: float = 0.25, tint: float = 1.0) -> None:
-    """Separate lens meshes (`*glassSkin`, `*gogglelensSkin`) whose lens area has a high albedo alpha (Scientist, Collector: ~0.9) are
-    clear glass in game, not milky white; give them a copy of the material with 25% of that opacity. Lenses whose alpha is already ~0
-    (School Kid) are left alone."""
-    import dataclasses
-
-    for mesh in meshes:
-        if not re.search(r"(?i)(glass|lens)Skin$", mesh.name):
-            continue
-        for prim in mesh.primitives:
-            mat = materials.get(prim.material)
-            if mat is None or not mat.base_color or not prim.uvs or mat.base_color not in textures:
-                continue
-            tex = textures[mat.base_color].rgba
-            hh, ww = tex.shape[:2]
-            uv = np.asarray(prim.uvs[0], np.float64) % 1.0
-            xs, ys = np.clip((uv[:, 0] * ww).astype(int), 0, ww - 1), np.clip((uv[:, 1] * hh).astype(int), 0, hh - 1)
-            if tex[ys, xs, 3].mean() / 255.0 <= 0.6:
-                continue
-            key = f"{mat.base_color}_lens_{opacity:g}_{tint:g}"
-            if key not in textures:
-                t = tex.copy()
-                t[..., :3] = (t[..., :3].astype(np.float32) * tint).astype(np.uint8)
-                t[..., 3] = (t[..., 3].astype(np.float32) * opacity).astype(np.uint8)
-                textures[key] = TextureImage(key=key, rgba=t, srgb=True)
-            new = dataclasses.replace(mat, name=f"{mat.name}_lens", base_color=key, alpha_mode="BLEND", extras=dict(mat.extras))
-            materials[new.name] = new
-            prim.material = new.name
 
 
 def _fix_tangents(pos: np.ndarray, nrm: np.ndarray | None, tan: np.ndarray, uv: np.ndarray | None, tris: np.ndarray) -> np.ndarray:
@@ -611,7 +575,11 @@ def import_bundle(path: str, model_id: str, display_name: str, kind: str = "trai
             go = smr.m_GameObject.read()
             meshes.append(Mesh(name=go.m_Name, primitives=prims, visible=bool(go.m_IsActive) and bool(smr.m_Enabled)))
 
-    _soften_lenses(meshes, materials, textures, float(_overrides(model_id).get("lens_opacity", 0.25)), float(_overrides(model_id).get("lens_tint", 1.0)))
+    # Lenses (`*glassSkin`, `*gogglelensSkin`, `*LenseSkin`) need no rule of their own: the game blends them SrcAlpha /
+    # OneMinusSrcAlpha (`_SrcBlend 5`, `_DstBlend 10`) with the albedo alpha x `_Color.a` (1.0 on every lens), which `_material`
+    # already exports as BLEND. Scientist (tr1041) and Collector (tr1037) share an identical lens (albedo ~(222,225,229), alpha 0.90,
+    # no mask, same colours) and both read as milky grey glass in the VS images, so the old 25% softening + per-model
+    # "smoked" override are gone.
 
     smr_by_id = {o.path_id: o.read() for o in objs if o.type.name == "SkinnedMeshRenderer"}
     clips = _clips(objs, h, index, skeleton, _uv_targets(objs, smr_by_id, get_material)) if with_anim else []

@@ -1,11 +1,13 @@
 // Batch-render models through the running viewer dev server (cd viewer && npm run dev).
 //
 //   node tools/render_models.mjs --out <dir> [--preset studio] [--size 600x800] [--scale 1] [--framing current|fit|idle]
-//        [--margin 0.03] [--fov 3] [--bg transparent|#rrggbb] [--trim] <game/id> ...
+//        [--margin 0.03] [--fov 3] [--bg transparent|#rrggbb] [--trim] [--clip name[@frame]] <game/id> ...
+// --clip: the full-body shot plays that clip (at that frame) instead of the default clip (skipped when absent).
 // Same options as the viewer's Export PNG panel (ViewerScene.pngDataUrl(opts)); default = transparent, live camera.
 // --framing fit/idle/--trim replace the per-model front/vs camera presets' framing in the output.
 //
 // Per model writes <id>_vs.png (VS camera, advent01_loop when present) and <id>_full.png (front camera, default clip).
+// --views back,side: instead of the VS shot, also <id>_<view>.png per camera preset (same clip and frame).
 import { chromium } from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -42,7 +44,7 @@ for (const id of ids) {
   try {
     await page.waitForFunction(() => window.__viewer?.anim && window.__viewer.manifest, null, { timeout: 120000 });
   } catch { console.error(id, 'failed to load'); continue; }
-  const info = await page.evaluate(async ({ W, H, preset }) => {
+  const info = await page.evaluate(async ({ W, H, preset, fu }) => {
     const st = document.createElement('style');
     st.textContent = `.sidebar,.handle,.back,.title-chip{display:none!important}.viewer{display:block!important}
       .stage{position:fixed!important;left:0;top:0;width:${W}px!important;height:${H}px!important}`;
@@ -52,15 +54,31 @@ for (const id of ids) {
     const pr = m.LIGHTING_PRESETS.find((p) => p.id === preset);
     if (!pr) throw new Error('unknown preset ' + preset);
     vs.renderer.setPixelRatio(1);
+    if (fu === 'off') window.__uniteShading?.(false);
     vs.setEnvironment(pr.env);
     vs.controls.enableDamping = false;
     await new Promise((r) => setTimeout(r, 300));
     return { name: vs.manifest.displayName, advent: vs.anim.has('advent01_loop') };
-  }, { W, H, preset: opt('preset', 'studio') });
+  }, { W, H, preset: opt('preset', 'studio'), fu: opt('unite', 'on') });
   const stem = path.join(out, id.replace(/\//g, '_'));
   // Full body: default clip, front camera.
-  await page.evaluate(() => { const vs = window.__viewer; vs.anim.setPaused(true); vs.anim.scrubToFrame(0); vs.setCameraPreset('front'); });
+  const [clipName, clipFrame] = (opt('clip', '') || '').split('@');
+  await page.evaluate(({ clipName, frame }) => {
+    const vs = window.__viewer;
+    if (clipName && vs.anim.has(clipName)) vs.anim.play(clipName);
+    vs.anim.setPaused(true); vs.anim.scrubToFrame(frame); vs.setCameraPreset('front');
+  }, { clipName, frame: Number(clipFrame || 0) });
   await shot(stem + '_full.png');
+  // --views front,back,side: extra camera presets (same clip/frame) as <stem>_<view>.png, no VS shot.
+  const views = opt('views', '');
+  if (views) {
+    for (const v of views.split(',')) {
+      await page.evaluate((v) => window.__viewer.setCameraPreset(v), v);
+      await shot(`${stem}_${v}.png`);
+    }
+    console.log(`${id.padEnd(16)} ${info.name.padEnd(24)} ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+    continue;
+  }
   // VS close-up: advent01_loop frame 0, the pose setCameraPreset frames on.
   await page.evaluate(() => {
     const vs = window.__viewer;

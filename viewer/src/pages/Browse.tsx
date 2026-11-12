@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { loadGameIndex, modelAsset } from '../data';
+import { loadGameIndex, modelAsset, PUBLIC_BUILD } from '../data';
 import type { GameIndex } from '../types';
 
-const KINDS = [['all', 'All'], ['pokemon', 'Pokémon'], ['trainer', 'Trainers'], ['object', 'Items']] as const;
+const KINDS = [['all', 'All'], ['pokemon', 'Pokémon'], ['trainer', 'Trainers'], ['object', 'Items'], ['map', 'Maps'], ['prop', 'Props']] as const;
 const CHUNK = 120;
 
 /** One game's thumbnail grid. Tiles render in chunks so a 900-model game does not mount every <img> at once. */
@@ -21,7 +21,7 @@ export function Browse({ game }: { game: string }) {
   const models = useMemo(() => {
     const f = q.trim().toLowerCase();
     return (index?.models ?? []).filter(
-      (m) => (kind === 'all' ? m.kind !== 'object' : m.kind === kind) && (!f || m.displayName.toLowerCase().includes(f) || m.id.includes(f) || String(m.dex ?? '').includes(f)),
+      (m) => (kind === 'all' ? m.kind !== 'object' && m.kind !== 'prop' : m.kind === kind) && (!f || m.displayName.toLowerCase().includes(f) || m.id.includes(f) || String(m.dex ?? '').includes(f)),
     );
   }, [index, q, kind]);
 
@@ -37,7 +37,7 @@ export function Browse({ game }: { game: string }) {
   return (
     <div className="browse">
       <header>
-        <a className="btn small" href={import.meta.env.BASE_URL}>&#9664; Games</a>
+        {!PUBLIC_BUILD && <a className="btn small" href={import.meta.env.BASE_URL}>&#9664; Games</a>}
         <h1>{index?.name ?? game}</h1>
         <input className="text" placeholder="Search by name, id or dex #..." value={q} onChange={(e) => setQ(e.target.value)} />
         <div className="tabs">

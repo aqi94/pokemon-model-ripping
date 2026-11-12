@@ -45,7 +45,7 @@ def test_remap_joints_into_combined_palette():
 
 
 def test_cc_animations_only_sets_skips_per_npc_folders():
-    from pipeline.catalog.za import CC_IR_BODY_DONORS, ZaCatalog
+    from pipeline.catalog.za import ZaCatalog
 
     class Src:
         names = ["cc0003_adl_m/cc0003_00_00001_defaultwait01_loop.tranm", "tr0037_00_driver_m/tr0037_00_00001_defaultwait01_loop.tranm"]
@@ -61,4 +61,3 @@ def test_cc_animations_only_sets_skips_per_npc_folders():
 
     out = ZaCatalog._cc_animations(Src(), only_sets=True)
     assert [a.name for a in out] == ["defaultwait01_loop"]
-    assert CC_IR_BODY_DONORS == {"tr0030_00": "dm", "tr0031_00": "df"}

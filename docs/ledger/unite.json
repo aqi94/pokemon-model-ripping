@@ -1,0 +1,987 @@
+{
+ "game": "unite",
+ "meta": {
+  "game": "unite",
+  "scanned": "seeded by hand 2026-11-01",
+  "source": "Pokémon UNITE Assets/3D Assets (AssetStudio export: FBX 7300 + PNG + Materials/*.json); lobby showcase scenes (Scenes/pref_sce_lobby_*_lv3), NPCs/Lv3",
+  "tool": "none: audit-fields does not cover AssetStudio exports; surveyed with pipeline/importers/unite/fbx.py + ad-hoc scripts"
+ },
+ "entries": [
+  {
+   "key": "fbx:unitScale",
+   "format": "fbx",
+   "where": "GlobalSettings UnitScaleFactor 1.0 (= cm) on every UNITE FBX",
+   "status": "hypothesis",
+   "values": [
+    [
+     "1.0",
+     null
+    ]
+   ],
+   "hypothesis": "The data is metres despite the cm unit: imported at x100 (importer.FBX_SCALE). Pikachu (reference bone scale 0.322) = 0.51 m, Blastoise 1.1 m, Zirce ~1.7 m.",
+   "notes": "Battle models (3D Assets/Pokemon) to be checked against this.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fbx:lostMaterialLayer",
+   "format": "fbx",
+   "where": "Geometry LayerElementMaterial[0] = NoMappingInformation + one index per material slot; LayerElementMaterial[1] = ByPolygon without an array",
+   "status": "gap",
+   "values": [],
+   "hypothesis": "AssetStudio bug on meshes with a second UV set / colour layer: which triangles use which material is not in the file. 71 of 301 lobby character meshes (15 holowears, e.g. Rock Style Pikachu pm0025_01_rock, Snorlax 05/14, Gengar 08...). Submeshes are contiguous in triangle and vertex order in intact files, but the boundaries cannot be read back, so these models are refused (importer.LostMaterialLayer).",
+   "notes": "Retry with another source (battle models, a re-export) before guessing boundaries.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "param:unity:texture:_MixMap",
+   "format": "unity-material",
+   "where": "t_mro_* / t_mroe_* on every lobby Pokémon material",
+   "status": "read",
+   "values": [],
+   "hypothesis": "R metallic, G roughness, B occlusion, A emission/mask; repacked to glTF ORM. VERIFIED 2026-11-09 against the decompiled shaders (header `_MixMap (\"MROE\")`): basepbr_lv3.txt:468-480 (B pow _AOScale on ambient/env only = scope indirect), Cloth_lv3.txt:2998 (unpowered B on SH ambient), Battle actorbase_lv3.txt:849 (B multiplies the whole result = scope total). Exposed as extras.unite.ao {scope, power}.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "param:unity:texture:_MixMap.alpha",
+   "format": "unity-material",
+   "where": "t_mroe_* alpha",
+   "status": "read",
+   "values": [],
+   "hypothesis": "VERIFIED 2026-11-09: emission = albedo.rgb x A x scale x colour, added to the lit result. basepbr family: scale = _Emissive x _EmisssionScale, no colour (basepbr_lv3.txt:479-480, :739). LobbyPokemon basepbrCloth_lv3 only: scale = _Emiss (float; the JSON's _Emissive is stale), colour = _EmissColor.rgb HDR (Cloth_lv3.txt:3035-3041, :3355). Battle actorbase_lv3: _Emissive x _EmisssionScale x _EmisssionColor, added after the AO product (:844-849). With Cloth _EMISSMASK + _IFRAMP/_IFMAT the same alpha is the ramp/matcap mask (maskKind matcapMask; emission left off). A also follows R in many files (Zacian A = R/2): those only glow where an author set a scale > 0.",
+   "notes": "Baked by unite/emission.py into an emissive texture (albedo x A, sRGB) + factor/KHR_materials_emissive_strength; extras.unite.emission/maskKind. Survey: 679 JSON materials emit (A varies on 553, flat 255 on 92 = uniform albedo glow at the authored scale, 0 on 25, no mix file 6), 67 are EMISSMASK. FBX-only materials have no params: every family default is _Emissive 0, so off.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:emissMask",
+   "format": "unity-material",
+   "where": "basepbrCloth_lv3 with _EMISSMASK 1 and _IFRAMP/_IFMAT (64 materials)",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "The Inspector label says the alpha then masks the ramp/matcap and cannot emit, but the compiled code still adds `A x _EmissColor x _Emiss x albedo` in those variants (Cloth_lv3.txt:24231, :27578). Emission is left off there (matches the label; _EmissColor on them is a grey a=0 swatch).",
+   "notes": "Both ways are one switch in emission.emission_params.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "param:unity:texture:_MainTex.alpha",
+   "format": "unity-material",
+   "where": "albedo alpha of opaque outfit materials (t_d_lob_002509_lv3 mean alpha 5/255)",
+   "status": "unread",
+   "values": [],
+   "hypothesis": "Not opacity (materials are opaque: _AlphaClip 0, _SrcBlend 1, _DstBlend 0); some mask of the cloth shader. Forced to 255.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "param:unity:toon",
+   "format": "unity-material",
+   "where": "_MatCapTex/_MatcapTex, _RampTex, _OutlineMap (t_vc_*), _OutlineWidth/_OutlineColor, _RimlightColor/Scale, _SHTopColor/_SHBotColor, _AddlightColor, _glossiness_1X.., _FurTex/_FurShape, _ClothTex/_Digi* (holowear swap effect), _SSSTex, _DetailTex, _BumpMap2",
+   "status": "unread",
+   "values": [],
+   "hypothesis": "Stylised lobby shading (matcap + ramp + outline + rim + SH ambient). Kept raw in glTF material extras.unity; the viewer renders plain PBR.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fbx:animationStacks",
+   "format": "fbx",
+   "where": "AnimationStack nodes",
+   "status": "gap",
+   "values": [],
+   "hypothesis": "AssetStudio wrote clip names without curves (Zirce: ani_idle/welcome/congratulations_lob_003; lobby scene stacks). Only small props carry keys (sm_080705_npc01 idle, trains, jump pads). Lobby models import static.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "battle:missingTextures",
+   "format": "fbx",
+   "where": "FBX DiffuseColor/Bump links of the 164 battle models",
+   "status": "suspect-download",
+   "values": [],
+   "hypothesis": "262/602 albedos and 237/567 normal maps named by the battle FBXs are not anywhere in the rip (agent survey 2026-11-01); those materials import untextured (manifest extras.missingTextures).",
+   "notes": "Likely an incomplete extraction of the 5-part Drive zip (random subset of files per folder, e.g. Charizard 09 has FBX+normal but not its own albedo; no Squirtle FBX). Re-extract all parts, then re-survey.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "battle:effectMaterials",
+   "format": "fbx",
+   "where": "material names / albedo names on battle FBXs (no shader name available)",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "Effect materials = `fx` token in the material name or `t_fx_`/`t_lob_fx_` albedo (40 materials; importer.is_character_material). Dropped. `mat_off_Lit` (2, no texture) kept.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "battle:textureOnlySkins",
+   "format": "folder",
+   "where": "688 Battle Models folders with PNGs but no FBX",
+   "status": "suspect-download",
+   "values": [],
+   "hypothesis": "Skins whose mesh AssetStudio exported in another folder; the folder does not name the mesh, so they are not imported (pairing them would be a guess).",
+   "notes": "Likely an incomplete extraction of the 5-part Drive zip (random subset of files per folder, e.g. Charizard 09 has FBX+normal but not its own albedo; no Squirtle FBX). Re-extract all parts, then re-survey.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "eyeAtlas",
+   "format": "png/fbx",
+   "where": "eye materials (name contains 'eye'): base colour sheets 128x128 .. 1024x1024 next to the eye mesh UVs",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "The rip has NO eye animation: FBX clips hold only Lcl T/R/S curves (0 of 1508 FBX carry BlendShape/DeformPercent/UV curves; Unity material _MainTex_ST curves are not in the AssetStudio export; lobby face bones are static). The expression sheets are grids of cells (Pikachu battle 2x2, Venusaur lobby 2x4, a pure-red cell = unused) and the mesh UVs sit on one cell, so importer.eye_variants exposes the other non-blank cells as an `eyes` variant group (KHR_texture_transform offsets). Grid = power-of-two divisions holding the largest UV island; alternatives = the occupied block shifted by whole spans. Refinement 2026-11-01: the UV island only gives a lower bound for the cell size (Lapras lobby: eye mesh fills 1/8 of the height of a 1/4-high cell, which gave 2x8 and half-cell duds), so importer._atlas_grid picks the finest grid <= that bound whose cell borders cut no drawn content (GRID_CUT_MAX, FITTED). Red marker cells are near-red (96% exact), so they are detected by >90% pure red.",
+   "notes": "Cell meaning (angry, blink, sleepy...) is not in the data; options are labelled Eyes N. Surveyed 1,147 converted eye materials: mostly 2x2 (128), 2x4 (256x512, 512x1024), some 4x4 (512+).",
+   "seen": "2026-11-01"
+  },
+  {
+   "key": "jawRest",
+   "format": "fbx",
+   "where": "battle clips: rotation tracks on Jaw_ACC / Bone_Jaw / Bone_RootJaw / UpperJaw / LowerJaw",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "Battle idle/run clips hold the jaw 8-19 deg open (Ninetales Jaw_ACC bind Rz 112, idle 122-129); lobby clips have no jaw track so the jaw rests at bind. Treated as a rest-pose artefact: jaw rotation tracks that stay within 25 deg (JAW_REST_MAX_DEG, FITTED) of bind are dropped. Could instead be an intended panting/open-mouth idle.",
+   "notes": "Survey 2026-11-01: 234 of 309 battle models with jaw/mouth/tongue bones animate them in idle; 64 hold >= 5 deg open (histogram 0-5: 145, 5-10: 41, 10-15: 20, 15-20: 6, 20-25: 18, more: 3). mouthAtlas: 430 mouth materials with expression sheets (2x4 256x512 148, 2x2 128x128 136, ...), handled by atlas_variants.",
+   "seen": "2026-11-01"
+  },
+  {
+   "key": "lighting:rig",
+   "format": "apk",
+   "where": "APK jp.pokemon.pokemonunite 1.24.1.1 split_ab.apk assets/Main/*.bundle (1484), config zips, CDNUpload/*.bytes",
+   "status": "gap",
+   "values": [],
+   "hypothesis": "The scene light rig (main/add light colour + direction, ambient SH, reflection cubemap, post-processing) is not in any readable file: the APK's plain files (start-up scenes, settings, UI) hold none of it, and the MEGA AssetStudio export has no Light/RenderSettings data either.",
+   "notes": "Presets are fitted to in-game footage instead (tools/lightrefs, refs/unite/). Readable class list (globalgamemanagers.assets MonoScripts, 2026-11-01) names the stack: URP ForwardRenderer; renderer features PerObjectBloom/PerObjUBuffEffectPass, MobilePostProcessLwrp, CustomLighting2; shaders RenderFeatures/Outline, Pass2Outline, SpecialOutline, FakeShadow; Bakery lightmaps; Volume Bloom + ShadowsMidtonesHighlights; QualitySettings 2 pixel lights, shadow distance 40. No published TiMi/UNITE rendering talk found.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "lighting:renderSettings",
+   "format": "apk",
+   "where": "base.apk assets/bin/Data/level0-9 (plain serialized scenes): level1 LobbySceneRoot, level2 MobaBattleSceneRoot, level4 LoginSceneRoot, level5 Charmander intro timeline",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "No Light component in any plain scene. RenderSettings are Unity's untouched defaults (ambient mode Skybox, sky 0.212/0.227/0.259, equator 0.114/0.125/0.133, ground 0.047/0.043/0.035, intensity 1, subtractive shadow 0.42/0.478/0.627, no fog), so the game lights at runtime from its asset bundles or shader globals set by code.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "param:unity:float:_MainlightAttenuation / _AddlightScale / _AddlightLerp / _AddlightAttenuation",
+   "format": "unity-material",
+   "where": "lobby Pokémon materials (Materials/*.json, e.g. LobbyPokemon/m_lob_basepbrCloth_lv3: 0.04 / 3.0 / 0.05 / 0.8)",
+   "status": "unread",
+   "values": [],
+   "hypothesis": "Per-material response to the scene's main light and an additional (fill/character) light; kept raw in extras.unity, not drawn. Candidate mapping onto the Game shader only if footage fits show an error they explain.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fbx:emptyClusterSkin",
+   "format": "fbx",
+   "where": "Skin deformers whose every Cluster has no Indexes/Weights (99 meshes in 80 of 1,508 FBX)",
+   "status": "verified",
+   "values": [
+    [
+     "first cluster bone",
+     "Lucario Bone001 (staff)"
+    ]
+   ],
+   "hypothesis": "Unity: a renderer without blend weights rides its bone 0 = the first cluster. importer.bind_rigid_skins binds such meshes at weight 1 to that bone; clip scale tracks then hide/show them (Lucario staff 0.01 except atk4/spell*).",
+   "notes": "Meshes with several empty clusters (Gardevoir fxA 5, Mimikyu fxb 11) use cluster file order: unverified. Since 2026-11-01 the mesh is placed with its OWN cluster's TransformLink (fbx:perMeshBindposes): fixes Cosmoem pm0790_00 dya/dyb/dyc and Urshifu 089205B, which the bone's kept bind threw away.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:fxBlendMode",
+   "format": "json",
+   "where": "Fx/ shaders m_Floats._BlendMode (0, 1, 2, 3; _SrcBlend/_DstBlend are stale 1/0 defaults)",
+   "status": "hypothesis",
+   "values": [
+    [
+     "3",
+     "1218 materials (glow, trail)"
+    ],
+    [
+     "1",
+     "720 (cards, flags)"
+    ],
+    [
+     "0",
+     "173"
+    ],
+    [
+     "2",
+     "2"
+    ]
+   ],
+   "hypothesis": "VERIFIED 2026-11-09 (WP-E): 3 = SrcBlendFactor 1 / DstBlendFactor 1 with _IF_ADD_MODE 1 (rgb x alpha, one-one add); 2 = premultiplied (Src 1 / Dst 10), now BlendPreMultiAlpha; others alpha blend.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:formula",
+   "format": "json",
+   "where": "PGAME/Fx/* shaders (Compiled/==PGAME==_Fx_m_1P_Base.txt main): rgb = pow(Tex1,_Power1)*_Emission1*_Color1.rgb*vc.rgb; alpha = Tex1.a*vc.a*[Tex2.r | dissolve smoothstep]*_Alpha1; rgb*=alpha under _IF_ADD_MODE; uv = uv*st + fract(time*_Speed)",
+   "status": "verified",
+   "values": [
+    [
+     "_Color1.a ignored (only m_1P_Modulate, m_1P_fresnel_screen, m_2P_fresnel_noise read it)",
+     "83 JSONs were invisible"
+    ],
+    [
+     "_Emission1 now scales the colour",
+     "1219 of 1777"
+    ],
+    [
+     "baked at t=0: m_1P_Base(_Half) power, m_2P_mask(_quickmask), m_2P_dissolve, m_3P_noise_dissolve, m_3P_2Mask_Overlay (_Dtex colour)",
+     "1034 JSONs"
+    ]
+   ],
+   "hypothesis": "Gaps: scroll speeds only recorded in extras.unite.fx.speeds (not animated), noise-offset UVs (m_3P_noise_dissolve _Tex3), _use_mask quickmask gradient, vertex-colour dissolves, fresnel/holographic families keep the generic path; tex2 baked in tex1's frame (exact only when the st ratio is integral).",
+   "notes": "build_effect_material + importers/unite/fx.py",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:effectColour",
+   "format": "json/fbx",
+   "where": "Effect parts: colour slot _MainTex / _Tex1 (Fx) x _Color1|_TintColor, alpha x _Alpha1",
+   "status": "hypothesis",
+   "values": [
+    [
+     "_Tex1",
+     "1787 Fx materials"
+    ]
+   ],
+   "hypothesis": "Drawn unlit (emissive). Grey opaque t_fx masks use luminance as alpha; t_d_ character atlases ignore their alpha (mask). Scroll speeds (_TexN_Speed), dissolve, fresnel, _Tex2/_Tex3 layers unread.",
+   "notes": "Ponyta/Rapidash manes link the body atlas (t_d_*) while the flame shader's real inputs (t_fx_0078_rainbow_01_cj, t_fx_0196_color_01_cj) are unlinked: colours are approximate; the forelock card samples a white atlas patch.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fbx:unlinkedEffects",
+   "format": "fbx",
+   "where": "Effect materials with no texture connection at all (~210 of 396 effect primitives; Gastly skin 10 huo flames, fxa shells)",
+   "status": "unread",
+   "values": [
+    [
+     "none",
+     null
+    ]
+   ],
+   "hypothesis": "Nothing to draw: dropped with a warning. The PNGs may be in the folder but nothing says which.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:placeholder",
+   "format": "fbx",
+   "where": "Standalone lobby FBX slot material `mat_off_Lit` (no textures; scene JSON: BattleV3/m_bat_FullroughnessV3_lv3 with null _MainTex)",
+   "status": "verified",
+   "values": [
+    [
+     "mat_off_Lit",
+     "20 models"
+    ]
+   ],
+   "hypothesis": "Placeholder for a slot the scene copy fills: resolved through the showcase scene FBX's slot list (fbx.mesh_materials; bj opera flags -> mat_fx_002515_qizi_05_xh). Unresolved placeholders are dropped.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:overlayShell",
+   "format": "json",
+   "where": "Materials without a colour texture whose triangles coincide with a textured primitive (ClothTwinkle, HairShadow, battle mat_off_Lit)",
+   "status": "verified",
+   "values": [
+    [
+     "ClothTwinkle",
+     "pm0025_13_xmas, pm0908_04_dance"
+    ]
+   ],
+   "hypothesis": "Overlay passes (sparkle, shadow) on the same surface: dropped (OVERLAY_SHARE 0.9 of vertices within 1e-5 m).",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:transparency",
+   "format": "json",
+   "where": "No render queue/keywords in the 7,187 material JSONs; FBX Opacity always 1; albedo alpha of character materials is a cloth mask",
+   "status": "verified",
+   "values": [
+    [
+     "_ZWrite 0",
+     "basepbrOutlineAlpha"
+    ],
+    [
+     "_IFTrans 1",
+     "basepbrBubble"
+    ],
+    [
+     "ghostGlass",
+     "matcap glass"
+    ]
+   ],
+   "hypothesis": null,
+   "notes": " 2026-11-09 (WP-B, `unite/alpha.py decide`): Cloth/Animation(Basic) alpha = lerp(1, a, saturate(_DstBlendFactor)), forced 1 by _ALPHAMASK (Compiled basepbrCloth_lv3.txt l.1563-1570, props l.36); basepbr/eye/mouth output albedo.a (basepbr_lv3.txt l.824) with Blend [_SrcBlendFactor][_DstBlendFactor] (5/10 = blend; blend kept only when the albedo has alpha < 250); Bubble always SrcAlpha/OneMinusSrcAlpha (Bubble.txt l.46); actorbase_lv3 same, alpha x _CustomAlpha (l.100, 363); _BlendMode 1 = MASK at _Cutoff (alpha-test variant discard, Cloth l.33134-33137). Stale `_SrcBlend 5/_DstBlend 10` test removed (true for 0 of 431 Cloth JSONs). Per material: extras.unite.alpha {mode, cutoff, source}. Lens opacity: the data opacity would be the albedo alpha; LENS_OPACITY 0.6 stays (user decision).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:matcapGlass",
+   "format": "json/fbx",
+   "where": "ghostGlass _RampMap; FBX-only: (a) no texture links + a translucent matcap named after the material, t_matcap_[bat_|lob_]<dex><skin><letter>[_lv3] (letterless fallback); (b) DiffuseColor only, no Bump, albedo alpha under its own UVs < 16 -> glass image = a translucent square texture in its own block; (c) a material whose only colour source is a matcap (Litwick line fire: DiffuseColor -> t_matcap_)",
+   "status": "hypothesis",
+   "values": [
+    [
+     "t_matcap_009401",
+     "Gengar 01 battle (a)"
+    ],
+    [
+     "t_matcap_bat_014320b",
+     "Snorlax 20 battle helmet (a), alpha mean 47"
+    ],
+    [
+     "t_d_lob_014320",
+     "Snorlax 20 lobby helmet (b), alpha mean 21"
+    ],
+    [
+     "t_matcap_bat_0607fireC/D",
+     "Litwick fire (c)"
+    ]
+   ],
+   "hypothesis": "UPDATED 2026-11-09: ghostGlass (lobby; dump lines 192-239) alpha = clamp(_Cutoff*clamp(k*Bot.a + c.a) - NoV, 0, 1) (transparent face-on, opaque at grazing angles), NoV = min(|N.V|+.004,1), k = clamp(1 - clamp((NoV-_ShadowOffset)*_ShadowPow) + main.a), c = matcap(uv + k*_ShadowScale) x mix(_SHTopColor,_SHBotColor,k), rgb = c.rgb + _Cutoff*main.rgb. Battle actorglass (dump lines 199-217): alpha = clamp((k + c.a)*_CustomAlpha), k = 1 - clamp((NoV-_RoughNessOffset)*_EmisssionScale), uv offset _MetallicOffset, rgb = c.rgb*1.2. Written as extras.unite.glass (constants from the JSON, else the Properties defaults 0/2/1/2.5/1); viewer scene/matcap.ts. Selection of glass among FBX-only materials is unchanged (rules a, b below); a matcap linked as DiffuseColor (Litwick fire, rule c) keeps the older matcap-alpha look (info.matcapAsDiffuse) since its shader is unknown. Not drawn: the _GhostMap dissolve (_GhostChange 0 on all four JSONs), lights other than colour 1.",
+   "notes": "Rule (b) threshold is FITTED (CLEAR_ALBEDO_ALPHA). Gengar 01 lobby's JSON says ghostGlass with the same FBX signature as (b). FBX-only glass is 'actor' kind when the material name has _bat_, else 'ghost'; both inferred.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fbx:meshNodeScaleCurves",
+   "format": "fbx",
+   "where": "Lcl Scaling curves on Mesh Model nodes (33 curve nodes in 1,504 FBX, almost all constant)",
+   "status": "unread",
+   "values": [
+    [
+     "Cramorant rig_bat_0845bodya_lv3",
+     "0 -> 1 in 7 battle files"
+    ]
+   ],
+   "hypothesis": "Mesh-node animation is not imported (only skeleton joints).",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "anim:unkeyedPropBones",
+   "format": "fbx",
+   "where": "Prop bone chains keyed only by some clips (bj opera Pikachu qizizi/Bone_Flag_*: show01-08 place the flags on the back, camera011/show05/06 scale qizizi 0; idle keys neither)",
+   "status": "unread",
+   "values": [
+    [
+     "rest",
+     "flags parked ~0.85 m beside the body"
+    ]
+   ],
+   "hypothesis": "The game's Animator either writes defaults (rest = parked) or carries the last clip's state; not in the data. Viewer shows rest in idle.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "gastlyGas",
+   "format": "fbx",
+   "where": "Gastly skins 00/01/09: pref_fx_Gastly_idle_lv3 -> huo01/huo02/glow are empty Null nodes; SmokeCore/SmokeMask bones unclustered",
+   "status": "verified",
+   "values": [
+    [
+     "none",
+     null
+    ]
+   ],
+   "hypothesis": "Skins 00/01/09/11 keep pref_fx_Gastly_idle_lv3 as empty Nulls; skin 10's copy holds the gas as flat discs (mesh huo1/huo2). The others borrow skin 10's disc (fx:donorEffects); colour from HOME SmokeCore.",
+   "notes": "In game (YouTube k-xEjw_VooU, skin 01, first 30 s at 30 fps): a crisp lumpy purple rim around the body, median sRGB (138,101,154) vs HOME _BaseColor (136,112,144); it moves and turns rigidly with the body (local simulation space, no trail or stretch) while the lumps churn; the body is always painted over it. Bulbapedia Gengar (UNITE) Lick / Will-O-Wisp shots: samples/unite_fx/.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fbx:perMeshBindposes",
+   "format": "fbx",
+   "where": "Cluster TransformLink per (mesh, bone): meshes sharing a bone may disagree (29 weighted meshes in 18 of 1,508 FBX by > 1 mm, ~20 by >= 5 cm; plus 4 weightless)",
+   "status": "verified",
+   "values": [
+    [
+     "Miraidon pm1008_03 body",
+     "all 24 clusters include its mesh node's +1.545 m x offset; outfit's do not"
+    ],
+    [
+     "pm1008_02 est",
+     "consistent offset (baked)"
+    ],
+    [
+     "Gardevoir pm0282_09 body",
+     "9 of 49 bones"
+    ]
+   ],
+   "hypothesis": "Unity keeps bindposes per SkinnedMeshRenderer: vertex = bone(t) @ inv(TL_own) @ meshWorld @ v. fbx_anim keeps one bind per bone (last cluster read won), so such meshes were torn. importer.apply_mesh_binds: bake R = K @ inv(TL_own) into the vertices when R is the same for every bone the mesh uses, else Mesh.inverse_binds -> an extra glTF skin. Verified on rest and idle bounds (Miraidon 03 body x +-0.80 inside the outfit at idle; was split 1.5 m to the side).",
+   "notes": "Supersedes the CLAUDE.md claim that every TransformLink equals its bone's Lcl rest world (true per mesh, not across meshes).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fbx:materialBlocks",
+   "format": "fbx",
+   "where": "Connections: each Material's OP texture links are followed by the Texture<->Video links of the textures it introduced (fbx.material_blocks)",
+   "status": "verified",
+   "values": [
+    [
+     "Zacian lobby bodya",
+     "d, n, mroe, vc, matcap"
+    ],
+    [
+     "Snorlax 20 lobby 014320b",
+     "d (linked), t_d_lob_014320 (glass sphere)"
+    ]
+   ],
+   "hypothesis": "AssetStudio writes textures as the concatenation, over the Materials in Objects order, of each material's m_TexEnvs (deduplicated at first use; keys alphabetical): verified exactly on 303 of 325 scene FBXs with JSONs. Only _MainTex/_BumpMap are linked. fbx.material_blocks/assign_blocks: a linked material's run follows its OP links; textures before the first OP link belong to the leading unlinked materials; within a run a texture goes to the unlinked material it is named after exactly (or loosely when it does not also name the linked one), else to the linked material while it is a character kind (n, mro, vc, matcap, ramp), else to the unlinked material being written (INFERRED when several share a run). An unlinked material's colour slot = its first non-character texture, one named after it first (_Tex1 sorts first in 87% of Fx JSONs). The global default t_fx_0196_color_01_cj (821 of 878 battle folders) is skipped.",
+   "notes": "Round 1 dropped the leading run and the spill: 175 of 199 'effect without texture' primitives in 68 models had their textures in the file (Charmander's tail flame, Gastly 10, Mega Charizard X, Charizard 16...).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:matcapMetal",
+   "format": "fbx/json",
+   "where": "mro R (metallic) + the material's matcap (JSON _MatCapTex/_MatTex/_MatMap/_RampTex(t_matcap_), FBX block t_matcap_*), else the generic env `t_mipmap03` (JSON `_MatcapTex`)",
+   "status": "superseded 2026-11-09 (WP-D)",
+   "values": [
+    [
+     "_MatcapColor",
+     "4.84 on 283 of 300 _MatcapTex materials"
+    ],
+    [
+     "t_mipmap03 gain",
+     "1/mean lin. luminance = 5.34"
+    ],
+    [
+     "Zacian lobby bodya gold matcap gain",
+     "1.63"
+    ]
+   ],
+   "hypothesis": "SUPERSEDED by the decompiled shaders (Assets/Shaders/Compiled): 'matcap' is four terms. matTex (Cloth _IFMAT: matcap x (0.25+0.75 N.L) x _MatTexColor, additive, independent of metal; basepbrCloth dump lines 9640-9653), rampLight (_IFRAMP: ramp(min(NoV^2,.96)*ST.x+ST.z) x same light x _RampTexColor; 5855-5876), env (Cloth _Matcap = _MATCAPENV_ON: matcap(lod r(1.7-.7r)6) x light x _MatcapColor x F0 x AO, F0 = mix(.04, albedo, metal), NO Schlick; 49852-49881; Lengcy/MatcapMask _IF_MATREFL: x _MatMapMul/(r^4+1) x mix(F0, grazing, (1-NoV)^4); battle actorMatcap: matcap x _SpecularColor), bubble (unlit albedo+matcap). The 1/luminance gain and its 0.15 floor are gone; `_MATREFL` on a Cloth JSON (60) is not a Cloth property and does nothing; `_RampTex` is not a matcap. Written as extras.unite.{matTex,rampLight,env}; viewer scene/matcap.ts. Additive terms carry the shaders' 0.45 exposure (Cloth line 9700).",
+   "notes": "GAPS: without the keyword the shader samples the scene reflection probe (unity_SpecCube0), not in the rip: those materials get metal factor 0. FBX-only materials carry no keywords: a Cloth block's own t_matcap_ is read as _MatTex (219 of 357 Cloth JSONs naming a t_matcap_ have _IFMAT with it in _MatTex), colour = shader default 2.0; a MatcapMask/Lengcy block matcap as env with _MatMapMul 4.84 (17 of 23 JSON materials with a _MatMap have _MATREFL on; their _MatMapMul is 1.0/1.57/2.27/4.84); battle actorMatcap env with _SpecularColor 1. All tagged inferred. N.L uses the viewer's key light without shadow; light colour taken as 1; the shader's ACES is the viewer's own tone mapping. Old GLBs keep extras.matcap/matcapMode/matcapGain, still read by the viewer. | previous notes: Shader not in the rip (character shaders are only in the game's asset bundles). _MetallicOffset/_RoughNessOffset ~0 (metal = texture), _IFMatcap always 0. Charizard 17's lobby jacket texture is darker than battle (sRGB median 17 vs 34): it stays dark. Survey 2026-11-08 (382 lobby materials naming a matcap with a decodable image): _MatcapColor (R) does NOT compensate dark matcaps: corr(matcap mean  | 2026-11-09 fix: FBX-only keyword terms apply only when the shader's Properties default has them on (families.default_params: Cloth _IFMAT 0, Lengcy/MatcapMask _MATREFL 0), so no inferred matTex/env; the keyword statistics (219/357 Cloth t_matcap_ with _IFMAT; 17/23 _MatMap with _MATREFL) are only the reason a default may be wrong for some materials. Battle actorMatcap has no toggle, its term stays. No term = metal factor 0 (albedo shows).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:hairColorShader",
+   "format": "json",
+   "where": "==PGAME==/LobbyPlayer/m_lob_PlayerPBRHairColor_lv3 (NPC hair: Zirce, Erbie): _HairMap, _color1..4, _specularColor1/2, _shapeST; Zirce's _MainTex is an eye mask",
+   "status": "unread",
+   "values": [],
+   "hypothesis": "Hair colour is a ramp of _color1..4 driven by _HairMap; the albedo is not the hair colour (Erbie's colours are ~0.05 = black hair while his _MainTex is light). Renders white/pale today.",
+   "notes": "Gap found 2026-11-01; 4 NPC models.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "param:unity:texture:_OutlineMap",
+   "format": "json/fbx",
+   "where": "t_vc_* (298 of 303 lobby materials with an outline slot; small 4x4..64x64)",
+   "status": "unread",
+   "values": [],
+   "hypothesis": "Outline colour map for the inverted-hull outline (_OutlineWidth, _OutlineColor, _VTEX); follows the UV0 layout.",
+   "notes": "The FBX also has an unread vertex colour layer (R/G vary, B/A = 1).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:lens",
+   "format": "fbx",
+   "where": "FBX-only lit slot whose albedo alpha under its own UVs is a uniform plateau (< 5% at 255, range <= 20, 200 <= mean < 253), dark (brightest channel mean < 128), with another material on the same albedo sampling it opaque (>= 90% at 255)",
+   "status": "hypothesis",
+   "values": [
+    [
+     "Blastoise 02/13 + Squirtle/Wartortle 13",
+     "alpha 234-251"
+    ],
+    [
+     "pm0807_03, pm0820_02_lob, pm0080_02_lob, pm0143_03_lob",
+     "same predicate"
+    ]
+   ],
+   "hypothesis": "The atlas marks the lens region in alpha. 11 materials / 11 models over 4,862 FBX-only materials, no known false positive (without the dark test Greninja 0658bodyc x5, opaque basepbr per its JSON, would be hit). Opacity is not in the data: LENS_OPACITY 0.6 FITTED (user decision 2026-11-01, eyes visible as in the Serebii art). JSON `basepbrGlass` (trainer eyewear) is marked by shader name only; its lens albedo alpha (0.07-0.30) is the opacity.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:effectVertexColour",
+   "format": "fbx",
+   "where": "LayerElementColor of effect meshes (fbx.mesh_vertex_colours)",
+   "status": "hypothesis",
+   "values": [
+    [
+     "Charmander tail flame",
+     "(1, 0.16, 0)"
+    ],
+    [
+     "Mega Charizard Y flame",
+     "(1, 0.16, 0)"
+    ],
+    [
+     "Mega Charizard X flames",
+     "(0.17, 0.33, 0.90)"
+    ]
+   ],
+   "hypothesis": "Unity Fx shaders multiply their greyscale masks by the vertex colour; FBX-only effect materials take their mesh's mean vertex colour as the emissive factor (alpha x its alpha). The masks alone rendered white. Lit character meshes carry shader data in the same layer (Fuecoco's tuft 0.91/0.46/0.91, bodies ~0.4-0.9/0.1-0.5/0-0.4): not used as colour.",
+   "notes": "Mean per mesh, not per vertex (the Blender dump drops vertex colours); effect meshes are near-uniform. Survey 2026-11-01 (464 effect mesh/material records, all 1,508 FBX): no colour ramp exists for Fx masks (the Fx shaders have no ramp slot: _Tex1-3/_Dtex/_DistorbTex x HDR _Color1 x _Emission1/_Power1/_Alpha1 x vertex colour); t_fx_0196_color_01_cj is a flat purple 64x64 global default byte-identical in 827 folders, linked by nothing. Effect meshes have 1 UV set. 144 of 330 vertex-coloured effect meshes vary within the mesh (Charizard 16 fxA 0.20-0.91), which the mesh mean discards: per-vertex COLOR_0 would be exact but needs vertex colours in blender/dump_fbx.py (not done). A whole-mesh (0.502, 0.502, 0.502) is an untouched default. ~69 textured effects (grey mask, no or neutral vertex colour) have no colour source in the rip. Skeledirge battle flames already get (0.788, 0.447, 0.071); they render as fragments because their textures are sparse masks (ember specks, flame-shape atlas) the game scrolls.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:effectNoTexture",
+   "format": "fbx",
+   "where": "effect materials with no texture link, no texture block, no sibling slot to borrow from",
+   "status": "hypothesis",
+   "values": [
+    [
+     "Fuecoco tuft",
+     "mat_fx_rig_bat_0911_07"
+    ],
+    [
+     "Skeledirge lobby crown/bird",
+     "_01, _04, _09"
+    ],
+    [
+     "Mega Charizard X battle",
+     "X_weixin, X_wenli, ifire, firexu"
+    ]
+   ],
+   "hypothesis": "Textures not in the rip (grep over MEGA + Drive). User decision 2026-11-01: imported HIDDEN as `<mesh>~notex` with a neutral untextured material (`extras.missingTexture`), switchable in Model Parts. A texture-less slot on the same mesh as a textured one borrows that colour texture when >= 90% of its UVs land on drawn texels (Crocalor's head flame ring: 94% on the orange half).",
+   "notes": "33 of them have FBX Specular != AssetStudio's 0.2 default (lit shader): Fuecoco, Skeledirge lobby, Vulpix/Ninetales fx, Mewtwo trails, Sylveon, Gabite, Reshiram.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fbx:particleSystems",
+   "format": "fbx",
+   "where": "idle effect prefabs `pref_fx_*` whose subtree holds only Null nodes (`huo 1`, `CTFIre (5)`, `glow`)",
+   "status": "gap",
+   "values": [
+    [
+     "Charmander/Charmeleon/Charizard skins (11 models)",
+     "pref_fx_0004_battlefire_lv3"
+    ],
+    [
+     "Charizard lobby 02/16",
+     "pref_fx_0004_fire"
+    ],
+    [
+     "Charizard 52",
+     "pref_fx_000600_52_charizard_tail_fire"
+    ],
+    [
+     "Gastly 00/01/09/11",
+     "pref_fx_Gastly_idle_lv3"
+    ],
+    [
+     "Lucario 01",
+     "pref_fx_Lucario_weapon_lv3"
+    ],
+    [
+     "Urshifu suit B lobby",
+     "pref_fx_lobby_035902_scene_effects_hs"
+    ]
+   ],
+   "hypothesis": "Unity ParticleSystems: AssetStudio's FBX export writes only mesh renderers, so the emitters are empty GameObjects. Nothing in the MEGA tree, the Drive share, or the plain files of the APK (0 ParticleSystem objects; the effect components are KriptoFX RFX4 + ParticleRenderCtrl, in encrypted bundles). Emitter subtrees carry no curves in any clip (static children of a body bone). Manifest `extras.particlesNotInRip` + `extras.particles` (nearest kept bone, rest offset, subtreeScale, HOME colours) for the viewer stand-in.",
+   "notes": "Recoverable from an AssetStudio dump of the ParticleSystem/ParticleSystemRenderer components of these prefabs.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:behindBody",
+   "format": "fbx",
+   "where": "effect meshes around the body",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "An effect MESH (all its effect primitives together) that reaches >= 98% as far as the body in >= 90% of 26 directions from the body centre is a shell: drawn behind the body (Solgaleo's glow 07+08). FITTED thresholds. The old test (bounds contain the body centre) flagged 58 primitives incl. manes and tufts, which were drawn behind the head.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "mesh:alternateState",
+   "format": "fbx",
+   "where": "body (non-effect) meshes whose vertices repeat an earlier body mesh's (>= 90% within 0.2% of the model size)",
+   "status": "hypothesis",
+   "values": [
+    [
+     "Solgaleo pm0791_00",
+     "dyFx04 alternate-texture body copy"
+    ],
+    [
+     "Miraidon pm1008_00",
+     "il02 (tail copy of dyA)"
+    ]
+   ],
+   "hypothesis": "Alternate states switched on by game code (no FBX visibility flag or clip track drives them): imported hidden, toggleable. Effect meshes repeating each other are stacked layers of one effect and stay visible.",
+   "notes": "",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "anim:skinOverrides",
+   "format": "fbx",
+   "where": "Battle FBX AnimationStack names `ani_<clip>_bat_<tag>`; tag = species (`0025`), skin (`002513`) or form (`0150_51`, `0130_51`)",
+   "status": "explained",
+   "values": [],
+   "hypothesis": "A skin is an AnimatorOverrideController over its form's base controller: its FBX carries only the clips authored for it (tagged with the skin), the rest are the base set. Evidence (survey of 878 battle FBXs, 2026-11-01): many full skins embed the base set verbatim (Pikachu 02/03/08/10/11 = 19 x `0025`), some mix both (Pikachu 22: 15 base + 4 own; Comfey 01: 11 + 16), Pikachu 18 embeds skin 13's overrides, and 29 skins ship 1-16 clips with no idle/attacks (Pikachu 13: born/goback/score/scoreidle; Eevee 18: score). importer.inherit_base_clips samples the form's skin-00 FBX (catalog unite_battle.skin_keys: same prefix/dex/form letter/name, case-insensitive) onto the skin's joints by path, values verbatim (Unity applies curve values absolutely), own clips win by name or by a one-letter misspelling (akt1/atk1, spll1/spell1). Gate: >= 90% of the donor's keyed LimbNodes on the skin's rig.",
+   "notes": "Tags cannot pick the donor alone: Urshifu A and B styles both tag `0892` with different sets, Comfey `p_` and plain both tag `0764`. Forms are NOT chained to the species' skin 00: Mega Charizard Y `0006_52` (10 clips, 22 of 58 joints shared with 0006_00) and Mega Lucario `0448_51` (18 clips) keep their own clips; Mega Charizard X `0006_51` embeds 17 base `0006` clips itself, which suggests the forms do inherit the base too, unproven on a different rig. Where a skin's bind differs from the base (Talonflame 02, Machamp 05), base translation tracks pull its bones to the base offsets, as Unity would.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:donorEffects",
+   "format": "fbx",
+   "where": "pipeline/catalog/unite_fx_donors.json (tools/gen_unite_fx_donors.py), importer.attach_fx_donors, viewer/src/scene/particles.ts",
+   "status": "hypothesis",
+   "values": [
+    [
+     "pref_fx_0004_battlefire_lv3",
+     "pm0004_00 / pm0006_10 CharmanderTail (skinned to the flame's Bone_Tail06-08), texture block fire_01 (silhouette), fire_02; vertex colour (1, 0.163, 0)"
+    ],
+    [
+     "pref_fx_Gastly_idle_lv3",
+     "pm0092_10 mesh huo1: flat polar-UV disc, block heibai_03 (lump mask), noise_06, motion_01, wenli_04; no vertex colour (HOME SmokeCore colour)"
+    ]
+   ],
+   "hypothesis": "Skins keep the same idle prefab; where one skin's FBX kept its meshes, the others borrow them by prefab name (user decision 2026-11-01: only data, no invented effects). INFERRED: the first texture of the material block is the cut-out mask. Not reproduced: the second, untextured passes (CharmanderTail (1) / fire_11, mesh huo2 / huo_03), the Fx shaders' scroll/noise animation, any runtime camera facing of the gas disc.",
+   "notes": "Replaced procedural stand-ins (puff halo, flame tongues) that were invented and rejected by the user. Footage: the in-game flame grades yellow root -> red tips and the gas band churns; both need the missing shader data.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:cutoutMask",
+   "format": "fbx",
+   "where": "FBX-only effect material: `_Tex1` = first non-character texture of its AssetStudio block (property names are not in the FBX)",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "When that guess cuts nothing (< 20% empty or < 20% solid texels: tiling noise/distortion maps such as t_fx_0004_motion_03), the mask is the block's first real silhouette (importer.is_cutout, CUTOUT_SHARE 0.2). Mega Charizard X's tail: motion_03 -> t_fx_0006_51charizard_fire_78_wpx (the base flame's fire_01 shape); it rendered as grey wisps before. Flame silhouettes measure 0.39-0.52 empty / 0.42-0.47 solid; glow layers (X_xin, X_tou) and blob masks (fire_02_gp, 0.10 solid) fail.",
+   "notes": "Which texture the Unity fx shader really uses as the mask is unknown (shader not in the rip).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:fireLook",
+   "format": "fbx+home",
+   "where": "FBX vertex colour layer (LayerElementColor) on flame meshes; HOME FireCore materials (unite_home_fx.json, species `6`, forms `6_51`)",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "Unity Fx flames multiply a grey mask by the per-vertex colour (Charmander flame: orange root G 0.27 -> red tip G 0.075; Mega X: blue -> white). importer.fire_effects keeps COLOR_0 on blended, grey-masked effect materials of species/forms with a HOME fire core and tags extras.fire (HOME baseColor/layerColor/lerpProfile); viewer fireEffect.ts: soft mask (blurred, FITTED), rim = vertex colour, core = HOME _LayerColor along HOME's ramp. All-white vertex colours (no hue: Moltres lobby head/tail, Charizard 16 lobby) take HOME _BaseColor as the rim. Painted flame textures (Moltres battle) are left as they are. Form folders `<dex>_<NN>` use HOME pm<dex>_<NN>_00 (Mega X = 51: HOME cyan core matches UNITE's blue vertex colours).",
+   "notes": "User feedback 2026-11-02 ('orange/yellow hybrid with blurred edges'), fitted to samples/unite_fx/unite_fx_Fire_Blast_Charizard_UNITE_screen.png. No Mega X/Y in-game reference checked yet. INFERRED: HOME ramps by its own _LerpTex, not the mask. 2026-11-08 along-flame colouring: importer.flame_coordinate writes per-vertex `_FLAMET` (0 root .. 1 tip; principal axis of the flame mesh, root = end nearest the emitter joint: prefab origin for donor meshes (`flameT` in extras.particles[].donor.meshes), shallowest weighted joint for own flames) and material extras.fire.alongFlame; viewer colour = mix(HOME _BaseColor, _LayerColor, ramp(1 - t)). HOME ORIENTATION from data: the HOME FireCore card (pm0006_00_00) is skinned TailA01 (V~1 glTF) .. TailA04 (V~0); _LerpTex top row (Unity V=1, profile 0 = _BaseColor red-orange) therefore lies at the TIP and the bottom row (profile 1 = _LayerColor yellow) at the ROOT, assuming the shader samples _LerpTex by mesh UV (shader not in rip). This is the REVERSE of the user description (orange base, orange-yellow tip); per user decision 2026-11-08 colours are not fitted, gap reported.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "rip:wildPokemon",
+   "format": "rip",
+   "status": "resolved",
+   "values": [],
+   "where": "Wild/objective Pokémon (Bunnelby, Swablu, Altaria, Audino, Aipom, Corphish, Ludicolo, Baltoy, Combee/Vespiquen, Accelgor/Escavalier, Drednaw, Rotom, Regis, Groudon, Kyogre, Avalugg, Regigigas, Araquanid...)",
+   "hypothesis": "Not in the MEGA rip or the Drive share (surveyed 2026-11-02: Drive 3D Models/ = Battle/Lobby/NPC Models only; MEGA has only their Fx prefabs, minimap icons, 2D Monster portraits; GitHub ElChicoEevee/pkmnunite-assets = 404; APK UnityCN-encrypted). Found in the Marcy4000/Unite fan project (github.com/Marcy4000/Unite, README credits ElChicoEevee for the original assets, folder note thanks Razmoth = UnityCN AssetStudio): Assets/Model/Pokemons/<Species>/pref_char_bat_<dex><skin>_<name>_lv3.fbx + t_d/t_mro(e)/t_n PNGs, the game's own names, clips as FBX stacks (ani_<clip>_bat_<dex>, 30 fps; the .anim files beside them are Unity copies of the same stacks). UniteCatalog.marcy reads 52 models the Drive share lacks (wild + objectives + Gigantamax/Tower Defense event forms). Groudon is in no source. Other/pref_char_bat_038400_rayquaza_scene_lv0 (low-detail, no clips) is superseded by Marcy's full Rayquaza.",
+   "notes": "Sparse clone: git clone --filter=blob:none --no-checkout --depth 1 https://github.com/Marcy4000/Unite.git ~/Documents/pokemon_raw_data/unite/marcy; git sparse-checkout set --cone Assets/Model/Pokemons Assets/Model/Objects; git checkout main (2.5 GB). Not read: renamed/fan-made FBXs (Flygon/Trapinch/Vibrava, Cresselia, Espurr, Flareon/Jolteon/Vaporeon 'Animated*', Glaceon/Lucario/Vespiqueen reference.fbx). Re-check the Drive share for Groudon when it grows. The NPC folder's FBXs carry the lobby NPCs' clips (wired as baseClips, 2026-11-02).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:tex2Mask",
+   "format": "fbx",
+   "where": "FBX-only Fx material texture blocks (Mega Charizard X: mat_fx_lob_0006_51_X_tou / _wei = [t_fx_0004_motion_03, t_fx_lob_0006_51_X_xin])",
+   "status": "rejected",
+   "values": [],
+   "hypothesis": "Block order = m_TexEnvs alphabetical = _Tex1, _Tex2. ==PGAME==/Fx/m_2P_mask (218 scene materials, most common 2-texture Fx shader) draws opacity = _Tex1.a * vertex alpha * _Tex2.r (Marcy4000/Unite FxCommon.hlsl reconstruction). A _Tex1 without alpha variation shapes nothing, so _Tex2 is the mask.",
+   "notes": "Shader name is not in the FBX; m_2P_noise would instead distort _Tex1 by _Tex2. Colour terms _Color1/_Color2/_Emission1 are not in the rip (Mega X flames render pale lavender = raw vertex colour). Rejected 2026-11-02: survey hit 40 materials / 37 models, many with a noise _Tex2 (Gastly 10 heibai_03 -> noise_06); no visible gain on Mega X.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:nestedDonor",
+   "format": "fbx",
+   "where": "unite_fx_donors.json `nested`: pref_fx_0004_battlefire_lv3 (Charmander 00) contains pref_fx_0004_lobbyfire_atk",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "Lobby Charizards keep only pref_fx_0004_lobbyfire_atk_lv3 (ParticleSystem Nulls CTFIre/wind03); they borrow the battle prefab's CharmanderTail mesh placed relative to the nested lobbyfire copy.",
+   "notes": "INFERRED: in game the lobby flame is particles only; the mesh is the species' only flame geometry. User request 2026-11-02 (lobby Charizards had no flame).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "anim:emitterJoints",
+   "format": "fbx",
+   "where": "Null nodes between an idle fx prefab and the nearest skeleton joint (Charmeleon/Charizard Bone_Tail06, keyed T/R in every clip)",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "Effect follows the Null's animation: added as non-skinning joints (importer.add_emitter_joints) with FBX curves.",
+   "notes": "Fixes Charmeleon's flame pointing backward; Knight Style holowear refs show it upright.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "material:cutoutAlbedo",
+   "format": "unity-material",
+   "where": "character albedo alpha (`t_d_*`) of lit materials; JSON `_AlphaClip` is set once in the whole rip",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "A clean binary alpha (>=50% texels >0.95, <5% between 0.05 and 0.95) whose material UVs land on alpha<0.05 (>=0.2% of vertex + centroid samples) is drawn alpha-tested (MASK, cutoff `_Cutoff` else 0.5): Venusaur Asia lobby gold beads, 116 materials / 98 models / 53 albedos in the existing GLBs (survey 2026-11-08). The shader's clip state is not in the JSON/FBX; cloth masks (mostly alpha 0) and padding never sampled stay opaque. Thresholds FITTED (no gap in the hit-share distribution; 0.0005-0.0012 dropped as edge noise).",
+   "notes": "importer.flag_cutouts / cutout_stats; tests pipeline/tests/test_unite_cutout.py 2026-11-09: superseded for JSON materials (shader data via alpha.decide: _BlendMode 1 / alpha-test variant = MASK, else opaque); `flag_cutouts` now only touches FBX-only materials (FITTED statistics remain there)."
+  },
+  {
+   "key": "shader:lobbyPlayerZones",
+   "format": "shader",
+   "where": "`_MixMap` \"Alpha(R)Mask(G)Emiss(B)Color(A)\" of HairColor_lv3 / ColorEye (4 `_color1..4`)",
+   "status": "read",
+   "values": [],
+   "hypothesis": "w_k = clamp(1.031915 - |(M.a - k/3) * 3.191489|, 0, 1), tint = sum w_k * _color{k+1}; the mask is raw bytes (Erbie hair M.a 85 = 1/3 = zone 2 = near-black _color2).",
+   "notes": "Marcy4000/Unite Assets/Shaders/Compiled/==PGAME==_LobbyPlayer_m_lob_PlayerPBRHairColor_lv3.txt:536-555; player_shaders.zone_weights",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:lobbyPlayerHair",
+   "format": "shader",
+   "where": "==PGAME==/LobbyPlayer/m_lob_PlayerPBRHairColor_lv3 (NPC hair, 4 materials)",
+   "status": "read",
+   "values": [],
+   "hypothesis": "rgb = mix(_colorSkin, _MainTex.rgb * mix(tint, 1, M.g), a), a = mix(1, M.r, _Mask) (also the alpha, discard < _Cutoff); roughness = mix(dot(w,_roughv4) + _MainTex.a, _MainTex.a, M.g); emission = M.b*_Emissive*_EmisssionScale*_MainTex. Baked by importer.build_player_material. NOT baked: metallic (dot(w,_metalv4) + normal alpha), anisotropic highlights (_HairMap R shape, _specularColor1/2, _glossiness_*, _SunShift*), SH ambient, rim, outline.",
+   "notes": "Marcy4000/Unite Assets/Shaders/Compiled/==PGAME==_LobbyPlayer_m_lob_PlayerPBRHairColor_lv3.txt:536-560 (lighting 560-756). Survey: 4 JSONs (NPC Models: phorus, erbie, zirce, meru).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:lobbyPlayerHairUV",
+   "format": "shader",
+   "where": "HairColor_lv3 keyword `_SLUV` (JSON float `_SLUV` 1 on Phorus/Erbie/Meru hair, 0 on Zirce)",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "With _SLUV_UV1 the vertex shader samples every texture on the mesh's SECOND UV set (vs_TEXCOORD0 = in_TEXCOORD1 * _MainTex_ST). The hair FBXs (MEGA and Marcy copies) carry one UV layer, so the importer samples UV0. Erbie/Phorus/Meru hair maps are varied (zone map 256^2), so the colour distribution across dreadlocks is a guess; the dominant effect (near-black hair) does not depend on it.",
+   "notes": "Hair UV1 not in the rip. Looks plausible in renders; verify if a UV1 donor appears.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:lobbyPlayerSkin",
+   "format": "shader",
+   "where": "==PGAME==/LobbyPlayer/m_lob_playerpbrSkin_lv3 and ...SkinNoShadow_lv3 (NPC skin/body, 5 materials)",
+   "status": "read",
+   "values": [],
+   "hypothesis": "rgb = _MainTex.rgb * mix(_colorSkin, 1, _BumpMapNr.a) (normal-map alpha = \"Metalness\"); roughness = clamp(_MainTex.a^2 + _RoughNessOffset, 0.04, 1); the albedo alpha is roughness, never opacity; emission = _MixMap.b*_Emissive*_EmisssionScale*_MainTex (no _MixMap in the NPC JSONs, so none). NoShadow differs only by the outline map. NOT baked: metallic, SH/shadow params, rim.",
+   "notes": "Marcy4000/Unite Assets/Shaders/Compiled/==PGAME==_LobbyPlayer_m_lob_playerpbrSkin_lv3.txt:442-464, 715-724; NoShadow header differs by _OutlineMap only.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:lobbyPlayerRampLight",
+   "format": "shader",
+   "where": "==PGAME==/LobbyPlayer/m_lob_playerpbrRampLight_lv3 (Phorus top, Erbie coat)",
+   "status": "read",
+   "values": [],
+   "hypothesis": "base = _MainTex.rgb; emission added after lighting = ramp(fract(_Time.x*_RampSpeed), 0.5).rgb * mix(_Rampscale2, _Rampscale, _MixMap(uv1 + fract(_Time.y*_RampFlow)).r), only where the SECOND UV's x <= 1 (vs_TEXCOORD9 = in_TEXCOORD1; ~3% of Erbie's body vertices, the stripes; the rest are offset +1 in U). The second UV set exists only in the Marcy4000 copy of the NPC FBX (the MEGA export keeps one layer): matched to our vertices by the first UV (importer.uv_layers / second_uv_for) and rasterised into a UV0 emissive texture (player_shaders.ramp_emission). _EmisssionScale is not read by this shader. Erbie: scale 1..4 x cyan (ramp left end 153,255,234), HDR kept as KHR_materials_emissive_strength.",
+   "notes": "Marcy4000/Unite Assets/Shaders/Compiled/==PGAME==_LobbyPlayer_m_lob_playerpbrRampLight_lv3.txt:439-452 (albedo), 630-660 (ramp). Static frame t = 0: the real glow scrolls (ramp U and mask offset follow _Time); the viewer does not animate it (gap).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:lobbyPlayerColorEye",
+   "format": "shader",
+   "where": "==PGAME==/LobbyPlayer/m_lob_PlayerPBRColorEye (Zirce, Meru eyes)",
+   "status": "read",
+   "values": [],
+   "hypothesis": "Unlit: c = mix(1.2*tint, 1, M.g); out = c * _MainTex.rgb * (1 + M.b); alpha = M.r. Both NPC eye masks are uniform (255,255,255,174): M.g = 1 -> c = 1, M.b = 1 -> the body atlas x 2 (HDR peak 2 kept as an emissive strength; the iris colour _color3 (3.3,1.07,0.45) is never selected). Stored as emission over a black base (no lighting). Alpha ignored (pass blend is Zero Zero).",
+   "notes": "Marcy4000/Unite Assets/Shaders/Compiled/==PGAME==_LobbyPlayer_m_lob_PlayerPBRColorEye.txt:468-490",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:lobbyPlayerLengcy",
+   "format": "shader",
+   "where": "Hidden/m_lob_PlayerPBRLengcy_lv3 (Meru top; 13 lobby scene JSONs: holowear bodies)",
+   "status": "read",
+   "values": [],
+   "hypothesis": "No colour parameters: base = _MainTex.rgb, roughness = clamp(_MainTex.a^2 + _RoughNessOffset, 0.04, 1), metallic = normal alpha + _MetallicOffset (not baked), it does not read _MixMap. Routed through build_player_material (the old generic path read a _MixMap as metal/occlusion). The 13 scene materials (Pokemon holowears) change only when those models are reconverted.",
+   "notes": "Marcy4000/Unite Assets/Shaders/Compiled/Hidden_m_lob_PlayerPBRLengcy_lv3.txt:746-749. Not covered (separate shaders): Hidden/Lobby/m_lob_basepbrClothLengcy_lv3 (60 JSONs), Hidden/m_lob_PlayerPBRAlpha_lv3 (6), PlayerPBRHairColorFelt/Shining/Fur/playerpbr*_lv3 (no JSON in the imported folders).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:lobbyPlayerColourSpace",
+   "format": "shader",
+   "where": "[HDR] colour properties `_colorSkin`, `_color1..4` (JSON values as AssetStudio serialised them)",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "Read as linear light, multiplied with the sRGB-decoded textures (importer.PLAYER_COLOURS_LINEAR). Erbie's skin (_colorSkin 0.99,0.79,0.70 over a grey atlas) renders brown, his hair (_color 0.04-0.05) near-black, as in the official art; reading them as sRGB would make the hair pure black and the skin yellower. Unity's own conversion of serialised colours is not confirmed.",
+   "notes": "docs: compare with in-game screenshots if the choice shows on another NPC.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:borrowTexture",
+   "format": "fbx",
+   "where": "importer.borrow_effect_info / sibling_fbxs",
+   "status": "hypothesis",
+   "values": [
+    [
+     "texture-less effect material (no link, no block)",
+     null
+    ]
+   ],
+   "hypothesis": "An effect material with no texture in its own FBX is the same authored material as the same-named one (artist tag `_hb`/`_wpx`/`_gp` and case ignored) in another FBX of the same dex; it takes that FBX's colour texture and the donor mesh's mean vertex colour. Applied only when all candidates agree on one texture. Survey of 1,508 Pokemon-share FBXs: 87 texture-less fx materials, 4 recoverable (Skeledirge lobby `mat_fx_rig_bat_0911_04` <- battle `_04_hb`, Mega X battle wenli, Mewtwo lobby Trail_03, Miraidon lobby `_02_hb`); 83 have no same-name material in the species' other files (near-misses: Skeledirge lobby `_01` vs battle `_03_hb` share the mesh bbox but not the name; Fuecoco `0911_07`, Crocalor `0911_01_hb` reuse Skeledirge-numbered names across species).",
+   "notes": "Exact-name hits: 3 of 4; the Skeledirge one differs by the `_hb` tag.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:shaderFamilies",
+   "format": "fbx",
+   "where": "marcy Assets/Shaders/Compiled/==PGAME==_Fx_m_*.txt, _Fx2_m_bat_FXmesh_lv3.txt",
+   "status": "hypothesis",
+   "values": [
+    [
+     "Fx/m_1P_Base, m_2P_mask, m_2P_dissolve, m_3P_noise_dissolve",
+     null
+    ]
+   ],
+   "hypothesis": "Decompiled Fx shaders share one output: rgb = tex1.rgb x _Emission1 x _Color1.rgb x vertexColor.rgb (m_1P_Base also ^_Power1), alpha = tex1.a x vertexColor.a x [dissolve smoothstep(tex2.r; _DissolveOffset1, _DissolveEdge1)] x _Alpha1; _IF_ADD_MODE multiplies rgb by that alpha (additive) else straight; UVs = uv x _texN_st + fract(time x _TexN_Speed). The importer's vertex-colour tint matches this formula. Not recoverable from FBX-only materials: shader name, `_Color1`/`_Emission1`/`_Alpha1`, speeds and which block texture is the dissolve/noise map (two-texture blocks fit m_2P_mask and m_2P_dissolve alike). `Fx2/m_bat_FXmesh_lv3` (the only Fx shader with `_MainTex`) is lit PBR with alpha = tex.a x `_CustomAlpha` and no vertex colour, but a DiffuseColor link does NOT identify it: Mega Y's fire_76 (vertex-tinted, verified) and Moltres' noise maps are linked too, so Skeledirge keeps the vertex tint.",
+   "notes": "Charmander/Charizard flames: blur radii, HOME ramp and mask choice stay INFERRED/FITTED (fx:fireLook); the shader fixes the colour product, not those.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:familyInference",
+   "format": "shader",
+   "where": "FBX-only materials (battle models, standalone lobby holowears): no Materials/*.json, so no m_Shader.Name",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "extras.unite.family (familyInferred true) = families.infer_family(material name, texture block, kind). Rules: name `fx` token -> fx; t_nm_ -> player; eye/mouth in the name -> basepbreye/basepbrmouth; t_noise -> fur; own t_matcap_ + t_mipmap03 -> cloth; body + own matcap + t_mroe -> matcapMask; t_ramp (no t_m_) -> cloth; outfit with t_fx_changeskin and no mroe/matcap -> lengcy; other outfit cloth; else basepbr. Battle models: actorbase (actorMatcap with an own matcap, actorbaseeye/actorbasemouth by name; NOT validated, no battle JSON exists). Calibrated on 726 distinct lobby scene materials that have JSONs (tools/calibrate_unite_families.py): 84.5% on the character families (90.1% with cloth/lengcy/matcapMask merged; per token recall eye 1.00, mouth 1.00, cloth 0.95, basepbr 0.87, fur 0.72, lengcy 0.44, player 0.41, matcapMask 0.24); leave-one-out signature-majority baseline 86.7% on the same set, so the rules are not memorising. Cloth, Lengcy and ClothMatcapMask read the same inputs and cannot be separated by a block (CLOTH_GROUP). Counts for FBX-only materials (3251 battle + 2689 lobby): battle actorbase 1389, actorbaseeye 892, actorMatcap 530, actorbasemouth 338, fx 102; lobby cloth 797, basepbr 707, basepbreye 615, basepbrmouth 212, matcapMask 132, lengcy 84, fx 65, fur 59, player 18.",
+   "notes": "pipeline/importers/unite/families.py; family_defaults.json = shader Properties defaults from Assets/Shaders/Compiled (tools/gen_unite_family_defaults.py); tests pipeline/tests/test_unite_wp_a.py 2026-11-09",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:outline",
+   "format": "shader",
+   "where": "Compiled m_lob_basepbr_lv3 / basepbrCloth_lv3 pass OUTLINE (Cull Front): basepbr :41673, vertex :42172-42257 (VTEX_ON), :41994-42076 (VTEX_OFF)",
+   "status": "read",
+   "values": [
+    [
+     "_OutlineColor / _lightDir / _Offset / _VTEX / _VCOLOR2N / _OutlineMap",
+     "extras.unite.outline"
+    ]
+   ],
+   "hypothesis": "colour = mix(_OutlineColor, 1, clamp(N_world.L)) x (_VTEX ? _OutlineMap.rgb : COLOR_0) (:42185-42197); width = 1/216 NDC (0.0046296, :42220) x _ScreenResolution.y/_ScreenParams (taken as 1: H/432 px; the global is not in the rip); depth push = length(view shift) x (map.a if VTEX else 1) x |_Offset| x 0.15 x 100 along the view ray (:42198, :42232-42238). Same programs in Cloth (:606300-606360). _lightDir is world space and normalised; the viewer mirrors its x (Unity left-handed, INFERRED, check by render).",
+   "notes": "Material count: 291 basepbr, 405 Cloth (all read the map), plus eye/mouth/Lengcy/MatcapMask/Fur families carry _OutlineColor; Fx/Unlit/Battlefield _OutlineColor are not an outline pass. Battle m_bat_actorbase has NO normal outline (pass UBuffOutLine, buff aura, _UBuffWidth): battle models fall back to the generic hull. Gaps: _VCOLOR2N (27 Cloth/Shine JSONs: extrusion normal from COLOR_0, vertices colours dropped: welded normal used), COLOR_0 as colour when _VTEX 0 (taken white), FBX-only materials: map only when a t_vc_ is in the FBX block (standalone lobby FBX blocks mostly lack it), colour/light are family defaults then; t_vc_ PNGs missing from the rip leave white.",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "shader:shading",
+   "format": "shader",
+   "where": "Compiled/==PGAME==_LobbyPokemon_m_lob_basepbrCloth_lv3.txt:330-700 (lobby), ==PGAME==_Battle_m_bat_actorbase_lv3.txt:262-430 (battle)",
+   "status": "read",
+   "values": [
+    [
+     "_SHTopColor/_SHBotColor/_SHScale (HDR 2.5-8.2)",
+     "every lit JSON material"
+    ],
+    [
+     "_SpecularColor, _RoughNessOffset, _MetallicOffset",
+     "every lit JSON material"
+    ],
+    [
+     "_RimlightColor (51,13,5) etc.",
+     "91/405 Cloth, 169/291 basepbr JSONs: stale"
+    ],
+    [
+     "_ShadowOffset/_ShadowPow/_ShadowScale",
+     "player shaders only"
+    ]
+   ],
+   "hypothesis": "Lit = lightColour(NdL d + spec) + d(Atop SHTop + Abot SHBot)SHScale, d = albedo(1-metal), spec = min(D,100)(0.25+0.25r) F0 NdL SpecularColor with D = (a/((a x)^2+1-x^2))^2, a = r^2, x = N.V (lobby: the shader feeds N.V into its N.H slot) or N.H (battle); battle light colour x1.2 clamped 1.2; AO: lobby indirect, battle total. basepbr (non-fur variants) assumed to share Cloth's form (the dumped first variant is the fur one). The rim and main light (_RimlightScale/Scale2/ShadowScale/Color, _RimLightDir, _MainLightColor) sit in the shader's GLOBAL constant buffer (Cloth :860-880 next to _AddLightDir/_SunShift): scripted per scene, not in the rip, so the JSON rim values never reach the GPU; only the fur shaders (Hidden/Lobby/m_lob_basepbr5pass) declare the rim as Properties but still lack Scale2 and the direction.",
+   "notes": "Written by pipeline/importers/unite/shading.py to extras.unite.shading (FBX-only: family defaults, inferred). Drawn by viewer scene/uniteShading.ts with the UNITE curve. Not drawn: fur sketch band (_SketchHalftoneMin/Max, _SketchColor) and anisotropic lobes (_glossiness_1X.., _SunShift), fur rim, the Cla SH type (only _SHTYPE_LERP is compiled), shadow-receiving (_SHshadow, no shadow maps).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "lighting:toneCurve",
+   "format": "shader",
+   "where": "Compiled/==PGAME==_Battle_m_bat_actorbase_lv3.txt:414-423 (also every lit shader's last lines)",
+   "status": "read",
+   "values": [
+    [
+     "x(1.1295x+0.03)*0.45 / (x(1.0935x+0.59)*0.45+0.08)",
+     "ENABLE_POST_TONE variants"
+    ]
+   ],
+   "hypothesis": "The 0.45 is inside the curve (a = 0.45 x; numerator (1.1295x+0.03)a, denominator a(1.0935x+0.59)+0.08), applied once per fragment: WP-D's x0.45 on the additive matcap terms is the same factor, right for the viewer's other tone maps (diffuse stands for game x0.45) but double-counts under the curve, so matcap.ts now uses uUK (1 under the curve, 0.45 elsewhere). The scene's real exposure/main light is scripted (not in the rip): the `unite` preset keeps the default key 1.2 / ambient 1.9 as the game's neutral.",
+   "notes": "environment.ts ToneMap 'unite', preset `unite`; hable.ts installCustomTone is the single writer of three's CustomToneMapping chunk. Unfitted dE vs refs/unite shots (3 scenes, 4 shots): new shading + unite preset 10.8 mean, old shading + studio 12.8; fitted old presets 3.6 (fitted to those shots). Shading rides with the curve: game units under ACES scored worse (lobby 14.6 vs 8.6).",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:homeColouredParts",
+   "format": "fbx",
+   "where": "pipeline/importers/unite/home_parts.py colour_from_home; HOME out/home/pm<dex>_00_00/model.glb",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "A texture-less UNITE part (`missingTexture`: Fuecoco/Crocalor tuft, Skeledirge lobby flames) has a counterpart in the same species' HOME model (user decision 2026-11-09: HOME is the fallback for UNITE effect colours). Both models are scaled by their larger horizontal extent about the model origin (a bbox bottom/centre was thrown off by stray HOME meshes: Skeledirge BirdB hangs 1.2 m below the floor). The part's HOME mesh = the opaque HOME mesh nearest to it that is NOT the UNITE body skin (share of its vertices within 0.02 of the UNITE body <= 0.7: body skins 0.8-1.0, tufts/crowns 0.15-0.6; Charizard's glow shells hugging the body are rejected). Each part vertex takes the HOME texel (x base colour) at its nearest vertex of that mesh as COLOR_0 on a lit material `<name>.home`. Gate: mean match distance <= 0.06 and >= 90% of vertices within 0.10. Part positions are the raw bind positions unless their extent is > 1.5x the body's (mesh-space scale: Fuecoco skin 01's tuft is 38x), then rest-skinned. INFERRED: HOME form 00 for every UNITE form; per-vertex nearest sampling blurs HOME's thin orange rim. Fuecoco skin 01 (tuft tilted in the FBX rest pose, d 0.09) fails the gate and stays a hidden ~notex part. 2026-11-10: a part may match several HOME meshes together (each vertex takes the nearest of any candidate; Skeledirge's lobby `fx_lv004` = BirdA+B+C, cover 0.78 -> 1.0), and sparse-texture parts (fx:borrowCoverage) are candidates too.",
+   "notes": "manifest extras.homeColouredParts, material extras.unite.colourFrom {source: home, homeModel, homeMesh, matchDistance}; tests pipeline/tests/test_unite_home_parts.py 2026-11-09",
+   "seen": true,
+   "status_auto": false
+  },
+  {
+   "key": "fx:homeMotion",
+   "format": "home",
+   "where": "pipeline/importers/home/importer.py uv_motion; tools/gen_unite_fx_colors.py (noise, noiseNorm, noiseMean, loop, asFire); viewer fireEffect.ts fireNoise/updateFireNoise/updateHomeFire, particles.ts setTime",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "HOME effect shaders hold no speed property; the looping idle clip (`*_loop01`) ramps `_materialModifiers` helper transforms bound to `Blend0/1UVTranslate`, `Mask0/1UVTranslate` (fire cores) and `ColorUVTranslate`/`DisplaceUVTranslate` (`_AsFire` paint) linearly and wraps them on loop boundaries. Speed = median step x 100 (the eye helpers' UV_HELPER_GAIN). Charmander/Charmeleon/Charizard: Blend0 (-0.30, 1.50), Blend1 (-0.45, 2.25), Mask0/1 (0, 1.50) UV/s, loop 6.667 s; Mega X its own; Skeledirge BodyC colour V 0.30, displace (-0.20, 0.20), loop 10 s. Viewer: UNITE silhouettes stay fixed; HOME's two noise layers scroll at those speeds and n = clamp((a+b)/p99) - mean shifts the colour ramp coordinate (user decision 2026-11-10: keep the approved colours on average). INFERRED: the layer combination (HOME's shader is not in the rip; the product, as in the static bake, left the core on 4% of the card = a red flame), the x100 gain and V sign for fire, and the V direction per mesh (`noiseDir`: noise travels root -> tip). Skeledirge's `_DISPOPE_SIN` displacement operator is not in the rip (recorded as `homeFire.displaceGap`, not drawn)."
+  },
+  {
+   "key": "home:asFire",
+   "format": "home",
+   "where": "tools/gen_unite_fx_colors.py asFire; pipeline/importers/unite/home_parts.py transfer_uvs, homeFire",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "`_AsFire` 1 (keyword AS_FIRE) marks painted flame materials (Skeledirge `BodyC`, Miraidon 12-15 `BodyDsp`). A UNITE part matched to such a mesh takes HOME's UVs (nearest vertex; seam corners split) and texture, drawn self-lit (base black, emissive = texture; INFERRED from the flag name) and scrolled at the loop clip's ColorUVTranslate speed (`extras.homeFire.scroll`, glTF UV/s)."
+  },
+  {
+   "key": "fx:wenliSheen",
+   "format": "fbx",
+   "where": "pipeline/importers/unite/importer.py build_effect_material (noiseSheen, _solid_alpha), fire_effects (sheenFromHome)",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "wenli = 纹理 (texture/pattern). An FBX-only effect whose colour slot holds a grey tiling noise with near-solid alpha (>= 95% of texels > 0.95; noise_06 ships 0.973..1.0) and no silhouette in its block is a noise sheen: drawn additive at its grey value, never given the fire look (200 of 267 `*wenli*` scene JSON materials are additive noise/pattern Fx). White vertex colours take HOME's `_BaseColor`. Mega Charizard X battle/lobby wenli was an opaque cyan-white blob around the flames. Grey masks with near-solid alpha are their own alpha (was: alpha min >= 250)."
+  },
+  {
+   "key": "fx:borrowCoverage",
+   "format": "fbx",
+   "where": "pipeline/importers/unite/importer.py borrow_coverage, flag_sparse_effects; home_parts.colour_from_home",
+   "status": "hypothesis",
+   "values": [],
+   "hypothesis": "An effect texture drawn on fewer than 90% (SIBLING_COVERAGE) of a part's own UV samples is a streak/flicker overlay, not the part's colour: a same-name borrow is refused, and an FBX-only blended effect with such a texture is flagged `sparseTexture`; both go to home_parts, which replaces them only when the HOME match gates pass (else the texture stays). Skeledirge: battle flames `body_01_wzb` 2-4%, birds `lv3_02` 22-30%; footage shows solid flames. Noise sheens are exempt (a tiling noise covers everything)."
+  }
+ ]
+}

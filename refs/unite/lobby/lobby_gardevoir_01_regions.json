@@ -1,0 +1,65 @@
+{
+ "schema": 1,
+ "slug": "lobby_gardevoir_01",
+ "scene": "lobby",
+ "model": "unite/pm0282_00_lob",
+ "clip": "idle",
+ "frame": 0,
+ "screenshot": "lobby_gardevoir_01.png",
+ "width": 1920,
+ "height": 1080,
+ "camera": {
+  "fov": 35,
+  "position": [
+   -0.1982,
+   0.9676,
+   3.7402
+  ],
+  "target": [
+   -0.1982,
+   0.8429,
+   0.0019
+  ]
+ },
+ "subjectBox": [
+  800,
+  240,
+  1230,
+  945
+ ],
+ "yaw": 0,
+ "weight": 1,
+ "skip": false,
+ "regions": [
+  {
+   "name": "dress_left",
+   "box": [
+    950,
+    690,
+    1020,
+    770
+   ],
+   "manual": true
+  },
+  {
+   "name": "dress_right",
+   "box": [
+    1100,
+    690,
+    1160,
+    770
+   ],
+   "manual": true
+  },
+  {
+   "name": "dress_mid_lower",
+   "box": [
+    985,
+    800,
+    1035,
+    860
+   ],
+   "manual": true
+  }
+ ]
+}

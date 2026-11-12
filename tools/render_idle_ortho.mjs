@@ -18,6 +18,9 @@ fs.mkdirSync(out, { recursive: true });
 const [W, H] = opt('size', '640x1024').split('x').map(Number);
 const fov = Number(opt('fov', '3'));
 const margin = Number(opt('margin', '0.03'));
+const hideNodes = opt('hide', '').split(',').filter(Boolean);
+const variantLabel = opt('variant', ''); // see load()
+const suffix = variantLabel ? '_' + variantLabel.replace(/\W+/g, '').toLowerCase() : '';
 const base = opt('url', 'http://localhost:5173');
 const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--use-angle=d3d11', '--enable-unsafe-swiftshader'] });
 const page = await browser.newPage({ viewport: { width: W + 400, height: H + 40 }, deviceScaleFactor: 1 });
@@ -42,6 +45,33 @@ async function load(id) {
     vs.setCameraPreset('front');
     await new Promise((r) => setTimeout(r, 300));
   }, { W, H, preset: opt('preset', 'za_indoor_hotel'), exposure: Number(opt('exposure', '1')), clip: opt('clip'), envOver: JSON.parse(opt('env', '{}')) });
+  if (variantLabel) {
+    // --variant <label>[+<label>...]: select the option with each label (e.g. ver_00, "Skin 2") in whichever variant group has it; models lacking any are skipped.
+    const ok = await page.evaluate(async (labels) => {
+      const vs = window.__viewer;
+      for (const label of labels) {
+        let hit = false;
+        for (const g of vs.manifest.variantGroups ?? []) {
+          const o = g.options.find((x) => x.label === label);
+          if (o) { await vs.variants.select(o.variant, g.options.map((x) => x.variant)); hit = true; break; }
+        }
+        if (!hit) return false;
+      }
+      await new Promise((r) => setTimeout(r, 400));
+      return true;
+    }, variantLabel.split('+'));
+    if (!ok) return null;
+  }
+  if (hideNodes.length) {
+    // --hide a,b: part nodes (manifest part names; the _lodN copies too) to hide. A clip's visibility key beats the override, so drop the keys first.
+    await page.evaluate((nodes) => {
+      const vs = window.__viewer;
+      for (const p of vs.manifest.parts) if (nodes.some((n) => p.node === n || p.node.startsWith(n + '_lod'))) {
+        for (const c of vs.manifest.clips) if (c.visibility) delete c.visibility[p.node];
+        vs.setPartVisible(p.node, false);
+      }
+    }, hideNodes);
+  }
   return page.evaluate(() => { const f = window.__viewer.fitInfo(); return { top: f.center.y + f.size.y / 2, bottom: f.center.y - f.size.y / 2, w: f.size.x }; });
 }
 
@@ -50,7 +80,7 @@ const groupMap = groupOpt.endsWith('.json') ? JSON.parse(fs.readFileSync(groupOp
 const groupOf = (id) => groupMap ? (groupMap[id] ?? groupMap[id.split('/').pop()] ?? id)
   : groupOpt === 'stem' ? id.replace(/_\d\d$/, '') : 'all';
 const tops = {};
-for (const id of ids) { try { tops[id] = await load(id); } catch { console.error(id, 'failed'); } }
+for (const id of ids) { try { const t = await load(id); if (t) tops[id] = t; } catch { console.error(id, 'failed'); } }
 const tallestOf = {};
 const fixedTallest = opt('tallest') ? Number(opt('tallest')) : null;
 for (const id of Object.keys(tops)) { const g = groupOf(id); tallestOf[g] = fixedTallest ?? Math.max(tallestOf[g] ?? 0, tops[id].top); }
@@ -92,7 +122,7 @@ for (const id of Object.keys(tops)) {
     return vs.pngDataUrl();
   }, { frameH, margin, tallest, fov, W, H, flash: id.endsWith('/tr0039_00') && opt('flashlight', '1') !== '0' });
   // A viewer/preview holding the PNG open makes Windows fail the write (EBUSY/UNKNOWN): retry, then keep going and report it.
-  const file = path.join(out, id.split('/').pop() + '.png'), buf = Buffer.from(url.split(',')[1], 'base64');
+  const file = path.join(out, id.split('/').pop() + suffix + '.png'), buf = Buffer.from(url.split(',')[1], 'base64');
   let saved = false;
   for (let t = 0; t < 5 && !saved; t++) {
     try { fs.writeFileSync(file, buf); saved = true; } catch (e) { await new Promise((r) => setTimeout(r, 1000)); }

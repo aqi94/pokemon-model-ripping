@@ -28,7 +28,12 @@ try:
     for o in list(bpy.data.objects):
         if o in before or o.name.startswith(("Icosphere", "Cube", "Light", "Camera")):
             bpy.data.objects.remove(o, do_unlink=True)
-    meshes = [o for o in bpy.data.objects if o.type == "MESH"]
+    # The glTF importer adds bone display shapes (custom_shape, mesh objects ~1 unit wide): not model geometry. A
+    # scaled bone stretches them (UNITE Charmander's (0.01, 1, 1) mouth bone: -35 m), which framed models as specks.
+    shapes = {pb.custom_shape for o in bpy.data.objects if o.type == "ARMATURE" for pb in o.pose.bones if pb.custom_shape}
+    for o in shapes:
+        o.hide_render = True
+    meshes = [o for o in bpy.data.objects if o.type == "MESH" and o not in shapes]
     arms = [o for o in bpy.data.objects if o.type == "ARMATURE"]
     result["meshes"] = [m.name for m in meshes]
     result["mesh_count"] = len(meshes)
@@ -86,6 +91,9 @@ try:
     scene.collection.objects.link(cam)
     scene.camera = cam
     dist = size * 2.2
+    # clip planes follow the model size: the 100 m default far plane rendered field maps (80 m+, camera ~180 m away) empty
+    cam.data.clip_start = max(0.001, size * 0.001)
+    cam.data.clip_end = dist + size * 4
 
     def shoot(name, az_deg, el_deg=12):
         az, el = math.radians(az_deg), math.radians(el_deg)

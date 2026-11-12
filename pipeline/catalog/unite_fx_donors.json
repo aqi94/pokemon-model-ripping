@@ -1,0 +1,327 @@
+{
+ "source": "tools/gen_unite_fx_donors.py",
+ "prefabs": {
+  "pref_fx_0004_battlefire_lv3": [
+   {
+    "model": "pm0004_00",
+    "fbx": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_000400_charmander_lv3\\pref_char_bat_000400_charmander_lv3.fbx",
+    "meshes": [
+     "CharmanderTail",
+     "CharmanderTail (1)"
+    ],
+    "nested": [
+     "pref_fx_0004_lobbyfire_atk"
+    ]
+   },
+   {
+    "model": "pm0006_10",
+    "fbx": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_000610_charizard_lv3\\pref_char_bat_000610_charizard_lv3.fbx",
+    "meshes": [
+     "CharmanderTail",
+     "CharmanderTail (1)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_0006_51charizard_fire_head_X_lv4": [
+   {
+    "model": "pm0006_51",
+    "fbx": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_0006_51_charizard_lv3\\pref_char_bat_0006_51_charizard_lv3.fbx",
+    "meshes": [
+     "fier_001",
+     "fier_002"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_Gastly_idle_lv3": [
+   {
+    "model": "pm0092_10",
+    "fbx": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_009210_gastly_lv3\\pref_char_bat_009210_gastly_lv3.fbx",
+    "meshes": [
+     "mesh huo1",
+     "mesh huo2"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_screen_cloud_show1": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "plane_cloud_screen",
+     "plane_cloud_screen (1)",
+     "plane_cloud_screen (2)",
+     "pref_sm_015004_cloud_03_lv3 (1)",
+     "pref_sm_015004_cloud_03_lv3 (2)",
+     "pref_sm_015004_cloud_03_lv3 (3)",
+     "pref_sm_015004_cloud_03_lv3 (4)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_screen_cloud_show7": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "pref_sm_015004_cloud_03_lv3 (4)",
+     "pref_sm_015004_cloud_03_lv3 (5)",
+     "pref_sm_015004_cloud_03_lv3 (6)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_screen_cloud_show3": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "pref_sm_015004_cloud_03_lv3 (3)",
+     "pref_sm_015004_cloud_03_lv3 (4)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_xuanwo": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "black",
+     "cloud",
+     "cloud2",
+     "star1"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_xuanwo_02": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "cloud (2)",
+     "cloud2 (2)",
+     "star1 (2)",
+     "wave (1)_wenli (4)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_xuanwo_03": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "black",
+     "cloud",
+     "cloud2",
+     "star1"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_bg": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "black",
+     "cloud",
+     "cloud2",
+     "pref_sm_015004_cloud_01_lv3",
+     "pref_sm_015004_cloud_03_lv3 (1)",
+     "pref_sm_015004_cloud_04_lv3 (1)",
+     "pref_sm_015004_cloud_05_lv3",
+     "river",
+     "river2",
+     "star1",
+     "wave (1)_wenli (2)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_bg_show1": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "black",
+     "cloud (1)",
+     "cloud2 (1)",
+     "star1 (1)",
+     "wenli_01"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_bg_show2": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "black (1)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_bg_show5": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "black (1)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_bg_show3": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "black_smoke"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_bg_show4": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "black_smoke"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_cloud_show5": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "pref_sm_015004_cloud_03_lv3 (1)",
+     "pref_sm_015004_cloud_03_lv3 (2)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_cloud_show6": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "pref_sm_015004_cloud_03_lv3 (2)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_selfdissolve": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "lob_015004_lv3"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_zhuanchang_show5": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "pref_sm_015004_cloud_03_lv3 (3)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_zhuanchang_show6": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "pref_sm_015004_cloud_03_lv3 (3)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_trail_world": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "glow"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_trail_show4": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "GameObject_heidi_show3 (2)",
+     "GameObject_heidi_show3 (3)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_trail_show5": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "GameObject_heidi_show3 (2)",
+     "GameObject_heidi_show3 (3)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_sce_lobby_015004_devil_trail_show4_02": [
+   {
+    "model": "pm0150_04_y_devil",
+    "fbx": "Scenes\\pref_sce_lobby_015004_Y_devil_lv3\\pref_sce_lobby_015004_Y_devil_lv3.fbx",
+    "meshes": [
+     "GameObject_heidi_show3 (2)",
+     "GameObject_heidi_show3 (3)"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_lobby_057103_efftct01_lv2": [
+   {
+    "model": "pm0571_03_yukata",
+    "fbx": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_057103_zoroark_lv3\\pref_char_lob_057103_zoroark_lv3.fbx",
+    "meshes": [
+     "rig_lob_057103_lv3"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_lobby_088802_12_LV3": [
+   {
+    "model": "pm0888_02_pirate",
+    "fbx": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_088802_12_zacian_lv3\\pref_char_lob_088802_12_zacian_lv3.fbx",
+    "meshes": [
+     "1(Clone)",
+     "rig_lob_088802_lv3"
+    ],
+    "nested": []
+   }
+  ],
+  "pref_fx_lob_000600_52_charizard_tail_fire_wpx": [
+   {
+    "model": "pm0006_52_lob",
+    "fbx": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_0006_52_charizard_lv3\\pref_char_lob_0006_52_charizard_lv3.fbx",
+    "meshes": [
+     "CharmanderTail",
+     "CharmanderTail_02"
+    ],
+    "nested": []
+   }
+  ]
+ }
+}

@@ -122,7 +122,7 @@ function PaletteRow({ entry: p, layer, current, skin, onPalette }: {
               key={zones[0]}
               className={'zone' + (hex === p.zones[current - 1]?.toLowerCase() ? ' active' : '')}
               style={{ background: hex }}
-              title={`Palette colour ${zones[0]}${zones.length > 1 ? ` (also ${zones.slice(1).join(', ')})` : ''}`}
+              title={p.own && zones[0] > p.own ? `Custom: ${p.zoneLabels?.[zones[0] - 1] ?? `colour ${zones[0]}`} (not from this model)` : `Palette colour ${zones[0]}${zones.length > 1 ? ` (also ${zones.slice(1).join(', ')})` : ''}`}
               aria-label={`${name}: palette ${zones[0]}`}
               onClick={() => { onPalette(p, layer, zones[0]); setOpen(false); }}
             />

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { loadGames } from '../data';
 import type { GameSummary } from '../types';
 
-const KIND_LABEL: Record<string, string> = { pokemon: 'Pokémon', trainer: 'Trainers', object: 'Items' };
+const KIND_LABEL: Record<string, string> = { pokemon: 'Pokémon', trainer: 'Trainers', object: 'Items', map: 'Maps', prop: 'Props' };
 
 /** Landing page: one card per game (domain). Nothing but the tiny games.json is loaded here. */
 export function Games() {

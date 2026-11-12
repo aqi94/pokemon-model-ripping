@@ -43,3 +43,35 @@ export function saveExportOptions(o: ExportOptions) {
 }
 
 export const MAX_EXPORT_PX = 8192;
+
+export type ExportFormat = 'png' | 'gif' | 'stl' | 'glb';
+
+/** GLB export settings (Export panel; `scene/glbExport.ts` edits the original file with them). */
+export interface GlbExportOptions {
+  /** all = the model's own clips (+ every clip of the pack the playing clip comes from); current = the playing clip; none. */
+  animations: 'all' | 'current' | 'none';
+  /** Drop parts hidden in the view (and their unused textures). */
+  removeHidden: boolean;
+  /** Merge the held item(s) shown in the view onto their bones. */
+  heldItems: boolean;
+  /** Longest texture side; 0 = full size. */
+  maxTexture: 0 | 2048 | 1024 | 512;
+  /** Keep the view's skin / variant / palette colours instead of the stock materials. */
+  liveColours: boolean;
+}
+
+export const DEFAULT_GLB: GlbExportOptions = { animations: 'all', removeHidden: true, heldItems: true, maxTexture: 0, liveColours: true };
+
+const GLB_KEY = 'glbExport';
+
+export function loadGlbOptions(): GlbExportOptions {
+  try {
+    const raw = localStorage.getItem(GLB_KEY);
+    if (raw) return { ...DEFAULT_GLB, ...JSON.parse(raw) };
+  } catch { /* storage unavailable */ }
+  return { ...DEFAULT_GLB };
+}
+
+export function saveGlbOptions(o: GlbExportOptions) {
+  try { localStorage.setItem(GLB_KEY, JSON.stringify(o)); } catch { /* storage unavailable */ }
+}

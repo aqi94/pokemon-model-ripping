@@ -9,6 +9,8 @@ export interface PlaybackState {
   frameCount: number;
   paused: boolean;
   timeScale: number;
+  /** Whether the current clip repeats. */
+  loop: boolean;
 }
 
 export const TIME_SCALES = [0.25, 0.5, 1, 2];
@@ -28,6 +30,24 @@ export class AnimationController {
     infos.forEach((i) => this.infos.set(i.name, i));
   }
 
+  /** User loop choice for every clip; null = each clip's own flag from the manifest. */
+  static loopOverride: boolean | null = null;
+  private wantsLoop(name: string | null) {
+    return AnimationController.loopOverride ?? (name ? this.infos.get(name)?.loop !== false : true);
+  }
+  private applyLoop(a: THREE.AnimationAction, on: boolean) {
+    if (on) { a.setLoop(THREE.LoopRepeat, Infinity); a.clampWhenFinished = false; }
+    else { a.setLoop(THREE.LoopOnce, 1); a.clampWhenFinished = true; }
+  }
+  /** Set looping for all clips (applies to the playing one at once). */
+  setLoop(on: boolean) {
+    AnimationController.loopOverride = on;
+    const a = this.action;
+    if (!a) return;
+    this.applyLoop(a, on);
+    if (on && !this.paused) { a.paused = false; a.play(); }
+  }
+
   has(name: string) { return this.clips.has(name); }
 
   play(name: string) {
@@ -38,13 +58,7 @@ export class AnimationController {
     const next = this.mixer.clipAction(clip);
     next.reset();
     next.enabled = true;
-    if (info?.loop === false) {
-      next.setLoop(THREE.LoopOnce, 1);
-      next.clampWhenFinished = true;
-    } else {
-      next.setLoop(THREE.LoopRepeat, Infinity);
-      next.clampWhenFinished = false;
-    }
+    this.applyLoop(next, this.wantsLoop(name));
     if (prev && prev !== next) prev.stop();
     next.paused = this.paused;
     next.play();
@@ -86,6 +100,25 @@ export class AnimationController {
     this.mixer.timeScale = ts;
   }
 
+  /** Current clip's duration (s) and whether it plays once; null without a clip. */
+  clipTiming(): { duration: number; once: boolean } | null {
+    const a = this.action;
+    return a ? { duration: a.getClip().duration, once: a.loop === THREE.LoopOnce } : null;
+  }
+
+  /** Pause and pose the current clip at `t` seconds (frame-exact exports). */
+  seekTime(t: number) {
+    const a = this.action;
+    if (!a) return;
+    a.enabled = true;
+    a.paused = true;
+    a.time = Math.min(a.getClip().duration, Math.max(0, t));
+    this.paused = true;
+    const ts = this.mixer.timeScale;
+    this.mixer.update(0);
+    this.mixer.timeScale = ts;
+  }
+
   state(): PlaybackState {
     const a = this.action;
     const info = this.current ? this.infos.get(this.current) : undefined;
@@ -93,6 +126,6 @@ export class AnimationController {
     const time = a ? Math.min(dur, Math.max(0, a.time)) : 0;
     const fcount = info?.frameCount ?? 0;
     const frame = dur > 0 ? Math.round((time / dur) * Math.max(0, fcount - 1)) : 0;
-    return { clip: this.current, time, duration: dur, frame, frameCount: fcount, paused: this.paused, timeScale: this.timeScale };
+    return { clip: this.current, time, duration: dur, frame, frameCount: fcount, paused: this.paused, timeScale: this.timeScale, loop: this.wantsLoop(this.current) };
   }
 }

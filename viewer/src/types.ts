@@ -1,7 +1,7 @@
 export interface IndexModel {
   game: string;
   id: string;
-  kind: 'pokemon' | 'trainer' | 'object' | string;
+  kind: 'pokemon' | 'trainer' | 'object' | 'map' | 'prop' | string;
   displayName: string;
   clips: number;
   variantGroups: string[];
@@ -37,12 +37,18 @@ export interface PaletteEntry { label: string; materials: string[]; divide: numb
   zoneLabels?: string[];
   /** The palette's layer 1 is the skin: the viewer drives its zone from the selected skin tone variant. */
   skinLink?: boolean;
+  /** 1-based mask layers (besides 1) that point at a skin zone and follow the skin tone too. */
+  skinLayers?: number[];
   /** Offered zones in order (0 = same zone as the skin, labelled `noneLabel`); default = every zone but the first. */
-  offer?: number[]; noneLabel?: string }
+  offer?: number[]; noneLabel?: string;
+  /** Zones 1..own are the model's own table; later zones are borrowed colours (the player's hair colours), labelled in `zoneLabels`. */
+  own?: number }
 export interface PartOption { id: string; label: string; default: boolean; nodes: string[]; palettes?: PaletteEntry[];
   /** Hidden-by-default beard meshes of this face: the Appearance section offers a Facial hair toggle. */
   facialHair?: string[] }
 export interface PartGroup { name: string; label: string; options: PartOption[] }
+/** A jaw bone and its widest pose as a local rotation delta from bind (xyzw), from the clips (UNITE). */
+export interface JawInfo { bone: string; open: [number, number, number, number]; degrees: number }
 export interface PropInfo { bone: string; side: string; clips: string[] }
 export interface Manifest {
   manifestVersion: number;
@@ -60,7 +66,7 @@ export interface Manifest {
   /** Z-A Holocast material sets (`holo`, `holo_red`): hologram presets from the data */
   holocast?: HolocastPreset[];
   stats: { joints: number; meshes: number; triangles: number; textures: number; clips: number; glbBytes: number };
-  extras?: { dex?: number; form?: string; species?: string };
+  extras?: { dex?: number; form?: string; species?: string; jaws?: JawInfo[]; particlesNotInRip?: string[]; particles?: import('./scene/particles').ParticleRecord[] };
 }
 
 /** A calibrated gameplay screenshot (refs/<game>/index.json, written by tools/lightrefs/build_presets.py). */

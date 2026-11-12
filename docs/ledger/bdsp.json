@@ -1,0 +1,404 @@
+{
+ "game": "bdsp",
+ "meta": {
+  "game": "bdsp",
+  "scanned": "seeded by hand",
+  "source": "docs/bdsp_ignored_values.md (2105 trainer materials: battle 917, objects 222, field 966)",
+  "tool": "none yet: audit-fields does not cover Unity bundles; counts are materials unless stated"
+ },
+ "entries": [
+  {
+   "key": "param:unity:float:_SpecularIntensity",
+   "format": "unity-material",
+   "where": "Material m_Floats `_SpecularIntensity` (+ `_SpecularCosinePower`, `_SpecularColor`) on non-`_ENVMAP_ON` materials",
+   "status": "unread",
+   "values": [
+    [
+     "2.0",
+     1539
+    ],
+    [
+     "0.75",
+     234
+    ],
+    [
+     "4.0",
+     50
+    ],
+    [
+     "7.0",
+     38
+    ],
+    [
+     "1.0",
+     29
+    ]
+   ],
+   "distinct": 5,
+   "instances": null,
+   "models": null,
+   "examples": [
+    "ob0204_00/ball=7.0",
+    "tr0047_00/scarf=16"
+   ],
+   "hypothesis": "map into extras.shading specular for all materials",
+   "notes": "561 of 2105 mats are not (2.0, 10.0); power 10 x1536, 50 x246, up to 256; colour non-white on 428 mats ((0.7,0.8,1.0) x163 hair). Strongest: Poke Balls ob0201..ob0213 `ball` 7/40, tr0047_00 scarf 16/256, pc0002_18 metal 12.7/3. Risk high (balls/props matte vs game).",
+   "seen": true
+  },
+  {
+   "key": "param:unity:float:_EmissionColorIntensity",
+   "format": "unity-material",
+   "where": "Material `_EmissionColor` x `_EmissionColorIntensity` (+ `_uti` R mask, `_EmissionOnTime/_EmissionOffTime`)",
+   "status": "unread",
+   "values": [
+    [
+     "0",
+     1275
+    ],
+    [
+     "1",
+     270
+    ],
+    [
+     "2",
+     258
+    ],
+    [
+     "3",
+     173
+    ]
+   ],
+   "distinct": 4,
+   "instances": null,
+   "models": null,
+   "examples": [
+    "ob1004_00/light=12",
+    "tr0039_00/wear2=10"
+   ],
+   "hypothesis": "emissive = colour x intensity masked by _uti R",
+   "notes": "830 mats > 0; eyes 2-3 with colour (0.81,0.87,0.90); lamps/badges up to 12-16 (ob1004_00 light 12, tr0039_00 wear2 10 yellow, tr1055_00 lens 9.5). Colour alpha 0 on 682 / 1 on 235 battle mats (meaning unknown). On/Off time 0.2/0.4 on 16 mats suggests blinking.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:float:_Reflectivity",
+   "format": "unity-material",
+   "where": "Material `_Reflectivity` > 0.3 and `_ReflectionBias` on `_ENVMAP_ON` materials",
+   "status": "unread",
+   "values": [
+    [
+     "0.2",
+     74
+    ],
+    [
+     "0.05",
+     68
+    ],
+    [
+     "0.1",
+     24
+    ],
+    [
+     "0.3",
+     23
+    ],
+    [
+     "0.4",
+     13
+    ],
+    [
+     "0.92",
+     1
+    ]
+   ],
+   "distinct": 6,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "envIntensity ~ reflectivity both ways, roughness ~ _ReflectionBias",
+   "notes": "Importer only scales down below 0.15, so a 0.92 mirror (tr1046_00 glass) and a 0.2 metal get the same boost. `_ReflectionBias` (blur mip) 0 x91, 0.77 x62, 3 x34, 4 x23, 5 x7; we use fixed roughness 0.2. Risk med-high.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:flag:_ALPHATEST_ON",
+   "format": "unity-material",
+   "where": "keyword `_ALPHATEST_ON` + float `_Cutoff` / `_AlphaClip`",
+   "status": "unread",
+   "values": [
+    [
+     "on",
+     64
+    ]
+   ],
+   "distinct": 1,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "alpha MASK with _Cutoff when no _ALPHABLEND_ON",
+   "notes": "51 of 64 also `_ALPHABLEND_ON` (BLEND). Pure cutout (opaque with holes in our output): tr0030_00 wear, tr1055_00/tr1056_00 wear/ski, tr1068_00, tr1072_00, tr1088_00 wear (`_Cutoff` 0.5). 32 have `_Cutoff` 0.",
+   "seen": true
+  },
+  {
+   "key": "mesh:vertex_colors",
+   "format": "mesh",
+   "where": "Mesh m_Colors (vertex colour RGB grey + alpha)",
+   "status": "unknown_meaning",
+   "values": [
+    [
+     "varies",
+     135
+    ],
+    [
+     "constant",
+     51
+    ]
+   ],
+   "distinct": 2,
+   "instances": null,
+   "models": 189,
+   "examples": [],
+   "hypothesis": "baked AO / shade multiplier",
+   "notes": "Dropped. 186/189 battle meshes carry colours, 135 vary (grey RGB std up to 0.3; alpha varies on pc0001_10/_11/_14/_17). Looks like baked occlusion; alpha maybe a mask. Unknown shader use.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:color:_RimColor",
+   "format": "unity-material",
+   "where": "Material `_RimColor/_RimColorShadow/_RimPower/_RimScale/_RimStrength/_RimBlendWeight`",
+   "status": "unread",
+   "values": [
+    [
+     "white",
+     1552
+    ],
+    [
+     "black",
+     492
+    ]
+   ],
+   "distinct": 2,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "feed into extras.shading.rim*",
+   "notes": "Black on all 220 eyes (rim off). `_RimPower` 8 x1548, 1.5 x226 (broad); `_RimScale` 0.5 x1210 up to 4.12; `_RimStrength` 8 x2020; `_RimBlendWeight` 0.3 x1311. `USE_RIM_MASK_TEX` only on tr1021 Body00.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:texture:_ComplexTex",
+   "format": "unity-material",
+   "where": "`_ComplexTex` (`*_uti`) channels R/G/B/A",
+   "status": "unknown_meaning",
+   "values": [
+    [
+     "decoded, unused",
+     805
+    ]
+   ],
+   "distinct": 1,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "R emission mask, G gloss mask, B AO",
+   "notes": "A = 1 everywhere; B mean 0.91 dipping in creases (AO?); R sparse on eyes (glint; R max > 0.5 in 126/197 textures whose material has emission) = emission mask?; G sparse on cloth/hats/hair = specular/gloss mask? Guesses from statistics only.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:float:_Mode",
+   "format": "unity-material",
+   "where": "Blend state `_Mode 1`, `_SrcBlend 5`, `_DstBlend 10`, `_ZWrite 0`, render queue 3000",
+   "status": "unread",
+   "values": [
+    [
+     "_Mode 1",
+     34
+    ],
+    [
+     "queue 3000 + ZWrite 0",
+     28
+    ]
+   ],
+   "distinct": 2,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "depthWrite off when _ZWrite 0",
+   "notes": "We use depth-writing BLEND for all; 715 `_ALPHABLEND_ON` mats use `_Mode 0` (opaque queue). No additive. Draw-order artefacts on glasses/shadow planes possible.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:float:_AnisLevelH",
+   "format": "unity-material",
+   "where": "Hair anisotropy `_AnisLevelH/_AnisLevelV`",
+   "status": "unread",
+   "values": [
+    [
+     "0.15",
+     6
+    ],
+    [
+     "0.38",
+     1
+    ],
+    [
+     "0.2",
+     1
+    ]
+   ],
+   "distinct": 3,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "",
+   "notes": "`_AnisLevelV` 11.12 only on tr0047_00 scarf; `_AnisotropicLightingEnable` 0 everywhere it exists.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:float:_MaskShadowBlendWeight",
+   "format": "unity-material",
+   "where": "`_MaskShadowBlendWeight/_MaskShadowExponential`, `_Subsurface*`",
+   "status": "unknown_meaning",
+   "values": [
+    [
+     "0",
+     712
+    ],
+    [
+     "0.5",
+     300
+    ],
+    [
+     "1",
+     1083
+    ]
+   ],
+   "distinct": 3,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "",
+   "notes": "`_MaskShadowExponential` 4 x2083, 16 x4. `_SubsurfaceBlendWeight` < 1 on 5 mats; `_SubsurfaceAdditionalColor` non-black on 12.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:float:_FresnelPower",
+   "format": "unity-material",
+   "where": "`_FresnelPower`",
+   "status": "unread",
+   "values": [
+    [
+     "4",
+     1678
+    ]
+   ],
+   "distinct": 1,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "",
+   "notes": "0.1..8; env mats 4 x118, 2 x66, 8 x14, 0.6 x7 (tr1046 glass).",
+   "seen": true
+  },
+  {
+   "key": "param:unity:color:_Color",
+   "format": "unity-material",
+   "where": "`_Color` albedo tint, `_ColorIntensity`",
+   "status": "unread",
+   "values": [
+    [
+     "non-white",
+     6
+    ],
+    [
+     "intensity != 1",
+     27
+    ]
+   ],
+   "distinct": 2,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "",
+   "notes": "0.5 grey on ob2000_00 box/box_icon; gold (0.67,0.55,0.19) on tr2009/fc2009/fc2015/fc2023 metal. Intensity 0.9 x16, 0.95 x8, 1.1 x3.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:float:_BumpScale",
+   "format": "unity-material",
+   "where": "`_BumpScale`",
+   "status": "unread",
+   "values": [
+    [
+     "0.5",
+     39
+    ],
+    [
+     "0.8",
+     9
+    ],
+    [
+     "0",
+     10
+    ]
+   ],
+   "distinct": 3,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "",
+   "notes": "58 mats != 1 (ob1009_09 badges 0.5 / 0); 59 mats have no `_BumpTex`.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:color:_ShootingLightColor",
+   "format": "unity-material",
+   "where": "`_ShootingLightColor` / `_ShootingLightOffset`",
+   "status": "constant",
+   "values": [
+    [
+     "(0.2, 0.15, 0.1) / (5, -5, 0)",
+     346
+    ]
+   ],
+   "distinct": 1,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "",
+   "notes": "Identical on all 346 mats that have it: a fixed battle fill light. Not modelled.",
+   "seen": true
+  },
+  {
+   "key": "shader:cull",
+   "format": "shader",
+   "where": "Cull / double-sided state",
+   "status": "unknown_meaning",
+   "values": [],
+   "distinct": 0,
+   "instances": null,
+   "models": null,
+   "examples": [],
+   "hypothesis": "",
+   "notes": "Not in the material (shader state; shader bundle cab-1dc8... missing from the rip). Only `_CullMode 2` on the 8 Pokemon-shader mats. double_sided never set.",
+   "seen": true
+  },
+  {
+   "key": "param:unity:color:_ConstantColorSd0",
+   "format": "unity-material",
+   "where": "Pokemon-shader materials (tr1021_00 bodies, ob1017/1018, pc_parts Eye_*): `_ConstantColorSd0`, `_Layer1*`, `_EmissionMaskUse`, `_SpecularScale/_SpecularPower`",
+   "status": "unread",
+   "values": [
+    [
+     "(0.875, 0.827, 0.702)",
+     1
+    ]
+   ],
+   "distinct": 1,
+   "instances": null,
+   "models": 8,
+   "examples": [],
+   "hypothesis": "",
+   "notes": "Only `_ColorBaseU/V` are read on these.",
+   "seen": true
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "slug": "lobby_gardevoir_01",
+ "scene": "lobby",
+ "game": "unite",
+ "source": "youtube",
+ "video": {
+  "id": "s2ra5myIAmc",
+  "url": "https://www.youtube.com/watch?v=s2ra5myIAmc",
+  "title": "Pokemon Unite - Gameplay (No Commentary)",
+  "channel": "AyDaGamer",
+  "platform": "switch1",
+  "formatId": "137",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "vcodec": "avc1.640028"
+ },
+ "timestamp": 19.0,
+ "timecode": "00:00:19.000",
+ "grabbedAt": "2026-11-01T22:28:08Z",
+ "image": {
+  "file": "lobby_gardevoir_01.png",
+  "width": 1920,
+  "height": 1080,
+  "scaledFrom": [
+   1920,
+   1080
+  ]
+ },
+ "tags": {
+  "timeOfDay": "any",
+  "weather": "none",
+  "location": "",
+  "indoor": true,
+  "lightType": "studio"
+ },
+ "subject": {
+  "kind": "pokemon",
+  "model": "pm0282_00_lob",
+  "name": "Gardevoir",
+  "confidence": "medium"
+ },
+ "clipGuess": "idle",
+ "context": "field",
+ "quality": {
+  "ui": true,
+  "motionBlur": false,
+  "dof": "none",
+  "fade": false
+ },
+ "notes": ""
+}

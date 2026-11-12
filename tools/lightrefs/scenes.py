@@ -71,7 +71,29 @@ ZA_SCENES: list[Scene] = [
           _NPCS + _POKEMON, ("sewers", "underground", "Lumiose Sewers"), "dim, greenish/warm lamps, strong falloff"),
 ]
 
-SCENES: dict[str, dict[str, Scene]] = {"za": {s.id: s for s in ZA_SCENES}}
+# UNITE: no light rig in any readable file (docs/ledger/unite.json lighting:rig), so presets come from footage.
+# Lobby/result shots use the `_lob` models (lobby clips: `idle`), battle shots the battle models (`idle`, `run`).
+_UNITE_LOBBY = ("pm0025_00_lob:Pikachu", "pm0003_00_lob:Venusaur", "pm0006_00_lob:Charizard",
+                "pm0009_00_lob:Blastoise", "pm0094_00_lob:Gengar", "pm0700_00_lob:Sylveon")
+_UNITE_BATTLE = ("pm0025_00:Pikachu", "pm0006_00:Charizard", "pm0448_00:Lucario",
+                 "pm0094_00:Gengar", "pm0143_00:Snorlax", "pm0700_00:Sylveon", "pm0133_00:Eevee")
+
+UNITE_SCENES: list[Scene] = [
+    Scene("lobby", "UNITE lobby / holowear showcase", "any", "none", True, "studio", "indoor", ("studio",),
+          _UNITE_LOBBY, ("Pokemon UNITE holowear preview", "Pokemon UNITE lobby", "unite battle prep"),
+          "Pokemon shown large on the lobby stage or the holowear/Pokemon preview screen; avoid UI overlays"),
+    Scene("battle_theia", "UNITE battle, Theia Sky Ruins (day)", "day", "sunny", False, "sun", "outdoor", ("studio", "day"),
+          _UNITE_BATTLE, ("Pokemon UNITE Theia Sky Ruins gameplay", "Pokemon UNITE ranked gameplay no commentary"),
+          "top-down battle camera; pick frames where the Pokemon is large (zoomed replays, spawn area) and not in an attack effect"),
+    Scene("battle_auroma", "UNITE battle, Auroma Park", "day", "sunny", False, "sun", "outdoor", ("studio", "day"),
+          _UNITE_BATTLE, ("Pokemon UNITE Auroma Park gameplay",),
+          "Auroma Park quick/unite battles; same framing rules as battle_theia"),
+    Scene("result", "UNITE results / MVP screen", "any", "none", True, "studio", "indoor", ("studio",),
+          _UNITE_LOBBY + _UNITE_BATTLE, ("Pokemon UNITE MVP screen", "Pokemon UNITE results screen"),
+          "post-match winners/MVP pose; the Pokemon fills the frame; check which model (lobby or battle) matches"),
+]
+
+SCENES: dict[str, dict[str, Scene]] = {"za": {s.id: s for s in ZA_SCENES}, "unite": {s.id: s for s in UNITE_SCENES}}
 
 
 def load_profiles() -> dict:

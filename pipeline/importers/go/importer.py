@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import os
 import re
+import shutil
 import tempfile
 
 import numpy as np
@@ -24,17 +25,26 @@ REST_TOL = 1e-4
 TRANSLATION_DEPTH = 2
 
 
-def dump_fbx(fbx: str, out_dir: str | None = None) -> tuple[dict, dict]:
-    """Run Blender on `fbx`; returns (metadata, arrays)."""
+def dump_fbx(fbx: str, out_dir: str | None = None, meshes: str | None = None, scale: float = 1.0,
+             prefix: str = "gofbx_") -> tuple[dict, dict]:
+    """Run Blender on `fbx`; returns (metadata, arrays). `meshes` = regex: keep only matching mesh objects (and the
+    armature deforming most of them); `scale` = extra import scale (files whose declared unit is wrong). Without
+    `out_dir` the dump goes to a temp folder that is removed afterwards (everything is read into memory)."""
     from ...blender_runner import BLENDER_DIR, run_script
 
-    out_dir = out_dir or tempfile.mkdtemp(prefix="gofbx_")
-    meta = run_script(os.path.join(BLENDER_DIR, "dump_fbx.py"), [os.path.abspath(fbx), os.path.abspath(out_dir)], os.path.join(out_dir, "result.json"))
-    if not meta.get("ok"):
-        raise RuntimeError(f"Blender FBX dump failed for {fbx}: {meta.get('error', '')[-800:]}")
-    with np.load(os.path.join(out_dir, "dump.npz")) as z:
-        arrays = {k: z[k] for k in z.files}
-    return meta, arrays
+    temp = out_dir is None
+    out_dir = out_dir or tempfile.mkdtemp(prefix=prefix)
+    try:
+        env = {k: v for k, v in (("DUMP_FBX_MESHES", meshes or ""), ("DUMP_FBX_SCALE", repr(scale) if scale != 1.0 else "")) if v} or None
+        meta = run_script(os.path.join(BLENDER_DIR, "dump_fbx.py"), [os.path.abspath(fbx), os.path.abspath(out_dir)], os.path.join(out_dir, "result.json"), env=env)
+        if not meta.get("ok"):
+            raise RuntimeError(f"Blender FBX dump failed for {fbx}: {meta.get('error', '')[-800:]}")
+        with np.load(os.path.join(out_dir, "dump.npz")) as z:
+            arrays = {k: z[k] for k in z.files}
+        return meta, arrays
+    finally:
+        if temp:
+            shutil.rmtree(out_dir, ignore_errors=True)
 
 
 def _find_texture(folder: str, name: str | None) -> str | None:
@@ -113,7 +123,10 @@ def _clip_tracks(joints: list[dict], arrays: dict, key: str, frames: int, fps: f
     return tracks
 
 
-def model_from_dump(meta: dict, arrays: dict, folder: str, model_id: str, display_name: str, kind: str = "trainer", game: str = "go") -> Model:
+def model_from_dump(meta: dict, arrays: dict, folder: str, model_id: str, display_name: str, kind: str = "trainer", game: str = "go",
+                    colours: bool = False) -> Model:
+    """`colours`: keep the dump's vertex colours on the primitives (`Primitive.colors`; the caller decides which keep
+    them, since lit meshes may carry shader data in that layer)."""
     warnings: list[str] = []
     skeleton = None
     if meta.get("joints"):
@@ -176,6 +189,8 @@ def model_from_dump(meta: dict, arrays: dict, folder: str, model_id: str, displa
                 normals=arrays[pre + "nrm"].astype(np.float32),
                 uvs=[arrays[pre + "uv"].astype(np.float32) * flip_v[0] + flip_v[1]],
             )
+            if colours and (pre + "col") in arrays:
+                prim.colors = np.clip(arrays[pre + "col"].astype(np.float32), 0.0, 1.0)
             if s.get("skinned") and (pre + "joints") in arrays:
                 prim.joints = arrays[pre + "joints"].astype(np.uint16)
                 prim.weights = arrays[pre + "weights"].astype(np.float32)
