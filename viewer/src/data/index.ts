@@ -3,13 +3,17 @@ import type { GameIndex, GameSummary, RefIndex } from '../types';
 // Only the game (domain) being viewed is ever loaded; switching domains drops the previous cache entry.
 const cache = new Map<string, Promise<GameIndex>>();
 const BASE = import.meta.env.BASE_URL;
-const GLB_BASE = (import.meta.env.VITE_GLB_BASE as string | undefined)?.replace(/\/$/, '');
-/** The public site (tools/deploy_pages.py sets VITE_GLB_BASE): one game only, no game switching, no GLB export (user decisions). */
-export const PUBLIC_BUILD = !!GLB_BASE;
+/** Public site (tools/deploy_pages.py): VITE_GLB_BASES = JSON {game: base URL of that game's GLB dataset}. */
+const GLB_BASES: Record<string, string> = (() => {
+  try { return JSON.parse((import.meta.env.VITE_GLB_BASES as string | undefined) ?? '{}'); } catch { return {}; }
+})();
+/** The public site hides GLB export (user decision); it serves several games (switching allowed, 2026-11-11). */
+export const PUBLIC_BUILD = Object.keys(GLB_BASES).length > 0;
 
 /** URL of a file under out/ (`za/<id>/manifest.json`). GLBs come from VITE_GLB_BASE (GitHub release assets) when set. */
 export function modelAsset(rel: string): string {
-  if (GLB_BASE && rel.endsWith('.glb')) return `${GLB_BASE}/${rel.split('/').join('__')}`;
+  const base = GLB_BASES[rel.split('/')[0]];
+  if (base && rel.endsWith('.glb')) return `${base.replace(/\/$/, '')}/${rel.split('/').join('__')}`;
   return `${BASE}models/${rel}`;
 }
 

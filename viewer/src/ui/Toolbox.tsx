@@ -23,7 +23,7 @@ interface Props {
   onRefTransform: () => void;
 }
 
-// GLB is left out of the public build (VITE_GLB_BASE set): user decision.
+// GLB is left out of the public build (VITE_GLB_BASES set): user decision.
 const EXPORTS: [ExportFormat, string][] = [
   ['png', 'Export PNG image'], ['gif', 'Export animated GIF of the current clip'],
   ['stl', 'Export STL for 3D printing'], ['glb', 'Export GLB model (edited to match the view)'],

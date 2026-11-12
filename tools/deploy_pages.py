@@ -1,7 +1,7 @@
-"""Publish the viewer + Z-A models to GitHub Pages (gh-pages branch) with GLBs on a Hugging Face dataset repo (CORS-enabled, free).
+"""Publish the viewer + Z-A and UNITE models to GitHub Pages (gh-pages branch) with GLBs on a Hugging Face dataset repo (CORS-enabled, free).
 
 Small files (games.json, index.json, manifests, thumbnails, app bundle) go in the Pages site;
-each model.glb is uploaded as `za__<id>__model.glb` to the HF dataset repo. Run from the repo root:
+each model.glb is uploaded as `<game>__<id>__model.glb` to the HF dataset repo. Run from the repo root:
     python tools/deploy_pages.py            # publish to GitHub Pages (default, --pages)
     python tools/deploy_pages.py --local    # build + serve using the local out/ folder only (no upload/push)
     python tools/deploy_pages.py --skip-release --skip-push   # stage + build the Pages site only
@@ -12,8 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'out'
 SITE = OUT / 'pages_site'          # out/ is git-ignored
-GAME = 'za'
-HF_REPO = 'pokemon-za-models'   # Hugging Face dataset repo under the logged-in user (`hf auth login`)
+GAMES = {'za': 'pokemon-za-models', 'unite': 'pokemon-unite-models'}   # game -> Hugging Face dataset repo under the logged-in user (`hf auth login`)
 
 
 def rmtree(path):
@@ -47,37 +46,37 @@ def main():
 
     from huggingface_hub import HfApi
     api = HfApi()
-    hf_id = f"{api.whoami()['name']}/{HF_REPO}"
-    glb_base = f'https://huggingface.co/datasets/{hf_id}/resolve/main'
-
-    index = json.loads((OUT / GAME / 'index.json').read_text(encoding='utf-8'))
-    ids = [m['id'] for m in index['models']]
+    user = api.whoami()['name']
+    hf_ids = {g: f'{user}/{r}' for g, r in GAMES.items()}
+    glb_bases = {g: f'https://huggingface.co/datasets/{h}/resolve/main' for g, h in hf_ids.items()}
 
     # 1. stage small model files
     rmtree(SITE)
     models = SITE / 'models'
-    (models / GAME).mkdir(parents=True)
-    games = json.loads((OUT / 'games.json').read_text(encoding='utf-8'))
-    (models / 'games.json').write_text(json.dumps({GAME: games[GAME]}, ensure_ascii=False), encoding='utf-8')
-    shutil.copy(OUT / GAME / 'index.json', models / GAME / 'index.json')
-    glbs = {}
-    for i in ids:
-        src = OUT / GAME / i
-        dst = models / GAME / i
-        dst.mkdir()
-        for name in ('manifest.json', 'thumb.webp'):
-            if (src / name).exists():
-                shutil.copy(src / name, dst / name)
-        glbs[f'{GAME}__{i}__model.glb'] = src / 'model.glb'
-    big = [n for n, p in glbs.items() if p.stat().st_size > 2_000_000_000]
+    models.mkdir(parents=True)
+    all_games = json.loads((OUT / 'games.json').read_text(encoding='utf-8'))
+    (models / 'games.json').write_text(json.dumps({g: all_games[g] for g in GAMES}, ensure_ascii=False), encoding='utf-8')
+    glbs = {g: {} for g in GAMES}
+    for GAME in GAMES:
+        (models / GAME).mkdir()
+        index = json.loads((OUT / GAME / 'index.json').read_text(encoding='utf-8'))
+        shutil.copy(OUT / GAME / 'index.json', models / GAME / 'index.json')
+        for i in [m['id'] for m in index['models']]:
+            src = OUT / GAME / i
+            dst = models / GAME / i
+            dst.mkdir()
+            for name in ('manifest.json', 'thumb.webp'):
+                if (src / name).exists():
+                    shutil.copy(src / name, dst / name)
+            glbs[GAME][f'{GAME}__{i}__model.glb'] = src / 'model.glb'
+    big = [n for d in glbs.values() for n, p in d.items() if p.stat().st_size > 2_000_000_000]
     if big:
         sys.exit(f'GLBs over the 2 GB release-asset limit: {big}')
     site_mb = sum(f.stat().st_size for f in SITE.rglob('*') if f.is_file()) / 1e6
-    glb_mb = sum(p.stat().st_size for p in glbs.values()) / 1e6
-    print(f'{len(ids)} models: site models/ {site_mb:.0f} MB, release GLBs {glb_mb:.0f} MB')
+    print(f'{sum(len(d) for d in glbs.values())} models: site models/ {site_mb:.0f} MB')
 
     # 2. build the viewer
-    env = dict(os.environ, VITE_BASE=f'/{repo}/', VITE_GLB_BASE=glb_base)
+    env = dict(os.environ, VITE_BASE=f'/{repo}/', VITE_GLB_BASES=json.dumps(glb_bases))
     run('npm', 'run', 'build', cwd=ROOT / 'viewer', env=env)
     dist = ROOT / 'viewer' / 'dist'
     for item in dist.iterdir():
@@ -90,22 +89,23 @@ def main():
     total_mb = sum(f.stat().st_size for f in SITE.rglob('*') if f.is_file()) / 1e6
     print(f'site total {total_mb:.0f} MB (Pages limit ~1000 MB)')
 
-    # 3. GLBs -> Hugging Face dataset (hardlinks under the asset names; unchanged files are skipped by hash)
+    # 3. GLBs -> Hugging Face datasets (hardlinks under the asset names; unchanged files are skipped by hash)
     if not args.skip_release:
-        api.create_repo(hf_id, repo_type='dataset', exist_ok=True)
-        stage = OUT / 'pages_release'
-        rmtree(stage); stage.mkdir()
-        for n, p in glbs.items():
-            try: os.link(p, stage / n)
-            except OSError: shutil.copy(p, stage / n)
-        api.upload_folder(repo_id=hf_id, repo_type='dataset', folder_path=str(stage), commit_message='Z-A GLBs')
-        print(f'uploaded {len(glbs)} GLBs to https://huggingface.co/datasets/{hf_id}')
+        for g, files in glbs.items():
+            api.create_repo(hf_ids[g], repo_type='dataset', exist_ok=True)
+            stage = OUT / f'pages_release_{g}'
+            rmtree(stage); stage.mkdir()
+            for n, p in files.items():
+                try: os.link(p, stage / n)
+                except OSError: shutil.copy(p, stage / n)
+            api.upload_folder(repo_id=hf_ids[g], repo_type='dataset', folder_path=str(stage), commit_message=f'{g} GLBs')
+            print(f'uploaded {len(files)} GLBs to https://huggingface.co/datasets/{hf_ids[g]}')
 
     # 4. push site to gh-pages (separate repo in out/pages_site; main is untouched)
     if not args.skip_push:
         run('git', 'init', '-q', '-b', 'gh-pages', cwd=SITE)
         run('git', 'add', '-A', '-f', cwd=SITE)
-        run('git', 'commit', '-q', '-m', 'Deploy Z-A viewer', cwd=SITE)
+        run('git', 'commit', '-q', '-m', 'Deploy viewer', cwd=SITE)
         run('git', 'push', '-f', remote, 'gh-pages', cwd=SITE)
         print(f'pushed; enable Pages (source gh-pages) once: https://github.com/{owner}/{repo}/settings/pages')
         print(f'site: https://{owner}.github.io/{repo}/')

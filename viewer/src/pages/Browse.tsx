@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { loadGameIndex, modelAsset, PUBLIC_BUILD } from '../data';
+import { loadGameIndex, modelAsset } from '../data';
 import type { GameIndex } from '../types';
 
 const KINDS = [['all', 'All'], ['pokemon', 'Pokémon'], ['trainer', 'Trainers'], ['object', 'Items'], ['map', 'Maps'], ['prop', 'Props']] as const;
@@ -37,7 +37,7 @@ export function Browse({ game }: { game: string }) {
   return (
     <div className="browse">
       <header>
-        {!PUBLIC_BUILD && <a className="btn small" href={import.meta.env.BASE_URL}>&#9664; Games</a>}
+        <a className="btn small" href={import.meta.env.BASE_URL}>&#9664; Games</a>
         <h1>{index?.name ?? game}</h1>
         <input className="text" placeholder="Search by name, id or dex #..." value={q} onChange={(e) => setQ(e.target.value)} />
         <div className="tabs">

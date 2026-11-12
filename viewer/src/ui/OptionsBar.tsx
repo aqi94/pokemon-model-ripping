@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { LightingPanel, type Options } from './OptionsSection';
 import { LightingSelect } from './LightingSelect';
-import { PUBLIC_BUILD } from '../data';
 
 interface Props {
   game: string;
@@ -19,7 +18,7 @@ export function OptionsBar({ game, gameName, title, options, onChange, panelsHid
   const toggleLight = () => setLightOpen((o) => { const n = !o; try { localStorage.setItem('lightOpen', n ? '1' : '0'); } catch { /* ignore */ } return n; });
   return (
     <header className="optionsbar">
-      {!PUBLIC_BUILD && <a className="btn small" href={import.meta.env.BASE_URL} title="All games">&#9664; Games</a>}
+      <a className="btn small" href={import.meta.env.BASE_URL} title="All games">&#9664; Games</a>
       <a className="btn small" href={`${import.meta.env.BASE_URL}${game}`} title="Thumbnail grid for this game">&#9638; {gameName || game}</a>
       <strong className="ob-title">{title}</strong>
       <span className="spacer" />
