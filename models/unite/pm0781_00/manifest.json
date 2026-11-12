@@ -1,0 +1,341 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0781_00",
+ "kind": "pokemon",
+ "displayName": "Dhelmise",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "attack1",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 2.9667,
+   "frameRate": 30.0,
+   "frameCount": 90,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 3,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 4,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 5,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 6,
+   "duration": 1.4,
+   "frameRate": 30.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a",
+   "index": 7,
+   "duration": 1.4667,
+   "frameRate": 30.0,
+   "frameCount": 45,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b1",
+   "index": 8,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b2",
+   "index": 9,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b3",
+   "index": 10,
+   "duration": 1.5,
+   "frameRate": 30.0,
+   "frameCount": 46,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 11,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a1",
+   "index": 12,
+   "duration": 0.4333,
+   "frameRate": 30.0,
+   "frameCount": 14,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a2",
+   "index": 13,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a3",
+   "index": 14,
+   "duration": 0.2333,
+   "frameRate": 30.0,
+   "frameCount": 8,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a4",
+   "index": 15,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a5",
+   "index": 16,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b",
+   "index": 17,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu1",
+   "index": 18,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu2",
+   "index": 19,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu3",
+   "index": 20,
+   "duration": 0.3667,
+   "frameRate": 30.0,
+   "frameCount": 12,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu4",
+   "index": 21,
+   "duration": 0.5,
+   "frameRate": 30.0,
+   "frameCount": 16,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu5",
+   "index": 22,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 23,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "m_fz~notex",
+   "label": "m fz~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "m_zhao",
+   "label": "m zhao",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_bat_0781dya_lv3",
+   "label": "rig bat 0781dya lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0781dyb_lv3",
+   "label": "rig bat 0781dyb lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 46,
+  "meshes": 4,
+  "triangles": 4478,
+  "textures": 4,
+  "clips": 24,
+  "droppedTracks": 0,
+  "glbBytes": 1597120
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_078100_dhelmise_lv3\\pref_char_bat_078100_dhelmise_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: m_fz/mat_fx_0781Dhelmise_fazheng_01_zjs",
+   "re-placed meshes from Blender's matrix to the FBX rest: m_fz, m_zhao",
+   "texture-less parts HOME could not colour (gate): m_fz/mat_fx_0781Dhelmise_fazheng_01_zjs (d=None, cover=None)"
+  ],
+  "vertexColourEffects": [
+   "mat_fx_0681_qiliu_yjp"
+  ],
+  "effectParts": [
+   "m_fz/mat_fx_0781Dhelmise_fazheng_01_zjs",
+   "m_zhao/mat_fx_0681_qiliu_yjp"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 781,
+  "skin": "00",
+  "holowear": "078100",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_078100_dhelmise_lv3",
+  "species": "pm0781",
+  "form": "00"
+ }
+}

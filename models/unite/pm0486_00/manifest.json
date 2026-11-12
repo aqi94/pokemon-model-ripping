@@ -1,0 +1,441 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0486_00",
+ "kind": "pokemon",
+ "displayName": "Regigigas",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 1,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk11",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk1slow",
+   "index": 2,
+   "duration": 2.6667,
+   "frameRate": 30.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 4,
+   "duration": 2.6667,
+   "frameRate": 30.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 5,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "runslow",
+   "index": 6,
+   "duration": 2.6667,
+   "frameRate": 30.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 7,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell11",
+   "index": 8,
+   "duration": 3.3,
+   "frameRate": 30.0,
+   "frameCount": 100,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell11slow",
+   "index": 9,
+   "duration": 6.6667,
+   "frameRate": 30.0,
+   "frameCount": 201,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell121",
+   "index": 10,
+   "duration": 2.5333,
+   "frameRate": 30.0,
+   "frameCount": 77,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell122",
+   "index": 11,
+   "duration": 5.0333,
+   "frameRate": 30.0,
+   "frameCount": 152,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell123",
+   "index": 12,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell141",
+   "index": 13,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell142",
+   "index": 14,
+   "duration": 11.0333,
+   "frameRate": 30.0,
+   "frameCount": 332,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell143",
+   "index": 15,
+   "duration": 0.4333,
+   "frameRate": 30.0,
+   "frameCount": 14,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell21",
+   "index": 16,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell22",
+   "index": 17,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell23",
+   "index": 18,
+   "duration": 0.9667,
+   "frameRate": 30.0,
+   "frameCount": 30,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell31",
+   "index": 19,
+   "duration": 1.9667,
+   "frameRate": 30.0,
+   "frameCount": 60,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell41",
+   "index": 20,
+   "duration": 1.2333,
+   "frameRate": 30.0,
+   "frameCount": 38,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell42",
+   "index": 21,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell43",
+   "index": 22,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell5",
+   "index": 27,
+   "duration": 2.3333,
+   "frameRate": 30.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell51",
+   "index": 26,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell511",
+   "index": 23,
+   "duration": 0.9667,
+   "frameRate": 30.0,
+   "frameCount": 30,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell512",
+   "index": 24,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell513",
+   "index": 25,
+   "duration": 0.8667,
+   "frameRate": 30.0,
+   "frameCount": 27,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell61",
+   "index": 28,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell71",
+   "index": 32,
+   "duration": 2.3,
+   "frameRate": 30.0,
+   "frameCount": 70,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell711",
+   "index": 29,
+   "duration": 0.4667,
+   "frameRate": 30.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell712",
+   "index": 30,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell713",
+   "index": 31,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell839",
+   "index": 33,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0486body_deng~notex",
+   "label": "rig bat 0486body deng~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_bat_0486body_deng_01~notex",
+   "label": "rig bat 0486body deng 01~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_bat_0486body_lv3",
+   "label": "rig bat 0486body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 38,
+  "meshes": 3,
+  "triangles": 6154,
+  "textures": 3,
+  "clips": 34,
+  "droppedTracks": 0,
+  "glbBytes": 2492948
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Regigigas\\pref_char_bat_048600_regigigas_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: rig_bat_0486body_deng/mat_fx_0486_deng_01; rig_bat_0486body_deng_01/mat_fx_0486_deng_02",
+   "texture-less parts HOME could not colour (gate): rig_bat_0486body_deng/mat_fx_0486_deng_01 (d=None, cover=None); rig_bat_0486body_deng_01/mat_fx_0486_deng_02 (d=None, cover=None)"
+  ],
+  "effectParts": [
+   "rig_bat_0486body_deng/mat_fx_0486_deng_01",
+   "rig_bat_0486body_deng_01/mat_fx_0486_deng_02"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 486,
+  "skin": "00",
+  "holowear": "048600",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_048600_regigigas_lv3",
+  "source": "marcy",
+  "species": "pm0486",
+  "form": "00"
+ }
+}

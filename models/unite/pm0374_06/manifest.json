@@ -1,0 +1,247 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0374_06",
+ "kind": "pokemon",
+ "displayName": "Beldum · skin 06",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "goback",
+   "index": 4,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 5,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 6,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 7,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 8,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 9,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b2",
+   "index": 10,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 13,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell21",
+   "index": 11,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell22",
+   "index": 12,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 14,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0374dy_lv3",
+   "label": "rig bat 0374dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 8,
+  "meshes": 1,
+  "triangles": 2082,
+  "textures": 13,
+  "clips": 15,
+  "droppedTracks": 0,
+  "glbBytes": 596408
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_037406_beldum_lv3\\pref_char_bat_037406_beldum_lv3.fbx"
+ ],
+ "extras": {
+  "cutoutMaterials": [
+   "mat_bat_0374body_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 374,
+  "skin": "06",
+  "holowear": "037406",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_037406_beldum_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_037400_beldum_lv3\\pref_char_bat_037400_beldum_lv3.fbx",
+  "species": "pm0374",
+  "form": "06"
+ }
+}

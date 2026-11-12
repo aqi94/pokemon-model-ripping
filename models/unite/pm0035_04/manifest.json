@@ -1,0 +1,236 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0035_04",
+ "kind": "pokemon",
+ "displayName": "Clefairy · skin 04",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    }
+   ]
+  },
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 2,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 3,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 4,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 5,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 6,
+   "duration": 1.8065,
+   "frameRate": 31.0,
+   "frameCount": 57,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 7,
+   "duration": 1.0667,
+   "frameRate": 30.0,
+   "frameCount": 33,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 11,
+   "duration": 2.0,
+   "frameRate": 1.0,
+   "frameCount": 3,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 8,
+   "duration": 0.7,
+   "frameRate": 30.0,
+   "frameCount": 22,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 9,
+   "duration": 1.1333,
+   "frameRate": 30.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 10,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_003504_lv3",
+   "label": "rig bat 003504 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 34,
+  "meshes": 1,
+  "triangles": 3490,
+  "textures": 13,
+  "clips": 12,
+  "droppedTracks": 0,
+  "glbBytes": 1062448
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_003504_clefairy_lv3\\pref_char_bat_003504_clefairy_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "inheritedClips": {
+   "from": "pref_char_bat_003500_clefairy_lv3",
+   "clips": [
+    "show03"
+   ],
+   "boundBones": 1.0
+  },
+  "dex": 35,
+  "skin": "04",
+  "holowear": "003504",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_003504_clefairy_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_003500_clefairy_lv3\\pref_char_bat_003500_clefairy_lv3.fbx",
+  "species": "pm0035",
+  "form": "04"
+ }
+}

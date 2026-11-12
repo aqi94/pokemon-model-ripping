@@ -1,0 +1,292 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0146_00",
+ "kind": "pokemon",
+ "displayName": "Moltres",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.2333,
+   "frameRate": 30.0,
+   "frameCount": 38,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 1.1667,
+   "frameRate": 30.0,
+   "frameCount": 36,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 4,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 5,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 6,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 7,
+   "duration": 0.7667,
+   "frameRate": 30.0,
+   "frameCount": 24,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 8,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a_2",
+   "index": 9,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 10,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a",
+   "index": 11,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu",
+   "index": 12,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 13,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stunface",
+   "index": 14,
+   "duration": 0.0,
+   "frameRate": 30.0,
+   "frameCount": 1,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0146dy_lv3",
+   "label": "rig bat 0146dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_fx_chibang",
+   "label": "rig bat fx chibang",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_fx_tou",
+   "label": "rig bat fx tou",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_fx_wei",
+   "label": "rig bat fx wei",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_fx_wenli",
+   "label": "rig bat fx wenli",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 66,
+  "meshes": 5,
+  "triangles": 3129,
+  "textures": 10,
+  "clips": 15,
+  "droppedTracks": 0,
+  "glbBytes": 1497800
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_014600_hero_moltres_lv3\\pref_char_bat_014600_hero_moltres_lv3.fbx"
+ ],
+ "extras": {
+  "vertexColourEffects": [
+   "mat_lob_fx_0146_chibangzhu"
+  ],
+  "effectParts": [
+   "rig_bat_fx_chibang/mat_lob_fx_0146_chibangzhu",
+   "rig_bat_fx_tou/mat_lob_fx_0146_tou2",
+   "rig_bat_fx_wei/mat_lob_fx_0146_wei",
+   "rig_bat_fx_wenli/mat_lob_fx_0146_wenli2"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -0.000115,
+     -0.487922,
+     4e-06,
+     0.872887
+    ],
+    "degrees": 58.4
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -28.7
+  },
+  "jawRestTracks": 1,
+  "dex": 146,
+  "skin": "00",
+  "holowear": "014600",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_014600_hero_moltres_lv3",
+  "species": "pm0146",
+  "form": "00"
+ }
+}

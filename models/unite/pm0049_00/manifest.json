@@ -1,0 +1,129 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0049_00",
+ "kind": "pokemon",
+ "displayName": "Venomoth",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 1.6667,
+   "frameRate": 30.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 3,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 4,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 5,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0049bodya_lv3",
+   "label": "rig bat 0049bodya lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0049bodyb_lv3",
+   "label": "rig bat 0049bodyb lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0049bodyc_lv3",
+   "label": "rig bat 0049bodyc lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 31,
+  "meshes": 3,
+  "triangles": 1426,
+  "textures": 3,
+  "clips": 6,
+  "droppedTracks": 0,
+  "glbBytes": 432796
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Venomoth\\pref_char_bat_004900_venomoth_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "weightless skins bound to their first cluster bone: rig_bat_0049bodyc_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "prunedJoints": 2,
+  "dex": 49,
+  "skin": "00",
+  "holowear": "004900",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_004900_venomoth_lv3",
+  "source": "marcy",
+  "species": "pm0049",
+  "form": "00"
+ }
+}

@@ -1,0 +1,309 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0067_00",
+ "kind": "pokemon",
+ "displayName": "Machoke",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.4,
+   "frameRate": 30.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 1.0667,
+   "frameRate": 30.0,
+   "frameCount": 33,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 1.4667,
+   "frameRate": 30.0,
+   "frameCount": 45,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 4,
+   "duration": 1.0667,
+   "frameRate": 30.0,
+   "frameCount": 33,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 5,
+   "duration": 0.7667,
+   "frameRate": 30.0,
+   "frameCount": 24,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 6,
+   "duration": 1.8333,
+   "frameRate": 120.0,
+   "frameCount": 221,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 7,
+   "duration": 1.1667,
+   "frameRate": 30.0,
+   "frameCount": 36,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 8,
+   "duration": 1.0667,
+   "frameRate": 30.0,
+   "frameCount": 33,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a1",
+   "index": 9,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a1runf",
+   "index": 10,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a2",
+   "index": 11,
+   "duration": 1.1333,
+   "frameRate": 30.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b",
+   "index": 12,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a2",
+   "index": 13,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b_1",
+   "index": 14,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b_2",
+   "index": 15,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b_3",
+   "index": 16,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b_3a",
+   "index": 17,
+   "duration": 0.3667,
+   "frameRate": 30.0,
+   "frameCount": 12,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b_4",
+   "index": 18,
+   "duration": 1.0,
+   "frameRate": 1.0,
+   "frameCount": 2,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b_5",
+   "index": 19,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 20,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0067body_lv3",
+   "label": "rig bat 0067body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 42,
+  "meshes": 1,
+  "triangles": 3000,
+  "textures": 6,
+  "clips": 21,
+  "droppedTracks": 0,
+  "glbBytes": 1300276
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_006700_machoke_lv3\\pref_char_bat_006700_machoke_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 67,
+  "skin": "00",
+  "holowear": "006700",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_006700_machoke_lv3",
+  "species": "pm0067",
+  "form": "00"
+ }
+}

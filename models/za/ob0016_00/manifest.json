@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0016_00",
+ "kind": "object",
+ "displayName": "Croissant",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_croissant_mesh",
+   "label": "obj croissant",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 1338,
+  "textures": 10,
+  "clips": 0,
+  "glbBytes": 1956864
+ },
+ "source": [
+  "ik_chara/model_ob/ob0016_00_croissant/"
+ ],
+ "extras": {
+  "item": "croissant",
+  "species": "ob0016",
+  "form": ""
+ }
+}

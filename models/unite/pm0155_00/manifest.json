@@ -1,0 +1,264 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0155_00",
+ "kind": "pokemon",
+ "displayName": "Cyndaquil",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk4",
+   "index": 2,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 4,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 5,
+   "duration": 0.5,
+   "frameRate": 30.0,
+   "frameCount": 16,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 6,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 7,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 8,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 9,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 10,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0155dy_lv3",
+   "label": "rig bat 0155dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0157_fx_fire01_dark_lv3",
+   "label": "rig bat 0157 fx fire01 dark lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_fx_rig_lob_0155_fx_ci01_light_lv3",
+   "label": "rig fx rig lob 0155 fx ci01 light lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_fx_rig_lob_0155_fx_ci02_dark_lv3",
+   "label": "rig fx rig lob 0155 fx ci02 dark lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_fx_rig_lob_0155_fx_fire01_dark_lv1",
+   "label": "rig fx rig lob 0155 fx fire01 dark lv1",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_fx_rig_lob_0155_fx_fire01_light_lv1",
+   "label": "rig fx rig lob 0155 fx fire01 light lv1",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_fx_rig_lob_0155_fx_glow_lv3",
+   "label": "rig fx rig lob 0155 fx glow lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 25,
+  "meshes": 7,
+  "triangles": 3787,
+  "textures": 10,
+  "clips": 11,
+  "droppedTracks": 0,
+  "glbBytes": 617692
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_015500_cyndaquil_lv3\\pref_char_bat_015500_cyndaquil_lv3.fbx"
+ ],
+ "extras": {
+  "vertexColourEffects": [
+   "mat_fx_rig_lob_0155_fx_ci01_dark_lv3",
+   "mat_fx_rig_lob_0155_fx_ci01_light_lv3",
+   "mat_fx_rig_lob_0155_fx_ci02_dark_lv3"
+  ],
+  "effectParts": [
+   "rig_bat_0157_fx_fire01_dark_lv3/mat_fx_rig_lob_0155_fx_ci01_dark_lv3",
+   "rig_fx_rig_lob_0155_fx_ci01_light_lv3/mat_fx_rig_lob_0155_fx_ci01_light_lv3",
+   "rig_fx_rig_lob_0155_fx_ci02_dark_lv3/mat_fx_rig_lob_0155_fx_ci02_dark_lv3",
+   "rig_fx_rig_lob_0155_fx_fire01_dark_lv1/mat_fx_rig_lob_0155_fx_fire01_dark_lv3",
+   "rig_fx_rig_lob_0155_fx_fire01_light_lv1/mat_fx_rig_lob_0155_fx_fire01_light_lv3",
+   "rig_fx_rig_lob_0155_fx_glow_lv3/mat_fx_rig_lob_0155_fx_glow_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -2e-06,
+     -0.226498,
+     8e-06,
+     0.974012
+    ],
+    "degrees": 26.2
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": 0.0
+  },
+  "jawRestTracks": 4,
+  "dex": 155,
+  "skin": "00",
+  "holowear": "015500",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_015500_cyndaquil_lv3",
+  "species": "pm0155",
+  "form": "00"
+ }
+}

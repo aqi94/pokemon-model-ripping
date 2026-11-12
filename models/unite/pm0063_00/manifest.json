@@ -1,0 +1,102 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0063_00",
+ "kind": "pokemon",
+ "displayName": "Abra",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "dead",
+   "index": 0,
+   "duration": 1.6667,
+   "frameRate": 30.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 1,
+   "duration": 2.6667,
+   "frameRate": 30.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 2,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 3,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 4,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0063body_lv3 ",
+   "label": "rig bat 0063body lv3 ",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 44,
+  "meshes": 1,
+  "triangles": 1256,
+  "textures": 3,
+  "clips": 5,
+  "droppedTracks": 0,
+  "glbBytes": 523380
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Abra\\pref_char_bat_006300_abra_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 63,
+  "skin": "00",
+  "holowear": "006300",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_006300_abra_lv3",
+  "source": "marcy",
+  "species": "pm0063",
+  "form": "00"
+ }
+}

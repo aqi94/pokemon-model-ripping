@@ -1,0 +1,316 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0245_00",
+ "kind": "pokemon",
+ "displayName": "Suicune",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk31",
+   "index": 2,
+   "duration": 0.3667,
+   "frameRate": 30.0,
+   "frameCount": 12,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk32",
+   "index": 3,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk32b",
+   "index": 4,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk32f",
+   "index": 5,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk32l",
+   "index": 6,
+   "duration": 0.7,
+   "frameRate": 30.0,
+   "frameCount": 22,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk32r",
+   "index": 7,
+   "duration": 0.7,
+   "frameRate": 30.0,
+   "frameCount": 22,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk33",
+   "index": 8,
+   "duration": 0.4333,
+   "frameRate": 30.0,
+   "frameCount": 14,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 9,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 10,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 11,
+   "duration": 1.7667,
+   "frameRate": 30.0,
+   "frameCount": 54,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 12,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 13,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 14,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a",
+   "index": 16,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a1",
+   "index": 15,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b",
+   "index": 17,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 18,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a",
+   "index": 19,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b",
+   "index": 20,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu",
+   "index": 21,
+   "duration": 1.5667,
+   "frameRate": 30.0,
+   "frameCount": 48,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 22,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0245dy_lv3",
+   "label": "rig bat 0245dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 58,
+  "meshes": 1,
+  "triangles": 2694,
+  "textures": 6,
+  "clips": 23,
+  "droppedTracks": 0,
+  "glbBytes": 1817136
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_024500_suicune_lv3\\pref_char_bat_024500_suicune_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     2e-06,
+     0.250314,
+     -0.0,
+     0.968165
+    ],
+    "degrees": 29.1
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -29.1
+  },
+  "jawRestTracks": 6,
+  "dex": 245,
+  "skin": "00",
+  "holowear": "024500",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_024500_suicune_lv3",
+  "species": "pm0245",
+  "form": "00"
+ }
+}

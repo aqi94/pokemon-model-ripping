@@ -1,0 +1,311 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0681_05_sword",
+ "kind": "pokemon",
+ "displayName": "Aegislash · King Shield (sword)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3_sword",
+   "index": 2,
+   "duration": 1.1667,
+   "frameRate": 30.0,
+   "frameCount": 36,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk4",
+   "index": 3,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk5_sword",
+   "index": 4,
+   "duration": 1.1667,
+   "frameRate": 30.0,
+   "frameCount": 36,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead_sword",
+   "index": 5,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle_sword",
+   "index": 6,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "passive",
+   "index": 7,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run_sword",
+   "index": 8,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 9,
+   "duration": 1.8,
+   "frameRate": 30.0,
+   "frameCount": 55,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle_sword",
+   "index": 22,
+   "duration": 5.2,
+   "frameRate": 30.0,
+   "frameCount": 157,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle_sword_068105",
+   "index": 10,
+   "duration": 5.2,
+   "frameRate": 30.0,
+   "frameCount": 157,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell11",
+   "index": 11,
+   "duration": 0.3667,
+   "frameRate": 30.0,
+   "frameCount": 12,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a1",
+   "index": 12,
+   "duration": 0.4333,
+   "frameRate": 30.0,
+   "frameCount": 14,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a2",
+   "index": 13,
+   "duration": 0.9333,
+   "frameRate": 30.0,
+   "frameCount": 29,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a3",
+   "index": 14,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a4",
+   "index": 15,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a5",
+   "index": 16,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b",
+   "index": 17,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a1",
+   "index": 18,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b1",
+   "index": 19,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellg",
+   "index": 20,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun_sword",
+   "index": 21,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle_sword",
+ "parts": [
+  {
+   "node": "rig_bat_0681dy_lv3",
+   "label": "rig bat 0681dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 62,
+  "meshes": 1,
+  "triangles": 4154,
+  "textures": 13,
+  "clips": 23,
+  "droppedTracks": 0,
+  "glbBytes": 2814920
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_068105_aegislash_sword_lv3\\pref_char_bat_068105_aegislash_sword_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "re-placed meshes from Blender's matrix to the FBX rest: rig_bat_0681dy_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "inheritedClips": {
+   "from": "pref_char_bat_068100_aegislash_sword_lv3",
+   "clips": [
+    "scoreidle_sword"
+   ],
+   "boundBones": 1.0
+  },
+  "dex": 681,
+  "skin": "05",
+  "holowear": "068105_sword",
+  "battle": true,
+  "standalone": true,
+  "mode": "sword",
+  "folder_name": "pref_char_bat_068105_aegislash_sword_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_068100_aegislash_sword_lv3\\pref_char_bat_068100_aegislash_sword_lv3.fbx",
+  "species": "pm0681",
+  "form": "05"
+ }
+}

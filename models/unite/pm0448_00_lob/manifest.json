@@ -1,0 +1,68 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0448_00_lob",
+ "kind": "pokemon",
+ "displayName": "Lucario (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0448dy_lv3",
+   "label": "rig lob 0448dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lv3_bat_0192weapon",
+   "label": "rig lv3 bat 0192weapon",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 71,
+  "meshes": 2,
+  "triangles": 14524,
+  "textures": 7,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 1299968
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_044800_lucario_lv3\\pref_char_lob_044800_lucario_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "weightless skins bound to their first cluster bone: rig_lv3_bat_0192weapon"
+  ],
+  "skeletonSource": "fbx",
+  "prunedJoints": 18,
+  "dex": 448,
+  "skin": "00",
+  "holowear": "044800",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_044800_lucario_lv3",
+  "species": "pm0448",
+  "form": "00"
+ }
+}

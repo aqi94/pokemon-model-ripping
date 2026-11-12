@@ -1,0 +1,168 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0282_12_lob",
+ "kind": "pokemon",
+ "displayName": "Gardevoir · skin 12 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  },
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 7,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 8,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 9,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 10,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.1667,
+   "frameRate": 30.0,
+   "frameCount": 126,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0282dy_lv3",
+   "label": "rig lob 0282dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0282fxA_lv3",
+   "label": "rig lob 0282fxA lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0282fxB_lv3~notex",
+   "label": "rig lob 0282fxB lv3~notex",
+   "lod": 0,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 109,
+  "meshes": 3,
+  "triangles": 21258,
+  "textures": 18,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 5735020
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_028212_gardevoir_lv3\\pref_char_lob_028212_gardevoir_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_lob_0282fxC_lv3/mat_lob_028212fxc_01_lv3 (overlay shell)",
+   "effect parts with no texture in the rip, imported hidden: rig_lob_0282fxB_lv3/mat_lob_028212fxb_01_lv3; rig_lob_0282fxC_lv3/mat_lob_028212fxc_01_lv3",
+   "textures not in the rip: t_vc_lob_028212a.png, t_vc_lob_028212b.png",
+   "weightless skins bound to their first cluster bone: rig_lob_0282fxB_lv3",
+   "texture-less parts HOME could not colour (gate): rig_lob_0282fxB_lv3/mat_lob_028212fxb_01_lv3 (d=None, cover=None)"
+  ],
+  "vertexColourEffects": [
+   "mat_lob_028212fxa_01_lv3"
+  ],
+  "effectParts": [
+   "rig_lob_0282fxA_lv3/mat_lob_028212fxa_01_lv3",
+   "rig_lob_0282fxB_lv3/mat_lob_028212fxb_01_lv3",
+   "rig_lob_0282fxC_lv3/mat_lob_028212fxc_01_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_028212a.png",
+   "t_vc_lob_028212b.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 282,
+  "skin": "12",
+  "holowear": "028212",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_028212_gardevoir_lv3",
+  "species": "pm0282",
+  "form": "12"
+ }
+}

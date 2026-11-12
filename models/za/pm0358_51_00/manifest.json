@@ -1,0 +1,1892 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0358_51_00",
+ "kind": "pokemon",
+ "displayName": "Chimecho (51_00)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "battlewait01_loop [set2]",
+   "index": 20001,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": true,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battleidle02 [set2]",
+   "index": 20012,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000 [set2]",
+   "index": 20020,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090 [set2]",
+   "index": 20021,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090 [set2]",
+   "index": 20024,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090 [set2]",
+   "index": 20026,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090 [set2]",
+   "index": 20028,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop [set2]",
+   "index": 20030,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop [set2]",
+   "index": 20100,
+   "duration": 2.2667,
+   "frameRate": 60.0,
+   "frameCount": 137,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start [set2]",
+   "index": 20140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01 [set2]",
+   "index": 20141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end [set2]",
+   "index": 20142,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start [set2]",
+   "index": 20145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01 [set2]",
+   "index": 20146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end [set2]",
+   "index": 20147,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start [set2]",
+   "index": 20150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop [set2]",
+   "index": 20151,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start [set2]",
+   "index": 20152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop [set2]",
+   "index": 20153,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02 [set2]",
+   "index": 20155,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01 [set2]",
+   "index": 20300,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01 [set2]",
+   "index": 20400,
+   "duration": 2.2333,
+   "frameRate": 60.0,
+   "frameCount": 135,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_start [set2]",
+   "index": 20420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_loop [set2]",
+   "index": 20421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end [set2]",
+   "index": 20422,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01 [set2]",
+   "index": 20450,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start [set2]",
+   "index": 20460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop [set2]",
+   "index": 20461,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end [set2]",
+   "index": 20462,
+   "duration": 1.0333,
+   "frameRate": 60.0,
+   "frameCount": 63,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop [set2]",
+   "index": 20490,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01 [set2]",
+   "index": 20500,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02 [set2]",
+   "index": 20501,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start [set2]",
+   "index": 20510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop [set2]",
+   "index": 20511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end [set2]",
+   "index": 20512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start [set2]",
+   "index": 20520,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop [set2]",
+   "index": 20521,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end [set2]",
+   "index": 20522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "megaappeal01 [set2]",
+   "index": 20620,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eye01 [set2]",
+   "index": 28000,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0358_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_horn_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_metal_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0358_51_00_child_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "battlewait01_loop [set2]",
+ "parts": [
+  {
+   "node": "pm0358_51_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_eye_mesh",
+   "label": "eye",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_horn_mesh",
+   "label": "horn",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_metal_mesh",
+   "label": "metal",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_child_mesh",
+   "label": "child",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_eye_mesh_lod1",
+   "label": "eye lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_horn_mesh_lod1",
+   "label": "horn lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_metal_mesh_lod1",
+   "label": "metal lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_child_mesh_lod1",
+   "label": "child lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_eye_mesh_lod2",
+   "label": "eye lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_horn_mesh_lod2",
+   "label": "horn lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_metal_mesh_lod2",
+   "label": "metal lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_child_mesh_lod2",
+   "label": "child lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_body_mesh_lod3",
+   "label": "body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_eye_mesh_lod3",
+   "label": "eye lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_horn_mesh_lod3",
+   "label": "horn lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_metal_mesh_lod3",
+   "label": "metal lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0358_51_00_child_mesh_lod3",
+   "label": "child lod3",
+   "lod": 3,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 150,
+  "meshes": 20,
+  "triangles": 5996,
+  "textures": 38,
+  "clips": 40,
+  "glbBytes": 9413280
+ },
+ "source": [
+  "ik_pokemon/data/pm0358/pm0358_51_00/"
+ ],
+ "extras": {
+  "dex": 358,
+  "species": "pm0358",
+  "form": "51_00"
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "npc004_meru",
+ "kind": "trainer",
+ "displayName": "Meru",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "congratulations",
+   "index": 0,
+   "duration": 2.1,
+   "frameRate": 30.0,
+   "frameCount": 64,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 1,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "welcome",
+   "index": 2,
+   "duration": 2.3333,
+   "frameRate": 30.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_npc04_hair_lv3",
+   "label": "lob npc04 hair lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_npc04body_lv3",
+   "label": "lob npc04body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 117,
+  "meshes": 2,
+  "triangles": 22324,
+  "textures": 9,
+  "clips": 3,
+  "droppedTracks": 0,
+  "glbBytes": 5349660
+ },
+ "source": [
+  "NPCs/Lv3/pref_npc_lob_004_meru_lv3/pref_npc_lob_004_meru_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "inheritedClips": {
+   "from": "NPCs (Shopkeepers, professors)",
+   "clips": [
+    "congratulations",
+    "idle",
+    "welcome"
+   ],
+   "boundBones": 1.0
+  },
+  "materialsFrom": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\NPC Models\\pref_npc_lob_004_meru_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\NPCs (Shopkeepers, professors)\\pref_npc_lob_004_meru_lv3.fbx",
+  "species": "npc004",
+  "form": ""
+ }
+}

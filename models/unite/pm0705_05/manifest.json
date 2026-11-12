@@ -1,0 +1,284 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0705_05",
+ "kind": "pokemon",
+ "displayName": "Sliggoo · skin 05",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    }
+   ]
+  },
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 2,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 3,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 3,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk31",
+   "index": 2,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 4,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 5,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 6,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 7,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 8,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 10,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell12",
+   "index": 9,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a",
+   "index": 11,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b",
+   "index": 12,
+   "duration": 1.4,
+   "frameRate": 30.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 14,
+   "duration": 0.4333,
+   "frameRate": 30.0,
+   "frameCount": 14,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell21",
+   "index": 13,
+   "duration": 0.7,
+   "frameRate": 30.0,
+   "frameCount": 22,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell_p1",
+   "index": 15,
+   "duration": 2.2,
+   "frameRate": 30.0,
+   "frameCount": 67,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 16,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0705dy_lv3",
+   "label": "rig bat 0705dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 51,
+  "meshes": 1,
+  "triangles": 3440,
+  "textures": 12,
+  "clips": 17,
+  "droppedTracks": 0,
+  "glbBytes": 1930488
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_070505_sliggoo_lv3\\pref_char_bat_070505_sliggoo_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 705,
+  "skin": "05",
+  "holowear": "070505",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_070505_sliggoo_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_070500_sliggoo_lv3\\pref_char_bat_070500_sliggoo_lv3.fbx",
+  "species": "pm0705",
+  "form": "05"
+ }
+}

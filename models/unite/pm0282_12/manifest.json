@@ -1,0 +1,314 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0282_12",
+ "kind": "pokemon",
+ "displayName": "Gardevoir · skin 12",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  },
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 4,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 5,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "born",
+   "index": 3,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 4,
+   "duration": 2.1,
+   "frameRate": 60.0,
+   "frameCount": 127,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "goback",
+   "index": 5,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 6,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 7,
+   "duration": 1.0667,
+   "frameRate": 30.0,
+   "frameCount": 33,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 8,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 9,
+   "duration": 1.0,
+   "frameRate": 30.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 10,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a",
+   "index": 11,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b",
+   "index": 12,
+   "duration": 1.2667,
+   "frameRate": 30.0,
+   "frameCount": 39,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 13,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a",
+   "index": 14,
+   "duration": 2.3333,
+   "frameRate": 30.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b",
+   "index": 15,
+   "duration": 1.0667,
+   "frameRate": 60.0,
+   "frameCount": 65,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellg",
+   "index": 16,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 17,
+   "duration": 1.0667,
+   "frameRate": 30.0,
+   "frameCount": 33,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0282body_lv3",
+   "label": "rig bat 0282body lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0282fxA_lv3",
+   "label": "rig bat 0282fxA lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 90,
+  "meshes": 2,
+  "triangles": 4380,
+  "textures": 13,
+  "clips": 18,
+  "droppedTracks": 0,
+  "glbBytes": 3527488
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_028212_gardevoir_lv3\\pref_char_bat_028212_gardevoir_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_bat_0282fxB_lv3/mat_bat_028212fxb_01_lv3 (overlay shell); rig_bat_0282fxC_lv3/mat_bat_028212fxc_01_lv3 (overlay shell)",
+   "effect parts with no texture in the rip, imported hidden: rig_bat_0282fxB_lv3/mat_bat_028212fxb_01_lv3; rig_bat_0282fxC_lv3/mat_bat_028212fxc_01_lv3",
+   "weightless skins bound to their first cluster bone: rig_bat_0282fxA_lv3"
+  ],
+  "vertexColourEffects": [
+   "mat_bat_028212fxa_01_lv3"
+  ],
+  "effectParts": [
+   "rig_bat_0282fxA_lv3/mat_bat_028212fxa_01_lv3",
+   "rig_bat_0282fxB_lv3/mat_bat_028212fxb_01_lv3",
+   "rig_bat_0282fxC_lv3/mat_bat_028212fxc_01_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 282,
+  "skin": "12",
+  "holowear": "028212",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_028212_gardevoir_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_028200_gardevoir_lv3\\pref_char_bat_028200_gardevoir_lv3.fbx",
+  "species": "pm0282",
+  "form": "12"
+ }
+}

@@ -1,0 +1,191 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0133_81",
+ "kind": "pokemon",
+ "displayName": "Gigantamax Eevee",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  },
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 4,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 5,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "dead",
+   "index": 0,
+   "duration": 1.68,
+   "frameRate": 25.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 1,
+   "duration": 1.68,
+   "frameRate": 25.0,
+   "frameCount": 43,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "spell1",
+   "index": 2,
+   "duration": 3.52,
+   "frameRate": 25.0,
+   "frameCount": 89,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 3,
+   "duration": 3.84,
+   "frameRate": 25.0,
+   "frameCount": 97,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell3",
+   "index": 4,
+   "duration": 3.84,
+   "frameRate": 25.0,
+   "frameCount": 97,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 5,
+   "duration": 1.72,
+   "frameRate": 25.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "cloud_2~notex",
+   "label": "cloud 2~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "cloud_2.001~notex",
+   "label": "cloud 2.001~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "cloud_2.002~notex",
+   "label": "cloud 2.002~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_bat_0133_81_lv3",
+   "label": "rig bat 0133 81 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 51,
+  "meshes": 4,
+  "triangles": 7082,
+  "textures": 9,
+  "clips": 6,
+  "droppedTracks": 0,
+  "glbBytes": 856076
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Gigantamax Eevee\\pref_char_bat_0133_81_eevee_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: cloud_2/mat_fx_Dynamax_cloud_01",
+   "weightless skins bound to their first cluster bone: cloud_2, cloud_2.001, cloud_2.002",
+   "kept Blender's skeleton/clips: mesh cloud_2: only 9% of its vertices lie in the FBX bind space",
+   "texture-less parts HOME could not colour (gate): cloud_2/mat_fx_Dynamax_cloud_01 (d=None, cover=None); cloud_2.001/mat_fx_Dynamax_cloud_01 (d=None, cover=None); cloud_2.002/mat_fx_Dynamax_cloud_01 (d=None, cover=None)"
+  ],
+  "effectParts": [
+   "cloud_2.001/mat_fx_Dynamax_cloud_01",
+   "cloud_2.002/mat_fx_Dynamax_cloud_01",
+   "cloud_2/mat_fx_Dynamax_cloud_01"
+  ],
+  "prunedJoints": 34,
+  "dex": 133,
+  "skin": "81",
+  "holowear": "013381",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_0133_81_eevee_lv3",
+  "source": "marcy",
+  "species": "pm0133",
+  "form": "81"
+ }
+}

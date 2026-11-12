@@ -1,0 +1,590 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0149_10",
+ "kind": "pokemon",
+ "displayName": "Dragonite · skin 10",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "born",
+   "index": 0,
+   "duration": 1.0,
+   "frameRate": 30.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmatk5",
+   "index": 1,
+   "duration": 1.2,
+   "frameRate": 30.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmatk6",
+   "index": 2,
+   "duration": 1.2,
+   "frameRate": 30.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmatk7",
+   "index": 3,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmdead",
+   "index": 4,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmidle",
+   "index": 5,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "dmrun",
+   "index": 6,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmscore",
+   "index": 7,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmscoreidle",
+   "index": 8,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspell1a",
+   "index": 9,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspell1al",
+   "index": 10,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspell1ar",
+   "index": 11,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspell1b1",
+   "index": 12,
+   "duration": 1.2,
+   "frameRate": 30.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspell1b2",
+   "index": 13,
+   "duration": 0.3,
+   "frameRate": 30.0,
+   "frameCount": 10,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspell1b3",
+   "index": 14,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspellg1fly",
+   "index": 15,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspellg1ld",
+   "index": 16,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspellg1loop",
+   "index": 17,
+   "duration": 0.7333,
+   "frameRate": 30.0,
+   "frameCount": 23,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmspellg2",
+   "index": 18,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dmstun",
+   "index": 19,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyatk1",
+   "index": 20,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyatk2",
+   "index": 21,
+   "duration": 1.2333,
+   "frameRate": 30.0,
+   "frameCount": 38,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flydead",
+   "index": 22,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyidle",
+   "index": 23,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyrun",
+   "index": 24,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyscore",
+   "index": 25,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyscoreidle",
+   "index": 26,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspell1a",
+   "index": 27,
+   "duration": 0.9,
+   "frameRate": 30.0,
+   "frameCount": 28,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspell1al",
+   "index": 28,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspell1ar",
+   "index": 29,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspell1b1",
+   "index": 30,
+   "duration": 1.2,
+   "frameRate": 30.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspell1b2",
+   "index": 31,
+   "duration": 0.3,
+   "frameRate": 30.0,
+   "frameCount": 10,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspell1b3",
+   "index": 32,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspellg1fly",
+   "index": 33,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspellg1ld",
+   "index": 34,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspellg1loop",
+   "index": 35,
+   "duration": 0.7333,
+   "frameRate": 30.0,
+   "frameCount": 23,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flyspellg2",
+   "index": 36,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "flystun",
+   "index": 37,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "goback",
+   "index": 38,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 39,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 40,
+   "duration": 1.2333,
+   "frameRate": 30.0,
+   "frameCount": 38,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a",
+   "index": 41,
+   "duration": 2.2333,
+   "frameRate": 30.0,
+   "frameCount": 68,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b1",
+   "index": 42,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2",
+   "index": 43,
+   "duration": 0.5,
+   "frameRate": 30.0,
+   "frameCount": 16,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b3",
+   "index": 44,
+   "duration": 0.3,
+   "frameRate": 30.0,
+   "frameCount": 10,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "dmidle",
+ "parts": [
+  {
+   "node": "rig_bat_0149dy_lv3",
+   "label": "rig bat 0149dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 73,
+  "meshes": 1,
+  "triangles": 3931,
+  "textures": 14,
+  "clips": 45,
+  "droppedTracks": 0,
+  "glbBytes": 4894852
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_014910_dragonite_lv3\\pref_char_bat_014910_dragonite_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -0.099878,
+     0.382035,
+     -0.022361,
+     0.918463
+    ],
+    "degrees": 45.2
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -0.9
+  },
+  "jawRestTracks": 14,
+  "dex": 149,
+  "skin": "10",
+  "holowear": "014910",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_014910_dragonite_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_014900_dragonite_lv3\\pref_char_bat_014900_dragonite_lv3.fbx",
+  "species": "pm0149",
+  "form": "10"
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0589_00",
+ "kind": "pokemon",
+ "displayName": "Escavalier",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 1.1667,
+   "frameRate": 30.0,
+   "frameCount": 36,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 3,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 4,
+   "duration": 2.6667,
+   "frameRate": 30.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 5,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0589dy_lv3",
+   "label": "rig bat 0589dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 17,
+  "meshes": 1,
+  "triangles": 1596,
+  "textures": 3,
+  "clips": 6,
+  "droppedTracks": 0,
+  "glbBytes": 334968
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Escavalier\\pref_char_bat_058900_escavalier_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 589,
+  "skin": "00",
+  "holowear": "058900",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_058900_escavalier_lv3",
+  "source": "marcy",
+  "species": "pm0589",
+  "form": "00"
+ }
+}

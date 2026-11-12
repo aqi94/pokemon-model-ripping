@@ -1,0 +1,56 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0206_00",
+ "kind": "object",
+ "displayName": "Net Ball",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "uppertopobj_mesh",
+   "label": "uppertopobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "upperobj_mesh",
+   "label": "upperobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lowerobj_mesh",
+   "label": "lowerobj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 9,
+  "meshes": 3,
+  "triangles": 1458,
+  "textures": 7,
+  "clips": 0,
+  "glbBytes": 224100
+ },
+ "source": [
+  "ik_chara/model_ob/ob0206_00_netball/"
+ ],
+ "extras": {
+  "item": "netball",
+  "species": "ob0206",
+  "form": ""
+ }
+}

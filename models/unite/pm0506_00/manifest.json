@@ -1,0 +1,102 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0506_00",
+ "kind": "pokemon",
+ "displayName": "Lillipup",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 0.7333,
+   "frameRate": 30.0,
+   "frameCount": 23,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 3,
+   "duration": 0.4333,
+   "frameRate": 30.0,
+   "frameCount": 14,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 4,
+   "duration": 0.7667,
+   "frameRate": 30.0,
+   "frameCount": 24,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0506body_lv3",
+   "label": "rig bat 0506body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 25,
+  "meshes": 1,
+  "triangles": 1198,
+  "textures": 3,
+  "clips": 5,
+  "droppedTracks": 0,
+  "glbBytes": 354840
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Lillipup\\pref_char_bat_050600_lillipup_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 506,
+  "skin": "00",
+  "holowear": "050600",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_050600_lillipup_lv3",
+  "source": "marcy",
+  "species": "pm0506",
+  "form": "00"
+ }
+}

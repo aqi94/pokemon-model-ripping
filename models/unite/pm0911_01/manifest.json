@@ -1,0 +1,320 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0911_01",
+ "kind": "pokemon",
+ "displayName": "Skeledirge · skin 01",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 4,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 5,
+   "duration": 0.7,
+   "frameRate": 30.0,
+   "frameCount": 22,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 6,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 7,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 8,
+   "duration": 0.9,
+   "frameRate": 30.0,
+   "frameCount": 28,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a",
+   "index": 9,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 10,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a",
+   "index": 11,
+   "duration": 1.2,
+   "frameRate": 30.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b1",
+   "index": 12,
+   "duration": 0.3,
+   "frameRate": 30.0,
+   "frameCount": 10,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2",
+   "index": 13,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b3",
+   "index": 14,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu",
+   "index": 15,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 16,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0911_fx2_lv3",
+   "label": "rig bat 0911 fx2 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0911_fx_lv3",
+   "label": "rig bat 0911 fx lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0911dy_lv3",
+   "label": "rig bat 0911dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 67,
+  "meshes": 3,
+  "triangles": 4755,
+  "textures": 13,
+  "clips": 17,
+  "droppedTracks": 0,
+  "glbBytes": 2689456
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_091101_skeledirge_lv3\\pref_char_bat_091101_skeledirge_lv3.fbx"
+ ],
+ "extras": {
+  "vertexColourEffects": [
+   "mat_fx_rig_bat_0911_03_hb"
+  ],
+  "effectParts": [
+   "rig_bat_0911_fx2_lv3/mat_fx_rig_bat_0911_03_hb",
+   "rig_bat_0911_fx_lv3/mat_fx_rig_bat_0911_03_hb"
+  ],
+  "skeletonSource": "fbx",
+  "homeColouredParts": [
+   {
+    "part": "rig_bat_0911_fx2_lv3/mat_fx_rig_bat_0911_03_hb",
+    "homeModel": "pm0911_00_00",
+    "homeMesh": "CusAnimVis_pm0911_00_00_BirdASkin",
+    "matchDistance": 0.0006,
+    "cover": 1.0
+   },
+   {
+    "part": "rig_bat_0911_fx_lv3/mat_fx_rig_bat_0911_03_hb",
+    "homeModel": "pm0911_00_00",
+    "homeMesh": "pm0911_00_00_FlameSkin",
+    "matchDistance": 0.0005,
+    "cover": 1.0
+   }
+  ],
+  "warnings": [
+   "texture-less parts coloured from Pokémon HOME (home_parts): rig_bat_0911_fx2_lv3/mat_fx_rig_bat_0911_03_hb <- pm0911_00_00/CusAnimVis_pm0911_00_00_BirdASkin (d=0.0006); rig_bat_0911_fx_lv3/mat_fx_rig_bat_0911_03_hb <- pm0911_00_00/pm0911_00_00_FlameSkin (d=0.0005)"
+  ],
+  "jaws": [
+   {
+    "bone": "Bone_jaw",
+    "open": [
+     1.8e-05,
+     -0.518227,
+     3e-06,
+     0.855243
+    ],
+    "degrees": 62.4
+   }
+  ],
+  "jawClosed": {
+   "Bone_jaw": -11.0
+  },
+  "jawRestTracks": 5,
+  "dex": 911,
+  "skin": "01",
+  "holowear": "091101",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_091101_skeledirge_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_091100_skeledirge_lv3\\pref_char_bat_091100_skeledirge_lv3.fbx",
+  "species": "pm0911",
+  "form": "01"
+ }
+}

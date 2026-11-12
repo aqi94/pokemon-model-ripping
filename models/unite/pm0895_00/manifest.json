@@ -1,0 +1,124 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0895_00",
+ "kind": "pokemon",
+ "displayName": "Regidrago",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.2333,
+   "frameRate": 30.0,
+   "frameCount": 38,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 2.6667,
+   "frameRate": 30.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 3,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 4,
+   "duration": 2.3667,
+   "frameRate": 30.0,
+   "frameCount": 72,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 5,
+   "duration": 2.3333,
+   "frameRate": 30.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 6,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0895dy_lv3",
+   "label": "rig bat 0895dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 15,
+  "meshes": 1,
+  "triangles": 2062,
+  "textures": 3,
+  "clips": 7,
+  "droppedTracks": 0,
+  "glbBytes": 389628
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Regidrago\\pref_char_bat_089500_regidrago_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 895,
+  "skin": "00",
+  "holowear": "089500",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_089500_regidrago_lv3",
+  "source": "marcy",
+  "species": "pm0895",
+  "form": "00"
+ }
+}

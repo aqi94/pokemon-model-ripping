@@ -1,0 +1,96 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0197_01_lob",
+ "kind": "pokemon",
+ "displayName": "Umbreon · skin 01 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 0,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0197dy_lv3",
+   "label": "rig lob 0197dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 61,
+  "meshes": 1,
+  "triangles": 18280,
+  "textures": 13,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3401808
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_019701_umbreon_lv3\\pref_char_lob_019701_umbreon_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_019701.png",
+   "t_vc_lob_0197body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_019701.png, t_vc_lob_0197body.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 197,
+  "skin": "01",
+  "holowear": "019701",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_019701_umbreon_lv3",
+  "species": "pm0197",
+  "form": "01"
+ }
+}

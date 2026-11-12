@@ -1,0 +1,80 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0017_00",
+ "kind": "object",
+ "displayName": "Tart",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_dish_mesh",
+   "label": "obj dish",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_strawberry_tart_mesh",
+   "label": "obj strawberry tart",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_chocolate_tart_mesh",
+   "label": "obj chocolate tart",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_olive_quiche_mesh",
+   "label": "obj olive quiche",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_spinach_quiche_mesh",
+   "label": "obj spinach quiche",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_cheese_quiche_mesh",
+   "label": "obj cheese quiche",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_knifefork_mesh",
+   "label": "obj knifefork",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 11,
+  "meshes": 7,
+  "triangles": 2152,
+  "textures": 6,
+  "clips": 0,
+  "glbBytes": 459344
+ },
+ "source": [
+  "ik_chara/model_ob/ob0017_00_tart/"
+ ],
+ "extras": {
+  "item": "tart",
+  "species": "ob0017",
+  "form": ""
+ }
+}

@@ -1,0 +1,117 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "npc003_zirce",
+ "kind": "trainer",
+ "displayName": "Zirce",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "congratulations",
+   "index": 0,
+   "duration": 2.4333,
+   "frameRate": 30.0,
+   "frameCount": 74,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 1,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show1",
+   "index": 3,
+   "duration": 4.3667,
+   "frameRate": 30.0,
+   "frameCount": 132,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show1_idle",
+   "index": 2,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "welcome",
+   "index": 4,
+   "duration": 2.5667,
+   "frameRate": 30.0,
+   "frameCount": 78,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_npc03body_lv3",
+   "label": "lob npc03body lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_npc03hair_LV3",
+   "label": "lob npc03hair LV3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 101,
+  "meshes": 2,
+  "triangles": 21238,
+  "textures": 7,
+  "clips": 5,
+  "droppedTracks": 0,
+  "glbBytes": 4186908
+ },
+ "source": [
+  "NPCs/Lv3/pref_npc_lob_003_zirce_lv3/pref_npc_lob_003_zirce_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "weightless skins bound to their first cluster bone: lob_npc03hair_LV3"
+  ],
+  "skeletonSource": "fbx",
+  "inheritedClips": {
+   "from": "NPCs (Shopkeepers, professors)",
+   "clips": [
+    "congratulations",
+    "idle",
+    "show1",
+    "show1_idle",
+    "welcome"
+   ],
+   "boundBones": 1.0
+  },
+  "materialsFrom": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\NPC Models\\pref_npc_lob_003_zirce_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\NPCs (Shopkeepers, professors)\\pref_npc_lob_003_zirce_lv3.fbx",
+  "species": "npc003",
+  "form": ""
+ }
+}

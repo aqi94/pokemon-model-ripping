@@ -1,0 +1,206 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0790_00",
+ "kind": "pokemon",
+ "displayName": "Cosmoem",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 2,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 3,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 4,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 5,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 6,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 7,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 8,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 9,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0790dya_lv3",
+   "label": "rig bat 0790dya lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0790dyb_lv3",
+   "label": "rig bat 0790dyb lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0790dyc_lv3",
+   "label": "rig bat 0790dyc lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0790dyd_lv3",
+   "label": "rig bat 0790dyd lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0790dyFX_lv3",
+   "label": "rig bat 0790dyFX lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 3,
+  "meshes": 5,
+  "triangles": 2660,
+  "textures": 6,
+  "clips": 10,
+  "droppedTracks": 0,
+  "glbBytes": 392716
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_079000_cosmoem_lv3\\pref_char_bat_079000_cosmoem_lv3.fbx"
+ ],
+ "extras": {
+  "vertexColourEffects": [
+   "mat_fx_079000_solgaleo_01_hb"
+  ],
+  "effectParts": [
+   "rig_bat_0790dyFX_lv3/mat_fx_079000_solgaleo_01_hb",
+   "rig_bat_0790dyb_lv3/mat_fx_079000_solgaleo_01_hb"
+  ],
+  "warnings": [
+   "weightless skins bound to their first cluster bone: rig_bat_0790dya_lv3, rig_bat_0790dyb_lv3, rig_bat_0790dyc_lv3, rig_bat_0790dyd_lv3, rig_bat_0790dyFX_lv3",
+   "texture-less parts coloured from Pokémon HOME (home_parts): rig_bat_0790dyFX_lv3/mat_fx_079000_solgaleo_01_hb <- pm0790_00_00/CusAnimVis_pm0790_00_00_StarSkin (d=0.0)"
+  ],
+  "meshBinds": [
+   "rig_bat_0790dya_lv3 (baked)",
+   "rig_bat_0790dyb_lv3 (baked)",
+   "rig_bat_0790dyc_lv3 (baked)"
+  ],
+  "skeletonSource": "fbx",
+  "homeColouredParts": [
+   {
+    "part": "rig_bat_0790dyFX_lv3/mat_fx_079000_solgaleo_01_hb",
+    "homeModel": "pm0790_00_00",
+    "homeMesh": "CusAnimVis_pm0790_00_00_StarSkin",
+    "matchDistance": 0.0,
+    "cover": 1.0
+   }
+  ],
+  "dex": 790,
+  "skin": "00",
+  "holowear": "079000",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_079000_cosmoem_lv3",
+  "species": "pm0790",
+  "form": "00"
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0054_01_lob",
+ "kind": "pokemon",
+ "displayName": "Psyduck · skin 01 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.6667,
+   "frameRate": 30.0,
+   "frameCount": 51,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "fx_glow_L_Cloak_01",
+   "label": "fx glow L Cloak 01",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_glow_r_Cloak_01",
+   "label": "fx glow r Cloak 01",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_005401_lv3",
+   "label": "rig lob 005401 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0054fxa_lv3",
+   "label": "rig lob 0054fxa lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0054fxb_lv3~notex",
+   "label": "rig lob 0054fxb lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_0054fxc_lv3~notex",
+   "label": "rig lob 0054fxc lv3~notex",
+   "lod": 0,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 54,
+  "meshes": 6,
+  "triangles": 23518,
+  "textures": 14,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3117500
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_005401_psyduck_lv3\\pref_char_lob_005401_psyduck_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: rig_lob_0054fxb_lv3/mat_lob_005401fxb_01_lv3; rig_lob_0054fxc_lv3/mat_lob_005401fxc_01_lv3",
+   "textures not in the rip: t_vc_lob_005401.png, t_vc_lob_0054body.png, t_vc_lob_0054eye.png",
+   "re-placed meshes from Blender's matrix to the FBX rest: fx_glow_L_Cloak_01, fx_glow_r_Cloak_01",
+   "texture-less parts HOME could not colour (gate): rig_lob_0054fxb_lv3/mat_lob_005401fxb_01_lv3 (d=None, cover=None); rig_lob_0054fxc_lv3/mat_lob_005401fxc_01_lv3 (d=None, cover=None)"
+  ],
+  "effectParts": [
+   "fx_glow_L_Cloak_01/mat_fx_005401_glow_02_cn",
+   "fx_glow_r_Cloak_01/mat_fx_005401_glow_02_cn",
+   "rig_lob_0054fxa_lv3/mat_lob_005401fxa_lv3",
+   "rig_lob_0054fxb_lv3/mat_lob_005401fxb_01_lv3",
+   "rig_lob_0054fxc_lv3/mat_lob_005401fxc_01_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_005401.png",
+   "t_vc_lob_0054body.png",
+   "t_vc_lob_0054eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 54,
+  "skin": "01",
+  "holowear": "005401",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_005401_psyduck_lv3",
+  "species": "pm0054",
+  "form": "01"
+ }
+}

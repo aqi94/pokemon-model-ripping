@@ -1,0 +1,303 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0006_52",
+ "kind": "pokemon",
+ "displayName": "Charizard · skin 52",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk2",
+   "index": 0,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "idleutoidle",
+   "index": 3,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run",
+   "index": 4,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 5,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "socre",
+   "index": 6,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a",
+   "index": 7,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell3",
+   "index": 8,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 9,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0006_52_Y_lv3",
+   "label": "rig bat 0006 52 Y lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "weiba_fire_004",
+   "label": "weiba fire 004",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 58,
+  "meshes": 2,
+  "triangles": 3505,
+  "textures": 9,
+  "clips": 10,
+  "droppedTracks": 0,
+  "glbBytes": 1233732
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_0006_52_charizard_lv3\\pref_char_bat_0006_52_charizard_lv3.fbx"
+ ],
+ "extras": {
+  "vertexColourEffects": [
+   "mat_fx_000600_52charizard_fire_02_wpx"
+  ],
+  "particlesNotInRip": [
+   "pref_fx_000600_52_charizard_tail_fire"
+  ],
+  "effectParts": [
+   "weiba_fire_004/mat_fx_000600_52charizard_fire_02_wpx"
+  ],
+  "warnings": [
+   "particle effects not in the rip (empty emitter nodes): pref_fx_000600_52_charizard_tail_fire"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     1e-06,
+     -0.387162,
+     -0.0,
+     0.922012
+    ],
+    "degrees": 45.6
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": 0.0
+  },
+  "jawRestTracks": 4,
+  "particles": [
+   {
+    "prefab": "pref_fx_000600_52_charizard_tail_fire",
+    "bone": "Bone_Feeler1",
+    "translation": [
+     -0.064,
+     0.038,
+     0.274
+    ],
+    "rotation": [
+     0.0,
+     0.758532,
+     0.0,
+     0.651635
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.4,
+    "kind": "fire",
+    "source": "home:pm0006_00_00-FireCore",
+    "baseColor": [
+     1.0,
+     0.1961,
+     0.102,
+     1.0
+    ],
+    "layerColor": [
+     0.9412,
+     0.8078,
+     0.0,
+     1.0
+    ],
+    "lerpProfile": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.224,
+     0.561,
+     0.872,
+     1.0
+    ],
+    "noise": [
+     {
+      "key": "homefx:firecore_0004a_msk.png",
+      "scale": [
+       1.0,
+       1.0
+      ],
+      "speed": [
+       -0.3,
+       1.5
+      ]
+     },
+     {
+      "key": "homefx:firecore_0004b_msk.png",
+      "scale": [
+       1.0,
+       1.0
+      ],
+      "speed": [
+       -0.45,
+       2.25
+      ]
+     }
+    ],
+    "noiseNorm": 1.5922,
+    "noiseMean": 0.2602,
+    "loop": 6.6667
+   }
+  ],
+  "fxTextures": [
+   "homefx:firecore_0004a_msk.png",
+   "homefx:firecore_0004b_msk.png"
+  ],
+  "fireMaterials": [
+   "mat_fx_000600_52charizard_fire_02_wpx"
+  ],
+  "dex": 6,
+  "skin": "52",
+  "holowear": "000652",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_0006_52_charizard_lv3",
+  "species": "pm0006",
+  "form": "52"
+ }
+}

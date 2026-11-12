@@ -1,0 +1,8112 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "left_attach",
+   "side": "left",
+   "clips": [
+    "defaultwait01_loop",
+    "defaultwait02_start",
+    "defaultwait02_loop",
+    "defaultwait02_end",
+    "def01_idle01",
+    "def02_idle01",
+    "turn01_r000",
+    "turn01_r090",
+    "turn01_r180",
+    "turn01_l000",
+    "turn01_l090",
+    "turn01_l180",
+    "turnmove01_r090",
+    "turnmove01_l090",
+    "walk01_000_start",
+    "walk01_000_loop",
+    "walk01_000_end",
+    "run01_000_start",
+    "run01_000_loop",
+    "run01_000_end",
+    "sit01_start",
+    "sit01_loop",
+    "sit01_end",
+    "sit02_loop",
+    "sitspeak01_loop",
+    "sitspeak02_loop",
+    "getpass01",
+    "yes01",
+    "no01",
+    "speak01_loop",
+    "speak02_loop",
+    "glad01",
+    "grief01",
+    "think01_start",
+    "think01_loop",
+    "think01_end",
+    "gesture01_start",
+    "gesture01_loop",
+    "gesture01_end",
+    "loopaction01_start",
+    "loopaction01_loop",
+    "loopaction01_end",
+    "loopaction02_start",
+    "loopaction02_loop",
+    "loopaction02_end",
+    "loopaction03_start",
+    "loopaction03_loop",
+    "loopaction03_end",
+    "battlewait01_start",
+    "battlewait01_loop",
+    "battlewait01_end",
+    "btl01_idle01",
+    "ballthrow01",
+    "order01",
+    "mg_transform02_start",
+    "mg_transform02_loop",
+    "mg_transform02_end",
+    "mg_transform02_end_loop",
+    "advent01_start",
+    "advent01_loop",
+    "advent01_end",
+    "lose01_start",
+    "lose01_loop",
+    "lose01_end",
+    "yes01",
+    "no01",
+    "ballreturn01_start",
+    "ballreturn01_loop",
+    "ballreturn01_end",
+    "damage01",
+    "speak01_loop",
+    "eyeblink01",
+    "eyeblink02",
+    "iris01",
+    "mouth01",
+    "mouth02",
+    "mouth03",
+    "mouth04",
+    "eye01",
+    "face01",
+    "eye02",
+    "face02",
+    "eye03",
+    "face03",
+    "eye04",
+    "face04",
+    "eye05",
+    "face05",
+    "eye06",
+    "face06",
+    "eye07",
+    "face07",
+    "eye08",
+    "face08",
+    "eye09",
+    "face09",
+    "eye10",
+    "face10",
+    "eye11",
+    "face11",
+    "face12",
+    "face13",
+    "face14",
+    "face15",
+    "face16",
+    "face17",
+    "face18",
+    "d130_tr1000_c08 [demo d130]",
+    "d130_tr1000_c09 [demo d130]"
+   ]
+  },
+  {
+   "bone": "right_attach",
+   "side": "right",
+   "clips": [
+    "defaultwait01_loop",
+    "defaultwait02_start",
+    "defaultwait02_loop",
+    "defaultwait02_end",
+    "def01_idle01",
+    "def02_idle01",
+    "turn01_r000",
+    "turn01_r090",
+    "turn01_r180",
+    "turn01_l000",
+    "turn01_l090",
+    "turn01_l180",
+    "turnmove01_r090",
+    "turnmove01_l090",
+    "walk01_000_start",
+    "walk01_000_loop",
+    "walk01_000_end",
+    "run01_000_start",
+    "run01_000_loop",
+    "run01_000_end",
+    "sit01_start",
+    "sit01_loop",
+    "sit01_end",
+    "sit02_loop",
+    "sitspeak01_loop",
+    "sitspeak02_loop",
+    "getpass01",
+    "yes01",
+    "no01",
+    "speak01_loop",
+    "speak02_loop",
+    "glad01",
+    "grief01",
+    "think01_start",
+    "think01_loop",
+    "think01_end",
+    "gesture01_start",
+    "gesture01_loop",
+    "gesture01_end",
+    "loopaction01_start",
+    "loopaction01_loop",
+    "loopaction01_end",
+    "loopaction02_start",
+    "loopaction02_loop",
+    "loopaction02_end",
+    "loopaction03_start",
+    "loopaction03_loop",
+    "loopaction03_end",
+    "battlewait01_start",
+    "battlewait01_loop",
+    "battlewait01_end",
+    "btl01_idle01",
+    "ballthrow01",
+    "order01",
+    "mg_transform02_start",
+    "mg_transform02_loop",
+    "mg_transform02_end",
+    "mg_transform02_end_loop",
+    "advent01_start",
+    "advent01_loop",
+    "advent01_end",
+    "lose01_start",
+    "lose01_loop",
+    "lose01_end",
+    "yes01",
+    "no01",
+    "ballreturn01_start",
+    "ballreturn01_loop",
+    "ballreturn01_end",
+    "damage01",
+    "speak01_loop",
+    "eyeblink01",
+    "eyeblink02",
+    "iris01",
+    "mouth01",
+    "mouth02",
+    "mouth03",
+    "mouth04",
+    "eye01",
+    "face01",
+    "eye02",
+    "face02",
+    "eye03",
+    "face03",
+    "eye04",
+    "face04",
+    "eye05",
+    "face05",
+    "eye06",
+    "face06",
+    "eye07",
+    "face07",
+    "eye08",
+    "face08",
+    "eye09",
+    "face09",
+    "eye10",
+    "face10",
+    "eye11",
+    "face11",
+    "face12",
+    "face13",
+    "face14",
+    "face15",
+    "face16",
+    "face17",
+    "face18",
+    "d130_tr1000_c08 [demo d130]",
+    "d130_tr1000_c09 [demo d130]"
+   ]
+  }
+ ],
+ "game": "za",
+ "id": "tr1000_00",
+ "kind": "trainer",
+ "displayName": "Co",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 1,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "defaultwait02_start",
+   "index": 2,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_loop",
+   "index": 3,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "defaultwait02_end",
+   "index": 4,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def01_idle01",
+   "index": 11,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "def02_idle01",
+   "index": 15,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1,
+      0.1167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.00881
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1,
+      0.1167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.00881
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "turn01_r000",
+   "index": 20,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r090",
+   "index": 21,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_r180",
+   "index": 22,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l000",
+   "index": 23,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l090",
+   "index": 24,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turn01_l180",
+   "index": 25,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_start",
+   "index": 50,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_loop",
+   "index": 51,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "walk01_000_end",
+   "index": 52,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_start",
+   "index": 70,
+   "duration": 0.25,
+   "frameRate": 60.0,
+   "frameCount": 16,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_loop",
+   "index": 71,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run01_000_end",
+   "index": 72,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_start",
+   "index": 270,
+   "duration": 1.7,
+   "frameRate": 60.0,
+   "frameCount": 103,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_loop",
+   "index": 271,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit01_end",
+   "index": 272,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sit02_loop",
+   "index": 273,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak01_loop",
+   "index": 291,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "sitspeak02_loop",
+   "index": 296,
+   "duration": 6.1667,
+   "frameRate": 60.0,
+   "frameCount": 371,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "getpass01",
+   "index": 315,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "yes01",
+   "index": 320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "droppedTracks": 201
+  },
+  {
+   "name": "no01",
+   "index": 321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "droppedTracks": 201
+  },
+  {
+   "name": "speak01_loop",
+   "index": 551,
+   "duration": 3.8333,
+   "frameRate": 60.0,
+   "frameCount": 231,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "droppedTracks": 201
+  },
+  {
+   "name": "speak02_loop",
+   "index": 554,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "glad01",
+   "index": 570,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "grief01",
+   "index": 576,
+   "duration": 2.7833,
+   "frameRate": 60.0,
+   "frameCount": 168,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      2.1167,
+      2.1333,
+      2.15,
+      2.1667,
+      2.1833,
+      2.2,
+      2.2167,
+      2.2333,
+      2.25,
+      2.2667,
+      2.2833,
+      2.3,
+      2.3167,
+      2.3333,
+      2.35,
+      2.3667,
+      2.3833,
+      2.4,
+      2.4167,
+      2.4333,
+      2.45,
+      2.4667,
+      2.4833,
+      2.5,
+      2.5667,
+      2.6,
+      2.6333,
+      2.6667,
+      2.7,
+      2.7333,
+      2.7667,
+      2.7833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.00134
+      ],
+      [
+       0.0,
+       0.0047
+      ],
+      [
+       0.0,
+       0.01344
+      ],
+      [
+       0.0,
+       0.0168
+      ],
+      [
+       0.0,
+       0.01814
+      ],
+      [
+       0.0,
+       -0.00042
+      ],
+      [
+       0.0,
+       -0.08211
+      ],
+      [
+       0.0,
+       -0.10068
+      ],
+      [
+       0.0,
+       -0.09021
+      ],
+      [
+       0.0,
+       -0.11686
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.0158,
+       -0.18146
+      ],
+      [
+       -0.05349,
+       -0.05558
+      ],
+      [
+       -0.07706,
+       -0.0003
+      ],
+      [
+       -0.07497,
+       0.04107
+      ],
+      [
+       -0.06936,
+       0.05734
+      ],
+      [
+       -0.06747,
+       0.05666
+      ],
+      [
+       -0.06227,
+       0.05471
+      ],
+      [
+       -0.05445,
+       0.05163
+      ],
+      [
+       -0.0447,
+       0.04759
+      ],
+      [
+       -0.0447,
+       0.04448
+      ],
+      [
+       -0.03447,
+       0.04088
+      ],
+      [
+       -0.02997,
+       0.03689
+      ],
+      [
+       -0.02661,
+       0.03261
+      ],
+      [
+       -0.02493,
+       0.03261
+      ],
+      [
+       -0.0237,
+       0.02361
+      ],
+      [
+       -0.0215,
+       0.01911
+      ],
+      [
+       -0.01858,
+       0.01474
+      ],
+      [
+       -0.01521,
+       0.01062
+      ],
+      [
+       -0.01521,
+       0.00684
+      ],
+      [
+       -0.00815,
+       0.00351
+      ],
+      [
+       -0.00497,
+       0.00074
+      ],
+      [
+       -0.00238,
+       -0.00137
+      ],
+      [
+       -0.00064,
+       -0.00272
+      ],
+      [
+       0.0,
+       -0.00319
+      ],
+      [
+       0.0,
+       -0.00274
+      ],
+      [
+       0.0,
+       -0.00228
+      ],
+      [
+       0.0,
+       -0.00173
+      ],
+      [
+       0.0,
+       -0.00118
+      ],
+      [
+       0.0,
+       -0.00067
+      ],
+      [
+       0.0,
+       -0.00026
+      ],
+      [
+       0.0,
+       -3e-05
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      2.1167,
+      2.1333,
+      2.15,
+      2.1667,
+      2.1833,
+      2.2,
+      2.2167,
+      2.2333,
+      2.25,
+      2.2667,
+      2.2833,
+      2.3,
+      2.3167,
+      2.3333,
+      2.35,
+      2.3667,
+      2.3833,
+      2.4,
+      2.4167,
+      2.4333,
+      2.45,
+      2.4667,
+      2.4833,
+      2.5,
+      2.5667,
+      2.6,
+      2.6333,
+      2.6667,
+      2.7,
+      2.7333,
+      2.7667,
+      2.7833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.00134
+      ],
+      [
+       0.0,
+       0.0047
+      ],
+      [
+       0.0,
+       0.01344
+      ],
+      [
+       0.0,
+       0.0168
+      ],
+      [
+       0.0,
+       0.01814
+      ],
+      [
+       0.0,
+       -0.00042
+      ],
+      [
+       0.0,
+       -0.08211
+      ],
+      [
+       0.0,
+       -0.10068
+      ],
+      [
+       0.0,
+       -0.09021
+      ],
+      [
+       0.0,
+       -0.11686
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0158,
+       -0.18146
+      ],
+      [
+       0.05349,
+       -0.05558
+      ],
+      [
+       0.07706,
+       -0.0003
+      ],
+      [
+       0.07497,
+       0.04107
+      ],
+      [
+       0.06936,
+       0.05734
+      ],
+      [
+       0.06747,
+       0.05666
+      ],
+      [
+       0.06227,
+       0.05471
+      ],
+      [
+       0.05445,
+       0.05163
+      ],
+      [
+       0.0447,
+       0.04759
+      ],
+      [
+       0.0447,
+       0.04448
+      ],
+      [
+       0.03447,
+       0.04088
+      ],
+      [
+       0.02997,
+       0.03689
+      ],
+      [
+       0.02661,
+       0.03261
+      ],
+      [
+       0.02493,
+       0.03261
+      ],
+      [
+       0.0237,
+       0.02361
+      ],
+      [
+       0.0215,
+       0.01911
+      ],
+      [
+       0.01858,
+       0.01474
+      ],
+      [
+       0.01521,
+       0.01062
+      ],
+      [
+       0.01521,
+       0.00684
+      ],
+      [
+       0.00815,
+       0.00351
+      ],
+      [
+       0.00497,
+       0.00074
+      ],
+      [
+       0.00238,
+       -0.00137
+      ],
+      [
+       0.00064,
+       -0.00272
+      ],
+      [
+       0.0,
+       -0.00319
+      ],
+      [
+       0.0,
+       -0.00274
+      ],
+      [
+       0.0,
+       -0.00228
+      ],
+      [
+       0.0,
+       -0.00173
+      ],
+      [
+       0.0,
+       -0.00118
+      ],
+      [
+       0.0,
+       -0.00067
+      ],
+      [
+       0.0,
+       -0.00026
+      ],
+      [
+       0.0,
+       -3e-05
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "think01_start",
+   "index": 600,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.15,
+      0.1667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4333,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.00155
+      ],
+      [
+       0.0,
+       0.00555
+      ],
+      [
+       0.0,
+       0.01102
+      ],
+      [
+       0.0,
+       0.01698
+      ],
+      [
+       0.0,
+       0.02245
+      ],
+      [
+       0.0,
+       0.02645
+      ],
+      [
+       0.0,
+       0.028
+      ],
+      [
+       0.0,
+       -0.07054
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.03802,
+       -0.04795
+      ],
+      [
+       -0.05546,
+       0.02854
+      ],
+      [
+       -0.05546,
+       0.03431
+      ],
+      [
+       -0.06049,
+       0.03796
+      ],
+      [
+       -0.06049,
+       0.04005
+      ],
+      [
+       -0.06556,
+       0.04114
+      ],
+      [
+       -0.06556,
+       0.04179
+      ],
+      [
+       -0.07057,
+       0.04258
+      ],
+      [
+       -0.07541,
+       0.04453
+      ],
+      [
+       -0.07996,
+       0.04625
+      ],
+      [
+       -0.0821,
+       0.04625
+      ],
+      [
+       -0.08412,
+       0.04774
+      ],
+      [
+       -0.08602,
+       0.04774
+      ],
+      [
+       -0.08777,
+       0.04898
+      ],
+      [
+       -0.08938,
+       0.04898
+      ],
+      [
+       -0.09081,
+       0.04996
+      ],
+      [
+       -0.09206,
+       0.04996
+      ],
+      [
+       -0.09311,
+       0.05067
+      ],
+      [
+       -0.09396,
+       0.05067
+      ],
+      [
+       -0.09458,
+       0.0511
+      ],
+      [
+       -0.09496,
+       0.0511
+      ],
+      [
+       -0.09509,
+       0.05125
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.15,
+      0.1667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4333,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.00155
+      ],
+      [
+       0.0,
+       0.00555
+      ],
+      [
+       0.0,
+       0.01102
+      ],
+      [
+       0.0,
+       0.01698
+      ],
+      [
+       0.0,
+       0.02245
+      ],
+      [
+       0.0,
+       0.02645
+      ],
+      [
+       0.0,
+       0.028
+      ],
+      [
+       0.0,
+       -0.07054
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.03802,
+       -0.04795
+      ],
+      [
+       0.05546,
+       0.02854
+      ],
+      [
+       0.05546,
+       0.03431
+      ],
+      [
+       0.06049,
+       0.03796
+      ],
+      [
+       0.06049,
+       0.04005
+      ],
+      [
+       0.06556,
+       0.04114
+      ],
+      [
+       0.06556,
+       0.04179
+      ],
+      [
+       0.07057,
+       0.04258
+      ],
+      [
+       0.07541,
+       0.04453
+      ],
+      [
+       0.07996,
+       0.04625
+      ],
+      [
+       0.0821,
+       0.04625
+      ],
+      [
+       0.08412,
+       0.04774
+      ],
+      [
+       0.08602,
+       0.04774
+      ],
+      [
+       0.08777,
+       0.04898
+      ],
+      [
+       0.08938,
+       0.04898
+      ],
+      [
+       0.09081,
+       0.04996
+      ],
+      [
+       0.09206,
+       0.04996
+      ],
+      [
+       0.09311,
+       0.05067
+      ],
+      [
+       0.09396,
+       0.05067
+      ],
+      [
+       0.09458,
+       0.0511
+      ],
+      [
+       0.09496,
+       0.0511
+      ],
+      [
+       0.09509,
+       0.05125
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "think01_loop",
+   "index": 601,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       -0.09509,
+       0.05125
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.09509,
+       0.05125
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "think01_end",
+   "index": 602,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.0833,
+      0.1,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.3667,
+      0.4,
+      0.4333,
+      0.4667,
+      0.5,
+      0.5333,
+      0.5667,
+      0.6,
+      0.6333,
+      0.6667
+     ],
+     "values": [
+      [
+       -0.09509,
+       0.05125
+      ],
+      [
+       -0.0853,
+       0.05125
+      ],
+      [
+       -0.04718,
+       -0.06722
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.01263,
+       -0.02828
+      ],
+      [
+       -0.01263,
+       -0.02671
+      ],
+      [
+       -0.01263,
+       -0.02267
+      ],
+      [
+       -0.0122,
+       -0.01715
+      ],
+      [
+       -0.0122,
+       -0.01113
+      ],
+      [
+       -0.01149,
+       -0.0056
+      ],
+      [
+       -0.01149,
+       -0.00156
+      ],
+      [
+       -0.01053,
+       0.0
+      ],
+      [
+       -0.00936,
+       0.0
+      ],
+      [
+       -0.00805,
+       0.0
+      ],
+      [
+       -0.00667,
+       0.0
+      ],
+      [
+       -0.00527,
+       0.0
+      ],
+      [
+       -0.00392,
+       0.0
+      ],
+      [
+       -0.00267,
+       0.0
+      ],
+      [
+       -0.00159,
+       0.0
+      ],
+      [
+       -0.00075,
+       0.0
+      ],
+      [
+       -0.0002,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.0833,
+      0.1,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.3667,
+      0.4,
+      0.4333,
+      0.4667,
+      0.5,
+      0.5333,
+      0.5667,
+      0.6,
+      0.6333,
+      0.6667
+     ],
+     "values": [
+      [
+       0.09509,
+       0.05125
+      ],
+      [
+       0.0853,
+       0.05125
+      ],
+      [
+       0.04718,
+       -0.06722
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.01263,
+       -0.02828
+      ],
+      [
+       0.01263,
+       -0.02671
+      ],
+      [
+       0.01263,
+       -0.02267
+      ],
+      [
+       0.0122,
+       -0.01715
+      ],
+      [
+       0.0122,
+       -0.01113
+      ],
+      [
+       0.01149,
+       -0.0056
+      ],
+      [
+       0.01149,
+       -0.00156
+      ],
+      [
+       0.01053,
+       0.0
+      ],
+      [
+       0.00936,
+       0.0
+      ],
+      [
+       0.00805,
+       0.0
+      ],
+      [
+       0.00667,
+       0.0
+      ],
+      [
+       0.00527,
+       0.0
+      ],
+      [
+       0.00392,
+       0.0
+      ],
+      [
+       0.00267,
+       0.0
+      ],
+      [
+       0.00159,
+       0.0
+      ],
+      [
+       0.00075,
+       0.0
+      ],
+      [
+       0.0002,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "gesture01_start",
+   "index": 606,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.2333,
+      0.25
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.04577
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.2333,
+      0.25
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.04577
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "gesture01_loop",
+   "index": 607,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "gesture01_end",
+   "index": 608,
+   "duration": 0.8667,
+   "frameRate": 60.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.2,
+      0.2333,
+      0.2667,
+      0.3,
+      0.3333,
+      0.3667,
+      0.4,
+      0.4333,
+      0.4667,
+      0.5,
+      0.5333,
+      0.5667,
+      0.6,
+      0.6333,
+      0.6667,
+      0.7,
+      0.7333,
+      0.7667,
+      0.8,
+      0.8333,
+      0.8667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.02081
+      ],
+      [
+       0.0,
+       0.00551
+      ],
+      [
+       0.0,
+       0.01426
+      ],
+      [
+       0.0,
+       0.01951
+      ],
+      [
+       0.0,
+       0.02125
+      ],
+      [
+       0.0,
+       0.02076
+      ],
+      [
+       0.0,
+       0.02017
+      ],
+      [
+       0.0,
+       0.0194
+      ],
+      [
+       0.0,
+       0.01846
+      ],
+      [
+       0.0,
+       0.01737
+      ],
+      [
+       0.0,
+       0.01617
+      ],
+      [
+       0.0,
+       0.01486
+      ],
+      [
+       0.0,
+       0.01349
+      ],
+      [
+       0.0,
+       0.01207
+      ],
+      [
+       0.0,
+       0.01063
+      ],
+      [
+       0.0,
+       0.00918
+      ],
+      [
+       0.0,
+       0.00776
+      ],
+      [
+       0.0,
+       0.00639
+      ],
+      [
+       0.0,
+       0.00509
+      ],
+      [
+       0.0,
+       0.00388
+      ],
+      [
+       0.0,
+       0.00279
+      ],
+      [
+       0.0,
+       0.00185
+      ],
+      [
+       0.0,
+       0.00108
+      ],
+      [
+       0.0,
+       0.00049
+      ],
+      [
+       0.0,
+       0.00013
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.2,
+      0.2333,
+      0.2667,
+      0.3,
+      0.3333,
+      0.3667,
+      0.4,
+      0.4333,
+      0.4667,
+      0.5,
+      0.5333,
+      0.5667,
+      0.6,
+      0.6333,
+      0.6667,
+      0.7,
+      0.7333,
+      0.7667,
+      0.8,
+      0.8333,
+      0.8667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.02081
+      ],
+      [
+       0.0,
+       0.00551
+      ],
+      [
+       0.0,
+       0.01426
+      ],
+      [
+       0.0,
+       0.01951
+      ],
+      [
+       0.0,
+       0.02125
+      ],
+      [
+       0.0,
+       0.02076
+      ],
+      [
+       0.0,
+       0.02017
+      ],
+      [
+       0.0,
+       0.0194
+      ],
+      [
+       0.0,
+       0.01846
+      ],
+      [
+       0.0,
+       0.01737
+      ],
+      [
+       0.0,
+       0.01617
+      ],
+      [
+       0.0,
+       0.01486
+      ],
+      [
+       0.0,
+       0.01349
+      ],
+      [
+       0.0,
+       0.01207
+      ],
+      [
+       0.0,
+       0.01063
+      ],
+      [
+       0.0,
+       0.00918
+      ],
+      [
+       0.0,
+       0.00776
+      ],
+      [
+       0.0,
+       0.00639
+      ],
+      [
+       0.0,
+       0.00509
+      ],
+      [
+       0.0,
+       0.00388
+      ],
+      [
+       0.0,
+       0.00279
+      ],
+      [
+       0.0,
+       0.00185
+      ],
+      [
+       0.0,
+       0.00108
+      ],
+      [
+       0.0,
+       0.00049
+      ],
+      [
+       0.0,
+       0.00013
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "loopaction01_start",
+   "index": 930,
+   "duration": 0.8667,
+   "frameRate": 60.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction01_loop",
+   "index": 931,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction01_end",
+   "index": 932,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction02_start",
+   "index": 933,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction02_loop",
+   "index": 934,
+   "duration": 1.6,
+   "frameRate": 60.0,
+   "frameCount": 97,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "loopaction02_end",
+   "index": 935,
+   "duration": 0.9,
+   "frameRate": 60.0,
+   "frameCount": 55,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.00058
+      ],
+      [
+       0.0,
+       0.00176
+      ],
+      [
+       0.0,
+       0.00271
+      ],
+      [
+       0.0,
+       0.00328
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.00058
+      ],
+      [
+       0.0,
+       0.00176
+      ],
+      [
+       0.0,
+       0.00271
+      ],
+      [
+       0.0,
+       0.00328
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "loopaction03_start",
+   "index": 936,
+   "duration": 0.5167,
+   "frameRate": 60.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.2167,
+      0.2333,
+      0.3167,
+      0.3333,
+      0.35,
+      0.5167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.05818
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.10221
+      ],
+      [
+       0.0,
+       -0.05355
+      ],
+      [
+       -0.00037,
+       0.0
+      ],
+      [
+       -0.00044,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.2167,
+      0.2333,
+      0.3167,
+      0.3333,
+      0.35,
+      0.5167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.05818
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.10221
+      ],
+      [
+       0.0,
+       -0.05355
+      ],
+      [
+       0.00037,
+       0.0
+      ],
+      [
+       0.00044,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "loopaction03_loop",
+   "index": 937,
+   "duration": 2.5,
+   "frameRate": 60.0,
+   "frameCount": 151,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       -0.00044,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.00044,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "loopaction03_end",
+   "index": 938,
+   "duration": 0.9667,
+   "frameRate": 60.0,
+   "frameCount": 59,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.2667,
+      0.3167,
+      0.9667
+     ],
+     "values": [
+      [
+       -0.00044,
+       0.0
+      ],
+      [
+       -0.00025,
+       0.0
+      ],
+      [
+       -8e-05,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.2667,
+      0.3167,
+      0.9667
+     ],
+     "values": [
+      [
+       0.00044,
+       0.0
+      ],
+      [
+       0.00025,
+       0.0
+      ],
+      [
+       8e-05,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "battlewait01_start",
+   "index": 1000,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.00048
+      ],
+      [
+       0.0,
+       0.00192
+      ],
+      [
+       0.0,
+       0.00433
+      ],
+      [
+       0.0,
+       0.00773
+      ],
+      [
+       0.0,
+       0.01212
+      ],
+      [
+       0.0,
+       0.01752
+      ],
+      [
+       -0.00182,
+       0.02734
+      ],
+      [
+       -0.00602,
+       0.04126
+      ],
+      [
+       -0.01071,
+       0.0537
+      ],
+      [
+       -0.014,
+       0.05909
+      ],
+      [
+       -0.014,
+       0.05862
+      ],
+      [
+       -0.01795,
+       0.05731
+      ],
+      [
+       -0.01795,
+       0.05532
+      ],
+      [
+       -0.02176,
+       0.05278
+      ],
+      [
+       -0.02351,
+       0.04985
+      ],
+      [
+       -0.02511,
+       0.04666
+      ],
+      [
+       -0.02651,
+       0.04666
+      ],
+      [
+       -0.02766,
+       0.04012
+      ],
+      [
+       -0.02854,
+       0.03706
+      ],
+      [
+       -0.0291,
+       0.03434
+      ],
+      [
+       -0.0293,
+       0.0321
+      ],
+      [
+       -0.0293,
+       0.03027
+      ],
+      [
+       -0.0293,
+       0.02867
+      ],
+      [
+       -0.0293,
+       0.02725
+      ],
+      [
+       -0.02855,
+       0.02474
+      ],
+      [
+       -0.02806,
+       0.02474
+      ],
+      [
+       -0.02738,
+       0.02233
+      ],
+      [
+       -0.02649,
+       0.02104
+      ],
+      [
+       -0.02536,
+       0.01963
+      ],
+      [
+       -0.02396,
+       0.01805
+      ],
+      [
+       -0.02192,
+       0.01609
+      ],
+      [
+       -0.01907,
+       0.01373
+      ],
+      [
+       -0.01569,
+       0.01373
+      ],
+      [
+       -0.01569,
+       0.00844
+      ],
+      [
+       -0.00847,
+       0.00586
+      ],
+      [
+       -0.00518,
+       0.00355
+      ],
+      [
+       -0.00249,
+       0.00169
+      ],
+      [
+       -0.00067,
+       0.00045
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.00048
+      ],
+      [
+       0.0,
+       0.00192
+      ],
+      [
+       0.0,
+       0.00433
+      ],
+      [
+       0.0,
+       0.00773
+      ],
+      [
+       0.0,
+       0.01212
+      ],
+      [
+       0.0,
+       0.01752
+      ],
+      [
+       0.00182,
+       0.02734
+      ],
+      [
+       0.00602,
+       0.04126
+      ],
+      [
+       0.01071,
+       0.0537
+      ],
+      [
+       0.014,
+       0.05909
+      ],
+      [
+       0.014,
+       0.05862
+      ],
+      [
+       0.01795,
+       0.05731
+      ],
+      [
+       0.01795,
+       0.05532
+      ],
+      [
+       0.02176,
+       0.05278
+      ],
+      [
+       0.02351,
+       0.04985
+      ],
+      [
+       0.02511,
+       0.04666
+      ],
+      [
+       0.02651,
+       0.04666
+      ],
+      [
+       0.02766,
+       0.04012
+      ],
+      [
+       0.02854,
+       0.03706
+      ],
+      [
+       0.0291,
+       0.03434
+      ],
+      [
+       0.0293,
+       0.0321
+      ],
+      [
+       0.0293,
+       0.03027
+      ],
+      [
+       0.0293,
+       0.02867
+      ],
+      [
+       0.0293,
+       0.02725
+      ],
+      [
+       0.02855,
+       0.02474
+      ],
+      [
+       0.02806,
+       0.02474
+      ],
+      [
+       0.02738,
+       0.02233
+      ],
+      [
+       0.02649,
+       0.02104
+      ],
+      [
+       0.02536,
+       0.01963
+      ],
+      [
+       0.02396,
+       0.01805
+      ],
+      [
+       0.02192,
+       0.01609
+      ],
+      [
+       0.01907,
+       0.01373
+      ],
+      [
+       0.01569,
+       0.01373
+      ],
+      [
+       0.01569,
+       0.00844
+      ],
+      [
+       0.00847,
+       0.00586
+      ],
+      [
+       0.00518,
+       0.00355
+      ],
+      [
+       0.00249,
+       0.00169
+      ],
+      [
+       0.00067,
+       0.00045
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "battlewait01_loop",
+   "index": 1001,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "battlewait01_end",
+   "index": 1002,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.2667,
+      0.2833,
+      0.3167,
+      0.3333,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7167,
+      0.7333,
+      0.75,
+      0.7667,
+      0.7833,
+      0.8,
+      0.8167,
+      0.8333,
+      0.85,
+      0.8667,
+      0.9,
+      0.9167,
+      0.9333,
+      0.95,
+      0.9667,
+      0.9833,
+      1.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.07477
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0005,
+       0.00329
+      ],
+      [
+       0.00176,
+       0.01153
+      ],
+      [
+       0.00503,
+       0.03294
+      ],
+      [
+       0.00629,
+       0.04118
+      ],
+      [
+       0.00679,
+       0.04447
+      ],
+      [
+       0.00673,
+       0.04414
+      ],
+      [
+       0.00656,
+       0.04321
+      ],
+      [
+       0.00627,
+       0.04177
+      ],
+      [
+       0.00586,
+       0.03992
+      ],
+      [
+       0.00535,
+       0.03774
+      ],
+      [
+       0.00472,
+       0.03533
+      ],
+      [
+       0.00399,
+       0.03533
+      ],
+      [
+       0.00315,
+       0.03018
+      ],
+      [
+       0.0022,
+       0.02762
+      ],
+      [
+       0.00115,
+       0.02519
+      ],
+      [
+       0.0,
+       0.02519
+      ],
+      [
+       -0.00149,
+       0.02074
+      ],
+      [
+       -0.00346,
+       0.01817
+      ],
+      [
+       -0.00575,
+       0.01817
+      ],
+      [
+       -0.00575,
+       0.0126
+      ],
+      [
+       -0.01073,
+       0.00985
+      ],
+      [
+       -0.01311,
+       0.00727
+      ],
+      [
+       -0.01523,
+       0.005
+      ],
+      [
+       -0.01692,
+       0.00315
+      ],
+      [
+       -0.01805,
+       0.00186
+      ],
+      [
+       -0.01846,
+       0.00123
+      ],
+      [
+       -0.01822,
+       0.00123
+      ],
+      [
+       -0.01756,
+       0.0008
+      ],
+      [
+       -0.01654,
+       0.0008
+      ],
+      [
+       -0.01522,
+       0.00049
+      ],
+      [
+       -0.01367,
+       0.00049
+      ],
+      [
+       -0.01367,
+       0.00027
+      ],
+      [
+       -0.01015,
+       0.00027
+      ],
+      [
+       -0.0065,
+       8e-05
+      ],
+      [
+       -0.00479,
+       8e-05
+      ],
+      [
+       -0.00324,
+       8e-05
+      ],
+      [
+       -0.00192,
+       8e-05
+      ],
+      [
+       -0.0009,
+       8e-05
+      ],
+      [
+       -0.00024,
+       8e-05
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.2667,
+      0.2833,
+      0.3167,
+      0.3333,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7167,
+      0.7333,
+      0.75,
+      0.7667,
+      0.7833,
+      0.8,
+      0.8167,
+      0.8333,
+      0.85,
+      0.8667,
+      0.9,
+      0.9167,
+      0.9333,
+      0.95,
+      0.9667,
+      0.9833,
+      1.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.07477
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.0005,
+       0.00329
+      ],
+      [
+       -0.00176,
+       0.01153
+      ],
+      [
+       -0.00503,
+       0.03294
+      ],
+      [
+       -0.00629,
+       0.04118
+      ],
+      [
+       -0.00679,
+       0.04447
+      ],
+      [
+       -0.00673,
+       0.04414
+      ],
+      [
+       -0.00656,
+       0.04321
+      ],
+      [
+       -0.00627,
+       0.04177
+      ],
+      [
+       -0.00586,
+       0.03992
+      ],
+      [
+       -0.00535,
+       0.03774
+      ],
+      [
+       -0.00472,
+       0.03533
+      ],
+      [
+       -0.00399,
+       0.03533
+      ],
+      [
+       -0.00315,
+       0.03018
+      ],
+      [
+       -0.0022,
+       0.02762
+      ],
+      [
+       -0.00115,
+       0.02519
+      ],
+      [
+       0.0,
+       0.02519
+      ],
+      [
+       0.00149,
+       0.02074
+      ],
+      [
+       0.00346,
+       0.01817
+      ],
+      [
+       0.00575,
+       0.01817
+      ],
+      [
+       0.00575,
+       0.0126
+      ],
+      [
+       0.01073,
+       0.00985
+      ],
+      [
+       0.01311,
+       0.00727
+      ],
+      [
+       0.01523,
+       0.005
+      ],
+      [
+       0.01692,
+       0.00315
+      ],
+      [
+       0.01805,
+       0.00186
+      ],
+      [
+       0.01846,
+       0.00123
+      ],
+      [
+       0.01822,
+       0.00123
+      ],
+      [
+       0.01756,
+       0.0008
+      ],
+      [
+       0.01654,
+       0.0008
+      ],
+      [
+       0.01522,
+       0.00049
+      ],
+      [
+       0.01367,
+       0.00049
+      ],
+      [
+       0.01367,
+       0.00027
+      ],
+      [
+       0.01015,
+       0.00027
+      ],
+      [
+       0.0065,
+       8e-05
+      ],
+      [
+       0.00479,
+       8e-05
+      ],
+      [
+       0.00324,
+       8e-05
+      ],
+      [
+       0.00192,
+       8e-05
+      ],
+      [
+       0.0009,
+       8e-05
+      ],
+      [
+       0.00024,
+       8e-05
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "btl01_idle01",
+   "index": 1011,
+   "duration": 3.1,
+   "frameRate": 60.0,
+   "frameCount": 187,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "ballthrow01",
+   "index": 1020,
+   "duration": 1.1333,
+   "frameRate": 60.0,
+   "frameCount": 69,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7333,
+      0.75,
+      0.7667,
+      0.7833,
+      0.8,
+      0.8167,
+      0.85,
+      0.8667,
+      0.8833,
+      0.9,
+      0.9167,
+      0.9333,
+      0.95,
+      0.9667,
+      0.9833,
+      1.0,
+      1.0167,
+      1.0333,
+      1.05,
+      1.0667,
+      1.1,
+      1.1167,
+      1.1333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.03619
+      ],
+      [
+       0.0,
+       -0.04208
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.12596
+      ],
+      [
+       0.0,
+       -0.02691
+      ],
+      [
+       0.0,
+       -0.03014
+      ],
+      [
+       -0.0043,
+       -0.00818
+      ],
+      [
+       -0.0051,
+       0.01715
+      ],
+      [
+       -0.00696,
+       0.02188
+      ],
+      [
+       -0.00915,
+       0.02596
+      ],
+      [
+       -0.00915,
+       0.02941
+      ],
+      [
+       -0.01377,
+       0.03223
+      ],
+      [
+       -0.01586,
+       0.03442
+      ],
+      [
+       -0.01757,
+       0.03598
+      ],
+      [
+       -0.01872,
+       0.03691
+      ],
+      [
+       -0.01914,
+       0.03722
+      ],
+      [
+       -0.0181,
+       0.03646
+      ],
+      [
+       -0.01535,
+       0.03439
+      ],
+      [
+       -0.0114,
+       0.03136
+      ],
+      [
+       -0.0068,
+       0.02772
+      ],
+      [
+       -0.00207,
+       0.02772
+      ],
+      [
+       0.00225,
+       0.01997
+      ],
+      [
+       0.00563,
+       0.01655
+      ],
+      [
+       0.00821,
+       0.01284
+      ],
+      [
+       0.01042,
+       0.00849
+      ],
+      [
+       0.01214,
+       0.00434
+      ],
+      [
+       0.01326,
+       0.00122
+      ],
+      [
+       0.01366,
+       0.0
+      ],
+      [
+       0.01353,
+       0.0
+      ],
+      [
+       0.01317,
+       0.0
+      ],
+      [
+       0.01261,
+       0.0
+      ],
+      [
+       0.01188,
+       0.0
+      ],
+      [
+       0.011,
+       0.0
+      ],
+      [
+       0.00893,
+       0.0
+      ],
+      [
+       0.00779,
+       0.0
+      ],
+      [
+       0.00636,
+       7e-05
+      ],
+      [
+       0.00451,
+       0.00027
+      ],
+      [
+       0.00031,
+       0.00097
+      ],
+      [
+       -0.00167,
+       0.00097
+      ],
+      [
+       -0.00332,
+       0.00194
+      ],
+      [
+       -0.00446,
+       0.00194
+      ],
+      [
+       -0.00489,
+       0.003
+      ],
+      [
+       -0.00489,
+       0.00369
+      ],
+      [
+       -0.00489,
+       0.00559
+      ],
+      [
+       -0.00489,
+       0.00648
+      ],
+      [
+       -0.00489,
+       0.00713
+      ],
+      [
+       -0.00492,
+       0.00738
+      ],
+      [
+       -0.00629,
+       0.00738
+      ],
+      [
+       -0.00945,
+       0.00738
+      ],
+      [
+       -0.01303,
+       0.00723
+      ],
+      [
+       -0.01567,
+       0.0072
+      ],
+      [
+       -0.0171,
+       0.00855
+      ],
+      [
+       -0.01801,
+       0.00855
+      ],
+      [
+       -0.01849,
+       0.01449
+      ],
+      [
+       -0.01863,
+       0.01585
+      ],
+      [
+       -0.01725,
+       0.01467
+      ],
+      [
+       -0.0138,
+       0.01174
+      ],
+      [
+       -0.00483,
+       0.00411
+      ],
+      [
+       -0.00138,
+       0.00117
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7333,
+      0.75,
+      0.7667,
+      0.7833,
+      0.8,
+      0.8167,
+      0.85,
+      0.8667,
+      0.8833,
+      0.9,
+      0.9167,
+      0.9333,
+      0.95,
+      0.9667,
+      0.9833,
+      1.0,
+      1.0167,
+      1.0333,
+      1.05,
+      1.0667,
+      1.1,
+      1.1167,
+      1.1333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.03619
+      ],
+      [
+       0.0,
+       -0.04208
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.12596
+      ],
+      [
+       0.0,
+       -0.02691
+      ],
+      [
+       0.0,
+       -0.03014
+      ],
+      [
+       0.0043,
+       -0.00818
+      ],
+      [
+       0.0051,
+       0.01715
+      ],
+      [
+       0.00696,
+       0.02188
+      ],
+      [
+       0.00915,
+       0.02596
+      ],
+      [
+       0.00915,
+       0.02941
+      ],
+      [
+       0.01377,
+       0.03223
+      ],
+      [
+       0.01586,
+       0.03442
+      ],
+      [
+       0.01757,
+       0.03598
+      ],
+      [
+       0.01872,
+       0.03691
+      ],
+      [
+       0.01914,
+       0.03722
+      ],
+      [
+       0.0181,
+       0.03646
+      ],
+      [
+       0.01535,
+       0.03439
+      ],
+      [
+       0.0114,
+       0.03136
+      ],
+      [
+       0.0068,
+       0.02772
+      ],
+      [
+       0.00207,
+       0.02772
+      ],
+      [
+       -0.00225,
+       0.01997
+      ],
+      [
+       -0.00563,
+       0.01655
+      ],
+      [
+       -0.00821,
+       0.01284
+      ],
+      [
+       -0.01042,
+       0.00849
+      ],
+      [
+       -0.01214,
+       0.00434
+      ],
+      [
+       -0.01326,
+       0.00122
+      ],
+      [
+       -0.01366,
+       0.0
+      ],
+      [
+       -0.01353,
+       0.0
+      ],
+      [
+       -0.01317,
+       0.0
+      ],
+      [
+       -0.01261,
+       0.0
+      ],
+      [
+       -0.01188,
+       0.0
+      ],
+      [
+       -0.011,
+       0.0
+      ],
+      [
+       -0.00893,
+       0.0
+      ],
+      [
+       -0.00779,
+       0.0
+      ],
+      [
+       -0.00636,
+       7e-05
+      ],
+      [
+       -0.00451,
+       0.00027
+      ],
+      [
+       -0.00031,
+       0.00097
+      ],
+      [
+       0.00167,
+       0.00097
+      ],
+      [
+       0.00332,
+       0.00194
+      ],
+      [
+       0.00446,
+       0.00194
+      ],
+      [
+       0.00489,
+       0.003
+      ],
+      [
+       0.00489,
+       0.00369
+      ],
+      [
+       0.00489,
+       0.00559
+      ],
+      [
+       0.00489,
+       0.00648
+      ],
+      [
+       0.00489,
+       0.00713
+      ],
+      [
+       0.00492,
+       0.00738
+      ],
+      [
+       0.00629,
+       0.00738
+      ],
+      [
+       0.00945,
+       0.00738
+      ],
+      [
+       0.01303,
+       0.00723
+      ],
+      [
+       0.01567,
+       0.0072
+      ],
+      [
+       0.0171,
+       0.00855
+      ],
+      [
+       0.01801,
+       0.00855
+      ],
+      [
+       0.01849,
+       0.01449
+      ],
+      [
+       0.01863,
+       0.01585
+      ],
+      [
+       0.01725,
+       0.01467
+      ],
+      [
+       0.0138,
+       0.01174
+      ],
+      [
+       0.00483,
+       0.00411
+      ],
+      [
+       0.00138,
+       0.00117
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "order01",
+   "index": 1030,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7167,
+      0.7333,
+      0.75,
+      0.7833,
+      0.8,
+      0.8167,
+      0.8333,
+      0.85,
+      0.8667,
+      0.8833,
+      0.9,
+      0.9167,
+      0.9333,
+      0.95,
+      0.9667,
+      1.0,
+      1.0167,
+      1.0333,
+      1.05,
+      1.0667,
+      1.0833,
+      1.1,
+      1.1167,
+      1.1333,
+      1.15,
+      1.1667,
+      1.1833,
+      1.2,
+      1.2167,
+      1.2333,
+      1.25,
+      1.2667,
+      1.2833,
+      1.3,
+      1.3167,
+      1.3333,
+      1.35,
+      1.3667,
+      1.3833,
+      1.4,
+      1.4167,
+      1.4333,
+      1.45,
+      1.4667,
+      1.4833,
+      1.5,
+      1.5167,
+      1.5333,
+      1.55,
+      1.5667,
+      1.5833,
+      1.6167,
+      1.65,
+      1.6833,
+      1.7,
+      1.7167,
+      1.7333,
+      1.75,
+      1.7667,
+      1.7833,
+      1.8,
+      1.8167,
+      1.8333
+     ],
+     "values": [
+      [
+       -0.00202,
+       0.03882
+      ],
+      [
+       -0.00266,
+       0.04005
+      ],
+      [
+       -0.00457,
+       0.04322
+      ],
+      [
+       -0.00775,
+       0.04754
+      ],
+      [
+       -0.01221,
+       0.05226
+      ],
+      [
+       -0.01794,
+       0.05659
+      ],
+      [
+       -0.02495,
+       0.05975
+      ],
+      [
+       -0.03323,
+       0.06098
+      ],
+      [
+       -0.05221,
+       0.06017
+      ],
+      [
+       -0.07813,
+       0.05771
+      ],
+      [
+       -0.09117,
+       0.05352
+      ],
+      [
+       -0.07686,
+       0.04066
+      ],
+      [
+       -0.11091,
+       -0.1454
+      ],
+      [
+       -0.01452,
+       0.00603
+      ],
+      [
+       0.00043,
+       -0.00193
+      ],
+      [
+       0.00018,
+       -0.00081
+      ],
+      [
+       0.00018,
+       -0.00024
+      ],
+      [
+       1e-05,
+       -3e-05
+      ],
+      [
+       1e-05,
+       -0.00024
+      ],
+      [
+       1e-05,
+       -0.00081
+      ],
+      [
+       1e-05,
+       -0.00193
+      ],
+      [
+       0.00083,
+       -0.00377
+      ],
+      [
+       0.13021,
+       -0.20543
+      ],
+      [
+       0.12038,
+       -0.18498
+      ],
+      [
+       0.08904,
+       -0.1245
+      ],
+      [
+       0.048,
+       -0.04444
+      ],
+      [
+       0.013,
+       0.03029
+      ],
+      [
+       -0.01205,
+       0.08302
+      ],
+      [
+       -0.01005,
+       0.03847
+      ],
+      [
+       -0.01297,
+       0.03523
+      ],
+      [
+       -0.019,
+       0.02686
+      ],
+      [
+       -0.02404,
+       0.01533
+      ],
+      [
+       -0.02401,
+       0.00265
+      ],
+      [
+       -0.03056,
+       0.00453
+      ],
+      [
+       -0.04848,
+       0.02273
+      ],
+      [
+       -0.06385,
+       0.03895
+      ],
+      [
+       -0.07586,
+       0.05201
+      ],
+      [
+       -0.08366,
+       0.06071
+      ],
+      [
+       -0.08645,
+       0.06388
+      ],
+      [
+       -0.0856,
+       0.06351
+      ],
+      [
+       -0.08327,
+       0.06251
+      ],
+      [
+       -0.07973,
+       0.06099
+      ],
+      [
+       -0.07531,
+       0.05909
+      ],
+      [
+       -0.07028,
+       0.05693
+      ],
+      [
+       -0.05964,
+       0.05236
+      ],
+      [
+       -0.05461,
+       0.0502
+      ],
+      [
+       -0.05018,
+       0.0483
+      ],
+      [
+       -0.04665,
+       0.04678
+      ],
+      [
+       -0.04431,
+       0.04578
+      ],
+      [
+       -0.04347,
+       0.04541
+      ],
+      [
+       -0.04406,
+       0.04553
+      ],
+      [
+       -0.04574,
+       0.04588
+      ],
+      [
+       -0.04833,
+       0.0464
+      ],
+      [
+       -0.05166,
+       0.04708
+      ],
+      [
+       -0.05558,
+       0.04708
+      ],
+      [
+       -0.05992,
+       0.04877
+      ],
+      [
+       -0.06916,
+       0.05065
+      ],
+      [
+       -0.07375,
+       0.0888
+      ],
+      [
+       -0.07808,
+       0.05368
+      ],
+      [
+       -0.082,
+       -0.03334
+      ],
+      [
+       -0.08534,
+       -0.12536
+      ],
+      [
+       -0.08793,
+       0.01873
+      ],
+      [
+       -0.0896,
+       0.05481
+      ],
+      [
+       -0.1065,
+       0.05494
+      ],
+      [
+       -0.07128,
+       -0.0597
+      ],
+      [
+       -0.05836,
+       -0.03655
+      ],
+      [
+       -0.06206,
+       -0.01589
+      ],
+      [
+       -0.06165,
+       0.00689
+      ],
+      [
+       -0.06051,
+       0.04688
+      ],
+      [
+       -0.05875,
+       0.06835
+      ],
+      [
+       -0.05651,
+       0.06801
+      ],
+      [
+       -0.05389,
+       0.06667
+      ],
+      [
+       -0.05193,
+       0.06445
+      ],
+      [
+       -0.05137,
+       0.06129
+      ],
+      [
+       -0.05188,
+       0.05738
+      ],
+      [
+       -0.05314,
+       0.05291
+      ],
+      [
+       -0.05483,
+       0.04807
+      ],
+      [
+       -0.05664,
+       0.04807
+      ],
+      [
+       -0.05825,
+       0.038
+      ],
+      [
+       -0.05933,
+       0.03316
+      ],
+      [
+       -0.05956,
+       0.02869
+      ],
+      [
+       -0.05863,
+       0.02478
+      ],
+      [
+       -0.05622,
+       0.02478
+      ],
+      [
+       -0.05622,
+       0.01854
+      ],
+      [
+       -0.04982,
+       0.01524
+      ],
+      [
+       -0.04689,
+       0.01245
+      ],
+      [
+       -0.04429,
+       0.01094
+      ],
+      [
+       -0.04216,
+       0.01145
+      ],
+      [
+       -0.04016,
+       0.01145
+      ],
+      [
+       -0.03793,
+       0.01511
+      ],
+      [
+       -0.03551,
+       0.01511
+      ],
+      [
+       -0.03292,
+       0.01897
+      ],
+      [
+       -0.02744,
+       0.02286
+      ],
+      [
+       -0.0218,
+       0.02665
+      ],
+      [
+       -0.01632,
+       0.03017
+      ],
+      [
+       -0.01374,
+       0.03179
+      ],
+      [
+       -0.01131,
+       0.03328
+      ],
+      [
+       -0.00908,
+       0.03464
+      ],
+      [
+       -0.00709,
+       0.03584
+      ],
+      [
+       -0.00537,
+       0.03687
+      ],
+      [
+       -0.00396,
+       0.03769
+      ],
+      [
+       -0.00291,
+       0.03831
+      ],
+      [
+       -0.00225,
+       0.03869
+      ],
+      [
+       -0.00202,
+       0.03882
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7167,
+      0.7333,
+      0.75,
+      0.7833,
+      0.8,
+      0.8167,
+      0.8333,
+      0.85,
+      0.8667,
+      0.8833,
+      0.9,
+      0.9167,
+      0.9333,
+      0.95,
+      0.9667,
+      1.0,
+      1.0167,
+      1.0333,
+      1.05,
+      1.0667,
+      1.0833,
+      1.1,
+      1.1167,
+      1.1333,
+      1.15,
+      1.1667,
+      1.1833,
+      1.2,
+      1.2167,
+      1.2333,
+      1.25,
+      1.2667,
+      1.2833,
+      1.3,
+      1.3167,
+      1.3333,
+      1.35,
+      1.3667,
+      1.3833,
+      1.4,
+      1.4167,
+      1.4333,
+      1.45,
+      1.4667,
+      1.4833,
+      1.5,
+      1.5167,
+      1.5333,
+      1.55,
+      1.5667,
+      1.5833,
+      1.6167,
+      1.65,
+      1.6833,
+      1.7,
+      1.7167,
+      1.7333,
+      1.75,
+      1.7667,
+      1.7833,
+      1.8,
+      1.8167,
+      1.8333
+     ],
+     "values": [
+      [
+       0.00202,
+       0.03882
+      ],
+      [
+       0.00266,
+       0.04005
+      ],
+      [
+       0.00457,
+       0.04322
+      ],
+      [
+       0.00775,
+       0.04754
+      ],
+      [
+       0.01221,
+       0.05226
+      ],
+      [
+       0.01794,
+       0.05659
+      ],
+      [
+       0.02495,
+       0.05975
+      ],
+      [
+       0.03323,
+       0.06098
+      ],
+      [
+       0.05221,
+       0.06017
+      ],
+      [
+       0.07813,
+       0.05771
+      ],
+      [
+       0.09117,
+       0.05352
+      ],
+      [
+       0.07686,
+       0.04066
+      ],
+      [
+       0.11091,
+       -0.1454
+      ],
+      [
+       0.01452,
+       0.00603
+      ],
+      [
+       -0.00043,
+       -0.00193
+      ],
+      [
+       -0.00018,
+       -0.00081
+      ],
+      [
+       -0.00018,
+       -0.00024
+      ],
+      [
+       -1e-05,
+       -3e-05
+      ],
+      [
+       -1e-05,
+       -0.00024
+      ],
+      [
+       -1e-05,
+       -0.00081
+      ],
+      [
+       -1e-05,
+       -0.00193
+      ],
+      [
+       -0.00083,
+       -0.00377
+      ],
+      [
+       -0.13021,
+       -0.20543
+      ],
+      [
+       -0.12038,
+       -0.18498
+      ],
+      [
+       -0.08904,
+       -0.1245
+      ],
+      [
+       -0.048,
+       -0.04444
+      ],
+      [
+       -0.013,
+       0.03029
+      ],
+      [
+       0.01205,
+       0.08302
+      ],
+      [
+       0.01005,
+       0.03847
+      ],
+      [
+       0.01297,
+       0.03523
+      ],
+      [
+       0.019,
+       0.02686
+      ],
+      [
+       0.02404,
+       0.01533
+      ],
+      [
+       0.02401,
+       0.00265
+      ],
+      [
+       0.03056,
+       0.00453
+      ],
+      [
+       0.04848,
+       0.02273
+      ],
+      [
+       0.06385,
+       0.03895
+      ],
+      [
+       0.07586,
+       0.05201
+      ],
+      [
+       0.08366,
+       0.06071
+      ],
+      [
+       0.08645,
+       0.06388
+      ],
+      [
+       0.0856,
+       0.06351
+      ],
+      [
+       0.08327,
+       0.06251
+      ],
+      [
+       0.07973,
+       0.06099
+      ],
+      [
+       0.07531,
+       0.05909
+      ],
+      [
+       0.07028,
+       0.05693
+      ],
+      [
+       0.05964,
+       0.05236
+      ],
+      [
+       0.05461,
+       0.0502
+      ],
+      [
+       0.05018,
+       0.0483
+      ],
+      [
+       0.04665,
+       0.04678
+      ],
+      [
+       0.04431,
+       0.04578
+      ],
+      [
+       0.04347,
+       0.04541
+      ],
+      [
+       0.04406,
+       0.04553
+      ],
+      [
+       0.04574,
+       0.04588
+      ],
+      [
+       0.04833,
+       0.0464
+      ],
+      [
+       0.05166,
+       0.04708
+      ],
+      [
+       0.05558,
+       0.04708
+      ],
+      [
+       0.05992,
+       0.04877
+      ],
+      [
+       0.06916,
+       0.05065
+      ],
+      [
+       0.07375,
+       0.0888
+      ],
+      [
+       0.07808,
+       0.05368
+      ],
+      [
+       0.082,
+       -0.03334
+      ],
+      [
+       0.08534,
+       -0.12536
+      ],
+      [
+       0.08793,
+       0.01873
+      ],
+      [
+       0.0896,
+       0.05481
+      ],
+      [
+       0.1065,
+       0.05494
+      ],
+      [
+       0.07128,
+       -0.0597
+      ],
+      [
+       0.05836,
+       -0.03655
+      ],
+      [
+       0.06206,
+       -0.01589
+      ],
+      [
+       0.06165,
+       0.00689
+      ],
+      [
+       0.06051,
+       0.04688
+      ],
+      [
+       0.05875,
+       0.06835
+      ],
+      [
+       0.05651,
+       0.06801
+      ],
+      [
+       0.05389,
+       0.06667
+      ],
+      [
+       0.05193,
+       0.06445
+      ],
+      [
+       0.05137,
+       0.06129
+      ],
+      [
+       0.05188,
+       0.05738
+      ],
+      [
+       0.05314,
+       0.05291
+      ],
+      [
+       0.05483,
+       0.04807
+      ],
+      [
+       0.05664,
+       0.04807
+      ],
+      [
+       0.05825,
+       0.038
+      ],
+      [
+       0.05933,
+       0.03316
+      ],
+      [
+       0.05956,
+       0.02869
+      ],
+      [
+       0.05863,
+       0.02478
+      ],
+      [
+       0.05622,
+       0.02478
+      ],
+      [
+       0.05622,
+       0.01854
+      ],
+      [
+       0.04982,
+       0.01524
+      ],
+      [
+       0.04689,
+       0.01245
+      ],
+      [
+       0.04429,
+       0.01094
+      ],
+      [
+       0.04216,
+       0.01145
+      ],
+      [
+       0.04016,
+       0.01145
+      ],
+      [
+       0.03793,
+       0.01511
+      ],
+      [
+       0.03551,
+       0.01511
+      ],
+      [
+       0.03292,
+       0.01897
+      ],
+      [
+       0.02744,
+       0.02286
+      ],
+      [
+       0.0218,
+       0.02665
+      ],
+      [
+       0.01632,
+       0.03017
+      ],
+      [
+       0.01374,
+       0.03179
+      ],
+      [
+       0.01131,
+       0.03328
+      ],
+      [
+       0.00908,
+       0.03464
+      ],
+      [
+       0.00709,
+       0.03584
+      ],
+      [
+       0.00537,
+       0.03687
+      ],
+      [
+       0.00396,
+       0.03769
+      ],
+      [
+       0.00291,
+       0.03831
+      ],
+      [
+       0.00225,
+       0.03869
+      ],
+      [
+       0.00202,
+       0.03882
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "mg_transform02_start",
+   "index": 1053,
+   "duration": 2.8333,
+   "frameRate": 60.0,
+   "frameCount": 171,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mg_transform02_loop",
+   "index": 1054,
+   "duration": 0.3833,
+   "frameRate": 60.0,
+   "frameCount": 24,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mg_transform02_end",
+   "index": 1055,
+   "duration": 1.9667,
+   "frameRate": 60.0,
+   "frameCount": 119,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mg_transform02_end_loop",
+   "index": 1056,
+   "duration": 1.15,
+   "frameRate": 60.0,
+   "frameCount": 70,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "advent01_start",
+   "index": 1060,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "advent01_loop",
+   "index": 1061,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "advent01_end",
+   "index": 1062,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "lose01_start",
+   "index": 1080,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "lose01_loop",
+   "index": 1081,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "lose01_end",
+   "index": 1082,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.14216
+      ],
+      [
+       0.0,
+       -0.03784
+      ],
+      [
+       0.0,
+       -0.02435
+      ],
+      [
+       0.0,
+       -0.00388
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.14216
+      ],
+      [
+       0.0,
+       -0.03784
+      ],
+      [
+       0.0,
+       -0.02435
+      ],
+      [
+       0.0,
+       -0.00388
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "yes01",
+   "index": 7320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "droppedTracks": 201
+  },
+  {
+   "name": "no01",
+   "index": 7321,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "droppedTracks": 201
+  },
+  {
+   "name": "ballreturn01_start",
+   "index": 7460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.15,
+      0.1833,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.0002,
+       0.00017
+      ],
+      [
+       -0.00079,
+       0.00064
+      ],
+      [
+       -0.0017,
+       0.00139
+      ],
+      [
+       -0.00292,
+       0.00237
+      ],
+      [
+       -0.00438,
+       0.00357
+      ],
+      [
+       -0.00606,
+       0.00493
+      ],
+      [
+       -0.0079,
+       0.00644
+      ],
+      [
+       -0.01193,
+       0.00972
+      ],
+      [
+       -0.01613,
+       0.01315
+      ],
+      [
+       -0.02015,
+       0.01646
+      ],
+      [
+       -0.022,
+       0.01797
+      ],
+      [
+       -0.02367,
+       0.01936
+      ],
+      [
+       -0.02514,
+       0.02057
+      ],
+      [
+       -0.02635,
+       0.02158
+      ],
+      [
+       -0.02727,
+       0.02236
+      ],
+      [
+       -0.02785,
+       0.02287
+      ],
+      [
+       -0.02806,
+       0.02307
+      ],
+      [
+       -0.02771,
+       0.02307
+      ],
+      [
+       -0.02677,
+       0.02307
+      ],
+      [
+       -0.02536,
+       0.02307
+      ],
+      [
+       -0.02362,
+       0.02307
+      ],
+      [
+       -0.02362,
+       0.02318
+      ],
+      [
+       -0.01968,
+       0.02318
+      ],
+      [
+       -0.01774,
+       0.02318
+      ],
+      [
+       -0.016,
+       0.02318
+      ],
+      [
+       -0.01459,
+       0.02318
+      ],
+      [
+       -0.01365,
+       0.02318
+      ],
+      [
+       -0.0133,
+       0.02318
+      ],
+      [
+       -0.01343,
+       0.02315
+      ],
+      [
+       -0.01377,
+       0.02315
+      ],
+      [
+       -0.01377,
+       0.02275
+      ],
+      [
+       -0.01485,
+       0.02275
+      ],
+      [
+       -0.01485,
+       0.02217
+      ],
+      [
+       -0.01605,
+       0.02217
+      ],
+      [
+       -0.01654,
+       0.02166
+      ],
+      [
+       -0.01689,
+       0.0215
+      ],
+      [
+       -0.01701,
+       0.02143
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.15,
+      0.1833,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3667,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0002,
+       0.00017
+      ],
+      [
+       0.00079,
+       0.00064
+      ],
+      [
+       0.0017,
+       0.00139
+      ],
+      [
+       0.00292,
+       0.00237
+      ],
+      [
+       0.00438,
+       0.00357
+      ],
+      [
+       0.00606,
+       0.00493
+      ],
+      [
+       0.0079,
+       0.00644
+      ],
+      [
+       0.01193,
+       0.00972
+      ],
+      [
+       0.01613,
+       0.01315
+      ],
+      [
+       0.02015,
+       0.01646
+      ],
+      [
+       0.022,
+       0.01797
+      ],
+      [
+       0.02367,
+       0.01936
+      ],
+      [
+       0.02514,
+       0.02057
+      ],
+      [
+       0.02635,
+       0.02158
+      ],
+      [
+       0.02727,
+       0.02236
+      ],
+      [
+       0.02785,
+       0.02287
+      ],
+      [
+       0.02806,
+       0.02307
+      ],
+      [
+       0.02771,
+       0.02307
+      ],
+      [
+       0.02677,
+       0.02307
+      ],
+      [
+       0.02536,
+       0.02307
+      ],
+      [
+       0.02362,
+       0.02307
+      ],
+      [
+       0.02362,
+       0.02318
+      ],
+      [
+       0.01968,
+       0.02318
+      ],
+      [
+       0.01774,
+       0.02318
+      ],
+      [
+       0.016,
+       0.02318
+      ],
+      [
+       0.01459,
+       0.02318
+      ],
+      [
+       0.01365,
+       0.02318
+      ],
+      [
+       0.0133,
+       0.02318
+      ],
+      [
+       0.01343,
+       0.02315
+      ],
+      [
+       0.01377,
+       0.02315
+      ],
+      [
+       0.01377,
+       0.02275
+      ],
+      [
+       0.01485,
+       0.02275
+      ],
+      [
+       0.01485,
+       0.02217
+      ],
+      [
+       0.01605,
+       0.02217
+      ],
+      [
+       0.01654,
+       0.02166
+      ],
+      [
+       0.01689,
+       0.0215
+      ],
+      [
+       0.01701,
+       0.02143
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "ballreturn01_loop",
+   "index": 7461,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7167,
+      0.7333,
+      0.7667,
+      0.8,
+      0.8333,
+      0.85,
+      0.8667,
+      0.8833,
+      0.9,
+      0.9167,
+      0.95,
+      0.9833,
+      1.0167,
+      1.0333,
+      1.05,
+      1.0833,
+      1.1167,
+      1.15,
+      1.1667,
+      1.1833,
+      1.2167,
+      1.25,
+      1.2833,
+      1.3167,
+      1.3333
+     ],
+     "values": [
+      [
+       -0.01701,
+       0.02143
+      ],
+      [
+       -0.01701,
+       0.02156
+      ],
+      [
+       -0.01701,
+       0.0219
+      ],
+      [
+       -0.01701,
+       0.02245
+      ],
+      [
+       -0.01701,
+       0.02317
+      ],
+      [
+       -0.01671,
+       0.02404
+      ],
+      [
+       -0.01671,
+       0.02503
+      ],
+      [
+       -0.01646,
+       0.02503
+      ],
+      [
+       -0.01646,
+       0.0273
+      ],
+      [
+       -0.01616,
+       0.0273
+      ],
+      [
+       -0.01616,
+       0.02976
+      ],
+      [
+       -0.01582,
+       0.02976
+      ],
+      [
+       -0.01582,
+       0.03223
+      ],
+      [
+       -0.01546,
+       0.03223
+      ],
+      [
+       -0.01546,
+       0.0345
+      ],
+      [
+       -0.0151,
+       0.03549
+      ],
+      [
+       -0.0151,
+       0.03636
+      ],
+      [
+       -0.01476,
+       0.03708
+      ],
+      [
+       -0.01476,
+       0.03763
+      ],
+      [
+       -0.01445,
+       0.03797
+      ],
+      [
+       -0.01445,
+       0.03809
+      ],
+      [
+       -0.01418,
+       0.03809
+      ],
+      [
+       -0.01389,
+       0.03809
+      ],
+      [
+       -0.01389,
+       0.03745
+      ],
+      [
+       -0.01358,
+       0.03745
+      ],
+      [
+       -0.01358,
+       0.03672
+      ],
+      [
+       -0.01325,
+       0.03672
+      ],
+      [
+       -0.01325,
+       0.03577
+      ],
+      [
+       -0.01291,
+       0.03577
+      ],
+      [
+       -0.01291,
+       0.03465
+      ],
+      [
+       -0.01258,
+       0.03465
+      ],
+      [
+       -0.01258,
+       0.03341
+      ],
+      [
+       -0.01225,
+       0.03341
+      ],
+      [
+       -0.01225,
+       0.0321
+      ],
+      [
+       -0.01194,
+       0.0321
+      ],
+      [
+       -0.01194,
+       0.03075
+      ],
+      [
+       -0.01166,
+       0.03075
+      ],
+      [
+       -0.01166,
+       0.02943
+      ],
+      [
+       -0.01141,
+       0.02943
+      ],
+      [
+       -0.01141,
+       0.02816
+      ],
+      [
+       -0.0112,
+       0.02816
+      ],
+      [
+       -0.0112,
+       0.027
+      ],
+      [
+       -0.01104,
+       0.027
+      ],
+      [
+       -0.01104,
+       0.026
+      ],
+      [
+       -0.01092,
+       0.0252
+      ],
+      [
+       -0.01092,
+       0.02463
+      ],
+      [
+       -0.01092,
+       0.0242
+      ],
+      [
+       -0.01115,
+       0.0242
+      ],
+      [
+       -0.01115,
+       0.02388
+      ],
+      [
+       -0.01144,
+       0.02388
+      ],
+      [
+       -0.01144,
+       0.02365
+      ],
+      [
+       -0.01181,
+       0.02365
+      ],
+      [
+       -0.01225,
+       0.02345
+      ],
+      [
+       -0.01274,
+       0.02345
+      ],
+      [
+       -0.01327,
+       0.02345
+      ],
+      [
+       -0.01327,
+       0.02333
+      ],
+      [
+       -0.01382,
+       0.02333
+      ],
+      [
+       -0.01438,
+       0.02333
+      ],
+      [
+       -0.01492,
+       0.02333
+      ],
+      [
+       -0.01543,
+       0.02333
+      ],
+      [
+       -0.01543,
+       0.02314
+      ],
+      [
+       -0.0159,
+       0.02314
+      ],
+      [
+       -0.01631,
+       0.02288
+      ],
+      [
+       -0.01664,
+       0.0226
+      ],
+      [
+       -0.01687,
+       0.02223
+      ],
+      [
+       -0.017,
+       0.02173
+      ],
+      [
+       -0.01701,
+       0.02143
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.05,
+      0.0667,
+      0.0833,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      0.2833,
+      0.3,
+      0.3167,
+      0.3333,
+      0.35,
+      0.3833,
+      0.4,
+      0.4167,
+      0.4333,
+      0.45,
+      0.4667,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667,
+      0.6833,
+      0.7,
+      0.7167,
+      0.7333,
+      0.7667,
+      0.8,
+      0.8333,
+      0.85,
+      0.8667,
+      0.8833,
+      0.9,
+      0.9167,
+      0.95,
+      0.9833,
+      1.0167,
+      1.0333,
+      1.05,
+      1.0833,
+      1.1167,
+      1.15,
+      1.1667,
+      1.1833,
+      1.2167,
+      1.25,
+      1.2833,
+      1.3167,
+      1.3333
+     ],
+     "values": [
+      [
+       0.01701,
+       0.02143
+      ],
+      [
+       0.01701,
+       0.02156
+      ],
+      [
+       0.01701,
+       0.0219
+      ],
+      [
+       0.01701,
+       0.02245
+      ],
+      [
+       0.01701,
+       0.02317
+      ],
+      [
+       0.01671,
+       0.02404
+      ],
+      [
+       0.01671,
+       0.02503
+      ],
+      [
+       0.01646,
+       0.02503
+      ],
+      [
+       0.01646,
+       0.0273
+      ],
+      [
+       0.01616,
+       0.0273
+      ],
+      [
+       0.01616,
+       0.02976
+      ],
+      [
+       0.01582,
+       0.02976
+      ],
+      [
+       0.01582,
+       0.03223
+      ],
+      [
+       0.01546,
+       0.03223
+      ],
+      [
+       0.01546,
+       0.0345
+      ],
+      [
+       0.0151,
+       0.03549
+      ],
+      [
+       0.0151,
+       0.03636
+      ],
+      [
+       0.01476,
+       0.03708
+      ],
+      [
+       0.01476,
+       0.03763
+      ],
+      [
+       0.01445,
+       0.03797
+      ],
+      [
+       0.01445,
+       0.03809
+      ],
+      [
+       0.01418,
+       0.03809
+      ],
+      [
+       0.01389,
+       0.03809
+      ],
+      [
+       0.01389,
+       0.03745
+      ],
+      [
+       0.01358,
+       0.03745
+      ],
+      [
+       0.01358,
+       0.03672
+      ],
+      [
+       0.01325,
+       0.03672
+      ],
+      [
+       0.01325,
+       0.03577
+      ],
+      [
+       0.01291,
+       0.03577
+      ],
+      [
+       0.01291,
+       0.03465
+      ],
+      [
+       0.01258,
+       0.03465
+      ],
+      [
+       0.01258,
+       0.03341
+      ],
+      [
+       0.01225,
+       0.03341
+      ],
+      [
+       0.01225,
+       0.0321
+      ],
+      [
+       0.01194,
+       0.0321
+      ],
+      [
+       0.01194,
+       0.03075
+      ],
+      [
+       0.01166,
+       0.03075
+      ],
+      [
+       0.01166,
+       0.02943
+      ],
+      [
+       0.01141,
+       0.02943
+      ],
+      [
+       0.01141,
+       0.02816
+      ],
+      [
+       0.0112,
+       0.02816
+      ],
+      [
+       0.0112,
+       0.027
+      ],
+      [
+       0.01104,
+       0.027
+      ],
+      [
+       0.01104,
+       0.026
+      ],
+      [
+       0.01092,
+       0.0252
+      ],
+      [
+       0.01092,
+       0.02463
+      ],
+      [
+       0.01092,
+       0.0242
+      ],
+      [
+       0.01115,
+       0.0242
+      ],
+      [
+       0.01115,
+       0.02388
+      ],
+      [
+       0.01144,
+       0.02388
+      ],
+      [
+       0.01144,
+       0.02365
+      ],
+      [
+       0.01181,
+       0.02365
+      ],
+      [
+       0.01225,
+       0.02345
+      ],
+      [
+       0.01274,
+       0.02345
+      ],
+      [
+       0.01327,
+       0.02345
+      ],
+      [
+       0.01327,
+       0.02333
+      ],
+      [
+       0.01382,
+       0.02333
+      ],
+      [
+       0.01438,
+       0.02333
+      ],
+      [
+       0.01492,
+       0.02333
+      ],
+      [
+       0.01543,
+       0.02333
+      ],
+      [
+       0.01543,
+       0.02314
+      ],
+      [
+       0.0159,
+       0.02314
+      ],
+      [
+       0.01631,
+       0.02288
+      ],
+      [
+       0.01664,
+       0.0226
+      ],
+      [
+       0.01687,
+       0.02223
+      ],
+      [
+       0.017,
+       0.02173
+      ],
+      [
+       0.01701,
+       0.02143
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "ballreturn01_end",
+   "index": 7462,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "damage01",
+   "index": 7500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.03826,
+       -0.03818
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.11031
+      ],
+      [
+       -0.00463,
+       -0.08372
+      ],
+      [
+       -0.01409,
+       -0.05081
+      ],
+      [
+       -0.01624,
+       -0.00016
+      ],
+      [
+       -0.01654,
+       0.03131
+      ],
+      [
+       -0.01563,
+       0.02958
+      ],
+      [
+       -0.01326,
+       0.02511
+      ],
+      [
+       -0.01003,
+       0.01899
+      ],
+      [
+       -0.00651,
+       0.01232
+      ],
+      [
+       -0.00328,
+       0.00621
+      ],
+      [
+       -0.00092,
+       0.00173
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.4833,
+      0.5,
+      0.5167,
+      0.5333,
+      0.55,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.03826,
+       -0.03818
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.11031
+      ],
+      [
+       0.00463,
+       -0.08372
+      ],
+      [
+       0.01409,
+       -0.05081
+      ],
+      [
+       0.01624,
+       -0.00016
+      ],
+      [
+       0.01654,
+       0.03131
+      ],
+      [
+       0.01563,
+       0.02958
+      ],
+      [
+       0.01326,
+       0.02511
+      ],
+      [
+       0.01003,
+       0.01899
+      ],
+      [
+       0.00651,
+       0.01232
+      ],
+      [
+       0.00328,
+       0.00621
+      ],
+      [
+       0.00092,
+       0.00173
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "speak01_loop",
+   "index": 7551,
+   "duration": 3.8333,
+   "frameRate": 60.0,
+   "frameCount": 231,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "droppedTracks": 201
+  },
+  {
+   "name": "eyeblink01",
+   "index": 8000,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.1167,
+      0.1333,
+      0.15
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01521
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.10242
+      ],
+      [
+       0.0,
+       -0.01521
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.1167,
+      0.1333,
+      0.15
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.01521
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       -0.10242
+      ],
+      [
+       0.0,
+       -0.01521
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eyeblink02",
+   "index": 8001,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.1167,
+      0.1333
+     ],
+     "values": [
+      [
+       0.07163,
+       -0.03435
+      ],
+      [
+       0.07163,
+       -0.19235
+      ],
+      [
+       0.07163,
+       -0.03435
+      ],
+      [
+       0.07163,
+       -0.10912
+      ],
+      [
+       0.07163,
+       -0.03435
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0333,
+      0.1167,
+      0.1333
+     ],
+     "values": [
+      [
+       -0.07163,
+       -0.03435
+      ],
+      [
+       -0.07163,
+       -0.19235
+      ],
+      [
+       -0.07163,
+       -0.03435
+      ],
+      [
+       -0.07163,
+       -0.10912
+      ],
+      [
+       -0.07163,
+       -0.03435
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "iris01",
+   "index": 8050,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0,
+      1.6667,
+      1.6833,
+      1.7,
+      1.7167,
+      1.7333,
+      1.75,
+      1.7667,
+      1.7833,
+      1.8,
+      1.8167,
+      1.8333,
+      1.85,
+      1.8667,
+      1.8833,
+      1.9,
+      1.9167,
+      1.9333,
+      1.95,
+      1.9667,
+      1.9833,
+      2.0,
+      2.0167,
+      2.0333,
+      2.05,
+      2.0667,
+      2.0833,
+      2.1,
+      2.1167,
+      2.1333,
+      2.15,
+      2.1667,
+      2.1833,
+      2.2,
+      2.2167,
+      2.2333,
+      2.25,
+      2.2667,
+      2.2833,
+      2.3,
+      2.3167,
+      2.3333,
+      2.35,
+      2.3667,
+      2.3833,
+      2.4,
+      2.4167,
+      2.4333,
+      2.45,
+      2.4667,
+      2.4833,
+      2.5,
+      2.5167,
+      2.5333,
+      2.55,
+      2.5667,
+      2.6,
+      2.6167,
+      2.6333,
+      2.65,
+      2.6667,
+      2.6833,
+      2.7,
+      2.7167,
+      2.7333,
+      2.75,
+      2.7667,
+      2.7833,
+      2.8,
+      2.8167,
+      2.8333,
+      2.85,
+      2.8667,
+      2.8833,
+      2.9,
+      2.9167,
+      2.9333,
+      2.95,
+      2.9667,
+      2.9833,
+      3.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.13086,
+       0.07166
+      ],
+      [
+       0.12763,
+       0.08363
+      ],
+      [
+       0.11874,
+       0.0945
+      ],
+      [
+       0.10536,
+       0.10424
+      ],
+      [
+       0.08869,
+       0.11281
+      ],
+      [
+       0.06991,
+       0.12017
+      ],
+      [
+       0.05019,
+       0.12629
+      ],
+      [
+       0.03072,
+       0.13111
+      ],
+      [
+       0.01269,
+       0.1346
+      ],
+      [
+       -0.00272,
+       0.13673
+      ],
+      [
+       -0.01433,
+       0.13745
+      ],
+      [
+       -0.02302,
+       0.13613
+      ],
+      [
+       -0.03052,
+       0.13248
+      ],
+      [
+       -0.03688,
+       0.12691
+      ],
+      [
+       -0.04219,
+       0.11985
+      ],
+      [
+       -0.0465,
+       0.11173
+      ],
+      [
+       -0.04987,
+       0.10296
+      ],
+      [
+       -0.05239,
+       0.09398
+      ],
+      [
+       -0.0541,
+       0.08521
+      ],
+      [
+       -0.05508,
+       0.07707
+      ],
+      [
+       -0.05539,
+       0.07
+      ],
+      [
+       -0.05032,
+       0.06337
+      ],
+      [
+       -0.03656,
+       0.0564
+      ],
+      [
+       -0.01629,
+       0.0564
+      ],
+      [
+       0.00833,
+       0.04215
+      ],
+      [
+       0.00833,
+       0.03521
+      ],
+      [
+       0.06191,
+       0.02863
+      ],
+      [
+       0.08653,
+       0.02259
+      ],
+      [
+       0.1068,
+       0.01725
+      ],
+      [
+       0.12056,
+       0.01279
+      ],
+      [
+       0.12562,
+       0.00939
+      ],
+      [
+       0.12291,
+       0.00684
+      ],
+      [
+       0.11542,
+       0.00481
+      ],
+      [
+       0.10412,
+       0.00322
+      ],
+      [
+       0.08999,
+       0.00203
+      ],
+      [
+       0.07399,
+       0.00117
+      ],
+      [
+       0.07399,
+       0.0006
+      ],
+      [
+       0.04028,
+       0.00025
+      ],
+      [
+       0.02451,
+       8e-05
+      ],
+      [
+       0.01076,
+       8e-05
+      ],
+      [
+       0.0,
+       8e-05
+      ],
+      [
+       -0.00874,
+       8e-05
+      ],
+      [
+       -0.01699,
+       8e-05
+      ],
+      [
+       -0.02465,
+       8e-05
+      ],
+      [
+       -0.03162,
+       8e-05
+      ],
+      [
+       -0.0378,
+       8e-05
+      ],
+      [
+       -0.04309,
+       8e-05
+      ],
+      [
+       -0.04738,
+       8e-05
+      ],
+      [
+       -0.05057,
+       8e-05
+      ],
+      [
+       -0.05256,
+       8e-05
+      ],
+      [
+       -0.05325,
+       0.0
+      ],
+      [
+       -0.04807,
+       -0.00314
+      ],
+      [
+       -0.03401,
+       -0.01165
+      ],
+      [
+       -0.01329,
+       -0.02419
+      ],
+      [
+       0.01186,
+       -0.03942
+      ],
+      [
+       0.06662,
+       -0.07258
+      ],
+      [
+       0.09177,
+       -0.08781
+      ],
+      [
+       0.11249,
+       -0.10035
+      ],
+      [
+       0.12655,
+       -0.10886
+      ],
+      [
+       0.13173,
+       -0.112
+      ],
+      [
+       0.12887,
+       -0.112
+      ],
+      [
+       0.12097,
+       -0.112
+      ],
+      [
+       0.10907,
+       -0.112
+      ],
+      [
+       0.09419,
+       -0.112
+      ],
+      [
+       0.07736,
+       -0.112
+      ],
+      [
+       0.05961,
+       -0.112
+      ],
+      [
+       0.04197,
+       -0.112
+      ],
+      [
+       0.02547,
+       -0.112
+      ],
+      [
+       0.01114,
+       -0.112
+      ],
+      [
+       0.0,
+       -0.112
+      ],
+      [
+       -0.00891,
+       -0.11176
+      ],
+      [
+       -0.01719,
+       -0.11112
+      ],
+      [
+       -0.02478,
+       -0.11017
+      ],
+      [
+       -0.0316,
+       -0.10901
+      ],
+      [
+       -0.03757,
+       -0.10901
+      ],
+      [
+       -0.04263,
+       -0.1065
+      ],
+      [
+       -0.04669,
+       -0.10535
+      ],
+      [
+       -0.04968,
+       -0.1044
+      ],
+      [
+       -0.05153,
+       -0.10375
+      ],
+      [
+       -0.05216,
+       -0.10352
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0,
+      1.6667,
+      1.6833,
+      1.7,
+      1.7167,
+      1.7333,
+      1.75,
+      1.7667,
+      1.7833,
+      1.8,
+      1.8167,
+      1.8333,
+      1.85,
+      1.8667,
+      1.8833,
+      1.9,
+      1.9167,
+      1.9333,
+      1.95,
+      1.9667,
+      1.9833,
+      2.0,
+      2.0167,
+      2.0333,
+      2.05,
+      2.0667,
+      2.0833,
+      2.1,
+      2.1167,
+      2.1333,
+      2.15,
+      2.1667,
+      2.1833,
+      2.2,
+      2.2167,
+      2.2333,
+      2.25,
+      2.2667,
+      2.2833,
+      2.3,
+      2.3167,
+      2.3333,
+      2.35,
+      2.3667,
+      2.3833,
+      2.4167,
+      2.4333,
+      2.45,
+      2.4667,
+      2.4833,
+      2.5,
+      2.5167,
+      2.5333,
+      2.55,
+      2.5667,
+      2.5833,
+      2.6,
+      2.6167,
+      2.6333,
+      2.65,
+      2.6667,
+      2.6833,
+      2.7,
+      2.7167,
+      2.7333,
+      2.75,
+      2.7667,
+      2.7833,
+      2.8,
+      2.8167,
+      2.8333,
+      2.85,
+      2.8667,
+      2.8833,
+      2.9167,
+      2.9333,
+      2.95,
+      2.9667,
+      2.9833,
+      3.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.06451,
+       0.07166
+      ],
+      [
+       -0.06396,
+       0.08541
+      ],
+      [
+       -0.0623,
+       0.09838
+      ],
+      [
+       -0.05957,
+       0.11039
+      ],
+      [
+       -0.05578,
+       0.12131
+      ],
+      [
+       -0.05096,
+       0.13098
+      ],
+      [
+       -0.04512,
+       0.13923
+      ],
+      [
+       -0.03828,
+       0.14592
+      ],
+      [
+       -0.03047,
+       0.15089
+      ],
+      [
+       -0.0217,
+       0.15399
+      ],
+      [
+       -0.012,
+       0.15505
+      ],
+      [
+       0.00045,
+       0.15361
+      ],
+      [
+       0.01668,
+       0.14958
+      ],
+      [
+       0.03549,
+       0.14343
+      ],
+      [
+       0.05568,
+       0.13559
+      ],
+      [
+       0.07606,
+       0.12653
+      ],
+      [
+       0.09542,
+       0.11669
+      ],
+      [
+       0.11256,
+       0.10653
+      ],
+      [
+       0.12629,
+       0.09649
+      ],
+      [
+       0.13541,
+       0.08704
+      ],
+      [
+       0.13872,
+       0.08704
+      ],
+      [
+       0.13334,
+       0.07014
+      ],
+      [
+       0.11874,
+       0.06052
+      ],
+      [
+       0.09722,
+       0.05024
+      ],
+      [
+       0.0711,
+       0.03978
+      ],
+      [
+       0.0711,
+       0.02962
+      ],
+      [
+       0.01424,
+       0.02023
+      ],
+      [
+       -0.01189,
+       0.0121
+      ],
+      [
+       -0.0334,
+       0.0057
+      ],
+      [
+       -0.048,
+       0.0015
+      ],
+      [
+       -0.05338,
+       0.0
+      ],
+      [
+       -0.05266,
+       0.0
+      ],
+      [
+       -0.0506,
+       0.0
+      ],
+      [
+       -0.0473,
+       0.0
+      ],
+      [
+       -0.0429,
+       0.0
+      ],
+      [
+       -0.03752,
+       0.0
+      ],
+      [
+       -0.03126,
+       0.0
+      ],
+      [
+       -0.02426,
+       0.0
+      ],
+      [
+       -0.01664,
+       0.0
+      ],
+      [
+       -0.00851,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.01037,
+       0.0
+      ],
+      [
+       0.02355,
+       0.0
+      ],
+      [
+       0.03862,
+       0.0
+      ],
+      [
+       0.07075,
+       0.0
+      ],
+      [
+       0.08598,
+       0.0
+      ],
+      [
+       0.09942,
+       0.0
+      ],
+      [
+       0.11016,
+       0.0
+      ],
+      [
+       0.11728,
+       0.0
+      ],
+      [
+       0.11985,
+       -0.00011
+      ],
+      [
+       0.11468,
+       -0.0028
+      ],
+      [
+       0.10062,
+       -0.01007
+      ],
+      [
+       0.07991,
+       -0.02085
+      ],
+      [
+       0.05476,
+       -0.03404
+      ],
+      [
+       0.05476,
+       -0.04858
+      ],
+      [
+       1e-05,
+       -0.06336
+      ],
+      [
+       -0.02514,
+       -0.07732
+      ],
+      [
+       -0.04585,
+       -0.08937
+      ],
+      [
+       -0.05991,
+       -0.09842
+      ],
+      [
+       -0.06508,
+       -0.1034
+      ],
+      [
+       -0.06415,
+       -0.10573
+      ],
+      [
+       -0.06146,
+       -0.1076
+      ],
+      [
+       -0.05721,
+       -0.10905
+      ],
+      [
+       -0.0516,
+       -0.11014
+      ],
+      [
+       -0.04481,
+       -0.11093
+      ],
+      [
+       -0.03704,
+       -0.11145
+      ],
+      [
+       -0.02849,
+       -0.11177
+      ],
+      [
+       -0.01933,
+       -0.11193
+      ],
+      [
+       -0.00977,
+       -0.11193
+      ],
+      [
+       0.0,
+       -0.11193
+      ],
+      [
+       0.01162,
+       -0.11193
+      ],
+      [
+       0.02621,
+       -0.11193
+      ],
+      [
+       0.04277,
+       -0.11193
+      ],
+      [
+       0.07787,
+       -0.11193
+      ],
+      [
+       0.09445,
+       -0.11193
+      ],
+      [
+       0.10905,
+       -0.11193
+      ],
+      [
+       0.12071,
+       -0.11193
+      ],
+      [
+       0.12842,
+       -0.11193
+      ],
+      [
+       0.13121,
+       -0.112
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "mouth01",
+   "index": 8101,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth02",
+   "index": 8102,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth03",
+   "index": 8103,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "mouth04",
+   "index": 8104,
+   "duration": 1.9833,
+   "frameRate": 60.0,
+   "frameCount": 120,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye01",
+   "index": 8201,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face01",
+   "index": 8201,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye02",
+   "index": 8202,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face02",
+   "index": 8202,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye03",
+   "index": 8203,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face03",
+   "index": 8203,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye04",
+   "index": 8204,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face04",
+   "index": 8204,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye05",
+   "index": 8205,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face05",
+   "index": 8205,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye06",
+   "index": 8206,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face06",
+   "index": 8206,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye07",
+   "index": 8207,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face07",
+   "index": 8207,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.01343
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.01343
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eye08",
+   "index": 8208,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face08",
+   "index": 8208,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye09",
+   "index": 8209,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face09",
+   "index": 8209,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye10",
+   "index": 8210,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face10",
+   "index": 8210,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.02687
+      ]
+     ]
+    },
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       -0.02687
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eye11",
+   "index": 8211,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face11",
+   "index": 8211,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face12",
+   "index": 8212,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face13",
+   "index": 8213,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face14",
+   "index": 8214,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face15",
+   "index": 8215,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face16",
+   "index": 8216,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face17",
+   "index": 8217,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face18",
+   "index": 8218,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "d130_tr1000_c08 [demo d130]",
+   "index": 213008,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "demo d130",
+   "default": false
+  },
+  {
+   "name": "d130_tr1000_c09 [demo d130]",
+   "index": 213009,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": false,
+   "category": "other",
+   "group": "demo d130",
+   "default": false
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "hairstyle_mesh",
+   "label": "hairstyle",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_mesh",
+   "label": "obj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "face_mesh",
+   "label": "face",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "face_parts_mesh",
+   "label": "face parts",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "eye_default_mesh",
+   "label": "eye default",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "hairstyle_mesh_lod1",
+   "label": "hairstyle lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "eye_default_mesh_lod1",
+   "label": "eye default lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "face_parts_mesh_lod1",
+   "label": "face parts lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "obj_mesh_lod1",
+   "label": "obj lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "face_mesh_lod1",
+   "label": "face lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "hairstyle_mesh_lod2",
+   "label": "hairstyle lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "eye_default_mesh_lod2",
+   "label": "eye default lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "face_parts_mesh_lod2",
+   "label": "face parts lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "face_mesh_lod2",
+   "label": "face lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "obj_mesh_lod2",
+   "label": "obj lod2",
+   "lod": 2,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 164,
+  "meshes": 18,
+  "triangles": 16300,
+  "textures": 45,
+  "clips": 109,
+  "droppedTracks": 603,
+  "glbBytes": 28738068
+ },
+ "source": [
+  "ik_chara/model_uq/tr1000_00_co/"
+ ],
+ "extras": {
+  "species": "tr1000",
+  "form": ""
+ }
+}

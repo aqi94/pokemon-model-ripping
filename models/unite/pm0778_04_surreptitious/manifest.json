@@ -1,0 +1,106 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0778_04_surreptitious",
+ "kind": "pokemon",
+ "displayName": "Mimikyu · Surreptitious (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idlea",
+   "index": 0,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 3.3833,
+   "frameRate": 60.0,
+   "frameCount": 204,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 3.1,
+   "frameRate": 60.0,
+   "frameCount": 187,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 3,
+   "duration": 1.2742,
+   "frameRate": 62.0,
+   "frameCount": 80,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "touch",
+   "index": 4,
+   "duration": 2.5333,
+   "frameRate": 30.0,
+   "frameCount": 77,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idlea",
+ "parts": [
+  {
+   "node": "rig_lob_077804_lv3",
+   "label": "rig lob 077804 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 106,
+  "meshes": 1,
+  "triangles": 20096,
+  "textures": 14,
+  "clips": 5,
+  "droppedTracks": 0,
+  "glbBytes": 5377028
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_077804_mimikyu_lv3\\pref_char_lob_077804_mimikyu_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 778,
+  "skin": "04",
+  "holowear": "077804",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_077804_mimikyu_lv3",
+  "theme": "surreptitious",
+  "materialsFrom": "Scenes/pref_sce_lobby_077804_surreptitious_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_077804_surreptitious_lv3/pref_sce_lobby_077804_surreptitious_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0778",
+  "species": "pm0778",
+  "form": "04"
+ }
+}

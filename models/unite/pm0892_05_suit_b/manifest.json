@@ -1,0 +1,100 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0892_05_suit_b",
+ "kind": "pokemon",
+ "displayName": "Urshifu · Suit B (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "lob_089205_lv3",
+   "label": "lob 089205 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_089205a",
+   "label": "lob 089205a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0892dy_lv3",
+   "label": "rig lob 0892dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 169,
+  "meshes": 3,
+  "triangles": 20324,
+  "textures": 17,
+  "clips": 0,
+  "droppedTracks": 0,
+  "glbBytes": 3971016
+ },
+ "source": [
+  "Scenes/pref_sce_lobby_089205_suit_B_lv3/pref_sce_lobby_089205_suit_B_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: lob_089205_lv3/mat_off_Lit (placeholder material without textures)",
+   "particle effects not in the rip (empty emitter nodes): pref_fx_lobby_035902_scene_effects_hs",
+   "re-placed meshes from Blender's matrix to the FBX rest: lob_089205_lv3, lob_089205a, rig_lob_0892dy_lv3",
+   "weightless skins bound to their first cluster bone: lob_089205a"
+  ],
+  "particlesNotInRip": [
+   "pref_fx_lobby_035902_scene_effects_hs"
+  ],
+  "meshBinds": [
+   "lob_089205_lv3 (own skin, 26 of 51 bones)",
+   "lob_089205a (baked)"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 892,
+  "holowear": "089205",
+  "theme": "suit_b",
+  "lod": 3,
+  "meshes": "^(?:rig_)?lob_0892",
+  "species": "pm0892",
+  "form": "05"
+ }
+}

@@ -1,0 +1,148 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0491_03_lob",
+ "kind": "pokemon",
+ "displayName": "Darkrai · skin 03 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 3.3,
+   "frameRate": 30.0,
+   "frameCount": 100,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 3.4333,
+   "frameRate": 30.0,
+   "frameCount": 104,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 3,
+   "duration": 2.0,
+   "frameRate": 30.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_049103_lv3",
+   "label": "rig lob 049103 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 122,
+  "meshes": 1,
+  "triangles": 20080,
+  "textures": 12,
+  "clips": 4,
+  "droppedTracks": 0,
+  "glbBytes": 4510220
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_049103_darkrai_lv3\\pref_char_lob_049103_darkrai_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_049103.png",
+   "t_vc_lob_0491body.png",
+   "t_vc_lob_0491eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_049103.png, t_vc_lob_0491body.png, t_vc_lob_0491eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 491,
+  "skin": "03",
+  "holowear": "049103",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_049103_darkrai_lv3",
+  "species": "pm0491",
+  "form": "03"
+ }
+}

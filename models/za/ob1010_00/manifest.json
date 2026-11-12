@@ -1,0 +1,50 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob1010_00",
+ "kind": "object",
+ "displayName": "Food",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_stick_mesh",
+   "label": "obj stick",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_food_mesh",
+   "label": "obj food",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 7,
+  "meshes": 2,
+  "triangles": 1313,
+  "textures": 6,
+  "clips": 0,
+  "glbBytes": 752712
+ },
+ "source": [
+  "ik_chara/model_ob/ob1010_00_food/"
+ ],
+ "extras": {
+  "item": "food",
+  "species": "ob1010",
+  "form": ""
+ }
+}

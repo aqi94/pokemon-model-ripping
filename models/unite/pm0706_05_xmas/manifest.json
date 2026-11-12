@@ -1,0 +1,62 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0706_05_xmas",
+ "kind": "pokemon",
+ "displayName": "Goodra · Xmas (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_070605_lv3",
+   "label": "rig lob 070605 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 113,
+  "meshes": 1,
+  "triangles": 19995,
+  "textures": 30,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 7621496
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_070605_goodra_lv3\\pref_char_lob_070605_goodra_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 706,
+  "skin": "05",
+  "holowear": "070605",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_070605_goodra_lv3",
+  "theme": "xmas",
+  "materialsFrom": "Scenes/pref_sce_lobby_070605_xmas_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_070605_xmas_lv3/pref_sce_lobby_070605_xmas_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0706",
+  "species": "pm0706",
+  "form": "05"
+ }
+}

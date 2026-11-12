@@ -1,0 +1,337 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0807_03",
+ "kind": "pokemon",
+ "displayName": "Zeraora · skin 03",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.5,
+   "frameRate": 120.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.6,
+   "frameRate": 120.0,
+   "frameCount": 193,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 1.4333,
+   "frameRate": 120.0,
+   "frameCount": 173,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 1.7333,
+   "frameRate": 30.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 4,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 5,
+   "duration": 0.7,
+   "frameRate": 30.0,
+   "frameCount": 22,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 6,
+   "duration": 1.8333,
+   "frameRate": 120.0,
+   "frameCount": 221,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 7,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 8,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a",
+   "index": 9,
+   "duration": 0.9,
+   "frameRate": 120.0,
+   "frameCount": 109,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b",
+   "index": 16,
+   "duration": 0.3667,
+   "frameRate": 30.0,
+   "frameCount": 12,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b1loop",
+   "index": 10,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b21",
+   "index": 11,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b3",
+   "index": 12,
+   "duration": 0.3333,
+   "frameRate": 120.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b4",
+   "index": 13,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b5",
+   "index": 14,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b5loop",
+   "index": 15,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1bloop",
+   "index": 17,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 19,
+   "duration": 1.4333,
+   "frameRate": 120.0,
+   "frameCount": 173,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell21",
+   "index": 18,
+   "duration": 0.5333,
+   "frameRate": 120.0,
+   "frameCount": 65,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a",
+   "index": 20,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b",
+   "index": 21,
+   "duration": 0.9667,
+   "frameRate": 120.0,
+   "frameCount": 117,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu",
+   "index": 22,
+   "duration": 1.5333,
+   "frameRate": 120.0,
+   "frameCount": 185,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 23,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_080703_lv3",
+   "label": "rig bat 080703 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0807dya_lv3",
+   "label": "rig bat 0807dya lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 46,
+  "meshes": 2,
+  "triangles": 3788,
+  "textures": 9,
+  "clips": 24,
+  "droppedTracks": 0,
+  "glbBytes": 2147192
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_080703_zeraora_lv3\\pref_char_bat_080703_zeraora_lv3.fbx"
+ ],
+ "extras": {
+  "lensMaterials": [
+   "mat_bat_080703a_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Jaw_ACC",
+    "open": [
+     -7e-06,
+     0.216918,
+     1e-06,
+     0.97619
+    ],
+    "degrees": 25.1
+   }
+  ],
+  "jawClosed": {
+   "Jaw_ACC": 0.0
+  },
+  "jawRestTracks": 21,
+  "dex": 807,
+  "skin": "03",
+  "holowear": "080703",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_080703_zeraora_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_080700_zeraora_lv3\\pref_char_bat_080700_zeraora_lv3.fbx",
+  "species": "pm0807",
+  "form": "03"
+ }
+}

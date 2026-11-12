@@ -1,0 +1,743 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0818_05",
+ "kind": "pokemon",
+ "displayName": "Inteleon · skin 05",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 1.5333,
+   "frameRate": 120.0,
+   "frameCount": 185,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "born",
+   "index": 3,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 4,
+   "duration": 1.7,
+   "frameRate": 120.0,
+   "frameCount": 205,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "goback",
+   "index": 5,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidaehiaespellu",
+   "index": 53,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hideatk1",
+   "index": 6,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hideatk2",
+   "index": 7,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hideatk3",
+   "index": 8,
+   "duration": 1.5333,
+   "frameRate": 120.0,
+   "frameCount": 185,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidespell1",
+   "index": 9,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidespell1a1",
+   "index": 10,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidespell1a2",
+   "index": 11,
+   "duration": 0.9667,
+   "frameRate": 120.0,
+   "frameCount": 117,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidespell1b1",
+   "index": 12,
+   "duration": 0.5667,
+   "frameRate": 30.0,
+   "frameCount": 18,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidespell1b3",
+   "index": 13,
+   "duration": 1.1667,
+   "frameRate": 30.0,
+   "frameCount": 36,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidespell1b4",
+   "index": 14,
+   "duration": 0.8667,
+   "frameRate": 120.0,
+   "frameCount": 105,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidespell2",
+   "index": 15,
+   "duration": 1.0667,
+   "frameRate": 120.0,
+   "frameCount": 129,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidespell2a14",
+   "index": 16,
+   "duration": 0.9,
+   "frameRate": 120.0,
+   "frameCount": 109,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "hidespellu",
+   "index": 17,
+   "duration": 0.8333,
+   "frameRate": 120.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 19,
+   "duration": 1.6667,
+   "frameRate": 30.0,
+   "frameCount": 51,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "idle2",
+   "index": 18,
+   "duration": 1.6667,
+   "frameRate": 30.0,
+   "frameCount": 51,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run1",
+   "index": 20,
+   "duration": 0.5484,
+   "frameRate": 31.0,
+   "frameCount": 18,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run2",
+   "index": 21,
+   "duration": 1.8,
+   "frameRate": 120.0,
+   "frameCount": 217,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 22,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 23,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 24,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a1",
+   "index": 25,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a2",
+   "index": 26,
+   "duration": 0.9355,
+   "frameRate": 31.0,
+   "frameCount": 30,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b1",
+   "index": 27,
+   "duration": 0.5667,
+   "frameRate": 120.0,
+   "frameCount": 69,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b2",
+   "index": 28,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b3",
+   "index": 29,
+   "duration": 1.1667,
+   "frameRate": 120.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b4",
+   "index": 30,
+   "duration": 0.8667,
+   "frameRate": 120.0,
+   "frameCount": 105,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 31,
+   "duration": 1.0667,
+   "frameRate": 120.0,
+   "frameCount": 129,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a11",
+   "index": 32,
+   "duration": 0.1667,
+   "frameRate": 120.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a12",
+   "index": 33,
+   "duration": 0.7,
+   "frameRate": 30.0,
+   "frameCount": 22,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a13",
+   "index": 34,
+   "duration": 0.4333,
+   "frameRate": 120.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a14",
+   "index": 35,
+   "duration": 0.9,
+   "frameRate": 120.0,
+   "frameCount": 109,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b1",
+   "index": 37,
+   "duration": 0.2333,
+   "frameRate": 30.0,
+   "frameCount": 8,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b1 [0818]",
+   "index": 36,
+   "duration": 0.2333,
+   "frameRate": 30.0,
+   "frameCount": 8,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2",
+   "index": 39,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2 [0818]",
+   "index": 38,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2moveb",
+   "index": 41,
+   "duration": 0.9,
+   "frameRate": 30.0,
+   "frameCount": 28,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2moveb [0818]",
+   "index": 40,
+   "duration": 0.9,
+   "frameRate": 30.0,
+   "frameCount": 28,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2movef",
+   "index": 43,
+   "duration": 0.9,
+   "frameRate": 30.0,
+   "frameCount": 28,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2movef [0818]",
+   "index": 42,
+   "duration": 0.9333,
+   "frameRate": 30.0,
+   "frameCount": 29,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2movel",
+   "index": 45,
+   "duration": 0.9,
+   "frameRate": 120.0,
+   "frameCount": 109,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2movel [0818]",
+   "index": 44,
+   "duration": 0.9,
+   "frameRate": 30.0,
+   "frameCount": 28,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2mover",
+   "index": 47,
+   "duration": 0.9,
+   "frameRate": 30.0,
+   "frameCount": 28,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2mover [0818]",
+   "index": 46,
+   "duration": 0.9333,
+   "frameRate": 30.0,
+   "frameCount": 29,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b2smale",
+   "index": 48,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b3",
+   "index": 50,
+   "duration": 0.2333,
+   "frameRate": 30.0,
+   "frameCount": 8,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b3 [0818]",
+   "index": 49,
+   "duration": 0.2333,
+   "frameRate": 30.0,
+   "frameCount": 8,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu",
+   "index": 51,
+   "duration": 0.8333,
+   "frameRate": 120.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 52,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "fx_bat_081805_01_lv3",
+   "label": "fx bat 081805 01 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_bat_081805_02_lv3",
+   "label": "fx bat 081805 02 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_glow",
+   "label": "fx glow",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_glow.001",
+   "label": "fx glow.001",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_glow.002",
+   "label": "fx glow.002",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_glow.003",
+   "label": "fx glow.003",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0818dy_lv3",
+   "label": "rig bat 0818dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0818n_lv3",
+   "label": "rig bat 0818n lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 128,
+  "meshes": 8,
+  "triangles": 5308,
+  "textures": 13,
+  "clips": 54,
+  "droppedTracks": 0,
+  "glbBytes": 9888356
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_081805_inteleon_lv3\\pref_char_bat_081805_inteleon_lv3.fbx"
+ ],
+ "extras": {
+  "vertexColourEffects": [
+   "mat_lob_081805_fx01_lv3"
+  ],
+  "effectParts": [
+   "fx_bat_081805_01_lv3/mat_lob_081805_fx01_lv3",
+   "fx_bat_081805_02_lv3/mat_lob_081805_fx01_lv3",
+   "fx_glow.001/mat_fx_081805Inteleon_df_05_mhy",
+   "fx_glow.002/mat_fx_081805Inteleon_df_05_mhy",
+   "fx_glow.003/mat_fx_081805Inteleon_df_05_mhy",
+   "fx_glow/mat_fx_081805Inteleon_df_05_mhy"
+  ],
+  "warnings": [
+   "re-placed meshes from Blender's matrix to the FBX rest: fx_glow, fx_glow.001, fx_glow.002"
+  ],
+  "skeletonSource": "fbx",
+  "inheritedClips": {
+   "from": "pref_char_bat_081800_inteleon_lv3",
+   "clips": [
+    "hidaehiaespellu"
+   ],
+   "boundBones": 1.0,
+   "overriddenAliases": {
+    "hidaespell1a2": "hidespell1a2",
+    "hidaespell2a14": "hidespell2a14"
+   }
+  },
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -0.027151,
+     0.341309,
+     0.034471,
+     0.938926
+    ],
+    "degrees": 40.3
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -0.0
+  },
+  "dex": 818,
+  "skin": "05",
+  "holowear": "081805",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_081805_inteleon_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_081800_inteleon_lv3\\pref_char_bat_081800_inteleon_lv3.fbx",
+  "species": "pm0818",
+  "form": "05"
+ }
+}

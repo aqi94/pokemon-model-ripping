@@ -1,0 +1,240 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0723_03",
+ "kind": "pokemon",
+ "displayName": "Dartrix · skin 03",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk1idle",
+   "index": 1,
+   "duration": 0.6,
+   "frameRate": 120.0,
+   "frameCount": 73,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 2,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2idle",
+   "index": 3,
+   "duration": 0.6,
+   "frameRate": 120.0,
+   "frameCount": 73,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 4,
+   "duration": 1.5333,
+   "frameRate": 120.0,
+   "frameCount": 185,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3idle",
+   "index": 5,
+   "duration": 0.6,
+   "frameRate": 120.0,
+   "frameCount": 73,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 6,
+   "duration": 1.7,
+   "frameRate": 120.0,
+   "frameCount": 205,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 7,
+   "duration": 1.1333,
+   "frameRate": 30.0,
+   "frameCount": 35,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 8,
+   "duration": 0.6,
+   "frameRate": 30.0,
+   "frameCount": 19,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 9,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 10,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 11,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 12,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 13,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0723body_lv3",
+   "label": "rig bat 0723body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 77,
+  "meshes": 1,
+  "triangles": 4097,
+  "textures": 9,
+  "clips": 14,
+  "droppedTracks": 0,
+  "glbBytes": 1935552
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_072303_dartrix_lv3\\pref_char_bat_072303_dartrix_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_RootJaw",
+    "open": [
+     0.683581,
+     0.37022,
+     -0.114144,
+     0.618567
+    ],
+    "degrees": 103.6
+   },
+   {
+    "bone": "Bone_LowerJaw",
+    "open": [
+     -0.678451,
+     -0.429219,
+     -0.14147,
+     0.57919
+    ],
+    "degrees": 109.5
+   },
+   {
+    "bone": "Bone_UpperJaw",
+    "open": [
+     0.611231,
+     0.373628,
+     -0.036305,
+     0.696765
+    ],
+    "degrees": 91.8
+   }
+  ],
+  "jawClosed": {
+   "Bone_RootJaw": 0.0,
+   "Bone_LowerJaw": -6.0,
+   "Bone_UpperJaw": -5.5
+  },
+  "jawRestTracks": 3,
+  "dex": 723,
+  "skin": "03",
+  "holowear": "072303",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_072303_dartrix_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_072300_dartrix_lv3\\pref_char_bat_072300_dartrix_lv3.fbx",
+  "species": "pm0723",
+  "form": "03"
+ }
+}

@@ -1,0 +1,135 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0939_00",
+ "kind": "pokemon",
+ "displayName": "Bellibolt",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 3,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 4,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 5,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0939dya_lv3",
+   "label": "rig bat 0939dya lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0939dyb_lv3",
+   "label": "rig bat 0939dyb lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0939dyc_lv3",
+   "label": "rig bat 0939dyc lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 18,
+  "meshes": 3,
+  "triangles": 1198,
+  "textures": 7,
+  "clips": 6,
+  "droppedTracks": 0,
+  "glbBytes": 347928
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Bellibolt\\pref_char_bat_093900_bellibolt_lv3.fbx"
+ ],
+ "extras": {
+  "cutoutMaterials": [
+   "mat_bat_0939bodya_lv3",
+   "mat_bat_0939bodyc_lv3"
+  ],
+  "missingTextures": [
+   "t_n_bat_0939bodyb_lv3"
+  ],
+  "warnings": [
+   "textures not in the rip: t_n_bat_0939bodyb_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 939,
+  "skin": "00",
+  "holowear": "093900",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_093900_bellibolt_lv3",
+  "source": "marcy",
+  "species": "pm0939",
+  "form": "00"
+ }
+}

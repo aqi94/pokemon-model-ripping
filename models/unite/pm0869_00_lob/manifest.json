@@ -1,0 +1,143 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0869_00_lob",
+ "kind": "pokemon",
+ "displayName": "Alcremie (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  },
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 7,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 8,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 9,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 10,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_0869_lv3",
+   "label": "lob 0869 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 40,
+  "meshes": 1,
+  "triangles": 10626,
+  "textures": 10,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 1501000
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_086900_alcremie_lv3\\pref_char_lob_086900_alcremie_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_0869body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0869body.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 869,
+  "skin": "00",
+  "holowear": "086900",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_086900_alcremie_lv3",
+  "species": "pm0869",
+  "form": "00"
+ }
+}

@@ -1,0 +1,3153 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0746_12_00",
+ "kind": "pokemon",
+ "displayName": "pm0746 (12_00)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "defaultwait01_loop [set2]",
+   "index": 20000,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": true,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battlewait01_loop [set2]",
+   "index": 20001,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultidle01 [set2]",
+   "index": 20010,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battleidle02 [set2]",
+   "index": 20012,
+   "duration": 1.5833,
+   "frameRate": 60.0,
+   "frameCount": 96,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000 [set2]",
+   "index": 20020,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090 [set2]",
+   "index": 20021,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090 [set2]",
+   "index": 20024,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090 [set2]",
+   "index": 20026,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090 [set2]",
+   "index": 20028,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop [set2]",
+   "index": 20030,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop [set2]",
+   "index": 20100,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start [set2]",
+   "index": 20140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01 [set2]",
+   "index": 20141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end [set2]",
+   "index": 20142,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start [set2]",
+   "index": 20145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01 [set2]",
+   "index": 20146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end [set2]",
+   "index": 20147,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start [set2]",
+   "index": 20150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop [set2]",
+   "index": 20151,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start [set2]",
+   "index": 20152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop [set2]",
+   "index": 20153,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02 [set2]",
+   "index": 20155,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_start [set2]",
+   "index": 20270,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_loop [set2]",
+   "index": 20271,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_end [set2]",
+   "index": 20272,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_start [set2]",
+   "index": 20280,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_loop [set2]",
+   "index": 20281,
+   "duration": 3.3333,
+   "frameRate": 60.0,
+   "frameCount": 201,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_end [set2]",
+   "index": 20282,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_start [set2]",
+   "index": 20293,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_loop [set2]",
+   "index": 20294,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": true,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_end [set2]",
+   "index": 20295,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01 [set2]",
+   "index": 20300,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "appeal01 [set2]",
+   "index": 20310,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "refresh01 [set2]",
+   "index": 20320,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_start [set2]",
+   "index": 20330,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_loop [set2]",
+   "index": 20331,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_end [set2]",
+   "index": 20332,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01 [set2]",
+   "index": 20400,
+   "duration": 1.9667,
+   "frameRate": 60.0,
+   "frameCount": 119,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_start [set2]",
+   "index": 20420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_loop [set2]",
+   "index": 20421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end [set2]",
+   "index": 20422,
+   "duration": 1.4,
+   "frameRate": 60.0,
+   "frameCount": 85,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01 [set2]",
+   "index": 20450,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start [set2]",
+   "index": 20460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop [set2]",
+   "index": 20461,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end [set2]",
+   "index": 20462,
+   "duration": 1.0333,
+   "frameRate": 60.0,
+   "frameCount": 63,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop [set2]",
+   "index": 20490,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01 [set2]",
+   "index": 20500,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "eye": {
+     "times": [
+      0.0,
+      0.6167
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "damage02 [set2]",
+   "index": 20501,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "eye": {
+     "times": [
+      0.0,
+      0.9667
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stun01_start [set2]",
+   "index": 20510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop [set2]",
+   "index": 20511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end [set2]",
+   "index": 20512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start [set2]",
+   "index": 20520,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop [set2]",
+   "index": 20521,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end [set2]",
+   "index": 20522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "glad01 [set2]",
+   "index": 20550,
+   "duration": 2.1667,
+   "frameRate": 60.0,
+   "frameCount": 131,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "eye": {
+     "times": [
+      0.0,
+      0.4,
+      1.8333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "notice01 [set2]",
+   "index": 20560,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hate01 [set2]",
+   "index": 20563,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "formchange01 [set2]",
+   "index": 20625,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      77,
+      1
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eye01 [set2]",
+   "index": 28000,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0746_11_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_eyelid_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_cloth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_hole_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0746_11_00_shield_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "defaultwait01_loop [set2]",
+ "parts": [
+  {
+   "node": "pm0746_11_00_eye_mesh",
+   "label": "pm0746 11 00 eye",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_eyelid_mesh",
+   "label": "pm0746 11 00 eyelid",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_body_mesh",
+   "label": "pm0746 11 00 body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_cloth_mesh",
+   "label": "pm0746 11 00 cloth",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_hole_mesh",
+   "label": "pm0746 11 00 hole",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0746_11_00_shield_mesh",
+   "label": "pm0746 11 00 shield",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_eye_mesh_lod1",
+   "label": "pm0746 11 00 eye lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_eyelid_mesh_lod1",
+   "label": "pm0746 11 00 eyelid lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_body_mesh_lod1",
+   "label": "pm0746 11 00 body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_cloth_mesh_lod1",
+   "label": "pm0746 11 00 cloth lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_hole_mesh_lod1",
+   "label": "pm0746 11 00 hole lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0746_11_00_shield_mesh_lod1",
+   "label": "pm0746 11 00 shield lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_eye_mesh_lod2",
+   "label": "pm0746 11 00 eye lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_eyelid_mesh_lod2",
+   "label": "pm0746 11 00 eyelid lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_body_mesh_lod2",
+   "label": "pm0746 11 00 body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_cloth_mesh_lod2",
+   "label": "pm0746 11 00 cloth lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_hole_mesh_lod2",
+   "label": "pm0746 11 00 hole lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0746_11_00_shield_mesh_lod2",
+   "label": "pm0746 11 00 shield lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_eye_mesh_lod3",
+   "label": "pm0746 11 00 eye lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_eyelid_mesh_lod3",
+   "label": "pm0746 11 00 eyelid lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_body_mesh_lod3",
+   "label": "pm0746 11 00 body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_cloth_mesh_lod3",
+   "label": "pm0746 11 00 cloth lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0746_11_00_hole_mesh_lod3",
+   "label": "pm0746 11 00 hole lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0746_11_00_shield_mesh_lod3",
+   "label": "pm0746 11 00 shield lod3",
+   "lod": 3,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 131,
+  "meshes": 24,
+  "triangles": 5416,
+  "textures": 33,
+  "clips": 59,
+  "glbBytes": 11936432
+ },
+ "source": [
+  "ik_pokemon/data/pm0746/pm0746_12_00/"
+ ],
+ "extras": {
+  "dex": null,
+  "species": "pm0746",
+  "form": "12_00"
+ }
+}

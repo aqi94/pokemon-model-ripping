@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0008_00",
+ "kind": "object",
+ "displayName": "Pencil",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "pencil_mesh",
+   "label": "pencil",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 48,
+  "textures": 6,
+  "clips": 0,
+  "glbBytes": 162424
+ },
+ "source": [
+  "ik_chara/model_ob/ob0008_00_pencil/"
+ ],
+ "extras": {
+  "item": "pencil",
+  "species": "ob0008",
+  "form": ""
+ }
+}

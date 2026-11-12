@@ -1,0 +1,72 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0448_07_lob",
+ "kind": "pokemon",
+ "displayName": "Lucario · skin 07 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_044807_lv3",
+   "label": "rig lob 044807 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lv3_bat_0192weapon1",
+   "label": "rig lv3 bat 0192weapon1",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 70,
+  "meshes": 2,
+  "triangles": 19880,
+  "textures": 11,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3323424
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_044807_lucario_lv3\\pref_char_lob_044807_lucario_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_044807.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_044807.png",
+   "weightless skins bound to their first cluster bone: rig_lv3_bat_0192weapon1"
+  ],
+  "skeletonSource": "fbx",
+  "prunedJoints": 1,
+  "dex": 448,
+  "skin": "07",
+  "holowear": "044807",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_044807_lucario_lv3",
+  "species": "pm0448",
+  "form": "07"
+ }
+}

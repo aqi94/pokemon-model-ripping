@@ -1,0 +1,118 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0877_00_12_lob",
+ "kind": "pokemon",
+ "displayName": "Morpeko (12) (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 0,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 0.7,
+   "frameRate": 30.0,
+   "frameCount": 22,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "touch",
+   "index": 1,
+   "duration": 2.7,
+   "frameRate": 30.0,
+   "frameCount": 82,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0877_12body_lv3",
+   "label": "rig lob 0877 12body lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0877_12bodyb_lv3",
+   "label": "rig lob 0877 12bodyb lv3",
+   "lod": 0,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 39,
+  "meshes": 2,
+  "triangles": 5508,
+  "textures": 11,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 769024
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_087700_12_morpeko_lv3\\pref_char_lob_087700_12_morpeko_lv3.fbx"
+ ],
+ "extras": {
+  "overlayDecals": [
+   "rig_lob_0877_12bodyb_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_0877_11eye.png",
+   "t_vc_lob_0877_12body.png",
+   "t_vc_lob_0877_12eye.png",
+   "t_vc_lob_0877_12mouth.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0877_11eye.png, t_vc_lob_0877_12body.png, t_vc_lob_0877_12eye.png, t_vc_lob_0877_12mouth.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 877,
+  "skin": "00",
+  "holowear": "087700_12",
+  "battle": false,
+  "standalone": true,
+  "mode": "12",
+  "folder_name": "pref_char_lob_087700_12_morpeko_lv3",
+  "species": "pm0877",
+  "form": "00"
+ }
+}

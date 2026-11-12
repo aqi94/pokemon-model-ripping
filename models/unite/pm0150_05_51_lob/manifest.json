@@ -1,0 +1,181 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0150_05_51_lob",
+ "kind": "pokemon",
+ "displayName": "Mewtwo · skin 05 (51) (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0150dy_lv3",
+   "label": "rig lob 0150dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0150fxa_51_Iv3",
+   "label": "rig lob 0150fxa 51 Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0150fxA_51_Iv3",
+   "label": "rig lob 0150fxA 51 Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0150fxb_51_Iv3",
+   "label": "rig lob 0150fxb 51 Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0150fxB_51_Iv3",
+   "label": "rig lob 0150fxB 51 Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0150fxc_51_Iv3~notex",
+   "label": "rig lob 0150fxc 51 Iv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_0150fxC_51_Iv3",
+   "label": "rig lob 0150fxC 51 Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0150fxC_51_Iv3~notex",
+   "label": "rig lob 0150fxC 51 Iv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_0150fxD_51_Iv3~notex",
+   "label": "rig lob 0150fxD 51 Iv3~notex",
+   "lod": 0,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 113,
+  "meshes": 9,
+  "triangles": 23989,
+  "textures": 16,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 6218744
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_015005_51_mewtwo_lv3\\pref_char_lob_015005_51_mewtwo_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: rig_lob_0150fxc_51_Iv3/mat_lob_0150051fx_Flow_05_hb_lv3; rig_lob_0150fxC_51_Iv3/mat_lob_0150051fx_Flow_01_lv3",
+   "textures not in the rip: t_vc_lob_015005.png, t_vc_lob_0150_51_Xeye.png, t_vc_lob_0150body.png",
+   "weightless skins bound to their first cluster bone: rig_lob_0150fxc_51_Iv3",
+   "texture-less parts HOME could not colour (gate): rig_lob_0150fxc_51_Iv3/mat_lob_0150051fx_Flow_05_hb_lv3 (d=None, cover=None); rig_lob_0150fxC_51_Iv3/mat_lob_0150051fx_Flow_01_lv3 (d=None, cover=None); rig_lob_0150fxD_51_Iv3/mat_lob_0150051fx_Flow_01_lv3 (d=None, cover=None)"
+  ],
+  "vertexColourEffects": [
+   "mat_lob_015005fx_Trail_hb_01_lv3",
+   "mat_lob_015005fx_TrailGlow_01_lv3",
+   "mat_lob_0150051fx_Flow_02_lv3"
+  ],
+  "effectParts": [
+   "rig_lob_0150fxA_51_Iv3/mat_lob_015005fx_TrailGlow_01_lv3",
+   "rig_lob_0150fxB_51_Iv3/mat_lob_015005fx_TrailGlow_01_lv3",
+   "rig_lob_0150fxC_51_Iv3/mat_lob_0150051fx_Flow_01_lv3",
+   "rig_lob_0150fxC_51_Iv3/mat_lob_0150051fx_Flow_02_lv3",
+   "rig_lob_0150fxD_51_Iv3/mat_lob_0150051fx_Flow_01_lv3",
+   "rig_lob_0150fxa_51_Iv3/mat_lob_015005fx_Trail_hb_01_lv3",
+   "rig_lob_0150fxb_51_Iv3/mat_lob_015005fx_Trail_hb_01_lv3",
+   "rig_lob_0150fxc_51_Iv3/mat_lob_0150051fx_Flow_05_hb_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_015005.png",
+   "t_vc_lob_0150_51_Xeye.png",
+   "t_vc_lob_0150body.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 150,
+  "skin": "05",
+  "holowear": "015005_51",
+  "battle": false,
+  "standalone": true,
+  "mode": "51",
+  "folder_name": "pref_char_lob_015005_51_mewtwo_lv3",
+  "species": "pm0150",
+  "form": "05"
+ }
+}

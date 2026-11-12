@@ -1,0 +1,654 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0250_03",
+ "kind": "pokemon",
+ "displayName": "Ho-Oh · skin 03",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.6,
+   "frameRate": 120.0,
+   "frameCount": 193,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.5667,
+   "frameRate": 30.0,
+   "frameCount": 48,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 1.5333,
+   "frameRate": 120.0,
+   "frameCount": 185,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3l",
+   "index": 3,
+   "duration": 1.5333,
+   "frameRate": 120.0,
+   "frameCount": 185,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "born",
+   "index": 4,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 5,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "goback",
+   "index": 6,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 7,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 8,
+   "duration": 1.3667,
+   "frameRate": 120.0,
+   "frameCount": 165,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 9,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 10,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 11,
+   "duration": 1.0323,
+   "frameRate": 31.0,
+   "frameCount": 33,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a1",
+   "index": 12,
+   "duration": 0.7333,
+   "frameRate": 120.0,
+   "frameCount": 89,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a2",
+   "index": 13,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a2a2b",
+   "index": 14,
+   "duration": 1.0323,
+   "frameRate": 31.0,
+   "frameCount": 33,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a2a2f",
+   "index": 15,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a2a2l",
+   "index": 16,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a2a2r",
+   "index": 17,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aatk1",
+   "index": 18,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aatk2",
+   "index": 19,
+   "duration": 1.5333,
+   "frameRate": 120.0,
+   "frameCount": 185,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aatk3",
+   "index": 20,
+   "duration": 1.5333,
+   "frameRate": 120.0,
+   "frameCount": 185,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aatk3l",
+   "index": 21,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1adead",
+   "index": 22,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aidle",
+   "index": 23,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aidletoidle",
+   "index": 24,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1arun",
+   "index": 25,
+   "duration": 3.0333,
+   "frameRate": 120.0,
+   "frameCount": 365,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1ascore",
+   "index": 46,
+   "duration": 1.8333,
+   "frameRate": 120.0,
+   "frameCount": 221,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aspell2a1",
+   "index": 26,
+   "duration": 0.5484,
+   "frameRate": 31.0,
+   "frameCount": 18,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aspell2a3",
+   "index": 27,
+   "duration": 0.6452,
+   "frameRate": 31.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aspell2bl",
+   "index": 28,
+   "duration": 2.5667,
+   "frameRate": 30.0,
+   "frameCount": 78,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aspell2br",
+   "index": 29,
+   "duration": 2.5667,
+   "frameRate": 120.0,
+   "frameCount": 309,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1aspellu",
+   "index": 30,
+   "duration": 2.8333,
+   "frameRate": 120.0,
+   "frameCount": 341,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1astun",
+   "index": 31,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b1",
+   "index": 32,
+   "duration": 0.5333,
+   "frameRate": 120.0,
+   "frameCount": 65,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b2",
+   "index": 33,
+   "duration": 4.0333,
+   "frameRate": 120.0,
+   "frameCount": 485,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1b3",
+   "index": 34,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 35,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a1",
+   "index": 36,
+   "duration": 0.5667,
+   "frameRate": 120.0,
+   "frameCount": 69,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a2b",
+   "index": 37,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a2f",
+   "index": 38,
+   "duration": 1.0323,
+   "frameRate": 31.0,
+   "frameCount": 33,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a2l",
+   "index": 39,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a2r",
+   "index": 40,
+   "duration": 1.0333,
+   "frameRate": 120.0,
+   "frameCount": 125,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a3",
+   "index": 41,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2bl",
+   "index": 42,
+   "duration": 2.5333,
+   "frameRate": 120.0,
+   "frameCount": 305,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2br",
+   "index": 43,
+   "duration": 2.5667,
+   "frameRate": 120.0,
+   "frameCount": 309,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu",
+   "index": 44,
+   "duration": 2.8333,
+   "frameRate": 120.0,
+   "frameCount": 341,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 45,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "fx_bat_025003_01_lv3",
+   "label": "fx bat 025003 01 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow_01",
+   "label": "glow 01",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow_02",
+   "label": "glow 02",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow_03",
+   "label": "glow 03",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0250_lv3",
+   "label": "rig bat 0250 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 90,
+  "meshes": 5,
+  "triangles": 5258,
+  "textures": 14,
+  "clips": 47,
+  "droppedTracks": 0,
+  "glbBytes": 9310260
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_025003_ho_oh_lv3\\pref_char_bat_025003_ho_oh_lv3.fbx"
+ ],
+ "extras": {
+  "vertexColourEffects": [
+   "mat_fx_025003_glow_02_hb"
+  ],
+  "effectParts": [
+   "fx_bat_025003_01_lv3/mat_fx_025003_glow_02_hb",
+   "glow_01/mat_fx_025003_glow_01_hb",
+   "glow_02/mat_fx_025003_glow_01_hb",
+   "glow_03/mat_fx_025003_glow_01_hb"
+  ],
+  "warnings": [
+   "re-placed meshes from Blender's matrix to the FBX rest: glow_01, glow_02, glow_03"
+  ],
+  "skeletonSource": "fbx",
+  "inheritedClips": {
+   "from": "pref_char_bat_025000_ho_oh_lv3",
+   "clips": [
+    "spell1ascore"
+   ],
+   "boundBones": 1.0
+  },
+  "jaws": [
+   {
+    "bone": "Bone_Jaw1",
+    "open": [
+     1e-06,
+     -0.478317,
+     8e-06,
+     0.878187
+    ],
+    "degrees": 57.2
+   },
+   {
+    "bone": "Bone_Jaw2",
+    "open": [
+     -0.002271,
+     -0.293964,
+     2.4e-05,
+     0.955814
+    ],
+    "degrees": 34.2
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw1": -23.6,
+   "Bone_Jaw2": 0.0
+  },
+  "jawRestTracks": 47,
+  "dex": 250,
+  "skin": "03",
+  "holowear": "025003",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_025003_ho_oh_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_025000_ho_oh_lv3\\pref_char_bat_025000_ho_oh_lv3.fbx",
+  "species": "pm0250",
+  "form": "03"
+ }
+}

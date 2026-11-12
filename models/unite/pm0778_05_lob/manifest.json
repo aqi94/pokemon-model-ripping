@@ -1,0 +1,128 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0778_05_lob",
+ "kind": "pokemon",
+ "displayName": "Mimikyu · skin 05 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idlea",
+   "index": 0,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 2.2333,
+   "frameRate": 30.0,
+   "frameCount": 68,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "touch",
+   "index": 3,
+   "duration": 2.5333,
+   "frameRate": 30.0,
+   "frameCount": 77,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idlea",
+ "parts": [
+  {
+   "node": "rig_lob_077805_fxa_lv3",
+   "label": "rig lob 077805 fxa lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_077805_fxb_lv3",
+   "label": "rig lob 077805 fxb lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_077805_fxc_lv3",
+   "label": "rig lob 077805 fxc lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_077805_lv3",
+   "label": "rig lob 077805 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 116,
+  "meshes": 4,
+  "triangles": 19303,
+  "textures": 10,
+  "clips": 4,
+  "droppedTracks": 0,
+  "glbBytes": 4278408
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_077805_mimikyu_lv3\\pref_char_lob_077805_mimikyu_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_lob_077805_fxd_lv3/pref_char_lob_077805_hb_05 (placeholder material without textures)",
+   "textures not in the rip: t_vc_lob_077805.png, t_vc_lob_0778body.png",
+   "weightless skins bound to their first cluster bone: rig_lob_077805_fxc_lv3"
+  ],
+  "vertexColourEffects": [
+   "pref_char_lob_077805_01_hb",
+   "pref_char_lob_077805_hb_03",
+   "pref_char_lob_077805_hb_04"
+  ],
+  "effectParts": [
+   "rig_lob_077805_fxa_lv3/pref_char_lob_077805_01_hb",
+   "rig_lob_077805_fxb_lv3/pref_char_lob_077805_hb_03",
+   "rig_lob_077805_fxc_lv3/pref_char_lob_077805_hb_04"
+  ],
+  "missingTextures": [
+   "t_vc_lob_077805.png",
+   "t_vc_lob_0778body.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 778,
+  "skin": "05",
+  "holowear": "077805",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_077805_mimikyu_lv3",
+  "species": "pm0778",
+  "form": "05"
+ }
+}

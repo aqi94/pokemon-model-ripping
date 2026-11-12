@@ -1,0 +1,66 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0936_00_lob",
+ "kind": "pokemon",
+ "displayName": "Armarouge (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_0936_lv3",
+   "label": "lob 0936 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 61,
+  "meshes": 1,
+  "triangles": 14354,
+  "textures": 6,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 1821712
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_093600_armarouge_lv3\\pref_char_lob_093600_armarouge_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_0936bodya.png",
+   "t_vc_lob_0936bodyb.png",
+   "t_vc_lob_0936eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0936bodya.png, t_vc_lob_0936bodyb.png, t_vc_lob_0936eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 936,
+  "skin": "00",
+  "holowear": "093600",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_093600_armarouge_lv3",
+  "species": "pm0936",
+  "form": "00"
+ }
+}

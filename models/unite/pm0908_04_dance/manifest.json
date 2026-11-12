@@ -1,0 +1,177 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0908_04_dance",
+ "kind": "pokemon",
+ "displayName": "Meowscarada · Dance (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  },
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 4,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 5,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 7,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    },
+    {
+     "variant": 8,
+     "name": "mouth_4",
+     "label": "Mouth 4",
+     "default": false
+    },
+    {
+     "variant": 9,
+     "name": "mouth_5",
+     "label": "Mouth 5",
+     "default": false
+    },
+    {
+     "variant": 10,
+     "name": "mouth_6",
+     "label": "Mouth 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 3.5333,
+   "frameRate": 60.0,
+   "frameCount": 213,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 1.9667,
+   "frameRate": 60.0,
+   "frameCount": 119,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 3,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_090804_lv3",
+   "label": "rig lob 090804 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 175,
+  "meshes": 1,
+  "triangles": 28387,
+  "textures": 25,
+  "clips": 4,
+  "droppedTracks": 0,
+  "glbBytes": 7123904
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_090804_meowscarada_lv3\\pref_char_lob_090804_meowscarada_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_lob_090804_lv3/mat_lob_090804b_lv3 (overlay shell)"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 908,
+  "skin": "04",
+  "holowear": "090804",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_090804_meowscarada_lv3",
+  "theme": "dance",
+  "materialsFrom": "Scenes/pref_sce_lobby_090804_dance_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_090804_dance_lv3/pref_sce_lobby_090804_dance_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0908",
+  "species": "pm0908",
+  "form": "04"
+ }
+}

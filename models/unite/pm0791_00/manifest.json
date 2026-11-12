@@ -1,0 +1,404 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0791_00",
+ "kind": "pokemon",
+ "displayName": "Solgaleo",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1a",
+   "index": 0,
+   "duration": 1.5,
+   "frameRate": 30.0,
+   "frameCount": 46,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk1b",
+   "index": 1,
+   "duration": 1.5,
+   "frameRate": 30.0,
+   "frameCount": 46,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 2,
+   "duration": 1.5,
+   "frameRate": 30.0,
+   "frameCount": 46,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 4,
+   "duration": 2.3667,
+   "frameRate": 30.0,
+   "frameCount": 72,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 5,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 6,
+   "duration": 1.8,
+   "frameRate": 30.0,
+   "frameCount": 55,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 7,
+   "duration": 2.3667,
+   "frameRate": 30.0,
+   "frameCount": 72,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 8,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a_a",
+   "index": 9,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a_b1",
+   "index": 10,
+   "duration": 0.4333,
+   "frameRate": 30.0,
+   "frameCount": 14,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a_b2",
+   "index": 11,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a_b3",
+   "index": 12,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a_b4",
+   "index": 13,
+   "duration": 0.3,
+   "frameRate": 30.0,
+   "frameCount": 10,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 14,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a_a1",
+   "index": 15,
+   "duration": 1.2333,
+   "frameRate": 30.0,
+   "frameCount": 38,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a_a2",
+   "index": 16,
+   "duration": 0.3667,
+   "frameRate": 30.0,
+   "frameCount": 12,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a_a3",
+   "index": 17,
+   "duration": 0.7667,
+   "frameRate": 30.0,
+   "frameCount": 24,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a_b",
+   "index": 18,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu",
+   "index": 19,
+   "duration": 1.7667,
+   "frameRate": 30.0,
+   "frameCount": 54,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 20,
+   "duration": 2.4333,
+   "frameRate": 30.0,
+   "frameCount": 74,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0791dy_lv3",
+   "label": "rig bat 0791dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0791dyb_lv3",
+   "label": "rig bat 0791dyb lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0791dyFx01_lv3",
+   "label": "rig bat 0791dyFx01 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0791dyFx02_lv3",
+   "label": "rig bat 0791dyFx02 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0791dyFx03_lv3",
+   "label": "rig bat 0791dyFx03 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0791dyFx04_lv3",
+   "label": "rig bat 0791dyFx04 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0791dyFx05_lv3",
+   "label": "rig bat 0791dyFx05 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0791dyFx06_lv3",
+   "label": "rig bat 0791dyFx06 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0791dyFx06_lv3~notex",
+   "label": "rig bat 0791dyFx06 lv3~notex",
+   "lod": 0,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 61,
+  "meshes": 9,
+  "triangles": 12026,
+  "textures": 14,
+  "clips": 21,
+  "droppedTracks": 0,
+  "glbBytes": 2699736
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_079100_solgaleo_lv3\\pref_char_bat_079100_solgaleo_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_bat_0791dyFx04_lv3/mat_bat_0791bodyc_fx01_lv3 (overlay shell)",
+   "effect colour taken from a textured slot of the same mesh: rig_bat_0791dyFx05_lv3/mat_fx_079100_solgaleo_08_hb <- t_fx_9999_glow_02_yrx",
+   "weightless skins bound to their first cluster bone: rig_bat_0791dyb_lv3, rig_bat_0791dyFx01_lv3, rig_bat_0791dyFx02_lv3, rig_bat_0791dyFx03_lv3",
+   "texture-less parts coloured from Pokémon HOME (home_parts): rig_bat_0791dyFx06_lv3/mat_fx_079100_solgaleo_09_hb <- pm0791_00_00/pm0791_00_00_BodySkin (d=0.033)",
+   "texture-less parts HOME could not colour (gate): rig_bat_0791dyFx06_lv3/mat_fx_079100_solgaleo_09_hb (d=None, cover=None); rig_bat_0791dyFx06_lv3/mat_fx_079100_solgaleo_09_hb (d=None, cover=None); rig_bat_0791dyFx06_lv3/mat_fx_079100_solgaleo_09_hb (d=None, cover=None)"
+  ],
+  "vertexColourEffects": [
+   "mat_fx_079100_solgaleo_07_hb",
+   "mat_fx_079100_solgaleo_08_hb"
+  ],
+  "cutoutMaterials": [
+   "mat_bat_0791bodyb_lv3"
+  ],
+  "effectParts": [
+   "rig_bat_0791dyFx01_lv3/mat_fx_079100_solgaleo_04_hb",
+   "rig_bat_0791dyFx02_lv3/mat_fx_079100_solgaleo_05_hb",
+   "rig_bat_0791dyFx03_lv3/mat_off_Lit",
+   "rig_bat_0791dyFx05_lv3/mat_fx_079100_solgaleo_07_hb",
+   "rig_bat_0791dyFx05_lv3/mat_fx_079100_solgaleo_08_hb",
+   "rig_bat_0791dyFx06_lv3/mat_fx_079100_solgaleo_09_hb"
+  ],
+  "skeletonSource": "fbx",
+  "homeColouredParts": [
+   {
+    "part": "rig_bat_0791dyFx06_lv3/mat_fx_079100_solgaleo_09_hb",
+    "homeModel": "pm0791_00_00",
+    "homeMesh": "pm0791_00_00_BodySkin",
+    "matchDistance": 0.033,
+    "cover": 0.955
+   }
+  ],
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -3e-06,
+     -0.36595,
+     -1.1e-05,
+     0.930635
+    ],
+    "degrees": 42.8
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -0.7
+  },
+  "jawRestTracks": 2,
+  "dex": 791,
+  "skin": "00",
+  "holowear": "079100",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_079100_solgaleo_lv3",
+  "species": "pm0791",
+  "form": "00"
+ }
+}

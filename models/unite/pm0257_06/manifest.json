@@ -1,0 +1,369 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0257_06",
+ "kind": "pokemon",
+ "displayName": "Blaziken · skin 06",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1a",
+   "index": 0,
+   "duration": 1.4,
+   "frameRate": 120.0,
+   "frameCount": 169,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk1b",
+   "index": 1,
+   "duration": 1.4,
+   "frameRate": 120.0,
+   "frameCount": 169,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2a",
+   "index": 2,
+   "duration": 1.4,
+   "frameRate": 120.0,
+   "frameCount": 169,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2b",
+   "index": 3,
+   "duration": 1.4,
+   "frameRate": 30.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3a",
+   "index": 4,
+   "duration": 1.4333,
+   "frameRate": 120.0,
+   "frameCount": 173,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3b",
+   "index": 5,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 6,
+   "duration": 1.7333,
+   "frameRate": 120.0,
+   "frameCount": 209,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "deadb",
+   "index": 7,
+   "duration": 1.7,
+   "frameRate": 120.0,
+   "frameCount": 205,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idlea",
+   "index": 8,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "idleb",
+   "index": 9,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run",
+   "index": 10,
+   "duration": 0.8333,
+   "frameRate": 120.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "runa",
+   "index": 12,
+   "duration": 0.8333,
+   "frameRate": 120.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "runa1",
+   "index": 11,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 13,
+   "duration": 1.8413,
+   "frameRate": 63.0,
+   "frameCount": 117,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreb",
+   "index": 14,
+   "duration": 1.8,
+   "frameRate": 120.0,
+   "frameCount": 217,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 15,
+   "duration": 0.5333,
+   "frameRate": 120.0,
+   "frameCount": 65,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 16,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a",
+   "index": 17,
+   "duration": 1.3667,
+   "frameRate": 120.0,
+   "frameCount": 165,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1bcharge1",
+   "index": 18,
+   "duration": 2.5667,
+   "frameRate": 120.0,
+   "frameCount": 309,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1bhit1",
+   "index": 19,
+   "duration": 1.4,
+   "frameRate": 30.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 20,
+   "duration": 1.4333,
+   "frameRate": 120.0,
+   "frameCount": 173,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a",
+   "index": 21,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b",
+   "index": 22,
+   "duration": 1.5397,
+   "frameRate": 63.0,
+   "frameCount": 98,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellua",
+   "index": 23,
+   "duration": 1.4,
+   "frameRate": 120.0,
+   "frameCount": 169,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellub",
+   "index": 24,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 25,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idlea",
+ "parts": [
+  {
+   "node": "rig_bat_0257dy_lv3",
+   "label": "rig bat 0257dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 80,
+  "meshes": 1,
+  "triangles": 3847,
+  "textures": 13,
+  "clips": 26,
+  "droppedTracks": 0,
+  "glbBytes": 4524104
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_025706_blaziken_lv3\\pref_char_bat_025706_blaziken_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     1.3e-05,
+     0.260464,
+     8e-06,
+     0.965484
+    ],
+    "degrees": 30.2
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -0.0
+  },
+  "jawRestTracks": 2,
+  "dex": 257,
+  "skin": "06",
+  "holowear": "025706",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_025706_blaziken_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_025700_blaziken_lv3\\pref_char_bat_025700_blaziken_lv3.fbx",
+  "species": "pm0257",
+  "form": "06"
+ }
+}

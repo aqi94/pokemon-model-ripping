@@ -1,0 +1,89 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0778_06_lob",
+ "kind": "pokemon",
+ "displayName": "Mimikyu · skin 06 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_077806_fxa_lv3",
+   "label": "rig lob 077806 fxa lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_077806_fxb_lv3",
+   "label": "rig lob 077806 fxb lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_077806_fxc_lv3",
+   "label": "rig lob 077806 fxc lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_077806_lv3",
+   "label": "rig lob 077806 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 134,
+  "meshes": 4,
+  "triangles": 23321,
+  "textures": 15,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 5731460
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_077806_mimikyu_lv3\\pref_char_lob_077806_mimikyu_lv3.fbx"
+ ],
+ "extras": {
+  "effectParts": [
+   "rig_lob_077806_fxa_lv3/mat_fx_049102_glow_02_hb",
+   "rig_lob_077806_fxb_lv3/mat_fx_047110_mask_02_hb",
+   "rig_lob_077806_fxc_lv3/mat_fx_047110_mask_03_hb"
+  ],
+  "missingTextures": [
+   "t_vc_lob_077806a.png",
+   "t_vc_lob_077806b.png",
+   "t_vc_lob_0778body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_077806a.png, t_vc_lob_077806b.png, t_vc_lob_0778body.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 778,
+  "skin": "06",
+  "holowear": "077806",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_077806_mimikyu_lv3",
+  "species": "pm0778",
+  "form": "06"
+ }
+}

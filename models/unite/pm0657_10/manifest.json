@@ -1,0 +1,383 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0657_10",
+ "kind": "pokemon",
+ "displayName": "Frogadier · skin 10",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    },
+    {
+     "variant": 7,
+     "name": "eyes_7",
+     "label": "Eyes 7",
+     "default": false
+    },
+    {
+     "variant": 8,
+     "name": "eyes_8",
+     "label": "Eyes 8",
+     "default": false
+    },
+    {
+     "variant": 9,
+     "name": "eyes_9",
+     "label": "Eyes 9",
+     "default": false
+    },
+    {
+     "variant": 10,
+     "name": "eyes_10",
+     "label": "Eyes 10",
+     "default": false
+    },
+    {
+     "variant": 11,
+     "name": "eyes_11",
+     "label": "Eyes 11",
+     "default": false
+    },
+    {
+     "variant": 12,
+     "name": "eyes_12",
+     "label": "Eyes 12",
+     "default": false
+    },
+    {
+     "variant": 13,
+     "name": "eyes_13",
+     "label": "Eyes 13",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.4,
+   "frameRate": 30.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk3",
+   "index": 2,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk4",
+   "index": 3,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk5",
+   "index": 4,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk6",
+   "index": 5,
+   "duration": 1.4,
+   "frameRate": 30.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk7",
+   "index": 6,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "born",
+   "index": 7,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 8,
+   "duration": 1.7667,
+   "frameRate": 30.0,
+   "frameCount": 54,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "goback",
+   "index": 9,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 10,
+   "duration": 1.4,
+   "frameRate": 30.0,
+   "frameCount": 43,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 11,
+   "duration": 0.5667,
+   "frameRate": 30.0,
+   "frameCount": 18,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 12,
+   "duration": 1.9,
+   "frameRate": 120.0,
+   "frameCount": 229,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 13,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 14,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 15,
+   "duration": 1.1333,
+   "frameRate": 30.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2a",
+   "index": 16,
+   "duration": 1.2333,
+   "frameRate": 30.0,
+   "frameCount": 38,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2b",
+   "index": 17,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 18,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_065710_fxa_lv3~notex",
+   "label": "rig bat 065710 fxa lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_bat_065710_fxb_lv3~notex",
+   "label": "rig bat 065710 fxb lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_bat_0657body_lv3",
+   "label": "rig bat 0657body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 68,
+  "meshes": 3,
+  "triangles": 3886,
+  "textures": 9,
+  "clips": 19,
+  "droppedTracks": 0,
+  "glbBytes": 2847192
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_065710_frogadier_lv3\\pref_char_bat_065710_frogadier_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: rig_bat_065710_fxa_lv3/mat_bat_065710_fxa_01_lv3; rig_bat_065710_fxb_lv3/mat_bat_065710_fxa_02_lv3",
+   "texture-less parts HOME could not colour (gate): rig_bat_065710_fxa_lv3/mat_bat_065710_fxa_01_lv3 (d=None, cover=None); rig_bat_065710_fxb_lv3/mat_bat_065710_fxa_02_lv3 (d=None, cover=None)"
+  ],
+  "effectParts": [
+   "rig_bat_065710_fxa_lv3/mat_bat_065710_fxa_01_lv3",
+   "rig_bat_065710_fxb_lv3/mat_bat_065710_fxa_02_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw1",
+    "open": [
+     -8.9e-05,
+     0.352873,
+     0.000261,
+     0.935671
+    ],
+    "degrees": 41.3
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw1": -1.0
+  },
+  "dex": 657,
+  "skin": "10",
+  "holowear": "065710",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_065710_frogadier_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_065700_frogadier_lv3\\pref_char_bat_065700_frogadier_lv3.fbx",
+  "species": "pm0657",
+  "form": "10"
+ }
+}

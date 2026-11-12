@@ -1,0 +1,170 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0150_04_x_devil",
+ "kind": "pokemon",
+ "displayName": "Mewtwo · X Devil (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 1.4667,
+   "frameRate": 30.0,
+   "frameCount": 45,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 3,
+   "duration": 0.7667,
+   "frameRate": 30.0,
+   "frameCount": 24,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show04",
+   "index": 4,
+   "duration": 1.9333,
+   "frameRate": 30.0,
+   "frameCount": 59,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show05",
+   "index": 5,
+   "duration": 1.9333,
+   "frameRate": 30.0,
+   "frameCount": 59,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show06",
+   "index": 6,
+   "duration": 1.2,
+   "frameRate": 30.0,
+   "frameCount": 37,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show07",
+   "index": 7,
+   "duration": 2.2333,
+   "frameRate": 30.0,
+   "frameCount": 68,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0150dy_lv3",
+   "label": "rig lob 0150dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 102,
+  "meshes": 1,
+  "triangles": 20001,
+  "textures": 19,
+  "clips": 8,
+  "droppedTracks": 0,
+  "glbBytes": 6955436
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_015004_mewtwo_lv3\\pref_char_lob_015004_mewtwo_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 150,
+  "skin": "04",
+  "holowear": "015004",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_015004_mewtwo_lv3",
+  "theme": "x_devil",
+  "materialsFrom": "Scenes/pref_sce_lobby_015004_X_devil_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_015004_X_devil_lv3/pref_sce_lobby_015004_X_devil_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0150",
+  "species": "pm0150",
+  "form": "04"
+ }
+}

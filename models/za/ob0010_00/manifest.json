@@ -1,0 +1,248 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "ob0010_00",
+ "kind": "object",
+ "displayName": "Ladder",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_loop",
+   "index": 1,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "boss_glasses_mesh",
+   "label": "boss glasses",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "boss_lends_mesh",
+   "label": "boss lends",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "boss_skin_mesh",
+   "label": "boss skin",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "boss_eye_ball_mesh",
+   "label": "boss eye ball",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "boss_body_mesh",
+   "label": "boss body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "leader_skin_mesh",
+   "label": "leader skin",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "leader_eyeball_mesh",
+   "label": "leader eyeball",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "leader_body_mesh",
+   "label": "leader body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "member_eye_default_mesh",
+   "label": "member eye default",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "member_body_mesh",
+   "label": "member body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "member_skin_mesh",
+   "label": "member skin",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "top_member_body_on_mesh",
+   "label": "top member body on",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "top_member_skin_on_mesh",
+   "label": "top member skin on",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "top_member_eye_default_on_mesh",
+   "label": "top member eye default on",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "top_member_eye_default_off_mesh",
+   "label": "top member eye default off",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "top_member_body_off_mesh",
+   "label": "top member body off",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "top_member_skin_off_mesh",
+   "label": "top member skin off",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "boss_glasses_mesh_lod1",
+   "label": "boss glasses lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "boss_lends_mesh_lod1",
+   "label": "boss lends lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "boss_body_mesh_lod1",
+   "label": "boss body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "boss_skin_mesh_lod1",
+   "label": "boss skin lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "boss_eye_ball_mesh_lod1",
+   "label": "boss eye ball lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "leader_skin_mesh_lod1",
+   "label": "leader skin lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "leader_body_mesh_lod1",
+   "label": "leader body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "leader_eyeball_mesh_lod1",
+   "label": "leader eyeball lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "member_body_mesh_lod1",
+   "label": "member body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "member_skin_mesh_lod1",
+   "label": "member skin lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "member_eye_default_mesh_lod1",
+   "label": "member eye default lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "top_member_body_on_mesh_lod1",
+   "label": "top member body on lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "top_member_skin_on_mesh_lod1",
+   "label": "top member skin on lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "top_member_eye_default_on_mesh_lod1",
+   "label": "top member eye default on lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "top_member_eye_default_off_mesh_lod1",
+   "label": "top member eye default off lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "top_member_body_off_mesh_lod1",
+   "label": "top member body off lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "top_member_skin_off_mesh_lod1",
+   "label": "top member skin off lod1",
+   "lod": 1,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 91,
+  "meshes": 34,
+  "triangles": 139212,
+  "textures": 43,
+  "clips": 1,
+  "glbBytes": 32745172
+ },
+ "source": [
+  "ik_chara/model_ob/ob0010_00_ladder/"
+ ],
+ "extras": {
+  "item": "ladder",
+  "species": "ob0010",
+  "form": ""
+ }
+}

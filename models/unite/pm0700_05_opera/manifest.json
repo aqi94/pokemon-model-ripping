@@ -1,0 +1,188 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0700_05_opera",
+ "kind": "pokemon",
+ "displayName": "Sylveon · Opera (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  },
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 7,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 8,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 9,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 10,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show1",
+   "index": 1,
+   "duration": 2.6667,
+   "frameRate": 30.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show1 [2]",
+   "index": 2,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show1 [2]",
+   "index": 3,
+   "duration": 1.7333,
+   "frameRate": 30.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show1 [2]",
+   "index": 4,
+   "duration": 1.8667,
+   "frameRate": 30.0,
+   "frameCount": 57,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_070005_lv3",
+   "label": "rig lob 070005 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 67,
+  "meshes": 1,
+  "triangles": 26044,
+  "textures": 27,
+  "clips": 5,
+  "droppedTracks": 0,
+  "glbBytes": 7305772
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_070005_sylveon_lv3\\pref_char_lob_070005_sylveon_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "1 zero-length source normals set to +Y"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 700,
+  "skin": "05",
+  "holowear": "070005",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_070005_sylveon_lv3",
+  "theme": "opera",
+  "materialsFrom": "Scenes/pref_sce_lobby_070005_opera_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_070005_opera_lv3/pref_sce_lobby_070005_opera_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0700",
+  "species": "pm0700",
+  "form": "05"
+ }
+}

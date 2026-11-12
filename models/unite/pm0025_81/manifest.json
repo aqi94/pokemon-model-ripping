@@ -1,0 +1,202 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0025_81",
+ "kind": "pokemon",
+ "displayName": "Gigantamax Pikachu",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "dead",
+   "index": 0,
+   "duration": 1.72,
+   "frameRate": 25.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 1,
+   "duration": 1.72,
+   "frameRate": 25.0,
+   "frameCount": 44,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 2,
+   "duration": 1.04,
+   "frameRate": 25.0,
+   "frameCount": 27,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 3,
+   "duration": 3.52,
+   "frameRate": 25.0,
+   "frameCount": 89,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 4,
+   "duration": 3.52,
+   "frameRate": 25.0,
+   "frameCount": 89,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell3",
+   "index": 5,
+   "duration": 3.52,
+   "frameRate": 25.0,
+   "frameCount": 89,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 6,
+   "duration": 1.04,
+   "frameRate": 25.0,
+   "frameCount": 27,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "cloud_2~notex",
+   "label": "cloud 2~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "cloud_2.001~notex",
+   "label": "cloud 2.001~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "cloud_2.002~notex",
+   "label": "cloud 2.002~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_bat_0025_81body_lv3",
+   "label": "rig bat 0025 81body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 62,
+  "meshes": 4,
+  "triangles": 7080,
+  "textures": 8,
+  "clips": 7,
+  "droppedTracks": 0,
+  "glbBytes": 966148
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Gigantamax Pikachu\\pref_char_bat_0025_81_pikachu_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: cloud_2/mat_fx_Dynamax_cloud_01",
+   "weightless skins bound to their first cluster bone: cloud_2, cloud_2.001, cloud_2.002",
+   "kept Blender's skeleton/clips: mesh cloud_2: only 9% of its vertices lie in the FBX bind space",
+   "texture-less parts HOME could not colour (gate): cloud_2/mat_fx_Dynamax_cloud_01 (d=None, cover=None); cloud_2.001/mat_fx_Dynamax_cloud_01 (d=None, cover=None); cloud_2.002/mat_fx_Dynamax_cloud_01 (d=None, cover=None)"
+  ],
+  "cutoutMaterials": [
+   "mat_bat_0025_81body_lv3"
+  ],
+  "effectParts": [
+   "cloud_2.001/mat_fx_Dynamax_cloud_01",
+   "cloud_2.002/mat_fx_Dynamax_cloud_01",
+   "cloud_2/mat_fx_Dynamax_cloud_01"
+  ],
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     0.157416,
+     -0.435435,
+     0.081933,
+     0.882555
+    ],
+    "degrees": 299.4
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -134.0
+  },
+  "prunedJoints": 34,
+  "dex": 25,
+  "skin": "81",
+  "holowear": "002581",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_0025_81_pikachu_lv3",
+  "source": "marcy",
+  "species": "pm0025",
+  "form": "81"
+ }
+}

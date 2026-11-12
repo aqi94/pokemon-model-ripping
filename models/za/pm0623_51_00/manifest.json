@@ -1,0 +1,5022 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0623_51_00",
+ "kind": "pokemon",
+ "displayName": "Golurk (51_00)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "battlewait01_loop",
+   "index": 1,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000",
+   "index": 20,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090",
+   "index": 21,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090",
+   "index": 24,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090",
+   "index": 26,
+   "duration": 0.6333,
+   "frameRate": 60.0,
+   "frameCount": 39,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090",
+   "index": 28,
+   "duration": 0.6333,
+   "frameRate": 60.0,
+   "frameCount": 39,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop",
+   "index": 30,
+   "duration": 2.0667,
+   "frameRate": 60.0,
+   "frameCount": 125,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop",
+   "index": 100,
+   "duration": 1.1333,
+   "frameRate": 60.0,
+   "frameCount": 69,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start",
+   "index": 140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01",
+   "index": 141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end",
+   "index": 142,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start",
+   "index": 145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01",
+   "index": 146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end",
+   "index": 147,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start",
+   "index": 150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop",
+   "index": 151,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start",
+   "index": 152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop",
+   "index": 153,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02",
+   "index": 155,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01",
+   "index": 300,
+   "duration": 2.6667,
+   "frameRate": 60.0,
+   "frameCount": 161,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      40,
+      0
+     ],
+     [
+      118,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      40,
+      1
+     ],
+     [
+      118,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01",
+   "index": 400,
+   "duration": 2.2333,
+   "frameRate": 60.0,
+   "frameCount": 135,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      15,
+      0
+     ],
+     [
+      86,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      15,
+      1
+     ],
+     [
+      86,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_start",
+   "index": 420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      10,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      10,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_loop",
+   "index": 421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end",
+   "index": 422,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      62,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      62,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01",
+   "index": 450,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      39,
+      0
+     ],
+     [
+      106,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      40,
+      0
+     ],
+     [
+      110,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      39,
+      1
+     ],
+     [
+      106,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      40,
+      1
+     ],
+     [
+      110,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      40,
+      0
+     ],
+     [
+      106,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      40,
+      1
+     ],
+     [
+      106,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start",
+   "index": 460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      38,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      38,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop",
+   "index": 461,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end",
+   "index": 462,
+   "duration": 1.0333,
+   "frameRate": 60.0,
+   "frameCount": 63,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      20,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      20,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop",
+   "index": 490,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01",
+   "index": 500,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      42,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      42,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02",
+   "index": 501,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      23,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      23,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start",
+   "index": 510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      31,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      31,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop",
+   "index": 511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end",
+   "index": 512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      30,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      30,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start",
+   "index": 520,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      70,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      70,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop",
+   "index": 521,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end",
+   "index": 522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "megaappeal01",
+   "index": 620,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "pm0623_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_foot_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_belt_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_energy_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0623_51_00_left_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_right_rocket_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_a_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      54,
+      0
+     ],
+     [
+      139,
+      1
+     ]
+    ],
+    "pm0623_51_00_eyelash_b_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_c_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_d_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0623_51_00_eyelash_e_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      54,
+      1
+     ],
+     [
+      139,
+      0
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "battlewait01_loop",
+ "parts": [
+  {
+   "node": "pm0623_51_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_head_mesh",
+   "label": "head",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_foot_mesh",
+   "label": "left foot",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_right_foot_mesh",
+   "label": "right foot",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_belt_mesh",
+   "label": "belt",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_energy_a_mesh",
+   "label": "energy a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_energy_b_mesh",
+   "label": "energy b",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_arm_mesh",
+   "label": "arm",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_hand_mesh",
+   "label": "left hand",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_right_hand_mesh",
+   "label": "right hand",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_rocket_mesh",
+   "label": "left rocket",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_right_rocket_mesh",
+   "label": "right rocket",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_a_mesh",
+   "label": "eyelash a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_eyelash_b_mesh",
+   "label": "eyelash b",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_c_mesh",
+   "label": "eyelash c",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_d_mesh",
+   "label": "eyelash d",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_e_mesh",
+   "label": "eyelash e",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_head_mesh_lod1",
+   "label": "head lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_foot_mesh_lod1",
+   "label": "left foot lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_right_foot_mesh_lod1",
+   "label": "right foot lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_belt_mesh_lod1",
+   "label": "belt lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_energy_a_mesh_lod1",
+   "label": "energy a lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_energy_b_mesh_lod1",
+   "label": "energy b lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_arm_mesh_lod1",
+   "label": "arm lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_hand_mesh_lod1",
+   "label": "left hand lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_right_hand_mesh_lod1",
+   "label": "right hand lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_rocket_mesh_lod1",
+   "label": "left rocket lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_right_rocket_mesh_lod1",
+   "label": "right rocket lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_a_mesh_lod1",
+   "label": "eyelash a lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_eyelash_b_mesh_lod1",
+   "label": "eyelash b lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_c_mesh_lod1",
+   "label": "eyelash c lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_d_mesh_lod1",
+   "label": "eyelash d lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_e_mesh_lod1",
+   "label": "eyelash e lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_head_mesh_lod2",
+   "label": "head lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_foot_mesh_lod2",
+   "label": "left foot lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_right_foot_mesh_lod2",
+   "label": "right foot lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_belt_mesh_lod2",
+   "label": "belt lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_energy_a_mesh_lod2",
+   "label": "energy a lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_energy_b_mesh_lod2",
+   "label": "energy b lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_arm_mesh_lod2",
+   "label": "arm lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_hand_mesh_lod2",
+   "label": "left hand lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_right_hand_mesh_lod2",
+   "label": "right hand lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_rocket_mesh_lod2",
+   "label": "left rocket lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_right_rocket_mesh_lod2",
+   "label": "right rocket lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_a_mesh_lod2",
+   "label": "eyelash a lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_eyelash_b_mesh_lod2",
+   "label": "eyelash b lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_c_mesh_lod2",
+   "label": "eyelash c lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_d_mesh_lod2",
+   "label": "eyelash d lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_e_mesh_lod2",
+   "label": "eyelash e lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_body_mesh_lod3",
+   "label": "body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_head_mesh_lod3",
+   "label": "head lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_foot_mesh_lod3",
+   "label": "left foot lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_right_foot_mesh_lod3",
+   "label": "right foot lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_belt_mesh_lod3",
+   "label": "belt lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_energy_a_mesh_lod3",
+   "label": "energy a lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_energy_b_mesh_lod3",
+   "label": "energy b lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_arm_mesh_lod3",
+   "label": "arm lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_hand_mesh_lod3",
+   "label": "left hand lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_right_hand_mesh_lod3",
+   "label": "right hand lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_left_rocket_mesh_lod3",
+   "label": "left rocket lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_right_rocket_mesh_lod3",
+   "label": "right rocket lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_a_mesh_lod3",
+   "label": "eyelash a lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0623_51_00_eyelash_b_mesh_lod3",
+   "label": "eyelash b lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_c_mesh_lod3",
+   "label": "eyelash c lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_d_mesh_lod3",
+   "label": "eyelash d lod3",
+   "lod": 3,
+   "visible": false
+  },
+  {
+   "node": "pm0623_51_00_eyelash_e_mesh_lod3",
+   "label": "eyelash e lod3",
+   "lod": 3,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 242,
+  "meshes": 68,
+  "triangles": 14332,
+  "textures": 58,
+  "clips": 38,
+  "glbBytes": 16312920
+ },
+ "source": [
+  "ik_pokemon/data/pm0623/pm0623_51_00/"
+ ],
+ "extras": {
+  "dex": 623,
+  "species": "pm0623",
+  "form": "51_00"
+ }
+}

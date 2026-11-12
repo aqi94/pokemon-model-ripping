@@ -1,0 +1,64 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0807_00_lob",
+ "kind": "pokemon",
+ "displayName": "Zeraora (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.8333,
+   "frameRate": 30.0,
+   "frameCount": 146,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0807body_lv3",
+   "label": "rig lob 0807body lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0807bodya_lv3",
+   "label": "rig lob 0807bodya lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 64,
+  "meshes": 2,
+  "triangles": 15966,
+  "textures": 7,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 1562708
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_080700_zeraora_lv3\\pref_char_lob_080700_zeraora_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 807,
+  "skin": "00",
+  "holowear": "080700",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_080700_zeraora_lv3",
+  "species": "pm0807",
+  "form": "00"
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0778_03_earl",
+ "kind": "pokemon",
+ "displayName": "Mimikyu · Earl (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idlea",
+   "index": 0,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idlea",
+ "parts": [
+  {
+   "node": "rig_lob_0778dy_lv3",
+   "label": "rig lob 0778dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0778dy_lv3_1",
+   "label": "rig lob 0778dy lv3 1",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 112,
+  "meshes": 2,
+  "triangles": 29683,
+  "textures": 16,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 4791364
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_077803_mimikyu_lv3\\pref_char_lob_077803_mimikyu_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 778,
+  "skin": "03",
+  "holowear": "077803",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_077803_mimikyu_lv3",
+  "theme": "earl",
+  "materialsFrom": "Scenes/pref_sce_lobby_077803_earl_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_077803_earl_lv3/pref_sce_lobby_077803_earl_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0778",
+  "species": "pm0778",
+  "form": "03"
+ }
+}

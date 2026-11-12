@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0012_00",
+ "kind": "object",
+ "displayName": "Rock",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "rock_mesh",
+   "label": "rock",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 590,
+  "textures": 3,
+  "clips": 0,
+  "glbBytes": 4123992
+ },
+ "source": [
+  "ik_chara/model_ob/ob0012_00_rock/"
+ ],
+ "extras": {
+  "item": "rock",
+  "species": "ob0012",
+  "form": ""
+ }
+}

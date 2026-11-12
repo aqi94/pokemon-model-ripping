@@ -1,0 +1,131 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0815_01_pirate",
+ "kind": "pokemon",
+ "displayName": "Cinderace · Pirate (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 6.8,
+   "frameRate": 30.0,
+   "frameCount": 205,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_081501_lv3",
+   "label": "rig lob 081501 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0815dy_lv3",
+   "label": "rig lob 0815dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 71,
+  "meshes": 2,
+  "triangles": 17213,
+  "textures": 16,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 2956344
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_081501_cinderace_lv3\\pref_char_lob_081501_cinderace_lv3.fbx"
+ ],
+ "extras": {
+  "meshBinds": [
+   "rig_lob_0815dy_lv3 (baked, 29 own bones rebound)"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 815,
+  "skin": "01",
+  "holowear": "081501",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_081501_cinderace_lv3",
+  "theme": "pirate",
+  "materialsFrom": "Scenes/pref_sce_lobby_081501_pirate_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_081501_pirate_lv3/pref_sce_lobby_081501_pirate_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0815",
+  "species": "pm0815",
+  "form": "01"
+ }
+}

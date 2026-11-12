@@ -1,0 +1,198 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0245_03_lob",
+ "kind": "pokemon",
+ "displayName": "Suicune · skin 03 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show02",
+   "index": 1,
+   "duration": 5.6333,
+   "frameRate": 30.0,
+   "frameCount": 170,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show04",
+   "index": 2,
+   "duration": 3.6,
+   "frameRate": 30.0,
+   "frameCount": 109,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show05",
+   "index": 3,
+   "duration": 2.6333,
+   "frameRate": 30.0,
+   "frameCount": 80,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "touch",
+   "index": 4,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "glow (1)",
+   "label": "glow (1)",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow (2)",
+   "label": "glow (2)",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow (3)",
+   "label": "glow (3)",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow (4)",
+   "label": "glow (4)",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow (5)",
+   "label": "glow (5)",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow (8)",
+   "label": "glow (8)",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow (9)",
+   "label": "glow (9)",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_024503_fxa_lv3",
+   "label": "lob 024503 fxa lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_024503_fxb_lv3",
+   "label": "lob 024503 fxb lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_024503_fxc_lv3",
+   "label": "lob 024503 fxc lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0245dy_lv3",
+   "label": "rig lob 0245dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 138,
+  "meshes": 11,
+  "triangles": 27846,
+  "textures": 15,
+  "clips": 5,
+  "droppedTracks": 0,
+  "glbBytes": 5878648
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_024503_suicune_lv3\\pref_char_lob_024503_suicune_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "textures not in the rip: t_vc_lob_024503.png, t_vc_lob_0245body.png, t_vc_lob_0245eye.png",
+   "re-placed meshes from Blender's matrix to the FBX rest: glow (1), glow (2), glow (3), glow (4), glow (5), glow (8), glow (9)"
+  ],
+  "effectParts": [
+   "glow (1)/mat_fx_024503_glow_02_yjz",
+   "glow (2)/mat_fx_024503_glow_02_yjz",
+   "glow (3)/mat_fx_024503_glow_02_yjz",
+   "glow (4)/mat_fx_024503_glow_02_yjz",
+   "glow (5)/mat_fx_024503_glow_02_yjz",
+   "glow (8)/mat_fx_024503_glow_01_yjz",
+   "glow (9)/mat_fx_024503_glow_02_yjz",
+   "lob_024503_fxa_lv3/mat_lob_24503fxa_lv3",
+   "lob_024503_fxb_lv3/mat_lob_24503fxc_lv3",
+   "lob_024503_fxc_lv3/mat_lob_24503fxb_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_024503.png",
+   "t_vc_lob_0245body.png",
+   "t_vc_lob_0245eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     6e-06,
+     -0.381942,
+     -3e-06,
+     0.924186
+    ],
+    "degrees": 44.9
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -0.0
+  },
+  "dex": 245,
+  "skin": "03",
+  "holowear": "024503",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_024503_suicune_lv3",
+  "species": "pm0245",
+  "form": "03"
+ }
+}

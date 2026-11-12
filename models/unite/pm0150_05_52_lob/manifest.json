@@ -1,0 +1,176 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0150_05_52_lob",
+ "kind": "pokemon",
+ "displayName": "Mewtwo · skin 05 (52) (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_0150_52_Y",
+   "label": "lob 0150 52 Y",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_015005_52_fxA",
+   "label": "rig lob 015005 52 fxA",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_015005_52_fxa",
+   "label": "rig lob 015005 52 fxa",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_015005_52_fxb",
+   "label": "rig lob 015005 52 fxb",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_015005_52_fxe~notex",
+   "label": "rig lob 015005 52 fxe~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_015005_52_fxg",
+   "label": "rig lob 015005 52 fxg",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 97,
+  "meshes": 6,
+  "triangles": 22794,
+  "textures": 19,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 7760112
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_015005_52_mewtwo_lv3\\pref_char_lob_015005_52_mewtwo_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: rig_lob_015005_52_fxe/mat_lob_015005fx_Flow_01_Y_lv3",
+   "textures not in the rip: t_vc_lob_015005.png, t_vc_lob_0150_52_Ybodya.png, t_vc_lob_0150_52_Ybodyb.png, t_vc_lob_0150_52_Yeye.png",
+   "texture-less parts coloured from Pokémon HOME (home_parts): rig_lob_015005_52_fxA/mat_lob_0150051fx_Flow_05_hb_lv3 <- pm0150_00_00/pm0150_00_00_BodySkin+pm0150_00_00_BodySkin (d=0.0568)",
+   "texture-less parts HOME could not colour (gate): rig_lob_015005_52_fxe/mat_lob_015005fx_Flow_01_Y_lv3 (d=None, cover=None)"
+  ],
+  "vertexColourEffects": [
+   "mat_lob_015005fx_TrailGlow_01_Y_lv3",
+   "mat_lob_015005fx_Trail_hb_03_lv3"
+  ],
+  "effectParts": [
+   "rig_lob_015005_52_fxA/mat_lob_0150051fx_Flow_05_hb_lv3",
+   "rig_lob_015005_52_fxa/mat_lob_015005fx_TrailGlow_01_Y_lv3",
+   "rig_lob_015005_52_fxb/mat_lob_015005fx_TrailGlow_01_Y_lv3",
+   "rig_lob_015005_52_fxe/mat_lob_015005fx_Flow_01_Y_lv3",
+   "rig_lob_015005_52_fxg/mat_lob_015005fx_Trail_hb_03_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_015005.png",
+   "t_vc_lob_0150_52_Ybodya.png",
+   "t_vc_lob_0150_52_Ybodyb.png",
+   "t_vc_lob_0150_52_Yeye.png"
+  ],
+  "meshBinds": [
+   "rig_lob_015005_52_fxA (baked)",
+   "rig_lob_015005_52_fxa (baked)",
+   "rig_lob_015005_52_fxb (baked)",
+   "rig_lob_015005_52_fxe (baked)",
+   "rig_lob_015005_52_fxg (baked)"
+  ],
+  "skeletonSource": "fbx",
+  "homeColouredParts": [
+   {
+    "part": "rig_lob_015005_52_fxA/mat_lob_0150051fx_Flow_05_hb_lv3",
+    "homeModel": "pm0150_00_00",
+    "homeMesh": "pm0150_00_00_BodySkin+pm0150_00_00_BodySkin",
+    "matchDistance": 0.0568,
+    "cover": 1.0
+   }
+  ],
+  "dex": 150,
+  "skin": "05",
+  "holowear": "015005_52",
+  "battle": false,
+  "standalone": true,
+  "mode": "52",
+  "folder_name": "pref_char_lob_015005_52_mewtwo_lv3",
+  "species": "pm0150",
+  "form": "05"
+ }
+}

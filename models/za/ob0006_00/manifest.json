@@ -1,0 +1,56 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0006_00",
+ "kind": "object",
+ "displayName": "Switch",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "larm_mesh",
+   "label": "larm",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rarm_mesh",
+   "label": "rarm",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 9,
+  "meshes": 3,
+  "triangles": 1986,
+  "textures": 5,
+  "clips": 0,
+  "glbBytes": 547604
+ },
+ "source": [
+  "ik_chara/model_ob/ob0006_00_switch/"
+ ],
+ "extras": {
+  "item": "switch",
+  "species": "ob0006",
+  "form": ""
+ }
+}

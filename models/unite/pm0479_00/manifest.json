@@ -1,0 +1,149 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0479_00",
+ "kind": "pokemon",
+ "displayName": "Rotom",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 1,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "born",
+   "index": 2,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 3,
+   "duration": 3.3333,
+   "frameRate": 30.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 4,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 5,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0479bodya_lv3",
+   "label": "rig bat 0479bodya lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0479bodyb_lv3",
+   "label": "rig bat 0479bodyb lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 15,
+  "meshes": 2,
+  "triangles": 1394,
+  "textures": 3,
+  "clips": 6,
+  "droppedTracks": 0,
+  "glbBytes": 194508
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Rotom\\pref_char_bat_047900_Rotom_lv3.fbx"
+ ],
+ "extras": {
+  "particlesNotInRip": [
+   "pref_fx_ring_01"
+  ],
+  "warnings": [
+   "particle effects not in the rip (empty emitter nodes): pref_fx_ring_01",
+   "weightless skins bound to their first cluster bone: rig_bat_0479bodya_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "particles": [
+   {
+    "prefab": "pref_fx_ring_01",
+    "bone": "Bone_Waist",
+    "translation": [
+     0.073,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.0
+   }
+  ],
+  "dex": 479,
+  "skin": "00",
+  "holowear": "047900",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_047900_rotom_lv3",
+  "source": "marcy",
+  "species": "pm0479",
+  "form": "00"
+ }
+}

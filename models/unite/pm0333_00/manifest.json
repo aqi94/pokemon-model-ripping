@@ -1,0 +1,117 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0333_00",
+ "kind": "pokemon",
+ "displayName": "Swablu",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 1.6667,
+   "frameRate": 30.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 2.6667,
+   "frameRate": 30.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 3,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 4,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0333dy_lv3_old",
+   "label": "rig bat 0333dy lv3 old",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 41,
+  "meshes": 1,
+  "triangles": 1196,
+  "textures": 3,
+  "clips": 5,
+  "droppedTracks": 0,
+  "glbBytes": 571908
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Swablu\\pref_char_bat_033300_swablu_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -0.099325,
+     0.513336,
+     0.084714,
+     0.8482
+    ],
+    "degrees": 303.7
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -136.7
+  },
+  "dex": 333,
+  "skin": "00",
+  "holowear": "033300",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_033300_swablu_lv3",
+  "source": "marcy",
+  "species": "pm0333",
+  "form": "00"
+ }
+}

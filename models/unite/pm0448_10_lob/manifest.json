@@ -1,0 +1,116 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0448_10_lob",
+ "kind": "pokemon",
+ "displayName": "Lucario · skin 10 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "touch",
+   "index": 1,
+   "duration": 2.5333,
+   "frameRate": 30.0,
+   "frameCount": 77,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_044810_fxa_lv3",
+   "label": "rig lob 044810 fxa lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_044810_fxb_lv3~notex",
+   "label": "rig lob 044810 fxb lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_044810_fxc_lv3~notex",
+   "label": "rig lob 044810 fxc lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_0448a_lv3",
+   "label": "rig lob 0448a lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0448dy_lv3",
+   "label": "rig lob 0448dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lv3_bat_0192weapon",
+   "label": "rig lv3 bat 0192weapon",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 83,
+  "meshes": 6,
+  "triangles": 23347,
+  "textures": 11,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 4113960
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_044810_lucario_lv3\\pref_char_lob_044810_lucario_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: rig_lob_044810_fxb_lv3/mat_lob_044810_fxb_01_lv3",
+   "textures not in the rip: t_vc_lob_044810.png",
+   "weightless skins bound to their first cluster bone: rig_lob_044810_fxb_lv3, rig_lv3_bat_0192weapon",
+   "texture-less parts HOME could not colour (gate): rig_lob_044810_fxb_lv3/mat_lob_044810_fxb_01_lv3 (d=None, cover=None); rig_lob_044810_fxc_lv3/mat_lob_044810_fxb_01_lv3 (d=None, cover=None)"
+  ],
+  "vertexColourEffects": [
+   "mat_lob_044810_fxa_01_lv3"
+  ],
+  "effectParts": [
+   "rig_lob_044810_fxa_lv3/mat_lob_044810_fxa_01_lv3",
+   "rig_lob_044810_fxb_lv3/mat_lob_044810_fxb_01_lv3",
+   "rig_lob_044810_fxc_lv3/mat_lob_044810_fxb_01_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_044810.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 448,
+  "skin": "10",
+  "holowear": "044810",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_044810_lucario_lv3",
+  "species": "pm0448",
+  "form": "10"
+ }
+}

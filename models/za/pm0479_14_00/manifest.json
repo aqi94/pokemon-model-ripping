@@ -1,0 +1,3602 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0479_14_00",
+ "kind": "pokemon",
+ "displayName": "Rotom (14_00)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "defaultwait01_loop [set2]",
+   "index": 20000,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": true,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battlewait01_loop [set2]",
+   "index": 20001,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultidle01 [set2]",
+   "index": 20010,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "battleidle02 [set2]",
+   "index": 20012,
+   "duration": 2.05,
+   "frameRate": 60.0,
+   "frameCount": 124,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      29,
+      0
+     ],
+     [
+      78,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      29,
+      1
+     ],
+     [
+      78,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000 [set2]",
+   "index": 20020,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090 [set2]",
+   "index": 20021,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090 [set2]",
+   "index": 20024,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090 [set2]",
+   "index": 20026,
+   "duration": 0.7167,
+   "frameRate": 60.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090 [set2]",
+   "index": 20028,
+   "duration": 0.7167,
+   "frameRate": 60.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop [set2]",
+   "index": 20030,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop [set2]",
+   "index": 20100,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start [set2]",
+   "index": 20140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01 [set2]",
+   "index": 20141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      6,
+      0
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      6,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end [set2]",
+   "index": 20142,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      7,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      7,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start [set2]",
+   "index": 20145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      5,
+      0
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      5,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01 [set2]",
+   "index": 20146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end [set2]",
+   "index": 20147,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      12,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      12,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start [set2]",
+   "index": 20150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop [set2]",
+   "index": 20151,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start [set2]",
+   "index": 20152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop [set2]",
+   "index": 20153,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02 [set2]",
+   "index": 20155,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_start [set2]",
+   "index": 20270,
+   "duration": 0.8667,
+   "frameRate": 60.0,
+   "frameCount": 53,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_loop [set2]",
+   "index": 20271,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_end [set2]",
+   "index": 20272,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_start [set2]",
+   "index": 20280,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      15,
+      0
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      15,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_loop [set2]",
+   "index": 20281,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sleep01_end [set2]",
+   "index": 20282,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "idle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      6,
+      1
+     ],
+     [
+      28,
+      0
+     ],
+     [
+      69,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      6,
+      0
+     ],
+     [
+      28,
+      1
+     ],
+     [
+      69,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_start [set2]",
+   "index": 20293,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_loop [set2]",
+   "index": 20294,
+   "duration": 2.2333,
+   "frameRate": 60.0,
+   "frameCount": 135,
+   "loop": true,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_end [set2]",
+   "index": 20295,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01 [set2]",
+   "index": 20300,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      37,
+      0
+     ],
+     [
+      95,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      37,
+      1
+     ],
+     [
+      95,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "appeal01 [set2]",
+   "index": 20310,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      37,
+      0
+     ],
+     [
+      95,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      37,
+      1
+     ],
+     [
+      95,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "refresh01 [set2]",
+   "index": 20320,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      34,
+      0
+     ],
+     [
+      76,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      34,
+      1
+     ],
+     [
+      76,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_start [set2]",
+   "index": 20330,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_loop [set2]",
+   "index": 20331,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_end [set2]",
+   "index": 20332,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01 [set2]",
+   "index": 20400,
+   "duration": 1.7667,
+   "frameRate": 60.0,
+   "frameCount": 107,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_start [set2]",
+   "index": 20420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_loop [set2]",
+   "index": 20421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end [set2]",
+   "index": 20422,
+   "duration": 1.4,
+   "frameRate": 60.0,
+   "frameCount": 85,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      46,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      46,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01 [set2]",
+   "index": 20450,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start [set2]",
+   "index": 20460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      37,
+      0
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      37,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_loop [set2]",
+   "index": 20461,
+   "duration": 0.6333,
+   "frameRate": 60.0,
+   "frameCount": 39,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_end [set2]",
+   "index": 20462,
+   "duration": 0.9,
+   "frameRate": 60.0,
+   "frameCount": 55,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      18,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      18,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "charge01_loop [set2]",
+   "index": 20490,
+   "duration": 0.5333,
+   "frameRate": 60.0,
+   "frameCount": 33,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01 [set2]",
+   "index": 20500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02 [set2]",
+   "index": 20501,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      51,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      52,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start [set2]",
+   "index": 20510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      17,
+      0
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      17,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop [set2]",
+   "index": 20511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end [set2]",
+   "index": 20512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      30,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      30,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start [set2]",
+   "index": 20520,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop [set2]",
+   "index": 20521,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end [set2]",
+   "index": 20522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "glad01 [set2]",
+   "index": 20550,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "notice01 [set2]",
+   "index": 20560,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hate01 [set2]",
+   "index": 20563,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "inquiringly01 [set2]",
+   "index": 20566,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0479_14_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_door_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_edge_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_firemask_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0479_14_00_aura_mesh": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "defaultwait01_loop [set2]",
+ "parts": [
+  {
+   "node": "pm0479_14_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_teeth_mesh",
+   "label": "teeth",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_door_mesh",
+   "label": "door",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_edge_mesh",
+   "label": "edge",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_arm_mesh",
+   "label": "arm",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_firemask_mesh",
+   "label": "firemask",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_aura_mesh",
+   "label": "aura",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "pm0479_14_00_body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_teeth_mesh_lod1",
+   "label": "teeth lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_door_mesh_lod1",
+   "label": "door lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_edge_mesh_lod1",
+   "label": "edge lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_arm_mesh_lod1",
+   "label": "arm lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_firemask_mesh_lod1",
+   "label": "firemask lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_aura_mesh_lod1",
+   "label": "aura lod1",
+   "lod": 1,
+   "visible": false
+  },
+  {
+   "node": "pm0479_14_00_body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_teeth_mesh_lod2",
+   "label": "teeth lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_door_mesh_lod2",
+   "label": "door lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_edge_mesh_lod2",
+   "label": "edge lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_arm_mesh_lod2",
+   "label": "arm lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_firemask_mesh_lod2",
+   "label": "firemask lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_aura_mesh_lod2",
+   "label": "aura lod2",
+   "lod": 2,
+   "visible": false
+  },
+  {
+   "node": "pm0479_14_00_body_mesh_lod3",
+   "label": "body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_teeth_mesh_lod3",
+   "label": "teeth lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_door_mesh_lod3",
+   "label": "door lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_edge_mesh_lod3",
+   "label": "edge lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_arm_mesh_lod3",
+   "label": "arm lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_firemask_mesh_lod3",
+   "label": "firemask lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0479_14_00_aura_mesh_lod3",
+   "label": "aura lod3",
+   "lod": 3,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 93,
+  "meshes": 28,
+  "triangles": 3962,
+  "textures": 26,
+  "clips": 58,
+  "glbBytes": 5874356
+ },
+ "source": [
+  "ik_pokemon/data/pm0479/pm0479_14_00/"
+ ],
+ "extras": {
+  "dex": 479,
+  "species": "pm0479",
+  "form": "14_00"
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0892_07A_lob",
+ "kind": "pokemon",
+ "displayName": "Urshifu · skin 07A (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle_a",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "touch_a",
+   "index": 1,
+   "duration": 3.3333,
+   "frameRate": 30.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle_a",
+ "parts": [
+  {
+   "node": "rig_lob_0892dy_lv3",
+   "label": "rig lob 0892dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 171,
+  "meshes": 1,
+  "triangles": 19984,
+  "textures": 11,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 4698256
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_089207A_urshifu_lv3\\pref_char_lob_089207A_urshifu_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_089207.png",
+   "t_vc_lob_0892body.png",
+   "t_vc_lob_0892eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_089207.png, t_vc_lob_0892body.png, t_vc_lob_0892eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     2e-06,
+     0.316067,
+     1e-06,
+     0.948737
+    ],
+    "degrees": 36.8
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -36.8
+  },
+  "dex": 892,
+  "skin": "07A",
+  "holowear": "089207A",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_089207A_urshifu_lv3",
+  "species": "pm0892",
+  "form": "07A"
+ }
+}

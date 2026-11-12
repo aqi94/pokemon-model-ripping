@@ -1,0 +1,163 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0149_10_lob",
+ "kind": "pokemon",
+ "displayName": "Dragonite · skin 10 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "flyidle",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 2.2333,
+   "frameRate": 30.0,
+   "frameCount": 68,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 5.0333,
+   "frameRate": 30.0,
+   "frameCount": 152,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 3,
+   "duration": 2.8,
+   "frameRate": 30.0,
+   "frameCount": 85,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "flyidle",
+ "parts": [
+  {
+   "node": "rig_lob_0149dy_lv3",
+   "label": "rig lob 0149dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 112,
+  "meshes": 1,
+  "triangles": 20228,
+  "textures": 15,
+  "clips": 4,
+  "droppedTracks": 0,
+  "glbBytes": 6590196
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_014910_dragonite_lv3\\pref_char_lob_014910_dragonite_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_014910a.png",
+   "t_vc_lob_014910b.png",
+   "t_vc_lob_0149body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_014910a.png, t_vc_lob_014910b.png, t_vc_lob_0149body.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -5e-06,
+     0.433947,
+     -1.3e-05,
+     0.900938
+    ],
+    "degrees": 51.4
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -0.0
+  },
+  "dex": 149,
+  "skin": "10",
+  "holowear": "014910",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_014910_dragonite_lv3",
+  "species": "pm0149",
+  "form": "10"
+ }
+}

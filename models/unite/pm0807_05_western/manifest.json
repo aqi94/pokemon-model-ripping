@@ -1,0 +1,68 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0807_05_western",
+ "kind": "pokemon",
+ "displayName": "Zeraora · Western (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_080705_lv3",
+   "label": "rig lob 080705 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0807dya_lv3",
+   "label": "rig lob 0807dya lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 74,
+  "meshes": 2,
+  "triangles": 22678,
+  "textures": 17,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 5709876
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_080705_zeraora_lv3\\pref_char_lob_080705_zeraora_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 807,
+  "skin": "05",
+  "holowear": "080705",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_080705_zeraora_lv3",
+  "theme": "western",
+  "materialsFrom": "Scenes/pref_sce_lobby_080705_western_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_080705_western_lv3/pref_sce_lobby_080705_western_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0807",
+  "species": "pm0807",
+  "form": "05"
+ }
+}

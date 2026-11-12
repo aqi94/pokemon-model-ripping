@@ -1,0 +1,151 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0959_00_lob",
+ "kind": "pokemon",
+ "displayName": "Tinkaton (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.6667,
+   "frameRate": 30.0,
+   "frameCount": 51,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "touch",
+   "index": 1,
+   "duration": 2.7,
+   "frameRate": 30.0,
+   "frameCount": 82,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0959_lv3",
+   "label": "rig lob 0959 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 104,
+  "meshes": 1,
+  "triangles": 13793,
+  "textures": 10,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 2188992
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_095900_hero_tinkaton_lv3\\pref_char_lob_095900_hero_tinkaton_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_095900bammer.png",
+   "t_vc_lob_095900body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_095900bammer.png, t_vc_lob_095900body.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_left_jaw_01",
+    "open": [
+     -0.153233,
+     0.165787,
+     -0.103615,
+     0.968658
+    ],
+    "degrees": 28.8
+   },
+   {
+    "bone": "Bone_right_jaw_01",
+    "open": [
+     0.153241,
+     0.165785,
+     0.103618,
+     0.968657
+    ],
+    "degrees": 28.8
+   }
+  ],
+  "jawClosed": {
+   "Bone_left_jaw_01": 0.0,
+   "Bone_right_jaw_01": -0.0
+  },
+  "dex": 959,
+  "skin": "00",
+  "holowear": "095900",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_095900_hero_tinkaton_lv3",
+  "species": "pm0959",
+  "form": "00"
+ }
+}

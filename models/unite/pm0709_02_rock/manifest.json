@@ -1,0 +1,96 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0709_02_rock",
+ "kind": "pokemon",
+ "displayName": "Trevenant · Rock (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.7,
+   "frameRate": 30.0,
+   "frameCount": 82,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_070902_lv3",
+   "label": "rig lob 070902 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 85,
+  "meshes": 1,
+  "triangles": 22893,
+  "textures": 16,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 5489784
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_070902_trevenant_lv3\\pref_char_lob_070902_trevenant_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "re-placed meshes from Blender's matrix to the FBX rest: rig_lob_070902_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 709,
+  "skin": "02",
+  "holowear": "070902",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_070902_trevenant_lv3",
+  "theme": "rock",
+  "materialsFrom": "Scenes/pref_sce_lobby_070902_rock_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_070902_rock_lv3/pref_sce_lobby_070902_rock_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0709",
+  "species": "pm0709",
+  "form": "02"
+ }
+}

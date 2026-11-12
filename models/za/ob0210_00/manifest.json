@@ -1,0 +1,56 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0210_00",
+ "kind": "object",
+ "displayName": "Timer Ball",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "uppertopobj_mesh",
+   "label": "uppertopobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "upperobj_mesh",
+   "label": "upperobj",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lowerobj_mesh",
+   "label": "lowerobj",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 9,
+  "meshes": 3,
+  "triangles": 1202,
+  "textures": 7,
+  "clips": 0,
+  "glbBytes": 211096
+ },
+ "source": [
+  "ik_chara/model_ob/ob0210_00_timerball/"
+ ],
+ "extras": {
+  "item": "timerball",
+  "species": "ob0210",
+  "form": ""
+ }
+}

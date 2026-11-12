@@ -1,0 +1,68 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0038_02_kimono",
+ "kind": "pokemon",
+ "displayName": "Ninetales · Kimono (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_003802_lv3",
+   "label": "rig lob 003802 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_003802body_lv3",
+   "label": "rig lob 003802body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 132,
+  "meshes": 2,
+  "triangles": 19786,
+  "textures": 11,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3741816
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_003802_ninetales_lv3\\pref_char_lob_003802_ninetales_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 38,
+  "skin": "02",
+  "holowear": "003802",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_003802_ninetales_lv3",
+  "theme": "kimono",
+  "materialsFrom": "Scenes/pref_sce_lobby_003802_kimono_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_003802_kimono_lv3/pref_sce_lobby_003802_kimono_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0038",
+  "species": "pm0038",
+  "form": "02"
+ }
+}

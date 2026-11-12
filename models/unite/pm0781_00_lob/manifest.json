@@ -1,0 +1,70 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0781_00_lob",
+ "kind": "pokemon",
+ "displayName": "Dhelmise (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.9333,
+   "frameRate": 30.0,
+   "frameCount": 89,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0781dya_lv3",
+   "label": "rig lob 0781dya lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0781dyb_lv3",
+   "label": "rig lob 0781dyb lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 55,
+  "meshes": 2,
+  "triangles": 16848,
+  "textures": 3,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 1636612
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_078100_dhelmise_lv3\\pref_char_lob_078100_dhelmise_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_0781body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0781body.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 781,
+  "skin": "00",
+  "holowear": "078100",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_078100_dhelmise_lv3",
+  "species": "pm0781",
+  "form": "00"
+ }
+}

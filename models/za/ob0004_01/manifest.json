@@ -1,0 +1,1964 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": [
+    "defaultwait01_start",
+    "defaultwait01_loop",
+    "defaultwait01_end",
+    "call01_start",
+    "call01_loop",
+    "call01_end",
+    "call02_start",
+    "call02_loop",
+    "call02_end",
+    "instal01",
+    "onceaction01",
+    "advent01_start",
+    "advent01_loop",
+    "advent01_end",
+    "advent02_start",
+    "advent02_loop",
+    "advent02_end",
+    "emioff01_loop",
+    "emion01_loop",
+    "eye01",
+    "face01",
+    "eye02",
+    "face02",
+    "eye03",
+    "face03",
+    "eye04",
+    "face04",
+    "d001_ob0004_01_f_c11 [demo d001]",
+    "d001_ob0004_01_m_c11 [demo d001]",
+    "d001_ob0004_01_f_c18 [demo d001]",
+    "d001_ob0004_01_m_c18 [demo d001]"
+   ]
+  }
+ ],
+ "game": "za",
+ "id": "ob0004_01",
+ "kind": "object",
+ "displayName": "Phone",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_start",
+   "index": 0,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultwait01_loop",
+   "index": 1,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultwait01_end",
+   "index": 2,
+   "duration": 0.7,
+   "frameRate": 60.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "call01_start",
+   "index": 640,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "call01_loop",
+   "index": 641,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "call01_end",
+   "index": 642,
+   "duration": 0.7,
+   "frameRate": 60.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "call02_start",
+   "index": 643,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "call02_loop",
+   "index": 644,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "call02_end",
+   "index": 645,
+   "duration": 0.7,
+   "frameRate": 60.0,
+   "frameCount": 43,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      32,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "name": "instal01",
+   "index": 646,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0,
+      0.0167,
+      0.5,
+      0.8833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.00012
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    },
+    "pad02": {
+     "times": [
+      0.0,
+      0.0167,
+      0.5
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.37
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "onceaction01",
+   "index": 900,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "advent01_start",
+   "index": 1060,
+   "duration": 1.5833,
+   "frameRate": 60.0,
+   "frameCount": 96,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0,
+      0.3167,
+      0.95
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    },
+    "pad02": {
+     "times": [
+      0.0,
+      0.3167,
+      0.95
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.37
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "advent01_loop",
+   "index": 1061,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "advent01_end",
+   "index": 1062,
+   "duration": 1.25,
+   "frameRate": 60.0,
+   "frameCount": 76,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      47,
+      0
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      47,
+      0
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      47,
+      0
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      47,
+      0
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "advent02_start",
+   "index": 1063,
+   "duration": 1.5833,
+   "frameRate": 60.0,
+   "frameCount": 96,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0,
+      0.3167,
+      0.95
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    },
+    "pad02": {
+     "times": [
+      0.0,
+      0.3167,
+      0.95
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.37
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "advent02_loop",
+   "index": 1064,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "advent02_end",
+   "index": 1065,
+   "duration": 1.25,
+   "frameRate": 60.0,
+   "frameCount": 76,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "visibility": {
+    "body_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      47,
+      0
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      47,
+      0
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      47,
+      0
+     ]
+    ],
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ],
+     [
+      47,
+      0
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "emioff01_loop",
+   "index": 7810,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "emion01_loop",
+   "index": 7811,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "eye01",
+   "index": 8201,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    },
+    "pad02": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.1295
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "face01",
+   "index": 8201,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    },
+    "pad02": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.1295
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eye02",
+   "index": 8202,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "face02",
+   "index": 8202,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.00012
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eye03",
+   "index": 8203,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    },
+    "pad02": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.259
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "face03",
+   "index": 8203,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    },
+    "pad02": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.259
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eye04",
+   "index": 8204,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.25
+      ]
+     ]
+    },
+    "pad02": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.37
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "face04",
+   "index": 8204,
+   "duration": 0.15,
+   "frameRate": 60.0,
+   "frameCount": 10,
+   "loop": true,
+   "category": "other",
+   "group": "",
+   "default": false,
+   "uvOffset": {
+    "pad01": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.25
+      ]
+     ]
+    },
+    "pad02": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.37
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "d001_ob0004_01_f_c11 [demo d001]",
+   "index": 200111,
+   "duration": 22.55,
+   "frameRate": 60.0,
+   "frameCount": 1354,
+   "loop": false,
+   "category": "other",
+   "group": "demo d001",
+   "default": false,
+   "visibility": {
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad03": {
+     "times": [
+      0.0,
+      5.8333,
+      9.9667,
+      9.9833,
+      10.0,
+      10.0167,
+      10.0333,
+      10.05,
+      10.0833,
+      10.1,
+      10.1167,
+      10.1333,
+      10.15,
+      10.1667,
+      10.1833,
+      10.2,
+      10.2167,
+      10.2333,
+      10.25,
+      14.5,
+      14.5167,
+      14.5333,
+      14.55,
+      14.5667,
+      14.5833,
+      14.6,
+      14.6167,
+      14.6333,
+      14.6667,
+      14.6833,
+      14.7,
+      14.7167,
+      14.7333,
+      14.75,
+      14.7667,
+      14.7833,
+      14.8,
+      14.8167,
+      14.8333,
+      18.6
+     ],
+     "values": [
+      [
+       0.75,
+       0.5
+      ],
+      [
+       1.0,
+       0.5
+      ],
+      [
+       1.00142,
+       0.5
+      ],
+      [
+       1.00742,
+       0.5
+      ],
+      [
+       1.0206,
+       0.5
+      ],
+      [
+       1.03981,
+       0.5
+      ],
+      [
+       1.06161,
+       0.5
+      ],
+      [
+       1.08515,
+       0.5
+      ],
+      [
+       1.13418,
+       0.5
+      ],
+      [
+       1.15801,
+       0.5
+      ],
+      [
+       1.18028,
+       0.5
+      ],
+      [
+       1.20015,
+       0.5
+      ],
+      [
+       1.2168,
+       0.5
+      ],
+      [
+       1.2294,
+       0.5
+      ],
+      [
+       1.23808,
+       0.5
+      ],
+      [
+       1.2439,
+       0.5
+      ],
+      [
+       1.24743,
+       0.5
+      ],
+      [
+       1.24924,
+       0.5
+      ],
+      [
+       1.2499,
+       0.5
+      ],
+      [
+       1.25,
+       0.5
+      ],
+      [
+       1.25311,
+       0.5
+      ],
+      [
+       1.26144,
+       0.5
+      ],
+      [
+       1.27353,
+       0.5
+      ],
+      [
+       1.28789,
+       0.5
+      ],
+      [
+       1.30355,
+       0.5
+      ],
+      [
+       1.32034,
+       0.5
+      ],
+      [
+       1.33797,
+       0.5
+      ],
+      [
+       1.35616,
+       0.5
+      ],
+      [
+       1.39307,
+       0.5
+      ],
+      [
+       1.41121,
+       0.5
+      ],
+      [
+       1.42877,
+       0.5
+      ],
+      [
+       1.44545,
+       0.5
+      ],
+      [
+       1.46097,
+       0.5
+      ],
+      [
+       1.47504,
+       0.5
+      ],
+      [
+       1.48612,
+       0.5
+      ],
+      [
+       1.49337,
+       0.5
+      ],
+      [
+       1.49758,
+       0.5
+      ],
+      [
+       1.49953,
+       0.5
+      ],
+      [
+       1.5,
+       0.5
+      ],
+      [
+       1.75,
+       0.5
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "d001_ob0004_01_m_c11 [demo d001]",
+   "index": 200111,
+   "duration": 22.55,
+   "frameRate": 60.0,
+   "frameCount": 1354,
+   "loop": false,
+   "category": "other",
+   "group": "demo d001",
+   "default": false,
+   "visibility": {
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad03": {
+     "times": [
+      0.0,
+      5.8333,
+      9.9667,
+      9.9833,
+      10.0,
+      10.0167,
+      10.0333,
+      10.05,
+      10.0833,
+      10.1,
+      10.1167,
+      10.1333,
+      10.15,
+      10.1667,
+      10.1833,
+      10.2,
+      10.2167,
+      10.2333,
+      10.25,
+      14.5,
+      14.5167,
+      14.5333,
+      14.55,
+      14.5667,
+      14.5833,
+      14.6,
+      14.6167,
+      14.6333,
+      14.6667,
+      14.6833,
+      14.7,
+      14.7167,
+      14.7333,
+      14.75,
+      14.7667,
+      14.7833,
+      14.8,
+      14.8167,
+      14.8333,
+      18.6
+     ],
+     "values": [
+      [
+       0.75,
+       0.0
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       1.00142,
+       0.0
+      ],
+      [
+       1.00742,
+       0.0
+      ],
+      [
+       1.0206,
+       0.0
+      ],
+      [
+       1.03981,
+       0.0
+      ],
+      [
+       1.06161,
+       0.0
+      ],
+      [
+       1.08515,
+       0.0
+      ],
+      [
+       1.13418,
+       0.0
+      ],
+      [
+       1.15801,
+       0.0
+      ],
+      [
+       1.18028,
+       0.0
+      ],
+      [
+       1.20015,
+       0.0
+      ],
+      [
+       1.2168,
+       0.0
+      ],
+      [
+       1.2294,
+       0.0
+      ],
+      [
+       1.23808,
+       0.0
+      ],
+      [
+       1.2439,
+       0.0
+      ],
+      [
+       1.24743,
+       0.0
+      ],
+      [
+       1.24924,
+       0.0
+      ],
+      [
+       1.2499,
+       0.0
+      ],
+      [
+       1.25,
+       0.0
+      ],
+      [
+       1.25311,
+       0.0
+      ],
+      [
+       1.26144,
+       0.0
+      ],
+      [
+       1.27353,
+       0.0
+      ],
+      [
+       1.28789,
+       0.0
+      ],
+      [
+       1.30355,
+       0.0
+      ],
+      [
+       1.32034,
+       0.0
+      ],
+      [
+       1.33797,
+       0.0
+      ],
+      [
+       1.35616,
+       0.0
+      ],
+      [
+       1.39307,
+       0.0
+      ],
+      [
+       1.41121,
+       0.0
+      ],
+      [
+       1.42877,
+       0.0
+      ],
+      [
+       1.44545,
+       0.0
+      ],
+      [
+       1.46097,
+       0.0
+      ],
+      [
+       1.47504,
+       0.0
+      ],
+      [
+       1.48612,
+       0.0
+      ],
+      [
+       1.49337,
+       0.0
+      ],
+      [
+       1.49758,
+       0.0
+      ],
+      [
+       1.49953,
+       0.0
+      ],
+      [
+       1.5,
+       0.0
+      ],
+      [
+       1.75,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "d001_ob0004_01_f_c18 [demo d001]",
+   "index": 200118,
+   "duration": 6.6667,
+   "frameRate": 60.0,
+   "frameCount": 401,
+   "loop": false,
+   "category": "other",
+   "group": "demo d001",
+   "default": false,
+   "visibility": {
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad03": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       1.75,
+       0.5
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "d001_ob0004_01_m_c18 [demo d001]",
+   "index": 200118,
+   "duration": 6.6667,
+   "frameRate": 60.0,
+   "frameCount": 401,
+   "loop": false,
+   "category": "other",
+   "group": "demo d001",
+   "default": false,
+   "visibility": {
+    "mouth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "display_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "pad03": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       1.75,
+       0.5
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  }
+ ],
+ "defaultClip": "defaultwait01_loop",
+ "parts": [
+  {
+   "node": "mouth_mesh",
+   "label": "mouth",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "eye_mesh",
+   "label": "eye",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "display_mesh",
+   "label": "display",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 11,
+  "meshes": 4,
+  "triangles": 929,
+  "textures": 19,
+  "clips": 31,
+  "droppedTracks": 0,
+  "glbBytes": 1402708
+ },
+ "source": [
+  "ik_chara/model_ob/ob0004_01_phone/"
+ ],
+ "extras": {
+  "item": "phone",
+  "clip_id": "ob0004_00",
+  "species": "ob0004",
+  "form": ""
+ }
+}

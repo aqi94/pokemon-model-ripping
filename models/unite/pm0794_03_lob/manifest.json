@@ -1,0 +1,68 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0794_03_lob",
+ "kind": "pokemon",
+ "displayName": "Buzzwole · skin 03 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.3667,
+   "frameRate": 30.0,
+   "frameCount": 72,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_079402_lv3",
+   "label": "rig lob 079402 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 75,
+  "meshes": 1,
+  "triangles": 17758,
+  "textures": 8,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3282572
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_079403_buzzwole_lv3\\pref_char_lob_079403_buzzwole_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_lob_079402_lv3/mat_lob_0794bodyd_lv3 (placeholder material without textures)",
+   "textures not in the rip: t_vc_lob_079403.png, t_vc_lob_0794bodya.png, t_vc_lob_0794bodyb.png, t_vc_lob_0794bodyc.png"
+  ],
+  "missingTextures": [
+   "t_vc_lob_079403.png",
+   "t_vc_lob_0794bodya.png",
+   "t_vc_lob_0794bodyb.png",
+   "t_vc_lob_0794bodyc.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 794,
+  "skin": "03",
+  "holowear": "079403",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_079403_buzzwole_lv3",
+  "species": "pm0794",
+  "form": "03"
+ }
+}

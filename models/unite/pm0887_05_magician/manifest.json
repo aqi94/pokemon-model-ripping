@@ -1,0 +1,65 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0887_05_magician",
+ "kind": "pokemon",
+ "displayName": "Dragapult · Magician (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0887dy_lv3",
+   "label": "rig lob 0887dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 171,
+  "meshes": 1,
+  "triangles": 25377,
+  "textures": 16,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 5364164
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_088705_dragapult_lv3\\pref_char_lob_088705_dragapult_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "re-placed meshes from Blender's matrix to the FBX rest: rig_lob_0887dy_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 887,
+  "skin": "05",
+  "holowear": "088705",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_088705_dragapult_lv3",
+  "theme": "magician",
+  "materialsFrom": "Scenes/pref_sce_lobby_088705_magician_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_088705_magician_lv3/pref_sce_lobby_088705_magician_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0887",
+  "species": "pm0887",
+  "form": "05"
+ }
+}

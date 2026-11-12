@@ -1,0 +1,108 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0818_01_lob",
+ "kind": "pokemon",
+ "displayName": "Inteleon · skin 01 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.6667,
+   "frameRate": 30.0,
+   "frameCount": 51,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "spell2b2",
+   "index": 1,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0818_lv3",
+   "label": "rig lob 0818 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 138,
+  "meshes": 1,
+  "triangles": 18206,
+  "textures": 9,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 3135680
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_081801_inteleon_lv3\\pref_char_lob_081801_inteleon_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_081801.png",
+   "t_vc_lob_0818body.png",
+   "t_vc_lob_0818eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_081801.png, t_vc_lob_0818body.png, t_vc_lob_0818eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 818,
+  "skin": "01",
+  "holowear": "081801",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_081801_inteleon_lv3",
+  "species": "pm0818",
+  "form": "01"
+ }
+}

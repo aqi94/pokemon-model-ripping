@@ -1,0 +1,241 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0888_05_lob",
+ "kind": "pokemon",
+ "displayName": "Zacian · skin 05 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.4333,
+   "frameRate": 30.0,
+   "frameCount": 74,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show1",
+   "index": 2,
+   "duration": 3.6333,
+   "frameRate": 60.0,
+   "frameCount": 219,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show12",
+   "index": 1,
+   "duration": 2.8667,
+   "frameRate": 30.0,
+   "frameCount": 87,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show2",
+   "index": 3,
+   "duration": 5.5333,
+   "frameRate": 60.0,
+   "frameCount": 333,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show3",
+   "index": 4,
+   "duration": 0.4833,
+   "frameRate": 60.0,
+   "frameCount": 30,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show4",
+   "index": 5,
+   "duration": 5.05,
+   "frameRate": 60.0,
+   "frameCount": 304,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show5",
+   "index": 6,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show6",
+   "index": 7,
+   "duration": 1.05,
+   "frameRate": 60.0,
+   "frameCount": 64,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "touch",
+   "index": 8,
+   "duration": 2.3333,
+   "frameRate": 30.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_088805_fx01_lv3",
+   "label": "rig lob 088805 fx01 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_088805_fx02_lv3",
+   "label": "rig lob 088805 fx02 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_088805_fx03_lv3~notex",
+   "label": "rig lob 088805 fx03 lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_088805_fx04_lv3~notex",
+   "label": "rig lob 088805 fx04 lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_088805_fx05_lv3",
+   "label": "rig lob 088805 fx05 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_088805_fx06_lv3",
+   "label": "rig lob 088805 fx06 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0888_12body_lv3",
+   "label": "rig lob 0888 12body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 141,
+  "meshes": 7,
+  "triangles": 26523,
+  "textures": 23,
+  "clips": 9,
+  "droppedTracks": 0,
+  "glbBytes": 9489340
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_088805_12_zacian_lv3\\pref_char_lob_088805_12_zacian_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: rig_lob_088805_fx03_lv3/mat_fx_088805_glow_03_hb",
+   "textures not in the rip: t_vc_lob_088805.png, t_vc_lob_088805a.png, t_vc_lob_0888_12bodya.png, t_vc_lob_0888_12bodyb.png, t_vc_lob_0888_12eye.png",
+   "weightless skins bound to their first cluster bone: rig_lob_088805_fx02_lv3"
+  ],
+  "vertexColourEffects": [
+   "mat_fx_088805_wenli_01_hb",
+   "mat_fx_088805_glow_01_hb",
+   "mat_fx_088805_glow_02_hb"
+  ],
+  "cutoutMaterials": [
+   "mat_lob_0888_12bodyb_lv3"
+  ],
+  "effectParts": [
+   "rig_lob_088805_fx01_lv3/mat_fx_088805_wenli_01_hb",
+   "rig_lob_088805_fx02_lv3/mat_fx_088805_glow_01_hb",
+   "rig_lob_088805_fx03_lv3/mat_fx_088805_glow_03_hb",
+   "rig_lob_088805_fx04_lv3/mat_fx_088805_glow_03_hb",
+   "rig_lob_088805_fx05_lv3/mat_fx_088805_glow_02_hb",
+   "rig_lob_088805_fx06_lv3/mat_fx_088805_glow_02_hb"
+  ],
+  "missingTextures": [
+   "t_vc_lob_088805.png",
+   "t_vc_lob_088805a.png",
+   "t_vc_lob_0888_12bodya.png",
+   "t_vc_lob_0888_12bodyb.png",
+   "t_vc_lob_0888_12eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 888,
+  "skin": "05",
+  "holowear": "088805",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_088805_12_zacian_lv3",
+  "species": "pm0888",
+  "form": "05"
+ }
+}

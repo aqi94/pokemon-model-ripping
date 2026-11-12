@@ -1,0 +1,3574 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0734_51_00",
+ "kind": "pokemon",
+ "displayName": "pm0734 (51_00)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "battlewait01_loop [set2]",
+   "index": 20001,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": true,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r000 [set2]",
+   "index": 20020,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090 [set2]",
+   "index": 20021,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_l090 [set2]",
+   "index": 20024,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_r090 [set2]",
+   "index": 20026,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turnmove01_l090 [set2]",
+   "index": 20028,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "walk01_loop [set2]",
+   "index": 20030,
+   "duration": 4.0,
+   "frameRate": 60.0,
+   "frameCount": 241,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop [set2]",
+   "index": 20100,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start [set2]",
+   "index": 20140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01 [set2]",
+   "index": 20141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end [set2]",
+   "index": 20142,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin02 [set2]",
+   "index": 20143,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepright02 [set2]",
+   "index": 20144,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_start [set2]",
+   "index": 20145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01 [set2]",
+   "index": 20146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end [set2]",
+   "index": 20147,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout02 [set2]",
+   "index": 20148,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepleft02 [set2]",
+   "index": 20149,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start [set2]",
+   "index": 20150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop [set2]",
+   "index": 20151,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start [set2]",
+   "index": 20152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop [set2]",
+   "index": 20153,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02 [set2]",
+   "index": 20155,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "roar01 [set2]",
+   "index": 20300,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01 [set2]",
+   "index": 20400,
+   "duration": 2.2333,
+   "frameRate": 60.0,
+   "frameCount": 135,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_start [set2]",
+   "index": 20420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_loop [set2]",
+   "index": 20421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end [set2]",
+   "index": 20422,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01 [set2]",
+   "index": 20450,
+   "duration": 2.4667,
+   "frameRate": 60.0,
+   "frameCount": 149,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack02_start [set2]",
+   "index": 20460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.00016,
+       -0.00389
+      ],
+      [
+       0.00057,
+       -0.01394
+      ],
+      [
+       0.00057,
+       -0.02766
+      ],
+      [
+       0.00174,
+       -0.04259
+      ],
+      [
+       0.0023,
+       -0.05627
+      ],
+      [
+       0.00271,
+       -0.06625
+      ],
+      [
+       0.00287,
+       -0.07011
+      ]
+     ]
+    },
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.5667,
+      0.5833,
+      0.6,
+      0.6167,
+      0.6333,
+      0.65,
+      0.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -0.00016,
+       -0.00389
+      ],
+      [
+       -0.00057,
+       -0.01394
+      ],
+      [
+       -0.00057,
+       -0.02766
+      ],
+      [
+       -0.00174,
+       -0.04259
+      ],
+      [
+       -0.0023,
+       -0.05627
+      ],
+      [
+       -0.00271,
+       -0.06625
+      ],
+      [
+       -0.00287,
+       -0.07011
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rangeattack02_loop [set2]",
+   "index": 20461,
+   "duration": 0.7667,
+   "frameRate": 60.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye_a": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.00287,
+       -0.07011
+      ]
+     ]
+    },
+    "r_eye_a": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       -0.00287,
+       -0.07011
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rangeattack02_end [set2]",
+   "index": 20462,
+   "duration": 1.0333,
+   "frameRate": 60.0,
+   "frameCount": 63,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye_a": {
+     "times": [
+      0.0,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      1.0333
+     ],
+     "values": [
+      [
+       0.00287,
+       -0.07011
+      ],
+      [
+       0.00281,
+       -0.06849
+      ],
+      [
+       0.00281,
+       -0.06403
+      ],
+      [
+       0.00235,
+       -0.05737
+      ],
+      [
+       0.00235,
+       -0.04911
+      ],
+      [
+       0.00163,
+       -0.0399
+      ],
+      [
+       0.00163,
+       -0.03036
+      ],
+      [
+       0.00086,
+       -0.02113
+      ],
+      [
+       0.00086,
+       -0.01284
+      ],
+      [
+       0.00025,
+       -0.00613
+      ],
+      [
+       7e-05,
+       -0.00164
+      ],
+      [
+       7e-05,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye_a": {
+     "times": [
+      0.0,
+      0.1,
+      0.1167,
+      0.1333,
+      0.15,
+      0.1667,
+      0.1833,
+      0.2,
+      0.2167,
+      0.2333,
+      0.25,
+      0.2667,
+      1.0333
+     ],
+     "values": [
+      [
+       -0.00287,
+       -0.07011
+      ],
+      [
+       -0.00281,
+       -0.06849
+      ],
+      [
+       -0.00281,
+       -0.06403
+      ],
+      [
+       -0.00235,
+       -0.05737
+      ],
+      [
+       -0.00235,
+       -0.04911
+      ],
+      [
+       -0.00163,
+       -0.0399
+      ],
+      [
+       -0.00163,
+       -0.03036
+      ],
+      [
+       -0.00086,
+       -0.02113
+      ],
+      [
+       -0.00086,
+       -0.01284
+      ],
+      [
+       -0.00025,
+       -0.00613
+      ],
+      [
+       -7e-05,
+       -0.00164
+      ],
+      [
+       -7e-05,
+       0.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "charge01_loop [set2]",
+   "index": 20490,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01 [set2]",
+   "index": 20500,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02 [set2]",
+   "index": 20501,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_start [set2]",
+   "index": 20510,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_loop [set2]",
+   "index": 20511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stun01_end [set2]",
+   "index": 20512,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start [set2]",
+   "index": 20520,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop [set2]",
+   "index": 20521,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end [set2]",
+   "index": 20522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "megaappeal01 [set2]",
+   "index": 20620,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": false,
+   "category": "other",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm0734_51_00_hair_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_head_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_eye_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_teeth_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_neck_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_a_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0734_51_00_tail_b_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye_a": {
+     "times": [
+      0.0,
+      1.15,
+      1.1667,
+      1.1833,
+      1.2,
+      1.2167,
+      1.2333,
+      1.25,
+      1.2667,
+      1.2833,
+      1.3,
+      1.3167,
+      1.3333,
+      1.35,
+      1.3667,
+      1.3833,
+      1.4,
+      1.4167,
+      1.4333,
+      1.45,
+      1.4667,
+      1.4833,
+      1.5,
+      1.5167,
+      1.5333,
+      1.55,
+      1.5667,
+      1.5833,
+      1.6,
+      1.6167,
+      1.6333,
+      1.65,
+      2.3,
+      2.3167,
+      2.3333,
+      2.35,
+      2.3667,
+      2.3833,
+      2.4,
+      2.4167,
+      2.4333,
+      2.4667,
+      2.4833,
+      2.5,
+      2.5167,
+      2.5333,
+      2.55,
+      2.5667,
+      2.5833,
+      2.6
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       7e-05,
+       -0.00017
+      ],
+      [
+       0.00026,
+       -0.00068
+      ],
+      [
+       0.00058,
+       -0.00149
+      ],
+      [
+       0.001,
+       -0.00259
+      ],
+      [
+       0.001,
+       -0.00395
+      ],
+      [
+       0.00215,
+       -0.00555
+      ],
+      [
+       0.00215,
+       -0.00736
+      ],
+      [
+       0.00363,
+       -0.00937
+      ],
+      [
+       0.00363,
+       -0.01155
+      ],
+      [
+       0.00537,
+       -0.01388
+      ],
+      [
+       0.00537,
+       -0.01634
+      ],
+      [
+       0.00731,
+       -0.01634
+      ],
+      [
+       0.00731,
+       -0.02153
+      ],
+      [
+       0.00938,
+       -0.02153
+      ],
+      [
+       0.00938,
+       -0.02695
+      ],
+      [
+       0.0115,
+       -0.02695
+      ],
+      [
+       0.0115,
+       -0.03241
+      ],
+      [
+       0.01359,
+       -0.03241
+      ],
+      [
+       0.01359,
+       -0.03773
+      ],
+      [
+       0.0156,
+       -0.04028
+      ],
+      [
+       0.0156,
+       -0.04273
+      ],
+      [
+       0.01746,
+       -0.04505
+      ],
+      [
+       0.01746,
+       -0.04723
+      ],
+      [
+       0.01908,
+       -0.04923
+      ],
+      [
+       0.01908,
+       -0.05104
+      ],
+      [
+       0.0204,
+       -0.05263
+      ],
+      [
+       0.02092,
+       -0.05398
+      ],
+      [
+       0.02135,
+       -0.05508
+      ],
+      [
+       0.02166,
+       -0.05588
+      ],
+      [
+       0.02186,
+       -0.05638
+      ],
+      [
+       0.02186,
+       -0.05656
+      ],
+      [
+       0.02192,
+       -0.05656
+      ],
+      [
+       0.02173,
+       -0.05605
+      ],
+      [
+       0.02117,
+       -0.05462
+      ],
+      [
+       0.0203,
+       -0.05238
+      ],
+      [
+       0.01916,
+       -0.04944
+      ],
+      [
+       0.01779,
+       -0.04592
+      ],
+      [
+       0.01624,
+       -0.04193
+      ],
+      [
+       0.01624,
+       -0.03759
+      ],
+      [
+       0.01278,
+       -0.03301
+      ],
+      [
+       0.00915,
+       -0.02362
+      ],
+      [
+       0.00915,
+       -0.01904
+      ],
+      [
+       0.00569,
+       -0.01469
+      ],
+      [
+       0.00414,
+       -0.01069
+      ],
+      [
+       0.00277,
+       -0.00715
+      ],
+      [
+       0.00162,
+       -0.0042
+      ],
+      [
+       0.00075,
+       -0.00194
+      ],
+      [
+       0.0002,
+       -0.00051
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye_a": {
+     "times": [
+      0.0,
+      1.15,
+      1.1667,
+      1.1833,
+      1.2,
+      1.2167,
+      1.2333,
+      1.25,
+      1.2667,
+      1.2833,
+      1.3,
+      1.3167,
+      1.3333,
+      1.35,
+      1.3667,
+      1.3833,
+      1.4,
+      1.4167,
+      1.4333,
+      1.45,
+      1.4667,
+      1.4833,
+      1.5,
+      1.5167,
+      1.5333,
+      1.55,
+      1.5667,
+      1.5833,
+      1.6,
+      1.6167,
+      1.6333,
+      1.65,
+      2.3,
+      2.3167,
+      2.3333,
+      2.35,
+      2.3667,
+      2.3833,
+      2.4,
+      2.4167,
+      2.4333,
+      2.4667,
+      2.4833,
+      2.5,
+      2.5167,
+      2.5333,
+      2.55,
+      2.5667,
+      2.5833,
+      2.6
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -7e-05,
+       -0.00017
+      ],
+      [
+       -0.00026,
+       -0.00068
+      ],
+      [
+       -0.00058,
+       -0.00149
+      ],
+      [
+       -0.001,
+       -0.00259
+      ],
+      [
+       -0.001,
+       -0.00395
+      ],
+      [
+       -0.00215,
+       -0.00555
+      ],
+      [
+       -0.00215,
+       -0.00736
+      ],
+      [
+       -0.00363,
+       -0.00937
+      ],
+      [
+       -0.00363,
+       -0.01155
+      ],
+      [
+       -0.00537,
+       -0.01388
+      ],
+      [
+       -0.00537,
+       -0.01634
+      ],
+      [
+       -0.00731,
+       -0.01634
+      ],
+      [
+       -0.00731,
+       -0.02153
+      ],
+      [
+       -0.00938,
+       -0.02153
+      ],
+      [
+       -0.00938,
+       -0.02695
+      ],
+      [
+       -0.0115,
+       -0.02695
+      ],
+      [
+       -0.0115,
+       -0.03241
+      ],
+      [
+       -0.01359,
+       -0.03241
+      ],
+      [
+       -0.01359,
+       -0.03773
+      ],
+      [
+       -0.0156,
+       -0.04028
+      ],
+      [
+       -0.0156,
+       -0.04273
+      ],
+      [
+       -0.01746,
+       -0.04505
+      ],
+      [
+       -0.01746,
+       -0.04723
+      ],
+      [
+       -0.01908,
+       -0.04923
+      ],
+      [
+       -0.01908,
+       -0.05104
+      ],
+      [
+       -0.0204,
+       -0.05263
+      ],
+      [
+       -0.02092,
+       -0.05398
+      ],
+      [
+       -0.02135,
+       -0.05508
+      ],
+      [
+       -0.02166,
+       -0.05588
+      ],
+      [
+       -0.02186,
+       -0.05638
+      ],
+      [
+       -0.02186,
+       -0.05656
+      ],
+      [
+       -0.02192,
+       -0.05656
+      ],
+      [
+       -0.02173,
+       -0.05605
+      ],
+      [
+       -0.02117,
+       -0.05462
+      ],
+      [
+       -0.0203,
+       -0.05238
+      ],
+      [
+       -0.01916,
+       -0.04944
+      ],
+      [
+       -0.01779,
+       -0.04592
+      ],
+      [
+       -0.01624,
+       -0.04193
+      ],
+      [
+       -0.01624,
+       -0.03759
+      ],
+      [
+       -0.01278,
+       -0.03301
+      ],
+      [
+       -0.00915,
+       -0.02362
+      ],
+      [
+       -0.00915,
+       -0.01904
+      ],
+      [
+       -0.00569,
+       -0.01469
+      ],
+      [
+       -0.00414,
+       -0.01069
+      ],
+      [
+       -0.00277,
+       -0.00715
+      ],
+      [
+       -0.00162,
+       -0.0042
+      ],
+      [
+       -0.00075,
+       -0.00194
+      ],
+      [
+       -0.0002,
+       -0.00051
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  }
+ ],
+ "defaultClip": "battlewait01_loop [set2]",
+ "parts": [
+  {
+   "node": "pm0734_51_00_hair_mesh",
+   "label": "hair",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_head_mesh",
+   "label": "head",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_eye_mesh",
+   "label": "eye",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_teeth_mesh",
+   "label": "teeth",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_neck_mesh",
+   "label": "neck",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_tail_a_mesh",
+   "label": "tail a",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_tail_b_mesh",
+   "label": "tail b",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_hair_mesh_lod1",
+   "label": "hair lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_head_mesh_lod1",
+   "label": "head lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_eye_mesh_lod1",
+   "label": "eye lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_teeth_mesh_lod1",
+   "label": "teeth lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_neck_mesh_lod1",
+   "label": "neck lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_tail_a_mesh_lod1",
+   "label": "tail a lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_tail_b_mesh_lod1",
+   "label": "tail b lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_hair_mesh_lod2",
+   "label": "hair lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_head_mesh_lod2",
+   "label": "head lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_eye_mesh_lod2",
+   "label": "eye lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_neck_mesh_lod2",
+   "label": "neck lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_tail_a_mesh_lod2",
+   "label": "tail a lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_tail_b_mesh_lod2",
+   "label": "tail b lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_hair_mesh_lod3",
+   "label": "hair lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_head_mesh_lod3",
+   "label": "head lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_eye_mesh_lod3",
+   "label": "eye lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_neck_mesh_lod3",
+   "label": "neck lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_body_mesh_lod3",
+   "label": "body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_tail_a_mesh_lod3",
+   "label": "tail a lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0734_51_00_tail_b_mesh_lod3",
+   "label": "tail b lod3",
+   "lod": 3,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 142,
+  "meshes": 30,
+  "triangles": 6000,
+  "textures": 42,
+  "clips": 42,
+  "glbBytes": 9615104
+ },
+ "source": [
+  "ik_pokemon/data/pm0734/pm0734_51_00/"
+ ],
+ "extras": {
+  "dex": null,
+  "species": "pm0734",
+  "form": "51_00"
+ }
+}

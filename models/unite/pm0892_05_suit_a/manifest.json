@@ -1,0 +1,89 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0892_05_suit_a",
+ "kind": "pokemon",
+ "displayName": "Urshifu · Suit A (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "lob_089205_lv3",
+   "label": "lob 089205 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_089205a",
+   "label": "lob 089205a",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 166,
+  "meshes": 2,
+  "triangles": 19960,
+  "textures": 17,
+  "clips": 0,
+  "droppedTracks": 0,
+  "glbBytes": 3944508
+ },
+ "source": [
+  "Scenes/pref_sce_lobby_089205_suit_A_lv3/pref_sce_lobby_089205_suit_A_lv3.fbx"
+ ],
+ "extras": {
+  "particlesNotInRip": [
+   "pref_fx_lobby_035902_scene_effects_hs"
+  ],
+  "warnings": [
+   "particle effects not in the rip (empty emitter nodes): pref_fx_lobby_035902_scene_effects_hs",
+   "re-placed meshes from Blender's matrix to the FBX rest: lob_089205_lv3, lob_089205a",
+   "weightless skins bound to their first cluster bone: lob_089205a"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 892,
+  "holowear": "089205",
+  "theme": "suit_a",
+  "lod": 3,
+  "meshes": "^(?:rig_)?lob_0892",
+  "species": "pm0892",
+  "form": "05"
+ }
+}

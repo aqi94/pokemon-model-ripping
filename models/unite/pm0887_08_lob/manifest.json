@@ -1,0 +1,201 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0887_08_lob",
+ "kind": "pokemon",
+ "displayName": "Dragapult · skin 08 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 16.2167,
+   "frameRate": 60.0,
+   "frameCount": 974,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 1.1333,
+   "frameRate": 60.0,
+   "frameCount": 69,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "touch",
+   "index": 3,
+   "duration": 2.6667,
+   "frameRate": 30.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "fx_glow_Cloak_glow_02",
+   "label": "fx glow Cloak glow 02",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_glow_Cloak_glow_02.001",
+   "label": "fx glow Cloak glow 02.001",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_glow_Cloak_glow_03",
+   "label": "fx glow Cloak glow 03",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_glow_Cloak_glow_03.001",
+   "label": "fx glow Cloak glow 03.001",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_088708_fxA_lv3~notex",
+   "label": "rig lob 088708 fxA lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_088708_fxB_lv3~notex",
+   "label": "rig lob 088708 fxB lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_088708_fxC_lv3~notex",
+   "label": "rig lob 088708 fxC lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_088708_fxD_lv3~notex",
+   "label": "rig lob 088708 fxD lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_0887dy_lv3",
+   "label": "rig lob 0887dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 187,
+  "meshes": 9,
+  "triangles": 30883,
+  "textures": 14,
+  "clips": 4,
+  "droppedTracks": 0,
+  "glbBytes": 6799432
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_088708_dragapult_lv3\\pref_char_lob_088708_dragapult_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: rig_lob_088708_fxA_lv3/mat_lod_088708fxa_01_lv3; rig_lob_088708_fxB_lv3/mat_lod_088708fxb_01_lv3; rig_lob_088708_fxC_lv3/mat_lod_088708fxc_01_com_lv3; rig_lob_088708_fxD_lv3/mat_lod_088708fxd_01_com_lv3",
+   "textures not in the rip: t_vc_lob_088708.png, t_vc_lob_0887body.png, t_vc_lob_0887eye.png",
+   "re-placed meshes from Blender's matrix to the FBX rest: fx_glow_Cloak_glow_02, fx_glow_Cloak_glow_02.001, fx_glow_Cloak_glow_03, fx_glow_Cloak_glow_03.001, rig_lob_088708_fxA_lv3, rig_lob_088708_fxB_lv3, rig_lob_088708_fxC_lv3, rig_lob_088708_fxD_lv3, rig_lob_0887dy_lv3",
+   "texture-less parts HOME could not colour (gate): rig_lob_088708_fxA_lv3/mat_lod_088708fxa_01_lv3 (d=None, cover=None); rig_lob_088708_fxB_lv3/mat_lod_088708fxb_01_lv3 (d=None, cover=None); rig_lob_088708_fxC_lv3/mat_lod_088708fxc_01_com_lv3 (d=None, cover=None); rig_lob_088708_fxD_lv3/mat_lod_088708fxd_01_com_lv3 (d=None, cover=None)"
+  ],
+  "cutoutMaterials": [
+   "mat_lob_0887bodyb_lv3"
+  ],
+  "effectParts": [
+   "fx_glow_Cloak_glow_02.001/mat_lob_088708fx_glow03_code_lv3",
+   "fx_glow_Cloak_glow_02/mat_lob_088708fx_glow03_code_lv3",
+   "fx_glow_Cloak_glow_03.001/mat_lob_088708fx_glow03_code_lv3",
+   "fx_glow_Cloak_glow_03/mat_lob_088708fx_glow03_code_lv3",
+   "rig_lob_088708_fxA_lv3/mat_lod_088708fxa_01_lv3",
+   "rig_lob_088708_fxB_lv3/mat_lod_088708fxb_01_lv3",
+   "rig_lob_088708_fxC_lv3/mat_lod_088708fxc_01_com_lv3",
+   "rig_lob_088708_fxD_lv3/mat_lod_088708fxd_01_com_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_088708.png",
+   "t_vc_lob_0887body.png",
+   "t_vc_lob_0887eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     0.021011,
+     0.901677,
+     -0.247656,
+     0.353842
+    ],
+    "degrees": 137.1
+   },
+   {
+    "bone": "Bone_JawB",
+    "open": [
+     -7e-06,
+     -0.236293,
+     1e-05,
+     0.971682
+    ],
+    "degrees": 27.3
+   },
+   {
+    "bone": "Bone_JawC",
+    "open": [
+     -9e-06,
+     -0.324183,
+     -1.2e-05,
+     0.945994
+    ],
+    "degrees": 37.8
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -1.0,
+   "Bone_JawB": -27.3,
+   "Bone_JawC": -27.3
+  },
+  "jawRestTracks": 1,
+  "dex": 887,
+  "skin": "08",
+  "holowear": "088708",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_088708_dragapult_lv3",
+  "species": "pm0887",
+  "form": "08"
+ }
+}

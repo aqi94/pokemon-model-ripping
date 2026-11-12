@@ -1,0 +1,379 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0150_04_y_devil",
+ "kind": "pokemon",
+ "displayName": "Mewtwo · Y Devil (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "rig_lob_0150dy_lv3",
+   "label": "rig lob 0150dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 102,
+  "meshes": 1,
+  "triangles": 20001,
+  "textures": 19,
+  "clips": 0,
+  "droppedTracks": 0,
+  "glbBytes": 5822888
+ },
+ "source": [
+  "Scenes/pref_sce_lobby_015004_Y_devil_lv3/pref_sce_lobby_015004_Y_devil_lv3.fbx"
+ ],
+ "extras": {
+  "particlesNotInRip": [
+   "pref_fx_sce_lobby_015004_devil_bullet",
+   "pref_fx_sce_lobby_015004_devil_bullet_02",
+   "pref_fx_sce_lobby_015004_devil_bullet_03",
+   "pref_fx_sce_lobby_015004_devil_bullet_04",
+   "pref_fx_sce_lobby_015004_devil_bullet_05",
+   "pref_fx_sce_lobby_015004_devil_bullet_06",
+   "pref_fx_sce_lobby_015004_devil_bullet_trail",
+   "pref_fx_sce_lobby_015004_devil_bullet_trail_02",
+   "pref_fx_sce_lobby_015004_devil_bullet_trail_03",
+   "pref_fx_sce_lobby_015004_devil_bullet_trail_04",
+   "pref_fx_sce_lobby_015004_devil_energyend",
+   "pref_fx_sce_lobby_015004_devil_luodi",
+   "pref_fx_sce_lobby_015004_devil_screen_black",
+   "pref_fx_sce_lobby_015004_devil_self_black",
+   "pref_fx_sce_lobby_015004_devil_self_blackdissolve",
+   "pref_fx_sce_lobby_015004_devil_self_center",
+   "pref_fx_sce_lobby_015004_devil_selflightning",
+   "pref_fx_sce_lobby_015004_devil_xuanwo_last",
+   "pref_fx_sce_lobby_015004_devil_zhuanchang_show7",
+   "pref_fx_speedup_015004"
+  ],
+  "warnings": [
+   "particle effects not in the rip (empty emitter nodes): pref_fx_sce_lobby_015004_devil_bullet, pref_fx_sce_lobby_015004_devil_bullet_02, pref_fx_sce_lobby_015004_devil_bullet_03, pref_fx_sce_lobby_015004_devil_bullet_04, pref_fx_sce_lobby_015004_devil_bullet_05, pref_fx_sce_lobby_015004_devil_bullet_06, pref_fx_sce_lobby_015004_devil_bullet_trail, pref_fx_sce_lobby_015004_devil_bullet_trail_02, pref_fx_sce_lobby_015004_devil_bullet_trail_03, pref_fx_sce_lobby_015004_devil_bullet_trail_04, pref_fx_sce_lobby_015004_devil_energyend, pref_fx_sce_lobby_015004_devil_luodi, pref_fx_sce_lobby_015004_devil_screen_black, pref_fx_sce_lobby_015004_devil_self_black, pref_fx_sce_lobby_015004_devil_self_blackdissolve, pref_fx_sce_lobby_015004_devil_self_center, pref_fx_sce_lobby_015004_devil_selflightning, pref_fx_sce_lobby_015004_devil_xuanwo_last, pref_fx_sce_lobby_015004_devil_zhuanchang_show7, pref_fx_speedup_015004",
+   "re-placed meshes from Blender's matrix to the FBX rest: rig_lob_0150dy_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "particles": [
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.7066
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet_02",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 3.0
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet_03",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.7066
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet_04",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 3.0
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet_05",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.0,
+    "nested": [
+     "pref_fx_speedup_015004"
+    ]
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet_06",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 2.5599
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet_trail",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.0
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet_trail_02",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.0
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet_trail_03",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.0
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_bullet_trail_04",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.0
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_self_black",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.0
+   },
+   {
+    "prefab": "pref_fx_sce_lobby_015004_devil_selflightning",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.0
+   },
+   {
+    "prefab": "pref_fx_speedup_015004",
+    "bone": "Bip001",
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     -0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "subtreeScale": 1.0
+   }
+  ],
+  "dex": 150,
+  "holowear": "015004",
+  "theme": "y_devil",
+  "lod": 3,
+  "meshes": "^(?:rig_)?lob_0150",
+  "species": "pm0150",
+  "form": "04"
+ }
+}

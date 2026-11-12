@@ -1,0 +1,92 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0145_00_lob",
+ "kind": "pokemon",
+ "displayName": "Zapdos (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "touch",
+   "index": 1,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0145_lv3",
+   "label": "rig lob 0145 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 55,
+  "meshes": 1,
+  "triangles": 9902,
+  "textures": 7,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 1611408
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_014500_hero_zapdos_lv3\\pref_char_lob_014500_hero_zapdos_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_0145body.png",
+   "t_vc_lob_0145eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0145body.png, t_vc_lob_0145eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     0.0,
+     0.310577,
+     1e-06,
+     0.950548
+    ],
+    "degrees": 36.2
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -17.4
+  },
+  "jawRestTracks": 1,
+  "dex": 145,
+  "skin": "00",
+  "holowear": "014500",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_014500_hero_zapdos_lv3",
+  "species": "pm0145",
+  "form": "00"
+ }
+}

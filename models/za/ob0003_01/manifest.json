@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0003_01",
+ "kind": "object",
+ "displayName": "Bag",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "bag_mesh",
+   "label": "bag",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 14,
+  "meshes": 1,
+  "triangles": 2994,
+  "textures": 7,
+  "clips": 0,
+  "glbBytes": 963016
+ },
+ "source": [
+  "ik_chara/model_ob/ob0003_01_bag/"
+ ],
+ "extras": {
+  "item": "bag",
+  "species": "ob0003",
+  "form": ""
+ }
+}

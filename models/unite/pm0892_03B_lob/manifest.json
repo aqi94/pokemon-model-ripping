@@ -1,0 +1,97 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0892_03B_lob",
+ "kind": "pokemon",
+ "displayName": "Urshifu · skin 03B (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle_b",
+   "index": 0,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle_b",
+ "parts": [
+  {
+   "node": "rig_lob_089203_lv3",
+   "label": "rig lob 089203 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 164,
+  "meshes": 1,
+  "triangles": 19919,
+  "textures": 10,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3532672
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_089203B_urshifu_lv3\\pref_char_lob_089203B_urshifu_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_089203.png",
+   "t_vc_lob_0892body.png",
+   "t_vc_lob_0892eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_089203.png, t_vc_lob_0892body.png, t_vc_lob_0892eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 892,
+  "skin": "03B",
+  "holowear": "089203B",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_089203B_urshifu_lv3",
+  "species": "pm0892",
+  "form": "03B"
+ }
+}

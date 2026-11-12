@@ -1,0 +1,142 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0250_03_lob",
+ "kind": "pokemon",
+ "displayName": "Ho-Oh · skin 03 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "touch",
+   "index": 1,
+   "duration": 2.3333,
+   "frameRate": 30.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "fx_lob_025003_01_lv3",
+   "label": "fx lob 025003 01 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fx_lob_025003_02_lv3",
+   "label": "fx lob 025003 02 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0250_lv3",
+   "label": "rig lob 0250 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 130,
+  "meshes": 3,
+  "triangles": 25202,
+  "textures": 18,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 9417352
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_025003_ho_oh_lv3\\pref_char_lob_025003_ho_oh_lv3.fbx"
+ ],
+ "extras": {
+  "effectParts": [
+   "fx_lob_025003_01_lv3/mat_lob_025003_fx01_lv3_hb",
+   "fx_lob_025003_02_lv3/mat_lob_025003_fx02_lv3_hb"
+  ],
+  "missingTextures": [
+   "t_vc_lob_025003a.png",
+   "t_vc_lob_025003b.png",
+   "t_vc_lob_0250bodya.png",
+   "t_vc_lob_0250bodyb.png",
+   "t_vc_lob_0250eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_025003a.png, t_vc_lob_025003b.png, t_vc_lob_0250bodya.png, t_vc_lob_0250bodyb.png, t_vc_lob_0250eye.png",
+   "weightless skins bound to their first cluster bone: fx_lob_025003_02_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw1",
+    "open": [
+     4e-06,
+     -0.477331,
+     -1e-06,
+     0.878723
+    ],
+    "degrees": 57.1
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw1": -24.8
+  },
+  "dex": 250,
+  "skin": "03",
+  "holowear": "025003",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_025003_ho_oh_lv3",
+  "species": "pm0250",
+  "form": "03"
+ }
+}

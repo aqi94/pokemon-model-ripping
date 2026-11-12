@@ -1,0 +1,206 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0384_00",
+ "kind": "pokemon",
+ "displayName": "Rayquaza",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "born",
+   "index": 1,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 2,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 3,
+   "duration": 3.3333,
+   "frameRate": 30.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 4,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 5,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell2",
+   "index": 6,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell31",
+   "index": 7,
+   "duration": 3.2333,
+   "frameRate": 30.0,
+   "frameCount": 98,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 8,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "wait0",
+   "index": 9,
+   "duration": 0.3667,
+   "frameRate": 30.0,
+   "frameCount": 12,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "wait1",
+   "index": 10,
+   "duration": 20.0,
+   "frameRate": 30.0,
+   "frameCount": 601,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "wait2",
+   "index": 11,
+   "duration": 23.3667,
+   "frameRate": 30.0,
+   "frameCount": 702,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "wait3",
+   "index": 12,
+   "duration": 22.0333,
+   "frameRate": 30.0,
+   "frameCount": 662,
+   "loop": false,
+   "category": "idle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0384dy_lv3",
+   "label": "rig bat 0384dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 42,
+  "meshes": 1,
+  "triangles": 4294,
+  "textures": 3,
+  "clips": 13,
+  "droppedTracks": 0,
+  "glbBytes": 1664016
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Rayquaza\\pref_char_bat_038400_rayquaza_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -0.406364,
+     0.675474,
+     -0.541507,
+     0.292187
+    ],
+    "degrees": 222.0
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -68.2
+  },
+  "jawRestTracks": 3,
+  "dex": 384,
+  "skin": "00",
+  "holowear": "038400",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_038400_rayquaza_lv3",
+  "source": "marcy",
+  "species": "pm0384",
+  "form": "00"
+ }
+}

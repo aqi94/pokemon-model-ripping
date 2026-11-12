@@ -1,0 +1,64 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0706_00_lob",
+ "kind": "pokemon",
+ "displayName": "Goodra (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0706dy_lv3",
+   "label": "rig lob 0706dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 73,
+  "meshes": 1,
+  "triangles": 10048,
+  "textures": 10,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 1048580
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_070600_goodra_lv3\\pref_char_lob_070600_goodra_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_0706body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0706body.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 706,
+  "skin": "00",
+  "holowear": "070600",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_070600_goodra_lv3",
+  "species": "pm0706",
+  "form": "00"
+ }
+}

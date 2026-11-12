@@ -1,0 +1,64 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0359_03_lob",
+ "kind": "pokemon",
+ "displayName": "Absol · skin 03 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_035903_lv3",
+   "label": "rig lob 035903 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 82,
+  "meshes": 1,
+  "triangles": 17392,
+  "textures": 6,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 2633376
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_035903_absol_lv3\\pref_char_lob_035903_absol_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_035903_lv3.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_035903_lv3.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 359,
+  "skin": "03",
+  "holowear": "035903",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_035903_absol_lv3",
+  "species": "pm0359",
+  "form": "03"
+ }
+}

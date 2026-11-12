@@ -1,0 +1,509 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0006_51",
+ "kind": "pokemon",
+ "displayName": "Charizard · skin 51",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "atk1",
+   "index": 0,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk1runb",
+   "index": 1,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk1runf",
+   "index": 2,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk1runl",
+   "index": 3,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk1runr",
+   "index": 4,
+   "duration": 1.3,
+   "frameRate": 30.0,
+   "frameCount": 40,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "atk2",
+   "index": 5,
+   "duration": 2.0,
+   "frameRate": 1.0,
+   "frameCount": 3,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 6,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 7,
+   "duration": 2.4333,
+   "frameRate": 30.0,
+   "frameCount": 74,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "idlefly",
+   "index": 8,
+   "duration": 1.0,
+   "frameRate": 1.0,
+   "frameCount": 2,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idleu",
+   "index": 9,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idleutoidle",
+   "index": 10,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idleutorun",
+   "index": 11,
+   "duration": 0.5,
+   "frameRate": 10.0,
+   "frameCount": 6,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "run",
+   "index": 12,
+   "duration": 1.0667,
+   "frameRate": 30.0,
+   "frameCount": 33,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "runfly",
+   "index": 13,
+   "duration": 1.0,
+   "frameRate": 1.0,
+   "frameCount": 2,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "runu",
+   "index": 14,
+   "duration": 0.6333,
+   "frameRate": 30.0,
+   "frameCount": 20,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "runutoidle",
+   "index": 15,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "runutorun",
+   "index": 16,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "score",
+   "index": 17,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "scoreidle",
+   "index": 18,
+   "duration": 0.5667,
+   "frameRate": 30.0,
+   "frameCount": 18,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1",
+   "index": 19,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell1a",
+   "index": 20,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell3",
+   "index": 21,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell3b1",
+   "index": 22,
+   "duration": 0.5,
+   "frameRate": 30.0,
+   "frameCount": 16,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell3b2",
+   "index": 23,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell3b3",
+   "index": 24,
+   "duration": 0.6667,
+   "frameRate": 30.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellb",
+   "index": 25,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu2",
+   "index": 26,
+   "duration": 0.3333,
+   "frameRate": 30.0,
+   "frameCount": 11,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu3fail",
+   "index": 27,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu4",
+   "index": 28,
+   "duration": 1.2333,
+   "frameRate": 30.0,
+   "frameCount": 38,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spellu5",
+   "index": 29,
+   "duration": 0.7667,
+   "frameRate": 30.0,
+   "frameCount": 24,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 30,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stunu",
+   "index": 31,
+   "duration": 2.0,
+   "frameRate": 1.0,
+   "frameCount": 3,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stunutostun",
+   "index": 32,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "bat_0006_51_X_VFXwei",
+   "label": "bat 0006 51 X VFXwei",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "bat_0006_51_X_VFXweixin~notex",
+   "label": "bat 0006 51 X VFXweixin~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "bat_0006_51_X_VFXwenli",
+   "label": "bat 0006 51 X VFXwenli",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "fier_001~notex",
+   "label": "fier 001~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "fier_002~notex",
+   "label": "fier 002~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_bat_0006_51_X_lv3",
+   "label": "rig bat 0006 51 X lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 72,
+  "meshes": 6,
+  "triangles": 4296,
+  "textures": 10,
+  "clips": 33,
+  "droppedTracks": 0,
+  "glbBytes": 1583336
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Battle Models\\pref_char_bat_0006_51_charizard_lv3\\pref_char_bat_0006_51_charizard_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect textures borrowed from the same species' other FBX (same material name): bat_0006_51_X_VFXwenli/mat_fx_lob_0006_51_X_wenli <- mat_fx_lob_0006_51_X_wenli (pref_char_lob_0006_51_charizard_lv3)",
+   "effect parts with no texture in the rip, imported hidden: bat_0006_51_X_VFXweixin/mat_fx_bat_0006_51_X_weixin; fier_001/mat_fx_0006_51charizard_ifire_99_wpx; fier_002/mat_fx_0006_51charizard_firexu_97_wpx",
+   "texture-less parts HOME could not colour (gate): bat_0006_51_X_VFXweixin/mat_fx_bat_0006_51_X_weixin (d=None, cover=None); fier_001/mat_fx_0006_51charizard_ifire_99_wpx (d=None, cover=None); fier_002/mat_fx_0006_51charizard_firexu_97_wpx (d=None, cover=None)"
+  ],
+  "vertexColourEffects": [
+   "mat_fx_lob_0006_51_X_wei",
+   "mat_fx_lob_0006_51_X_wenli"
+  ],
+  "borrowedEffects": [
+   "bat_0006_51_X_VFXwenli/mat_fx_lob_0006_51_X_wenli <- mat_fx_lob_0006_51_X_wenli (pref_char_lob_0006_51_charizard_lv3)"
+  ],
+  "effectParts": [
+   "bat_0006_51_X_VFXwei/mat_fx_lob_0006_51_X_wei",
+   "bat_0006_51_X_VFXweixin/mat_fx_bat_0006_51_X_weixin",
+   "bat_0006_51_X_VFXwenli/mat_fx_lob_0006_51_X_wenli",
+   "fier_001/mat_fx_0006_51charizard_ifire_99_wpx",
+   "fier_002/mat_fx_0006_51charizard_firexu_97_wpx"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -3.7e-05,
+     -0.510241,
+     -0.0,
+     0.860031
+    ],
+    "degrees": 61.4
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -3.2
+  },
+  "jawRestTracks": 5,
+  "fireMaterials": [
+   "mat_fx_lob_0006_51_X_wei"
+  ],
+  "dex": 6,
+  "skin": "51",
+  "holowear": "000651",
+  "battle": true,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_bat_0006_51_charizard_lv3",
+  "species": "pm0006",
+  "form": "51"
+ }
+}

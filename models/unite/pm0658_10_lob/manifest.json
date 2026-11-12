@@ -1,0 +1,158 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0658_10_lob",
+ "kind": "pokemon",
+ "displayName": "Greninja · skin 10 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 9.8333,
+   "frameRate": 60.0,
+   "frameCount": 591,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show01fs",
+   "index": 2,
+   "duration": 9.8333,
+   "frameRate": 30.0,
+   "frameCount": 296,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 3,
+   "duration": 0.7,
+   "frameRate": 30.0,
+   "frameCount": 22,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02fs",
+   "index": 4,
+   "duration": 9.5333,
+   "frameRate": 60.0,
+   "frameCount": 573,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 5,
+   "duration": 0.7333,
+   "frameRate": 30.0,
+   "frameCount": 23,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show04",
+   "index": 6,
+   "duration": 1.8667,
+   "frameRate": 30.0,
+   "frameCount": 57,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0658dy_lv3",
+   "label": "rig lob 0658dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0658fxa_lv3",
+   "label": "rig lob 0658fxa lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0658fxb_lv3~notex",
+   "label": "rig lob 0658fxb lv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_0658fxc_lv3~notex",
+   "label": "rig lob 0658fxc lv3~notex",
+   "lod": 0,
+   "visible": false
+  }
+ ],
+ "stats": {
+  "joints": 127,
+  "meshes": 4,
+  "triangles": 26267,
+  "textures": 15,
+  "clips": 7,
+  "droppedTracks": 0,
+  "glbBytes": 7741148
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_065810_greninja_lv3\\pref_char_lob_065810_greninja_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "effect parts with no texture in the rip, imported hidden: rig_lob_0658fxb_lv3/mat_lob_065810fxb_01_lv3; rig_lob_0658fxc_lv3/mat_lob_065810fxc_01_lv3",
+   "textures not in the rip: t_vc_lob_065810.png",
+   "texture-less parts HOME could not colour (gate): rig_lob_0658fxb_lv3/mat_lob_065810fxb_01_lv3 (d=None, cover=None); rig_lob_0658fxc_lv3/mat_lob_065810fxc_01_lv3 (d=None, cover=None)"
+  ],
+  "effectParts": [
+   "rig_lob_0658fxa_lv3/mat_lob_065810fxa_lv3",
+   "rig_lob_0658fxb_lv3/mat_lob_065810fxb_01_lv3",
+   "rig_lob_0658fxc_lv3/mat_lob_065810fxc_01_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_065810.png"
+  ],
+  "meshBinds": [
+   "rig_lob_0658dy_lv3 (baked, 73 own bones rebound)"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 658,
+  "skin": "10",
+  "holowear": "065810",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_065810_greninja_lv3",
+  "species": "pm0658",
+  "form": "10"
+ }
+}

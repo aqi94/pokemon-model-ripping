@@ -1,0 +1,155 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "ob0005_03",
+ "kind": "object",
+ "displayName": "Mf",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "d031_ob0005_03_01_c18 [demo d031]",
+   "index": 203118,
+   "duration": 3.8667,
+   "frameRate": 60.0,
+   "frameCount": 233,
+   "loop": false,
+   "category": "other",
+   "group": "demo d031",
+   "default": true
+  },
+  {
+   "name": "d031_ob0005_03_02_c18 [demo d031]",
+   "index": 203118,
+   "duration": 3.8667,
+   "frameRate": 60.0,
+   "frameCount": 233,
+   "loop": false,
+   "category": "other",
+   "group": "demo d031",
+   "default": false
+  },
+  {
+   "name": "d031_ob0005_03_03_c18 [demo d031]",
+   "index": 203118,
+   "duration": 3.8667,
+   "frameRate": 60.0,
+   "frameCount": 233,
+   "loop": false,
+   "category": "other",
+   "group": "demo d031",
+   "default": false
+  },
+  {
+   "name": "d031_ob0005_03_04_c18 [demo d031]",
+   "index": 203118,
+   "duration": 3.8667,
+   "frameRate": 60.0,
+   "frameCount": 233,
+   "loop": false,
+   "category": "other",
+   "group": "demo d031",
+   "default": false
+  },
+  {
+   "name": "d031_ob0005_03_05_c18 [demo d031]",
+   "index": 203118,
+   "duration": 3.8667,
+   "frameRate": 60.0,
+   "frameCount": 233,
+   "loop": false,
+   "category": "other",
+   "group": "demo d031",
+   "default": false
+  },
+  {
+   "name": "d031_ob0005_03_06_c18 [demo d031]",
+   "index": 203118,
+   "duration": 3.8667,
+   "frameRate": 60.0,
+   "frameCount": 233,
+   "loop": false,
+   "category": "other",
+   "group": "demo d031",
+   "default": false
+  },
+  {
+   "name": "d032_ob0005_03_01_c02 [demo d032]",
+   "index": 203202,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "demo d032",
+   "default": false
+  },
+  {
+   "name": "d032_ob0005_03_02_c02 [demo d032]",
+   "index": 203202,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "demo d032",
+   "default": false
+  },
+  {
+   "name": "d032_ob0005_03_03_c02 [demo d032]",
+   "index": 203202,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "demo d032",
+   "default": false
+  },
+  {
+   "name": "d032_ob0005_03_04_c02 [demo d032]",
+   "index": 203202,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "demo d032",
+   "default": false
+  }
+ ],
+ "defaultClip": "d031_ob0005_03_01_c18 [demo d031]",
+ "parts": [
+  {
+   "node": "mdl_tower_vine_mesh",
+   "label": "mdl tower vine",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "mdl_tower_vine_mesh_lod1",
+   "label": "mdl tower vine lod1",
+   "lod": 1,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 16,
+  "meshes": 2,
+  "triangles": 1196,
+  "textures": 3,
+  "clips": 10,
+  "glbBytes": 5626520
+ },
+ "source": [
+  "ik_chara/model_ob/ob0005_00_mf/"
+ ],
+ "extras": {
+  "item": "mf",
+  "species": "ob0005",
+  "form": ""
+ }
+}

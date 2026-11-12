@@ -1,0 +1,78 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0681_04_shield_lob",
+ "kind": "pokemon",
+ "displayName": "Aegislash · skin 04 (shield) (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "idle [sword_068104]",
+   "index": 1,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_068104_lv3",
+   "label": "rig lob 068104 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 69,
+  "meshes": 1,
+  "triangles": 19992,
+  "textures": 13,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 4857576
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_068104_aegislash_shield_lv3\\pref_char_lob_068104_aegislash_shield_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_068104.png",
+   "t_vc_lob_068104a.png",
+   "t_vc_lob_0681body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_068104.png, t_vc_lob_068104a.png, t_vc_lob_0681body.png",
+   "re-placed meshes from Blender's matrix to the FBX rest: rig_lob_068104_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 681,
+  "skin": "04",
+  "holowear": "068104_shield",
+  "battle": false,
+  "standalone": true,
+  "mode": "shield",
+  "folder_name": "pref_char_lob_068104_aegislash_shield_lv3",
+  "species": "pm0681",
+  "form": "04"
+ }
+}

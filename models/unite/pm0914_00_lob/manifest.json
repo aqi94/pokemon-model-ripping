@@ -1,0 +1,122 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0914_00_lob",
+ "kind": "pokemon",
+ "displayName": "Quaquaval (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "touch",
+   "index": 1,
+   "duration": 2.3667,
+   "frameRate": 30.0,
+   "frameCount": 72,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0914dy_lv3",
+   "label": "rig lob 0914dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 106,
+  "meshes": 1,
+  "triangles": 14064,
+  "textures": 6,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 1829524
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_091400_quaquaval_lv3\\pref_char_lob_091400_quaquaval_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_0914body.png",
+   "t_vc_lob_0914eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0914body.png, t_vc_lob_0914eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_jaw",
+    "open": [
+     -4e-06,
+     0.300684,
+     0.0,
+     0.953724
+    ],
+    "degrees": 35.0
+   }
+  ],
+  "jawClosed": {
+   "Bone_jaw": -35.0
+  },
+  "dex": 914,
+  "skin": "00",
+  "holowear": "091400",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_091400_quaquaval_lv3",
+  "species": "pm0914",
+  "form": "00"
+ }
+}

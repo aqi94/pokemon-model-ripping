@@ -1,0 +1,50 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0013_00",
+ "kind": "object",
+ "displayName": "Berrytart",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_berry_tart_mesh",
+   "label": "obj berry tart",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_knifefork_mesh",
+   "label": "obj knifefork",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 6,
+  "meshes": 2,
+  "triangles": 1686,
+  "textures": 10,
+  "clips": 0,
+  "glbBytes": 1158248
+ },
+ "source": [
+  "ik_chara/model_ob/ob0013_00_berrytart/"
+ ],
+ "extras": {
+  "item": "berrytart",
+  "species": "ob0013",
+  "form": ""
+ }
+}

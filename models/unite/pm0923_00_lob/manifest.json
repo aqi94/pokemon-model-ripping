@@ -1,0 +1,113 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0923_00_lob",
+ "kind": "pokemon",
+ "displayName": "Pawmot (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_0923_lv3",
+   "label": "lob 0923 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 115,
+  "meshes": 1,
+  "triangles": 9998,
+  "textures": 6,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 1123748
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_092300_pawmot_lv3\\pref_char_lob_092300_pawmot_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_0923body.png",
+   "t_vc_lob_0923eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0923body.png, t_vc_lob_0923eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_left_jaw_c",
+    "open": [
+     0.346104,
+     0.040049,
+     -0.001454,
+     0.93734
+    ],
+    "degrees": 40.8
+   },
+   {
+    "bone": "Bone_left_jaw_d",
+    "open": [
+     0.422474,
+     0.011416,
+     0.016254,
+     0.906158
+    ],
+    "degrees": 50.0
+   },
+   {
+    "bone": "Bone_right_jaw_c",
+    "open": [
+     -0.346104,
+     0.040048,
+     0.001455,
+     0.93734
+    ],
+    "degrees": 40.8
+   },
+   {
+    "bone": "Bone_right_jaw_d",
+    "open": [
+     -0.422473,
+     0.011417,
+     -0.016253,
+     0.906158
+    ],
+    "degrees": 50.0
+   }
+  ],
+  "jawClosed": {
+   "Bone_left_jaw_c": 0.0,
+   "Bone_left_jaw_d": 0.0,
+   "Bone_right_jaw_c": 0.0,
+   "Bone_right_jaw_d": 0.0
+  },
+  "dex": 923,
+  "skin": "00",
+  "holowear": "092300",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_092300_pawmot_lv3",
+  "species": "pm0923",
+  "form": "00"
+ }
+}

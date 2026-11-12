@@ -1,0 +1,76 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0681_05_king",
+ "kind": "pokemon",
+ "displayName": "Aegislash · King (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "idle [sword_068105]",
+   "index": 1,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0681dy_lv3",
+   "label": "rig lob 0681dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 93,
+  "meshes": 1,
+  "triangles": 23450,
+  "textures": 24,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 8004268
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_068105_aegislash_lv3\\pref_char_lob_068105_aegislash_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "re-placed meshes from Blender's matrix to the FBX rest: rig_lob_0681dy_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 681,
+  "skin": "05",
+  "holowear": "068105",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_068105_aegislash_lv3",
+  "theme": "king",
+  "materialsFrom": "Scenes/pref_sce_lobby_068105_king_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_068105_king_lv3/pref_sce_lobby_068105_king_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0681",
+  "species": "pm0681",
+  "form": "05"
+ }
+}

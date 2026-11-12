@@ -1,0 +1,248 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm9999_00_00",
+ "kind": "pokemon",
+ "displayName": "pm9999",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "defaultwait01_loop [set2]",
+   "index": 20000,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "set2",
+   "default": true,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_start [set2]",
+   "index": 20150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop [set2]",
+   "index": 20151,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start [set2]",
+   "index": 20152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop [set2]",
+   "index": 20153,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02 [set2]",
+   "index": 20155,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01 [set2]",
+   "index": 20500,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage02 [set2]",
+   "index": 20501,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_start [set2]",
+   "index": 20520,
+   "duration": 2.3333,
+   "frameRate": 60.0,
+   "frameCount": 141,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_loop [set2]",
+   "index": 20521,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": true,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "down01_end [set2]",
+   "index": 20522,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set2",
+   "default": false,
+   "visibility": {
+    "pm9999_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "defaultwait01_loop [set2]",
+ "parts": [
+  {
+   "node": "pm9999_00_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 14,
+  "meshes": 1,
+  "triangles": 3104,
+  "textures": 7,
+  "clips": 11,
+  "glbBytes": 1411548
+ },
+ "source": [
+  "ik_pokemon/data/pm9999/pm9999_00_00/"
+ ],
+ "extras": {
+  "dex": null,
+  "species": "pm9999",
+  "form": "00_00"
+ }
+}

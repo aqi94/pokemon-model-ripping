@@ -1,0 +1,56 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "ob1001_01",
+ "kind": "object",
+ "displayName": "K",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "eye_mesh",
+   "label": "eye",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "eye_mesh_lod1",
+   "label": "eye lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "eye_mesh_lod2",
+   "label": "eye lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "eye_mesh_lod3",
+   "label": "eye lod3",
+   "lod": 3,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 62,
+  "meshes": 4,
+  "triangles": 288,
+  "textures": 5,
+  "clips": 0,
+  "glbBytes": 80084
+ },
+ "source": [
+  "ik_chara/model_ob/ob1001_01_k/"
+ ],
+ "extras": {
+  "item": "k",
+  "species": "ob1001",
+  "form": ""
+ }
+}

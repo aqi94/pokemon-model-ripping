@@ -1,0 +1,52 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0681_05_king_shield",
+ "kind": "pokemon",
+ "displayName": "Aegislash · King Shield (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "rig_lob_0681dy_lv3",
+   "label": "rig lob 0681dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 93,
+  "meshes": 1,
+  "triangles": 23450,
+  "textures": 24,
+  "clips": 0,
+  "droppedTracks": 0,
+  "glbBytes": 7805936
+ },
+ "source": [
+  "Scenes/pref_sce_lobby_068105_king_shield_lv3/pref_sce_lobby_068105_king_shield_lv3.fbx"
+ ],
+ "extras": {
+  "particlesNotInRip": [
+   "pref_fx_lobby_021203_post",
+   "pref_fx_lobby_021203_scene"
+  ],
+  "warnings": [
+   "particle effects not in the rip (empty emitter nodes): pref_fx_lobby_021203_post, pref_fx_lobby_021203_scene",
+   "re-placed meshes from Blender's matrix to the FBX rest: rig_lob_0681dy_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 681,
+  "holowear": "068105",
+  "theme": "king_shield",
+  "lod": 3,
+  "meshes": "^(?:rig_)?lob_0681",
+  "species": "pm0681",
+  "form": "05"
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "ob0005_04",
+ "kind": "object",
+ "displayName": "Mf",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "mdl_tower_mesh",
+   "label": "mdl tower",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "mdl_tower_mesh_lod1",
+   "label": "mdl tower lod1",
+   "lod": 1,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 16,
+  "meshes": 2,
+  "triangles": 1676,
+  "textures": 3,
+  "clips": 0,
+  "glbBytes": 5547684
+ },
+ "source": [
+  "ik_chara/model_ob/ob0005_00_mf/"
+ ],
+ "extras": {
+  "item": "mf",
+  "species": "ob0005",
+  "form": ""
+ }
+}

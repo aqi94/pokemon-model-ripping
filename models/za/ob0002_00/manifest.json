@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0002_00",
+ "kind": "object",
+ "displayName": "Stone",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_stone_mesh",
+   "label": "obj stone",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 168,
+  "textures": 3,
+  "clips": 0,
+  "glbBytes": 115936
+ },
+ "source": [
+  "ik_chara/model_ob/ob0002_00_stone/"
+ ],
+ "extras": {
+  "item": "stone",
+  "species": "ob0002",
+  "form": ""
+ }
+}

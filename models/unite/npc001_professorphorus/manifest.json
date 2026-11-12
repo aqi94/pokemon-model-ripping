@@ -1,0 +1,105 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "npc001_professorphorus",
+ "kind": "trainer",
+ "displayName": "Professor Phorus",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "congratulations",
+   "index": 0,
+   "duration": 3.0,
+   "frameRate": 30.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "face",
+   "index": 1,
+   "duration": 1.2333,
+   "frameRate": 30.0,
+   "frameCount": 38,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "talk",
+   "index": 3,
+   "duration": 3.3667,
+   "frameRate": 30.0,
+   "frameCount": 102,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_npc01body_lv3",
+   "label": "rig lob npc01body lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_npc01hair_lv3",
+   "label": "rig lob npc01hair lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 139,
+  "meshes": 2,
+  "triangles": 26452,
+  "textures": 12,
+  "clips": 4,
+  "droppedTracks": 0,
+  "glbBytes": 7274436
+ },
+ "source": [
+  "NPCs/Lv3/pref_npc_lob_001_professorphorus_lv3/pref_npc_lob_001_professorphorus_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_lob_npc01hair_lv3/mat_lob_00000shadow_lv3 (placeholder material without textures)"
+  ],
+  "skeletonSource": "fbx",
+  "inheritedClips": {
+   "from": "NPCs (Shopkeepers, professors)",
+   "clips": [
+    "congratulations",
+    "face",
+    "idle",
+    "talk"
+   ],
+   "boundBones": 1.0
+  },
+  "materialsFrom": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\NPC Models\\pref_npc_lob_001_professorphorus_lv3",
+  "baseClips": "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\NPCs (Shopkeepers, professors)\\pref_npc_lob_001_professorphorus_lv3.fbx",
+  "species": "npc001",
+  "form": ""
+ }
+}

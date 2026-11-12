@@ -1,0 +1,115 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0937_03_lob",
+ "kind": "pokemon",
+ "displayName": "Ceruledge · skin 03 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "touch",
+   "index": 1,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "fx_glow (1)",
+   "label": "fx glow (1)",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_093703_fx01_lv3",
+   "label": "rig lob 093703 fx01 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_093703_fx02_lv3",
+   "label": "rig lob 093703 fx02 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_093703_fx03_lv3",
+   "label": "rig lob 093703 fx03 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_093703_fx04_lv3",
+   "label": "rig lob 093703 fx04 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_093703_lv3",
+   "label": "rig lob 093703 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 99,
+  "meshes": 6,
+  "triangles": 23782,
+  "textures": 16,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 4546936
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_093703_ceruledge_lv3\\pref_char_lob_093703_ceruledge_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "textures not in the rip: t_vc_lob_089201.png, t_vc_lob_0937.png, t_vc_lob_093703.png",
+   "re-placed meshes from Blender's matrix to the FBX rest: fx_glow (1), rig_lob_093703_fx01_lv3, rig_lob_093703_fx02_lv3, rig_lob_093703_fx03_lv3, rig_lob_093703_fx04_lv3, rig_lob_093703_lv3"
+  ],
+  "effectParts": [
+   "fx_glow (1)/mat_fx_093703_glow_02_hb",
+   "rig_lob_093703_fx01_lv3/mat_fx_093703_wenli_01_hb",
+   "rig_lob_093703_fx02_lv3/mat_fx_093703_glow_01_hb",
+   "rig_lob_093703_fx03_lv3/mat_fx_093703_wenli_02_hb",
+   "rig_lob_093703_fx04_lv3/mat_fx_093703_wenli_03_hb"
+  ],
+  "missingTextures": [
+   "t_vc_lob_089201.png",
+   "t_vc_lob_0937.png",
+   "t_vc_lob_093703.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 937,
+  "skin": "03",
+  "holowear": "093703",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_093703_ceruledge_lv3",
+  "species": "pm0937",
+  "form": "03"
+ }
+}

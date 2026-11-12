@@ -1,0 +1,161 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0416_00",
+ "kind": "pokemon",
+ "displayName": "Vespiquen",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk",
+   "index": 0,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 3,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell11",
+   "index": 4,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "spell21",
+   "index": 5,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 6,
+   "duration": 1.3667,
+   "frameRate": 30.0,
+   "frameCount": 42,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0416bobya_lv3",
+   "label": "rig bat 0416bobya lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0416bobyb_lv3",
+   "label": "rig bat 0416bobyb lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 21,
+  "meshes": 2,
+  "triangles": 1578,
+  "textures": 3,
+  "clips": 7,
+  "droppedTracks": 0,
+  "glbBytes": 368496
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Vespiqueen\\pref_char_bat_041600_vespiquen_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "weightless skins bound to their first cluster bone: rig_bat_0416bobyb_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_LJaw",
+    "open": [
+     -0.008751,
+     0.02814,
+     0.362683,
+     0.931446
+    ],
+    "degrees": 42.6
+   },
+   {
+    "bone": "Bone_RJaw",
+    "open": [
+     -6.3e-05,
+     0.003233,
+     -0.350772,
+     0.936455
+    ],
+    "degrees": 41.0
+   }
+  ],
+  "jawClosed": {
+   "Bone_LJaw": -13.5,
+   "Bone_RJaw": -12.6
+  },
+  "jawRestTracks": 4,
+  "prunedJoints": 4,
+  "dex": 416,
+  "skin": "00",
+  "holowear": "041600",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_041600_vespiquen_lv3",
+  "source": "marcy",
+  "species": "pm0416",
+  "form": "00"
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0448_01_halloween",
+ "kind": "pokemon",
+ "displayName": "Lucario · Halloween (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_044801_lv3",
+   "label": "rig lob 044801 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0448dy_lv3",
+   "label": "rig lob 0448dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lv3_bat_0192weapon",
+   "label": "rig lv3 bat 0192weapon",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 83,
+  "meshes": 3,
+  "triangles": 17434,
+  "textures": 14,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 2640860
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_044801_lucario_lv3\\pref_char_lob_044801_lucario_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "weightless skins bound to their first cluster bone: rig_lv3_bat_0192weapon"
+  ],
+  "skeletonSource": "fbx",
+  "prunedJoints": 18,
+  "dex": 448,
+  "skin": "01",
+  "holowear": "044801",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_044801_lucario_lv3",
+  "theme": "halloween",
+  "materialsFrom": "Scenes/pref_sce_lobby_044801_halloween_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_044801_halloween_lv3/pref_sce_lobby_044801_halloween_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0448",
+  "species": "pm0448",
+  "form": "01"
+ }
+}

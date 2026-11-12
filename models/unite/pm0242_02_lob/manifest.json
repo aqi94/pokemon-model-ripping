@@ -1,0 +1,115 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0242_02_lob",
+ "kind": "pokemon",
+ "displayName": "Blissey · skin 02 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.7667,
+   "frameRate": 30.0,
+   "frameCount": 54,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_024202_lv3",
+   "label": "rig lob 024202 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 49,
+  "meshes": 1,
+  "triangles": 15436,
+  "textures": 14,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3182672
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_024202_blissey_lv3\\pref_char_lob_024202_blissey_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_024202.png",
+   "t_vc_lob_0242body_lv3.png",
+   "t_vc_lob_0242eye_lv3.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_024202.png, t_vc_lob_0242body_lv3.png, t_vc_lob_0242eye_lv3.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 242,
+  "skin": "02",
+  "holowear": "024202",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_024202_blissey_lv3",
+  "species": "pm0242",
+  "form": "02"
+ }
+}

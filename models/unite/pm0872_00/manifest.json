@@ -1,0 +1,124 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0872_00",
+ "kind": "pokemon",
+ "displayName": "Snom",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "atk",
+   "index": 0,
+   "duration": 1.1333,
+   "frameRate": 30.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "dead",
+   "index": 1,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "idle",
+   "index": 2,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "run",
+   "index": 3,
+   "duration": 0.5333,
+   "frameRate": 30.0,
+   "frameCount": 17,
+   "loop": false,
+   "category": "move",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "stun",
+   "index": 4,
+   "duration": 1.7,
+   "frameRate": 30.0,
+   "frameCount": 52,
+   "loop": false,
+   "category": "battle",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0872bodya_lv3",
+   "label": "rig bat 0872bodya lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0872bodyb_lv3",
+   "label": "rig bat 0872bodyb lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 14,
+  "meshes": 2,
+  "triangles": 1198,
+  "textures": 3,
+  "clips": 5,
+  "droppedTracks": 0,
+  "glbBytes": 269812
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\marcy\\Assets\\Model\\Pokemons\\Snom\\pref_char_bat_087200_snom_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_RootJaw",
+    "open": [
+     0.03055,
+     0.218782,
+     0.040391,
+     0.974459
+    ],
+    "degrees": 25.9
+   }
+  ],
+  "jawClosed": {
+   "Bone_RootJaw": -7.3
+  },
+  "jawRestTracks": 4,
+  "dex": 872,
+  "skin": "00",
+  "holowear": "087200",
+  "battle": true,
+  "standalone": true,
+  "folder_name": "pref_char_bat_087200_snom_lv3",
+  "source": "marcy",
+  "species": "pm0872",
+  "form": "00"
+ }
+}

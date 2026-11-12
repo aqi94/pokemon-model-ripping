@@ -1,0 +1,98 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0130_06_lob",
+ "kind": "pokemon",
+ "displayName": "Gyarados · skin 06 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_013006_lv3",
+   "label": "rig lob 013006 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 68,
+  "meshes": 1,
+  "triangles": 17264,
+  "textures": 13,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 4453256
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_013006_gyarados_lv3\\pref_char_lob_013006_gyarados_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_013006.png",
+   "t_vc_lob_0130bodya.png",
+   "t_vc_lob_0130bodyb.png",
+   "t_vc_lob_0130eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_013006.png, t_vc_lob_0130bodya.png, t_vc_lob_0130bodyb.png, t_vc_lob_0130eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 130,
+  "skin": "06",
+  "holowear": "013006",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_013006_gyarados_lv3",
+  "species": "pm0130",
+  "form": "06"
+ }
+}

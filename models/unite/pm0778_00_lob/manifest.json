@@ -1,0 +1,64 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0778_00_lob",
+ "kind": "pokemon",
+ "displayName": "Mimikyu (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idlea",
+   "index": 0,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idlea",
+ "parts": [
+  {
+   "node": "rig_lob_0778dy_lv3",
+   "label": "rig lob 0778dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 84,
+  "meshes": 1,
+  "triangles": 9646,
+  "textures": 3,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 991208
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_077800_mimikyu_lv3\\pref_char_lob_077800_mimikyu_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_0778body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0778body.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 778,
+  "skin": "00",
+  "holowear": "077800",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_077800_mimikyu_lv3",
+  "species": "pm0778",
+  "form": "00"
+ }
+}

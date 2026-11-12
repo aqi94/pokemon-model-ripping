@@ -1,0 +1,72 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0830_01_lob",
+ "kind": "pokemon",
+ "displayName": "Eldegoss · skin 01 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 6.0333,
+   "frameRate": 30.0,
+   "frameCount": 182,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_083001_lv3",
+   "label": "rig lob 083001 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0830body_lv3",
+   "label": "rig lob 0830body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 62,
+  "meshes": 2,
+  "triangles": 19050,
+  "textures": 6,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 2552096
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_083001_eldegoss_lv3\\pref_char_lob_083001_eldegoss_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_083001_lv3.png",
+   "t_vc_lob_0830body_lv3.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_083001_lv3.png, t_vc_lob_0830body_lv3.png",
+   "weightless skins bound to their first cluster bone: rig_lob_083001_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 830,
+  "skin": "01",
+  "holowear": "083001",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_083001_eldegoss_lv3",
+  "species": "pm0830",
+  "form": "01"
+ }
+}

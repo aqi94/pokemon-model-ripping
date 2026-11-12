@@ -1,0 +1,97 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0054_02_lob",
+ "kind": "pokemon",
+ "displayName": "Psyduck · skin 02 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.6667,
+   "frameRate": 30.0,
+   "frameCount": 51,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_0054_lv3",
+   "label": "lob 0054 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 37,
+  "meshes": 1,
+  "triangles": 13496,
+  "textures": 11,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3124660
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_005402_psyduck_lv3\\pref_char_lob_005402_psyduck_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_005402.png",
+   "t_vc_lob_0054body.png",
+   "t_vc_lob_0054eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_005402.png, t_vc_lob_0054body.png, t_vc_lob_0054eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 54,
+  "skin": "02",
+  "holowear": "005402",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_005402_psyduck_lv3",
+  "species": "pm0054",
+  "form": "02"
+ }
+}

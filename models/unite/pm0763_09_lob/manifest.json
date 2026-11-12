@@ -1,0 +1,255 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0763_09_lob",
+ "kind": "pokemon",
+ "displayName": "Tsareena · skin 09 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    },
+    {
+     "variant": 7,
+     "name": "eyes_7",
+     "label": "Eyes 7",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 1.0167,
+   "frameRate": 60.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 1.4833,
+   "frameRate": 60.0,
+   "frameCount": 90,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 3,
+   "duration": 1.7875,
+   "frameRate": 80.0,
+   "frameCount": 144,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show04",
+   "index": 4,
+   "duration": 1.3167,
+   "frameRate": 60.0,
+   "frameCount": 80,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show05",
+   "index": 5,
+   "duration": 2.35,
+   "frameRate": 80.0,
+   "frameCount": 189,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show06",
+   "index": 6,
+   "duration": 2.1833,
+   "frameRate": 60.0,
+   "frameCount": 132,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show07",
+   "index": 7,
+   "duration": 1.6167,
+   "frameRate": 60.0,
+   "frameCount": 98,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "touch",
+   "index": 8,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_076309_fx01_lv3_sym",
+   "label": "lob 076309 fx01 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_076309_fx02_lv3_sym",
+   "label": "lob 076309 fx02 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_076309_fx05_lv3_sym",
+   "label": "lob 076309 fx05 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_076309_fx06_lv3_sym",
+   "label": "lob 076309 fx06 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_076309_fx07_lv3_sym",
+   "label": "lob 076309 fx07 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_076309_fx08_lv3_sym",
+   "label": "lob 076309 fx08 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0763body_lv3",
+   "label": "rig lob 0763body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 91,
+  "meshes": 7,
+  "triangles": 33529,
+  "textures": 16,
+  "clips": 9,
+  "droppedTracks": 0,
+  "glbBytes": 6625616
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_076309_tsareena_lv3\\pref_char_lob_076309_tsareena_lv3.fbx"
+ ],
+ "extras": {
+  "effectParts": [
+   "lob_076309_fx01_lv3_sym/mat_fx_076309_01_hb",
+   "lob_076309_fx02_lv3_sym/mat_fx_076309_01_hb",
+   "lob_076309_fx05_lv3_sym/mat_fx_076309_02_hb",
+   "lob_076309_fx06_lv3_sym/mat_fx_076309_03_hb",
+   "lob_076309_fx07_lv3_sym/mat_fx_076309_04_hb",
+   "lob_076309_fx08_lv3_sym/mat_fx_076309_05_hb"
+  ],
+  "missingTextures": [
+   "t_vc_lob_076300.png",
+   "t_vc_lob_076309a_lv3.png",
+   "t_vc_lob_076309b_lv3.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_076300.png, t_vc_lob_076309a_lv3.png, t_vc_lob_076309b_lv3.png",
+   "re-placed meshes from Blender's matrix to the FBX rest: lob_076309_fx01_lv3_sym, lob_076309_fx02_lv3_sym, lob_076309_fx05_lv3_sym, lob_076309_fx06_lv3_sym, lob_076309_fx07_lv3_sym, lob_076309_fx08_lv3_sym, rig_lob_0763body_lv3",
+   "weightless skins bound to their first cluster bone: lob_076309_fx02_lv3_sym"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 763,
+  "skin": "09",
+  "holowear": "076309",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_076309_tsareena_lv3",
+  "species": "pm0763",
+  "form": "09"
+ }
+}

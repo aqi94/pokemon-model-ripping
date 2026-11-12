@@ -1,0 +1,152 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0038_11_aurora",
+ "kind": "pokemon",
+ "displayName": "Ninetales · Aurora (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "glow",
+   "label": "glow",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "glow.001",
+   "label": "glow.001",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0038dy_lv3",
+   "label": "rig lob 0038dy lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0038fxA_Iv3",
+   "label": "rig lob 0038fxA Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0038fxB_Iv3",
+   "label": "rig lob 0038fxB Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0038fxC_Iv3",
+   "label": "rig lob 0038fxC Iv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 161,
+  "meshes": 6,
+  "triangles": 29308,
+  "textures": 23,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 6904904
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_003811_ninetales_lv3\\pref_char_lob_003811_ninetales_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "meshes scaled to 0 in the file (hidden), skipped: glow (1), glow (1).001",
+   "re-placed meshes from Blender's matrix to the FBX rest: glow, glow.001"
+  ],
+  "effectParts": [
+   "glow.001/mat_fx_003811_glow_03_gwf",
+   "glow/mat_fx_003811_glow_03_gwf",
+   "rig_lob_0038fxA_Iv3/mat_lob_003811fxa_01",
+   "rig_lob_0038fxB_Iv3/mat_lob_003811fxb_01",
+   "rig_lob_0038fxC_Iv3/mat_lob_003811fxc_01"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 38,
+  "skin": "11",
+  "holowear": "003811",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_003811_ninetales_lv3",
+  "theme": "aurora",
+  "materialsFrom": "Scenes/pref_sce_lobby_003811_aurora_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_003811_aurora_lv3/pref_sce_lobby_003811_aurora_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0038",
+  "species": "pm0038",
+  "form": "11"
+ }
+}

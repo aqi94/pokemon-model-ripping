@@ -1,0 +1,124 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0250_02_lob",
+ "kind": "pokemon",
+ "displayName": "Ho-Oh · skin 02 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show04",
+   "index": 1,
+   "duration": 5.9167,
+   "frameRate": 60.0,
+   "frameCount": 356,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0250_lv3",
+   "label": "rig lob 0250 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 131,
+  "meshes": 1,
+  "triangles": 23354,
+  "textures": 14,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 6541244
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_025002_ho_oh_lv3\\pref_char_lob_025002_ho_oh_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_025002.png",
+   "t_vc_lob_0250bodya.png",
+   "t_vc_lob_0250bodyb.png",
+   "t_vc_lob_0250eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_025002.png, t_vc_lob_0250bodya.png, t_vc_lob_0250bodyb.png, t_vc_lob_0250eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw1",
+    "open": [
+     4e-06,
+     -0.672257,
+     3e-06,
+     0.740317
+    ],
+    "degrees": 84.5
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw1": -21.5
+  },
+  "dex": 250,
+  "skin": "02",
+  "holowear": "025002",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_025002_ho_oh_lv3",
+  "species": "pm0250",
+  "form": "02"
+ }
+}

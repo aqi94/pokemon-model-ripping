@@ -1,0 +1,151 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": [
+    "d030_ob0002_01_c01 [demo d030]",
+    "d030_ob0002_01_c02 [demo d030]",
+    "d030_ob0002_01_c04 [demo d030]",
+    "d030_ob0002_01_c07 [demo d030]"
+   ]
+  }
+ ],
+ "game": "za",
+ "id": "ob0002_01",
+ "kind": "object",
+ "displayName": "Stoneb",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "tex_00",
+     "label": "tex_00",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "tex_01",
+     "label": "tex_01",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "d030_ob0002_01_c01 [demo d030]",
+   "index": 203001,
+   "duration": 3.9833,
+   "frameRate": 60.0,
+   "frameCount": 240,
+   "loop": false,
+   "category": "other",
+   "group": "demo d030",
+   "default": true,
+   "visibility": {
+    "obj_stone_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d030_ob0002_01_c02 [demo d030]",
+   "index": 203002,
+   "duration": 3.4833,
+   "frameRate": 60.0,
+   "frameCount": 210,
+   "loop": false,
+   "category": "other",
+   "group": "demo d030",
+   "default": false,
+   "visibility": {
+    "obj_stone_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d030_ob0002_01_c04 [demo d030]",
+   "index": 203004,
+   "duration": 6.4833,
+   "frameRate": 60.0,
+   "frameCount": 390,
+   "loop": false,
+   "category": "other",
+   "group": "demo d030",
+   "default": false,
+   "visibility": {
+    "obj_stone_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "d030_ob0002_01_c07 [demo d030]",
+   "index": 203007,
+   "duration": 9.4333,
+   "frameRate": 60.0,
+   "frameCount": 567,
+   "loop": false,
+   "category": "other",
+   "group": "demo d030",
+   "default": false,
+   "visibility": {
+    "obj_stone_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  }
+ ],
+ "defaultClip": "d030_ob0002_01_c01 [demo d030]",
+ "parts": [
+  {
+   "node": "obj_stone_mesh",
+   "label": "obj stone",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 168,
+  "textures": 6,
+  "clips": 4,
+  "glbBytes": 133104
+ },
+ "source": [
+  "ik_chara/model_ob/ob0002_01_stoneb/"
+ ],
+ "extras": {
+  "item": "stoneb",
+  "species": "ob0002",
+  "form": ""
+ }
+}

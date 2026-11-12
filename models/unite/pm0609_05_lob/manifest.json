@@ -1,0 +1,78 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0609_05_lob",
+ "kind": "pokemon",
+ "displayName": "Chandelure · skin 05 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.3333,
+   "frameRate": 30.0,
+   "frameCount": 71,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_060904_lv3",
+   "label": "rig lob 060904 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0609dyA_lv3",
+   "label": "rig lob 0609dyA lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0609FX_lv3",
+   "label": "rig lob 0609FX lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 153,
+  "meshes": 3,
+  "triangles": 22960,
+  "textures": 10,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 4072596
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_060905_chandelure_lv3\\pref_char_lob_060905_chandelure_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_lob_0609dyA_lv3/mat_off_Lit (placeholder material without textures); rig_lob_0609dyB_lv3/mat_off_Lit (placeholder material without textures)",
+   "textures not in the rip: t_vc_lob_0609.png, t_vc_lob_060905.png"
+  ],
+  "missingTextures": [
+   "t_vc_lob_0609.png",
+   "t_vc_lob_060905.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 609,
+  "skin": "05",
+  "holowear": "060905",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_060905_chandelure_lv3",
+  "species": "pm0609",
+  "form": "05"
+ }
+}

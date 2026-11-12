@@ -1,0 +1,86 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0663_02_pilot",
+ "kind": "pokemon",
+ "displayName": "Talonflame · Pilot (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.2667,
+   "frameRate": 30.0,
+   "frameCount": 129,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_066302_lv3",
+   "label": "rig lob 066302 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_066302body_lv3",
+   "label": "rig lob 066302body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 58,
+  "meshes": 2,
+  "triangles": 18060,
+  "textures": 12,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 2956656
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_066302_talonflame_lv3\\pref_char_lob_066302_talonflame_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "re-placed meshes from Blender's matrix to the FBX rest: rig_lob_066302_lv3, rig_lob_066302body_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "LowerJaw_ACC",
+    "open": [
+     -0.0,
+     -0.426263,
+     0.0,
+     0.904599
+    ],
+    "degrees": 50.5
+   }
+  ],
+  "jawClosed": {
+   "LowerJaw_ACC": 0.0
+  },
+  "dex": 663,
+  "skin": "02",
+  "holowear": "066302",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_066302_talonflame_lv3",
+  "theme": "pilot",
+  "materialsFrom": "Scenes/pref_sce_lobby_066302_pilot_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_066302_pilot_lv3/pref_sce_lobby_066302_pilot_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0663",
+  "species": "pm0663",
+  "form": "02"
+ }
+}

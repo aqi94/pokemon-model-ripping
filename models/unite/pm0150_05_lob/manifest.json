@@ -1,0 +1,252 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0150_05_lob",
+ "kind": "pokemon",
+ "displayName": "Mewtwo · skin 05 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 3.0333,
+   "frameRate": 30.0,
+   "frameCount": 92,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 1.3333,
+   "frameRate": 30.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 3,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show04",
+   "index": 4,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show05",
+   "index": 5,
+   "duration": 2.7,
+   "frameRate": 30.0,
+   "frameCount": 82,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show06",
+   "index": 6,
+   "duration": 3.0667,
+   "frameRate": 30.0,
+   "frameCount": 93,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show07",
+   "index": 7,
+   "duration": 1.0333,
+   "frameRate": 30.0,
+   "frameCount": 32,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show08",
+   "index": 8,
+   "duration": 2.7333,
+   "frameRate": 30.0,
+   "frameCount": 83,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_bat_0150fxA_Iv3",
+   "label": "rig bat 0150fxA Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0150fxB_Iv3",
+   "label": "rig bat 0150fxB Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0150fxE_Iv3~notex",
+   "label": "rig bat 0150fxE Iv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_bat_0150fxF_Iv3",
+   "label": "rig bat 0150fxF Iv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_bat_0150fxG_Iv3~notex",
+   "label": "rig bat 0150fxG Iv3~notex",
+   "lod": 0,
+   "visible": false
+  },
+  {
+   "node": "rig_lob_0150dy_lv3",
+   "label": "rig lob 0150dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 105,
+  "meshes": 6,
+  "triangles": 23485,
+  "textures": 17,
+  "clips": 9,
+  "droppedTracks": 0,
+  "glbBytes": 8051128
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_015005_mewtwo_lv3\\pref_char_lob_015005_mewtwo_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_bat_0150fxD_Iv3/mat_lob_015005fx_Flow_02_lv3 (overlay shell)",
+   "effect textures borrowed from the same species' other FBX (same material name): rig_bat_0150fxF_Iv3/mat_lob_015005fx_Trail_03_lv3 <- mat_lob_015005fx_Trail_03_lv3 (pref_char_bat_015005_51_mewtwo_lv3)",
+   "effect parts with no texture in the rip, imported hidden: rig_bat_0150fxD_Iv3/mat_lob_015005fx_Flow_02_lv3; rig_bat_0150fxE_Iv3/mat_lob_015005fx_Trail_01_lv3; rig_bat_0150fxG_Iv3/mat_lob_015005fx_Flow_01_lv3",
+   "textures not in the rip: t_vc_lob_015005.png, t_vc_lob_0150body.png, t_vc_lob_0150eye.png",
+   "texture-less parts HOME could not colour (gate): rig_bat_0150fxE_Iv3/mat_lob_015005fx_Trail_01_lv3 (d=None, cover=None); rig_bat_0150fxG_Iv3/mat_lob_015005fx_Flow_01_lv3 (d=None, cover=None)"
+  ],
+  "vertexColourEffects": [
+   "mat_lob_015005fx_TrailGlow_01_lv3",
+   "mat_lob_015005fx_Trail_03_lv3"
+  ],
+  "borrowedEffects": [
+   "rig_bat_0150fxF_Iv3/mat_lob_015005fx_Trail_03_lv3 <- mat_lob_015005fx_Trail_03_lv3 (pref_char_bat_015005_51_mewtwo_lv3)"
+  ],
+  "effectParts": [
+   "rig_bat_0150fxA_Iv3/mat_lob_015005fx_TrailGlow_01_lv3",
+   "rig_bat_0150fxB_Iv3/mat_lob_015005fx_TrailGlow_01_lv3",
+   "rig_bat_0150fxD_Iv3/mat_lob_015005fx_Flow_02_lv3",
+   "rig_bat_0150fxE_Iv3/mat_lob_015005fx_Trail_01_lv3",
+   "rig_bat_0150fxF_Iv3/mat_lob_015005fx_Trail_03_lv3",
+   "rig_bat_0150fxG_Iv3/mat_lob_015005fx_Flow_01_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_015005.png",
+   "t_vc_lob_0150body.png",
+   "t_vc_lob_0150eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 150,
+  "skin": "05",
+  "holowear": "015005",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_015005_mewtwo_lv3",
+  "species": "pm0150",
+  "form": "05"
+ }
+}

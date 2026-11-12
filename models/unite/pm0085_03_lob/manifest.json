@@ -1,0 +1,116 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0085_03_lob",
+ "kind": "pokemon",
+ "displayName": "Dodrio · skin 03 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    },
+    {
+     "variant": 5,
+     "name": "eyes_5",
+     "label": "Eyes 5",
+     "default": false
+    },
+    {
+     "variant": 6,
+     "name": "eyes_6",
+     "label": "Eyes 6",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0085dy_lv3_old",
+   "label": "rig lob 0085dy lv3 old",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 54,
+  "meshes": 1,
+  "triangles": 20359,
+  "textures": 13,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 4017140
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_008503_dodrio_lv3\\pref_char_lob_008503_dodrio_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_0085.png",
+   "t_vc_lob_008503_lv2.png",
+   "t_vc_lob_008503_lv3.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0085.png, t_vc_lob_008503_lv2.png, t_vc_lob_008503_lv3.png"
+  ],
+  "skeletonSource": "fbx",
+  "prunedJoints": 3,
+  "dex": 85,
+  "skin": "03",
+  "holowear": "008503",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_008503_dodrio_lv3",
+  "species": "pm0085",
+  "form": "03"
+ }
+}

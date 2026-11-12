@@ -1,0 +1,122 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob0011_02",
+ "kind": "object",
+ "displayName": "Cafe",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_bottole_cap_mesh",
+   "label": "obj bottole cap",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_bottole_wire_mesh",
+   "label": "obj bottole wire",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_bottole_bubbles_mesh",
+   "label": "obj bottole bubbles",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_bottole_water_mesh",
+   "label": "obj bottole water",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_bottole_water_surface_mesh",
+   "label": "obj bottole water surface",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_bottole_inside_mesh",
+   "label": "obj bottole inside",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_bottole_outside_mesh",
+   "label": "obj bottole outside",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_milk_mesh",
+   "label": "obj milk",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_water_surface_mesh",
+   "label": "obj water surface",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_water_mesh",
+   "label": "obj water",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_bubbles_mesh",
+   "label": "obj bubbles",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_ice_block_mesh",
+   "label": "obj ice block",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_glasscup_inside_mesh",
+   "label": "obj glasscup inside",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "obj_glasscup_outside_mesh",
+   "label": "obj glasscup outside",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 19,
+  "meshes": 14,
+  "triangles": 2962,
+  "textures": 6,
+  "clips": 0,
+  "glbBytes": 2858112
+ },
+ "source": [
+  "ik_chara/model_ob/ob0011_02_cafe/"
+ ],
+ "extras": {
+  "item": "cafe",
+  "species": "ob0011",
+  "form": ""
+ }
+}

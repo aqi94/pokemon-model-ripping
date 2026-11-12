@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob1007_01",
+ "kind": "object",
+ "displayName": "Dsweet",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "sweet_mesh",
+   "label": "sweet",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 3860,
+  "textures": 6,
+  "clips": 0,
+  "glbBytes": 1444552
+ },
+ "source": [
+  "ik_chara/model_ob/ob1007_01_dsweet/"
+ ],
+ "extras": {
+  "item": "dsweet",
+  "species": "ob1007",
+  "form": ""
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0643_00_lob",
+ "kind": "pokemon",
+ "displayName": "Reshiram (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.3333,
+   "frameRate": 30.0,
+   "frameCount": 71,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_0643_fx01_lv3_sym",
+   "label": "lob 0643 fx01 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_0643_fx02_lv3_sym",
+   "label": "lob 0643 fx02 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_0643_fx03_lv3_sym",
+   "label": "lob 0643 fx03 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_0643_fx05_lv3_sym",
+   "label": "lob 0643 fx05 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_0643_fx06_lv3_sym",
+   "label": "lob 0643 fx06 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_0643_fx09_lv3_sym",
+   "label": "lob 0643 fx09 lv3 sym",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0643_lv3",
+   "label": "rig lob 0643 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 86,
+  "meshes": 7,
+  "triangles": 12657,
+  "textures": 13,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 2483840
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_064300_reshiram_lv3\\pref_char_lob_064300_reshiram_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "textures not in the rip: t_vc_lob_0643bodya.png, t_vc_lob_0643bodyb.png, t_vc_lob_0643eye.png",
+   "weightless skins bound to their first cluster bone: lob_0643_fx05_lv3_sym, lob_0643_fx06_lv3_sym, lob_0643_fx09_lv3_sym"
+  ],
+  "vertexColourEffects": [
+   "mat_fx_0643_caizi_03_sym",
+   "mat_fx_0643_caizi_02_sym",
+   "mat_fx_0643_caizi_08_sym",
+   "mat_fx_0643_caizi_05_sym",
+   "mat_fx_0643_caizi_06_sym",
+   "mat_fx_0643_caizi_09_sym"
+  ],
+  "effectParts": [
+   "lob_0643_fx01_lv3_sym/mat_fx_0643_caizi_03_sym",
+   "lob_0643_fx02_lv3_sym/mat_fx_0643_caizi_02_sym",
+   "lob_0643_fx03_lv3_sym/mat_fx_0643_caizi_08_sym",
+   "lob_0643_fx05_lv3_sym/mat_fx_0643_caizi_05_sym",
+   "lob_0643_fx06_lv3_sym/mat_fx_0643_caizi_06_sym",
+   "lob_0643_fx09_lv3_sym/mat_fx_0643_caizi_09_sym"
+  ],
+  "missingTextures": [
+   "t_vc_lob_0643bodya.png",
+   "t_vc_lob_0643bodyb.png",
+   "t_vc_lob_0643eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 643,
+  "skin": "00",
+  "holowear": "064300",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_064300_reshiram_lv3",
+  "species": "pm0643",
+  "form": "00"
+ }
+}

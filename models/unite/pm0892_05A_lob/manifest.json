@@ -1,0 +1,104 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0892_05A_lob",
+ "kind": "pokemon",
+ "displayName": "Urshifu · skin 05A (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle_a",
+   "index": 0,
+   "duration": 2.0333,
+   "frameRate": 30.0,
+   "frameCount": 62,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle_a",
+ "parts": [
+  {
+   "node": "lob_089205_lv3",
+   "label": "lob 089205 lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_089205a",
+   "label": "lob 089205a",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 166,
+  "meshes": 2,
+  "triangles": 19960,
+  "textures": 12,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3962940
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_089205A_urshifu_lv3\\pref_char_lob_089205A_urshifu_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_089205.png",
+   "t_vc_lob_0892body.png",
+   "t_vc_lob_0892eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_089205.png, t_vc_lob_0892body.png, t_vc_lob_0892eye.png",
+   "weightless skins bound to their first cluster bone: lob_089205a"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 892,
+  "skin": "05A",
+  "holowear": "089205A",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_089205A_urshifu_lv3",
+  "species": "pm0892",
+  "form": "05A"
+ }
+}

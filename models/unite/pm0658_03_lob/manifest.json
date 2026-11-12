@@ -1,0 +1,64 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0658_03_lob",
+ "kind": "pokemon",
+ "displayName": "Greninja · skin 03 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_065803_lv3",
+   "label": "rig lob 065803 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 58,
+  "meshes": 1,
+  "triangles": 15159,
+  "textures": 9,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 2636248
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_065803_greninja_lv3\\pref_char_lob_065803_greninja_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_065803.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_065803.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 658,
+  "skin": "03",
+  "holowear": "065803",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_065803_greninja_lv3",
+  "species": "pm0658",
+  "form": "03"
+ }
+}

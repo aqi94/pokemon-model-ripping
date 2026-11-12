@@ -1,0 +1,122 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0257_06_lob",
+ "kind": "pokemon",
+ "displayName": "Blaziken · skin 06 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "touch",
+   "index": 1,
+   "duration": 2.8333,
+   "frameRate": 30.0,
+   "frameCount": 86,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0257dy_lv3",
+   "label": "rig lob 0257dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 82,
+  "meshes": 1,
+  "triangles": 20433,
+  "textures": 12,
+  "clips": 2,
+  "droppedTracks": 0,
+  "glbBytes": 4949432
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_025706_blaziken_lv3\\pref_char_lob_025706_blaziken_lv3.fbx"
+ ],
+ "extras": {
+  "missingTextures": [
+   "t_vc_lob_025706.png",
+   "t_vc_lob_0257body.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_025706.png, t_vc_lob_0257body.png"
+  ],
+  "skeletonSource": "fbx",
+  "jaws": [
+   {
+    "bone": "Bone_Jaw",
+    "open": [
+     -1.4e-05,
+     -0.347331,
+     5e-06,
+     0.937743
+    ],
+    "degrees": 40.6
+   }
+  ],
+  "jawClosed": {
+   "Bone_Jaw": -40.6
+  },
+  "dex": 257,
+  "skin": "06",
+  "holowear": "025706",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_025706_blaziken_lv3",
+  "species": "pm0257",
+  "form": "06"
+ }
+}

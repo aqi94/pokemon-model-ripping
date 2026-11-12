@@ -1,0 +1,203 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0143_20_lob",
+ "kind": "pokemon",
+ "displayName": "Snorlax · skin 20 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    },
+    {
+     "variant": 4,
+     "name": "eyes_4",
+     "label": "Eyes 4",
+     "default": false
+    }
+   ]
+  },
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 5,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 6,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 7,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 8,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.5333,
+   "frameRate": 30.0,
+   "frameCount": 77,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 1.8333,
+   "frameRate": 30.0,
+   "frameCount": 56,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 2.8667,
+   "frameRate": 30.0,
+   "frameCount": 87,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 3,
+   "duration": 2.1333,
+   "frameRate": 30.0,
+   "frameCount": 65,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show04",
+   "index": 4,
+   "duration": 2.1,
+   "frameRate": 120.0,
+   "frameCount": 253,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show05",
+   "index": 5,
+   "duration": 3.7667,
+   "frameRate": 30.0,
+   "frameCount": 114,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "lob_014320_FXA_lv3",
+   "label": "lob 014320 FXA lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "lob_014320_FXB_lv3",
+   "label": "lob 014320 FXB lv3",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "rig_lob_0143dy_lv3",
+   "label": "rig lob 0143dy lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 37,
+  "meshes": 3,
+  "triangles": 25170,
+  "textures": 16,
+  "clips": 6,
+  "droppedTracks": 0,
+  "glbBytes": 3749536
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_014320_snorlax_lv3\\pref_char_lob_014320_snorlax_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "textures not in the rip: t_vc_lob_014320.png",
+   "re-placed meshes from Blender's matrix to the FBX rest: lob_014320_FXA_lv3, lob_014320_FXB_lv3, rig_lob_0143dy_lv3"
+  ],
+  "effectParts": [
+   "lob_014320_FXA_lv3/mat_lob_014320fxa_lv3",
+   "lob_014320_FXB_lv3/mat_lob_014320fxb_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_014320.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 143,
+  "skin": "20",
+  "holowear": "014320",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_014320_snorlax_lv3",
+  "species": "pm0143",
+  "form": "20"
+ }
+}

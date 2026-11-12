@@ -1,0 +1,101 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0888_01_lob",
+ "kind": "pokemon",
+ "displayName": "Zacian · skin 01 (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 2.4333,
+   "frameRate": 30.0,
+   "frameCount": 74,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_0888_12body_lv3",
+   "label": "rig lob 0888 12body lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 111,
+  "meshes": 1,
+  "triangles": 20060,
+  "textures": 15,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 4476948
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_088801_zacian_lv3\\pref_char_lob_088801_zacian_lv3.fbx"
+ ],
+ "extras": {
+  "cutoutMaterials": [
+   "mat_lob_0888_12bodyb_lv3"
+  ],
+  "missingTextures": [
+   "t_vc_lob_088801.png",
+   "t_vc_lob_0888_12bodya.png",
+   "t_vc_lob_0888_12bodyb.png",
+   "t_vc_lob_0888_12eye.png"
+  ],
+  "warnings": [
+   "textures not in the rip: t_vc_lob_088801.png, t_vc_lob_0888_12bodya.png, t_vc_lob_0888_12bodyb.png, t_vc_lob_0888_12eye.png"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 888,
+  "skin": "01",
+  "holowear": "088801",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_088801_zacian_lv3",
+  "species": "pm0888",
+  "form": "01"
+ }
+}

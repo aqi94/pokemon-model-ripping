@@ -1,0 +1,96 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0197_05_royal",
+ "kind": "pokemon",
+ "displayName": "Umbreon · Royal (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "mouth",
+   "label": "Mouth",
+   "options": [
+    {
+     "variant": 0,
+     "name": "mouth_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "mouth_1",
+     "label": "Mouth 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "mouth_2",
+     "label": "Mouth 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "mouth_3",
+     "label": "Mouth 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.5333,
+   "frameRate": 30.0,
+   "frameCount": 47,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_019705_lv3",
+   "label": "rig lob 019705 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 89,
+  "meshes": 1,
+  "triangles": 20203,
+  "textures": 22,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3977728
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_019705_umbreon_lv3\\pref_char_lob_019705_umbreon_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "re-placed meshes from Blender's matrix to the FBX rest: rig_lob_019705_lv3"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 197,
+  "skin": "05",
+  "holowear": "019705",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_019705_umbreon_lv3",
+  "theme": "royal",
+  "materialsFrom": "Scenes/pref_sce_lobby_019705_royal_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_019705_royal_lv3/pref_sce_lobby_019705_royal_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0197",
+  "species": "pm0197",
+  "form": "05"
+ }
+}

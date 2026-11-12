@@ -1,0 +1,4528 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "za",
+ "id": "pm0757_00_00",
+ "kind": "pokemon",
+ "displayName": "pm0757",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "coloring",
+   "label": "Coloring",
+   "options": [
+    {
+     "variant": 0,
+     "name": "normal",
+     "label": "Normal",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "rare",
+     "label": "Shiny",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "defaultwait01_loop [set1]",
+   "index": 10000,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "idle",
+   "group": "set1",
+   "default": true,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "defaultidle01 [set1]",
+   "index": 10010,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "idle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "turn_r000 [set1]",
+   "index": 10020,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "turn_r090 [set1]",
+   "index": 10021,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "turn_l090 [set1]",
+   "index": 10024,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "turnmove01_r090 [set1]",
+   "index": 10026,
+   "duration": 0.75,
+   "frameRate": 60.0,
+   "frameCount": 46,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "turnmove01_l090 [set1]",
+   "index": 10028,
+   "duration": 0.75,
+   "frameRate": 60.0,
+   "frameCount": 46,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      0.25,
+      0.2833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "walk01_loop [set1]",
+   "index": 10030,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "run01_loop [set1]",
+   "index": 10100,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": true,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_start [set1]",
+   "index": 10140,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01 [set1]",
+   "index": 10141,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepin01_end [set1]",
+   "index": 10142,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.15,
+      0.1833,
+      0.2833,
+      0.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.15,
+      0.1833,
+      0.2833,
+      0.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stepout01_start [set1]",
+   "index": 10145,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01 [set1]",
+   "index": 10146,
+   "duration": 0.2333,
+   "frameRate": 60.0,
+   "frameCount": 15,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "stepout01_end [set1]",
+   "index": 10147,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.15,
+      0.1833,
+      0.2833,
+      0.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.15,
+      0.1833,
+      0.2833,
+      0.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "jumpup01_start [set1]",
+   "index": 10150,
+   "duration": 0.1,
+   "frameRate": 60.0,
+   "frameCount": 7,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpup01_loop [set1]",
+   "index": 10151,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_start [set1]",
+   "index": 10152,
+   "duration": 0.4,
+   "frameRate": 60.0,
+   "frameCount": 25,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "jumpdown01_loop [set1]",
+   "index": 10153,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "land02 [set1]",
+   "index": 10155,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "move",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1,
+      0.1333,
+      0.2333,
+      0.2667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1,
+      0.1333,
+      0.2333,
+      0.2667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rest01_start [set1]",
+   "index": 10270,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_loop [set1]",
+   "index": 10271,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rest01_end [set1]",
+   "index": 10272,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1833,
+      0.2167,
+      0.3167,
+      0.35
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1833,
+      0.2167,
+      0.3167,
+      0.35
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "sleep01_start [set1]",
+   "index": 10280,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "idle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.3,
+      1.2667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.3,
+      1.2667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "sleep01_loop [set1]",
+   "index": 10281,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": true,
+   "category": "idle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "sleep01_end [set1]",
+   "index": 10282,
+   "duration": 1.3333,
+   "frameRate": 60.0,
+   "frameCount": 81,
+   "loop": false,
+   "category": "idle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0833,
+      0.1167
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0833,
+      0.1167
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "eat02_start [set1]",
+   "index": 10293,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_loop [set1]",
+   "index": 10294,
+   "duration": 3.0,
+   "frameRate": 60.0,
+   "frameCount": 181,
+   "loop": true,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eat02_end [set1]",
+   "index": 10295,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.05,
+      0.0833,
+      0.1833,
+      0.2167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.05,
+      0.0833,
+      0.1833,
+      0.2167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "roar01 [set1]",
+   "index": 10300,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      0.2,
+      1.6,
+      1.7,
+      1.7333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      0.2,
+      1.6,
+      1.7,
+      1.7333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "appeal01 [set1]",
+   "index": 10310,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      0.2,
+      1.6,
+      1.7,
+      1.7333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      0.2,
+      1.6,
+      1.7,
+      1.7333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "refresh01 [set1]",
+   "index": 10320,
+   "duration": 1.5,
+   "frameRate": 60.0,
+   "frameCount": 91,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      1.2833,
+      1.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15,
+      1.2833,
+      1.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "search01_start [set1]",
+   "index": 10330,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "search01_loop [set1]",
+   "index": 10331,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.7833,
+      0.8167,
+      0.9167,
+      0.95
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.7833,
+      0.8167,
+      0.9167,
+      0.95
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "search01_end [set1]",
+   "index": 10332,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack01 [set1]",
+   "index": 10400,
+   "duration": 1.7667,
+   "frameRate": 60.0,
+   "frameCount": 107,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1667,
+      0.2,
+      0.2833,
+      1.25,
+      1.2833,
+      1.3
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1667,
+      0.2,
+      0.2833,
+      1.25,
+      1.2833,
+      1.3
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "attack02 [set1]",
+   "index": 10410,
+   "duration": 1.8333,
+   "frameRate": 60.0,
+   "frameCount": 111,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1667,
+      0.2,
+      0.2833,
+      1.2333,
+      1.3333,
+      1.3667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1667,
+      0.2,
+      0.2833,
+      1.2333,
+      1.3333,
+      1.3667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "attack03_start [set1]",
+   "index": 10420,
+   "duration": 0.5667,
+   "frameRate": 60.0,
+   "frameCount": 35,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0833,
+      0.1667,
+      0.2333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0167,
+      0.0833,
+      0.1667,
+      0.2333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "attack03_loop [set1]",
+   "index": 10421,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": true,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "attack03_end [set1]",
+   "index": 10422,
+   "duration": 1.4,
+   "frameRate": 60.0,
+   "frameCount": 85,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "rangeattack01 [set1]",
+   "index": 10450,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      0.1833,
+      1.5333,
+      1.6333,
+      1.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      0.1833,
+      1.5333,
+      1.6333,
+      1.6667
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rangeattack02_start [set1]",
+   "index": 10460,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      0.1833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      0.1833
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rangeattack02_loop [set1]",
+   "index": 10461,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.5,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.5,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "rangeattack02_end [set1]",
+   "index": 10462,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.3667,
+      0.4667,
+      0.5
+     ],
+     "values": [
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.3667,
+      0.4667,
+      0.5
+     ],
+     "values": [
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "charge01_loop [set1]",
+   "index": 10490,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "damage01 [set1]",
+   "index": 10500,
+   "duration": 0.8333,
+   "frameRate": 60.0,
+   "frameCount": 51,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0333,
+      0.0667,
+      0.4833,
+      0.5167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0333,
+      0.0667,
+      0.4833,
+      0.5167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "damage02 [set1]",
+   "index": 10501,
+   "duration": 1.1667,
+   "frameRate": 60.0,
+   "frameCount": 71,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0333,
+      0.0667,
+      0.5667,
+      0.6
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0333,
+      0.0667,
+      0.5667,
+      0.6
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stun01_start [set1]",
+   "index": 10510,
+   "duration": 0.6667,
+   "frameRate": 60.0,
+   "frameCount": 41,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.75
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      0.15
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.75
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stun01_loop [set1]",
+   "index": 10511,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": true,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.75
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.75
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "stun01_end [set1]",
+   "index": 10512,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.15,
+      0.1833
+     ],
+     "values": [
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.15,
+      0.1833
+     ],
+     "values": [
+      [
+       0.0,
+       0.75
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "down01_start [set1]",
+   "index": 10520,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      1.4
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.5,
+       0.5
+      ],
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.1167,
+      1.4
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.5,
+       0.5
+      ],
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "down01_loop [set1]",
+   "index": 10521,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": true,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "down01_end [set1]",
+   "index": 10522,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "battle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.3333,
+      0.3667
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.3333,
+      0.3667
+     ],
+     "values": [
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "glad01 [set1]",
+   "index": 10550,
+   "duration": 1.6667,
+   "frameRate": 60.0,
+   "frameCount": 101,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      1.4,
+      1.4333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.5,
+       0.25
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.1,
+      1.4,
+      1.4333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.5,
+       0.25
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "notice01 [set1]",
+   "index": 10560,
+   "duration": 1.0,
+   "frameRate": 60.0,
+   "frameCount": 61,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.05,
+      0.0833,
+      0.1833,
+      0.2167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.05,
+      0.0833,
+      0.1833,
+      0.2167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "hate01 [set1]",
+   "index": 10563,
+   "duration": 2.0,
+   "frameRate": 60.0,
+   "frameCount": 121,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.2167,
+      0.25,
+      0.2833,
+      1.1,
+      1.2,
+      1.2333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.2167,
+      0.25,
+      0.2833,
+      1.1,
+      1.2,
+      1.2333
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  },
+  {
+   "name": "fieldaction01_start [set1]",
+   "index": 10580,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "fieldaction01_loop [set1]",
+   "index": 10581,
+   "duration": 0.5,
+   "frameRate": 60.0,
+   "frameCount": 31,
+   "loop": true,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "fieldaction01_end [set1]",
+   "index": 10582,
+   "duration": 0.5833,
+   "frameRate": 60.0,
+   "frameCount": 36,
+   "loop": false,
+   "category": "other",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "name": "eye01 [set1]",
+   "index": 18000,
+   "duration": 0.3333,
+   "frameRate": 60.0,
+   "frameCount": 21,
+   "loop": false,
+   "category": "idle",
+   "group": "set1",
+   "default": false,
+   "visibility": {
+    "pm0757_00_00_arm_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_body_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_left_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pm0757_00_00_right_hand_mesh": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "uvOffset": {
+    "l_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.15,
+      0.2333,
+      0.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "r_eye": {
+     "times": [
+      0.0,
+      0.0667,
+      0.15,
+      0.2333,
+      0.3167
+     ],
+     "values": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.5
+      ],
+      [
+       0.0,
+       0.25
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   "uvOffsetMode": "gltf_step"
+  }
+ ],
+ "defaultClip": "defaultwait01_loop [set1]",
+ "parts": [
+  {
+   "node": "pm0757_00_00_arm_mesh",
+   "label": "arm",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_body_mesh",
+   "label": "body",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_left_hand_mesh",
+   "label": "left hand",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_right_hand_mesh",
+   "label": "right hand",
+   "lod": 0,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_arm_mesh_lod1",
+   "label": "arm lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_body_mesh_lod1",
+   "label": "body lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_left_hand_mesh_lod1",
+   "label": "left hand lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_right_hand_mesh_lod1",
+   "label": "right hand lod1",
+   "lod": 1,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_arm_mesh_lod2",
+   "label": "arm lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_body_mesh_lod2",
+   "label": "body lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_left_hand_mesh_lod2",
+   "label": "left hand lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_right_hand_mesh_lod2",
+   "label": "right hand lod2",
+   "lod": 2,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_arm_mesh_lod3",
+   "label": "arm lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_body_mesh_lod3",
+   "label": "body lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_left_hand_mesh_lod3",
+   "label": "left hand lod3",
+   "lod": 3,
+   "visible": true
+  },
+  {
+   "node": "pm0757_00_00_right_hand_mesh_lod3",
+   "label": "right hand lod3",
+   "lod": 3,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 76,
+  "meshes": 16,
+  "triangles": 5984,
+  "textures": 29,
+  "clips": 60,
+  "glbBytes": 7645360
+ },
+ "source": [
+  "ik_pokemon/data/pm0757/pm0757_00_00/"
+ ],
+ "extras": {
+  "dex": null,
+  "species": "pm0757",
+  "form": "00_00"
+ }
+}

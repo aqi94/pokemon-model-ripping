@@ -1,0 +1,44 @@
+{
+ "manifestVersion": 1,
+ "props": [
+  {
+   "bone": "loc_attach",
+   "side": "",
+   "clips": []
+  }
+ ],
+ "game": "za",
+ "id": "ob1008_04",
+ "kind": "object",
+ "displayName": "S",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [],
+ "defaultClip": null,
+ "parts": [
+  {
+   "node": "obj_pot_mesh",
+   "label": "obj pot",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 5,
+  "meshes": 1,
+  "triangles": 722,
+  "textures": 3,
+  "clips": 0,
+  "glbBytes": 234956
+ },
+ "source": [
+  "ik_chara/model_ob/ob1008_04_s/"
+ ],
+ "extras": {
+  "item": "s",
+  "species": "ob1008",
+  "form": ""
+ }
+}

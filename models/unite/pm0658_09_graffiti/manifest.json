@@ -1,0 +1,131 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0658_09_graffiti",
+ "kind": "pokemon",
+ "displayName": "Greninja · Graffiti (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 4.0333,
+   "frameRate": 30.0,
+   "frameCount": 122,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  },
+  {
+   "name": "show01",
+   "index": 1,
+   "duration": 1.7667,
+   "frameRate": 60.0,
+   "frameCount": 107,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show02",
+   "index": 2,
+   "duration": 0.8333,
+   "frameRate": 30.0,
+   "frameCount": 26,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show03",
+   "index": 3,
+   "duration": 2.6,
+   "frameRate": 30.0,
+   "frameCount": 79,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show04",
+   "index": 4,
+   "duration": 0.8667,
+   "frameRate": 30.0,
+   "frameCount": 27,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "show07",
+   "index": 5,
+   "duration": 1.4333,
+   "frameRate": 30.0,
+   "frameCount": 44,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  },
+  {
+   "name": "touch",
+   "index": 6,
+   "duration": 2.7667,
+   "frameRate": 30.0,
+   "frameCount": 84,
+   "loop": false,
+   "category": "other",
+   "group": "",
+   "default": false
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_065809_lv3",
+   "label": "rig lob 065809 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 89,
+  "meshes": 1,
+  "triangles": 19971,
+  "textures": 22,
+  "clips": 7,
+  "droppedTracks": 0,
+  "glbBytes": 6099352
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_065809_greninja_lv3\\pref_char_lob_065809_greninja_lv3.fbx"
+ ],
+ "extras": {
+  "warnings": [
+   "dropped primitives: rig_lob_065809_lv3/mat_off_Lit (placeholder material without textures)"
+  ],
+  "skeletonSource": "fbx",
+  "dex": 658,
+  "skin": "09",
+  "holowear": "065809",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_065809_greninja_lv3",
+  "theme": "graffiti",
+  "materialsFrom": "Scenes/pref_sce_lobby_065809_graffiti_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_065809_graffiti_lv3/pref_sce_lobby_065809_graffiti_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0658",
+  "species": "pm0658",
+  "form": "09"
+ }
+}

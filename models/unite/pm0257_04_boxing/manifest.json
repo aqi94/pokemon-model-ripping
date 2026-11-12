@@ -1,0 +1,93 @@
+{
+ "manifestVersion": 1,
+ "props": [],
+ "game": "unite",
+ "id": "pm0257_04_boxing",
+ "kind": "pokemon",
+ "displayName": "Blaziken · Boxing (lobby)",
+ "files": {
+  "model": "model.glb"
+ },
+ "variantGroups": [
+  {
+   "name": "eyes",
+   "label": "Eyes",
+   "options": [
+    {
+     "variant": 0,
+     "name": "eyes_0",
+     "label": "Default",
+     "default": true
+    },
+    {
+     "variant": 1,
+     "name": "eyes_1",
+     "label": "Eyes 1",
+     "default": false
+    },
+    {
+     "variant": 2,
+     "name": "eyes_2",
+     "label": "Eyes 2",
+     "default": false
+    },
+    {
+     "variant": 3,
+     "name": "eyes_3",
+     "label": "Eyes 3",
+     "default": false
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "name": "idle",
+   "index": 0,
+   "duration": 1.6333,
+   "frameRate": 30.0,
+   "frameCount": 50,
+   "loop": true,
+   "category": "idle",
+   "group": "",
+   "default": true
+  }
+ ],
+ "defaultClip": "idle",
+ "parts": [
+  {
+   "node": "rig_lob_025704_lv3",
+   "label": "rig lob 025704 lv3",
+   "lod": 0,
+   "visible": true
+  }
+ ],
+ "stats": {
+  "joints": 78,
+  "meshes": 1,
+  "triangles": 19696,
+  "textures": 18,
+  "clips": 1,
+  "droppedTracks": 0,
+  "glbBytes": 3974764
+ },
+ "source": [
+  "C:\\Users\\andyq\\Documents\\pokemon_raw_data\\unite\\Pokemon\\3D Models\\Lobby Models\\pref_char_lob_025704_blaziken_lv3\\pref_char_lob_025704_blaziken_lv3.fbx"
+ ],
+ "extras": {
+  "skeletonSource": "fbx",
+  "dex": 257,
+  "skin": "04",
+  "holowear": "025704",
+  "battle": false,
+  "standalone": true,
+  "mode": null,
+  "folder_name": "pref_char_lob_025704_blaziken_lv3",
+  "theme": "boxing",
+  "materialsFrom": "Scenes/pref_sce_lobby_025704_boxing_lv3",
+  "sceneFolder": "Scenes/pref_sce_lobby_025704_boxing_lv3/pref_sce_lobby_025704_boxing_lv3.fbx",
+  "sceneMeshes": "^(?:rig_)?lob_0257",
+  "species": "pm0257",
+  "form": "04"
+ }
+}
